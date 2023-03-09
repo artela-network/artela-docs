@@ -11,7 +11,7 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://artela.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -23,6 +23,7 @@ const config = {
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+  trailingSlash: false,
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -80,11 +81,19 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Documentation',
             items: [
               {
-                label: 'Docs',
-                to: '/docs/intro',
+                label: "Cosmos Hub",
+                href: "https://hub.cosmos.network",
+              },
+              {
+                label: "Tendermint Core",
+                href: "https://docs.tendermint.com",
+              },
+              {
+                label: "IBC Go",
+                href: "https://ibc.cosmos.network",
               },
             ],
           },
@@ -92,29 +101,41 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: "Blog",
+                href: "https://blog.cosmos.network",
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: "Forum",
+                href: "https://forum.cosmos.network",
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: "Discord",
+                href: "https://discord.gg/cosmosnetwork",
+              },
+              {
+                label: "Reddit",
+                href: "https://reddit.com/r/cosmosnetwork",
               },
             ],
           },
           {
-            title: 'More',
+            title: 'Social',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: "Discord",
+                href: "https://discord.gg/cosmosnetwork",
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/artela-network',
+                label: "Twitter",
+                href: "https://twitter.com/cosmos",
+              },
+              {
+                label: "Youtube",
+                href: "https://www.youtube.com/c/CosmosProject",
+              },
+              {
+                label: "Telegram",
+                href: "https://t.me/cosmosproject",
               },
             ],
           },
@@ -124,8 +145,16 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+        additionalLanguages: ["protobuf", "go-module"], // https://prismjs.com/#supported-languages
+      },
+      algolia: {
+        appId: "QLS2QSP47E",
+        apiKey: "4d9feeb481e3cfef8f91bbc63e090042",
+        indexName: "cosmos_network",
+        contextualSearch: false,
       },
     }),
 };
 
 module.exports = config;
+
