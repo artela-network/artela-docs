@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Artela',
+  title: 'Artela Network',
   tagline: 'The Best BlockChain Platform',
   favicon: 'img/favicon.ico',
 
