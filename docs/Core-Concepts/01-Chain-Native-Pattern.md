@@ -10,9 +10,7 @@ Under the Chain-Native Pattern, the blockchain has high extensibility, and devel
 
 Compared with traditional blockchains, Chain-Native adds an extension layer, which is a 3-layer abstract structure of the blockchain: application layer, extension layer, and base layer.
 
-<div align="center">
-<img src="./img/1.png" width="60%" />
-</div>
+![1](./img/1.png =800x600)
 
 - **Application Layer:** Developers deploy Smart Contracts in the application layer to implement the core business logic of dApps. The application layer provides an execution environment consistent with traditional EVM blockchains, and is compatible with existing infrastructure (ChainLink, TheGraph, etc.).
 - **Extension Layer:** The extension layer is the deployment and execution environment of Native Extension, which can be customized by developers. Native Extension realizes the ability extension of the underlying layer of the blockchain by calling the API of the base layer. Different Native Extensions and Smart Contracts can be combined with each other. Since Native Extension is security isolated and has a complete upgrade and version control strategy, the exception of Native Extension will not affect the overall network execution and other non-dependent dApps.
@@ -26,7 +24,7 @@ Based on the Chain-Native Pattern, it is possible for developers to build more p
 
 Chain-Native Pattern provides developers with the ability to build and run Native Extension. dApps under Chain-Native Pattern consist of Smart Contracts, Native Extension, and BaseLayer API.
 
-![2](./img/2.png)
+<img src="./img/2.png" width="60%">
 
 **Smart Contract:**
 
