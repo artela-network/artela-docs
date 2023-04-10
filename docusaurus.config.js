@@ -7,19 +7,18 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Artela Network',
-  tagline: 'The Best BlockChain Platform',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://artela.io',
+  url: 'https://artela.network',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'artela', // Usually your GitHub org/user name.
-  projectName: 'artela', // Usually your repo name.
+  organizationName: 'Artela', // Usually your GitHub org/user name.
+  projectName: 'Artela', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -60,7 +59,7 @@ const config = {
       navbar: {
         title: 'Artela',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Artela Network',
           src: 'img/artela.png',
         },
         items: [
