@@ -39,10 +39,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          routeBasePath: "/",
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -57,7 +54,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/artela.png',
       navbar: {
-        title: 'Artela',
+        title: 'Artela Network',
         logo: {
           alt: 'Artela Network',
           src: 'img/artela.png',
@@ -65,9 +62,9 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'main',
             position: 'left',
-            label: 'Docs',
+            label: 'Documentation',
           },
           {
             href: 'https://github.com/artela-network',

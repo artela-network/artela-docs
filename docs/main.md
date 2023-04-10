@@ -1,9 +1,7 @@
----
-sidebar_position: 1
----
+# Introduction
 
-# What is Artela?
-> Artela is an extensible blockchain network enabling developers to build feature-rich dApps.
+## What is Artela?
+> **Artela is an extensible blockchain network enabling developers to build feature-rich dApps.**
 
 The emergence of Smart Contracts has made it possible for developers to implement custom logic on blockchain networks, taking the first step towards the ‘extensibility’ of blockchain applications. However, the customization capability of dApps is limited due to the low flexibility granted to developers. Specific virtual machines (VMs) are optimized for certain use cases. Developers have to make compromises on the choice of VM and application design. Among other things, they are limited to a few design patterns and system-level utilizations.
 
