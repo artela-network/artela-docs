@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkartela_docs=self.webpackChunkartela_docs||[]).push([[3237],{3808:(e,t,a)=>{a.r(t),a.d(t,{default:()=>r});var n=a(7294),s=a(6550),c=a(2263);function r(){const{siteConfig:e}=(0,c.Z)();return n.createElement(s.l_,{to:"/main"})}}}]);

@@ -1,6 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
+import { Redirect } from "react-router-dom";
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
@@ -15,13 +16,9 @@ function HomepageHeader() {
   );
 }
 
-export default function Home(): JSX.Element {
+export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <Layout
-      title={`Documentation`}
-      description="Artela Network Documentation">
-      <HomepageHeader />
-    </Layout>
+    <Redirect to="/main" />
   );
 }

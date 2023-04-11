@@ -80,16 +80,16 @@ const config = {
             title: 'Documentation',
             items: [
               {
-                label: "Cosmos Hub",
-                href: "https://hub.cosmos.network",
+                label: "Artela Network",
+                href: "https://docs.artela.network/main",
               },
               {
-                label: "Tendermint Core",
-                href: "https://docs.tendermint.com",
+                label: "Chain-Native Pattern",
+                href: "https://docs.artela.network/Core-Concepts/Chain-Native-Pattern",
               },
               {
-                label: "IBC Go",
-                href: "https://ibc.cosmos.network",
+                label: "Aspect Programming",
+                href: "https://docs.artela.network/Core-Concepts/Aspect-Programming",
               },
             ],
           },
@@ -150,21 +150,6 @@ const config = {
         contextualSearch: false,
       },
     }),
-    plugins: [
-      [
-      "@docusaurus/plugin-client-redirects",
-      {
-        fromExtensions: ["html"],
-        toExtensions: ["html"],
-        redirects: [
-          {
-            from: ["/"],
-            to: "/main",
-          },
-        ],
-      },
-    ],
-  ],
 };
 
 module.exports = config;
