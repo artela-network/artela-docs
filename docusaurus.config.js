@@ -67,7 +67,7 @@ const config = {
             label: 'Documentation',
           },
           {
-            href: 'https://github.com/artela-network',
+            href: 'https://github.com',
             label: 'GitHub',
             position: 'right',
           },
@@ -98,19 +98,11 @@ const config = {
             items: [
               {
                 label: "Blog",
-                href: "https://blog.cosmos.network",
-              },
-              {
-                label: "Forum",
-                href: "https://forum.cosmos.network",
+                href: "https://blog.artela.network",
               },
               {
                 label: "Discord",
-                href: "https://discord.gg/cosmosnetwork",
-              },
-              {
-                label: "Reddit",
-                href: "https://reddit.com/r/cosmosnetwork",
+                href: "https://discord.gg",
               },
             ],
           },
@@ -118,20 +110,12 @@ const config = {
             title: 'Social',
             items: [
               {
-                label: "Discord",
-                href: "https://discord.gg/cosmosnetwork",
-              },
-              {
                 label: "Twitter",
-                href: "https://twitter.com/cosmos",
-              },
-              {
-                label: "Youtube",
-                href: "https://www.youtube.com/c/CosmosProject",
+                href: "https://twitter.com",
               },
               {
                 label: "Telegram",
-                href: "https://t.me/cosmosproject",
+                href: "https://t.me",
               },
             ],
           },

@@ -20,7 +20,7 @@ In Chain-Native pattern, the blockchain architecture is typically divided into t
 />
 </center>
 
-- **Application Layer:** Developers implement core business logic of dApp simply by deploying a smart contract. They can combine the middleware and execution environment provided by the extension layer and the base layer to fully customize the dApp.
+- **Application Layer:** Developers deploy Smart Contracts on the application layer to implement the core business logic of dApps. The application layer provides an execution environment that is consistent with the traditional EVM blockchain function, and is compatible with existing infrastructure (ChainLink, TheGraph, etc.).
 
 - **Extension Layer:** Provide the environment for Native Extensions. Developers can extend the base layer modules natively and build customizable module as a public/private service. Native Extensions can be combined with each other and with Smart Contracts. Native Extensions are securely isolated from the base layer, ensuring that they have no impact on the security or availability of the core network.
     

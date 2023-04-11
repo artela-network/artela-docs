@@ -13,7 +13,7 @@ To improve the blockchain network extensibility, many have adopted the solution 
 
 Artela is building an extensible network where builders can build modules and extend modular public/private services to achieve chain-native customization in one public blockchain network. Bridge the gap between limited smart contract dApps and heavy, fragmented app-specific chains. Provide dApps with chain-native composability and system-level customization.
 
-Artela’s extensibility empowers developers to achieve maximum customization by creating modular extensions on top of the public base layer. Meanwhile, the network’s elastic block space ensures optimal scalability and performance for the dApp.
+**Artela’s extensibility empowers developers to achieve maximum customization by creating modular extensions on top of the public base layer. Meanwhile, the network’s elastic block space ensures optimal scalability and performance for the dApp.**
 
 **Artela's technical goals include:**
 
