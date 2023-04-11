@@ -16,9 +16,10 @@ Artela is building an extensible network where builders can build modules and ex
 Artela’s extensibility empowers developers to achieve maximum customization by creating modular extensions on top of the public base layer. Meanwhile, the network’s elastic block space ensures optimal scalability and performance for the dApp.
 
 **Artela's technical goals include:**
-* **Base Layer Extensibility:** Allow developers to build chain-native modular public/private service on top of the public base layer. 
-* **EVM-native & Multi-VMs compatible:** Natively provide EVM as the base layer execution environment for lightweight smart contract dApps. Additionally, builders have the flexibility to choose from a range of VMs: CosmWasm, ZKWASM, GnoVM… instead of EVM on customized extensions.  
-* **Customizable Public Service:** Allow developers to build components utilized as plug-and-play public services, or extend existing public services. Enhance dApp customization and significantly reduce the barrier to entry.
-* **Scalable Heterogeneous Computing:** Provide decentralized consensus engine compatible for heterogeneous tech-stack.
-* **Elastic Scalability Execution Engine:** Enable elastic scaling of validator nodes. Provide isolated block space for dApps with high performance requirements.
+
+1. **Base Layer Extensibility:** Allow developers to build chain-native modular public/private service on top of the public base layer. 
+2. **EVM-native & Multi-VMs compatible:** Natively provide EVM as the base layer execution environment for lightweight smart contract dApps. Additionally, builders have the flexibility to choose from a range of VMs: CosmWasm, ZKWASM, GnoVM… instead of EVM on customized extensions.  
+3. **Customizable Public Service**: Allow developers to build components utilized as plug-and-play public services, or extend existing public services. Enhance dApp customization and significantly reduce the barrier to entry.
+4. **Scalable Heterogeneous Computing:** Provide decentralized consensus engine compatible for heterogeneous tech-stack.
+5. **Elastic Scalability Execution Engine:** Enable ****elastic scaling of validator nodes. Provide isolated block space for dApps with high performance requirements.
 

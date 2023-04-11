@@ -3,7 +3,7 @@
 ## 1. Introduction
 At Artela Network, Lite dApp is a lightweight protocol that only uses Smart Contracts to build dApps. 
 
-There is no difference between Lite dApp and dApps running on traditional EVM architecture blockchain. Artela is compatible with EVM and seamlessly integrates with ~~basic~~ infrastructures such as ChainLink and TheGraph. The experience of developing and deploying Lite dApps on Artela Network is the same as ~~developing dApps on~~ Ethereum and its Layer 2.
+There is no difference between Lite dApp and dApps running on traditional EVM architecture blockchain. Artela is compatible with EVM and seamlessly integrates with based infrastructures such as ChainLink and TheGraph. The experience of developing and deploying Lite dApps on Artela Network is the same as developing dApps on Ethereum and its Layer 2.
 
 Aspect, as a modular extension component for sustainable integration, does not require developers to use it when building dApps. Developers can achieve equivalent capabilities of dApps built without Aspect and existing EVM architecture.
 

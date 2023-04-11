@@ -150,6 +150,21 @@ const config = {
         contextualSearch: false,
       },
     }),
+    plugins: [
+      [
+      "@docusaurus/plugin-client-redirects",
+      {
+        fromExtensions: ["html"],
+        toExtensions: ["html"],
+        redirects: [
+          {
+            from: ["/"],
+            to: "/main",
+          },
+        ],
+      },
+    ],
+  ],
 };
 
 module.exports = config;

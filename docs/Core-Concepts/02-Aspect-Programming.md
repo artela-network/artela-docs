@@ -1,24 +1,17 @@
 # Aspect Programming
 
-> Aspect is an extensible component of blockchain mainnets, and Aspect Programming supports developers to develop and deploy the ability to enhance decentralized applications with Aspect.
-
-Smart Contract, as an important part of blockchain technology, supports developers to build dApp with custom logic. However, with the continuous development of blockchain technology, Smart Contract has exposed many shortcomings in terms of upgradeability and extensibility. 
-
-At the same time, Smart Contract is limited by the support of virtual machine execution environment instructions, making it difficult to handle non-functional requirements such as security checks and data verification.
-
-Aspect Programming reduces code redundancy, enhances software modularity, and improves software security by horizontally separating different functional points of software. Aspect is a supplement to Smart Contract technology.
+As an important component of blockchain technology, Smart Contract supports developers in building decentralized applications through custom programming. However, with the continuous development of blockchain applications, Smart Contract has exposed many shortcomings in terms of upgradeability and scalability. Aspect Programming can support developers in developing Native Extensions to add customized functionality to dApps at the blockchain base layer, which complements Smart Contract technology. At the same time, it increases the modularity of dApps, making it easier to build complex dApps.
 
 ---
 
 ## 1. Aspect Definition
 
-Aspect is a Native Extension on the Artela Network with security isolation and composability.
+Aspect is a Native Extension on the Artela Network. It features security isolation and composability, which enhances its functionality.
 
-Security isolation is ensured by the sandbox environment of the extension layer, that is, all validation nodes have built-in WASM virtual machines, and the Aspect deployed by developers can only run in the WASM virtual machine environment.
+- **Security isolation:** Aspects will be running within a secure sandbox environment that operates independently from the base layer. Thus, the execution of Aspects has no impact on the security and availability of the base layer. Moreover, Aspects are also securely isolated from each other, ensuring execution of the current aspect will affect others.
+- **Composability:** Developers can bind Smart Contracts with Aspects to bring additional functionality. Transactions calling Smart Contracts pass through Aspects, providing additional processing capabilities. Aspects can be combined with multiple Smart Contracts seamlessly.
 
-Aspect can not only be combined with Smart Contracts to build decentralized applications, but also can be combined with other Aspects.
-
-The operation principle of Aspect is shown in the figure:
+> In Artela, there are two types of Aspects: Built-in Aspects and Heterogeneous Aspects. Built-in Aspects are lightweight extensions that are integrated with WASM runtime by validator nodes. The operational principle of Aspect is highlighted in the figure below:
 
 <center>
 <img
@@ -28,11 +21,11 @@ The operation principle of Aspect is shown in the figure:
 />
 </center>
 
-The composability of Aspect can help developers build deeply customized decentralized applications, which is realized by arranging execution, that is, developers can customize the execution position of Aspect.
+Taking Built-in Aspect as an example, developers can import Base Layer API through Aspect SDK to program Aspect. After compiling the Aspect source code into WASM byte code, it can be deployed to the Artela network through a deployment transaction. After go through the consensus process, the byte code of Aspect will be written into the world state and synchronized to all nodes on the network. However, after deployment, it will not immediately affect the transactions on the Artela network. The owner of the smart contract needs to send a binding transaction to the Artela network, specifying that it needs to be combined with the Aspect. After this transaction has been executed, subsequent transactions calling the smart contract will be processed by the Aspect. When processing transactions, nodes will start the WASM runtime, load and execute the Aspect byte code with it.
 
-Artela Network supports the insertion of Aspect in the following ranges: Block Init, Tx Verification, Pre Execute, Post Execute, and Block Finalize.
+Aspect needs to specify Join Points, which are the positions where Aspect is cutting and executed during transaction processing, including Block Init, Transaction Verification, Pre Execute, Post Execute, Block Finalize and etc.
 
-The range of Aspect that can be orchestrated is shown in the figure:
+The range of Joint Points supported by Aspect is shown in the figure:
 
 <center>
 <img
@@ -42,9 +35,11 @@ The range of Aspect that can be orchestrated is shown in the figure:
 />
 </center>
 
-The goal of Aspect is to help developers achieve richer functionality with Smart Contract, so there is a clear boundary between Aspect and Smart Contract, that is, Aspect cannot write/modify/delete Smart Contract's state data, create new Smart Contracts, or transfer/destroy/hold native tokens.
+Aspect and Smart Contract are two different on-chain programs. Smart Contract is a type of blockchain account that can operate its own state data, call other Smart Contracts and transfer tokens to other accounts. Aspect is an extension program of the Base Layer, not an account. It cannot directly call Smart Contracts and other accounts. Aspect are not able to directly change the state of Smart Contracts, that is, it cannot write/modify/delete the state data of Smart Contracts. The goal of Aspect is to help developers achieve richer functionality in conjunction with Smart Contract.
 
-In order to further enhance the extension capability of Aspect, support off-chain computing, Artela Network plans to support Heterogeneous Aspects in the future, and the difference between the currently supported Built-in Aspects and Heterogeneous Aspects is shown in the table:
+There are two types of Aspects: Built-in Aspects and Heterogeneous Aspects. Built-in Aspects are lightweight extensions that are loaded and executed by validator nodes with a built-in WASM runtime. Heterogeneous Aspects support heavier computing, further enhancing the capabilities of Aspect. It is deployed and executed in a heterogeneous computing network, and this network shares security with the Artela main net.
+
+The differences between Built-in Aspects and Heterogeneous Aspects are shown in the table:
 
 <center>
 <img
@@ -58,35 +53,24 @@ In order to further enhance the extension capability of Aspect, support off-chai
 
 ## 2. Aspect Abilities
 
-As a specific technical implementation of blockchain scalability under the Chain-Native Pattern, Aspect is not a replacement for Smart Contract, but a supplement to Smart Contract technology.
+Aspect, as an actual technical implementation of blockchain extensibility under the Chain-Native pattern, is not a substitute for Smart Contracts, but a complement to them.
 
-Aspect brings application extension capabilities beyond Smart Contract to developers, and from a technical perspective, the specific capabilities of Aspect include but are not limited to:
+What sets Aspects apart from smart contracts is their ability to manage the entire lifecycle of a transaction and interact with the base processing context. The following are just a few examples of what Aspects can do:
 
-- Custom transaction signature verification: Aspect supports developers to implement custom logic to verify the signature of all transactions.
-- Custom account verification: Aspect supports developers to implement custom logic to verify accounts.
-- Transaction insertion: Aspect supports developers to implement custom logic and insert execution before and after Smart Contract transactions.
-- Transaction rollback: Aspect supports developers to implement transaction rollback for Smart Contract.
-- Custom transaction fee strategy: Aspect supports developers to implement custom transaction fee payment logic.
-- Asynchronous transaction: Aspect supports developers to implement asynchronous transaction transactions.
-- Contract invocation (read-only): Aspect supports developers to call the read-only interface of Smart Contract to read the state of the target Smart Contract.
-- Transaction pool interception: Aspect supports developers to implement custom logic to intercept transactions that do not meet expected criteria before entering the transaction pool.
-- Pre- and post-execution read-write set acquisition: Aspect supports developers to obtain the pre- and post-execution read-write set data of Smart Contract transactions.
-- Call stack acquisition during transaction execution: Aspect supports developers to obtain call stack information during Smart Contract transaction execution.
-- World state reading: Aspect supports developers to read the WorldState data of the blockchain network.
-- Event output: Aspect supports developers to output blockchain standard events (Event).
-- Upgrades: Aspect supports developers to implement multi-versioning and version management control.
+- Customize the transaction validation process.
+- Integrate middleware natively.
+- Construct blocks with customized rules.
+- Access the execution context and create reliable asynchronous tasks.
 
 ---
 
 ## 3. Aspect Benefits
 
-Under the Chain-Native Pattern, by abstracting and encapsulating non-functional requirements of the blockchain system, the various modules of the system can be separated and independently maintained, thereby improving the maintainability and scalability of the system.
+Aspects can enhance the functionality of dApps and support the construction of complex protocols in a modular way, simplifying complexity. The advantages are as the following:
 
-The Artela team combines the idea of aspect-oriented programming with the blockchain system, bringing the following advantages:
-
-- Enhance the functionality of decentralized applications: Developers can easily implement the non-functional requirements of decentralized applications through Aspect, such as security checks/external data synchronization/reliable timing tasks, etc., supplementing the ability that Smart Contract alone cannot achieve, thereby enhancing the functionality of decentralized applications.
-- Enhance the management ability of the transaction lifecycle: Artela provides rich extension points at the blockchain base layer, and Aspect can add custom processing logic to transactions before/after packaging, before/after execution, giving Aspect management control over the entire lifecycle of transactions.
-- Reduce the code complexity of decentralized applications: For public processing logic such as risk transaction interception, developers can choose to host it in public Aspect, which can not only reduce the code complexity of decentralized applications, but also reduce bytecode size and save deployment costs.
-- Increase the maintainability and scalability of decentralized applications: Developers can use Aspect to separate the functional and non-functional requirements of decentralized applications for separate management and logical decoupling, making it easier to maintain and expand decentralized applications.
-- Improve the security of decentralized applications: Developers can implement more accurate and efficient security check strategies through Aspect: identifying risk transactions, pre- and post-execution verification of state data, and other functions, thereby improving the overall security of decentralized applications.
-- Support customization while maintaining the composability of decentralized applications: Unlike AppChain, Aspect does not need to maintain the composability with other decentralized applications through cross-chain, and the in-chain composability has higher efficiency and accuracy, while developers can still deeply customize their decentralized applications.
+- **Enhanced functionalities:** Developers can easily implement non-functional features such as security checks, off-chain data synchronization, and reliable scheduled tasks through Aspects. This completes the capabilities of Smart Contracts, thus enhancing the functionality of decentralized applications.
+- **Enhanced transaction lifecycle management:** Artela provides rich extension join points at the blockchain base layer. Before/after transaction processing and execution, Aspects can add customized process logic to transactions, giving Aspects control over the entire lifecycle of the transaction.
+- **Reduced code complexity:** For common processing logic such as malicious transaction filtering, developers can choose to host it on a public Aspect. This not only reduces the complexity of decentralized application code but also saves deployment costs by reducing byte code size.
+- **Increased maintainability and scalability:** Developers can separate the functional and non-functional features of a dApp with Aspect to perform logic decoupling, making the maintenance and scaling of the dApp easier.
+- **Improved security:** Developers can implement more accurate and efficient security check strategies with Aspects, such as malicious transaction identification and pre/post-execution state data verification, enhancing the overall security of the dApp.
+- **Customization without sacrificing composability:** Unlike AppChain, Aspects do not need to maintain composability with other decentralized applications through cross-chain communication. The on-chain composability has higher efficiency and accuracy, allowing developers to still deeply customize their dApp.

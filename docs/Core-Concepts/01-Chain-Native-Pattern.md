@@ -2,13 +2,15 @@
 
 ## 1. What is Chain-Native Pattern?
 
-Chain-Native Pattern is a dApp design pattern based on "native extension". Users can dynamically add extension programs, called Native Extension, to a running blockchain to add new behaviors to the transaction processing process.
+Chain-Native Pattern is an dApp design pattern based on “Native Extension”. In “Native Extension”, extension program can be added dynamically to the running environment. By doing so, it is possible to introduce a middle state in the state-transition process. 
 
-Under the Chain-Native Pattern, the blockchain has high extensibility, and developers can add customized native functions. Powerful and composable Native Extension is an extension of the basic capabilities of the blockchain. Developers can use Smart Contracts and Native Extensions to implement dApps with customized features.
+Chain-Native Pattern can be used to introduce custom logic into the transaction process. For example, it can be used to perform additional validation checks on transactions, or to implement custom business rules that are specific to a particular use case.
+
+Chain-Native Pattern involves defining a set of extension joint points in the core layer of the blockchain. These extension points can be used to load and execute custom modules at runtime. These custom modules are natively extended from the base layer of the running environment, and can be combined with lightweight smart contracts to allow dApps to be built in a fully customized and plug-and-play manner.
 
 ## 2. Blockchain in Chain-Native Pattern
 
-Compared with traditional blockchains, Chain-Native adds an extension layer, which is a 3-layer abstract structure of the blockchain: application layer, extension layer, and base layer.
+In Chain-Native pattern, the blockchain architecture is typically divided into three layers: the base layer, the extension layer and the application layer, with an emphasis on extension layer.
 
 <center>
 <img
@@ -18,17 +20,19 @@ Compared with traditional blockchains, Chain-Native adds an extension layer, whi
 />
 </center>
 
-- **Application Layer:** Developers deploy Smart Contracts in the application layer to implement the core business logic of dApps. The application layer provides an execution environment consistent with traditional EVM blockchains, and is compatible with existing infrastructure (ChainLink, TheGraph, etc.).
-- **Extension Layer:** The extension layer is the deployment and execution environment of Native Extension, which can be customized by developers. Native Extension realizes the ability extension of the underlying layer of the blockchain by calling the API of the base layer. Different Native Extensions and Smart Contracts can be combined with each other. Since Native Extension is security isolated and has a complete upgrade and version control strategy, the exception of Native Extension will not affect the overall network execution and other non-dependent dApps.
-- **Base Layer:** It includes functional modules such as network, consensus, storage, and virtual machines, and is the basic component of a modular blockchain network. It not only provides modular combination capabilities for developers but also provides a unified API interface for the extension layer. Developers can choose consensus or storage modules according to their needs or develop Native Extensions dependent on APIs.
+- **Application Layer:** Developers implement core business logic of dApp simply by deploying a smart contract. They can combine the middleware and execution environment provided by the extension layer and the base layer to fully customize the dApp.
 
-Based on the Chain-Native Pattern, it is possible for developers to build more powerful dApps. Compared with traditional AppChain and CrossChain, Chain-Native provides a technical solution that balances customization, modularity, and extensibility.
+- **Extension Layer:** Provide the environment for Native Extensions. Developers can extend the base layer modules natively and build customizable module as a public/private service. Native Extensions can be combined with each other and with Smart Contracts. Native Extensions are securely isolated from the base layer, ensuring that they have no impact on the security or availability of the core network.
+    
+- **Base Layer:** Core running environment with basic modules, including network, storage, general VMs as well as consensus engine.
+
+Based on the Chain-Native Pattern, developers can build feature-rich dApps more efficiently. In comparison to building AppChains and interconnecting them, Chain-Native offers a lightweight, customizable, modular, and composable technical solution.
 
 ---
 
 ## 3. dApps in Chain-Native Pattern
 
-Chain-Native Pattern provides developers with the ability to build and run Native Extension. dApps under Chain-Native Pattern consist of Smart Contracts, Native Extension, and BaseLayer API.
+Chain-Native Pattern provides developers with the ability to build and run Native Extensions. Within Chain-Native Pattern, dApps consist of two parts: Smart Contracts and Native Extensions.
 
 <center>
 <img
@@ -40,47 +44,33 @@ Chain-Native Pattern provides developers with the ability to build and run Nativ
 
 **Smart Contract:**
 
-A computer protocol that runs on the blockchain network and can conduct trusted transactions without the intervention of third parties. Developers use Smart Contract to implement the main business logic of dApps. Multiple Smart Contracts can be combined and have traceable and irreversible characteristics.
+A computer protocol that runs on the blockchain network and performs trusted transactions without the need for third-party intervention. Developers can use Smart Contracts to implement the main business logic of dApps.
 
 **Native Extension:**
 
-A modular component that runs on the extension layer. It supports custom logic by developers and achieves highly customized functions through BaseLayer API. Native Extensions can be combined with each other and can be combined with Smart Contracts. It should be noted that Native Extension is security isolated and will not affect the state of Smart Contract, that is, non-state migration.
+Modular components run on the extension layer. Developers are capable of tailoring the processing logic and achieving highly customized functions through the Base Layer API. With the use of the Native Extension, developers can incorporate additional features into their dApp, such as automated transaction and risk control during transaction processing. Smart contracts can be combined with multiple Native Extensions, and each individual Smart contract can be paired with different sets of Native Extensions.
 
-**BaseLayer API:**
+> Base Layer API:The blockchain base layer can expose a set of API interfaces to the extension layer. The base layer is a collection of processing modules, such as the blockchain network, consensus, and storage. Through the interfaces, it provides customized capabilities for some basic features to the extension layer. Under the Chain-Native pattern, the capabilities of the Base Layer API are strictly controlled, and abnormal callers will not cause any availability issues to the blockchain network.
 
-API interface to the base layer of the blockchain that can be opened to the extension layer. The base layer is a collection of processing modules such as blockchain network, consensus, and storage. It provides customized capabilities for some basic functions to the extension layer through the interface. Under the Chain-Native Pattern, the ability of BaseLayer API is strictly controlled and will not cause damage to the blockchain network due to abnormal callers.
+dApps under the Chain-Native Pattern are a combination of Smart Contract and Native Extensions, which developers can freely combine and use according to specific needs.
 
-dApps under the Chain-Native Pattern is a collection of Smart Contracts, Native Extension, and BaseLayer API. Developers can freely combine and use them according to specific needs.
-
-Developers can not only build lightweight dApps that only contain Smart Contracts but also develop Native Extensions to share with others. The accumulation of excellent Native Extensions will not only reduce the threshold for building dApps but also benefit developers and the community.
-
-Providing a technical solution that balances customization, modularity, and extensibility is the design goal of Chain-Native.
-
+Developers can build not only the lightweight dApps that only contain Smart Contracts but also develop Native Extensions to share with others. The continuous accumulation of excellent Native Extensions will not only lower the threshold for building dApps but also benefit developers and the community.
 
 ---
 
 ## 4. How does Chain-Native benefit dApp?
 
-> DApp in Chain-Native = Base Layer + Native Extension + Smart Contract
+Chain-Native is an innovative technical paradigm proposed by the Artela team for application-specific requirements. It will bring many positive changes to dApp construction. Customization, modularity, and composability are the goals that Chain-Native continues to pursue.
 
-Chain-Native Pattern brings a new way of building dApps for developers. Developers do not need to develop and maintain an App Chain separately, and can achieve equivalent customization capabilities through Native Extension.
+Chain-Native Pattern offers developers a new approach to building dApps. With this pattern, developers are no longer required to develop and maintain AppChain separately. Instead, they can develop customized features on the Base Layer using Native Extension. In this way, dApps can reuse and benefit from the capabilities provided by public Native Extension. The combination of Smart Contract and Native Extension makes it easier to build more powerful and independent dApps. The benefits that Chain-Native provides to dApps include the following:
 
-The combination of Smart Contract and Native Extension makes it possible to build stronger and independent dApps. The benefits brought by Chain-Native to dApps include:
+1. **More flexible function extension**
+Native Extension is a feature extension based on the main-net. Unlike cross-chain solutions such as AppChain, which share security, Native Extension provides built-in extensibility. This allows for more accurate and efficient operations on the same network environment. The combination of Smart Contract and Native Extension gives dApps more flexible extension capabilities.
+2. **More independent dApps**
+Adding global functionality to the underlying blockchain usually requires a long development and verification cycle, balancing stability and the universality of functionalities. With Chain-Native, dApps can extend blockchain capabilities that only apply to themselves, without requiring global upgrades of network nodes.
+3. **Reusable public services**
+Native Extension can be released as independent base services. Developers can choose to integrate these base services when building dApps. This modular construction method reduces code redundancy, enhances software modularity, and improves software security.
+4. **More efficient operation and management**
+Native Extension is deployed and run as a functional component in the extension layer, without requiring any changes to Smart Contract code. Native Extension provides a very efficient control aspect that allows developers to achieve operational management such as transaction risk control and anti-money laundering by combining it before and after the Smart Contract transaction execution.
 
-**Reusable public services**
-
-Native Extension can be published as an independent basic service. Developers can choose whether to integrate this basic service when building dApps. The modular construction method realizes the advantages of reducing code redundancy, enhancing software modularization capabilities, and improving software security.
-
-**More flexible function extension**
-
-Native Extension is a functional extension based on the main network. Different from cross-chain solutions such as shared security AppChain, Native Extension provides built-in expandability, which is a more accurate and efficient collaborative operation in the same network environment. The combination of Smart Contract and Native Extension, as well as the combination between Native Extensions, allows dApps to have more flexible extension capabilities.
-
-**More independent dApp**
-
-Native Extension is an extension of the basic capabilities of the blockchain. Developers can achieve deep customization capabilities such as GAS billing and transaction sorting by combining Smart Contracts and Native Extensions. Unlike dApps built only using Smart Contracts, the extension of the base layer allows dApps to maintain independence while achieving AppChain equivalent customization capabilities.
-
-**More efficient operation**
-
-Native Extension is a functional component deployed and run on the extension layer. Without changing the Smart Contract code, Native Extension provides a very efficient control aspect. Developers can achieve operational operations such as transaction risk control and anti-money laundering by combining them before and after Smart Contract transaction execution.
-
-Chain-Native is an innovative technical paradigm proposed by the Artela team for Application-Specific. It will bring many positive changes to the construction of dApps. Balancing customization, modularity, and extensibility is the continuous pursuit of Chain-Native.
+Chain-Native is an innovative technical paradigm proposed by the Artela team for application-specific requirements. It will bring many positive changes to dApp construction. Customization, modularity, and composability are the goals that Chain-Native continues to pursue.
