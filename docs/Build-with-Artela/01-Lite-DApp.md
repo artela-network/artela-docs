@@ -9,7 +9,13 @@ Aspect, as a modular extension component for sustainable integration, does not r
 
 The principle of Lite dApp on Artela Network is shown in the figure below:
 
-![1](./img/1.png)
+<center>
+<img
+  src={require('./img/1.png').default} 
+  alt="1"  
+  width="70%"
+/>
+</center>
 
 ---
 
@@ -19,5 +25,10 @@ Artela Network is compatible with the EVM architecture and can seamlessly integr
 
 Developers can build decentralized lending protocols on Artela Network with seamless integration of ChainLink's price feed. This includes liquidity management related to asset lending and borrowing, account health checks, asset oracle price aggregation, and other smart contract implementations. This dApp development pattern is referred to as Lite dApp on Artela Network. The specific diagram is shown below:
 
-![2](./img/2.png)
-
+<center>
+<img
+  src={require('./img/2.png').default} 
+  alt="2"  
+  width="90%"
+/>
+</center>

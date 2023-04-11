@@ -10,7 +10,13 @@ Public Service is the technical implementation of modular pattern. Artela provid
 
 The principle of Public Service in Artela Network is shown in the figure below:
 
-![5](./img/5.png)
+<center>
+<img
+  src={require('./img/5.png').default} 
+  alt="5"  
+  width="70%"
+/>
+</center>
 
 ---
 
@@ -22,4 +28,10 @@ Developers can use Aspect to build native Smart Contract timers within Artela Ne
 
 This model of building public services is called Public Service in Artela Network, as illustrated below:
 
-![6](./img/6.png)
+<center>
+<img
+  src={require('./img/6.png').default} 
+  alt="6"  
+  width="90%"
+/>
+</center>

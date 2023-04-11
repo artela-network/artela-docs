@@ -20,7 +20,13 @@ Aspect can not only be combined with Smart Contracts to build decentralized appl
 
 The operation principle of Aspect is shown in the figure:
 
-![3](./img/3.png)
+<center>
+<img
+  src={require('./img/3.png').default} 
+  alt="3"  
+  width="80%"
+/>
+</center>
 
 The composability of Aspect can help developers build deeply customized decentralized applications, which is realized by arranging execution, that is, developers can customize the execution position of Aspect.
 
@@ -28,13 +34,25 @@ Artela Network supports the insertion of Aspect in the following ranges: Block I
 
 The range of Aspect that can be orchestrated is shown in the figure:
 
-![4](./img/4.png)
+<center>
+<img
+  src={require('./img/4.png').default} 
+  alt="4"  
+  width="80%"
+/>
+</center>
 
 The goal of Aspect is to help developers achieve richer functionality with Smart Contract, so there is a clear boundary between Aspect and Smart Contract, that is, Aspect cannot write/modify/delete Smart Contract's state data, create new Smart Contracts, or transfer/destroy/hold native tokens.
 
 In order to further enhance the extension capability of Aspect, support off-chain computing, Artela Network plans to support Heterogeneous Aspects in the future, and the difference between the currently supported Built-in Aspects and Heterogeneous Aspects is shown in the table:
 
-![5](./img/5.png)
+<center>
+<img
+  src={require('./img/5.png').default} 
+  alt="5"  
+  width="80%"
+/>
+</center>
 
 ---
 

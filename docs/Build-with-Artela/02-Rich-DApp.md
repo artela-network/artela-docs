@@ -12,7 +12,13 @@ Additionally, Rich dApp can be built in a modular way, such as using Smart Contr
 
 The principle of Rich dApp in Artela Network is shown in the following figure:
 
-![3](./img/3.png)
+<center>
+<img
+  src={require('./img/3.png').default} 
+  alt="3"  
+  width="70%"
+/>
+</center>
 
 ---
 
@@ -29,4 +35,10 @@ In this case, Aspect uses a non-intrusive way to incorporate with the core DeFi 
 
 By using smart contracts and Aspects, it is possible to build DeFi protocols with fund risk control abilities. This development pattern is called Rich dApp on the Artela Network, as shown below:
 
-![4](./img/4.png)
+<center>
+<img
+  src={require('./img/4.png').default} 
+  alt="4"  
+  width="90%"
+/>
+</center>
