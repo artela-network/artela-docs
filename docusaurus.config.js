@@ -58,7 +58,7 @@ const config = {
         logo: {
           alt: 'Artela Network',
           src: 'img/artela.png',
-          srcDark： 'img/artelaD.png',
+          srcDark: 'img/artelaD.png',
         },
         items: [
           {
