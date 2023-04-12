@@ -2,7 +2,7 @@
 
 ## 1. Introduction
 
-At Artela Network, Rich dApp is a way to build dApps through Smart Contract and Aspect, which has more powerful functionality and extensibility compared to Lite dApp.
+**At Artela Network, Rich dApp is a way to build dApps through Smart Contract and Aspect, which has more powerful functionality and extensibility compared to Lite dApp.**
 
 Rich dApp has the ability for deep customization which is comparable with those of App Chains, it allows developers to implement various customizations such as adding transaction processing flows, modifying transaction data structures and verification methods, transaction interception and more.
 

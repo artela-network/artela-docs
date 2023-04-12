@@ -2,7 +2,7 @@
 
 ## 1. What is Chain-Native Pattern?
 
-Chain-Native Pattern is an dApp design pattern based on “Native Extension”. In “Native Extension”, extension program can be added dynamically to the running environment. By doing so, it is possible to introduce a middle state in the state-transition process. 
+Chain-Native Pattern is an dApp design pattern based on **Native Extension**. In **Native Extension**, extension program can be added dynamically to the running environment. By doing so, it is possible to introduce a middle state in the state-transition process. 
 
 Chain-Native Pattern can be used to introduce custom logic into the transaction process. For example, it can be used to perform additional validation checks on transactions, or to implement custom business rules that are specific to a particular use case.
 

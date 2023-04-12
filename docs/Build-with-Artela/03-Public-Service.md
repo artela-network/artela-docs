@@ -2,7 +2,7 @@
 
 ## 1. Introduction
 
-At Artela Network, Public Service is an aspect provides a universal service that can be integrated into any dApp. Thus, aspects can be used to build blockchain public infrastructures.
+**At Artela Network, Public Service is an aspect provides a universal service that can be integrated into any dApp. Thus, aspects can be used to build blockchain public infrastructures.**
 
 When developers build their own dApps, they can choose to integrate other public aspects to reduce their development costs and improve development efficiency. For example, integrating the Automation Aspect enables protocol automation, integrating the Security Aspect improves fund security, and integrating the AML Aspect quickly meets compliance requirements.
 
