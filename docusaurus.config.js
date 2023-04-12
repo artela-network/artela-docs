@@ -40,6 +40,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: "/",
+          sidebarCollapsible: false,
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -97,8 +98,8 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: "Blog",
-                href: "https://blog.artela.network",
+                label: "Medium",
+                href: "https://medium.com",
               },
               {
                 label: "Discord",
