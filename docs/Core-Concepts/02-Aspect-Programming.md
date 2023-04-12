@@ -21,7 +21,10 @@ Aspect is a [Native Extension](https://docs.artela.network/Core-Concepts/Chain-N
 />
 </center>
 
-Taking Built-in Aspect as an example, developers can import Base Layer API through Aspect SDK to program Aspect. After compiling the Aspect source code into WASM byte code, it can be deployed to the Artela network through a deployment transaction. After go through the consensus process, the byte code of Aspect will be written into the world state and synchronized to all nodes on the network. However, after deployment, it will not immediately affect the transactions on the Artela network. The owner of the smart contract needs to send a binding transaction to the Artela network, specifying that it needs to be combined with the Aspect. After this transaction has been executed, subsequent transactions calling the smart contract will be processed by the Aspect. When processing transactions, nodes will start the WASM runtime, load and execute the Aspect byte code with it.
+Taking Built-in Aspect as an example, developers can import Base Layer API through Aspect SDK to program Aspect. After compiling the Aspect source code into WASM byte code, it can be deployed to the Artela network through a deployment transaction. 
+After go through the consensus process, the byte code of Aspect will be written into the world state and synchronized to all nodes on the network. However, after deployment, it will not immediately affect the transactions on the Artela network. 
+
+The owner of the smart contract needs to send a binding transaction to the Artela network, specifying that it needs to be combined with the Aspect. After this transaction has been executed, subsequent transactions calling the smart contract will be processed by the Aspect. When processing transactions, nodes will start the WASM runtime, load and execute the Aspect byte code with it.
 
 Aspect needs to specify **Join Points**, which are the positions where Aspect is cutting and executed during transaction processing, including Block Init, Transaction Verification, Pre Execute, Post Execute, Block Finalize and etc.
 
