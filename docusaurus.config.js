@@ -55,7 +55,6 @@ const config = {
       // Replace with your project's social card
       image: 'img/artela.png',
       navbar: {
-        title: 'Artela Network',
         logo: {
           alt: 'Artela Network',
           src: 'img/artela.png',
@@ -91,19 +90,6 @@ const config = {
               {
                 label: "Aspect Programming",
                 href: "https://docs.artela.network/Core-Concepts/Aspect-Programming",
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: "Medium",
-                href: "https://medium.com",
-              },
-              {
-                label: "Discord",
-                href: "https://discord.gg",
               },
             ],
           },
