@@ -20,9 +20,9 @@ Both smart contracts and aspects serve as programmable building units for develo
 
 1. Artela advocates the dApp-building concept of SOC (Separate of Concerns), which entails utilizing smart contracts to implement business logic and aspects to achieve additional features like risk management, security, and automation, ultimately enabling modular construction and assembly of dApps.
 
-1. [Smart](http://2.Smart) contracts in Artela utilize EVM as the execution environment, while aspects run in WASM or other heterogeneous environments.
+2. Smart contracts in Artela utilize EVM as the execution environment, while aspects run in WASM or other heterogeneous environments.
 
-1. Aspects can be implemented and worked at several major joint points of the consensus process.
+3. Aspects can be implemented and worked at several major joint points of the consensus process.
 
 ---
 

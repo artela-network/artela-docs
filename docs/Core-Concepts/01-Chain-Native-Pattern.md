@@ -8,6 +8,8 @@ Chain-Native Pattern can be used to introduce custom logic into the transaction 
 
 Chain-Native Pattern involves defining a set of extension joint points in the core layer of the blockchain. These extension points can be used to load and execute custom modules at runtime. These custom modules are natively extended from the base layer of the running environment, and can be combined with lightweight smart contracts to allow dApps to be built in a fully customized and plug-and-play manner.
 
+---
+
 ## 2. Blockchain in Chain-Native Pattern
 
 In Chain-Native pattern, the blockchain architecture is typically divided into three layers: the base layer, the extension layer and the application layer, with an emphasis on extension layer.
