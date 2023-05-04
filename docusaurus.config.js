@@ -98,8 +98,12 @@ const config = {
             title: 'Social',
             items: [
               {
+                label: "Artela",
+                href: "https://www.artela.network",
+              },
+              {
                 label: "Twitter",
-                href: "https://twitter.com",
+                href: "https://twitter.com/Artela_Network",
               },
               {
                 label: "Telegram",
