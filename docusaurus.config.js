@@ -98,7 +98,7 @@ const config = {
             title: 'Social',
             items: [
               {
-                label: "Artela",
+                label: "WebSite",
                 href: "https://www.artela.network",
               },
               {
