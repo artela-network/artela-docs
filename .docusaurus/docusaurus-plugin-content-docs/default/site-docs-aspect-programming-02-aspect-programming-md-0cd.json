@@ -1,0 +1,24 @@
+{
+  "unversionedId": "Aspect-Programming/Aspect-Programming",
+  "id": "Aspect-Programming/Aspect-Programming",
+  "title": "Aspect Programming",
+  "description": "As an important component of blockchain technology, Smart Contract supports developers in building decentralized applications through custom programming. However, with the continuous development of blockchain applications, Smart Contract has exposed many shortcomings in terms of upgradeability and scalability. Aspect Programming can support developers in developing Native Extensions to add customized functionality to dApps at the blockchain base layer, which complements Smart Contract technology. At the same time, it increases the modularity of dApps, making it easier to build complex dApps.",
+  "source": "@site/docs/Aspect-Programming/02-Aspect-Programming.md",
+  "sourceDirName": "Aspect-Programming",
+  "slug": "/Aspect-Programming/Aspect-Programming",
+  "permalink": "/Aspect-Programming/Aspect-Programming",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Native Extension",
+    "permalink": "/Aspect-Programming/Native-Extension"
+  },
+  "next": {
+    "title": "Scale-out Design",
+    "permalink": "/Aspect-Programming/Scale-out-Design"
+  }
+}

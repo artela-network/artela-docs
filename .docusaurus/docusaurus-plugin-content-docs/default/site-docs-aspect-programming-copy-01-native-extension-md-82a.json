@@ -1,0 +1,24 @@
+{
+  "unversionedId": "Aspect-Programming copy/Native-Extension",
+  "id": "Aspect-Programming copy/Native-Extension",
+  "title": "Native Extension",
+  "description": "What is Native Extension",
+  "source": "@site/docs/Aspect-Programming copy/01-Native-Extension.md",
+  "sourceDirName": "Aspect-Programming copy",
+  "slug": "/Aspect-Programming copy/Native-Extension",
+  "permalink": "/Aspect-Programming copy/Native-Extension",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "main",
+    "permalink": "/Aspect-Programming/main"
+  },
+  "next": {
+    "title": "Aspect",
+    "permalink": "/Aspect-Programming copy/Aspect"
+  }
+}

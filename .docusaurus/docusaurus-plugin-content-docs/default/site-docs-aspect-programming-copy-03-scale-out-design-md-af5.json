@@ -1,0 +1,24 @@
+{
+  "unversionedId": "Aspect-Programming copy/Scale-out-Design",
+  "id": "Aspect-Programming copy/Scale-out-Design",
+  "title": "Scale-out Design",
+  "description": "Artela's Scale-out architecture will be designed around the characteristics of the Artela network, combined with the chain-native pattern, which brings dApps an experience of an endless network, with extensible functionality and expandable block space, while maintaining native composability with other dApps in the network.",
+  "source": "@site/docs/Aspect-Programming copy/03-Scale-out-Design.md",
+  "sourceDirName": "Aspect-Programming copy",
+  "slug": "/Aspect-Programming copy/Scale-out-Design",
+  "permalink": "/Aspect-Programming copy/Scale-out-Design",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Aspect",
+    "permalink": "/Aspect-Programming copy/Aspect"
+  },
+  "next": {
+    "title": "main",
+    "permalink": "/Aspect-Programming copy/main"
+  }
+}

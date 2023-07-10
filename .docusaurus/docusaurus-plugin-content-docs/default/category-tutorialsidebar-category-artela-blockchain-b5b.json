@@ -1,0 +1,16 @@
+{
+  "title": "Artela Blockchain",
+  "description": "Learn about the most important Docusaurus concept!",
+  "slug": "/category/artela-blockchain",
+  "permalink": "/category/artela-blockchain",
+  "navigation": {
+    "previous": {
+      "title": "Aspect",
+      "permalink": "/Aspect-Programming/Aspect"
+    },
+    "next": {
+      "title": "Artela Blockchain",
+      "permalink": "/Artela-Blockchain/Introduction"
+    }
+  }
+}

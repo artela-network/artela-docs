@@ -1,0 +1,73 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/",
+          "mainDocId": "main",
+          "docs": [
+            {
+              "id": "Artela-Blockchain/Introduction",
+              "path": "/Artela-Blockchain/Introduction",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Aspect-Programming/Aspect",
+              "path": "/Aspect-Programming/Aspect",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Aspect-Programming/Introduction",
+              "path": "/Aspect-Programming/Introduction",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Aspect-Programming/Native-Extension",
+              "path": "/Aspect-Programming/Native-Extension",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Build-on-Artela/Lite-DApp",
+              "path": "/Build-on-Artela/Lite-DApp",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Build-on-Artela/Public-Service",
+              "path": "/Build-on-Artela/Public-Service",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Build-on-Artela/Rich-DApp",
+              "path": "/Build-on-Artela/Rich-DApp",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "main",
+              "path": "/main",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Resources/FAQ",
+              "path": "/Resources/FAQ",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/main",
+                "label": "main"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "unversionedId": "Aspect-Programming/Introduction",
+  "id": "Aspect-Programming/Introduction",
+  "title": "Introduction",
+  "description": "Aspect Programming is a specific programming model that supports the dynamic creation of native extension modules for blockchain at runtime.",
+  "source": "@site/docs/Aspect-Programming/01-Introduction.md",
+  "sourceDirName": "Aspect-Programming",
+  "slug": "/Aspect-Programming/Introduction",
+  "permalink": "/Aspect-Programming/Introduction",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Intro to Artela",
+    "permalink": "/main"
+  },
+  "next": {
+    "title": "Native Extension",
+    "permalink": "/Aspect-Programming/Native-Extension"
+  }
+}

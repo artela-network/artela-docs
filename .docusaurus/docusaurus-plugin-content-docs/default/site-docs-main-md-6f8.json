@@ -1,0 +1,22 @@
+{
+  "unversionedId": "main",
+  "id": "main",
+  "title": "Intro to Artela",
+  "description": "Artela is an extensible blockchain network enabling developers to build feature-rich dApps.",
+  "source": "@site/docs/main.md",
+  "sourceDirName": ".",
+  "slug": "/main",
+  "permalink": "/main",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "next": {
+    "title": "Introduction",
+    "permalink": "/Aspect-Programming/Introduction"
+  }
+}
