@@ -2,9 +2,9 @@
 
 <!-- ## What is Native Extension -->
 
-Native Extension is the ideology proposed by Artela for blockchain customized functionality. 
+Native Extension serves as a programmable on-chain module for customized functionality. It extends from the base layer and works synergistically with blockchain smart contracts, allowing dApp to be built in a plug-and-play modular manner.
 
-Native Extension is a programmable on-chain module for customized functionality. It extends from the base layer and works synergistically with blockchain smart contracts, allowing dApp to be built in a plug-and-play modular manner.
+Native Extension is the solution for blockchain customized functionality. 
 
 ---
 
@@ -34,6 +34,7 @@ Native Extension is the optimal solution with the balanced built-in functionalit
   width="70%"
 />
 </center>
+
 
 **Smart Contract:**
 

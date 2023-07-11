@@ -66,16 +66,16 @@ export default {
           "title": "Documentation",
           "items": [
             {
-              "label": "Artela Network",
+              "label": "Intro to Artela",
               "href": "https://docs.artela.network/main"
             },
             {
-              "label": "Chain-Native Pattern",
-              "href": "https://docs.artela.network/Core-Concepts/Chain-Native-Pattern"
+              "label": "Artela Blockchain",
+              "href": "https://docs.artela.network/Artela-Blockchain"
             },
             {
               "label": "Aspect Programming",
-              "href": "https://docs.artela.network/Core-Concepts/Aspect-Programming"
+              "href": "https://docs.artela.network/Aspect-Programming"
             }
           ]
         },
@@ -83,7 +83,7 @@ export default {
           "title": "Social",
           "items": [
             {
-              "label": "WebSite",
+              "label": "Website",
               "href": "https://www.artela.network"
             },
             {
@@ -91,8 +91,8 @@ export default {
               "href": "https://twitter.com/Artela_Network"
             },
             {
-              "label": "Telegram",
-              "href": "https://t.me"
+              "label": "Medium",
+              "href": "https://medium.com/@artela_network"
             }
           ]
         }

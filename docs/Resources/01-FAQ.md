@@ -14,7 +14,15 @@ Artela has enabled the borderless extensibility of the blockchain network while 
 
 ---
 
-## Q: What’s the main difference between Smart Contracts and Aspects?
+## Q: How Aspect Programming benefits dApps?
+
+1. With Aspect, developers don‘t really need to rebuild an appchain from scratch to achieve customization for their dApps. They can freely and easily develop Aspect to seamlessly incorporate additional native functionalities, making the process as simple and secure as deploying smart contracts.
+2. Aspect can be deployed throughout the entire life cycle of transactions, with more context of transactions accessible than the smart contract. Also, the WASM virtual machine will serve as the execution environment for built-in Aspects. The combination of these two features enables developers to explore new possibilities for on-chain functionalities. Some previously unimaginable scenarios would become within reach, like on-chain runtime protection for smart contracts, on-chain automation (eg. Just in Time MEV for dApps) with an unprecedented level of customization, effective rollup proof verification, lightweight implementation of “EIP”, and much more. Developers can harness the power of their preferred programming languages within Aspect’s secure and flexible framework, unlocking their unlimited creative potential and driving continuous value creation for the ecosystem.
+3. Aspect would enable modular dApp building patterns for developers. DApps would no longer be a collection of tightly coupled codebases. Developers can obtain promising improvements in flexibility, resilience, scalability, extensibility, and maintenance simply by assembling Aspects.
+
+---
+
+## Q: What’s the main difference between smart contracts and Aspects?
 
 Both smart contracts and aspects serve as programmable building units for developers to write code and develop dApps. They are different in the following ways:
 

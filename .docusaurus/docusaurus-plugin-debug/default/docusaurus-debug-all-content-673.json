@@ -20,9 +20,9 @@
             {
               "unversionedId": "Artela-Blockchain/artela-blockchain",
               "id": "Artela-Blockchain/artela-blockchain",
-              "title": "Artela Blockchain",
+              "title": "Overview",
               "description": "Artela Blockchain is a layer 1 network that empowers developers to add user-defined native extensions and build feature-rich dApps. It offers extensibility that goes beyond EVM-equivalence, inter-domain interoperability, and boundless scalability with its Elastic Block Space design.",
-              "source": "@site/docs/Artela-Blockchain/01-Artela-Blockchain.md",
+              "source": "@site/docs/Artela-Blockchain/01-Overview.md",
               "sourceDirName": "Artela-Blockchain",
               "slug": "/Artela-Blockchain",
               "permalink": "/Artela-Blockchain",
@@ -40,7 +40,7 @@
                 "permalink": "/main"
               },
               "next": {
-                "title": "Aspect Programming",
+                "title": "Overview",
                 "permalink": "/Aspect-Programming"
               }
             },
@@ -71,9 +71,9 @@
             {
               "unversionedId": "Aspect-Programming/aspect-programming",
               "id": "Aspect-Programming/aspect-programming",
-              "title": "Aspect Programming",
+              "title": "Overview",
               "description": "Aspect Programming is a universal programming framework that supports the dynamic creation of native extension modules for blockchain at runtime.",
-              "source": "@site/docs/Aspect-Programming/01-Aspect-Programming.md",
+              "source": "@site/docs/Aspect-Programming/01-Overview.md",
               "sourceDirName": "Aspect-Programming",
               "slug": "/Aspect-Programming",
               "permalink": "/Aspect-Programming",
@@ -87,7 +87,7 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Artela Blockchain",
+                "title": "Overview",
                 "permalink": "/Artela-Blockchain"
               },
               "next": {
@@ -99,7 +99,7 @@
               "unversionedId": "Aspect-Programming/Native-Extension",
               "id": "Aspect-Programming/Native-Extension",
               "title": "Native Extension",
-              "description": "Native Extension is the ideology proposed by Artela for blockchain customized functionality.",
+              "description": "Native Extension serves as a programmable on-chain module for customized functionality. It extends from the base layer and works synergistically with blockchain smart contracts, allowing dApp to be built in a plug-and-play modular manner.",
               "source": "@site/docs/Aspect-Programming/02-Native-Extension.md",
               "sourceDirName": "Aspect-Programming",
               "slug": "/Aspect-Programming/Native-Extension",
@@ -111,7 +111,7 @@
               "frontMatter": {},
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Aspect Programming",
+                "title": "Overview",
                 "permalink": "/Aspect-Programming"
               },
               "next": {
@@ -209,7 +209,7 @@
               },
               "sidebar": "tutorialSidebar",
               "next": {
-                "title": "Artela Blockchain",
+                "title": "Overview",
                 "permalink": "/Artela-Blockchain"
               }
             },
@@ -242,9 +242,16 @@
                 "id": "main"
               },
               {
-                "type": "doc",
+                "type": "category",
                 "label": "Artela Blockchain",
-                "id": "Artela-Blockchain/artela-blockchain"
+                "collapsible": false,
+                "collapsed": false,
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "Artela-Blockchain/artela-blockchain"
+                  }
+                ]
               },
               {
                 "type": "category",
@@ -254,17 +261,17 @@
                 "items": [
                   {
                     "type": "doc",
+                    "id": "Aspect-Programming/aspect-programming"
+                  },
+                  {
+                    "type": "doc",
                     "id": "Aspect-Programming/Native-Extension"
                   },
                   {
                     "type": "doc",
                     "id": "Aspect-Programming/Aspect"
                   }
-                ],
-                "link": {
-                  "type": "doc",
-                  "id": "Aspect-Programming/aspect-programming"
-                }
+                ]
               },
               {
                 "type": "category",

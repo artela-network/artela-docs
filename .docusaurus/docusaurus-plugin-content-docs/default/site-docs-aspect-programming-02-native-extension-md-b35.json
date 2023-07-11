@@ -2,7 +2,7 @@
   "unversionedId": "Aspect-Programming/Native-Extension",
   "id": "Aspect-Programming/Native-Extension",
   "title": "Native Extension",
-  "description": "Native Extension is the ideology proposed by Artela for blockchain customized functionality.",
+  "description": "Native Extension serves as a programmable on-chain module for customized functionality. It extends from the base layer and works synergistically with blockchain smart contracts, allowing dApp to be built in a plug-and-play modular manner.",
   "source": "@site/docs/Aspect-Programming/02-Native-Extension.md",
   "sourceDirName": "Aspect-Programming",
   "slug": "/Aspect-Programming/Native-Extension",
@@ -14,7 +14,7 @@
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Aspect Programming",
+    "title": "Overview",
     "permalink": "/Aspect-Programming"
   },
   "next": {

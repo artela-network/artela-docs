@@ -1,8 +1,5 @@
 {
   "label": "Artela Blockchain",
   "position": 2,
-  "link": {
-    "type": "doc",
-    "id": "artela-blockchain"
-  }
+  "link": null
 }

@@ -6,16 +6,9 @@ In Artela, we define a new programmable module to work as Native Extension, call
 
 The name “Aspect” is inspired by Aspect-oriented Programming. Aspect can tap into the complete API set of the base layer, and inject extended logic into specific join points during a transaction's lifecycle.
 
-Aspect is a modular extension program 
-
 Aspect integrates customized functionality into the blockchain base layer, working synergistically with smart contracts to enhance dApp modularity and functionality.
 
-**Core characteristics of Aspect:**
-
-- **Security isolation:** Aspects are executed within a secure sandbox environment that operates independently from the base layer. This isolation ensures that the execution of an Aspect does not compromise the security and availability of the base layer. Furthermore, Aspects are securely isolated from each other, meaning that the execution of one Aspect does not interfere with or affect the execution of other Aspects.
-- **Composability:** Developers can bind smart contracts with Aspects to enable additional functionality. When a transaction calls a smart contract, it passes through the associated Aspects, allowing for additional processing capabilities to be applied. Aspects can be combined with multiple smart contracts seamlessly.
-
-**The Principle of Aspect**
+## Principle of Aspect
 
 <center>
 <img
@@ -27,18 +20,16 @@ Aspect integrates customized functionality into the blockchain base layer, worki
 
 Developers can utilize Aspect SDK to access base layer API for building Aspects. 
 
-**Process**
+### Building Process
 1. Aspect source code is compiled into WASM bytecode.  
 2. Aspect bytecode is deployed to the Artela network through a deployment transaction. 
 3. After the consensus process, Aspect bytecode will be written to the blockchain's world state and synchronized to all nodes on the network. 
 4. Smart contract owner executes a binding transaction, specifying that it needs to be combined with the Aspect. 
 5. Subsequent transactions calling the smart contract will be processed by the Aspect.
 
-**Join Points**
+### Join Points
 
 Aspect needs to specify Join Points, which are the positions where Aspects are executed throughout the transaction processing lifecycle. Join Points includes Block Init, Transaction Verification, Pre Execute, Post Execute, Block Finalize and etc.
-
-The range of Joint Points supported are shown in the figure:
 
 <center>
 <img
@@ -47,6 +38,12 @@ The range of Joint Points supported are shown in the figure:
   width="80%"
 />
 </center>
+
+### Core Characteristics
+
+- **Security isolation:** Aspects are executed within a secure sandbox environment that operates independently from the base layer. This isolation ensures that the execution of an Aspect does not compromise the security and availability of the base layer. Furthermore, Aspects are securely isolated from each other, meaning that the execution of one Aspect does not interfere with or affect the execution of other Aspects.
+- **Composability:** Developers can bind smart contracts with Aspects to enable additional functionality. When a transaction calls a smart contract, it passes through the associated Aspects, allowing for additional processing capabilities to be applied. Aspects can be combined with multiple smart contracts seamlessly.
+
 
 ## Aspect Capabilities
 
