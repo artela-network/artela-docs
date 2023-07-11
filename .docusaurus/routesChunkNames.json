@@ -192,24 +192,24 @@
     },
     "config": "config---5-e-9-4f3"
   },
-  "/-00c": {
+  "/-c39": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---077-7b3"
     },
     "versionMetadata": "versionMetadata---935-fcf"
   },
-  "/Artela-Blockchain/Introduction-66a": {
+  "/Artela-Blockchain-a32": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---artela-blockchain-introductionc-7-d-54d"
+    "content": "content---artela-blockchain-41-c-397"
+  },
+  "/Aspect-Programming-3d4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---aspect-programmingb-39-103"
   },
   "/Aspect-Programming/Aspect-1f1": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---aspect-programming-aspectc-9-b-369"
-  },
-  "/Aspect-Programming/Introduction-f6e": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---aspect-programming-introductione-2-c-439"
   },
   "/Aspect-Programming/Native-Extension-a35": {
     "__comp": "__comp---theme-doc-item-178-a40",

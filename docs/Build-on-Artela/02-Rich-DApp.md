@@ -6,7 +6,7 @@
 
 Rich dApp incorporates Incorporate application-specific functionality by utilizing a combination of smart contracts and Aspects. Developers can implement basic logic in smart contracts and additional features in Aspects, enabling feature-rich dApps beyond EVM equivalence. Smart contracts are executed in EVM environments. Aspects are executed in WASM environment. 
 
-In a modular manner, DApp is no longer a monolithic, tightly coupled codebase. Promising improvements in flexibility, reusability, and extensibility can be achieved simply by assembling the Lego of Aspects.
+In a modular manner, DApp is no longer a monolithic, tightly coupled codebase. Promising improvements in flexibility, reusability, and extensibility can be achieved simply by assembling Aspects.
 
 The principle of Rich dApp:
 
@@ -42,13 +42,13 @@ The principle of Rich dApp:
 
   Severe limitations of effectively verifying proofs of rollup on EVM:
 
-  - For OP: Bloats the bytecode size of some contracts, requires a lot more gas
-  - For ZK: Fixed pairing curves and hashing algorithms
+    - For OP: Bloats the bytecode size of some contracts, requires a lot more gas
+    - For ZK: Fixed pairing curves and hashing algorithms
 
   Aspect makes proof verification much easier to implement. Developers can run core protocol off-chain and proofs verification in Aspect.
 
-  - For OP: An “evm-in-wasm” mode can be built to achieve effective single-round non-interactive proof.
-  - For ZK: Various pairing curves and hashing algorithms could be implemented in Aspect.
+    - For OP: An “evm-in-wasm” mode can be built to achieve effective single-round non-interactive proof.
+    - For ZK: Various pairing curves and hashing algorithms could be implemented in Aspect.
 
 <center>
 <img

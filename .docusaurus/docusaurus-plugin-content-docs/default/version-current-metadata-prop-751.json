@@ -23,12 +23,6 @@
         "items": [
           {
             "type": "link",
-            "label": "Introduction",
-            "href": "/Aspect-Programming/Introduction",
-            "docId": "Aspect-Programming/Introduction"
-          },
-          {
-            "type": "link",
             "label": "Native Extension",
             "href": "/Aspect-Programming/Native-Extension",
             "docId": "Aspect-Programming/Native-Extension"
@@ -39,21 +33,14 @@
             "href": "/Aspect-Programming/Aspect",
             "docId": "Aspect-Programming/Aspect"
           }
-        ]
+        ],
+        "href": "/Aspect-Programming"
       },
       {
-        "type": "category",
+        "type": "link",
         "label": "Artela Blockchain",
-        "collapsible": false,
-        "collapsed": false,
-        "items": [
-          {
-            "type": "link",
-            "label": "Introduction",
-            "href": "/Artela-Blockchain/Introduction",
-            "docId": "Artela-Blockchain/Introduction"
-          }
-        ]
+        "href": "/Artela-Blockchain",
+        "docId": "Artela-Blockchain/artela-blockchain"
       },
       {
         "type": "category",
@@ -98,10 +85,10 @@
     ]
   },
   "docs": {
-    "Artela-Blockchain/Introduction": {
-      "id": "Artela-Blockchain/Introduction",
-      "title": "Introduction",
-      "description": "Artela Network is a layer 1 designed to maximize dApp functionality through Aspect Programming. It offers extensibility that goes beyond EVM-equivalence, inter-domain interoperability, and boundless scalability with its Elastic Block Space design.",
+    "Artela-Blockchain/artela-blockchain": {
+      "id": "Artela-Blockchain/artela-blockchain",
+      "title": "Artela Blockchain",
+      "description": "Artela Blockchain is a layer 1 network that empowers developers to add user-defined native extensions and build feature-rich dApps. It offers extensibility that goes beyond EVM-equivalence, inter-domain interoperability, and boundless scalability with its Elastic Block Space design.",
       "sidebar": "tutorialSidebar"
     },
     "Aspect-Programming/Aspect": {
@@ -110,10 +97,10 @@
       "description": "In Artela, we define a new programmable module to work as Native Extension, called Aspect.",
       "sidebar": "tutorialSidebar"
     },
-    "Aspect-Programming/Introduction": {
-      "id": "Aspect-Programming/Introduction",
-      "title": "Introduction",
-      "description": "Aspect Programming is a specific programming model that supports the dynamic creation of native extension modules for blockchain at runtime.",
+    "Aspect-Programming/aspect-programming": {
+      "id": "Aspect-Programming/aspect-programming",
+      "title": "Aspect Programming",
+      "description": "Aspect Programming is a universal programming framework that supports the dynamic creation of native extension modules for blockchain at runtime.",
       "sidebar": "tutorialSidebar"
     },
     "Aspect-Programming/Native-Extension": {

@@ -1,6 +1,10 @@
-# Introduction
+---
+id: aspect-programming
+slug: /Aspect-Programming
+---
+# Aspect Programming
 
-Aspect Programming is a specific programming model that supports the dynamic creation of native extension modules for blockchain at runtime.
+Aspect Programming is a universal programming framework that supports the dynamic creation of native extension modules for blockchain at runtime.
 
 Aspect Programming provides a universal stack for all chains, including Layer 2 solutions, to develop native extensions at the base layers, enabling modular dApp building and customized functionality.
 

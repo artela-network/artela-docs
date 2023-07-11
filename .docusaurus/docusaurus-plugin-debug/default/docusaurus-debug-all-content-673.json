@@ -18,19 +18,22 @@
           "contentPathLocalized": "/Users/maqiyuan/Artela/artela-docs/i18n/en/docusaurus-plugin-content-docs/current",
           "docs": [
             {
-              "unversionedId": "Artela-Blockchain/Introduction",
-              "id": "Artela-Blockchain/Introduction",
-              "title": "Introduction",
-              "description": "Artela Network is a layer 1 designed to maximize dApp functionality through Aspect Programming. It offers extensibility that goes beyond EVM-equivalence, inter-domain interoperability, and boundless scalability with its Elastic Block Space design.",
-              "source": "@site/docs/Artela-Blockchain/01-Introduction.md",
+              "unversionedId": "Artela-Blockchain/artela-blockchain",
+              "id": "Artela-Blockchain/artela-blockchain",
+              "title": "Artela Blockchain",
+              "description": "Artela Blockchain is a layer 1 network that empowers developers to add user-defined native extensions and build feature-rich dApps. It offers extensibility that goes beyond EVM-equivalence, inter-domain interoperability, and boundless scalability with its Elastic Block Space design.",
+              "source": "@site/docs/Artela-Blockchain/01-Artela-Blockchain.md",
               "sourceDirName": "Artela-Blockchain",
-              "slug": "/Artela-Blockchain/Introduction",
-              "permalink": "/Artela-Blockchain/Introduction",
+              "slug": "/Artela-Blockchain",
+              "permalink": "/Artela-Blockchain",
               "draft": false,
               "tags": [],
               "version": "current",
               "sidebarPosition": 1,
-              "frontMatter": {},
+              "frontMatter": {
+                "id": "artela-blockchain",
+                "slug": "/Artela-Blockchain"
+              },
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Aspect",
@@ -61,24 +64,27 @@
                 "permalink": "/Aspect-Programming/Native-Extension"
               },
               "next": {
-                "title": "Introduction",
-                "permalink": "/Artela-Blockchain/Introduction"
+                "title": "Artela Blockchain",
+                "permalink": "/Artela-Blockchain"
               }
             },
             {
-              "unversionedId": "Aspect-Programming/Introduction",
-              "id": "Aspect-Programming/Introduction",
-              "title": "Introduction",
-              "description": "Aspect Programming is a specific programming model that supports the dynamic creation of native extension modules for blockchain at runtime.",
-              "source": "@site/docs/Aspect-Programming/01-Introduction.md",
+              "unversionedId": "Aspect-Programming/aspect-programming",
+              "id": "Aspect-Programming/aspect-programming",
+              "title": "Aspect Programming",
+              "description": "Aspect Programming is a universal programming framework that supports the dynamic creation of native extension modules for blockchain at runtime.",
+              "source": "@site/docs/Aspect-Programming/01-Aspect-Programming.md",
               "sourceDirName": "Aspect-Programming",
-              "slug": "/Aspect-Programming/Introduction",
-              "permalink": "/Aspect-Programming/Introduction",
+              "slug": "/Aspect-Programming",
+              "permalink": "/Aspect-Programming",
               "draft": false,
               "tags": [],
               "version": "current",
               "sidebarPosition": 1,
-              "frontMatter": {},
+              "frontMatter": {
+                "id": "aspect-programming",
+                "slug": "/Aspect-Programming"
+              },
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Intro to Artela",
@@ -105,8 +111,8 @@
               "frontMatter": {},
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Introduction",
-                "permalink": "/Aspect-Programming/Introduction"
+                "title": "Aspect Programming",
+                "permalink": "/Aspect-Programming"
               },
               "next": {
                 "title": "Aspect",
@@ -129,8 +135,8 @@
               "frontMatter": {},
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Introduction",
-                "permalink": "/Artela-Blockchain/Introduction"
+                "title": "Artela Blockchain",
+                "permalink": "/Artela-Blockchain"
               },
               "next": {
                 "title": "Rich dApp",
@@ -203,8 +209,8 @@
               },
               "sidebar": "tutorialSidebar",
               "next": {
-                "title": "Introduction",
-                "permalink": "/Aspect-Programming/Introduction"
+                "title": "Aspect Programming",
+                "permalink": "/Aspect-Programming"
               }
             },
             {
@@ -243,29 +249,22 @@
                 "items": [
                   {
                     "type": "doc",
-                    "id": "Aspect-Programming/Introduction"
-                  },
-                  {
-                    "type": "doc",
                     "id": "Aspect-Programming/Native-Extension"
                   },
                   {
                     "type": "doc",
                     "id": "Aspect-Programming/Aspect"
                   }
-                ]
+                ],
+                "link": {
+                  "type": "doc",
+                  "id": "Aspect-Programming/aspect-programming"
+                }
               },
               {
-                "type": "category",
+                "type": "doc",
                 "label": "Artela Blockchain",
-                "collapsible": false,
-                "collapsed": false,
-                "items": [
-                  {
-                    "type": "doc",
-                    "id": "Artela-Blockchain/Introduction"
-                  }
-                ]
+                "id": "Artela-Blockchain/artela-blockchain"
               },
               {
                 "type": "category",

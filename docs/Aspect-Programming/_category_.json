@@ -1,5 +1,8 @@
 {
   "label": "Aspect Programming",
   "position": 2,
-  "link": null
+  "link": {
+    "type": "doc",
+    "id": "aspect-programming"
+  }
 }

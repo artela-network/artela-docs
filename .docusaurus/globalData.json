@@ -11,8 +11,8 @@
           "mainDocId": "main",
           "docs": [
             {
-              "id": "Artela-Blockchain/Introduction",
-              "path": "/Artela-Blockchain/Introduction",
+              "id": "Artela-Blockchain/artela-blockchain",
+              "path": "/Artela-Blockchain",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -21,8 +21,8 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Aspect-Programming/Introduction",
-              "path": "/Aspect-Programming/Introduction",
+              "id": "Aspect-Programming/aspect-programming",
+              "path": "/Aspect-Programming",
               "sidebar": "tutorialSidebar"
             },
             {

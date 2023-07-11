@@ -104,23 +104,23 @@ export default [
   },
   {
     path: '/',
-    component: ComponentCreator('/', '00c'),
+    component: ComponentCreator('/', 'c39'),
     routes: [
       {
-        path: '/Artela-Blockchain/Introduction',
-        component: ComponentCreator('/Artela-Blockchain/Introduction', '66a'),
+        path: '/Artela-Blockchain',
+        component: ComponentCreator('/Artela-Blockchain', 'a32'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/Aspect-Programming',
+        component: ComponentCreator('/Aspect-Programming', '3d4'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
       {
         path: '/Aspect-Programming/Aspect',
         component: ComponentCreator('/Aspect-Programming/Aspect', '1f1'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/Aspect-Programming/Introduction',
-        component: ComponentCreator('/Aspect-Programming/Introduction', 'f6e'),
         exact: true,
         sidebar: "tutorialSidebar"
       },

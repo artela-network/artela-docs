@@ -8,18 +8,18 @@ sidebar_position: 1
 
 <!-- Artela is an extensible blockchain network enabling developers to build feature-rich dApps.  -->
 
-Artela is dedicated to pushing dApp functionality's boundaries beyond smart contracts, unlocking the full potential of Web3 innovations.
+Artela is dedicated to pushing the boundaries of dApp functionality beyond smart contracts, unlocking the full potential of Web3 innovations.
 
 ## What Artela is building:
 
-**Artela Network**
+**Artela Blockchain**
     
-Artela Network is a layer 1 designed to maximize dApp functionality through Aspect Programming. It offers extensibility that goes beyond EVM-equivalence, inter-domain interoperability, and boundless scalability with its Elastic Block Space design.
+Artela Blockchain is a layer 1 network that empowers developers to add user-defined native extensions and build feature-rich dApps. It offers extensibility that goes beyond EVM-equivalence, inter-domain interoperability, and boundless scalability with its elastic block space design.
   
 
 **Aspect Programming**
     
-Aspect Programming is a universal programming model that supports the dynamic creation of native extension modules for blockchain at runtime. It offers a universal stack for all chains to build extension modules to enhance dApp functionality, providing a versatile framework for expanding functionality.
+Aspect Programming is a universal programming framework that supports the dynamic creation of native extension modules for blockchain at runtime. It offers a universal stack for all chains to build extension modules to enhance dApp functionality, providing a versatile framework for expanding functionality.
 <!-- **Artela’s extensibility empowers developers to achieve maximum customization by creating modular extensions on top of the public base layer. Meanwhile, the network’s elastic block space ensures optimal scalability and performance for the dApp.**
 
 **Artela's technical goals include:**
