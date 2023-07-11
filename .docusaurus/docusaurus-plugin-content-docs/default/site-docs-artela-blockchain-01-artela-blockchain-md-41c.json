@@ -17,11 +17,11 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Aspect",
-    "permalink": "/Aspect-Programming/Aspect"
+    "title": "Intro to Artela",
+    "permalink": "/main"
   },
   "next": {
-    "title": "Lite dApp",
-    "permalink": "/Build-on-Artela/Lite-DApp"
+    "title": "Aspect Programming",
+    "permalink": "/Aspect-Programming"
   }
 }

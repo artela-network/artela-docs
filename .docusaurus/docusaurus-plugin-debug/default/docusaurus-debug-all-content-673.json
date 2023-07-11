@@ -36,12 +36,12 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Aspect",
-                "permalink": "/Aspect-Programming/Aspect"
+                "title": "Intro to Artela",
+                "permalink": "/main"
               },
               "next": {
-                "title": "Lite dApp",
-                "permalink": "/Build-on-Artela/Lite-DApp"
+                "title": "Aspect Programming",
+                "permalink": "/Aspect-Programming"
               }
             },
             {
@@ -64,8 +64,8 @@
                 "permalink": "/Aspect-Programming/Native-Extension"
               },
               "next": {
-                "title": "Artela Blockchain",
-                "permalink": "/Artela-Blockchain"
+                "title": "Lite dApp",
+                "permalink": "/Build-on-Artela/Lite-DApp"
               }
             },
             {
@@ -87,8 +87,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Intro to Artela",
-                "permalink": "/main"
+                "title": "Artela Blockchain",
+                "permalink": "/Artela-Blockchain"
               },
               "next": {
                 "title": "Native Extension",
@@ -135,8 +135,8 @@
               "frontMatter": {},
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Artela Blockchain",
-                "permalink": "/Artela-Blockchain"
+                "title": "Aspect",
+                "permalink": "/Aspect-Programming/Aspect"
               },
               "next": {
                 "title": "Rich dApp",
@@ -209,8 +209,8 @@
               },
               "sidebar": "tutorialSidebar",
               "next": {
-                "title": "Aspect Programming",
-                "permalink": "/Aspect-Programming"
+                "title": "Artela Blockchain",
+                "permalink": "/Artela-Blockchain"
               }
             },
             {
@@ -242,6 +242,11 @@
                 "id": "main"
               },
               {
+                "type": "doc",
+                "label": "Artela Blockchain",
+                "id": "Artela-Blockchain/artela-blockchain"
+              },
+              {
                 "type": "category",
                 "label": "Aspect Programming",
                 "collapsible": false,
@@ -260,11 +265,6 @@
                   "type": "doc",
                   "id": "Aspect-Programming/aspect-programming"
                 }
-              },
-              {
-                "type": "doc",
-                "label": "Artela Blockchain",
-                "id": "Artela-Blockchain/artela-blockchain"
               },
               {
                 "type": "category",

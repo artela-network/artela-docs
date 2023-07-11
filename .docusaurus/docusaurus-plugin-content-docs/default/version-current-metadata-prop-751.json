@@ -16,6 +16,12 @@
         "docId": "main"
       },
       {
+        "type": "link",
+        "label": "Artela Blockchain",
+        "href": "/Artela-Blockchain",
+        "docId": "Artela-Blockchain/artela-blockchain"
+      },
+      {
         "type": "category",
         "label": "Aspect Programming",
         "collapsible": false,
@@ -35,12 +41,6 @@
           }
         ],
         "href": "/Aspect-Programming"
-      },
-      {
-        "type": "link",
-        "label": "Artela Blockchain",
-        "href": "/Artela-Blockchain",
-        "docId": "Artela-Blockchain/artela-blockchain"
       },
       {
         "type": "category",

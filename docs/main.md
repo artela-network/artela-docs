@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Intro to Artela
 
-> **Artela is an extensible blockchain network enabling developers to build feature-rich dApps.**
+Artela is an extensible blockchain network enabling developers to build feature-rich dApps.
 
 <!-- Artela is an extensible blockchain network enabling developers to build feature-rich dApps.  -->
 
