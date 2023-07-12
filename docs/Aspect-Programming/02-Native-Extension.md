@@ -35,10 +35,14 @@ Native Extension is the optimal solution with the balanced built-in functionalit
 />
 </center>
 
+<br />
+<br />
 
-**Smart Contract:**
+**Smart Contract**
 
 A computer protocol that runs on the EVM base layer and performs trusted transactions without the need for third-party intervention. Developers can use smart contracts to implement the basic business logic of dApps.
+
+<br />
 
 **Native Extension:**
 

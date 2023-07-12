@@ -18,7 +18,7 @@ Aspect integrates customized functionality into the blockchain base layer, worki
 />
 </center>
 
-Developers can utilize Aspect SDK to access base layer API for building Aspects. 
+<!-- Developers can utilize Aspect SDK to access base layer API for building Aspects.  -->
 
 ### Building Process
 1. Aspect source code is compiled into WASM bytecode.  
