@@ -1,0 +1,24 @@
+{
+  "unversionedId": "Build-with-Artela/Lite-DApp",
+  "id": "Build-with-Artela/Lite-DApp",
+  "title": "Lite dApp",
+  "description": "1. Introduction",
+  "source": "@site/docs/Build-with-Artela/01-Lite-DApp.md",
+  "sourceDirName": "Build-with-Artela",
+  "slug": "/Build-with-Artela/Lite-DApp",
+  "permalink": "/Build-with-Artela/Lite-DApp",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "main",
+    "permalink": "/Aspect-Programming/main"
+  },
+  "next": {
+    "title": "Rich dApp",
+    "permalink": "/Build-with-Artela/Rich-DApp"
+  }
+}

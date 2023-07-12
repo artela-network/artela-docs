@@ -1,0 +1,23 @@
+{
+  "unversionedId": "Aspect-Programming/main",
+  "id": "Aspect-Programming/main",
+  "title": "main",
+  "description": "<!-- ---",
+  "source": "@site/docs/Aspect-Programming/main.md",
+  "sourceDirName": "Aspect-Programming",
+  "slug": "/Aspect-Programming/main",
+  "permalink": "/Aspect-Programming/main",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Scale-out Design",
+    "permalink": "/Aspect-Programming/Scale-out-Design"
+  },
+  "next": {
+    "title": "Artela Blockchain",
+    "permalink": "/category/artela-blockchain"
+  }
+}

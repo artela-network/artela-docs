@@ -1,0 +1,24 @@
+{
+  "unversionedId": "Aspect-Programming/Native-Extension",
+  "id": "Aspect-Programming/Native-Extension",
+  "title": "Native Extension",
+  "description": "Native Extension serves as a programmable on-chain module for customized functionality. It extends from the base layer and works synergistically with blockchain smart contracts, allowing dApp to be built in a plug-and-play modular manner.",
+  "source": "@site/docs/Aspect-Programming/02-Native-Extension.md",
+  "sourceDirName": "Aspect-Programming",
+  "slug": "/Aspect-Programming/Native-Extension",
+  "permalink": "/Aspect-Programming/Native-Extension",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/Aspect-Programming"
+  },
+  "next": {
+    "title": "Aspect",
+    "permalink": "/Aspect-Programming/Aspect"
+  }
+}

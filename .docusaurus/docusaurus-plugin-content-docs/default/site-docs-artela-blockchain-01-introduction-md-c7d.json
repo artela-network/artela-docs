@@ -1,0 +1,27 @@
+{
+  "unversionedId": "Artela-Blockchain/artela-blockchain",
+  "id": "Artela-Blockchain/artela-blockchain",
+  "title": "Artela Blockchain",
+  "description": "Artela Network is a layer 1 designed to maximize dApp functionality through Aspect Programming. It offers extensibility that goes beyond EVM-equivalence, inter-domain interoperability, and boundless scalability with its Elastic Block Space design.",
+  "source": "@site/docs/Artela-Blockchain/01-Introduction.md",
+  "sourceDirName": "Artela-Blockchain",
+  "slug": "/Artela-Blockchain",
+  "permalink": "/Artela-Blockchain",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "artela-blockchain",
+    "slug": "/Artela-Blockchain"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Aspect",
+    "permalink": "/Aspect-Programming/Aspect"
+  },
+  "next": {
+    "title": "Lite dApp",
+    "permalink": "/Build-on-Artela/Lite-DApp"
+  }
+}
