@@ -16,7 +16,7 @@ Artela is dedicated to pushing the boundaries of dApp functionality beyond smart
     
 Artela Blockchain is a layer 1 network that empowers developers to add user-defined native extensions and build feature-rich dApps. It offers extensibility that goes beyond EVM-equivalence, inter-domain interoperability, and boundless scalability with its elastic block space design.
   
-**[Learn More](https://docs.artela.network/Aspect-Programming/Artela-Blockchain)**
+**[Learn More](https://docs.artela.network/Artela-Blockchain)**
 
 ### Aspect Programming
     
