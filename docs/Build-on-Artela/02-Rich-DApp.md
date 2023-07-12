@@ -22,7 +22,7 @@ The principle of Rich dApp:
 
 ## Use Case
 
-1. High-Performance Orderbook
+<!-- 1. High-Performance Orderbook
     
     Aspect makes a high-performance fully on-chain orderbook possible, unlocking DEX potentials.
     
@@ -36,7 +36,34 @@ The principle of Rich dApp:
   alt="4"  
   width="90%"
 />
-</center>
+</center> -->
+
+1. Utility NFT Mapping
+    
+    With Aspect, NFT can be mapped into other utility NFT tokens to fulfill specific scenarios’ needs and become programmable.
+
+    <center>
+    <img
+      src={require('./img/9.png').default} 
+      alt="4"  
+      width="60%"
+    />
+    </center>
+
+    Aspects are implemented to monitor the global states of NFTs and manage the relationship between the master NFTs and utility NFTs. Master NFTs need not be collateralized to generate utility NFTs. The balance between liquidity and utility can be optimized.
+
+    <center>
+    <img
+      src={require('./img/10.png').default} 
+      alt="4"  
+      width="60%"
+    />
+    </center>
+        
+    Without Aspect, the original NFT token standard must be forked to support structural NFTs like this; Once the structure of certain NFT is finalized, there will be no room for modification unless redeployment.
+
+    With Aspect, NFTs can remain in their original state, while enabling unprecedented flexibility, programmability, and composability.
+
 
 2. Efficient Rollup through Aspect
 
@@ -54,35 +81,6 @@ The principle of Rich dApp:
 <img
   src={require('./img/8.png').default} 
   alt="4"  
-  width="90%"
+  width="60%"
 />
 </center>
-
-3. Utility NFT Mapping
-    
-    With Aspect, NFT can be mapped into other utility NFT tokens to fulfill specific scenarios’ needs and become programmable.
-
-    <center>
-    <img
-      src={require('./img/9.png').default} 
-      alt="4"  
-      width="70%"
-    />
-    </center>
-
-    Master NFTs need not be collateralized to generate utility NFTs; the balance between liquidity and utility can be optimized;
-
-    Aspects are implemented to monitor the global states of NFTs and manage the relationship between the master NFTs and utility NFTs;
-
-    <center>
-    <img
-      src={require('./img/10.png').default} 
-      alt="4"  
-      width="90%"
-    />
-    </center>
-        
-    Without Aspect, the original NFT token standard must be forked to support structural NFTs like this; Once the structure of certain NFT is finalized, there will be no room for modification unless redeployment.
-
-    With Aspect, NFTs can remain in their original state, while enabling unprecedented flexibility, programmability, and composability.
-

@@ -35,7 +35,7 @@ Aspect needs to specify Join Points, which are the positions where Aspects are 
 <img
   src={require('./img/4.png').default} 
   alt="4"  
-  width="80%"
+  width="70%"
 />
 </center>
 

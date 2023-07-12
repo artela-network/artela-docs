@@ -26,7 +26,7 @@ As the first layer 1 network equipped with Aspects, Artela network aims to **ma
 <img
   src={require('./img/2.png').default} 
   alt="2"  
-  width="70%"
+  width="50%"
 />
 </center>
 

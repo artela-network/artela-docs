@@ -36,7 +36,7 @@ The principle of Public Service:
 <img
   src={require('./img/11.png').default} 
   alt="11"  
-  width="70%"
+  width="50%"
 />
 </center>
 
@@ -52,6 +52,6 @@ The principle of Public Service:
 <img
   src={require('./img/12.png').default} 
   alt="12"  
-  width="90%"
+  width="60%"
 />
 </center>
