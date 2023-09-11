@@ -1,0 +1,27 @@
+{
+  "unversionedId": "quick-start/access-devnet/index",
+  "id": "quick-start/access-devnet/index",
+  "title": "Access Devnet",
+  "description": "The Artela Devnet is currently an alpha release. Please be aware of the following:",
+  "source": "@site/docs/develop/quick-start/access-devnet/index.md",
+  "sourceDirName": "quick-start/access-devnet",
+  "slug": "/quick-start/access-devnet/",
+  "permalink": "/develop/quick-start/access-devnet/",
+  "draft": false,
+  "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/quick-start/access-devnet/index.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Quick Start",
+    "permalink": "/develop/quick-start/"
+  },
+  "next": {
+    "title": "Develop a Smart Contract",
+    "permalink": "/develop/quick-start/develop-a-smart-contract/"
+  }
+}

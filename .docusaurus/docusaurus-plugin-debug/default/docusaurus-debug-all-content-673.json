@@ -9,24 +9,72 @@
           "badge": false,
           "noIndex": false,
           "className": "docs-version-current",
-          "path": "/",
-          "tagsPath": "/tags",
+          "path": "/docs",
+          "tagsPath": "/docs/tags",
           "isLast": true,
           "routePriority": -1,
           "sidebarFilePath": "/Users/maqiyuan/Artela/artela-docs/sidebars.js",
-          "contentPath": "/Users/maqiyuan/Artela/artela-docs/docs",
+          "contentPath": "/Users/maqiyuan/Artela/artela-docs/docs/home",
           "contentPathLocalized": "/Users/maqiyuan/Artela/artela-docs/i18n/en/docusaurus-plugin-content-docs/current",
+          "docs": [
+            {
+              "unversionedId": "README",
+              "id": "README",
+              "title": "README",
+              "description": "",
+              "source": "@site/docs/home/README.mdx",
+              "sourceDirName": ".",
+              "slug": "/",
+              "permalink": "/docs/",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "drafts": [],
+          "sidebars": {
+            "tutorialSidebar": [
+              {
+                "type": "doc",
+                "id": "README"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "intro": {
+      "loadedVersions": [
+        {
+          "versionName": "current",
+          "label": "Next",
+          "banner": null,
+          "badge": false,
+          "noIndex": false,
+          "className": "docs-version-current",
+          "path": "/intro",
+          "tagsPath": "/intro/tags",
+          "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/intro",
+          "editUrlLocalized": "https://github.com/artela-network/artela-docs/tree/main/i18n/en/docusaurus-plugin-content-docs-intro/current",
+          "isLast": true,
+          "routePriority": -1,
+          "sidebarFilePath": "/Users/maqiyuan/Artela/artela-docs/sidebars.js",
+          "contentPath": "/Users/maqiyuan/Artela/artela-docs/docs/intro",
+          "contentPathLocalized": "/Users/maqiyuan/Artela/artela-docs/i18n/en/docusaurus-plugin-content-docs-intro/current",
           "docs": [
             {
               "unversionedId": "Artela-Blockchain/artela-blockchain",
               "id": "Artela-Blockchain/artela-blockchain",
               "title": "Overview",
               "description": "Artela Blockchain is a layer 1 network that empowers developers to add user-defined native extensions and build feature-rich dApps. It offers extensibility that goes beyond EVM-equivalence, inter-domain interoperability, and boundless scalability with its Elastic Block Space design.",
-              "source": "@site/docs/Artela-Blockchain/01-Overview.md",
+              "source": "@site/docs/intro/Artela-Blockchain/01-Overview.md",
               "sourceDirName": "Artela-Blockchain",
               "slug": "/Artela-Blockchain",
-              "permalink": "/Artela-Blockchain",
+              "permalink": "/intro/Artela-Blockchain",
               "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/intro/Artela-Blockchain/01-Overview.md",
               "tags": [],
               "version": "current",
               "sidebarPosition": 1,
@@ -37,11 +85,11 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Intro to Artela",
-                "permalink": "/main"
+                "permalink": "/intro/"
               },
               "next": {
                 "title": "Overview",
-                "permalink": "/Aspect-Programming"
+                "permalink": "/intro/Aspect-Programming"
               }
             },
             {
@@ -49,11 +97,12 @@
               "id": "Aspect-Programming/Aspect",
               "title": "Aspect",
               "description": "In Artela, we define a new programmable module to work as Native Extension, called Aspect.",
-              "source": "@site/docs/Aspect-Programming/03-Aspect.md",
+              "source": "@site/docs/intro/Aspect-Programming/03-Aspect.md",
               "sourceDirName": "Aspect-Programming",
               "slug": "/Aspect-Programming/Aspect",
-              "permalink": "/Aspect-Programming/Aspect",
+              "permalink": "/intro/Aspect-Programming/Aspect",
               "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/intro/Aspect-Programming/03-Aspect.md",
               "tags": [],
               "version": "current",
               "sidebarPosition": 3,
@@ -61,11 +110,11 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Native Extension",
-                "permalink": "/Aspect-Programming/Native-Extension"
+                "permalink": "/intro/Aspect-Programming/Native-Extension"
               },
               "next": {
                 "title": "Lite dApp",
-                "permalink": "/Build-on-Artela/Lite-DApp"
+                "permalink": "/intro/Build-on-Artela/Lite-DApp"
               }
             },
             {
@@ -73,11 +122,12 @@
               "id": "Aspect-Programming/aspect-programming",
               "title": "Overview",
               "description": "Aspect Programming is a universal programming framework that supports the dynamic creation of native extension modules for blockchain at runtime.",
-              "source": "@site/docs/Aspect-Programming/01-Overview.md",
+              "source": "@site/docs/intro/Aspect-Programming/01-Overview.md",
               "sourceDirName": "Aspect-Programming",
               "slug": "/Aspect-Programming",
-              "permalink": "/Aspect-Programming",
+              "permalink": "/intro/Aspect-Programming",
               "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/intro/Aspect-Programming/01-Overview.md",
               "tags": [],
               "version": "current",
               "sidebarPosition": 1,
@@ -88,11 +138,11 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Overview",
-                "permalink": "/Artela-Blockchain"
+                "permalink": "/intro/Artela-Blockchain"
               },
               "next": {
                 "title": "Native Extension",
-                "permalink": "/Aspect-Programming/Native-Extension"
+                "permalink": "/intro/Aspect-Programming/Native-Extension"
               }
             },
             {
@@ -100,11 +150,12 @@
               "id": "Aspect-Programming/Native-Extension",
               "title": "Native Extension",
               "description": "Native Extension serves as a programmable on-chain module for customized functionality. It extends from the base layer and works synergistically with blockchain smart contracts, allowing dApp to be built in a plug-and-play modular manner.",
-              "source": "@site/docs/Aspect-Programming/02-Native-Extension.md",
+              "source": "@site/docs/intro/Aspect-Programming/02-Native-Extension.md",
               "sourceDirName": "Aspect-Programming",
               "slug": "/Aspect-Programming/Native-Extension",
-              "permalink": "/Aspect-Programming/Native-Extension",
+              "permalink": "/intro/Aspect-Programming/Native-Extension",
               "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/intro/Aspect-Programming/02-Native-Extension.md",
               "tags": [],
               "version": "current",
               "sidebarPosition": 2,
@@ -112,11 +163,11 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Overview",
-                "permalink": "/Aspect-Programming"
+                "permalink": "/intro/Aspect-Programming"
               },
               "next": {
                 "title": "Aspect",
-                "permalink": "/Aspect-Programming/Aspect"
+                "permalink": "/intro/Aspect-Programming/Aspect"
               }
             },
             {
@@ -124,11 +175,12 @@
               "id": "Build-on-Artela/Lite-DApp",
               "title": "Lite dApp",
               "description": "Introduction",
-              "source": "@site/docs/Build-on-Artela/01-Lite-DApp.md",
+              "source": "@site/docs/intro/Build-on-Artela/01-Lite-DApp.md",
               "sourceDirName": "Build-on-Artela",
               "slug": "/Build-on-Artela/Lite-DApp",
-              "permalink": "/Build-on-Artela/Lite-DApp",
+              "permalink": "/intro/Build-on-Artela/Lite-DApp",
               "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/intro/Build-on-Artela/01-Lite-DApp.md",
               "tags": [],
               "version": "current",
               "sidebarPosition": 1,
@@ -136,11 +188,11 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Aspect",
-                "permalink": "/Aspect-Programming/Aspect"
+                "permalink": "/intro/Aspect-Programming/Aspect"
               },
               "next": {
                 "title": "Rich dApp",
-                "permalink": "/Build-on-Artela/Rich-DApp"
+                "permalink": "/intro/Build-on-Artela/Rich-DApp"
               }
             },
             {
@@ -148,11 +200,12 @@
               "id": "Build-on-Artela/Public-Service",
               "title": "Public Service",
               "description": "Introduction",
-              "source": "@site/docs/Build-on-Artela/03-Public-Service.md",
+              "source": "@site/docs/intro/Build-on-Artela/03-Public-Service.md",
               "sourceDirName": "Build-on-Artela",
               "slug": "/Build-on-Artela/Public-Service",
-              "permalink": "/Build-on-Artela/Public-Service",
+              "permalink": "/intro/Build-on-Artela/Public-Service",
               "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/intro/Build-on-Artela/03-Public-Service.md",
               "tags": [],
               "version": "current",
               "sidebarPosition": 3,
@@ -160,11 +213,11 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Rich dApp",
-                "permalink": "/Build-on-Artela/Rich-DApp"
+                "permalink": "/intro/Build-on-Artela/Rich-DApp"
               },
               "next": {
                 "title": "FAQ",
-                "permalink": "/Resources/FAQ"
+                "permalink": "/intro/Resources/FAQ"
               }
             },
             {
@@ -172,11 +225,12 @@
               "id": "Build-on-Artela/Rich-DApp",
               "title": "Rich dApp",
               "description": "Introduction",
-              "source": "@site/docs/Build-on-Artela/02-Rich-DApp.md",
+              "source": "@site/docs/intro/Build-on-Artela/02-Rich-DApp.md",
               "sourceDirName": "Build-on-Artela",
               "slug": "/Build-on-Artela/Rich-DApp",
-              "permalink": "/Build-on-Artela/Rich-DApp",
+              "permalink": "/intro/Build-on-Artela/Rich-DApp",
               "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/intro/Build-on-Artela/02-Rich-DApp.md",
               "tags": [],
               "version": "current",
               "sidebarPosition": 2,
@@ -184,33 +238,34 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Lite dApp",
-                "permalink": "/Build-on-Artela/Lite-DApp"
+                "permalink": "/intro/Build-on-Artela/Lite-DApp"
               },
               "next": {
                 "title": "Public Service",
-                "permalink": "/Build-on-Artela/Public-Service"
+                "permalink": "/intro/Build-on-Artela/Public-Service"
               }
             },
             {
-              "unversionedId": "main",
-              "id": "main",
+              "unversionedId": "index",
+              "id": "index",
               "title": "Intro to Artela",
               "description": "Artela is an extensible blockchain network enabling developers to build feature-rich dApps.",
-              "source": "@site/docs/main.md",
+              "source": "@site/docs/intro/index.md",
               "sourceDirName": ".",
-              "slug": "/main",
-              "permalink": "/main",
+              "slug": "/",
+              "permalink": "/intro/",
               "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/intro/index.md",
               "tags": [],
               "version": "current",
-              "sidebarPosition": 1,
+              "sidebarPosition": 0,
               "frontMatter": {
-                "sidebar_position": 1
+                "sidebar_position": 0
               },
               "sidebar": "tutorialSidebar",
               "next": {
                 "title": "Overview",
-                "permalink": "/Artela-Blockchain"
+                "permalink": "/intro/Artela-Blockchain"
               }
             },
             {
@@ -218,11 +273,12 @@
               "id": "Resources/FAQ",
               "title": "FAQ",
               "description": "Q: What distinguishes Artela from the others?",
-              "source": "@site/docs/Resources/01-FAQ.md",
+              "source": "@site/docs/intro/Resources/01-FAQ.md",
               "sourceDirName": "Resources",
               "slug": "/Resources/FAQ",
-              "permalink": "/Resources/FAQ",
+              "permalink": "/intro/Resources/FAQ",
               "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/intro/Resources/01-FAQ.md",
               "tags": [],
               "version": "current",
               "sidebarPosition": 1,
@@ -230,7 +286,7 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Public Service",
-                "permalink": "/Build-on-Artela/Public-Service"
+                "permalink": "/intro/Build-on-Artela/Public-Service"
               }
             }
           ],
@@ -239,13 +295,13 @@
             "tutorialSidebar": [
               {
                 "type": "doc",
-                "id": "main"
+                "id": "index"
               },
               {
                 "type": "category",
                 "label": "Artela Blockchain",
-                "collapsible": false,
-                "collapsed": false,
+                "collapsible": true,
+                "collapsed": true,
                 "items": [
                   {
                     "type": "doc",
@@ -256,8 +312,8 @@
               {
                 "type": "category",
                 "label": "Aspect Programming",
-                "collapsible": false,
-                "collapsed": false,
+                "collapsible": true,
+                "collapsed": true,
                 "items": [
                   {
                     "type": "doc",
@@ -276,8 +332,8 @@
               {
                 "type": "category",
                 "label": "Build on Artela",
-                "collapsible": false,
-                "collapsed": false,
+                "collapsible": true,
+                "collapsed": true,
                 "items": [
                   {
                     "type": "doc",
@@ -296,8 +352,8 @@
               {
                 "type": "category",
                 "label": "Resources",
-                "collapsible": false,
-                "collapsed": false,
+                "collapsible": true,
+                "collapsed": true,
                 "items": [
                   {
                     "type": "doc",
@@ -309,345 +365,418 @@
           }
         }
       ]
-    }
-  },
-  "docusaurus-plugin-content-blog": {
-    "default": {
-      "blogSidebarTitle": "Recent posts",
-      "blogPosts": [
+    },
+    "develop": {
+      "loadedVersions": [
         {
-          "id": "welcome",
-          "metadata": {
-            "permalink": "/blog/welcome",
-            "source": "@site/blog/2021-08-26-welcome/index.md",
-            "title": "Welcome",
-            "description": "Docusaurus blogging features are powered by the blog plugin.",
-            "date": "2021-08-26T00:00:00.000Z",
-            "formattedDate": "August 26, 2021",
-            "tags": [
-              {
-                "label": "facebook",
-                "permalink": "/blog/tags/facebook"
+          "versionName": "current",
+          "label": "Next",
+          "banner": null,
+          "badge": false,
+          "noIndex": false,
+          "className": "docs-version-current",
+          "path": "/develop",
+          "tagsPath": "/develop/tags",
+          "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop",
+          "editUrlLocalized": "https://github.com/artela-network/artela-docs/tree/main/i18n/en/docusaurus-plugin-content-docs-develop/current",
+          "isLast": true,
+          "routePriority": -1,
+          "sidebarFilePath": "/Users/maqiyuan/Artela/artela-docs/sidebars.js",
+          "contentPath": "/Users/maqiyuan/Artela/artela-docs/docs/develop",
+          "contentPathLocalized": "/Users/maqiyuan/Artela/artela-docs/i18n/en/docusaurus-plugin-content-docs-develop/current",
+          "docs": [
+            {
+              "unversionedId": "aspect-examples/index",
+              "id": "aspect-examples/index",
+              "title": "Aspect Examples",
+              "description": "<!--",
+              "source": "@site/docs/develop/aspect-examples/index.md",
+              "sourceDirName": "aspect-examples",
+              "slug": "/aspect-examples/",
+              "permalink": "/develop/aspect-examples/",
+              "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/aspect-examples/index.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "index",
+                "permalink": "/develop/aspect-tools/aspect-docs/"
               },
-              {
-                "label": "hello",
-                "permalink": "/blog/tags/hello"
-              },
-              {
-                "label": "docusaurus",
-                "permalink": "/blog/tags/docusaurus"
+              "next": {
+                "title": "Security Aspect Example: Step-by-Step",
+                "permalink": "/develop/aspect-examples/security-aspect/"
               }
-            ],
-            "readingTime": 0.405,
-            "hasTruncateMarker": false,
-            "authors": [
-              {
-                "name": "Sébastien Lorber",
-                "title": "Docusaurus maintainer",
-                "url": "https://sebastienlorber.com",
-                "imageURL": "https://github.com/slorber.png",
-                "key": "slorber"
-              },
-              {
-                "name": "Yangshun Tay",
-                "title": "Front End Engineer @ Facebook",
-                "url": "https://github.com/yangshun",
-                "imageURL": "https://github.com/yangshun.png",
-                "key": "yangshun"
-              }
-            ],
-            "frontMatter": {
-              "slug": "welcome",
-              "title": "Welcome",
-              "authors": [
-                "slorber",
-                "yangshun"
-              ],
-              "tags": [
-                "facebook",
-                "hello",
-                "docusaurus"
-              ]
             },
-            "nextItem": {
-              "title": "MDX Blog Post",
-              "permalink": "/blog/mdx-blog-post"
+            {
+              "unversionedId": "aspect-examples/schedular-aspect/index",
+              "id": "aspect-examples/schedular-aspect/index",
+              "title": "Scheduler Aspect Example: Step-by-Step",
+              "description": "The Scheduler Aspect is an example of building an on-chain scheduled transaction trigger. In this example, it involves defining an ERC20 token named ArtToken. Using the Broker contract, it enables transferring funds to a designated account at regular intervals of 5 blocks.",
+              "source": "@site/docs/develop/aspect-examples/schedular-aspect/index.md",
+              "sourceDirName": "aspect-examples/schedular-aspect",
+              "slug": "/aspect-examples/schedular-aspect/",
+              "permalink": "/develop/aspect-examples/schedular-aspect/",
+              "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/aspect-examples/schedular-aspect/index.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Security Aspect Example: Step-by-Step",
+                "permalink": "/develop/aspect-examples/security-aspect/"
+              }
+            },
+            {
+              "unversionedId": "aspect-examples/security-aspect/index",
+              "id": "aspect-examples/security-aspect/index",
+              "title": "Security Aspect Example: Step-by-Step",
+              "description": "The \"Security Aspect on Artela\" is an aspect implementation that safeguards transactions. It assumes a bookkeeping contract that may be vulnerable to reentrancy attacks due to unpredictable bugs. The aspect verifies the balance in the bookkeeping contract and compares it to the actual balance, intercepting any transactions associated with such attacks.",
+              "source": "@site/docs/develop/aspect-examples/security-aspect/index.md",
+              "sourceDirName": "aspect-examples/security-aspect",
+              "slug": "/aspect-examples/security-aspect/",
+              "permalink": "/develop/aspect-examples/security-aspect/",
+              "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/aspect-examples/security-aspect/index.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Aspect Examples",
+                "permalink": "/develop/aspect-examples/"
+              },
+              "next": {
+                "title": "Scheduler Aspect Example: Step-by-Step",
+                "permalink": "/develop/aspect-examples/schedular-aspect/"
+              }
+            },
+            {
+              "unversionedId": "aspect-tools/aspect-docs/index",
+              "id": "aspect-tools/aspect-docs/index",
+              "title": "index",
+              "description": "Through this page, you can learn how to write an aspect and explore the functionalities it offers to assist you in various tasks.",
+              "source": "@site/docs/develop/aspect-tools/aspect-docs/index.md",
+              "sourceDirName": "aspect-tools/aspect-docs",
+              "slug": "/aspect-tools/aspect-docs/",
+              "permalink": "/develop/aspect-tools/aspect-docs/",
+              "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/aspect-tools/aspect-docs/index.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Aspect Tools Guide",
+                "permalink": "/develop/aspect-tools/aspect-tools-guide/"
+              },
+              "next": {
+                "title": "Aspect Examples",
+                "permalink": "/develop/aspect-examples/"
+              }
+            },
+            {
+              "unversionedId": "aspect-tools/aspect-tools-guide/index",
+              "id": "aspect-tools/aspect-tools-guide/index",
+              "title": "Aspect Tools Guide",
+              "description": "To get started, install aspect-tool with this command:",
+              "source": "@site/docs/develop/aspect-tools/aspect-tools-guide/index.md",
+              "sourceDirName": "aspect-tools/aspect-tools-guide",
+              "slug": "/aspect-tools/aspect-tools-guide/",
+              "permalink": "/develop/aspect-tools/aspect-tools-guide/",
+              "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/aspect-tools/aspect-tools-guide/index.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Aspect Tools",
+                "permalink": "/develop/aspect-tools/"
+              },
+              "next": {
+                "title": "index",
+                "permalink": "/develop/aspect-tools/aspect-docs/"
+              }
+            },
+            {
+              "unversionedId": "aspect-tools/index",
+              "id": "aspect-tools/index",
+              "title": "Aspect Tools",
+              "description": "Artela has developed a command-line tool aspect-tool to streamline the development of Aspects and smart contracts.",
+              "source": "@site/docs/develop/aspect-tools/index.md",
+              "sourceDirName": "aspect-tools",
+              "slug": "/aspect-tools/",
+              "permalink": "/develop/aspect-tools/",
+              "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/aspect-tools/index.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Start a Local Node",
+                "permalink": "/develop/start-a-local-node/"
+              },
+              "next": {
+                "title": "Aspect Tools Guide",
+                "permalink": "/develop/aspect-tools/aspect-tools-guide/"
+              }
+            },
+            {
+              "unversionedId": "index",
+              "id": "index",
+              "title": "Artela Devnet",
+              "description": "Welcome to Artela playground!",
+              "source": "@site/docs/develop/index.md",
+              "sourceDirName": ".",
+              "slug": "/",
+              "permalink": "/develop/",
+              "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/index.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_position": 1
+              },
+              "sidebar": "tutorialSidebar",
+              "next": {
+                "title": "Quick Start",
+                "permalink": "/develop/quick-start/"
+              }
+            },
+            {
+              "unversionedId": "quick-start/access-devnet/index",
+              "id": "quick-start/access-devnet/index",
+              "title": "Access Devnet",
+              "description": "The Artela Devnet is currently an alpha release. Please be aware of the following:",
+              "source": "@site/docs/develop/quick-start/access-devnet/index.md",
+              "sourceDirName": "quick-start/access-devnet",
+              "slug": "/quick-start/access-devnet/",
+              "permalink": "/develop/quick-start/access-devnet/",
+              "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/quick-start/access-devnet/index.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Quick Start",
+                "permalink": "/develop/quick-start/"
+              },
+              "next": {
+                "title": "Develop a Smart Contract",
+                "permalink": "/develop/quick-start/develop-a-smart-contract/"
+              }
+            },
+            {
+              "unversionedId": "quick-start/develop-a-smart-contract/index",
+              "id": "quick-start/develop-a-smart-contract/index",
+              "title": "Develop a Smart Contract",
+              "description": "Similar to Ethereum, EVM smart contract is also supported by Artela. Artela's EVM is fully compatible with legacy Solidity but offers additional features like state and call stack tracing.",
+              "source": "@site/docs/develop/quick-start/develop-a-smart-contract/index.md",
+              "sourceDirName": "quick-start/develop-a-smart-contract",
+              "slug": "/quick-start/develop-a-smart-contract/",
+              "permalink": "/develop/quick-start/develop-a-smart-contract/",
+              "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/quick-start/develop-a-smart-contract/index.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Access Devnet",
+                "permalink": "/develop/quick-start/access-devnet/"
+              },
+              "next": {
+                "title": "Develop an Aspect",
+                "permalink": "/develop/quick-start/develop-an-aspect/"
+              }
+            },
+            {
+              "unversionedId": "quick-start/develop-an-aspect/index",
+              "id": "quick-start/develop-an-aspect/index",
+              "title": "Develop an Aspect",
+              "description": "Aspect is a dynamic stateful extension that utilizes Web Assembly (WASM). It adds extra functionalities to the lifecycles of blocks or transactions for specific smart contracts. In the following sections, we'll guide you through building a simple Aspect with AssemblyScript(a subset of TypeScript) step by step.",
+              "source": "@site/docs/develop/quick-start/develop-an-aspect/index.md",
+              "sourceDirName": "quick-start/develop-an-aspect",
+              "slug": "/quick-start/develop-an-aspect/",
+              "permalink": "/develop/quick-start/develop-an-aspect/",
+              "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/quick-start/develop-an-aspect/index.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Develop a Smart Contract",
+                "permalink": "/develop/quick-start/develop-a-smart-contract/"
+              },
+              "next": {
+                "title": "Start a Local Node",
+                "permalink": "/develop/start-a-local-node/"
+              }
+            },
+            {
+              "unversionedId": "quick-start/index",
+              "id": "quick-start/index",
+              "title": "Quick Start",
+              "description": "Welcome to the Artela Quick Start Guide!",
+              "source": "@site/docs/develop/quick-start/index.md",
+              "sourceDirName": "quick-start",
+              "slug": "/quick-start/",
+              "permalink": "/develop/quick-start/",
+              "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/quick-start/index.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Artela Devnet",
+                "permalink": "/develop/"
+              },
+              "next": {
+                "title": "Access Devnet",
+                "permalink": "/develop/quick-start/access-devnet/"
+              }
+            },
+            {
+              "unversionedId": "start-a-local-node/index",
+              "id": "start-a-local-node/index",
+              "title": "Start a Local Node",
+              "description": "1. Building the Source",
+              "source": "@site/docs/develop/start-a-local-node/index.md",
+              "sourceDirName": "start-a-local-node",
+              "slug": "/start-a-local-node/",
+              "permalink": "/develop/start-a-local-node/",
+              "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/start-a-local-node/index.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Develop an Aspect",
+                "permalink": "/develop/quick-start/develop-an-aspect/"
+              },
+              "next": {
+                "title": "Aspect Tools",
+                "permalink": "/develop/aspect-tools/"
+              }
             }
-          },
-          "content": "[Docusaurus blogging features](https://docusaurus.io/docs/blog) are powered by the [blog plugin](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog).\n\nSimply add Markdown files (or folders) to the `blog` directory.\n\nRegular blog authors can be added to `authors.yml`.\n\nThe blog post date can be extracted from filenames, such as:\n\n- `2019-05-30-welcome.md`\n- `2019-05-30-welcome/index.md`\n\nA blog post folder can be convenient to co-locate blog post images:\n\n![Docusaurus Plushie](./docusaurus-plushie-banner.jpeg)\n\nThe blog supports tags as well!\n\n**And if you don't want a blog**: just delete this directory, and use `blog: false` in your Docusaurus config."
-        },
-        {
-          "id": "mdx-blog-post",
-          "metadata": {
-            "permalink": "/blog/mdx-blog-post",
-            "source": "@site/blog/2021-08-01-mdx-blog-post.mdx",
-            "title": "MDX Blog Post",
-            "description": "Blog posts support Docusaurus Markdown features, such as MDX.",
-            "date": "2021-08-01T00:00:00.000Z",
-            "formattedDate": "August 1, 2021",
-            "tags": [
-              {
-                "label": "docusaurus",
-                "permalink": "/blog/tags/docusaurus"
-              }
-            ],
-            "readingTime": 0.175,
-            "hasTruncateMarker": false,
-            "authors": [
-              {
-                "name": "Sébastien Lorber",
-                "title": "Docusaurus maintainer",
-                "url": "https://sebastienlorber.com",
-                "imageURL": "https://github.com/slorber.png",
-                "key": "slorber"
-              }
-            ],
-            "frontMatter": {
-              "slug": "mdx-blog-post",
-              "title": "MDX Blog Post",
-              "authors": [
-                "slorber"
-              ],
-              "tags": [
-                "docusaurus"
-              ]
-            },
-            "prevItem": {
-              "title": "Welcome",
-              "permalink": "/blog/welcome"
-            },
-            "nextItem": {
-              "title": "Long Blog Post",
-              "permalink": "/blog/long-blog-post"
-            }
-          },
-          "content": "Blog posts support [Docusaurus Markdown features](https://docusaurus.io/docs/markdown-features), such as [MDX](https://mdxjs.com/).\n\n:::tip\n\nUse the power of React to create interactive blog posts.\n\n```js\n<button onClick={() => alert('button clicked!')}>Click me!</button>\n```\n\n<button onClick={() => alert('button clicked!')}>Click me!</button>\n\n:::"
-        },
-        {
-          "id": "long-blog-post",
-          "metadata": {
-            "permalink": "/blog/long-blog-post",
-            "source": "@site/blog/2019-05-29-long-blog-post.md",
-            "title": "Long Blog Post",
-            "description": "This is the summary of a very long blog post,",
-            "date": "2019-05-29T00:00:00.000Z",
-            "formattedDate": "May 29, 2019",
-            "tags": [
-              {
-                "label": "hello",
-                "permalink": "/blog/tags/hello"
-              },
-              {
-                "label": "docusaurus",
-                "permalink": "/blog/tags/docusaurus"
-              }
-            ],
-            "readingTime": 2.05,
-            "hasTruncateMarker": true,
-            "authors": [
-              {
-                "name": "Endilie Yacop Sucipto",
-                "title": "Maintainer of Docusaurus",
-                "url": "https://github.com/endiliey",
-                "imageURL": "https://github.com/endiliey.png",
-                "key": "endi"
-              }
-            ],
-            "frontMatter": {
-              "slug": "long-blog-post",
-              "title": "Long Blog Post",
-              "authors": "endi",
-              "tags": [
-                "hello",
-                "docusaurus"
-              ]
-            },
-            "prevItem": {
-              "title": "MDX Blog Post",
-              "permalink": "/blog/mdx-blog-post"
-            },
-            "nextItem": {
-              "title": "First Blog Post",
-              "permalink": "/blog/first-blog-post"
-            }
-          },
-          "content": "This is the summary of a very long blog post,\n\nUse a `<!--` `truncate` `-->` comment to limit blog post size in the list view.\n\n<!--truncate-->\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet"
-        },
-        {
-          "id": "first-blog-post",
-          "metadata": {
-            "permalink": "/blog/first-blog-post",
-            "source": "@site/blog/2019-05-28-first-blog-post.md",
-            "title": "First Blog Post",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet",
-            "date": "2019-05-28T00:00:00.000Z",
-            "formattedDate": "May 28, 2019",
-            "tags": [
-              {
-                "label": "hola",
-                "permalink": "/blog/tags/hola"
-              },
-              {
-                "label": "docusaurus",
-                "permalink": "/blog/tags/docusaurus"
-              }
-            ],
-            "readingTime": 0.12,
-            "hasTruncateMarker": false,
-            "authors": [
-              {
-                "name": "Gao Wei",
-                "title": "Docusaurus Core Team",
-                "url": "https://github.com/wgao19",
-                "image_url": "https://github.com/wgao19.png",
-                "imageURL": "https://github.com/wgao19.png"
-              }
-            ],
-            "frontMatter": {
-              "slug": "first-blog-post",
-              "title": "First Blog Post",
-              "authors": {
-                "name": "Gao Wei",
-                "title": "Docusaurus Core Team",
-                "url": "https://github.com/wgao19",
-                "image_url": "https://github.com/wgao19.png",
-                "imageURL": "https://github.com/wgao19.png"
-              },
-              "tags": [
-                "hola",
-                "docusaurus"
-              ]
-            },
-            "prevItem": {
-              "title": "Long Blog Post",
-              "permalink": "/blog/long-blog-post"
-            }
-          },
-          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet"
-        }
-      ],
-      "blogListPaginated": [
-        {
-          "items": [
-            "welcome",
-            "mdx-blog-post",
-            "long-blog-post",
-            "first-blog-post"
           ],
-          "metadata": {
-            "permalink": "/blog",
-            "page": 1,
-            "postsPerPage": 10,
-            "totalPages": 1,
-            "totalCount": 4,
-            "blogDescription": "Blog",
-            "blogTitle": "Blog"
+          "drafts": [],
+          "sidebars": {
+            "tutorialSidebar": [
+              {
+                "type": "doc",
+                "id": "index"
+              },
+              {
+                "type": "category",
+                "label": "Quick Start",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "doc",
+                    "label": "Access Devnet",
+                    "id": "quick-start/access-devnet/index"
+                  },
+                  {
+                    "type": "doc",
+                    "label": "Develop a Smart Contract",
+                    "id": "quick-start/develop-a-smart-contract/index"
+                  },
+                  {
+                    "type": "doc",
+                    "label": "Develop an Aspect",
+                    "id": "quick-start/develop-an-aspect/index"
+                  }
+                ],
+                "link": {
+                  "type": "doc",
+                  "id": "quick-start/index"
+                }
+              },
+              {
+                "type": "doc",
+                "label": "Start a Local Node",
+                "id": "start-a-local-node/index"
+              },
+              {
+                "type": "category",
+                "label": "Aspect Tools",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "doc",
+                    "label": "Aspect Tools Guide",
+                    "id": "aspect-tools/aspect-tools-guide/index"
+                  },
+                  {
+                    "type": "doc",
+                    "label": "Aspect Doc",
+                    "id": "aspect-tools/aspect-docs/index"
+                  }
+                ],
+                "link": {
+                  "type": "doc",
+                  "id": "aspect-tools/index"
+                }
+              },
+              {
+                "type": "category",
+                "label": "Aspect Examples",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "doc",
+                    "label": "Security Aspect",
+                    "id": "aspect-examples/security-aspect/index"
+                  },
+                  {
+                    "type": "doc",
+                    "label": "Schedular Aspect",
+                    "id": "aspect-examples/schedular-aspect/index"
+                  }
+                ],
+                "link": {
+                  "type": "doc",
+                  "id": "aspect-examples/index"
+                }
+              }
+            ]
           }
         }
-      ],
-      "blogTags": {
-        "/blog/tags/facebook": {
-          "label": "facebook",
-          "items": [
-            "welcome"
-          ],
-          "permalink": "/blog/tags/facebook",
-          "pages": [
-            {
-              "items": [
-                "welcome"
-              ],
-              "metadata": {
-                "permalink": "/blog/tags/facebook",
-                "page": 1,
-                "postsPerPage": 10,
-                "totalPages": 1,
-                "totalCount": 1,
-                "blogDescription": "Blog",
-                "blogTitle": "Blog"
-              }
-            }
-          ]
-        },
-        "/blog/tags/hello": {
-          "label": "hello",
-          "items": [
-            "welcome",
-            "long-blog-post"
-          ],
-          "permalink": "/blog/tags/hello",
-          "pages": [
-            {
-              "items": [
-                "welcome",
-                "long-blog-post"
-              ],
-              "metadata": {
-                "permalink": "/blog/tags/hello",
-                "page": 1,
-                "postsPerPage": 10,
-                "totalPages": 1,
-                "totalCount": 2,
-                "blogDescription": "Blog",
-                "blogTitle": "Blog"
-              }
-            }
-          ]
-        },
-        "/blog/tags/docusaurus": {
-          "label": "docusaurus",
-          "items": [
-            "welcome",
-            "mdx-blog-post",
-            "long-blog-post",
-            "first-blog-post"
-          ],
-          "permalink": "/blog/tags/docusaurus",
-          "pages": [
-            {
-              "items": [
-                "welcome",
-                "mdx-blog-post",
-                "long-blog-post",
-                "first-blog-post"
-              ],
-              "metadata": {
-                "permalink": "/blog/tags/docusaurus",
-                "page": 1,
-                "postsPerPage": 10,
-                "totalPages": 1,
-                "totalCount": 4,
-                "blogDescription": "Blog",
-                "blogTitle": "Blog"
-              }
-            }
-          ]
-        },
-        "/blog/tags/hola": {
-          "label": "hola",
-          "items": [
-            "first-blog-post"
-          ],
-          "permalink": "/blog/tags/hola",
-          "pages": [
-            {
-              "items": [
-                "first-blog-post"
-              ],
-              "metadata": {
-                "permalink": "/blog/tags/hola",
-                "page": 1,
-                "postsPerPage": 10,
-                "totalPages": 1,
-                "totalCount": 1,
-                "blogDescription": "Blog",
-                "blogTitle": "Blog"
-              }
-            }
-          ]
-        }
-      },
-      "blogTagsListPath": "/blog/tags"
+      ]
     }
   },
   "docusaurus-plugin-content-pages": {
@@ -662,6 +791,8 @@
   "docusaurus-plugin-debug": {},
   "docusaurus-theme-classic": {},
   "docusaurus-theme-search-algolia": {},
+  "docusaurus-plugin-ideal-image": {},
+  "docusaurus-tailwindcss": {},
   "docusaurus-bootstrap-plugin": {},
   "docusaurus-mdx-fallback-plugin": {}
 }

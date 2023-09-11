@@ -1,0 +1,27 @@
+{
+  "unversionedId": "quick-start/develop-a-smart-contract/index",
+  "id": "quick-start/develop-a-smart-contract/index",
+  "title": "Develop a Smart Contract",
+  "description": "Similar to Ethereum, EVM smart contract is also supported by Artela. Artela's EVM is fully compatible with legacy Solidity but offers additional features like state and call stack tracing.",
+  "source": "@site/docs/develop/quick-start/develop-a-smart-contract/index.md",
+  "sourceDirName": "quick-start/develop-a-smart-contract",
+  "slug": "/quick-start/develop-a-smart-contract/",
+  "permalink": "/develop/quick-start/develop-a-smart-contract/",
+  "draft": false,
+  "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/quick-start/develop-a-smart-contract/index.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Access Devnet",
+    "permalink": "/develop/quick-start/access-devnet/"
+  },
+  "next": {
+    "title": "Develop an Aspect",
+    "permalink": "/develop/quick-start/develop-an-aspect/"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "unversionedId": "Resources/FAQ",
+  "id": "Resources/FAQ",
+  "title": "FAQ",
+  "description": "Q: What distinguishes Artela from the others?",
+  "source": "@site/docs/intro/Resources/01-FAQ.md",
+  "sourceDirName": "Resources",
+  "slug": "/Resources/FAQ",
+  "permalink": "/docs/Resources/FAQ",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Public Service",
+    "permalink": "/docs/Build-on-Artela/Public-Service"
+  }
+}

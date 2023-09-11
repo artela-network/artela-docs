@@ -1,0 +1,169 @@
+{
+  "pluginId": "develop",
+  "version": "current",
+  "label": "Next",
+  "banner": null,
+  "badge": false,
+  "noIndex": false,
+  "className": "docs-version-current",
+  "isLast": true,
+  "docsSidebars": {
+    "tutorialSidebar": [
+      {
+        "type": "link",
+        "label": "Artela Devnet",
+        "href": "/develop/",
+        "docId": "index"
+      },
+      {
+        "type": "category",
+        "label": "Quick Start",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Access Devnet",
+            "href": "/develop/quick-start/access-devnet/",
+            "docId": "quick-start/access-devnet/index"
+          },
+          {
+            "type": "link",
+            "label": "Develop a Smart Contract",
+            "href": "/develop/quick-start/develop-a-smart-contract/",
+            "docId": "quick-start/develop-a-smart-contract/index"
+          },
+          {
+            "type": "link",
+            "label": "Develop an Aspect",
+            "href": "/develop/quick-start/develop-an-aspect/",
+            "docId": "quick-start/develop-an-aspect/index"
+          }
+        ],
+        "href": "/develop/quick-start/"
+      },
+      {
+        "type": "link",
+        "label": "Start a Local Node",
+        "href": "/develop/start-a-local-node/",
+        "docId": "start-a-local-node/index"
+      },
+      {
+        "type": "category",
+        "label": "Aspect Tools",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Aspect Tools Guide",
+            "href": "/develop/aspect-tools/aspect-tools-guide/",
+            "docId": "aspect-tools/aspect-tools-guide/index"
+          },
+          {
+            "type": "link",
+            "label": "Aspect Doc",
+            "href": "/develop/aspect-tools/aspect-docs/",
+            "docId": "aspect-tools/aspect-docs/index"
+          }
+        ],
+        "href": "/develop/aspect-tools/"
+      },
+      {
+        "type": "category",
+        "label": "Aspect Examples",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Security Aspect",
+            "href": "/develop/aspect-examples/security-aspect/",
+            "docId": "aspect-examples/security-aspect/index"
+          },
+          {
+            "type": "link",
+            "label": "Schedular Aspect",
+            "href": "/develop/aspect-examples/schedular-aspect/",
+            "docId": "aspect-examples/schedular-aspect/index"
+          }
+        ],
+        "href": "/develop/aspect-examples/"
+      }
+    ]
+  },
+  "docs": {
+    "aspect-examples/index": {
+      "id": "aspect-examples/index",
+      "title": "Aspect Examples",
+      "description": "<!--",
+      "sidebar": "tutorialSidebar"
+    },
+    "aspect-examples/schedular-aspect/index": {
+      "id": "aspect-examples/schedular-aspect/index",
+      "title": "Scheduler Aspect Example: Step-by-Step",
+      "description": "The Scheduler Aspect is an example of building an on-chain scheduled transaction trigger. In this example, it involves defining an ERC20 token named ArtToken. Using the Broker contract, it enables transferring funds to a designated account at regular intervals of 5 blocks.",
+      "sidebar": "tutorialSidebar"
+    },
+    "aspect-examples/security-aspect/index": {
+      "id": "aspect-examples/security-aspect/index",
+      "title": "Security Aspect Example: Step-by-Step",
+      "description": "The \"Security Aspect on Artela\" is an aspect implementation that safeguards transactions. It assumes a bookkeeping contract that may be vulnerable to reentrancy attacks due to unpredictable bugs. The aspect verifies the balance in the bookkeeping contract and compares it to the actual balance, intercepting any transactions associated with such attacks.",
+      "sidebar": "tutorialSidebar"
+    },
+    "aspect-tools/aspect-docs/index": {
+      "id": "aspect-tools/aspect-docs/index",
+      "title": "index",
+      "description": "Through this page, you can learn how to write an aspect and explore the functionalities it offers to assist you in various tasks.",
+      "sidebar": "tutorialSidebar"
+    },
+    "aspect-tools/aspect-tools-guide/index": {
+      "id": "aspect-tools/aspect-tools-guide/index",
+      "title": "Aspect Tools Guide",
+      "description": "To get started, install aspect-tool with this command:",
+      "sidebar": "tutorialSidebar"
+    },
+    "aspect-tools/index": {
+      "id": "aspect-tools/index",
+      "title": "Aspect Tools",
+      "description": "Artela has developed a command-line tool aspect-tool to streamline the development of Aspects and smart contracts.",
+      "sidebar": "tutorialSidebar"
+    },
+    "index": {
+      "id": "index",
+      "title": "Artela Devnet",
+      "description": "Welcome to Artela playground!",
+      "sidebar": "tutorialSidebar"
+    },
+    "quick-start/access-devnet/index": {
+      "id": "quick-start/access-devnet/index",
+      "title": "Access Devnet",
+      "description": "The Artela Devnet is currently an alpha release. Please be aware of the following:",
+      "sidebar": "tutorialSidebar"
+    },
+    "quick-start/develop-a-smart-contract/index": {
+      "id": "quick-start/develop-a-smart-contract/index",
+      "title": "Develop a Smart Contract",
+      "description": "Similar to Ethereum, EVM smart contract is also supported by Artela. Artela's EVM is fully compatible with legacy Solidity but offers additional features like state and call stack tracing.",
+      "sidebar": "tutorialSidebar"
+    },
+    "quick-start/develop-an-aspect/index": {
+      "id": "quick-start/develop-an-aspect/index",
+      "title": "Develop an Aspect",
+      "description": "Aspect is a dynamic stateful extension that utilizes Web Assembly (WASM). It adds extra functionalities to the lifecycles of blocks or transactions for specific smart contracts. In the following sections, we'll guide you through building a simple Aspect with AssemblyScript(a subset of TypeScript) step by step.",
+      "sidebar": "tutorialSidebar"
+    },
+    "quick-start/index": {
+      "id": "quick-start/index",
+      "title": "Quick Start",
+      "description": "Welcome to the Artela Quick Start Guide!",
+      "sidebar": "tutorialSidebar"
+    },
+    "start-a-local-node/index": {
+      "id": "start-a-local-node/index",
+      "title": "Start a Local Node",
+      "description": "1. Building the Source",
+      "sidebar": "tutorialSidebar"
+    }
+  }
+}
