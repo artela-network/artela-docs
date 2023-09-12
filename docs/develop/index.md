@@ -34,7 +34,7 @@ By Artela Devnet, you can
 
 Explore more:
 
-- Try your first Aspect through a [quick start guide](https://www.notion.so/Quick-Start-20e741408ad54f7fa3921dc900997bae?pvs=21)
-- Explore [development document](https://www.notion.so/Artela-Playground-03c4b7afe0344e7c866cc607e396c0cb?pvs=21)
+- Try your first Aspect through a [quick start guide](https://docs.artela.network/develop/quick-start)
+- Explore [development document](https://docs.artela.network/develop)
 - Artela's vision [**here**](https://medium.com/@artela_network/artela-enhance-dapp-functionality-through-aspect-programming-41717e4bac5b)
 

@@ -266,14 +266,14 @@ See “Authentication Management”
 - `traceStateChange`
   
   Retrieve the process of changes for a variable that modified the state during transaction execution or after execution.
-  
+<!--   
   *This method is not recommended for direct usage. Instead, please refer to [2.3.2 Schedule An AdHoc Transaction](https://www.notion.so/2-3-2-Schedule-An-AdHoc-Transaction-b656e2a21bc54c4d893d08e9154e796c?pvs=21)  of the code generation tool that facilitates its invocation.*
-  
+   -->
 - `scheduleTx`
   
   Schedule a transaction.
   
-  *This method is not recommended for direct use. Please refer to [2.3 Scheduler](https://www.notion.so/2-3-Scheduler-faa2e2b9820d43508b9547627102a2ca?pvs=21)  to learn about the recommended approach for scheduling a transaction.*
+  <!-- *This method is not recommended for direct use. Please refer to [2.3 Scheduler](https://www.notion.so/2-3-Scheduler-faa2e2b9820d43508b9547627102a2ca?pvs=21)  to learn about the recommended approach for scheduling a transaction.* -->
   
 - `addInherent`
   

@@ -1,8 +1,8 @@
 {
   "unversionedId": "resources/index",
   "id": "resources/index",
-  "title": "Artela Devnet",
-  "description": "Welcome to Artela playground!",
+  "title": "Resources",
+  "description": "Here you'll find useful tools and guides to help you get started with Artela.",
   "source": "@site/docs/develop/resources/index.md",
   "sourceDirName": "resources",
   "slug": "/resources/",

@@ -413,7 +413,7 @@
               "unversionedId": "aspect-examples/index",
               "id": "aspect-examples/index",
               "title": "Aspect Examples",
-              "description": "Step-by-step examples of building Aspects to enhance smart contracts functionalities.",
+              "description": "Explore step-by-step examples of Aspect programming in action. These examples demonstrate how you can use Aspects to enhance the functionality and security of your smart contracts.",
               "source": "@site/docs/develop/aspect-examples/index.md",
               "sourceDirName": "aspect-examples",
               "slug": "/aspect-examples/",
@@ -456,7 +456,7 @@
                 "permalink": "/develop/aspect-examples/security-aspect/"
               },
               "next": {
-                "title": "Artela Devnet",
+                "title": "Resources",
                 "permalink": "/develop/resources/"
               }
             },
@@ -712,7 +712,7 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Artela Devnet",
+                "title": "Resources",
                 "permalink": "/develop/resources/"
               },
               "next": {
@@ -723,8 +723,8 @@
             {
               "unversionedId": "resources/index",
               "id": "resources/index",
-              "title": "Artela Devnet",
-              "description": "Welcome to Artela playground!",
+              "title": "Resources",
+              "description": "Here you'll find useful tools and guides to help you get started with Artela.",
               "source": "@site/docs/develop/resources/index.md",
               "sourceDirName": "resources",
               "slug": "/resources/",

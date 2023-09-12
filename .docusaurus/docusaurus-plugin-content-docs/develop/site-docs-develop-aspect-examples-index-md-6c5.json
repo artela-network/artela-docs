@@ -2,7 +2,7 @@
   "unversionedId": "aspect-examples/index",
   "id": "aspect-examples/index",
   "title": "Aspect Examples",
-  "description": "Step-by-step examples of building Aspects to enhance smart contracts functionalities.",
+  "description": "Explore step-by-step examples of Aspect programming in action. These examples demonstrate how you can use Aspects to enhance the functionality and security of your smart contracts.",
   "source": "@site/docs/develop/aspect-examples/index.md",
   "sourceDirName": "aspect-examples",
   "slug": "/aspect-examples/",
