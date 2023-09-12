@@ -1,0 +1,25 @@
+{
+  "unversionedId": "Build-on-Artela/Public-Service",
+  "id": "Build-on-Artela/Public-Service",
+  "title": "Public Service",
+  "description": "Introduction",
+  "source": "@site/docs/main/Build-on-Artela/03-Public-Service.md",
+  "sourceDirName": "Build-on-Artela",
+  "slug": "/Build-on-Artela/Public-Service",
+  "permalink": "/main/Build-on-Artela/Public-Service",
+  "draft": false,
+  "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/main/Build-on-Artela/03-Public-Service.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Rich dApp",
+    "permalink": "/main/Build-on-Artela/Rich-DApp"
+  },
+  "next": {
+    "title": "FAQ",
+    "permalink": "/main/Resources/FAQ"
+  }
+}

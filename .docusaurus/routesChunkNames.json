@@ -48,7 +48,7 @@
       "plugin": "plugin---search-972-bd0"
     }
   },
-  "/develop-3e0": {
+  "/develop-7c2": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---develop-281-0b5"
@@ -58,6 +58,10 @@
   "/develop-e83": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---develop-95-f-dd0"
+  },
+  "/develop/asolc-guide-d2b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-asolc-guidef-0-f-dee"
   },
   "/develop/aspect-examples-b80": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -99,9 +103,25 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---develop-quick-start-develop-an-aspecteb-4-cff"
   },
+  "/develop/resources-260": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-resourcesddf-385"
+  },
+  "/develop/resources/faucet-d36": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-resources-faucetbf-1-539"
+  },
+  "/develop/resources/write-smart-contract-180": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-resources-write-smart-contract-035-e69"
+  },
   "/develop/start-a-local-node-489": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---develop-start-a-local-node-916-4f5"
+  },
+  "/develop/web3js-guide-de5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-web-3-js-guidefc-8-5d9"
   },
   "/docs-be8": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
@@ -114,48 +134,48 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-92-d-b06"
   },
-  "/intro-e10": {
+  "/main-e48": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
-      "plugin": "plugin---intro-6-be-1e5"
+      "plugin": "plugin---maina-77-917"
     },
-    "versionMetadata": "versionMetadata---intro-0-f-4-c89"
+    "versionMetadata": "versionMetadata---mainc-8-b-4e2"
   },
-  "/intro-78e": {
+  "/main-d02": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---intro-7-a-4-bce"
+    "content": "content---main-723-9fa"
   },
-  "/intro/Artela-Blockchain-5e5": {
+  "/main/Artela-Blockchain-68e": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---intro-artela-blockchain-2-bf-c28"
+    "content": "content---main-artela-blockchain-654-508"
   },
-  "/intro/Aspect-Programming-57c": {
+  "/main/Aspect-Programming-a5a": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---intro-aspect-programminge-0-b-40c"
+    "content": "content---main-aspect-programmingf-1-b-08b"
   },
-  "/intro/Aspect-Programming/Aspect-912": {
+  "/main/Aspect-Programming/Aspect-7c2": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---intro-aspect-programming-aspect-807-715"
+    "content": "content---main-aspect-programming-aspectc-84-b99"
   },
-  "/intro/Aspect-Programming/Native-Extension-cb8": {
+  "/main/Aspect-Programming/Native-Extension-562": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---intro-aspect-programming-native-extension-7-e-7-95b"
+    "content": "content---main-aspect-programming-native-extension-404-664"
   },
-  "/intro/Build-on-Artela/Lite-DApp-3a7": {
+  "/main/Build-on-Artela/Lite-DApp-210": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---intro-build-on-artela-lite-d-app-1-d-1-dbd"
+    "content": "content---main-build-on-artela-lite-d-appa-80-fe5"
   },
-  "/intro/Build-on-Artela/Public-Service-925": {
+  "/main/Build-on-Artela/Public-Service-7f2": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---intro-build-on-artela-public-service-0-de-09b"
+    "content": "content---main-build-on-artela-public-service-3-f-9-517"
   },
-  "/intro/Build-on-Artela/Rich-DApp-0bd": {
+  "/main/Build-on-Artela/Rich-DApp-669": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---intro-build-on-artela-rich-d-app-91-b-3cf"
+    "content": "content---main-build-on-artela-rich-d-app-629-aa1"
   },
-  "/intro/Resources/FAQ-b7f": {
+  "/main/Resources/FAQ-3a1": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---intro-resources-faq-94-e-f19"
+    "content": "content---main-resources-fa-qf-82-340"
   },
   "/-871": {
     "__comp": "__comp---site-src-pages-index-tsx-1-df-d3e",

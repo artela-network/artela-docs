@@ -42,9 +42,9 @@ export default {
     [
       "@docusaurus/plugin-content-docs",
       {
-        "path": "docs/intro",
-        "routeBasePath": "intro",
-        "id": "intro",
+        "path": "docs/main",
+        "routeBasePath": "main",
+        "id": "main",
         "sidebarPath": "/Users/maqiyuan/Artela/artela-docs/sidebars.js",
         "breadcrumbs": true,
         "editUrl": "https://github.com/artela-network/artela-docs/tree/main/"
@@ -86,7 +86,7 @@ export default {
         {
           "position": "left",
           "label": "Introduction",
-          "to": "/intro"
+          "to": "/main"
         },
         {
           "position": "left",
@@ -128,12 +128,12 @@ export default {
           "title": "Docs",
           "items": [
             {
-              "label": "Build a dApp",
+              "label": "Build on Artela",
               "to": "/develop/quick-start"
             },
             {
               "label": "Intro to Artela",
-              "to": "intro"
+              "to": "main"
             }
           ]
         },

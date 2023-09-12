@@ -2,20 +2,20 @@
 sidebar_position: 2
 ---
 
-# Security Aspect Example: Step-by-Step
+# Security Aspect
 
-The "Security Aspect on Artela" is an aspect implementation that safeguards transactions. It assumes a bookkeeping contract that may be vulnerable to reentrancy attacks due to unpredictable bugs. The aspect verifies the balance in the bookkeeping contract and compares it to the actual balance, intercepting any transactions associated with such attacks.
+The "Security Aspect on Artela" is a security implementation that safeguards transactions, particularly in scenarios where a bookkeeping contract may be vulnerable to reentrancy attacks due to unpredictable bugs. This Aspect verifies the balance in the contract and compares it to the actual balance, intercepting any transactions associated with such attacks. 
 
-The overall process is as follows:
-
+Let's go through the implementation step by step.
 
 
 ### 1. Deploy Defi Smart Contract
 
-> **Step1:** honeypot.sol is the defi smart contract which could deposit and withdraw funds.
-> 
+**Step1: Defi Smart Contract** 
 
-```solidity
+We assume the existence of a Defi smart contract named `HoneyPot`. This contract allows users to deposit and withdraw funds. Below is the Solidity code for `HoneyPot.sol`:
+
+```tsx
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >=0.8.2 <0.9.0;
 
@@ -49,10 +49,11 @@ contract HoneyPot {
 }
 ```
 
-> **Step2:** attack.sol is the attack smart contract which could get all the funds of honeypot.sol
-> 
+**Step2: Mock the Attack of Smart Contract** 
 
-```solidity
+We can mock an attack smart contract named `Attack`. This contract is designed to exploit vulnerabilities in HoneyPot.sol. Below is the Solidity code for `Attack.sol`:
+
+```tsx
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >=0.8.2 <0.9.0;
 
@@ -82,15 +83,15 @@ contract Attack {
 }
 ```
 
-> **Step3:**  compile honeypot.sol and attack.sol to get deploy bytecode through asolc.
-> 
+**Step3: Compile Contracts**
+Compile `HoneyPot.sol` and `Attack.sol` to obtain deployable bytecode using the `asolc` tool:
 
 ```bash
 >  asolc -o ${your target folder path} --via-ir --abi --bin ${your *.sol file path} --overwrite
 ```
 
-> **Step4:**  deploy to artela testnet.
-> 
+**Step4: Deploy Contracts** 
+Deploy `HoneyPot.sol` and `Attack.sol` to the Artela testnet. Below is an example of deploying `HoneyPot.sol`:
 
 ```tsx
 // Deploy honeypot contract to artela
@@ -140,10 +141,9 @@ attackContract = await attack_instance.on('receipt', function (receipt) {
 });
 ```
 
-### 2. Writer My Aspect
+### 2. Write the Security Aspect
 
-> **Step1:**  use tool to generate template for evm tracer.
-> 
+**Step1: Generate Aspect Template for EVM Tracer.**  
 
 ```bash
 # Install
@@ -155,8 +155,8 @@ Step2:  input your storage layout json file path
 Step3:  input your target lib typescript file path
 ```
 
-> **Step2:**  import step1’s file and libs to impl aspect.
-> 
+**Step2: Import and Implement the Aspect** 
+Import the generated TypeScript file and necessary libraries to implement your security aspect. Below is an example:
 
 ```tsx
 // The entry file of your WebAssembly module.
@@ -203,7 +203,7 @@ export default GuardByTraceAspect;
 ```
 
 ### 3. Deploy Aspect
-
+Deploy your security aspect to the Artela testnet. Here's an example:
 ```tsx
 // Deploy GuardAspect
 //
@@ -245,6 +245,8 @@ let aspectId = aspectRt.options.address
 
 ### 4. Bind Aspect to Smart Contract
 
+Bind your HoneyPot contract with the GuardByTraceAspect aspect. This step establishes a connection between the security aspect and the contract it aims to protect.
+
 ```tsx
     // Bind honeyPotContract with the GuardAspect aspect
     //
@@ -267,47 +269,25 @@ let aspectId = aspectRt.options.address
     await new Promise(r => setTimeout(r, 5000));
 ```
 
-### 5. Complete code and Demonstration
+### 5. Complete the Code and Demonstration
+
+Complete the code and run the demonstration to test your security aspect. You can find the complete code and a demonstration in the provided GitHub repository.
 
 **Complete code:**
 
     https://github.com/artela-network/aspect-example/tree/feat/npm-impl/reentrance
 
-> **Step1:**  build smart contract and aspect.
-> 
+To build and run the demonstration:
 
 ```bash
 cd .     
 sh script/build.sh
-```
 
-> **Step2:**  run test.
-> 
-
-```bash
 cd app
-sh run-normal.sh // normal case, honeypot was attacked
-sh run-app.sh   // aspect case,  protect honeypot
+sh run-normal.sh # for the normal case (HoneyPot being attacked)
+sh run-app.sh    # for the aspect case (HoneyPot protected)
 ```
 
-### 6. Complete code and Demonstration
 
-**Complete code:**
-
-    https://github.com/artela-network/aspect-example/tree/feat/clean-v2/reentrance
-
-> **Step1:**  build smart contract and aspect.
-> 
-
-```bash
-cd .     
-sh script/build.sh
-```
-
-> **Step2:**  run test.
-> 
-
-```bash
-cd app
-sh run-app.sh
-```
+### Summary
+This guide outlines the steps to implement a security aspect on Artela to protect your smart contracts from potential vulnerabilities. The example provided showcases a scenario involving a Defi smart contract and an attack contract. By following these steps, you can enhance the security of your smart contracts on the Artela network.

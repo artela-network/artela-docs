@@ -16,4 +16,4 @@ Artela is a Layer 1 network that empowers developers to add user-defined native 
 
 Artela goes beyond EVM equivalence and enables full EVM interoperability with a WASM runtime. You can build smart contracts in EVM as usual and construct Aspects as native extensions in WASM VM to create a feature-rich modular dApp.
 
-**[Learn More About Artela](https://docs.artela.network/intro)**
+**[Learn More About Artela](https://docs.artela.network/main)**

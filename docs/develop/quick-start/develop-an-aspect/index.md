@@ -48,7 +48,7 @@ postTxExecute(ctx: PostTxExecuteCtx): AspectOutput {
 ```
 
 :::tip
-To learn more details, please refer to [Aspect Doc](https://www.notion.so/Aspect-Doc-acefd64b222d47b5a9da64c68133f2fa?pvs=21).
+To learn more details, please refer to [Aspect Doc](https://docs.artela.network/develop/aspect-tools/aspect-docs).
 :::
 
 Now that you've written your first Aspect, let's compile it with the following command:
@@ -63,7 +63,7 @@ This will generate the Aspect artifacts in the `build` folder, with `release.was
 
 After completing the development steps for your Aspect, it's time to deploy the `release.wasm` bytecode onto Artela. 
 
-For guidance on deploying an Aspect using`@artela/web3.js`, refers to [here](https://www.notion.so/Web3-js-Empowering-Aspect-and-Smart-Contract-Development-a60802e129104395bafda62eb048afa0?pvs=21).
+For guidance on deploying an Aspect using`@artela/web3.js`, refers to [here](https://docs.artela.network/develop/web3js-guide).
 
 
 :::note
@@ -75,7 +75,7 @@ Ensure proper control of deployment permissions. If the `isOwner` function in yo
 - In the case of a **block-level Aspect**, it's invoked at the beginning and end of each block.
 - In the case of a **transaction-level Aspect**, it's invoked by binding it to a smart contract that is being invoked.
 
-For instructions on binding your Aspect to a contract using `@artela/web3.js`, refers to [here](https://www.notion.so/Web3-js-Empowering-Aspect-and-Smart-Contract-Development-a60802e129104395bafda62eb048afa0?pvs=21).
+For instructions on binding your Aspect to a contract using `@artela/web3.js`, refers to [here](https://docs.artela.network/develop/web3js-guide).
     
 :::note
 Pay attention to the control of binding permissions. If the return value within the `onContractBinding` function in your Aspect code is `false`, the binding process will not be successful.
@@ -83,5 +83,5 @@ Pay attention to the control of binding permissions. If the return value within 
 
 
 ### 6. Invoke Your Aspect
-Finally, you can invoke your Aspect by invoking the bound smart contract. To learn how to invoke your contract using `@artela/web3.js` refers to [here](https://www.notion.so/Web3-js-Empowering-Aspect-and-Smart-Contract-Development-a60802e129104395bafda62eb048afa0?pvs=21).
+Finally, you can invoke your Aspect by invoking the bound smart contract. To learn how to invoke your contract using `@artela/web3.js` refers to [here](https://docs.artela.network/develop/web3js-guide).
 

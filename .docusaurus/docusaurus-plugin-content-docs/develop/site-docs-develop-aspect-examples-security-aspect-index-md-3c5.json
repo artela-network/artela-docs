@@ -1,8 +1,8 @@
 {
   "unversionedId": "aspect-examples/security-aspect/index",
   "id": "aspect-examples/security-aspect/index",
-  "title": "Security Aspect Example: Step-by-Step",
-  "description": "The \"Security Aspect on Artela\" is an aspect implementation that safeguards transactions. It assumes a bookkeeping contract that may be vulnerable to reentrancy attacks due to unpredictable bugs. The aspect verifies the balance in the bookkeeping contract and compares it to the actual balance, intercepting any transactions associated with such attacks.",
+  "title": "Security Aspect",
+  "description": "The \"Security Aspect on Artela\" is a security implementation that safeguards transactions, particularly in scenarios where a bookkeeping contract may be vulnerable to reentrancy attacks due to unpredictable bugs. This Aspect verifies the balance in the contract and compares it to the actual balance, intercepting any transactions associated with such attacks.",
   "source": "@site/docs/develop/aspect-examples/security-aspect/index.md",
   "sourceDirName": "aspect-examples/security-aspect",
   "slug": "/aspect-examples/security-aspect/",
@@ -21,7 +21,7 @@
     "permalink": "/develop/aspect-examples/"
   },
   "next": {
-    "title": "Scheduler Aspect Example: Step-by-Step",
+    "title": "Scheduler Aspect",
     "permalink": "/develop/aspect-examples/schedular-aspect/"
   }
 }

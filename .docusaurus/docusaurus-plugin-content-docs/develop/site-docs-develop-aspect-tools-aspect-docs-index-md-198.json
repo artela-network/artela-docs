@@ -1,8 +1,8 @@
 {
   "unversionedId": "aspect-tools/aspect-docs/index",
   "id": "aspect-tools/aspect-docs/index",
-  "title": "index",
-  "description": "Through this page, you can learn how to write an aspect and explore the functionalities it offers to assist you in various tasks.",
+  "title": "Aspect Doc",
+  "description": "Welcome to Aspect Doc where you can learn about Aspects and how they can assist you in various tasks on Artela network.",
   "source": "@site/docs/develop/aspect-tools/aspect-docs/index.md",
   "sourceDirName": "aspect-tools/aspect-docs",
   "slug": "/aspect-tools/aspect-docs/",

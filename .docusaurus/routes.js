@@ -44,11 +44,17 @@ export default [
   },
   {
     path: '/develop',
-    component: ComponentCreator('/develop', '3e0'),
+    component: ComponentCreator('/develop', '7c2'),
     routes: [
       {
         path: '/develop',
         component: ComponentCreator('/develop', 'e83'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/develop/asolc-guide',
+        component: ComponentCreator('/develop/asolc-guide', 'd2b'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
@@ -113,8 +119,32 @@ export default [
         sidebar: "tutorialSidebar"
       },
       {
+        path: '/develop/resources',
+        component: ComponentCreator('/develop/resources', '260'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/develop/resources/faucet',
+        component: ComponentCreator('/develop/resources/faucet', 'd36'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/develop/resources/write-smart-contract',
+        component: ComponentCreator('/develop/resources/write-smart-contract', '180'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
         path: '/develop/start-a-local-node',
         component: ComponentCreator('/develop/start-a-local-node', '489'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/develop/web3js-guide',
+        component: ComponentCreator('/develop/web3js-guide', 'de5'),
         exact: true,
         sidebar: "tutorialSidebar"
       }
@@ -133,60 +163,60 @@ export default [
     ]
   },
   {
-    path: '/intro',
-    component: ComponentCreator('/intro', 'e10'),
+    path: '/main',
+    component: ComponentCreator('/main', 'e48'),
     routes: [
       {
-        path: '/intro',
-        component: ComponentCreator('/intro', '78e'),
+        path: '/main',
+        component: ComponentCreator('/main', 'd02'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/intro/Artela-Blockchain',
-        component: ComponentCreator('/intro/Artela-Blockchain', '5e5'),
+        path: '/main/Artela-Blockchain',
+        component: ComponentCreator('/main/Artela-Blockchain', '68e'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/intro/Aspect-Programming',
-        component: ComponentCreator('/intro/Aspect-Programming', '57c'),
+        path: '/main/Aspect-Programming',
+        component: ComponentCreator('/main/Aspect-Programming', 'a5a'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/intro/Aspect-Programming/Aspect',
-        component: ComponentCreator('/intro/Aspect-Programming/Aspect', '912'),
+        path: '/main/Aspect-Programming/Aspect',
+        component: ComponentCreator('/main/Aspect-Programming/Aspect', '7c2'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/intro/Aspect-Programming/Native-Extension',
-        component: ComponentCreator('/intro/Aspect-Programming/Native-Extension', 'cb8'),
+        path: '/main/Aspect-Programming/Native-Extension',
+        component: ComponentCreator('/main/Aspect-Programming/Native-Extension', '562'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/intro/Build-on-Artela/Lite-DApp',
-        component: ComponentCreator('/intro/Build-on-Artela/Lite-DApp', '3a7'),
+        path: '/main/Build-on-Artela/Lite-DApp',
+        component: ComponentCreator('/main/Build-on-Artela/Lite-DApp', '210'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/intro/Build-on-Artela/Public-Service',
-        component: ComponentCreator('/intro/Build-on-Artela/Public-Service', '925'),
+        path: '/main/Build-on-Artela/Public-Service',
+        component: ComponentCreator('/main/Build-on-Artela/Public-Service', '7f2'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/intro/Build-on-Artela/Rich-DApp',
-        component: ComponentCreator('/intro/Build-on-Artela/Rich-DApp', '0bd'),
+        path: '/main/Build-on-Artela/Rich-DApp',
+        component: ComponentCreator('/main/Build-on-Artela/Rich-DApp', '669'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/intro/Resources/FAQ',
-        component: ComponentCreator('/intro/Resources/FAQ', 'b7f'),
+        path: '/main/Resources/FAQ',
+        component: ComponentCreator('/main/Resources/FAQ', '3a1'),
         exact: true,
         sidebar: "tutorialSidebar"
       }

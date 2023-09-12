@@ -2,7 +2,7 @@
   "unversionedId": "index",
   "id": "index",
   "title": "Artela Devnet",
-  "description": "Welcome to Artela playground!",
+  "description": "Welcome to Artela Devnet playground!",
   "source": "@site/docs/develop/index.md",
   "sourceDirName": ".",
   "slug": "/",

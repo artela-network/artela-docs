@@ -1,8 +1,8 @@
 {
   "unversionedId": "aspect-examples/schedular-aspect/index",
   "id": "aspect-examples/schedular-aspect/index",
-  "title": "Scheduler Aspect Example: Step-by-Step",
-  "description": "The Scheduler Aspect is an example of building an on-chain scheduled transaction trigger. In this example, it involves defining an ERC20 token named ArtToken. Using the Broker contract, it enables transferring funds to a designated account at regular intervals of 5 blocks.",
+  "title": "Scheduler Aspect",
+  "description": "The Scheduler Aspect is a practical example of building an on-chain scheduled transaction trigger. In this scenario, we'll create an ERC20 token called ArtToken and use a Broker contract to schedule fund transfers to a designated account at regular 5-block intervals.",
   "source": "@site/docs/develop/aspect-examples/schedular-aspect/index.md",
   "sourceDirName": "aspect-examples/schedular-aspect",
   "slug": "/aspect-examples/schedular-aspect/",
@@ -17,7 +17,11 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Security Aspect Example: Step-by-Step",
+    "title": "Security Aspect",
     "permalink": "/develop/aspect-examples/security-aspect/"
+  },
+  "next": {
+    "title": "Artela Devnet",
+    "permalink": "/develop/resources/"
   }
 }

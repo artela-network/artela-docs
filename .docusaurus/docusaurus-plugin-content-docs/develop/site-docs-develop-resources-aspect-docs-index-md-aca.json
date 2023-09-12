@@ -1,0 +1,27 @@
+{
+  "unversionedId": "resources/aspect-docs/index",
+  "id": "resources/aspect-docs/index",
+  "title": "Aspect Doc",
+  "description": "Welcome to Aspect Doc where you can learn about Aspects and how they can assist you in various tasks on Artela network.",
+  "source": "@site/docs/develop/resources/aspect-docs/index.md",
+  "sourceDirName": "resources/aspect-docs",
+  "slug": "/resources/aspect-docs/",
+  "permalink": "/develop/resources/aspect-docs/",
+  "draft": false,
+  "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/resources/aspect-docs/index.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Artela Devnet",
+    "permalink": "/develop/resources/"
+  },
+  "next": {
+    "title": "Aspect Doc",
+    "permalink": "/develop/resources/write-smart-contract/"
+  }
+}

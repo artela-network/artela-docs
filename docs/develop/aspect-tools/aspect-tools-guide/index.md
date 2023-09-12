@@ -68,7 +68,7 @@ Your project directory will have this structure:
 
 ## Develop a Smart Contract
 
-### 1. Adding a Smart Contract
+### 1. Add a Smart Contract
 
 Create your smart contract source files,  name as `*.sol`, in the project’s `contracts` directory.
 
@@ -95,7 +95,7 @@ contract Counter {
 
 This smart contract has a function `count`, which takes a number and adds the number to an on-chain state variable `counter`. We will use this smart contract later with our Aspect.
 
-### 2. Compiling a Smart Contract
+### 2. Compile a Smart Contract
 
 Compile your smart contract with this command:
 
@@ -105,7 +105,7 @@ npm run contract:build
 
 If successful, you'll find `Counter.abi` and `Counter.bin` in `build/contract`  folder.
 
-### 3. Deploying a Smart Contract
+### 3. Deploy a Smart Contract
 
 Modify `project.config.json` in the project root folder to set the network configurations (assuming we are using Artela Test Node, if you are using your own node, please change the config accordingly):
 
@@ -133,8 +133,6 @@ Upon successful deployment of the contract, the **contract address** will be dis
 > If the provided script does not fulfill your requirements for deploying a smart contract, feel free to modify it according to your specific needs.
 > 
 
-**One more thing:  [Develop a Smart Contract Integration with `hardhat`](https://www.notion.so/Develop-a-Smart-Contract-Integration-with-hardhat-8124367c1ee1490198abadd2d53fe92d?pvs=21)**
-
 ## Develop an Aspect
 
 ### 1. Implement an Aspect
@@ -157,9 +155,9 @@ postTxExecute(ctx: PostTxExecuteCtx): AspectOutput {
 //...
 ```
 :::note
-To learn more details, refer to [Aspect Doc](https://www.notion.so/Aspect-Doc-acefd64b222d47b5a9da64c68133f2fa?pvs=21). 
+To learn more details, refer to [Aspect Doc](https://docs.artela.network/develop/aspect-tools/aspect-docs). 
 :::
-### 2. Accessing Smart Contract State Changes in Aspect
+### 2. Access Smart Contract State Changes in Aspect
 
 Suppose we want to implement an Aspect for the `Counter` contract that allows only even numbers to be counted. To achieve this, we need to access and check the state of the `Counter` contract within our Aspect.
 
@@ -199,7 +197,7 @@ postTxExecute(ctx: PostTxExecuteCtx): AspectOutput {
 ```
 
 :::note
-If you are interested in how it functions and want a deeper understanding, refer to [Aspect Doc](https://www.notion.so/Aspect-Doc-acefd64b222d47b5a9da64c68133f2fa?pvs=21).
+If you are interested in how it functions and want a deeper understanding, refer to [Aspect Doc](https://docs.artela.network/develop/aspect-tools/aspect-docs).
 :::
 
 ### 3. Build an Aspect
@@ -212,7 +210,7 @@ npm run aspect:build
 
 The resulting artifacts will be stored in the `build` folder. `release.wasm` contains the WebAssembly (WASM) bytecode necessary for the subsequent deployment process
 
-## 4. Deploy an Aspect
+### 4. Deploy an Aspect
 
 Deploy your Aspect:
 
@@ -223,7 +221,7 @@ npm run aspect:deploy -- --sender {account-address} \
 												 --wasm ./build/release.wasm
 ```
 
-## 5. Bind Smart Contract with Aspect
+### 5. Bind Smart Contract with Aspect
 
 Deploying an Aspect alone won't activate it automatically. You need to establish a binding relationship with a smart contract. 
 
@@ -237,11 +235,11 @@ npm run contract:bind --  --sender {account-address}  \
 												  --gas  200000 
 ```
 
-## 6. Invoke Smart Contract with Aspect
+### 6. Invoke Smart Contract with Aspect
 
-Finally, after the binding operation, now our `Counter` contract has been “protected” by the Aspect from the odd numbers. We can invoke our smart contract with the following call to check whether it is working or not. 
+After the binding operation, your `Counter` contract is now 'protected' by the Aspect from processing odd numbers. 
 
-This call can be made with the `scripts/contract-call.cjs` script:
+To test if it's working correctly, you can invoke your smart contract using the `scripts/contract-call.cjs` script
 
 ```bash
 npm run contract:call -- --contract {smart-contract-address} \
@@ -253,8 +251,12 @@ npm run contract:call -- --contract {smart-contract-address} \
 												 --gas  200000 
 ```
 
-After the transaction has been finalized, we can see that the status of the transaction receipt is `false` ,  which means the Aspect has stopped contract from counting an odd number by reverting the transaction. You can also try with some even numbers by replacing the `55` in the above command, the status of transaction receipt should be `true`.
+After the transaction is finalized, you will notice that the status of the transaction receipt is `false`. This indicates that the Aspect successfully prevented the contract from processing an odd number by reverting the transaction.
+
+To further test, you can replace the `55` in the previous command with some even numbers. In this case, the status of the transaction receipt should be `true`, signifying that the transaction was allowed to proceed.
 
 # Summary
 
-Now you have learnt some basics about how to develop an Aspect, if you want to dig deeper, please check out our [Aspect Doc](https://www.notion.so/Aspect-Doc-acefd64b222d47b5a9da64c68133f2fa?pvs=21) for more details.
+Now you have learnt some basics about how to develop an Aspect, if you want to dig deeper, please check out our [Aspect Doc](https://docs.artela.network/develop/aspect-tools/aspect-docs) for more details.
+
+Now you've learned the basics of developing an Aspect. If you're interested in delving deeper, refer to [Aspect Doc](https://docs.artela.network/develop/aspect-tools/aspect-docs) for more details.

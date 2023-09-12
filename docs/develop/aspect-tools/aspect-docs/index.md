@@ -2,32 +2,38 @@
 sidebar_position: 2
 ---
 
-Through this page, you can learn how to write an aspect and explore the functionalities it offers to assist you in various tasks.
+# Aspect Doc
 
-# 1. ****High-level Overview****
+Welcome to Aspect Doc where you can learn about Aspects and how they can assist you in various tasks on Artela network.
 
-## 1.1 What Is Aspect
+## High-level Overview
 
-Aspect is a native extension on the Artela Network that provides security isolation and composability to enhance its functionality. Aspects are designed to manage the entire lifecycle of a transaction and interact with the base processing context. They can customize the transaction validation process, making them a powerful tool for you to use in creating high-quality aspect-oriented code.
+### What Is Aspect
 
-Aspects run within a secure sandbox environment (wasm runtime) that operates independently from the base layer, ensuring that the execution of Aspects has no impact on the security and availability of the base layer. Additionally, Aspects are securely isolated from each other, ensuring that the execution of one aspect does not affect others.
+Aspect is a native extension on Artela that provides security, composability, and enhanced functionality. Aspects are designed to manage the entire lifecycle of a transaction and interact with the base processing context. They can customize the transaction validation process, making them a powerful tool to create high-quality aspect-oriented code.
 
-Another important feature of Aspects is the composability. You can bind smart contracts with Aspects to bring additional functionality. Transactions calling smart contracts pass through Aspects, providing additional processing capabilities. Aspects can be combined with multiple smart contracts seamlessly, making them a flexible and powerful tool for developers to use.
+Aspects run in a secure sandbox environment (WASM runtime) that operates independently from the base layer. This isolation ensures that Aspects don't impact the security and availability of the base layer. Furthermore, Aspects are securely isolated from each other, so one Aspect's execution doesn't affect others.
 
-Overall, Aspect is a powerful tool for you looking to create high-quality aspect-oriented code. Its ability to manage the entire lifecycle of a transaction and interact with the base processing context, combined with its security isolation and composability, make it a valuable addition to the Artela Network.
+Another essential feature of Aspects is composability. You can bind smart contracts with Aspects to add additional functionality. Transactions involving smart contracts pass through Aspects, offering additional processing capabilities. Aspects can be combined with multiple smart contracts seamlessly, making them flexible and powerful tools for developers.
 
-## 1.2 How To Develop An Aspect
 
-Aspects are designed to run on the WebAssembly (Wasm) platform, and you can use any language that is supported by Wasm to develop an Aspect. But at present, only the library for developing Aspects is available in [AssemblyScript](https://www.assemblyscript.org/getting-started.html). 
+In summary, Aspect is a valuable addition to the Artela Network, allowing you to create high-quality aspect-oriented code with lifecycle control, security isolation, and composability.
 
-All logic implementing Aspect requires entry points defined in the following file:
+### How to Develop an Aspect
+
+Aspects are designed to run on the WebAssembly (WASM) runtime, and you can use any language supported by WASM to develop an Aspect. 
+
+Currently, [AssemblyScript](https://www.assemblyscript.org/getting-started.html) is supported for developing Aspects.
+
+To implement the desired logic within an Aspect, define entry points in the following file:
 
 ```bash
 ${your-poject}/assembly/aspect/aspect.ts
 ```
 
-To implement the desired logic within an Aspect join point where you want to achieve a specific functionality, please ensure that the code and package references adhere to the AssemblyScript development guidelines. 
+Ensure that your code and package references adhere to AssemblyScript development guidelines for Aspect implementation.
 
+<!-- 
 - meaning of every join point
     
     [2.1 Join Points](https://www.notion.so/2-1-Join-Points-19abe60bffe748059fc05589802b5492?pvs=21) 
@@ -39,40 +45,47 @@ To implement the desired logic within an Aspect join point where you want to ach
 - definition of output parameters
     
     [2.2.2 AspOutput](https://www.notion.so/2-2-2-AspOutput-62b2034f58814875ac68c4aa7509496a?pvs=21) 
-    
+     -->
 
-To compile and verify your code, run npm command:
+Compile and verify your code using npm commands:
 
 ```bash
-# build a release version
+# Build a release version
 npm run asbuild:release
-# build a debug version
+# Build a debug version
 npm run asbuild:debug
 ```
 
-# 2. Core Concepts
+## Core Concepts
 
-## 2.1 Join Points
+### Join Points
 
-Join Points refer to the specific positions within the transaction processing lifecycle where an Aspect can be applied. Artela defines a set of Join Points that you can use to specify when and where your Aspects should be executed during the processing of transactions.
+Join Points are specific positions in the transaction processing lifecycle where an Aspect can be applied. Artela defines a set of Join Points for specifying when and where Aspects should execute during transaction processing. These include:
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f896d580-df14-4453-a527-1b3458c8f561/Untitled.png)
+<center>
+<img
+  src={require('./img/1.png').default} 
+  alt="join-points"  
+  width="50%"
+/>
+</center>
+
 
 - `onTxReceive`
     
-    This Join Point occurs at receiving transaction data from a broadcast.
+    Occurs when receiving transaction data from a broadcast.
     
 - `onBlockInitialize`
     
-    This Join Point occurs at the beginning of a new block. Aspects applied at this Join Point can perform initialization tasks or set up any necessary state for the block.
+    Occurs at the beginning of a new block, allowing for initialization tasks and state setup for the block.
     
 - `onTxVerify`
     
-    This Join Point occurs during the verification of a transaction. Aspects applied at this Join Point can intercept and modify the transaction data, perform additional validation checks, or enforce specific rules.
+    Occurs during transaction verification, enabling transaction data interception and modification, performing additional validation checks, or enforcing specific rules.
     
 - `onAccountVerify`
     
-    This Join Point occurs during the verification of account.
+   Occurs during account verification.
     
 - `onGasPayment`
     
@@ -80,27 +93,29 @@ Join Points refer to the specific positions within the transaction processing li
     
 - `preTxExecute`
     
-    This Join Point occurs before the execution of a transaction. 
+    Occurs before transaction execution. 
     
 - `preContractCall`
     
-    This Join Points occurs in front of a contract call. In preContractCall, you can trace all the state changes of current transaction that cached in EVM.
+    Occurs before a contract call, allowing state change tracing of current transaction that cached in EVM.
     
 - `postContractCall`
     
-    This Join Points occurs at the back of a contract call. In postContractCall you can trace the state change bring with both the transaction and the contract call.
+    Occurs after a contract call, enabling state change tracking within both the transaction and the contract call.
     
 - `postTxExecute`
     
-    This Join Point occurs after the execution of a transaction. At this join point, the transaction has already been executed, and you can query the post-transaction data to trigger an inherent transaction or prevent the current transaction.
+    Occurs after transaction execution, allowing querying of post-transaction data to  trigger an inherent transaction or revert the current transaction.
     
 - `onTxCommit`
-    
-    This Join Point occurs after the successful execution and commitment of a transaction.
+  
+    Occurs after the successful execution and commitment of a transaction.
     
 - `onBlockFinalize`
+  
+    Occurs after finalizing a block.
 
-To implement your custom logic within the matched functions below, which will be triggered at the join points:
+Here's an overview of what each of these functions, it defines how to customize the behavior of your Aspects at specific join points within the transaction processing lifecycle on Artela.
 
 ```tsx
 onTxReceive(ctx: OnTxReceiveCtx): AspectOutput {
@@ -148,164 +163,170 @@ onBlockFinalize(ctx: OnBlockFinalizeCtx): AspectOutput {
 }
 ```
 
-In addition to these join points, there are two additional methods available to control aspect upgrades and restrict contract bindings. They are
+Additionally, two methods, `isOwner` and `onContractBinding`, control **aspect upgrades** and **contract bindings**.
 
 - `isOwner`
 - `onContractBinding`
 
-See [3.1 Authentication Management](https://www.notion.so/3-1-Authentication-Management-59d386af2acf4915a394865f78ad3b49?pvs=21) for the usage of these two methods.
+See “Authentication Management”
 
-## 2.2 Input & Output
+### Input & Output
 
-### 2.2.1 Input Ctx
+#### Input Context(ctx)
 
-- **blockHeight**: current block height.
-- **tx**: current transaction.
-- **methods**(**`Hostapis`**)
+- **blockHeight**: Current block height.
+- **tx**: Current transaction.
+- **methods**(`Hostapis`):
     
-    These functions provide entry points for the functionality along the call chain. Different join points is associated with different functionalities. Refer to the diagram below for the available functionalities and the corresponding join point scopes.
-    
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/92273a72-c8cc-4861-88dc-789ae1b52785/Untitled.png)
-    
-    - `currentBlock`
-        
-        Get the block header of current ethereum block.
-        
-        ```tsx
-        let block = ctx.currentBlock();
-        if (block) {
-        	let header = block.header;
-        	...
-        }
-        ```
-        
-    - `lastBlock`
-        
-        Get the last ethereum block. Call lastBlock
-        
-        ```tsx
-        let block = ctx.lastBlock();
-        if (block) {
-        	let header = block.header;
-        	...
-        }
-        ```
-        
-    - `localCall`
-        
-        Not supported at the moment.
-        
-    - `getProperity`
-        
-        To retrieve the properties of an aspect, pass the key associated with the aspect, which is deployed together with it.
-        
-        e.g. Properties “*TargetAddr*”, “*ScheduleTo*”, “*Broker*”, “*binding*” and “*owner*” are deployed with aspect like
-        
-        ```tsx
-        let instance = aspect.deploy({
-        	data: '0x' + aspectCode,
-        	properties: [{ 'key': 'TargetAddr', 'value': targetAccount }, { 'key': 'ScheduleTo', 'value': brokerAddress }, { 'key': 'Broker', 'value': brokerDeployer }, { 'key': 'binding', 'value': brokerAddress }, { 'key': 'owner', 'value': AspectDeployer }]
-        }).send({ from: AspectDeployer, nonce: nonceValAspectDeployer });
-        ```
-        
-        Get the property of “ScheduleTo”
-        
-        ```tsx
-        let scheduleToAddress = ctx.getProperity("ScheduleTo")
-        ```
-        
-    - `setContext`
-        
-        Store a key-value pair in the temporary space of memory and pass to other join points, the memory is binding to current tx. When the tx is completed, the space will be destroyed.
-        
-        ```tsx
-        // balance = BigInt.fromUint64(100)
-        ctx.setContext("balance-key", balance.toString(16))
-        ```
-        
-    - `getContext`
-        
-        Retrieve the key-value pair stored using `setContext`.
-        
-        ```tsx
-        let stored = ctx.getAspectState("balance-key");
-        let balance = BigInt.fromString(stored, 16);
-        ```
-        
-    - `setAspectState`
-        
-        Same with a setContext, store a key-value pair in the blockchain state, but not shared with other aspects.
-        
-        e.g. Store balance of an account
-        
-        ```tsx
-        // balance of 0xBC0E48f5d2A48350B74c81ECed3A42b35b532ef8 = BigInt.fromUint64(100)
-        ctx.setAspectState("0xBC0E48f5d2A48350B74c81ECed3A42b35b532ef8", balance.toString(16))
-        ```
-        
-    - `getAspectState`
-        
-        Retrieve the key-value pair stored using `getAspectState`.
-        
-        Retrieve the balance corresponding to the stored account as shown below.
-        
-        ```tsx
-        let stored = ctx.getAspectState("0xBC0E48f5d2A48350B74c81ECed3A42b35b532ef8");
-        let balance = BigInt.fromString(stored, 16);
-        ```
-        
-    - `traceStateChange`
-        
-        Retrieve the process of changes for a variable that modified the state during transaction execution or after execution.
-        
-        *This method is not recommended for direct usage. Instead, please refer to [2.3.2 Schedule An AdHoc Transaction](https://www.notion.so/2-3-2-Schedule-An-AdHoc-Transaction-b656e2a21bc54c4d893d08e9154e796c?pvs=21)  of the code generation tool that facilitates its invocation.*
-        
-    - `scheduleTx`
-        
-        Schedule a transaction.
-        
-        *This method is not recommended for direct use. Please refer to [2.3 Scheduler](https://www.notion.so/2-3-Scheduler-faa2e2b9820d43508b9547627102a2ca?pvs=21)  to learn about the recommended approach for scheduling a transaction.*
-        
-    - `addInherent`
-        
-        Not supported at the moment.
-        
-    - `revertTx`
-        
-        This method is used for rolling back or reverting transactions. Once it is called, the WASM will immediately exit, and the remaining aspects will not be executed, also the current transaction will be marked as failed, and any changes it made to the state will not take effect.
-        
-        Reason for marking the transaction execution as failed can be passed as shown below.
-        
-        ```tsx
-        ctx.revert("incorrect balance, transaction invalidated")
-        ```
-        
-    - `dropTx`
-        
-        Not supported at the moment.
-        
-        Works only for OnTxReceived. If this method is called, the currently received broadcast transaction will be deleted and will not be inserted into the mempool for on-chain submission.
-        
-    - `currentBalance`
-        
-        currentBalance returns the balance of native tokens.
-        
-        If the block has not yet started, an attempt is made to query the balance from the last block. This behavior is intended to occur only at the ***onTxReceive*** join point.
-        
-        If a transaction is being processed, the cached balance is returned. This behavior is intended to occur at ***preContractCall*** and ***preContractCall*** .
-        
-        Otherwise, an attempt is made to retrieve the account balance using a current block query.  This intended to occur at other join points except ***onTxReceive, preContractCall*** and ***preContractCall.***
-        
-        Passing the contract account address or EOA address allows for retrieving the balance.c
-        
-        ```tsx
-        let balance = ctx.currentBalance("0xBC0E48f5d2A48350B74c81ECed3A42b35b532ef8");
-        ```
-        
+    Provides entry points for various functionalities along the call chain. Different join points are associated with different functionalities.  Refer to the diagram below for the available functionalities and the corresponding join point scopes.
 
-### 2.2.2 AspOutput
+<center>
+<img
+  src={require('./img/2.png').default} 
+  alt="diagram"  
+  width="50%"
+/>
+</center>
 
-To create return value a AspOutput
+- `currentBlock`
+  
+  Get the block header of current ethereum block.
+  
+  ```tsx
+  let block = ctx.currentBlock();
+  if (block) {
+  	let header = block.header;
+  	...
+  }
+  ```
+  
+- `lastBlock`
+  
+  Get the last ethereum block. Call lastBlock
+  
+  ```tsx
+  let block = ctx.lastBlock();
+  if (block) {
+  	let header = block.header;
+  	...
+  }
+  ```
+  
+- `localCall`
+  
+  Not supported at the moment.
+  
+- `getProperity`
+  
+  To retrieve the properties of an Aspect, pass the key associated with the Aspect, which is deployed together with it.
+  
+  e.g. Properties “*TargetAddr*”, “*ScheduleTo*”, “*Broker*”, “*binding*” and “*owner*” are deployed with Aspect like
+  
+  ```tsx
+  let instance = aspect.deploy({
+  	data: '0x' + aspectCode,
+  	properties: [{ 'key': 'TargetAddr', 'value': targetAccount }, { 'key': 'ScheduleTo', 'value': brokerAddress }, { 'key': 'Broker', 'value': brokerDeployer }, { 'key': 'binding', 'value': brokerAddress }, { 'key': 'owner', 'value': AspectDeployer }]
+  }).send({ from: AspectDeployer, nonce: nonceValAspectDeployer });
+  ```
+  
+  Get the property of “ScheduleTo”
+  
+  ```tsx
+  let scheduleToAddress = ctx.getProperity("ScheduleTo")
+  ```
+  
+- `setContext`
+  
+  Store a key-value pair in the temporary space of memory and pass to other join points, the memory is binding to current tx. When the tx is completed, the space will be destroyed.
+  
+  ```tsx
+  // balance = BigInt.fromUint64(100)
+  ctx.setContext("balance-key", balance.toString(16))
+  ```
+  
+- `getContext`
+  
+  Retrieve the key-value pair stored using `setContext`.
+  
+  ```tsx
+  let stored = ctx.getAspectState("balance-key");
+  let balance = BigInt.fromString(stored, 16);
+  ```
+  
+- `setAspectState`
+  
+  Same with a setContext, store a key-value pair in the blockchain state, but not shared with other Aspects.
+  
+  e.g. Store balance of an account
+  
+  ```tsx
+  // balance of 0xBC0E48f5d2A48350B74c81ECed3A42b35b532ef8 = BigInt.fromUint64(100)
+  ctx.setAspectState("0xBC0E48f5d2A48350B74c81ECed3A42b35b532ef8", balance.toString(16))
+  ```
+  
+- `getAspectState`
+  
+  Retrieve the key-value pair stored using `getAspectState`.
+  
+  Retrieve the balance corresponding to the stored account as shown below.
+  
+  ```tsx
+  let stored = ctx.getAspectState("0xBC0E48f5d2A48350B74c81ECed3A42b35b532ef8");
+  let balance = BigInt.fromString(stored, 16);
+  ```
+  
+- `traceStateChange`
+  
+  Retrieve the process of changes for a variable that modified the state during transaction execution or after execution.
+  
+  *This method is not recommended for direct usage. Instead, please refer to [2.3.2 Schedule An AdHoc Transaction](https://www.notion.so/2-3-2-Schedule-An-AdHoc-Transaction-b656e2a21bc54c4d893d08e9154e796c?pvs=21)  of the code generation tool that facilitates its invocation.*
+  
+- `scheduleTx`
+  
+  Schedule a transaction.
+  
+  *This method is not recommended for direct use. Please refer to [2.3 Scheduler](https://www.notion.so/2-3-Scheduler-faa2e2b9820d43508b9547627102a2ca?pvs=21)  to learn about the recommended approach for scheduling a transaction.*
+  
+- `addInherent`
+  
+  Not supported at the moment.
+  
+- `revertTx`
+  
+  This method is used for rolling back or reverting transactions. Once it is called, the WASM will immediately exit, and the remaining aspects will not be executed, also the current transaction will be marked as failed, and any changes it made to the state will not take effect.
+  
+  Reason for marking the transaction execution as failed can be passed as shown below.
+  
+  ```tsx
+  ctx.revert("incorrect balance, transaction invalidated")
+  ```
+  
+- `dropTx`
+  
+  Not supported at the moment.
+  
+  Works only for OnTxReceived. If this method is called, the currently received broadcast transaction will be deleted and will not be inserted into the mempool for on-chain submission.
+  
+- `currentBalance`
+  
+  currentBalance returns the balance of native tokens.
+  
+  If the block has not yet started, an attempt is made to query the balance from the last block. This behavior is intended to occur only at the `onTxReceive` join point.
+  
+  If a transaction is being processed, the cached balance is returned. This behavior is intended to occur at `preContractCall` and `preContractCall` .
+  
+  Otherwise, an attempt is made to retrieve the account balance using a current block query.  This intended to occur at other join points except `onTxReceive`, `preContractCall` and `preContractCall`.
+  
+  Passing the contract account address or EOA address allows for retrieving the balance.c
+  
+  ```tsx
+  let balance = ctx.currentBalance("0xBC0E48f5d2A48350B74c81ECed3A42b35b532ef8");
+  ```
+    
+
+#### Aspect Output (AspOutput)
+
+To create a return value of AspOutput:
 
 ```tsx
 let ret = new AspectOutput();
@@ -316,26 +337,34 @@ return ret;
 
 - success
     
-    The flag of success also decide the transaction execution revert or not. Unlike "revert," it does not immediately exit, but instead continues executing other aspect logics.
+Determines if the transaction execution revert or not. Unlike "revert", it continues executing other Aspect logics.
+
+Unlike "revert," it does not immediately exit, but instead continues executing other aspect logics.
     
 - message
     
-    If the transaction rollback is set (success = false), assign the transaction failure reason to the message. If the transaction is successful, keep the message empty.
+If the transaction rollback is set (success = false), assign the transaction failure reason to the message. If the transaction is successful, keep the message empty.
     
 
-## 2.3 Scheduler
+### Scheduler
 
-### 2.3.1 Schedule A Periodic Transaction
+#### Schedule a Periodic Transaction
 
 The scheduler works like:
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9b6710ad-2ec4-4d65-815a-639565f8be11/Untitled.png)
+<center>
+<img
+  src={require('./img/3.png').default} 
+  alt="diagram"  
+  width="50%"
+/>
+</center>
 
-To submit a scheduler in aspect, for instance, we arrange periodic transaction calls to a on-chain contract method
+To submit a scheduler in Aspect, for instance, we arrange periodic transaction calls to a on-chain contract method
 
 `function transfer(address target,uint256 amount) public onlyOwner`
 
-scheduler can be set in the following way:
+Scheduler can be set in the following way:
 
 ```tsx
 import { Opts, PeriodicSchedule, Schedule,ScheduleTx } from "@artela/aspect-libs/scheduler";
@@ -377,9 +406,9 @@ private scheduleTx(ctx: ScheduleCtx, target: string, amount: u64): bool {
 }
 ```
 
-### 2.3.2 Schedule An AdHoc Transaction
+#### Schedule an AdHoc Transaction
 
-Similar to scheduling a periodic transaction, the method for scheduling an ad-hoc transaction is as follows:
+Scheduling an ad-hoc transaction is similar to scheduling a periodic one:
 
 ```tsx
 // build scheduleTx just as it is in periordic scheduler
@@ -393,76 +422,97 @@ var adhocSch : Schedule = AdHocSchedule
 adhocSch.submit(tx);
 ```
 
-## 2.4 Trace State Change
+### Trace State Change
 
-You can use aspect-tool to trace variables or directly call **`getStateChanges`** to obtain raw data.
+You can use aspect-tool to trace variables or directly call `getStateChanges` to obtain raw data. 
 
-### 2.4.1 **Option 1: Trace Varibales with** `aspect-tool` (Recommended)
+Two options are available:
+
+#### Option 1: Trace Varibales with `aspect-tool` (Recommended)
 
 **Tracing Progress**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4a31d0aa-58df-4e07-80ff-340ce92436aa/Untitled.png)
+<center>
+<img
+  src={require('./img/4.png').default} 
+  alt="process"  
+  width="50%"
+/>
+</center>
 
-Just as indicated by the blue boxes and blue lines shown above, to trace state changes, you can follow the steps outlined below:
 
-1. Identify the specific contract you want to trace or a group of contracts with similar layouts (referring to contracts with the same storage layout and variables), and obtain the storage layout file.
+Just as indicated by the blue boxes and blue lines shown above, to trace state changes in your contract, follow these steps:
+
+1. **Identify the Contract:**
+- Determine the specific contract you want to trace or a group of contracts with similar storage layouts and variables.
+- Obtain the storage layout file for the chosen contract. You can generate this layout file using the following command:
     
-    The storage layout can be generated using the following approach
+```bash
+solc --storage-layout myContract.sol -o myContract
+```
     
-    ```bash
-    solc --storage-layout myContract.sol -o myContract
-    ```
+2. **Install aspect-tool:**
+- Install the aspect-tool utility, which is used to generate trace state files based on the contract's storage layout. You can install it globally with npm:
     
-2. Install aspect-tool and generate trace state file based on storage layout
+```bash
+# install aspect-tool
+npm install -g @artela/aspect-tool
+```
+
+3. **Generate Trace State File:**
+- Use the aspect-tool to generate the trace state file by running the following command:
+```bash
+# generate trace file
+aspect-tool generate
+```
+
+When prompted, provide the path to your storage layout file and the desired output path. For example:
+```bash
+# input your storage layout file path and output path, e.g.
+> myContract/MyContract_storage.json
+> myContract.ts
+```
     
-    ```bash
-    # install aspect-tool
-    npm install -g @artela/aspect-tool
+4. **Import and Use Trace State:**
+- Now that you have generated the trace state file, you can import and use it in your Aspect code.
+- For instance, if you want to monitor changes in a variable named `balance` of type `uint256` in a contract, you can access the change information like this:
     
-    # generate trace file
-    aspect-tool generate
-    
-    # input your storage layout file path and output path, e.g.
-    > myContract/MyContract_storage.json
-    > myContract.ts
-    ```
-    
-3. Import and use generated trace state file in your aspect. For instance, in the contract where you want to monitor the changes in a variable named `balance` of type `uint256` , you can get the change like
-    
-    ```tsx
-    import {balance} from "./myContract"
-    
+```tsx
+import {balance} from "./myContract"
+
+...
+postTxExecute(ctx: PostTxExecuteCtx): AspectOutput {
     ...
-    postTxExecute(ctx: PostTxExecuteCtx): AspectOutput {
-    	...
-    	// ctx: current ctx, If passing ctx is unavailable,
-    	//   then the tracing functionality at the current join point is not accessible.
-    	// ctx.tx!.to: contract address to track
-      let balance = new myContract.balance(ctx, ctx.tx!.to);
-    	let originalBalance = balance.before();
-    	let lastestBalance = balance.lastest();
-    	let diff = balance.diff();
-    	let changes = balance.changes();
-    }
-    ```
-    
-    `State.account` ****in **changes,** refers to the account address that leads to a change in value.
-    
-    `State.change` in **changes**, refers to the value after updating by the account.
-    
+    // ctx: current ctx, If passing ctx is unavailable,
+    //   then the tracing functionality at the current join point is not accessible.
+    // ctx.tx!.to: contract address to track
+    let balance = new myContract.balance(ctx, ctx.tx!.to);
+    let originalBalance = balance.before();
+    let lastestBalance = balance.lastest();
+    let diff = balance.diff();
+    let changes = balance.changes();
+}
+```
 
-**Tracing a mapping variable**
+In the above code, `balance` is a trace object generated from the trace state file. You can access various properties of this trace object to monitor and analyze changes.
 
-Let’s say a variable in the contract *“myContract”* is defined like `mapping(string => uint256) public accounts;`, pass the key of the value which need to be traced, the approach is as follows:
+`State.account` in `changes` object refers to the account address that triggered the change in value.
+
+`State.change` in `changes` object refers to the updated value after the change.
+
+
+**Tracing a Mapping Variable**
+
+If your contract has a mapping variable like `mapping(string => uint256) public accounts`;, you can trace changes in a specific key value like this:
 
 ```tsx
 let accounts = new myContract.accounts(ctx, ctx.tx!.to);
 let diff = balance.diff("acct1");
 ```
 
-**Tracing a mixed complex structure**
+**Tracing a Complex Structure:**
 
-A mapping with a value of user-defined struct variable in the contract is defined as follows:
+If your contract involves more complex structures, such as a mapping with a user-defined struct like:
 
 ```tsx
 mapping(address => Person) public persons;
@@ -472,7 +522,7 @@ struct Person {
 }
 ```
 
-To trace the changes, the approach is as follows:
+You can trace changes as follows:
 
 ```tsx
 let persons = new myContract.persons(ctx, ctx.tx!.to);
@@ -481,61 +531,60 @@ let tom_balance_latest = account.person(tom_address).balance().latest();
 ...
 ```
 
-### 2.4.2 **Option 2**: Trace Variables, directly calling host function `getStateChanges`.
 
-Calling the trace with command:
+#### Option 2: Trace Variables by Directly Calling the Host Function  `getStateChanges`.
+
+To trace variables, use the following command:
 
 ```go
 let changes = ctx.getStateChanges({cotract address}, "{variable}", "{key}")
 ```
 
 1. **Input Params:**
-    - **contract address**: The contract is tracing for. Pass `tx.to!` for current contract of transaction invoked.
-    - **variable**: The variable is tracing for, with a format of `contract_name.vairable_name` , e.g. HoneyPot.balance.
-    - **key**:
-        - For a primitive variable such as string, uint256, bool, etc., use empty uint8array. `new uint8array()`
-        - For a complex type
-            - **simple map**, use the uint8array of abi encoded map key, e.g. map key = “abc”, `uint8array(abiEncode(”abc”))`
-            - **nested map**, use the union of encoded key, e.g. map[”abc”][123], `concat(uint8array(abiEncode(”abc”)), uint8array(abiEncode(”123”))`)
-            - **user defined structure**, use the uint8array of encoded filed name. e.g. person.Name, `uint8array(abiEncode(”Name”)`
-            - **mix of map and structure**, concat the abi encoded map keys and fields in order.
+    - **Contract Address**: Specify the contract you want to trace. Use `tx.to!` to refer to the currently invoked contract in the transaction.
+    - **Variable**: Define the variable you want to trace using the format `contract_name.vairable_name` , e.g. `HoneyPot.balance`.
+    - **Key**:
+        - For Primitive Variables like strings, uint256, bool, etc., use an empty uint8array: `new uint8array()`
+        - For Complex Type
+            - **Simple Map**, Use the uint8array of ABI-encoded map key, e.g. map key = “abc”, `uint8array(abiEncode(”abc”))`
+            - **Nested Map**, Use the union of encoded key, e.g. `map[”abc”][123]`, `concat(uint8array(abiEncode(”abc”)), uint8array(abiEncode(”123”))`)
+            - **User Defined Structure**, Use the uint8array of encoded filed name. e.g. `person.Name`, `uint8array(abiEncode(”Name”)`
+            - **Mixed of Map and Structure**, Concat the ABI-encoded map keys and structure field names in order.
 2. **Output:**
     
     The return value is a list of key-value pairs in the format of "address:change". Here, the "address" corresponds to the entity that made the changes, while the "value" represents an ABI-encoded value of your variable type.
     
     e.g. read returns for `balance: uint256`.
     
-    ```go
-    let account = changes.all[0].account; // the account made the change
-    let valueHex = utils.uint8ArrayToHex(changes.all[0].value); // changed value, with a format of abi encode
-    let value = BigInt.fromString(valueHex, 16);
-    ```
-    
+```go
+let account = changes.all[0].account; // the account made the change
+let valueHex = utils.uint8ArrayToHex(changes.all[0].value); // changed value, with a format of abi encode
+let value = BigInt.fromString(valueHex, 16);
+```
 
-## 2.5 Aspect Property
 
-# 3. Aspect Maintenance
+### Aspect Maintenance
 
-## 3.1 Authentication Management
+#### Authentication Management
 
 - **isOwner**
     
-    This mechanism serves as a permission control measure, specifically for actions like **upgrading** the Aspect. It is a join point that gets triggered during the upgrade deployment process, enabling permission verification.
-    
-    The `isOwner` function's return value has the following implications:
+    The `isOwner` function is a key part of our authentication management system. It is primarily designed to control permissions for critical actions, such as upgrading the Aspect. This function acts as a join point triggered during the upgrade deployment process, allowing us to perform permission checks.
+
+    The return value of the `isOwner` function has the following implications:
     
     - **True**: Permission check passed, allowing the upgrade.
     - **False**: Permission check failed, denying the upgrade.
     
     ```tsx
     isOwner(ctx: StateCtx, sender: string): bool {
-    
+        // Your permission verification logic here
     }
     ```
     
     **Example:**
     
-    > One approach is to include administrator account and related information in the deployed property, such as deploy with property of `owner`(Deploy details see [](https://www.notion.so/8e9ed459203c4c1da7dcaaf0f34796f2?pvs=21) )
+    > One approach is to include administrator account and related information in the deployed property, such as deploying with a property of `owner`(Deploy details see [here](https://docs.artela.network/develop/web3js-guide).
     > 
     
     ```tsx
@@ -545,7 +594,7 @@ let changes = ctx.getStateChanges({cotract address}, "{variable}", "{key}")
     }).send({ from: accounts[0], nonce: nonceVal });
     ```
     
-    > And the logic for performing permission checks is as follows:
+    > The logic for performing permission checks can be implemented as follows:
     > 
     
     ```tsx
@@ -560,7 +609,7 @@ let changes = ctx.getStateChanges({cotract address}, "{variable}", "{key}")
     
 - **onContractBinding**
     
-    Similar to upgrade permission checks, this join point is called during contract binding and allows determining which contracts can be bound to this aspect.
+    Similar to upgrade permission checks, the onContractBinding function(join point) is called during contract binding. It allows us to determine which contracts can be bound to this aspect.
     
     ```tsx
     onContractBinding(ctx: StateCtx, contractAddr: string): bool {
@@ -571,4 +620,4 @@ let changes = ctx.getStateChanges({cotract address}, "{variable}", "{key}")
 
 ## 3.2 Upgrade
 
-To enhance a specific aspect, it is crucial to ensure that you possess the necessary permission for that aspect. Upgrade an Aspect using `@artela/web3.js` refers to [here](https://www.notion.so/Web3-js-Empowering-Aspect-and-Smart-Contract-Development-a60802e129104395bafda62eb048afa0?pvs=21).
+To enhance a specific aspect, it is crucial to ensure that you possess the necessary permission for that aspect. Upgrade an Aspect using `@artela/web3.js` refers to [here](https://docs.artela.network/develop/web3js-guide).

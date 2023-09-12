@@ -25,7 +25,7 @@ Connect to the JSON-RPC port service using the following URLs:
 
 **Option 2: Set Up Your Local Private Testnet**
 
-Please refer to [Run a Local Node](https://www.notion.so/Run-Local-Node-b542ce632f844021ba4bcaa7fcc0c651?pvs=21) for instructions.
+Please refer to [Run a Local Node](https://docs.artela.network/develop/start-a-local-node) for instructions.
 
 After start the node, connect to the JSON-RPC port service at:
 

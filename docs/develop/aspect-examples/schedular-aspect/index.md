@@ -2,20 +2,25 @@
 sidebar_position: 2
 ---
 
-# Scheduler Aspect Example: Step-by-Step
+# Scheduler Aspect
 
-The Scheduler Aspect is an example of building an on-chain scheduled transaction trigger. In this example, it involves defining an ERC20 token named `ArtToken`. Using the `Broker` contract, it enables transferring funds to a designated account at regular intervals of 5 blocks.
+The Scheduler Aspect is a practical example of building an on-chain scheduled transaction trigger. In this scenario, we'll create an ERC20 token called `ArtToken` and use a `Broker` contract to schedule fund transfers to a designated account at regular 5-block intervals.
 
-The overall process is as follows:
+Let's break down the process step by step:
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2b4fad70-0617-4d97-a940-4bf4360fe14f/Untitled.png)
+<center>
+<img
+  src={require('./img/1.png').default} 
+  alt="steps"  
+  width="50%"
+/>
+</center>
 
 ### 1. Deploy ERC20 Smart Contract
 
-> **Step1:**  token.sol is xx.
-> 
+**Step1: Create a `token.sol` Contract**   
 
-```solidity
+```tsx
 // SPDX-License-Identifier: GPL-3.0
 
 pragma solidity ^0.8.9;
@@ -30,10 +35,10 @@ contract ArtToken is ERC20,Ownable {
 }
 ```
 
-> **Step2:**  broker.sol is xx.
-> 
+**Step2: Create a `broker.sol` Contract.** 
 
-```solidity
+
+```tsx
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity ^0.8.9;
 
@@ -76,17 +81,17 @@ contract Borker is Ownable {
 }
 ```
 
-> **Step3:**  compile token.sol and broker.sol to get deploy bytecode through asolc.
-> 
+**Step3: Compile `token.sol` and `broker.sol` Using `asolc`:**
+
 
 ```bash
 >  asolc -o ${your target folder path} --via-ir --abi --bin ${your *.sol file path} --overwrite
 ```
 
-> **Step4:**  deploy to Artela testnet.
+> **Step4: Deploy Contracts to Artela Testnet:**
 > 
 
-```solidity
+```tsx
 // Deploy an erc20 contract "token" to define the asset.
 //
 // contract at: schedule_salary/contracts/token.sol
@@ -128,10 +133,10 @@ console.log("== broker_contract ==", brokerAddress)
 console.log("== broker_account ==", brokerDeployer)
 ```
 
-### 2. Writer My Aspect
+### 2. Create Your Aspect
 
-> **Step1:**  use tool to generate template for evm tracer.
-> 
+**Step1:**  Use the @artela/aspect-tool to generate a template for your EVM tracer.
+
 
 ```tsx
 # Install
@@ -143,8 +148,8 @@ Step2:  input your storage layout json file path
 Step3:  input your target lib typescript file path
 ```
 
-> **Step2:**  import step1’s file and libs to impl aspect.
-> 
+**Step2:**  Import the generated file and required libraries to implement your aspect.
+
 
 ```tsx
 import { Opts, PeriodicSchedule, Schedule,ScheduleTx } from "@artela/aspect-libs/scheduler";
@@ -221,8 +226,8 @@ class SalaryPayment implements IAspectTransaction, IAspectBlock {
 export default SalaryPayment;
 ```
 
-### 3. Deploy Aspect
-
+### 3. Deploy Your Aspect
+Deploy your Aspects to Artela:
 ```tsx
 // Deploy the aspect to chain
 //
@@ -273,7 +278,7 @@ await new Promise(r => setTimeout(r, 5000));
 ```
 
 ### 5. Start the Scheduler
-
+Call the contract method to initiate scheduled salary payment transactions:
 ```tsx
 // Call the contract method to start schdule salary pament transation.
 await broker_contract.methods.startSchedule()
@@ -289,38 +294,33 @@ await broker_contract.methods.startSchedule()
 
 ### 6. Complete code and Demonstration
 
+
+For the complete code and demonstration, you can refer to the provided GitHub repository:
 **Complete code:**
 
     https://github.com/artela-network/aspect-example/tree/feat/clean-v2/schedule_salary
 
-> **Step1:**  build smart contract and aspect.
-> 
+To build and run the demonstration:
 
 ```bash
 cd .     
 sh script/build.sh
-```
 
-> **Step2:**  run test.
-> 
-
-```bash
 cd app
-sh run-app.sh
+sh run-normal.sh 
+sh run-app.sh    
 ```
 
----
+### Summary
 
-P.s. **Solidity Smart Contract on Artela**
+In this step-by-step guide, we've explored the Scheduler Aspect, a powerful tool for automating on-chain scheduled transactions. By following these steps, you've learned how to:
 
-Here is a concise tutorial on how to write a smart contract using Remix and deploy it to the Artela test network:
+1. Deploy an ERC20 smart contract, such as `ArtToken`, to represent your digital assets.
+2. Create a `Broker` contract responsible for scheduling and managing transactions.
+3. Develop your custom Aspect, `SalaryPayment`, which triggers scheduled payments and ensures transparency.
+4. Deploy your Aspect to the Artela blockchain network, enabling it to interact with smart contracts.
+5. Bind your Aspect to the `Broker` contract, establishing the necessary connection.
+6. Initiate the scheduler to automate periodic salary payments.
 
-1. Open Remix IDE: Enter the URL https://remix.ethereum.org/ in your browser to open Remix IDE.
-2. Create a new smart contract: Click on the plus icon on the left to create a new smart contract. For example, you can create a new file named "MyContract.sol". In the new file, you can write your smart contract code.
-3. Compile the smart contract: Click on the "Solidity compiler" icon in the left menu, then click the "Compile" button. Remix will compile your smart contract.
-4. Select a test network in Metamask: If you haven't installed the Metamask plugin yet, you need to install it first. Then select a test network, such as the Artela test network, in Metamask.
-5. Deploy the smart contract: Click on the "Deploy & run transactions" icon in the left menu. Select "Injected Web3" in the "Environment" options, which will connect to your Metamask wallet. Then click the "Deploy" button, and Remix will deploy your smart contract.
-6. Confirm the deployment: Click the "Confirm" button in the confirmation window that pops up in Metamask to confirm the deployment.
-7. Check the deployment result: In the "Deploy & run transactions" panel of Remix, you can see the deployed smart contracts. Click on the contract address, and you can view the details of the contract in the Artela blockchain explorer(soon).
 
-These are the basic steps to write and deploy a smart contract using Remix. If you encounter any problems during the operation, you can refer to the official documentation of Remix and Metamask or seek help in the Artela community.
+This Scheduler Aspect example demonstrates the flexibility and extensibility of smart contracts on Artela. You can adapt this approach to various use cases where automated, time-based transactions are required. Whether it's for payroll, recurring payments, or any other time-sensitive operation, the Scheduler Aspect empowers you to build robust, secure, and efficient blockchain applications.
