@@ -8,13 +8,7 @@ The Scheduler Aspect is a practical example of building an on-chain scheduled tr
 
 Let's break down the process step by step:
 
-<center>
-<img
-  src={require('./img/1.png').default} 
-  alt="steps"  
-  width="50%"
-/>
-</center>
+![eighty_p](./img/1.png)
 
 ### 1. Deploy ERC20 Smart Contract
 

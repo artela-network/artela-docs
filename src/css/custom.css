@@ -28,3 +28,34 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+img[alt=fifty_p] { 
+  width: 50%; 
+  display: block;
+  margin: 0 auto;
+}
+
+img[alt=sixty_p] { 
+  width: 60%; 
+  display: block;
+  margin: 0 auto;
+}
+
+
+img[alt=seventy_p] { 
+  width: 70%; 
+  display: block;
+  margin: 0 auto;
+}
+
+img[alt=eighty_p] { 
+  width: 80%; 
+  display: block;
+  margin: 0 auto;
+}
+
+img[alt=ninety_p] { 
+  width: 90%; 
+  display: block;
+  margin: 0 auto;
+}

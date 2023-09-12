@@ -10,13 +10,14 @@ Aspect integrates customized functionality into the blockchain base layer, worki
 
 ## Principle of Aspect
 
-<center>
+<!-- <center>
 <img
   src={require('./img/3.png').default} 
   alt="3"  
   width="80%"
 />
-</center>
+</center> -->
+ ![eighty_p](./img/3.png)
 
 <!-- Developers can utilize Aspect SDK to access base layer API for building Aspects.  -->
 
@@ -31,13 +32,14 @@ Aspect integrates customized functionality into the blockchain base layer, worki
 
 Aspect needs to specify Join Points, which are the positions where Aspects are executed throughout the transaction processing lifecycle. Join Points includes Block Init, Transaction Verification, Pre Execute, Post Execute, Block Finalize and etc.
 
-<center>
+<!-- <center>
 <img
   src={require('./img/4.png').default} 
   alt="4"  
   width="70%"
 />
-</center>
+</center> -->
+ ![seventy_p](./img/4.png)
 
 ### Core Characteristics
 

@@ -10,13 +10,14 @@ In a modular manner, DApp is no longer a monolithic, tightly coupled codebase. P
 
 The principle of Rich dApp:
 
-<center>
+<!-- <center>
 <img
   src={require('./img/3.png').default} 
   alt="3"  
   width="70%"
 />
-</center>
+</center> -->
+![sixty_p](./img/3.png)
 
 ---
 
@@ -40,29 +41,17 @@ The principle of Rich dApp:
 
 1. Utility NFT Mapping
     
-    With Aspect, NFT can be mapped into other utility NFT tokens to fulfill specific scenarios’ needs and become programmable.
+  With Aspect, NFT can be mapped into other utility NFT tokens to fulfill specific scenarios’ needs and become programmable.
 
-    <center>
-    <img
-      src={require('./img/9.png').default} 
-      alt="4"  
-      width="60%"
-    />
-    </center>
+  ![sixty_p](./img/9.png)
 
-    Aspects are implemented to monitor the global states of NFTs and manage the relationship between the master NFTs and utility NFTs. Master NFTs need not be collateralized to generate utility NFTs. The balance between liquidity and utility can be optimized.
+  Aspects are implemented to monitor the global states of NFTs and manage the relationship between the master NFTs and utility NFTs. Master NFTs need not be collateralized to generate utility NFTs. The balance between liquidity and utility can be optimized.
 
-    <center>
-    <img
-      src={require('./img/10.png').default} 
-      alt="4"  
-      width="60%"
-    />
-    </center>
-        
-    Without Aspect, the original NFT token standard must be forked to support structural NFTs like this; Once the structure of certain NFT is finalized, there will be no room for modification unless redeployment.
+  ![sixty_p](./img/10.png)
+      
+  Without Aspect, the original NFT token standard must be forked to support structural NFTs like this; Once the structure of certain NFT is finalized, there will be no room for modification unless redeployment.
 
-    With Aspect, NFTs can remain in their original state, while enabling unprecedented flexibility, programmability, and composability.
+  With Aspect, NFTs can remain in their original state, while enabling unprecedented flexibility, programmability, and composability.
 
 
 2. Efficient Rollup through Aspect
@@ -77,10 +66,12 @@ The principle of Rich dApp:
     - For OP: An “evm-in-wasm” mode can be built to achieve effective single-round non-interactive proof.
     - For ZK: Various pairing curves and hashing algorithms could be implemented in Aspect.
 
-<center>
+<!-- <center>
 <img
   src={require('./img/8.png').default} 
   alt="4"  
   width="60%"
 />
-</center>
+</center> -->
+
+ ![sixty_p](./img/8.png)

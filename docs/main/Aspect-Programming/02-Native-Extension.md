@@ -26,14 +26,7 @@ Native Extension is the optimal solution with the balanced built-in functionalit
 
 ## DApps with Native Extension
 
-
-<center>
-<img
-  src={require('./img/2.png').default} 
-  alt="2"  
-  width="70%"
-/>
-</center>
+![seventy_p](./img/2.png)
 
 <br />
 <br />

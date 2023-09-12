@@ -12,13 +12,14 @@ As more public service Aspects are developed, both developers and ecosystem will
 
 The principle of Public Service:
 
-<center>
+<!-- <center>
 <img
   src={require('./img/5.png').default} 
   alt="5"  
   width="70%"
 />
-</center>
+</center> -->
+ ![seventy_p](./img/5.png)
 
 ---
 
@@ -26,32 +27,34 @@ The principle of Public Service:
 
 1. Enterprise-grade on-chain risk management
     
-    Artela enables Real-time On-chain Risk Control by security Aspect.  Without Aspect, current solutions like auditing are all peripheral off-chain risk management.
-    
-    Enterprise-level risk control logic can be deployed on-chain through security Aspects. When a transaction triggers a risk control policy, Aspects can timely identify and suspend the risky transaction.
-    
-    Security Aspects can be flexibly plugged in/out and combined with dApps.
+  Artela enables Real-time On-chain Risk Control by security Aspect.  Without Aspect, current solutions like auditing are all peripheral off-chain risk management.
+  
+  Enterprise-level risk control logic can be deployed on-chain through security Aspects. When a transaction triggers a risk control policy, Aspects can timely identify and suspend the risky transaction.
+  
+  Security Aspects can be flexibly plugged in/out and combined with dApps.
 
-<center>
+<!-- <center>
 <img
   src={require('./img/11.png').default} 
   alt="11"  
   width="50%"
 />
-</center>
+</center> -->
+ ![fifty_p](./img/11.png)
 
 2. On-chain Automation Middleware Service
 
-    Aspect can be deployed as a middleware to enable the implementation of reliable on-chain automated execution. 
+  Aspect can be deployed as a middleware to enable the implementation of reliable on-chain automated execution. 
 
-    Currently, automated execution can only be realized by off-chain entities with possible trade-offs like composability and trust.
+  Currently, automated execution can only be realized by off-chain entities with possible trade-offs like composability and trust.
 
-    Automation Aspects run as extensions of the base layer to hold native-level composability and can be supported by shared validator sets. It unlocks more possibilities for DeFi, such as JIT LP, transaction performance protection, transaction reversion, dApps extractable value, etc.
-
+  Automation Aspects run as extensions of the base layer to hold native-level composability and can be supported by shared validator sets. It unlocks more possibilities for DeFi, such as JIT LP, transaction performance protection, transaction reversion, dApps extractable value, etc.
+<!-- 
 <center>
 <img
   src={require('./img/12.png').default} 
   alt="12"  
   width="60%"
 />
-</center>
+</center> -->
+![sixty_p](./img/12.png)

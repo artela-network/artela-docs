@@ -62,14 +62,7 @@ npm run asbuild:debug
 
 Join Points are specific positions in the transaction processing lifecycle where an Aspect can be applied. Artela defines a set of Join Points for specifying when and where Aspects should execute during transaction processing. These include:
 
-<center>
-<img
-  src={require('./img/1.png').default} 
-  alt="join-points"  
-  width="50%"
-/>
-</center>
-
+![ninety_p](./img/1.png)
 
 - `onTxReceive`
     
@@ -180,13 +173,8 @@ See “Authentication Management”
     
     Provides entry points for various functionalities along the call chain. Different join points are associated with different functionalities.  Refer to the diagram below for the available functionalities and the corresponding join point scopes.
 
-<center>
-<img
-  src={require('./img/2.png').default} 
-  alt="diagram"  
-  width="50%"
-/>
-</center>
+
+![ninety_p](./img/2.png)
 
 - `currentBlock`
   
@@ -352,13 +340,7 @@ If the transaction rollback is set (success = false), assign the transaction fai
 
 The scheduler works like:
 
-<center>
-<img
-  src={require('./img/3.png').default} 
-  alt="diagram"  
-  width="50%"
-/>
-</center>
+![ninety_p](./img/3.png)
 
 To submit a scheduler in Aspect, for instance, we arrange periodic transaction calls to a on-chain contract method
 
@@ -432,13 +414,7 @@ Two options are available:
 
 **Tracing Progress**
 
-<center>
-<img
-  src={require('./img/4.png').default} 
-  alt="process"  
-  width="50%"
-/>
-</center>
+![ninety_p](./img/4.png)
 
 
 Just as indicated by the blue boxes and blue lines shown above, to trace state changes in your contract, follow these steps:

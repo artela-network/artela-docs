@@ -10,25 +10,9 @@ As the first layer 1 network equipped with Aspects, Artela network aims to **ma
 
 ---
 
-<!-- ## Comparison
-
-<center>
-<img
-  src={require('./img/1.png').default} 
-  alt="2"  
-  width="100%"
-/>
-</center> -->
-
 ## Architecture Overview
 
-<center>
-<img
-  src={require('./img/2.png').default} 
-  alt="2"  
-  width="50%"
-/>
-</center>
+ ![fifty_p](./img/2.png)
 
 - **Base Layer:** Provide basic functions, including consensus engine, networking, EVM environments for the smart contract execution, and WASM environments for the Aspects execution. This layer is launched by Artela.
 
