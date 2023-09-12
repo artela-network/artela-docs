@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkartela_docs=self.webpackChunkartela_docs||[]).push([[6945],{6945:(e,s,a)=>{a.r(s)}}]);

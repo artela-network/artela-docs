@@ -1,58 +1,18 @@
 {
   "docusaurus-plugin-content-docs": {
     "default": {
-      "path": "/",
+      "path": "/docs",
       "versions": [
         {
           "name": "current",
           "label": "Next",
           "isLast": true,
-          "path": "/",
-          "mainDocId": "main",
+          "path": "/docs",
+          "mainDocId": "README",
           "docs": [
             {
-              "id": "Artela-Blockchain/artela-blockchain",
-              "path": "/Artela-Blockchain",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Aspect-Programming/Aspect",
-              "path": "/Aspect-Programming/Aspect",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Aspect-Programming/aspect-programming",
-              "path": "/Aspect-Programming",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Aspect-Programming/Native-Extension",
-              "path": "/Aspect-Programming/Native-Extension",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Build-on-Artela/Lite-DApp",
-              "path": "/Build-on-Artela/Lite-DApp",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Build-on-Artela/Public-Service",
-              "path": "/Build-on-Artela/Public-Service",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Build-on-Artela/Rich-DApp",
-              "path": "/Build-on-Artela/Rich-DApp",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "main",
-              "path": "/main",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Resources/FAQ",
-              "path": "/Resources/FAQ",
+              "id": "README",
+              "path": "/docs/",
               "sidebar": "tutorialSidebar"
             }
           ],
@@ -60,8 +20,186 @@
           "sidebars": {
             "tutorialSidebar": {
               "link": {
-                "path": "/main",
-                "label": "main"
+                "path": "/docs/",
+                "label": "README"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    },
+    "develop": {
+      "path": "/develop",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/develop",
+          "mainDocId": "index",
+          "docs": [
+            {
+              "id": "asolc-guide/index",
+              "path": "/develop/asolc-guide/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "aspect-examples/index",
+              "path": "/develop/aspect-examples/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "aspect-examples/schedular-aspect/index",
+              "path": "/develop/aspect-examples/schedular-aspect/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "aspect-examples/security-aspect/index",
+              "path": "/develop/aspect-examples/security-aspect/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "aspect-tools/aspect-docs/index",
+              "path": "/develop/aspect-tools/aspect-docs/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "aspect-tools/aspect-tools-guide/index",
+              "path": "/develop/aspect-tools/aspect-tools-guide/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "aspect-tools/index",
+              "path": "/develop/aspect-tools/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "index",
+              "path": "/develop/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "quick-start/access-devnet/index",
+              "path": "/develop/quick-start/access-devnet/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "quick-start/develop-a-smart-contract/index",
+              "path": "/develop/quick-start/develop-a-smart-contract/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "quick-start/develop-an-aspect/index",
+              "path": "/develop/quick-start/develop-an-aspect/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "quick-start/index",
+              "path": "/develop/quick-start/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "resources/faucet/index",
+              "path": "/develop/resources/faucet/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "resources/index",
+              "path": "/develop/resources/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "resources/write-smart-contract/index",
+              "path": "/develop/resources/write-smart-contract/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "start-a-local-node/index",
+              "path": "/develop/start-a-local-node/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "web3js-guide/index",
+              "path": "/develop/web3js-guide/",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/develop/",
+                "label": "index"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    },
+    "main": {
+      "path": "/main",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/main",
+          "mainDocId": "index",
+          "docs": [
+            {
+              "id": "Artela-Blockchain/artela-blockchain",
+              "path": "/main/Artela-Blockchain",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Aspect-Programming/Aspect",
+              "path": "/main/Aspect-Programming/Aspect",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Aspect-Programming/aspect-programming",
+              "path": "/main/Aspect-Programming",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Aspect-Programming/Native-Extension",
+              "path": "/main/Aspect-Programming/Native-Extension",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Build-on-Artela/Lite-DApp",
+              "path": "/main/Build-on-Artela/Lite-DApp",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Build-on-Artela/Public-Service",
+              "path": "/main/Build-on-Artela/Public-Service",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Build-on-Artela/Rich-DApp",
+              "path": "/main/Build-on-Artela/Rich-DApp",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "index",
+              "path": "/main/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Resources/FAQ",
+              "path": "/main/Resources/FAQ",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/main/",
+                "label": "index"
               }
             }
           }

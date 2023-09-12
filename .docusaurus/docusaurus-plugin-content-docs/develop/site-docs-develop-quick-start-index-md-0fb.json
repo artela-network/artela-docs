@@ -1,0 +1,24 @@
+{
+  "unversionedId": "quick-start/index",
+  "id": "quick-start/index",
+  "title": "Quick Start",
+  "description": "Welcome to the Artela Quick Start Guide!",
+  "source": "@site/docs/develop/quick-start/index.md",
+  "sourceDirName": "quick-start",
+  "slug": "/quick-start/",
+  "permalink": "/develop/quick-start/",
+  "draft": false,
+  "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/quick-start/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Artela Devnet",
+    "permalink": "/develop/"
+  },
+  "next": {
+    "title": "Access Devnet",
+    "permalink": "/develop/quick-start/access-devnet/"
+  }
+}

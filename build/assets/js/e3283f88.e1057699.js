@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkartela_docs=self.webpackChunkartela_docs||[]).push([[2817],{4469:e=>{e.exports=JSON.parse('{"name":"docusaurus-plugin-content-blog","id":"default"}')}}]);

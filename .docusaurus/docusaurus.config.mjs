@@ -4,15 +4,16 @@
  * Modify the docusaurus.config.js file at your site's root instead.
  */
 export default {
-  "title": "Artela Network",
-  "favicon": "img/favicon.ico",
+  "title": "Artela Docs",
+  "tagline": "Build on Artela",
   "url": "https://artela.network",
   "baseUrl": "/",
-  "organizationName": "Artela",
-  "projectName": "Artela",
-  "onBrokenLinks": "throw",
+  "onBrokenLinks": "warn",
   "onBrokenMarkdownLinks": "warn",
+  "favicon": "img/favicon.ico",
   "trailingSlash": false,
+  "organizationName": "artela",
+  "projectName": "artela-docs",
   "i18n": {
     "defaultLocale": "en",
     "locales": [
@@ -26,34 +27,95 @@ export default {
       "classic",
       {
         "docs": {
+          "path": "docs/home",
           "sidebarPath": "/Users/maqiyuan/Artela/artela-docs/sidebars.js",
-          "routeBasePath": "/",
-          "sidebarCollapsible": false
+          "breadcrumbs": true
         },
+        "blog": false,
         "theme": {
           "customCss": "/Users/maqiyuan/Artela/artela-docs/src/css/custom.css"
         }
       }
     ]
   ],
+  "plugins": [
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        "path": "docs/main",
+        "routeBasePath": "main",
+        "id": "main",
+        "sidebarPath": "/Users/maqiyuan/Artela/artela-docs/sidebars.js",
+        "breadcrumbs": true,
+        "editUrl": "https://github.com/artela-network/artela-docs/tree/main/"
+      }
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        "path": "docs/develop",
+        "routeBasePath": "develop",
+        "id": "develop",
+        "sidebarPath": "/Users/maqiyuan/Artela/artela-docs/sidebars.js",
+        "breadcrumbs": true,
+        "editUrl": "https://github.com/artela-network/artela-docs/tree/main/"
+      }
+    ],
+    [
+      "@docusaurus/plugin-ideal-image",
+      {
+        "quality": 80,
+        "max": 1030,
+        "min": 640,
+        "steps": 2,
+        "disableInDev": false
+      }
+    ],
+    null
+  ],
   "themeConfig": {
     "image": "img/artela.png",
     "navbar": {
       "logo": {
+        "href": "https://artela.network/",
         "alt": "Artela Network",
         "src": "img/artela.png",
         "srcDark": "img/artelaD.png"
       },
       "items": [
         {
-          "type": "doc",
-          "docId": "main",
           "position": "left",
-          "label": "Documentation"
+          "label": "Introduction",
+          "to": "/main"
         },
         {
-          "href": "https://github.com",
-          "label": "GitHub",
+          "position": "left",
+          "label": "Develop",
+          "to": "/develop"
+        },
+        {
+          "position": "right",
+          "label": "Website",
+          "to": "https://artela.network/"
+        },
+        {
+          "position": "right",
+          "label": "Community",
+          "to": "https://t.me/artela_official"
+        },
+        {
+          "position": "right",
+          "label": "Network",
+          "to": "https://artela.network/"
+        },
+        {
+          "position": "right",
+          "label": "Blog",
+          "to": "https://medium.com/@artela_network"
+        },
+        {
+          "href": "https://github.com/artela-network",
+          "className": "pseudo-icon github-icon",
           "position": "right"
         }
       ],
@@ -63,24 +125,20 @@ export default {
       "style": "dark",
       "links": [
         {
-          "title": "Documentation",
+          "title": "Docs",
           "items": [
             {
+              "label": "Build on Artela",
+              "to": "/develop/quick-start"
+            },
+            {
               "label": "Intro to Artela",
-              "href": "https://docs.artela.network/main"
-            },
-            {
-              "label": "Artela Blockchain",
-              "href": "https://docs.artela.network/Artela-Blockchain"
-            },
-            {
-              "label": "Aspect Programming",
-              "href": "https://docs.artela.network/Aspect-Programming"
+              "to": "main"
             }
           ]
         },
         {
-          "title": "Social",
+          "title": "Community",
           "items": [
             {
               "label": "Website",
@@ -91,13 +149,26 @@ export default {
               "href": "https://twitter.com/Artela_Network"
             },
             {
-              "label": "Medium",
-              "href": "https://medium.com/@artela_network"
+              "label": "Telegram",
+              "href": "https://t.me/artela_official"
+            }
+          ]
+        },
+        {
+          "title": "More",
+          "items": [
+            {
+              "label": "Blog",
+              "to": "https://medium.com/@artela_network"
+            },
+            {
+              "label": "Artela GitHub",
+              "href": "https://github.com/artela-network"
             }
           ]
         }
       ],
-      "copyright": "Copyright © 2023 My Project, Inc. Built with Artela Team."
+      "copyright": "Copyright © 2023, Built with ❤️ by Artela."
     },
     "prism": {
       "theme": {
@@ -291,10 +362,7 @@ export default {
           }
         ]
       },
-      "additionalLanguages": [
-        "protobuf",
-        "go-module"
-      ],
+      "additionalLanguages": [],
       "magicComments": [
         {
           "className": "theme-code-block-highlighted-line",
@@ -309,8 +377,8 @@ export default {
     "algolia": {
       "appId": "QLS2QSP47E",
       "apiKey": "4d9feeb481e3cfef8f91bbc63e090042",
-      "indexName": "cosmos_network",
-      "contextualSearch": false,
+      "indexName": "artela_docs",
+      "contextualSearch": true,
       "searchParameters": {},
       "searchPagePath": "search"
     },
@@ -338,13 +406,11 @@ export default {
     "static"
   ],
   "customFields": {},
-  "plugins": [],
   "themes": [],
   "scripts": [],
   "headTags": [],
   "stylesheets": [],
   "clientModules": [],
-  "tagline": "",
   "titleDelimiter": "|",
   "noIndex": false,
   "markdown": {

@@ -1,0 +1,156 @@
+{
+  "pluginId": "main",
+  "version": "current",
+  "label": "Next",
+  "banner": null,
+  "badge": false,
+  "noIndex": false,
+  "className": "docs-version-current",
+  "isLast": true,
+  "docsSidebars": {
+    "tutorialSidebar": [
+      {
+        "type": "link",
+        "label": "Intro to Artela",
+        "href": "/main/",
+        "docId": "index"
+      },
+      {
+        "type": "category",
+        "label": "Artela Blockchain",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Overview",
+            "href": "/main/Artela-Blockchain",
+            "docId": "Artela-Blockchain/artela-blockchain"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Aspect Programming",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Overview",
+            "href": "/main/Aspect-Programming",
+            "docId": "Aspect-Programming/aspect-programming"
+          },
+          {
+            "type": "link",
+            "label": "Native Extension",
+            "href": "/main/Aspect-Programming/Native-Extension",
+            "docId": "Aspect-Programming/Native-Extension"
+          },
+          {
+            "type": "link",
+            "label": "Aspect",
+            "href": "/main/Aspect-Programming/Aspect",
+            "docId": "Aspect-Programming/Aspect"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Build on Artela",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Lite dApp",
+            "href": "/main/Build-on-Artela/Lite-DApp",
+            "docId": "Build-on-Artela/Lite-DApp"
+          },
+          {
+            "type": "link",
+            "label": "Rich dApp",
+            "href": "/main/Build-on-Artela/Rich-DApp",
+            "docId": "Build-on-Artela/Rich-DApp"
+          },
+          {
+            "type": "link",
+            "label": "Public Service",
+            "href": "/main/Build-on-Artela/Public-Service",
+            "docId": "Build-on-Artela/Public-Service"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Resources",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "FAQ",
+            "href": "/main/Resources/FAQ",
+            "docId": "Resources/FAQ"
+          }
+        ]
+      }
+    ]
+  },
+  "docs": {
+    "Artela-Blockchain/artela-blockchain": {
+      "id": "Artela-Blockchain/artela-blockchain",
+      "title": "Overview",
+      "description": "Artela Blockchain is a layer 1 network that empowers developers to add user-defined native extensions and build feature-rich dApps. It offers extensibility that goes beyond EVM-equivalence, inter-domain interoperability, and boundless scalability with its Elastic Block Space design.",
+      "sidebar": "tutorialSidebar"
+    },
+    "Aspect-Programming/Aspect": {
+      "id": "Aspect-Programming/Aspect",
+      "title": "Aspect",
+      "description": "In Artela, we define a new programmable module to work as Native Extension, called Aspect.",
+      "sidebar": "tutorialSidebar"
+    },
+    "Aspect-Programming/aspect-programming": {
+      "id": "Aspect-Programming/aspect-programming",
+      "title": "Overview",
+      "description": "Aspect Programming is a universal programming framework that supports the dynamic creation of native extension modules for blockchain at runtime.",
+      "sidebar": "tutorialSidebar"
+    },
+    "Aspect-Programming/Native-Extension": {
+      "id": "Aspect-Programming/Native-Extension",
+      "title": "Native Extension",
+      "description": "Native Extension serves as a programmable on-chain module for customized functionality. It extends from the base layer and works synergistically with blockchain smart contracts, allowing dApp to be built in a plug-and-play modular manner.",
+      "sidebar": "tutorialSidebar"
+    },
+    "Build-on-Artela/Lite-DApp": {
+      "id": "Build-on-Artela/Lite-DApp",
+      "title": "Lite dApp",
+      "description": "Introduction",
+      "sidebar": "tutorialSidebar"
+    },
+    "Build-on-Artela/Public-Service": {
+      "id": "Build-on-Artela/Public-Service",
+      "title": "Public Service",
+      "description": "Introduction",
+      "sidebar": "tutorialSidebar"
+    },
+    "Build-on-Artela/Rich-DApp": {
+      "id": "Build-on-Artela/Rich-DApp",
+      "title": "Rich dApp",
+      "description": "Introduction",
+      "sidebar": "tutorialSidebar"
+    },
+    "index": {
+      "id": "index",
+      "title": "Intro to Artela",
+      "description": "Artela is an extensible blockchain network enabling developers to build feature-rich dApps.",
+      "sidebar": "tutorialSidebar"
+    },
+    "Resources/FAQ": {
+      "id": "Resources/FAQ",
+      "title": "FAQ",
+      "description": "Q: What distinguishes Artela from the others?",
+      "sidebar": "tutorialSidebar"
+    }
+  }
+}

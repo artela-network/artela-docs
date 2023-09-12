@@ -1,0 +1,24 @@
+{
+  "unversionedId": "aspect-examples/index",
+  "id": "aspect-examples/index",
+  "title": "Aspect Examples",
+  "description": "Step-by-step examples of building Aspects to enhance smart contracts functionalities.",
+  "source": "@site/docs/develop/aspect-examples/index.md",
+  "sourceDirName": "aspect-examples",
+  "slug": "/aspect-examples/",
+  "permalink": "/develop/aspect-examples/",
+  "draft": false,
+  "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/aspect-examples/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Aspect Doc",
+    "permalink": "/develop/aspect-tools/aspect-docs/"
+  },
+  "next": {
+    "title": "Security Aspect",
+    "permalink": "/develop/aspect-examples/security-aspect/"
+  }
+}

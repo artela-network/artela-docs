@@ -1,0 +1,24 @@
+{
+  "unversionedId": "web3js-guide/index",
+  "id": "web3js-guide/index",
+  "title": "Web3.js Guide",
+  "description": "@artela/web3 is an extended version of Ethereum’s web3.js with Aspect operations supported. This package is fully compatible with the original version with some slight modifications. If your dApp is based on the original web3.js , you can simply migrate to Artela by replacing the package and import sentences.",
+  "source": "@site/docs/develop/web3js-guide/index.md",
+  "sourceDirName": "web3js-guide",
+  "slug": "/web3js-guide/",
+  "permalink": "/develop/web3js-guide/",
+  "draft": false,
+  "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/web3js-guide/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "ASOLC Guide",
+    "permalink": "/develop/asolc-guide/"
+  },
+  "next": {
+    "title": "Start a Local Node",
+    "permalink": "/develop/start-a-local-node/"
+  }
+}

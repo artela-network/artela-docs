@@ -1,0 +1,27 @@
+{
+  "unversionedId": "Aspect-Programming/aspect-programming",
+  "id": "Aspect-Programming/aspect-programming",
+  "title": "Overview",
+  "description": "Aspect Programming is a universal programming framework that supports the dynamic creation of native extension modules for blockchain at runtime.",
+  "source": "@site/docs/intro/Aspect-Programming/01-Overview.md",
+  "sourceDirName": "Aspect-Programming",
+  "slug": "/Aspect-Programming",
+  "permalink": "/docs/Aspect-Programming",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "aspect-programming",
+    "slug": "/Aspect-Programming"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/docs/Artela-Blockchain"
+  },
+  "next": {
+    "title": "Native Extension",
+    "permalink": "/docs/Aspect-Programming/Native-Extension"
+  }
+}

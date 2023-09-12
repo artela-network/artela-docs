@@ -1,0 +1,27 @@
+{
+  "unversionedId": "quick-start/develop-an-aspect/index",
+  "id": "quick-start/develop-an-aspect/index",
+  "title": "Develop an Aspect",
+  "description": "Aspect is a dynamic stateful extension that utilizes Web Assembly (WASM). It adds extra functionalities to the lifecycles of blocks or transactions for specific smart contracts. In the following sections, we'll guide you through building a simple Aspect with AssemblyScript(a subset of TypeScript) step by step.",
+  "source": "@site/docs/develop/quick-start/develop-an-aspect/index.md",
+  "sourceDirName": "quick-start/develop-an-aspect",
+  "slug": "/quick-start/develop-an-aspect/",
+  "permalink": "/develop/quick-start/develop-an-aspect/",
+  "draft": false,
+  "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/quick-start/develop-an-aspect/index.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Develop a Smart Contract",
+    "permalink": "/develop/quick-start/develop-a-smart-contract/"
+  },
+  "next": {
+    "title": "ASOLC Guide",
+    "permalink": "/develop/asolc-guide/"
+  }
+}

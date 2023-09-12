@@ -1,0 +1,25 @@
+{
+  "unversionedId": "Aspect-Programming/Aspect",
+  "id": "Aspect-Programming/Aspect",
+  "title": "Aspect",
+  "description": "In Artela, we define a new programmable module to work as Native Extension, called Aspect.",
+  "source": "@site/docs/intro/Aspect-Programming/03-Aspect.md",
+  "sourceDirName": "Aspect-Programming",
+  "slug": "/Aspect-Programming/Aspect",
+  "permalink": "/intro/Aspect-Programming/Aspect",
+  "draft": false,
+  "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/intro/Aspect-Programming/03-Aspect.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Native Extension",
+    "permalink": "/intro/Aspect-Programming/Native-Extension"
+  },
+  "next": {
+    "title": "Lite dApp",
+    "permalink": "/intro/Build-on-Artela/Lite-DApp"
+  }
+}
