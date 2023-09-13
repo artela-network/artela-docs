@@ -129,7 +129,7 @@ const config = {
         {
           position: 'right',
           label: 'Network',
-          to: 'https://developer.artela.network/',
+          to: 'https://developers.artela.network/',
         },
         {
           position: 'right',
