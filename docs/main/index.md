@@ -18,7 +18,11 @@ Artela Blockchain is a layer 1 network that empowers developers to add user-defi
 **[Learn More](https://docs.artela.network/Artela-Blockchain)**
 
 ### Aspect Programming
-    
+
+:::tip
+[Whitepaper Available](https://github.com/artela-network/aspect-whitepaper/blob/main/latex/build/whitepaper.pdf)
+:::
+
 Aspect Programming is a universal programming framework that supports the dynamic creation of native extension modules for blockchain at runtime. It offers a universal stack for all chains to build extension modules to enhance dApp functionality, providing a versatile framework for expanding functionality.
 
 **[Learn More](https://docs.artela.network/Aspect-Programming)**

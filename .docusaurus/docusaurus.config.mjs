@@ -106,7 +106,7 @@ export default {
         {
           "position": "right",
           "label": "Network",
-          "to": "https://artela.network/"
+          "to": "https://developer.artela.network/"
         },
         {
           "position": "right",
