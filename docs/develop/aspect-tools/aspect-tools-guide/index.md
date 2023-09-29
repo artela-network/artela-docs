@@ -145,13 +145,11 @@ For example, let’s add some logic before the smart contract execution. Open th
 
 //...
 
-postTxExecute(ctx: PostTxExecuteCtx): AspectOutput {
+    postTxExecute(ctx: PostTxExecuteCtx): void {
+    // Write your logic
 
-      // Write your logic
+    }
 
-			// return a successful result and let tx continue to execution
-      return new AspectOutput(true);
-  }
 //...
 ```
 :::note
@@ -172,28 +170,24 @@ This command generates a file named `counter-storage.ts` in your `assembly/aspec
 Now, we can use this file in our Aspect. Here's how to access and check the state of the `Counter` contract within your Aspect:
 
 ```tsx
-// Import the state tracer generated with aspect:gen
-import { CounterState } from './counter-storage'; 
+    // Import the state tracer generated with aspect:gen
+    import { CounterState } from './counter-storage'; 
 
-//...
-
-postTxExecute(ctx: PostTxExecuteCtx): AspectOutput {
-        // Retrieve the state change of count after transaction execution finished.
+    //...
+    preContractCall(ctx: PreContractCallCtx): void {
         // Instantiate a state tracer for the 'counter' variable on the transaction callee.
-        const counter = new CounterState.counter(ctx, ctx.tx!.to);
-
+        const counter = new CounterState.counter(ctx.trace, ctx.tx.content.to);
+    
         // Retrieve the latest value of the 'counter' variable.
         const lastCount = counter.current();
-
+    
         // Check whether the latest value of the 'counter' is an even number.
         // If it's not, notify the Aspect runtime with a false result and an error message.
-        if (lastCount != null && lastCount.value.modInt(2) != 0) {
-            return new AspectOutput(false, "count is not even number!");
+        if (lastCount != null && lastCount.modInt(2) != 0) {
+            vm.revert("count is not even number!");
         }
-
-        // Otherwise, the check passes, return a true result to allow the transaction to continue.
-        return new AspectOutput(true);
     }
+   
 ```
 
 :::note

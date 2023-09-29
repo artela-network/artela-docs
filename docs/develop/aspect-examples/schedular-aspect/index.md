@@ -146,78 +146,93 @@ Step3:  input your target lib typescript file path
 
 
 ```tsx
-import { Opts, PeriodicSchedule, Schedule,ScheduleTx } from "@artela/aspect-libs/scheduler";
-import { IAspectBlock, IAspectTransaction } from "@artela/aspect-libs/types";
-import { AspectOutput  } from "@artela/aspect-libs/proto";
-
-import { ArtToken } from "./token_storage"
-import { ethereum } from "@artela/aspect-libs/abi";
-import { debug } from "@artela/aspect-libs/host";
 import {
-    ScheduleCtx,
-    StateCtx,
-    ...
-} from "@artela/aspect-libs/entry";
+    FilterTxCtx,
+    IAspectBlock,
+    IAspectTransaction,
+    OnBlockFinalizeCtx,
+    OnBlockInitializeCtx,
+    PostContractCallCtx,
+    PostTxCommitCtx,
+    PostTxExecuteCtx,
+    PreContractCallCtx,
+    PreTxExecuteCtx,
+    ethereum,
+    EthTransaction,
+    ScheduleTx, sys, ScheduleOpts
+} from "@artela/aspect-libs";
 
 class SalaryPayment implements IAspectTransaction, IAspectBlock {
-	  ...
-    onBlockInitialize(ctx: OnBlockInitializeCtx): AspectOutput {
-        // schedule a salary payment
-        this.scheduleTx(ctx, ctx.getProperty("ScheduleTo"), ctx.getProperty("Broker"), ctx.getProperty("TargetAddr"));
-        return new AspectOutput(true);
+
+    filterTx(ctx: FilterTxCtx): bool {
+        return false;
     }
-    ...
-    postTxExecute(ctx: PostTxExecuteCtx): AspectOutput {
-        let ret = new AspectOutput();
-        if (ctx.tx != null) {
-            // to retrieve the properties of an aspect, pass the key associated with the aspect,
-            // which is deployed together with it.
-            let schedule = ctx.getProperty("ScheduleTo");
 
-            // convert to an address
-            let scheduleAddr = ethereum.Address.fromHexString(schedule);
-
-            // call traced balance changes, print the diff
-            let num1 = new ArtToken._balances(ctx, ctx.tx!.to);
-            let num1_latest = num1.diff(scheduleAddr);
-            if (num1_latest) {
-                debug.log("scheduleAddr balance " + num1_latest.toString(10))
-            }
-        }
-        ret.success = true;
-        return ret;
+    isOwner(sender: string): bool {
+        let value = sys.aspectProperty().get<string>("owner");
+        return !!value.includes(sender);
     }
-		...
-    private scheduleTx(ctx: ScheduleCtx, scheduleTo: string, broker: string, target: string): bool {
-        // prepare the transfer parameters, and encode them to abi input.
-        let addr = ethereum.Address.fromHexString(target);
-        let num = ethereum.Number.fromU64(100);
-        let payload = ethereum.abiEncode('transfer', [addr, num]);
 
-        debug.log(payload);
+    onBlockFinalize(ctx: OnBlockFinalizeCtx): void {
+    }
 
-        // the scheduled transaction with params.
-        let tx = new ScheduleTx(scheduleTo).New(
-            payload,
-            new Opts(0, "200000000", "30000", broker))
-
+    onBlockInitialize(ctx: OnBlockInitializeCtx): void {
         // params:
         // startAfter(3): the scheduled transaction will be trigger at the 3rd block after this method is called.
         // count(1000): total count of schedulex transaction is 1000.
         // everyNBlocks(5): execution at every 5th block since started.
         // maxRetry(2): Transaction confirmation on the blockchain is not guaranteed but rather determined by the gas fee.
         // If a transaction fails to be confirmed on the blockchain, it can be retried up to a maximum of two times.
-        var periodicSch: Schedule = PeriodicSchedule
-            .new(ctx, "myPeriodicSchedule")
+        const periodicSch = ctx.schedule.periodic("myPeriodic001")
             .startAfter(3)
-            .count(1000)
+            .execCount(1000)
             .everyNBlocks(5)
             .maxRetry(2);
-        return periodicSch.submit(tx);
+        const tx = this.scheduleTx(
+            sys.aspectProperty().get<string>("ScheduleTo"),
+            sys.aspectProperty().get<string>("Broker"),
+            sys.aspectProperty().get<string>("TargetAddr"));
+        periodicSch.submit(tx);
+
     }
+
+    onContractBinding(contractAddr: string): bool {
+        let value = sys.aspectProperty().get<string>("binding");
+        return !!value.includes(contractAddr);
+    }
+
+    postContractCall(ctx: PostContractCallCtx): void {
+    }
+
+    postTxCommit(ctx: PostTxCommitCtx): void {
+    }
+
+    postTxExecute(ctx: PostTxExecuteCtx): void {
+    }
+
+    preContractCall(ctx: PreContractCallCtx): void {
+    }
+
+    preTxExecute(ctx: PreTxExecuteCtx): void {
+    }
+
+    private scheduleTx(scheduleTo: string, broker: string, target: string): EthTransaction {
+        // prepare the transfer parameters, and encode them to abi input.
+        let paramAddr = ethereum.Address.fromHexString(target);
+        let paramNum = ethereum.Number.fromU64(100);
+        let payload = ethereum.abiEncode('transfer', [paramAddr, paramNum]);
+
+        // the scheduled transaction with params.
+        return new ScheduleTx(scheduleTo).New(
+            payload,
+            new ScheduleOpts(0, "200000000", "30000", broker))
+
+    }
+
 }
 
 export default SalaryPayment;
+
 ```
 
 ### 3. Deploy Your Aspect

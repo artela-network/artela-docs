@@ -37,13 +37,8 @@ Open the file `assembly/aspect/aspect.ts`, find the `postTxExecute` function, an
 
 ```tsx
 //...
-
-postTxExecute(ctx: PostTxExecuteCtx): AspectOutput {
-		// save "greet":"hello, world" to state
-    ctx.setContext("greet", "hello, world");
-    
-    // Return true: do not block the transaction
-    return new AspectOutput(true);
+postTxExecute(ctx: PostTxExecuteCtx): void {
+    // to do something
 }
 ```
 

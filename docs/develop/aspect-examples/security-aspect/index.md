@@ -160,46 +160,65 @@ Import the generated TypeScript file and necessary libraries to implement your s
 
 ```tsx
 // The entry file of your WebAssembly module.
-import { AspectOutput } from "@artela/aspect-libs";
-import { IAspectBlock, IAspectTransaction } from "@artela/aspect-libs";
-import { debug } from "@artela/aspect-libs";
+// The entry file of your WebAssembly module.
 
-import { HoneyPotState } from "./honeypotstate"
 import {
-    StateCtx,
-    OnTxReceiveCtx,
-    ...
+    BigInt,
+    FilterTxCtx,
+    IAspectBlock,
+    IAspectTransaction,
+    OnBlockFinalizeCtx,
+    OnBlockInitializeCtx,
+    PostContractCallCtx,
+    PostTxCommitCtx,
+    PostTxExecuteCtx,
+    PreContractCallCtx,
+    PreTxExecuteCtx, sys,
+    vm,
 } from "@artela/aspect-libs";
-import { ethereum } from "@artela/aspect-libs";
-import { BigInt } from "@artela/aspect-libs/message";
+import {HoneyPotState} from "./honeypot_storage";
 
-class GuardByTraceAspect implements IAspectTransaction, IAspectBlock {
-    ...
+class GuardByCountAspect implements IAspectTransaction, IAspectBlock {
 
-    postContractCall(ctx: PostContractCallCtx): AspectOutput {
-        // 1.Calculate the eth balance change of DeFi SmartContract(HoneyPot) before and after tx.
-        let sysBalance = new HoneyPotState.SysBalance(ctx, ctx.currInnerTx!.to);
-        var deltaSys = sysBalance.current()?.value.sub(sysBalance.original()?.value);
 
-        // 2.Calculate the financial change of withdrawer in DeFi SmartContract(HoneyPot) before and after tx.
-        let contractState = new HoneyPotState.balances(ctx, ctx.currInnerTx!.to);
-        let withdrawer = ethereum.Address.fromHexString(ctx.currInnerTx!.from);
-        var deltaUser = 0;
-        if (contractState.isExist(withdrawer)) {
-            deltaUser = contractState.current(withdrawer)?.value.sub(contractState.original(withdrawer)?.value);
-        }
-
-        // 3.Verify if the above two values are equal.
-        if(deltaSys.compareTo(deltaUser) == 0){
-            return new AspectOutput(true);
-        }
-        return new AspectOutput(false, "risky transaction");
+    isOwner(sender: string): bool {
+        let value = sys.aspectProperty().get<string>("owner");
+        return !!value.includes(sender);
     }
 
-    ...
+    onContractBinding(contractAddr: string): bool {
+        let value = sys.aspectProperty().get<string>("binding");
+        return !!value.includes(contractAddr);
+    }
+    filterTx(ctx: FilterTxCtx): bool {
+        return true;
+    }
+    postContractCall(ctx: PostContractCallCtx): void {
+        // 1.Calculate the eth balance change of DeFi SmartContract(HoneyPot) before and after tx.
+        let sysBalance = new HoneyPotState._balance_(ctx.trace, ctx.currentCall.to);
+        let deltaSys = sysBalance.current()!.sub(sysBalance.original());
+
+
+        // 2.Calculate the financial change of withdrawer in DeFi SmartContract(HoneyPot) before and after tx.
+        let contractState = new HoneyPotState.balances(ctx.trace, ctx.currentCall.to);
+
+        let deltaUser = BigInt.ZERO;
+        let fromState = contractState.get(ctx.currentCall.from)
+        let current = fromState.current()
+        let original = fromState.original();
+        if (current && original) {
+            deltaUser = current.sub(original)
+        }
+        // 3.Verify if the above two values are equal.
+        if (deltaSys.compareTo(deltaUser) != 0) {
+            vm.revert("risky transaction")
+        }
+    }
+
+ ....
 }
 
-export default GuardByTraceAspect;
+export default GuardByCountAspect;
 ```
 
 ### 3. Deploy Aspect

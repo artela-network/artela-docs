@@ -71,19 +71,7 @@ Join Points are specific positions in the transaction processing lifecycle where
 - `onBlockInitialize`
     
     Occurs at the beginning of a new block, allowing for initialization tasks and state setup for the block.
-    
-- `onTxVerify`
-    
-    Occurs during transaction verification, enabling transaction data interception and modification, performing additional validation checks, or enforcing specific rules.
-    
-- `onAccountVerify`
-    
-   Occurs during account verification.
-    
-- `onGasPayment`
-    
-    Not supported at the moment.
-    
+
 - `preTxExecute`
     
     Occurs before transaction execution. 
@@ -100,7 +88,7 @@ Join Points are specific positions in the transaction processing lifecycle where
     
     Occurs after transaction execution, allowing querying of post-transaction data to  trigger an inherent transaction or revert the current transaction.
     
-- `onTxCommit`
+- `postTxCommit`
   
     Occurs after the successful execution and commitment of a transaction.
     
@@ -111,49 +99,37 @@ Join Points are specific positions in the transaction processing lifecycle where
 Here's an overview of what each of these functions, it defines how to customize the behavior of your Aspects at specific join points within the transaction processing lifecycle on Artela.
 
 ```tsx
-onTxReceive(ctx: OnTxReceiveCtx): AspectOutput {
 
+export interface AspectBase {
+  isOwner(sender: string): bool;
 }
 
-onBlockInitialize(ctx: OnBlockInitializeCtx): AspectOutput {
+export interface IAspectBlock extends AspectBase {
+  onBlockInitialize(ctx: OnBlockInitializeCtx): void;
 
+  onBlockFinalize(ctx: OnBlockFinalizeCtx): void;
 }
 
-onTxVerify(ctx: OnTxVerifyCtx): AspectOutput {
+export interface IAspectTransaction extends AspectBase {
+  onContractBinding(contractAddr: string): bool;
 
+  filterTx(ctx: FilterTxCtx): bool;
+
+  preTxExecute(ctx: PreTxExecuteCtx): void;
+
+  preContractCall(ctx: PreContractCallCtx): void;
+
+  postContractCall(ctx: PostContractCallCtx): void;
+
+  postTxExecute(ctx: PostTxExecuteCtx): void;
+
+  postTxCommit(ctx: PostTxCommitCtx): void;
 }
 
-onAccountVerify(ctx: OnAccountVerifyCtx): AspectOutput {
-
+export interface IAspectOperation {
+  operation(ctx: OperationCtx, data: Uint8Array): Uint8Array;
 }
 
-onGasPayment(ctx: OnGasPaymentCtx): AspectOutput {
-
-}
-
-preTxExecute(ctx: PreTxExecuteCtx): AspectOutput {
-
-}
-
-preContractCall(ctx: PreContractCallCtx): AspectOutput {
-
-}
-
-postContractCall(ctx: PostContractCallCtx): AspectOutput {
-
-}
-
-postTxExecute(ctx: PostTxExecuteCtx): AspectOutput {
-
-}
-
-onTxCommit(ctx: OnTxCommitCtx): AspectOutput {
-
-}
-
-onBlockFinalize(ctx: OnBlockFinalizeCtx): AspectOutput {
-
-}
 ```
 
 Additionally, two methods, `isOwner` and `onContractBinding`, control **aspect upgrades** and **contract bindings**.
