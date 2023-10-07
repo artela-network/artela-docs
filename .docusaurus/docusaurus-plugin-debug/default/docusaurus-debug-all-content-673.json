@@ -13,9 +13,9 @@
           "tagsPath": "/docs/tags",
           "isLast": true,
           "routePriority": -1,
-          "sidebarFilePath": "/Users/maqiyuan/Artela/artela-docs/sidebars.js",
-          "contentPath": "/Users/maqiyuan/Artela/artela-docs/docs/home",
-          "contentPathLocalized": "/Users/maqiyuan/Artela/artela-docs/i18n/en/docusaurus-plugin-content-docs/current",
+          "sidebarFilePath": "/Users/admin/mytech/go-work/src/github.com/artela-network/artela-docs/sidebars.js",
+          "contentPath": "/Users/admin/mytech/go-work/src/github.com/artela-network/artela-docs/docs/home",
+          "contentPathLocalized": "/Users/admin/mytech/go-work/src/github.com/artela-network/artela-docs/i18n/en/docusaurus-plugin-content-docs/current",
           "docs": [
             {
               "unversionedId": "README",
@@ -60,9 +60,9 @@
           "editUrlLocalized": "https://github.com/artela-network/artela-docs/tree/main/i18n/en/docusaurus-plugin-content-docs-main/current",
           "isLast": true,
           "routePriority": -1,
-          "sidebarFilePath": "/Users/maqiyuan/Artela/artela-docs/sidebars.js",
-          "contentPath": "/Users/maqiyuan/Artela/artela-docs/docs/main",
-          "contentPathLocalized": "/Users/maqiyuan/Artela/artela-docs/i18n/en/docusaurus-plugin-content-docs-main/current",
+          "sidebarFilePath": "/Users/admin/mytech/go-work/src/github.com/artela-network/artela-docs/sidebars.js",
+          "contentPath": "/Users/admin/mytech/go-work/src/github.com/artela-network/artela-docs/docs/main",
+          "contentPathLocalized": "/Users/admin/mytech/go-work/src/github.com/artela-network/artela-docs/i18n/en/docusaurus-plugin-content-docs-main/current",
           "docs": [
             {
               "unversionedId": "Artela-Blockchain/artela-blockchain",
@@ -381,9 +381,9 @@
           "editUrlLocalized": "https://github.com/artela-network/artela-docs/tree/main/i18n/en/docusaurus-plugin-content-docs-develop/current",
           "isLast": true,
           "routePriority": -1,
-          "sidebarFilePath": "/Users/maqiyuan/Artela/artela-docs/sidebars.js",
-          "contentPath": "/Users/maqiyuan/Artela/artela-docs/docs/develop",
-          "contentPathLocalized": "/Users/maqiyuan/Artela/artela-docs/i18n/en/docusaurus-plugin-content-docs-develop/current",
+          "sidebarFilePath": "/Users/admin/mytech/go-work/src/github.com/artela-network/artela-docs/sidebars.js",
+          "contentPath": "/Users/admin/mytech/go-work/src/github.com/artela-network/artela-docs/docs/develop",
+          "contentPathLocalized": "/Users/admin/mytech/go-work/src/github.com/artela-network/artela-docs/i18n/en/docusaurus-plugin-content-docs-develop/current",
           "docs": [
             {
               "unversionedId": "asolc-guide/index",

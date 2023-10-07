@@ -4,47 +4,47 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 export default [
   {
     path: '/__docusaurus/debug',
-    component: ComponentCreator('/__docusaurus/debug', '4c8'),
+    component: ComponentCreator('/__docusaurus/debug', '6df'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/config',
-    component: ComponentCreator('/__docusaurus/debug/config', 'b8d'),
+    component: ComponentCreator('/__docusaurus/debug/config', 'e21'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/content',
-    component: ComponentCreator('/__docusaurus/debug/content', '6b5'),
+    component: ComponentCreator('/__docusaurus/debug/content', '7f9'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/globalData',
-    component: ComponentCreator('/__docusaurus/debug/globalData', 'ed4'),
+    component: ComponentCreator('/__docusaurus/debug/globalData', '567'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/metadata',
-    component: ComponentCreator('/__docusaurus/debug/metadata', '479'),
+    component: ComponentCreator('/__docusaurus/debug/metadata', '538'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/registry',
-    component: ComponentCreator('/__docusaurus/debug/registry', 'c08'),
+    component: ComponentCreator('/__docusaurus/debug/registry', '981'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/routes',
-    component: ComponentCreator('/__docusaurus/debug/routes', '0bb'),
+    component: ComponentCreator('/__docusaurus/debug/routes', '87f'),
     exact: true
   },
   {
     path: '/search',
-    component: ComponentCreator('/search', 'd64'),
+    component: ComponentCreator('/search', 'e9d'),
     exact: true
   },
   {
     path: '/develop',
-    component: ComponentCreator('/develop', '7c2'),
+    component: ComponentCreator('/develop', '9ff'),
     routes: [
       {
         path: '/develop',
@@ -152,7 +152,7 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs', 'be8'),
+    component: ComponentCreator('/docs', '90b'),
     routes: [
       {
         path: '/docs',
@@ -164,7 +164,7 @@ export default [
   },
   {
     path: '/main',
-    component: ComponentCreator('/main', 'e48'),
+    component: ComponentCreator('/main', 'df5'),
     routes: [
       {
         path: '/main',
@@ -224,7 +224,7 @@ export default [
   },
   {
     path: '/',
-    component: ComponentCreator('/', '871'),
+    component: ComponentCreator('/', '3f0'),
     exact: true
   },
   {

@@ -30,7 +30,7 @@
     "docusaurus-plugin-ideal-image": {
       "type": "package",
       "name": "@docusaurus/plugin-ideal-image",
-      "version": "2.4.1"
+      "version": "2.4.3"
     },
     "docusaurus-tailwindcss": {
       "type": "local"

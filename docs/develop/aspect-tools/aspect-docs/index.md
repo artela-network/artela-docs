@@ -64,9 +64,9 @@ Join Points are specific positions in the transaction processing lifecycle where
 
 ![ninety_p](./img/1.png)
 
-- `onTxReceive`
+- `filterTx`
     
-    Occurs when receiving transaction data from a broadcast.
+    Occurs when receiving transaction data from a broadcast.if return false then drop Tx in memPool .
     
 - `onBlockInitialize`
     
@@ -139,6 +139,15 @@ Additionally, two methods, `isOwner` and `onContractBinding`, control **aspect u
 
 See “Authentication Management”
 
+### Host api
+#### Low level call
+##### RuntimeContext
+
+
+##### Scheduler
+
+StateContext
+
 ### Input & Output
 
 #### Input Context(ctx)
@@ -151,6 +160,7 @@ See “Authentication Management”
 
 
 ![ninety_p](./img/2.png)
+
 
 - `currentBlock`
   
