@@ -2,100 +2,103 @@
 sidebar_position: 2
 ---
 
+# Developing Smart Contracts with Artela
 
+Artela's EVM supports smart contracts much like Ethereum. However, it not only maintains full compatibility with original version of Solidity but also introduces some enhancements, including `state` and `call stack` tracing.
 
-# Develop a Smart Contract
+If you're unfamiliar with Solidity, delve into the official [Solidity documentation](https://docs.soliditylang.org/en/v0.8.21/). This guide will spotlight crafting smart contracts leveraging Artela's advanced features.
 
-Similar to Ethereum, EVM smart contract is also supported by Artela. Artela's EVM is fully compatible with legacy Solidity but offers additional features like `state` and `call stack` tracing.
+### 1. Installing Artela SOLC (Optional)
 
-If you're new to Solidity, we recommend exploring the official [Solidity documentation](https://docs.soliditylang.org/en/v0.8.20/) to grasp its fundamental concepts. In the following sections, we'll focus on how to build a smart contract with these enhanced features enabled.
+:::note
+Opt for ASOLC when you need Aspect for analyzing runtime state changes in your smart contract. Otherwise, the you can still use standard version of SOLC.
+:::
 
-### 1. Download Artela SOLC
+Artela's SOLC variant activates these features, compiling smart contracts with tailored instruction instrumentation. Checkout the releases [here](https://github.com/artela-network/solidity/releases/tag/v0.8.20-atl) and pick the one suitable for your system (for Mac OS with Arm chip, choose `macos_arm64.tar.gz`).
 
-Artela uses an enhanced version of SOLC to enable these features by compiling smart contracts with instruction instrumentation. You can find the releases [here](https://github.com/artela-network/solidity/releases/tag/v0.8.20-atl) and choose the version that matches your system (e.g., for Mac OS, download `macos.tar.gz`).
+Once downloaded, unpack the files and relocate the `asolc` executable to an accessible directory, say `/users/{your-account}/.bin/`.
 
-After downloading the compiler, extract the files and place the extracted `asolc` file in a directory for easy access (e.g., `/users/{your-account}/.bin/`).
-
-On Unix or Unix-like systems, you can decompress the package with the following command:
+On Unix-like systems, the package can be decompressed using:
 
 ```shell
 tar -zxvf ./macos.tar.gz
 ```
 
-After decompression, grant execution permission to the downloaded executable using this command:
+Next, authorize the downloaded executable:
+
 ```shell
 chmod +x asolc
 ```
 
-To make it more convenient to use `asolc` globally, you can add it to your `PATH` variable with this command:
+To effortlessly use `asolc` globally, extend your `PATH`:
+
 ```shell
+mkdir -p /users/{your-account}/.bin
+mv ./asolc /users/{your-account}/.bin
 export PATH=/users/{your-account}/.bin:$PATH
 ```
 
 :::tip
-Consider adding the above line to your profile, otherwise it will be gone after the session is closed.
+Embed the above command into your profile for persistence, or it'll reset after the session concludes.
 :::
 
-Then you will be able to call `asolc` globally, you can verify the global availability of asolc by running:
+You can then globally invoke `asolc`. To check its global accessibility, execute:
+
 ```shell
 asolc --version
 ```
 
+### 2. Crafting a Smart Contract
 
-### 2. Write a Smart Contract
+Within your project's `contracts` directory, forge a `Counter.sol` file and script the following smart contract:
 
-In your project's `contracts` directory, create a file named `Counter.sol` and implement a simple smart contract as shown below:
 ```tsx
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >=0.8.2 <0.9.0;
 
 contract Counter {
     uint256 private counter;
+    address private owner;
 
-        // The aspect specification should allow overriding the isOwner method.
+    constructor() {
+        this.owner = msg.sender;
+    }
+    
+    // 'isOwner' is pivotal for aspect binding; its absence will obstruct binding.
+    // The address instigating the binding must own the smart contract.
     function isOwner(address user) external view returns (bool result) {
-        return true;
+        return user == this.owner;
     }
 
     function count(uint256 number) public {
-        counter = counter + number;
+        counter += number;
     }
 }
 ```
-This smart contract contains a simple `count` function that takes a number and adds it to an on-chain state variable called `counter`. We'll use this smart contract in conjunction with our Aspect.
+This smart contract implemented a basic `count` method, which aggregates a specified number to an on-chain `counter` state variable. This contract will work together with our Aspect.
 
 :::note
-Binding an aspect requires the `isOwner` permission.
+The `isOwner` privilege is mandatory for aspect binding.
 :::
 
-### 3. Compile Your Smart Contract with Artela SOLC
+### 3. Artela SOLC Compilation
 
-Compile your smart contract using Artela SOLC with the following command:
+To compile your smart contract via Artela SOLC, use:
+
 ```shell
 asolc --bin --abi --via-ir {your contract} -o {your output directory}
 ```
 
-If the compilation is successful, you'll find `{your contract name}.abi` and `{your contract name}.bin` in `{your output directory}`.
+A successful compilation will yield `{your contract name}.abi` and `{your contract name}.bin` in `{your output directory}`.
 
-Please note that the `--via-ir` flag is required to enable state tracing.
-
-
-> 💡 More To Know
-> 
-> Compiling a smart contract with Artela SOLC generates bytecode with a larger size (due to the extra instructions instrumented into the bytecode). 
-> 
-> This larger bytecode may not be compatible with legacy EVM versions, you may encounter execution failure if you directly execute the byte code in tools like Genache or Ethereum Remix. 
-> 
-> If you don't need these enhanced features, you can still use the legacy version of SOLC (or remove the `--via-ir` flag during compilation) to generate smaller and EVM-compatible bytecode.
->
-
-
-### 4. Deploy your smart contract
-
-Deploy smart contract using `@artela/web3.js` refers to here.
+Take note: The `--via-ir` flag is essential for state tracing.
 
 :::note
-It is important to retain the contract address after successfully deploying the contract.
+Artela SOLC's compiled smart contract culminates in a slightly bulkier bytecode due to the added instruction sets.
+This augmented bytecode might clash with original versions of EVM. Direct bytecode execution in platforms like Genache or Ethereum Remix might lead to issues.
+For those not seeking these advanced tools, the standard SOLC remains an alternative. You can also omit the `--via-ir` flag during the compilation for more compact and EVM-friendly bytecode.
 :::
 
+### 4. Deploying Your Smart Contract
 
+For deploying the smart contract using `@artela/web3.js` (a modified version of `web3.js`, provides an extra set of methods for Aspect related operations), follow the provided guidelines [here](../../../develop/web3js-guide).

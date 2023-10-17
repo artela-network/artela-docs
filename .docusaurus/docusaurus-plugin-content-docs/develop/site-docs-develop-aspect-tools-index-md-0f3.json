@@ -1,8 +1,8 @@
 {
   "unversionedId": "aspect-tools/index",
   "id": "aspect-tools/index",
-  "title": "Aspect Tools",
-  "description": "Artela has developed a command-line tool aspect-tool to streamline the development of Aspects and smart contracts.",
+  "title": "Aspect Tool",
+  "description": "Welcome to the Aspect Tool Guide. This guide will walk you through the process of installing, initializing, and using the aspect-tool for your projects.",
   "source": "@site/docs/develop/aspect-tools/index.md",
   "sourceDirName": "aspect-tools",
   "slug": "/aspect-tools/",

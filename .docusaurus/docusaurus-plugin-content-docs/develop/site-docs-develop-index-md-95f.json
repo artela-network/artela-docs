@@ -1,8 +1,8 @@
 {
   "unversionedId": "index",
   "id": "index",
-  "title": "Artela Devnet",
-  "description": "Welcome to Artela Devnet playground!",
+  "title": "Welcome to Artela Testnet",
+  "description": "Dive into the Artela Testnet playground – your entrypoint to build dApps on Artela Testnet. This guide offers insights on accessing the Artela Testnet, crafting an Aspect, and seamlessly deploying and binding it to a smart contract.",
   "source": "@site/docs/develop/index.md",
   "sourceDirName": ".",
   "slug": "/",

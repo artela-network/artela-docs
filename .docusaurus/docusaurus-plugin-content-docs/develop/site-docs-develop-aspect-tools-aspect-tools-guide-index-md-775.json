@@ -2,7 +2,7 @@
   "unversionedId": "aspect-tools/aspect-tools-guide/index",
   "id": "aspect-tools/aspect-tools-guide/index",
   "title": "Aspect Tools Guide",
-  "description": "To get started, install aspect-tool with this command:",
+  "description": "Welcome to the Aspect Tools Guide. This guide will walk you through the process of installing, initializing, and using the aspect-tool for your projects.",
   "source": "@site/docs/develop/aspect-tools/aspect-tools-guide/index.md",
   "sourceDirName": "aspect-tools/aspect-tools-guide",
   "slug": "/aspect-tools/aspect-tools-guide/",
@@ -11,17 +11,14 @@
   "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/aspect-tools/aspect-tools-guide/index.md",
   "tags": [],
   "version": "current",
-  "sidebarPosition": 2,
-  "frontMatter": {
-    "sidebar_position": 2
-  },
+  "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Aspect Tools",
+    "title": "Aspect Tool",
     "permalink": "/develop/aspect-tools/"
   },
   "next": {
-    "title": "Aspect Doc",
+    "title": "index",
     "permalink": "/develop/aspect-tools/aspect-docs/"
   }
 }

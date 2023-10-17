@@ -2,39 +2,35 @@
 sidebar_position: 1
 ---
 
-# Artela Devnet
-Welcome to Artela Devnet playground!
-Looking to build a dApp on Artela Devnet? 
-Follow this guide to learn how to access Artela Devnet, build an Aspect, deploy and bind it to a smart contract.
+# Welcome to Artela Testnet
 
+Dive into the Artela Testnet playground – your entrypoint to build dApps on Artela Testnet. This guide offers insights on accessing the Artela Testnet, crafting an Aspect, and seamlessly deploying and binding it to a smart contract.
 
-## What Artela is Building?
-Artela is a dual-VM blockchain developed for building the most powerful decentralized applications. DApps on Artela enjoy an order of magnitude improvement in functionality, efficiency, and security. While most blockchains mainly focus on scalability, we believe that the lack of killer apps, not blockspace, is the key to mass adoption. Therefore, Artela is designed for building feature-rich applications. Whether it’s building the onchain version of Binance, or bringing telegram trading bots onchain, or preventing exploits such as re-entrance attacks, Artela makes all of this possible with an EVM + WASM VM architecture.
+## Artela's Vision
 
 In short, Artela allows project teams to easily build secure dApps that are customized to their needs, and yet composable with other applications. In the realm of Defi, Artela offers a universal and more powerful framework for applications to extend their functionalities through the addition of hooks. While Uni v4 hooks are application-specific (ie. Only for Uniswap), Artela supports chain-native level hook design that is cheaper, computationally more powerful, provides runtime context access, and supports the major programming languages, allowing the flourishing of hooks that can be created by anyone and attached to any application.
 
-## Artela Devnet Overview
+## An Insight into Artela Testnet
 
-Artela Devnet is an alpha version for developers. We have built the following: 
+The Artela Testnet, currently in its alpha phase, is tailored for developers. Key components include:
 
-- `artelad`, the validator node which only supported running standalone in the Devnet stage.
-- `ArtEVM`, the enhanced evm. It will provide runtime information for Aspect, such as the whole call stack of transactions and all contracts’ state changes.
-- `asolc`, the fork version of `solc`. It injects additional instructions into bytecodes, allowing smart contracts to be traced by `ArtEVM`.
-- `ArtWASM`, the WASM runtime for Aspect.
-- `Aspect-tool`,  the tool to develop, compile and deploy Aspect.
+- `artelad`: The Artela blockchain node program.
+- `art-evm`: An augmented EVM, equipped to provide comprehensive runtime information for Aspect, encompassing transaction call stacks and contract state modifications.
+- `asolc`: A modified version of `solc`, embedded with supplementary instructions within bytecodes, enabling smart contract tracing by `art-evm`.
+- `art-wasm`: The WASM runtime dedicated for Aspect.
+- `aspect-tool`: A dedicated utility for Aspect development, compilation, and deployment.
 
-By Artela Devnet, you can 
+Engaging with the Artela Testnet allows you to:
 
-- Explore what is Aspect Programming by code
-- Implement some interesting ideas for Aspect Programming
-- Develop proof of concept for your project
-- Research how Aspect can enhance DeFi, NFT, Full-chain Game, and so on
-- Collaborate with the core team to build killer use cases
-- Contribute to Artela
+- Grasp the nuances of Aspect Programming through hands-on coding.
+- Ideate and implement innovative concepts within Aspect Programming.
+- Develop a proof-of-concept for your initiatives.
+- Analyze the transformative capabilities of Aspect in realms like DeFi, NFT, Full-chain Gaming, and more.
+- Collaborate directly with the core team to pioneer breakthrough use-cases.
+- Contribute to the growth and evolution of Artela.
 
-Explore more:
+Dive Deeper:
 
-- Try your first Aspect through a [quick start guide](https://docs.artela.network/develop/quick-start)
-- Explore [development document](https://docs.artela.network/develop)
-- Artela's vision [**here**](https://medium.com/@artela_network/artela-enhance-dapp-functionality-through-aspect-programming-41717e4bac5b)
-
+- Kickstart your journey with a [quick start guide](https://docs.artela.network/develop/quick-start).
+- Navigate through the comprehensive [development documentation](https://docs.artela.network/develop).
+- Immerse in Artela's vision [**here**](https://medium.com/@artela_network/artela-enhance-dapp-functionality-through-aspect-programming-41717e4bac5b).

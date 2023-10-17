@@ -14,11 +14,11 @@
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Artela Devnet",
+    "title": "Welcome to Artela Testnet",
     "permalink": "/develop/"
   },
   "next": {
-    "title": "Access Devnet",
-    "permalink": "/develop/quick-start/access-devnet/"
+    "title": "Accessing Testnet",
+    "permalink": "/develop/quick-start/access-testnet/"
   }
 }

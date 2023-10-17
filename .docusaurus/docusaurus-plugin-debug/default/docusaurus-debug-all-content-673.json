@@ -13,9 +13,9 @@
           "tagsPath": "/docs/tags",
           "isLast": true,
           "routePriority": -1,
-          "sidebarFilePath": "/Users/admin/mytech/go-work/src/github.com/artela-network/artela-docs/sidebars.js",
-          "contentPath": "/Users/admin/mytech/go-work/src/github.com/artela-network/artela-docs/docs/home",
-          "contentPathLocalized": "/Users/admin/mytech/go-work/src/github.com/artela-network/artela-docs/i18n/en/docusaurus-plugin-content-docs/current",
+          "sidebarFilePath": "/Users/jack/Projects/js/artela-docs/sidebars.js",
+          "contentPath": "/Users/jack/Projects/js/artela-docs/docs/home",
+          "contentPathLocalized": "/Users/jack/Projects/js/artela-docs/i18n/en/docusaurus-plugin-content-docs/current",
           "docs": [
             {
               "unversionedId": "README",
@@ -60,9 +60,9 @@
           "editUrlLocalized": "https://github.com/artela-network/artela-docs/tree/main/i18n/en/docusaurus-plugin-content-docs-main/current",
           "isLast": true,
           "routePriority": -1,
-          "sidebarFilePath": "/Users/admin/mytech/go-work/src/github.com/artela-network/artela-docs/sidebars.js",
-          "contentPath": "/Users/admin/mytech/go-work/src/github.com/artela-network/artela-docs/docs/main",
-          "contentPathLocalized": "/Users/admin/mytech/go-work/src/github.com/artela-network/artela-docs/i18n/en/docusaurus-plugin-content-docs-main/current",
+          "sidebarFilePath": "/Users/jack/Projects/js/artela-docs/sidebars.js",
+          "contentPath": "/Users/jack/Projects/js/artela-docs/docs/main",
+          "contentPathLocalized": "/Users/jack/Projects/js/artela-docs/i18n/en/docusaurus-plugin-content-docs-main/current",
           "docs": [
             {
               "unversionedId": "Artela-Blockchain/artela-blockchain",
@@ -381,9 +381,9 @@
           "editUrlLocalized": "https://github.com/artela-network/artela-docs/tree/main/i18n/en/docusaurus-plugin-content-docs-develop/current",
           "isLast": true,
           "routePriority": -1,
-          "sidebarFilePath": "/Users/admin/mytech/go-work/src/github.com/artela-network/artela-docs/sidebars.js",
-          "contentPath": "/Users/admin/mytech/go-work/src/github.com/artela-network/artela-docs/docs/develop",
-          "contentPathLocalized": "/Users/admin/mytech/go-work/src/github.com/artela-network/artela-docs/i18n/en/docusaurus-plugin-content-docs-develop/current",
+          "sidebarFilePath": "/Users/jack/Projects/js/artela-docs/sidebars.js",
+          "contentPath": "/Users/jack/Projects/js/artela-docs/docs/develop",
+          "contentPathLocalized": "/Users/jack/Projects/js/artela-docs/i18n/en/docusaurus-plugin-content-docs-develop/current",
           "docs": [
             {
               "unversionedId": "asolc-guide/index",
@@ -425,8 +425,8 @@
               "frontMatter": {},
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Aspect Doc",
-                "permalink": "/develop/aspect-tools/aspect-docs/"
+                "title": "Aspect Deep Dive",
+                "permalink": "/develop/aspect-in-depth/aspect-dd/"
               },
               "next": {
                 "title": "Security Aspect",
@@ -488,16 +488,16 @@
               }
             },
             {
-              "unversionedId": "aspect-tools/aspect-docs/index",
-              "id": "aspect-tools/aspect-docs/index",
-              "title": "Aspect Doc",
-              "description": "Welcome to Aspect Doc where you can learn about Aspects and how they can assist you in various tasks on Artela network.",
-              "source": "@site/docs/develop/aspect-tools/aspect-docs/index.md",
-              "sourceDirName": "aspect-tools/aspect-docs",
-              "slug": "/aspect-tools/aspect-docs/",
-              "permalink": "/develop/aspect-tools/aspect-docs/",
+              "unversionedId": "aspect-in-depth/aspect-dd/index",
+              "id": "aspect-in-depth/aspect-dd/index",
+              "title": "Aspect Deep Dive",
+              "description": "Welcome to the deep dive of Aspect. This guide will introduce you some concepts and functionalities of Aspects in depth.",
+              "source": "@site/docs/develop/aspect-in-depth/aspect-dd/index.md",
+              "sourceDirName": "aspect-in-depth/aspect-dd",
+              "slug": "/aspect-in-depth/aspect-dd/",
+              "permalink": "/develop/aspect-in-depth/aspect-dd/",
               "draft": false,
-              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/aspect-tools/aspect-docs/index.md",
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/aspect-in-depth/aspect-dd/index.md",
               "tags": [],
               "version": "current",
               "sidebarPosition": 2,
@@ -506,8 +506,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Aspect Tools Guide",
-                "permalink": "/develop/aspect-tools/aspect-tools-guide/"
+                "title": "Aspect Tool",
+                "permalink": "/develop/aspect-in-depth/aspect-tools/"
               },
               "next": {
                 "title": "Aspect Examples",
@@ -515,43 +515,40 @@
               }
             },
             {
-              "unversionedId": "aspect-tools/aspect-tools-guide/index",
-              "id": "aspect-tools/aspect-tools-guide/index",
-              "title": "Aspect Tools Guide",
-              "description": "To get started, install aspect-tool with this command:",
-              "source": "@site/docs/develop/aspect-tools/aspect-tools-guide/index.md",
-              "sourceDirName": "aspect-tools/aspect-tools-guide",
-              "slug": "/aspect-tools/aspect-tools-guide/",
-              "permalink": "/develop/aspect-tools/aspect-tools-guide/",
+              "unversionedId": "aspect-in-depth/aspect-tools/index",
+              "id": "aspect-in-depth/aspect-tools/index",
+              "title": "Aspect Tool",
+              "description": "Welcome to the Aspect Tool Guide. This guide will walk you through all functionalities of aspect-tool with an example. This example including the process of how to use aspect-tool to install, initialize, and generate code for your projects.",
+              "source": "@site/docs/develop/aspect-in-depth/aspect-tools/index.md",
+              "sourceDirName": "aspect-in-depth/aspect-tools",
+              "slug": "/aspect-in-depth/aspect-tools/",
+              "permalink": "/develop/aspect-in-depth/aspect-tools/",
               "draft": false,
-              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/aspect-tools/aspect-tools-guide/index.md",
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/aspect-in-depth/aspect-tools/index.md",
               "tags": [],
               "version": "current",
-              "sidebarPosition": 2,
-              "frontMatter": {
-                "sidebar_position": 2
-              },
+              "frontMatter": {},
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Aspect Tools",
-                "permalink": "/develop/aspect-tools/"
+                "title": "Aspect In Depth",
+                "permalink": "/develop/aspect-in-depth/"
               },
               "next": {
-                "title": "Aspect Doc",
-                "permalink": "/develop/aspect-tools/aspect-docs/"
+                "title": "Aspect Deep Dive",
+                "permalink": "/develop/aspect-in-depth/aspect-dd/"
               }
             },
             {
-              "unversionedId": "aspect-tools/index",
-              "id": "aspect-tools/index",
-              "title": "Aspect Tools",
-              "description": "Artela has developed a command-line tool aspect-tool to streamline the development of Aspects and smart contracts.",
-              "source": "@site/docs/develop/aspect-tools/index.md",
-              "sourceDirName": "aspect-tools",
-              "slug": "/aspect-tools/",
-              "permalink": "/develop/aspect-tools/",
+              "unversionedId": "aspect-in-depth/index",
+              "id": "aspect-in-depth/index",
+              "title": "Aspect In Depth",
+              "description": "This is an in-depth guide of Aspect development, we will go through most of the functionalities in aspect-tool(a commandline tool we built to make the Aspect development easier) and the concepts of Aspect(how it works, how it communicates with base layer and etc).",
+              "source": "@site/docs/develop/aspect-in-depth/index.md",
+              "sourceDirName": "aspect-in-depth",
+              "slug": "/aspect-in-depth/",
+              "permalink": "/develop/aspect-in-depth/",
               "draft": false,
-              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/aspect-tools/index.md",
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/aspect-in-depth/index.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
@@ -561,15 +558,15 @@
                 "permalink": "/develop/start-a-local-node/"
               },
               "next": {
-                "title": "Aspect Tools Guide",
-                "permalink": "/develop/aspect-tools/aspect-tools-guide/"
+                "title": "Aspect Tool",
+                "permalink": "/develop/aspect-in-depth/aspect-tools/"
               }
             },
             {
               "unversionedId": "index",
               "id": "index",
-              "title": "Artela Devnet",
-              "description": "Welcome to Artela Devnet playground!",
+              "title": "Welcome to Artela Testnet",
+              "description": "Dive into the Artela Testnet playground – your entrypoint to build dApps on Artela Testnet. This guide offers insights on accessing the Artela Testnet, crafting an Aspect, and seamlessly deploying and binding it to a smart contract.",
               "source": "@site/docs/develop/index.md",
               "sourceDirName": ".",
               "slug": "/",
@@ -589,16 +586,16 @@
               }
             },
             {
-              "unversionedId": "quick-start/access-devnet/index",
-              "id": "quick-start/access-devnet/index",
-              "title": "Access Devnet",
-              "description": "The Artela Devnet is currently an alpha release. Please be aware of the following:",
-              "source": "@site/docs/develop/quick-start/access-devnet/index.md",
-              "sourceDirName": "quick-start/access-devnet",
-              "slug": "/quick-start/access-devnet/",
-              "permalink": "/develop/quick-start/access-devnet/",
+              "unversionedId": "quick-start/access-testnet/index",
+              "id": "quick-start/access-testnet/index",
+              "title": "Accessing Testnet",
+              "description": "The Artela Testnet is in its beta release phase. Kindly note:",
+              "source": "@site/docs/develop/quick-start/access-testnet/index.md",
+              "sourceDirName": "quick-start/access-testnet",
+              "slug": "/quick-start/access-testnet/",
+              "permalink": "/develop/quick-start/access-testnet/",
               "draft": false,
-              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/quick-start/access-devnet/index.md",
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/quick-start/access-testnet/index.md",
               "tags": [],
               "version": "current",
               "sidebarPosition": 2,
@@ -611,15 +608,15 @@
                 "permalink": "/develop/quick-start/"
               },
               "next": {
-                "title": "Develop a Smart Contract",
+                "title": "Developing Smart Contracts with Artela",
                 "permalink": "/develop/quick-start/develop-a-smart-contract/"
               }
             },
             {
               "unversionedId": "quick-start/develop-a-smart-contract/index",
               "id": "quick-start/develop-a-smart-contract/index",
-              "title": "Develop a Smart Contract",
-              "description": "Similar to Ethereum, EVM smart contract is also supported by Artela. Artela's EVM is fully compatible with legacy Solidity but offers additional features like state and call stack tracing.",
+              "title": "Developing Smart Contracts with Artela",
+              "description": "Artela's EVM supports smart contracts much like Ethereum. However, it not only maintains full compatibility with original version of Solidity but also introduces some enhancements, including state and call stack tracing.",
               "source": "@site/docs/develop/quick-start/develop-a-smart-contract/index.md",
               "sourceDirName": "quick-start/develop-a-smart-contract",
               "slug": "/quick-start/develop-a-smart-contract/",
@@ -634,8 +631,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Access Devnet",
-                "permalink": "/develop/quick-start/access-devnet/"
+                "title": "Accessing Testnet",
+                "permalink": "/develop/quick-start/access-testnet/"
               },
               "next": {
                 "title": "Develop an Aspect",
@@ -646,7 +643,7 @@
               "unversionedId": "quick-start/develop-an-aspect/index",
               "id": "quick-start/develop-an-aspect/index",
               "title": "Develop an Aspect",
-              "description": "Aspect is a dynamic stateful extension that utilizes Web Assembly (WASM). It adds extra functionalities to the lifecycles of blocks or transactions for specific smart contracts. In the following sections, we'll guide you through building a simple Aspect with AssemblyScript(a subset of TypeScript) step by step.",
+              "description": "An Aspect is a dynamic, stateful extension that leverages Web Assembly (WASM) to introduce additional functionalities into the lifecycles of blocks or transactions specific to smart contracts. This guide will walk you through the process of building a basic Aspect using AssemblyScript (a subset of TypeScript).",
               "source": "@site/docs/develop/quick-start/develop-an-aspect/index.md",
               "sourceDirName": "quick-start/develop-an-aspect",
               "slug": "/quick-start/develop-an-aspect/",
@@ -661,7 +658,7 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Develop a Smart Contract",
+                "title": "Developing Smart Contracts with Artela",
                 "permalink": "/develop/quick-start/develop-a-smart-contract/"
               },
               "next": {
@@ -685,12 +682,12 @@
               "frontMatter": {},
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Artela Devnet",
+                "title": "Welcome to Artela Testnet",
                 "permalink": "/develop/"
               },
               "next": {
-                "title": "Access Devnet",
-                "permalink": "/develop/quick-start/access-devnet/"
+                "title": "Accessing Testnet",
+                "permalink": "/develop/quick-start/access-testnet/"
               }
             },
             {
@@ -790,15 +787,15 @@
                 "permalink": "/develop/web3js-guide/"
               },
               "next": {
-                "title": "Aspect Tools",
-                "permalink": "/develop/aspect-tools/"
+                "title": "Aspect In Depth",
+                "permalink": "/develop/aspect-in-depth/"
               }
             },
             {
               "unversionedId": "web3js-guide/index",
               "id": "web3js-guide/index",
               "title": "Web3.js Guide",
-              "description": "@artela/web3 is an extended version of Ethereum’s web3.js with Aspect operations supported. This package is fully compatible with the original version with some slight modifications. If your dApp is based on the original web3.js , you can simply migrate to Artela by replacing the package and import sentences.",
+              "description": "@artela/web3 is a modified version of Ethereum's web3.js 1.x, supporting Aspect operations. This package retains full compatibility with the original web3.js, with minor adjustments. If your dApp utilizes the original web3.js, transitioning to Artela is as straightforward as replacing the package and import statements.",
               "source": "@site/docs/develop/web3js-guide/index.md",
               "sourceDirName": "web3js-guide",
               "slug": "/web3js-guide/",
@@ -834,8 +831,8 @@
                 "items": [
                   {
                     "type": "doc",
-                    "label": "Access Devnet",
-                    "id": "quick-start/access-devnet/index"
+                    "label": "Access Testnet",
+                    "id": "quick-start/access-testnet/index"
                   },
                   {
                     "type": "doc",
@@ -870,24 +867,24 @@
               },
               {
                 "type": "category",
-                "label": "Aspect Tools",
+                "label": "Aspect In Depth",
                 "collapsible": true,
                 "collapsed": true,
                 "items": [
                   {
                     "type": "doc",
-                    "label": "Aspect Tools Guide",
-                    "id": "aspect-tools/aspect-tools-guide/index"
+                    "label": "Aspect Tool",
+                    "id": "aspect-in-depth/aspect-tools/index"
                   },
                   {
                     "type": "doc",
-                    "label": "Aspect Doc",
-                    "id": "aspect-tools/aspect-docs/index"
+                    "label": "Aspect Deep Dive",
+                    "id": "aspect-in-depth/aspect-dd/index"
                   }
                 ],
                 "link": {
                   "type": "doc",
-                  "id": "aspect-tools/index"
+                  "id": "aspect-in-depth/index"
                 }
               },
               {
@@ -903,7 +900,7 @@
                   },
                   {
                     "type": "doc",
-                    "label": "Schedular Aspect",
+                    "label": "On-Chain Automation Aspect",
                     "id": "aspect-examples/schedular-aspect/index"
                   }
                 ],

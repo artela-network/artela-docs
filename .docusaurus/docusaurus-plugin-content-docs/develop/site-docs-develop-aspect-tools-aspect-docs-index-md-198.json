@@ -1,8 +1,8 @@
 {
   "unversionedId": "aspect-tools/aspect-docs/index",
   "id": "aspect-tools/aspect-docs/index",
-  "title": "Aspect Doc",
-  "description": "Welcome to Aspect Doc where you can learn about Aspects and how they can assist you in various tasks on Artela network.",
+  "title": "index",
+  "description": "---",
   "source": "@site/docs/develop/aspect-tools/aspect-docs/index.md",
   "sourceDirName": "aspect-tools/aspect-docs",
   "slug": "/aspect-tools/aspect-docs/",
@@ -11,10 +11,7 @@
   "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/aspect-tools/aspect-docs/index.md",
   "tags": [],
   "version": "current",
-  "sidebarPosition": 2,
-  "frontMatter": {
-    "sidebar_position": 2
-  },
+  "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Aspect Tools Guide",

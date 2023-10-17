@@ -129,18 +129,18 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "aspect-tools/aspect-docs/index",
-              "path": "/develop/aspect-tools/aspect-docs/",
+              "id": "aspect-in-depth/aspect-dd/index",
+              "path": "/develop/aspect-in-depth/aspect-dd/",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "aspect-tools/aspect-tools-guide/index",
-              "path": "/develop/aspect-tools/aspect-tools-guide/",
+              "id": "aspect-in-depth/aspect-tools/index",
+              "path": "/develop/aspect-in-depth/aspect-tools/",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "aspect-tools/index",
-              "path": "/develop/aspect-tools/",
+              "id": "aspect-in-depth/index",
+              "path": "/develop/aspect-in-depth/",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -149,8 +149,8 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "quick-start/access-devnet/index",
-              "path": "/develop/quick-start/access-devnet/",
+              "id": "quick-start/access-testnet/index",
+              "path": "/develop/quick-start/access-testnet/",
               "sidebar": "tutorialSidebar"
             },
             {

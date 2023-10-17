@@ -2,7 +2,7 @@
   "unversionedId": "web3js-guide/index",
   "id": "web3js-guide/index",
   "title": "Web3.js Guide",
-  "description": "@artela/web3 is an extended version of Ethereum’s web3.js with Aspect operations supported. This package is fully compatible with the original version with some slight modifications. If your dApp is based on the original web3.js , you can simply migrate to Artela by replacing the package and import sentences.",
+  "description": "@artela/web3 is a modified version of Ethereum's web3.js 1.x, supporting Aspect operations. This package retains full compatibility with the original web3.js, with minor adjustments. If your dApp utilizes the original web3.js, transitioning to Artela is as straightforward as replacing the package and import statements.",
   "source": "@site/docs/develop/web3js-guide/index.md",
   "sourceDirName": "web3js-guide",
   "slug": "/web3js-guide/",

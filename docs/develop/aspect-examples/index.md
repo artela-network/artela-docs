@@ -4,14 +4,16 @@ Explore step-by-step examples of Aspect programming in action. These examples de
 
 ## Security Aspect
 
-Learn how to use the Security Aspect to enable runtime protection for your smart contracts. This Aspect helps protect against common vulnerabilities especially reentrency attacks.
+Learn how to build a Security Aspect to enable runtime protection for your smart contracts. This Aspect helps to protect against reentrancy attacks.
 
-[**Security Aspect Guide**](/develop/aspect-examples/security-aspect)
+[**Security Aspect**](security-aspect)
 
-## Scheduler Aspect
+## On-chain automation with Aspect
 
-Discover how to use the Scheduler Aspect to schedule and automate tasks within your smart contracts. This Aspect is useful for managing time-based events and actions.
+[**On-Chain Automation Aspect**](schedular-aspect)
 
-[**Scheduler Aspect Guide**](/develop/aspect-examples/schedular-aspect)
+## More
+
+> More examples coming soon!
 
 Explore these Aspect examples to see how you can leverage Aspect programming to enhance your dApps.

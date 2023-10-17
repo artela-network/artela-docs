@@ -9,11 +9,11 @@ The "Security Aspect on Artela" is a security implementation that safeguards tra
 Let's go through the implementation step by step.
 
 
-### 1. Deploy Defi Smart Contract
+### 1. Deploy a simple Deposit Smart Contract with Reentrancy Vulnerability
 
-**Step1: Defi Smart Contract** 
+**Step1: Deploy a simple Deposit Smart Contract** 
 
-We assume the existence of a Defi smart contract named `HoneyPot`. This contract allows users to deposit and withdraw funds. Below is the Solidity code for `HoneyPot.sol`:
+We assume the existence of a Deposit smart contract named `HoneyPot`. This contract allows users to deposit and withdraw funds. Below is the Solidity code for `HoneyPot.sol`:
 
 ```tsx
 // SPDX-License-Identifier: GPL-3.0
@@ -21,16 +21,13 @@ pragma solidity >=0.8.2 <0.9.0;
 
 contract HoneyPot {
     mapping(address => uint256) public balances;
-    address private deployer;
+    address private owner;
+    
     constructor() {
-        deployer = msg.sender;
+        owner = msg.sender;
     }
-    function isOwner(address user) external view returns (bool result) {
-        if (user == deployer) {
-            return true;
-        } else {
-            return false;
-        }
+    function isOwner(address user) external view returns (bool) {
+        return user == owner;
     }
 
     function deposit() public payable {
@@ -49,9 +46,9 @@ contract HoneyPot {
 }
 ```
 
-**Step2: Mock the Attack of Smart Contract** 
+**Step2: Deploy the Attacker Smart Contract and exploit HoneyPot with reentrancy** 
 
-We can mock an attack smart contract named `Attack`. This contract is designed to exploit vulnerabilities in HoneyPot.sol. Below is the Solidity code for `Attack.sol`:
+We can deploy an attacker smart contract as below. This contract is designed to exploit vulnerabilities in HoneyPot.sol.
 
 ```tsx
 // SPDX-License-Identifier: GPL-3.0
@@ -100,9 +97,8 @@ Deploy `HoneyPot.sol` and `Attack.sol` to the Artela testnet. Below is an exampl
 // The total recorded amount of these assets is mapped to the native assets held in the contract's account on the blockchain.
 //
 // Contract at: reentrance/contracts/HoneyPot.sol
-let honeyPotContract = new web3.atl.Contract(HoneyPotAbi,
-    web3.utils.aspectCoreAddr, honeypotOptions);
-let token_instance = honeyPotContract.deploy().send({ from: honeypotDeployer, nonce: honeyPotNonceVal });
+let honeyPotContract = new web3.atl.Contract(HoneyPotAbi);
+let token_instance = honeyPotContract.deploy().send({ from, nonce, gas, gasPrice });
 let honeypotAddress = "";
 honeyPotContract = await token_instance.on('receipt', function (receipt) {
     console.log("=============== deployed contract ===============");
@@ -117,18 +113,16 @@ console.log("== HoneyPot_account ==", honeypotDeployer)
 
 // Deploy attack contract to artela
 //
-// The "attach" contract is one of the users of HoneyPot and defines the "deposit" and "attach" (withdraw) methods.
+// The "attack" contract is one of the users of HoneyPot and defines the "deposit" and "attach" (withdraw) methods.
 // It use the contract call method to invoke the "deposit" and "withdraw" functions from the HoneyPot contract.
 //
 // Contract at: reentrance/contracts/Attack.sol
 let attackDeployer = accounts[1]
 let attackNonceVal = await web3.atl.getTransactionCount(attackDeployer);
 
-let attackContract = new web3.atl.Contract(attackAbi,
-    web3.utils.aspectCoreAddr, attackOptions);
-let attack_instance = attackContract.deploy({ "arguments": [honeypotAddress] }).send({
-    from: attackDeployer,
-    nonce: attackNonceVal
+let attackContract = new web3.atl.Contract(attackAbi);
+let attack_instance = attackContract.deploy({ arguments: [honeypotAddress] }).send({
+    from, nonce, gas, gasPrice
 });
 let attackAddress = "";
 attackContract = await attack_instance.on('receipt', function (receipt) {
@@ -147,12 +141,10 @@ attackContract = await attack_instance.on('receipt', function (receipt) {
 
 ```bash
 # Install
-npm install @artela/aspect-tool
+npm install @artela/aspect-tool -g
 
 # Usage
-Step1:  aspect-tool generate
-Step2:  input your storage layout json file path
-Step3:  input your target lib typescript file path
+aspect-tool generate -i /path/to/honeypot/storage.json -o /path/to/aspect/src/dir/honeypot_storage.ts
 ```
 
 **Step2: Import and Implement the Aspect** 
@@ -178,30 +170,19 @@ import {
 } from "@artela/aspect-libs";
 import {HoneyPotState} from "./honeypot_storage";
 
-class GuardByCountAspect implements IAspectTransaction, IAspectBlock {
+export class GuardByCountAspect implements IAspectTransaction, IAspectBlock {
 
-
-    isOwner(sender: string): bool {
-        let value = sys.aspectProperty().get<string>("owner");
-        return !!value.includes(sender);
-    }
-
-    onContractBinding(contractAddr: string): bool {
-        let value = sys.aspectProperty().get<string>("binding");
-        return !!value.includes(contractAddr);
-    }
-    filterTx(ctx: FilterTxCtx): bool {
-        return true;
-    }
+    // ...
+    
+    // modify the postContractCall method to check the balances of the deposit contract 
+    // and the withdrawer before and after the transaction to make sure the balances are equal.
     postContractCall(ctx: PostContractCallCtx): void {
-        // 1.Calculate the eth balance change of DeFi SmartContract(HoneyPot) before and after tx.
+        // 1.Calculate the eth balance change of our deposit smart contract before and after tx.
         let sysBalance = new HoneyPotState._balance_(ctx.trace, ctx.currentCall.to);
         let deltaSys = sysBalance.current()!.sub(sysBalance.original());
-
-
-        // 2.Calculate the financial change of withdrawer in DeFi SmartContract(HoneyPot) before and after tx.
+        
+        // 2.Calculate the eth balance change of the withdrawer in our deposit smart contract before and after tx.
         let contractState = new HoneyPotState.balances(ctx.trace, ctx.currentCall.to);
-
         let deltaUser = BigInt.ZERO;
         let fromState = contractState.get(ctx.currentCall.from)
         let current = fromState.current()
@@ -209,57 +190,45 @@ class GuardByCountAspect implements IAspectTransaction, IAspectBlock {
         if (current && original) {
             deltaUser = current.sub(original)
         }
+        
         // 3.Verify if the above two values are equal.
         if (deltaSys.compareTo(deltaUser) != 0) {
-            vm.revert("risky transaction")
+            vm.revert("whoops, user balance not as expected, reverting...")
         }
     }
 
- ....
+    // ...
 }
 
-export default GuardByCountAspect;
 ```
 
 ### 3. Deploy Aspect
 Deploy your security aspect to the Artela testnet. Here's an example:
+
 ```tsx
 // Deploy GuardAspect
 //
 // Deploy an aspect onto the blockchain with the functionality of
 // checking balances and intercepting transactions according to predefined rules.
-//
-// Aspect at: 
-// - reentrance/assembly/aspect/guard_by_trace_aspect.ts
-let AspectDeployer = accounts[2]
-let nonceValAspectDeployer = await web3.atl.getTransactionCount(AspectDeployer);
-
 let aspectCode = fs.readFileSync('./build/release.wasm', {
     encoding: "hex"
 });
-let aspect = new web3.atl.Aspect(
-    web3.utils.aspectCoreAddr, {
-    gasPrice: 1000000010, // Default gasPrice set by Geth
-    gas: 4000000
-});
-let instance = aspect.deploy({
-    data: '0x' + aspectCode,
-    properties: [{ 'key': 'HoneyPotAddr', 'value': honeypotAddress }, {
-        'key': 'binding',
-        'value': honeypotAddress
-    }, { 'key': 'owner', 'value': AspectDeployer }]
-}).send({ from: AspectDeployer, nonce: nonceValAspectDeployer });
 
-let aspectRt = await instance.on('receipt', (receipt) => {
+let aspect = new web3.atl.Aspect();
+let deployTx = aspect.deploy({
+    data: '0x' + aspectCode,
+    properties: []
+}).send({ from, nonce, gasPrice, gas });
+
+aspect = await deployTx.on('receipt', (receipt) => {
     console.log("=============== deployed aspect ===============");
     console.log("aspect address: " + aspect.options.address);
     console.log(receipt);
 }).on('transactionHash', (txHash) => {
     console.log("deploy aspect tx hash: ", txHash);
 });
-await new Promise(r => setTimeout(r, 5000));
 
-let aspectId = aspectRt.options.address
+let aspectId = aspect.options.address
 ```
 
 ### 4. Bind Aspect to Smart Contract
@@ -275,7 +244,7 @@ Bind your HoneyPot contract with the GuardByTraceAspect aspect. This step establ
         priority: 1,
         aspectId: aspectId,
         aspectVersion: 1,
-    }).send({ from: honeypotDeployer, nonce: honeyPotNonceVal + 2 })
+    }).send({ from, nonce, gas, gasPrice })
         .on('receipt', function (receipt) {
             console.log("=============== bind aspect ===============")
             console.log(receipt)
@@ -283,9 +252,6 @@ Bind your HoneyPot contract with the GuardByTraceAspect aspect. This step establ
         .on('transactionHash', (txHash) => {
             console.log("contract binding tx hash: ", txHash);
         });
-
-    // wait for block committing
-    await new Promise(r => setTimeout(r, 5000));
 ```
 
 ### 5. Complete the Code and Demonstration

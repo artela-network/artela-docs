@@ -14,8 +14,8 @@
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Aspect Doc",
-    "permalink": "/develop/aspect-tools/aspect-docs/"
+    "title": "Aspect Deep Dive",
+    "permalink": "/develop/aspect-in-depth/aspect-dd/"
   },
   "next": {
     "title": "Security Aspect",

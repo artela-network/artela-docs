@@ -8,7 +8,7 @@ To achieve this, Artela uses an enhanced version of **SOLC,** called **ASOLC**. 
 
 # 2. Download ASOLC
 
-You can find ASOLC releases [here](https://github.com/artela-network/solidity/releases/tag/v0.8.20-atl). Choose the version that matches your system (e.g., for macOS, `download macos.tar.gz`).
+You can find ASOLC releases [here](https://github.com/artela-network/solidity/releases/tag/v0.8.21-atl). Choose the version that matches your system (e.g., for macOS, `download macos.tar.gz`).
 
 Once downloaded, extract the file and place the `asolc` executable in a directory that's easy for you to access (e.g., `/users/{your-account}/.bin/`).
 

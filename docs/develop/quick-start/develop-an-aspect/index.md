@@ -4,79 +4,78 @@ sidebar_position: 2
 
 # Develop an Aspect
 
-Aspect is a dynamic stateful extension that utilizes Web Assembly (WASM). It adds extra functionalities to the lifecycles of blocks or transactions for specific smart contracts. In the following sections, we'll guide you through building a simple Aspect with AssemblyScript(a subset of TypeScript) step by step.
+An Aspect is a dynamic, stateful extension that leverages Web Assembly (WASM) to introduce additional functionalities into the lifecycles of blocks or transactions specific to smart contracts. This guide will walk you through the process of building a basic Aspect using AssemblyScript (a subset of TypeScript).
 
-### 1. Set Up the Development Environment
+### 1. Setting Up Your Development Environment
 
-We've created a command-line tool called `aspect-tool` to boost Aspect development. It's recommended to install it on your system before proceeding. Execute the following command to install it:
+To streamline Aspect development, we've crafted a command-line utility named `aspect-tool`. It's recommended to have this tool installed on your system before moving forward. Use the following command to install it:
+
 ```shell
-# install aspect-tool
+# Install the aspect-tool
 npm install -g @artela/aspect-tool
 ```
 
-### 2. Initialize Your Project
+### 2. Initializing Your Project
 
-Next, you can initialize your project using `aspect-tool`. Execute the following commands to set up your project:
+Once you've set up the `aspect-tool`, you can proceed to initialize your project. Follow the steps below:
+
 ```shell
-# create a new directory and enter it
+# Create a new directory and navigate into it
 mkdir my-first-aspect && cd my-first-aspect
 
-# Initialize a new npm project
+# Set up a new npm project
 npm init -y
 
-# Initialize the npm project with aspect
+# Configure the npm project for aspect development
 aspect-tool init
 
-# Install required dependencies
+# Install the necessary dependencies
 npm install
 ```
 
-### 3. Implement Your Aspect
+### 3. Crafting Your Aspect
 
-Open the file `assembly/aspect/aspect.ts`, find the `postTxExecute` function, and add the following lines of code:
+Navigate to `assembly/aspect/aspect.ts` and locate the `postTxExecute` function. Incorporate the following code snippet:
 
 ```tsx
 //...
 postTxExecute(ctx: PostTxExecuteCtx): void {
-    // to do something
+    // Implement your logics here
 }
 ```
 
 :::tip
-To learn more details, please refer to [Aspect Doc](https://docs.artela.network/develop/aspect-tools/aspect-docs).
+For an in-depth understanding, consult the [Aspect Documentation](../../aspect-in-depth/aspect-dd).
 :::
 
-Now that you've written your first Aspect, let's compile it with the following command:
+Having constructed your initial Aspect, compile it using:
 
 ```bash
 npm run aspect:build
 ```
-This will generate the Aspect artifacts in the `build` folder, with `release.wasm` containing the WASM bytecode for later deployment.
+This command produces Aspect artifacts inside the `build` directory. The `release.wasm` file holds the WASM bytecode, prepped for deployment.
 
+### 4. Deploying Your Aspect
 
-### 4. Deploy Your Aspect
+Upon finalizing your Aspect's development, you're set to deploy the `release.wasm` bytecode onto Artela.
 
-After completing the development steps for your Aspect, it's time to deploy the `release.wasm` bytecode onto Artela. 
-
-For guidance on deploying an Aspect using`@artela/web3.js`, refers to [here](https://docs.artela.network/develop/web3js-guide).
-
+For detailed steps on deploying an Aspect via `@artela/web3.js`, refer [here](../../../develop/web3js-guide).
 
 :::note
-Ensure proper control of deployment permissions. If the `isOwner` function in your Aspect code returns `false`, the deployment process will not succeed.
+Be vigilant about Aspect permissions. If the `isOwner` function within your Aspect code yields `false`, you won't be able to upgrade/config your Aspect.
 :::
 
 ### 5. Binding to a Smart Contract
 
-- In the case of a **block-level Aspect**, it's invoked at the beginning and end of each block.
-- In the case of a **transaction-level Aspect**, it's invoked by binding it to a smart contract that is being invoked.
+- For a **block-level Aspect**, it gets triggered at both the beginning and ending of each block.
+- A **transaction-level Aspect** is activated when it's linked to a smart contract undergoing invocation.
 
-For instructions on binding your Aspect to a contract using `@artela/web3.js`, refers to [here](https://docs.artela.network/develop/web3js-guide).
-    
+To understand how to tether your Aspect to a contract using `@artela/web3.js`, visit [this link](../../../develop/web3js-guide).
+
 :::note
-Pay attention to the control of binding permissions. If the return value within the `onContractBinding` function in your Aspect code is `false`, the binding process will not be successful.
+Please be careful regarding the binding permissions. If the `onContractBinding` function within your Aspect code delivers a `false` outcome, the binding operation will fail.
 :::
 
+### 6. Executing Your Aspect
 
-### 6. Invoke Your Aspect
-Finally, you can invoke your Aspect by invoking the bound smart contract. To learn how to invoke your contract using `@artela/web3.js` refers to [here](https://docs.artela.network/develop/web3js-guide).
-
+To round things off, you can activate your Aspect by calling the associated smart contract. For guidance on invoking your contract via `@artela/web3.js`, check [this guide](../../../develop/web3js-guide).

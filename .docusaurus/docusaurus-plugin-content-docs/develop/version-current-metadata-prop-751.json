@@ -11,7 +11,7 @@
     "tutorialSidebar": [
       {
         "type": "link",
-        "label": "Artela Devnet",
+        "label": "Welcome to Artela Testnet",
         "href": "/develop/",
         "docId": "index"
       },
@@ -23,9 +23,9 @@
         "items": [
           {
             "type": "link",
-            "label": "Access Devnet",
-            "href": "/develop/quick-start/access-devnet/",
-            "docId": "quick-start/access-devnet/index"
+            "label": "Access Testnet",
+            "href": "/develop/quick-start/access-testnet/",
+            "docId": "quick-start/access-testnet/index"
           },
           {
             "type": "link",
@@ -62,24 +62,24 @@
       },
       {
         "type": "category",
-        "label": "Aspect Tools",
+        "label": "Aspect In Depth",
         "collapsible": true,
         "collapsed": true,
         "items": [
           {
             "type": "link",
-            "label": "Aspect Tools Guide",
-            "href": "/develop/aspect-tools/aspect-tools-guide/",
-            "docId": "aspect-tools/aspect-tools-guide/index"
+            "label": "Aspect Tool",
+            "href": "/develop/aspect-in-depth/aspect-tools/",
+            "docId": "aspect-in-depth/aspect-tools/index"
           },
           {
             "type": "link",
-            "label": "Aspect Doc",
-            "href": "/develop/aspect-tools/aspect-docs/",
-            "docId": "aspect-tools/aspect-docs/index"
+            "label": "Aspect Deep Dive",
+            "href": "/develop/aspect-in-depth/aspect-dd/",
+            "docId": "aspect-in-depth/aspect-dd/index"
           }
         ],
-        "href": "/develop/aspect-tools/"
+        "href": "/develop/aspect-in-depth/"
       },
       {
         "type": "category",
@@ -95,7 +95,7 @@
           },
           {
             "type": "link",
-            "label": "Schedular Aspect",
+            "label": "On-Chain Automation Aspect",
             "href": "/develop/aspect-examples/schedular-aspect/",
             "docId": "aspect-examples/schedular-aspect/index"
           }
@@ -150,46 +150,46 @@
       "description": "The \"Security Aspect on Artela\" is a security implementation that safeguards transactions, particularly in scenarios where a bookkeeping contract may be vulnerable to reentrancy attacks due to unpredictable bugs. This Aspect verifies the balance in the contract and compares it to the actual balance, intercepting any transactions associated with such attacks.",
       "sidebar": "tutorialSidebar"
     },
-    "aspect-tools/aspect-docs/index": {
-      "id": "aspect-tools/aspect-docs/index",
-      "title": "Aspect Doc",
-      "description": "Welcome to Aspect Doc where you can learn about Aspects and how they can assist you in various tasks on Artela network.",
+    "aspect-in-depth/aspect-dd/index": {
+      "id": "aspect-in-depth/aspect-dd/index",
+      "title": "Aspect Deep Dive",
+      "description": "Welcome to the deep dive of Aspect. This guide will introduce you some concepts and functionalities of Aspects in depth.",
       "sidebar": "tutorialSidebar"
     },
-    "aspect-tools/aspect-tools-guide/index": {
-      "id": "aspect-tools/aspect-tools-guide/index",
-      "title": "Aspect Tools Guide",
-      "description": "To get started, install aspect-tool with this command:",
+    "aspect-in-depth/aspect-tools/index": {
+      "id": "aspect-in-depth/aspect-tools/index",
+      "title": "Aspect Tool",
+      "description": "Welcome to the Aspect Tool Guide. This guide will walk you through all functionalities of aspect-tool with an example. This example including the process of how to use aspect-tool to install, initialize, and generate code for your projects.",
       "sidebar": "tutorialSidebar"
     },
-    "aspect-tools/index": {
-      "id": "aspect-tools/index",
-      "title": "Aspect Tools",
-      "description": "Artela has developed a command-line tool aspect-tool to streamline the development of Aspects and smart contracts.",
+    "aspect-in-depth/index": {
+      "id": "aspect-in-depth/index",
+      "title": "Aspect In Depth",
+      "description": "This is an in-depth guide of Aspect development, we will go through most of the functionalities in aspect-tool(a commandline tool we built to make the Aspect development easier) and the concepts of Aspect(how it works, how it communicates with base layer and etc).",
       "sidebar": "tutorialSidebar"
     },
     "index": {
       "id": "index",
-      "title": "Artela Devnet",
-      "description": "Welcome to Artela Devnet playground!",
+      "title": "Welcome to Artela Testnet",
+      "description": "Dive into the Artela Testnet playground – your entrypoint to build dApps on Artela Testnet. This guide offers insights on accessing the Artela Testnet, crafting an Aspect, and seamlessly deploying and binding it to a smart contract.",
       "sidebar": "tutorialSidebar"
     },
-    "quick-start/access-devnet/index": {
-      "id": "quick-start/access-devnet/index",
-      "title": "Access Devnet",
-      "description": "The Artela Devnet is currently an alpha release. Please be aware of the following:",
+    "quick-start/access-testnet/index": {
+      "id": "quick-start/access-testnet/index",
+      "title": "Accessing Testnet",
+      "description": "The Artela Testnet is in its beta release phase. Kindly note:",
       "sidebar": "tutorialSidebar"
     },
     "quick-start/develop-a-smart-contract/index": {
       "id": "quick-start/develop-a-smart-contract/index",
-      "title": "Develop a Smart Contract",
-      "description": "Similar to Ethereum, EVM smart contract is also supported by Artela. Artela's EVM is fully compatible with legacy Solidity but offers additional features like state and call stack tracing.",
+      "title": "Developing Smart Contracts with Artela",
+      "description": "Artela's EVM supports smart contracts much like Ethereum. However, it not only maintains full compatibility with original version of Solidity but also introduces some enhancements, including state and call stack tracing.",
       "sidebar": "tutorialSidebar"
     },
     "quick-start/develop-an-aspect/index": {
       "id": "quick-start/develop-an-aspect/index",
       "title": "Develop an Aspect",
-      "description": "Aspect is a dynamic stateful extension that utilizes Web Assembly (WASM). It adds extra functionalities to the lifecycles of blocks or transactions for specific smart contracts. In the following sections, we'll guide you through building a simple Aspect with AssemblyScript(a subset of TypeScript) step by step.",
+      "description": "An Aspect is a dynamic, stateful extension that leverages Web Assembly (WASM) to introduce additional functionalities into the lifecycles of blocks or transactions specific to smart contracts. This guide will walk you through the process of building a basic Aspect using AssemblyScript (a subset of TypeScript).",
       "sidebar": "tutorialSidebar"
     },
     "quick-start/index": {
@@ -225,7 +225,7 @@
     "web3js-guide/index": {
       "id": "web3js-guide/index",
       "title": "Web3.js Guide",
-      "description": "@artela/web3 is an extended version of Ethereum’s web3.js with Aspect operations supported. This package is fully compatible with the original version with some slight modifications. If your dApp is based on the original web3.js , you can simply migrate to Artela by replacing the package and import sentences.",
+      "description": "@artela/web3 is a modified version of Ethereum's web3.js 1.x, supporting Aspect operations. This package retains full compatibility with the original web3.js, with minor adjustments. If your dApp utilizes the original web3.js, transitioning to Artela is as straightforward as replacing the package and import statements.",
       "sidebar": "tutorialSidebar"
     }
   }
