@@ -48,7 +48,7 @@
       "plugin": "plugin---search-2-eb-02c"
     }
   },
-  "/develop-771": {
+  "/develop-687": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---develop-113-f17"
@@ -59,69 +59,193 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---develop-6-cc-bf2"
   },
-  "/develop/asolc-guide-d2b": {
+  "/develop/advanced-concepts-65d": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-asolc-guidef-0-f-dee"
+    "content": "content---develop-advanced-concepts-311-737"
   },
-  "/develop/aspect-examples-b80": {
+  "/develop/advanced-concepts/account-abstraction-2ab": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-aspect-examples-6-c-5-8ef"
+    "content": "content---develop-advanced-concepts-account-abstractione-7-c-c98"
   },
-  "/develop/aspect-examples/schedular-aspect-396": {
+  "/develop/advanced-concepts/asolc-d15": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-aspect-examples-schedular-aspect-7-c-0-777"
+    "content": "content---develop-advanced-concepts-asolc-45-c-d7a"
   },
-  "/develop/aspect-examples/security-aspect-d14": {
+  "/develop/advanced-concepts/communication-f70": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-aspect-examples-security-aspect-3-c-5-b67"
+    "content": "content---develop-advanced-concepts-communicationa-01-50d"
   },
-  "/develop/aspect-in-depth-2e4": {
+  "/develop/advanced-concepts/jit-call-d97": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-aspect-in-depth-995-85e"
+    "content": "content---develop-advanced-concepts-jit-callaee-ab1"
   },
-  "/develop/aspect-in-depth/aspect-dd-f50": {
+  "/develop/advanced-concepts/join-point-7e3": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-aspect-in-depth-aspect-dde-59-ace"
+    "content": "content---develop-advanced-concepts-join-point-1-c-0-00c"
   },
-  "/develop/aspect-in-depth/aspect-tools-8c2": {
+  "/develop/advanced-concepts/jpm-3c3": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-aspect-in-depth-aspect-tools-177-4a9"
+    "content": "content---develop-advanced-concepts-jpm-7-a-9-e77"
   },
-  "/develop/quick-start-415": {
+  "/develop/advanced-concepts/lifecycle-42f": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-quick-start-0-fb-6dc"
+    "content": "content---develop-advanced-concepts-lifecycle-6-f-1-b17"
   },
-  "/develop/quick-start/access-testnet-ac4": {
+  "/develop/advanced-concepts/runtime-api-5dc": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-quick-start-access-testnet-03-e-0fe"
+    "content": "content---develop-advanced-concepts-runtime-api-9-e-4-154"
   },
-  "/develop/quick-start/develop-a-smart-contract-ca0": {
+  "/develop/advanced-concepts/system-call-198": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-quick-start-develop-a-smart-contract-386-2fc"
+    "content": "content---develop-advanced-concepts-system-call-7-d-4-e93"
   },
-  "/develop/quick-start/develop-an-aspect-0a4": {
+  "/develop/aspect-lib-ac7": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-quick-start-develop-an-aspecteb-4-cff"
+    "content": "content---develop-aspect-lib-534-2ee"
   },
-  "/develop/resources-260": {
+  "/develop/client-464": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-resourcesddf-385"
+    "content": "content---develop-client-5-e-1-46e"
   },
-  "/develop/resources/faucet-d36": {
+  "/develop/client/javascript-313": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-resources-faucetbf-1-539"
+    "content": "content---develop-client-javascript-9-d-5-0ea"
   },
-  "/develop/resources/write-smart-contract-180": {
+  "/develop/client/json-rpc-f95": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-resources-write-smart-contract-035-e69"
+    "content": "content---develop-client-json-rpc-635-bd5"
   },
-  "/develop/start-a-local-node-489": {
+  "/develop/core-concepts-d53": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-start-a-local-node-916-4f5"
+    "content": "content---develop-core-concepts-1-b-4-675"
   },
-  "/develop/web3js-guide-de5": {
+  "/develop/core-concepts/arch-251": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-web-3-js-guidefc-8-5d9"
+    "content": "content---develop-core-concepts-arch-63-d-280"
+  },
+  "/develop/core-concepts/aspect-41b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-core-concepts-aspectd-88-4cf"
+  },
+  "/develop/core-concepts/aspect-programming-652": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-core-concepts-aspect-programming-59-e-0d6"
+  },
+  "/develop/core-concepts/aspect-runtime-fa7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-core-concepts-aspect-runtimedf-1-718"
+  },
+  "/develop/core-concepts/evm-compatible-9a6": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-core-concepts-evm-compatibleaa-3-18f"
+  },
+  "/develop/core-concepts/foundational-f1e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-core-concepts-foundationalfe-0-3ee"
+  },
+  "/develop/core-concepts/wasm-assemblyscript-5a4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-core-concepts-wasm-assemblyscriptfac-989"
+  },
+  "/develop/get-started-198": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-get-started-216-354"
+  },
+  "/develop/get-started/art-dev-intro-dff": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-get-started-art-dev-introad-4-f81"
+  },
+  "/develop/get-started/aspect-hello-world-6ba": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-get-started-aspect-hello-world-236-551"
+  },
+  "/develop/get-started/sol-hello-world-d54": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-get-started-sol-hello-world-349-f01"
+  },
+  "/develop/guides-e14": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-guides-94-a-311"
+  },
+  "/develop/guides/reentrancy-guard-545": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-guides-reentrancy-guard-158-cb9"
+  },
+  "/develop/node-b02": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-node-30-d-e49"
+  },
+  "/develop/node/local-dev-setup-5fe": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-node-local-dev-setupf-4-d-c50"
+  },
+  "/develop/node/testnet-node-setup-b16": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-node-testnet-node-setup-688-695"
+  },
+  "/develop/old/asolc-guide-b87": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-old-asolc-guideb-78-c99"
+  },
+  "/develop/old/aspect-examples-8fb": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-old-aspect-examples-1-fa-a06"
+  },
+  "/develop/old/aspect-examples/schedular-aspect-6e9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-old-aspect-examples-schedular-aspect-43-a-6c2"
+  },
+  "/develop/old/aspect-examples/security-aspect-a26": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-old-aspect-examples-security-aspect-043-d05"
+  },
+  "/develop/old/aspect-in-depth-b89": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-old-aspect-in-deptha-2-e-c04"
+  },
+  "/develop/old/aspect-in-depth/aspect-dd-a19": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-old-aspect-in-depth-aspect-ddca-4-c63"
+  },
+  "/develop/old/aspect-in-depth/aspect-tools-4e6": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-old-aspect-in-depth-aspect-toolsfa-4-e3c"
+  },
+  "/develop/old/quick-start-62f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-old-quick-start-37-e-4d4"
+  },
+  "/develop/old/quick-start/access-testnet-961": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-old-quick-start-access-testnet-600-12a"
+  },
+  "/develop/old/quick-start/develop-a-smart-contract-2b6": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-old-quick-start-develop-a-smart-contract-37-b-1f7"
+  },
+  "/develop/old/quick-start/develop-an-aspect-008": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-old-quick-start-develop-an-aspect-16-d-f1f"
+  },
+  "/develop/old/resources-95d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-old-resources-712-7a1"
+  },
+  "/develop/old/resources/faucet-c19": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-old-resources-faucet-706-465"
+  },
+  "/develop/old/resources/write-smart-contract-627": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-old-resources-write-smart-contract-0-d-3-698"
+  },
+  "/develop/old/start-a-local-node-533": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-old-start-a-local-nodef-40-d2e"
+  },
+  "/develop/old/web3js-guide-b12": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-old-web-3-js-guide-491-c42"
   },
   "/docs-3df": {
     "__comp": "__comp---theme-doc-page-1-be-9be",

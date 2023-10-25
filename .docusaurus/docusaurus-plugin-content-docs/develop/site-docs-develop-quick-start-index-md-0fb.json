@@ -14,8 +14,8 @@
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "🔍 Overview",
-    "permalink": "/develop/"
+    "title": "Build Your First Aspect",
+    "permalink": "/develop/get-started/aspect-hello-world/"
   },
   "next": {
     "title": "Accessing Testnet",

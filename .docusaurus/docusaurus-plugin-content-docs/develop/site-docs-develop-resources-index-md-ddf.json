@@ -17,8 +17,8 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Scheduler Aspect",
-    "permalink": "/develop/aspect-examples/schedular-aspect/"
+    "title": "Aspect Lib",
+    "permalink": "/develop/aspect-lib/"
   },
   "next": {
     "title": "Faucet",

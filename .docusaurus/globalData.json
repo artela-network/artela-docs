@@ -109,38 +109,143 @@
           "mainDocId": "index",
           "docs": [
             {
-              "id": "asolc-guide/index",
-              "path": "/develop/asolc-guide/",
+              "id": "advanced-concepts/account-abstraction/index",
+              "path": "/develop/advanced-concepts/account-abstraction/",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "aspect-examples/index",
-              "path": "/develop/aspect-examples/",
+              "id": "advanced-concepts/asolc/index",
+              "path": "/develop/advanced-concepts/asolc/",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "aspect-examples/schedular-aspect/index",
-              "path": "/develop/aspect-examples/schedular-aspect/",
+              "id": "advanced-concepts/communication/index",
+              "path": "/develop/advanced-concepts/communication/",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "aspect-examples/security-aspect/index",
-              "path": "/develop/aspect-examples/security-aspect/",
+              "id": "advanced-concepts/index",
+              "path": "/develop/advanced-concepts/",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "aspect-in-depth/aspect-dd/index",
-              "path": "/develop/aspect-in-depth/aspect-dd/",
+              "id": "advanced-concepts/jit-call/index",
+              "path": "/develop/advanced-concepts/jit-call/",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "aspect-in-depth/aspect-tools/index",
-              "path": "/develop/aspect-in-depth/aspect-tools/",
+              "id": "advanced-concepts/join-point/index",
+              "path": "/develop/advanced-concepts/join-point/",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "aspect-in-depth/index",
-              "path": "/develop/aspect-in-depth/",
+              "id": "advanced-concepts/jpm/index",
+              "path": "/develop/advanced-concepts/jpm/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "advanced-concepts/lifecycle/index",
+              "path": "/develop/advanced-concepts/lifecycle/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "advanced-concepts/runtime-api/index",
+              "path": "/develop/advanced-concepts/runtime-api/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "advanced-concepts/system-call/index",
+              "path": "/develop/advanced-concepts/system-call/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "aspect-lib/index",
+              "path": "/develop/aspect-lib/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "client/index",
+              "path": "/develop/client/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "client/javascript/index",
+              "path": "/develop/client/javascript/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "client/json-rpc/index",
+              "path": "/develop/client/json-rpc/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "core-concepts/arch/index",
+              "path": "/develop/core-concepts/arch/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "core-concepts/aspect-programming/index",
+              "path": "/develop/core-concepts/aspect-programming/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "core-concepts/aspect-runtime/index",
+              "path": "/develop/core-concepts/aspect-runtime/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "core-concepts/aspect/index",
+              "path": "/develop/core-concepts/aspect/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "core-concepts/evm-compatible/index",
+              "path": "/develop/core-concepts/evm-compatible/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "core-concepts/foundational/index",
+              "path": "/develop/core-concepts/foundational/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "core-concepts/index",
+              "path": "/develop/core-concepts/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "core-concepts/wasm-assemblyscript/index",
+              "path": "/develop/core-concepts/wasm-assemblyscript/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "get-started/art-dev-intro/index",
+              "path": "/develop/get-started/art-dev-intro/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "get-started/aspect-hello-world/index",
+              "path": "/develop/get-started/aspect-hello-world/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "get-started/index",
+              "path": "/develop/get-started/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "get-started/sol-hello-world/index",
+              "path": "/develop/get-started/sol-hello-world/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "guides/index",
+              "path": "/develop/guides/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "guides/reentrancy-guard/index",
+              "path": "/develop/guides/reentrancy-guard/",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -149,48 +254,98 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "quick-start/access-testnet/index",
-              "path": "/develop/quick-start/access-testnet/",
+              "id": "node/index",
+              "path": "/develop/node/",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "quick-start/develop-a-smart-contract/index",
-              "path": "/develop/quick-start/develop-a-smart-contract/",
+              "id": "node/local-dev-setup/index",
+              "path": "/develop/node/local-dev-setup/",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "quick-start/develop-an-aspect/index",
-              "path": "/develop/quick-start/develop-an-aspect/",
+              "id": "node/testnet-node-setup/index",
+              "path": "/develop/node/testnet-node-setup/",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "quick-start/index",
-              "path": "/develop/quick-start/",
+              "id": "old/asolc-guide/index",
+              "path": "/develop/old/asolc-guide/",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "resources/faucet/index",
-              "path": "/develop/resources/faucet/",
+              "id": "old/aspect-examples/index",
+              "path": "/develop/old/aspect-examples/",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "resources/index",
-              "path": "/develop/resources/",
+              "id": "old/aspect-examples/schedular-aspect/index",
+              "path": "/develop/old/aspect-examples/schedular-aspect/",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "resources/write-smart-contract/index",
-              "path": "/develop/resources/write-smart-contract/",
+              "id": "old/aspect-examples/security-aspect/index",
+              "path": "/develop/old/aspect-examples/security-aspect/",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "start-a-local-node/index",
-              "path": "/develop/start-a-local-node/",
+              "id": "old/aspect-in-depth/aspect-dd/index",
+              "path": "/develop/old/aspect-in-depth/aspect-dd/",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "web3js-guide/index",
-              "path": "/develop/web3js-guide/",
+              "id": "old/aspect-in-depth/aspect-tools/index",
+              "path": "/develop/old/aspect-in-depth/aspect-tools/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "old/aspect-in-depth/index",
+              "path": "/develop/old/aspect-in-depth/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "old/quick-start/access-testnet/index",
+              "path": "/develop/old/quick-start/access-testnet/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "old/quick-start/develop-a-smart-contract/index",
+              "path": "/develop/old/quick-start/develop-a-smart-contract/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "old/quick-start/develop-an-aspect/index",
+              "path": "/develop/old/quick-start/develop-an-aspect/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "old/quick-start/index",
+              "path": "/develop/old/quick-start/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "old/resources/faucet/index",
+              "path": "/develop/old/resources/faucet/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "old/resources/index",
+              "path": "/develop/old/resources/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "old/resources/write-smart-contract/index",
+              "path": "/develop/old/resources/write-smart-contract/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "old/start-a-local-node/index",
+              "path": "/develop/old/start-a-local-node/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "old/web3js-guide/index",
+              "path": "/develop/old/web3js-guide/",
               "sidebar": "tutorialSidebar"
             }
           ],

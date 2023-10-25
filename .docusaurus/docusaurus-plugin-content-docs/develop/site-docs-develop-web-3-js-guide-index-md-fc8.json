@@ -14,11 +14,11 @@
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "ASOLC Guide",
-    "permalink": "/develop/asolc-guide/"
+    "title": "Advanced Concepts",
+    "permalink": "/develop/advanced-concepts/"
   },
   "next": {
-    "title": "Start a Local Node",
-    "permalink": "/develop/start-a-local-node/"
+    "title": "Artela Client",
+    "permalink": "/develop/client/"
   }
 }

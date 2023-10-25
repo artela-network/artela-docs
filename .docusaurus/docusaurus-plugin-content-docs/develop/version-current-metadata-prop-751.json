@@ -17,155 +17,493 @@
       },
       {
         "type": "category",
-        "label": "Quick Start",
+        "label": "🏃 Get Started",
         "collapsible": true,
         "collapsed": true,
         "items": [
           {
             "type": "link",
-            "label": "Access Testnet",
-            "href": "/develop/quick-start/access-testnet/",
-            "docId": "quick-start/access-testnet/index"
+            "label": "Artela Development Intro",
+            "href": "/develop/get-started/art-dev-intro/",
+            "docId": "get-started/art-dev-intro/index"
           },
           {
             "type": "link",
             "label": "Develop a Smart Contract",
-            "href": "/develop/quick-start/develop-a-smart-contract/",
-            "docId": "quick-start/develop-a-smart-contract/index"
+            "href": "/develop/get-started/sol-hello-world/",
+            "docId": "get-started/sol-hello-world/index"
           },
           {
             "type": "link",
             "label": "Develop an Aspect",
-            "href": "/develop/quick-start/develop-an-aspect/",
-            "docId": "quick-start/develop-an-aspect/index"
+            "href": "/develop/get-started/aspect-hello-world/",
+            "docId": "get-started/aspect-hello-world/index"
           }
         ],
-        "href": "/develop/quick-start/"
-      },
-      {
-        "type": "link",
-        "label": "ASOLC Guide",
-        "href": "/develop/asolc-guide/",
-        "docId": "asolc-guide/index"
-      },
-      {
-        "type": "link",
-        "label": "Web3.js Guide",
-        "href": "/develop/web3js-guide/",
-        "docId": "web3js-guide/index"
-      },
-      {
-        "type": "link",
-        "label": "Start a Local Node",
-        "href": "/develop/start-a-local-node/",
-        "docId": "start-a-local-node/index"
+        "href": "/develop/get-started/"
       },
       {
         "type": "category",
-        "label": "Aspect In Depth",
+        "label": "⏰ Core Concepts",
         "collapsible": true,
         "collapsed": true,
         "items": [
           {
             "type": "link",
-            "label": "Aspect Tool",
-            "href": "/develop/aspect-in-depth/aspect-tools/",
-            "docId": "aspect-in-depth/aspect-tools/index"
+            "label": "Foundational Topics",
+            "href": "/develop/core-concepts/foundational/",
+            "docId": "core-concepts/foundational/index"
           },
           {
             "type": "link",
-            "label": "Aspect Deep Dive",
-            "href": "/develop/aspect-in-depth/aspect-dd/",
-            "docId": "aspect-in-depth/aspect-dd/index"
+            "label": "Architecture",
+            "href": "/develop/core-concepts/arch/",
+            "docId": "core-concepts/arch/index"
+          },
+          {
+            "type": "link",
+            "label": "EVM Compatible",
+            "href": "/develop/core-concepts/evm-compatible/",
+            "docId": "core-concepts/evm-compatible/index"
+          },
+          {
+            "type": "link",
+            "label": "Aspect Programming",
+            "href": "/develop/core-concepts/aspect-programming/",
+            "docId": "core-concepts/aspect-programming/index"
+          },
+          {
+            "type": "link",
+            "label": "Aspect",
+            "href": "/develop/core-concepts/aspect/",
+            "docId": "core-concepts/aspect/index"
+          },
+          {
+            "type": "link",
+            "label": "Aspect Runtime",
+            "href": "/develop/core-concepts/aspect-runtime/",
+            "docId": "core-concepts/aspect-runtime/index"
+          },
+          {
+            "type": "link",
+            "label": "WASM & Assembly Script",
+            "href": "/develop/core-concepts/wasm-assemblyscript/",
+            "docId": "core-concepts/wasm-assemblyscript/index"
           }
         ],
-        "href": "/develop/aspect-in-depth/"
+        "href": "/develop/core-concepts/"
       },
       {
         "type": "category",
-        "label": "Aspect Examples",
+        "label": "🤿 Advanced Concepts",
         "collapsible": true,
         "collapsed": true,
         "items": [
           {
             "type": "link",
-            "label": "Security Aspect",
-            "href": "/develop/aspect-examples/security-aspect/",
-            "docId": "aspect-examples/security-aspect/index"
+            "label": "ASOLC",
+            "href": "/develop/advanced-concepts/asolc/",
+            "docId": "advanced-concepts/asolc/index"
           },
           {
             "type": "link",
-            "label": "On-Chain Automation Aspect",
-            "href": "/develop/aspect-examples/schedular-aspect/",
-            "docId": "aspect-examples/schedular-aspect/index"
+            "label": "Join Point Model",
+            "href": "/develop/advanced-concepts/jpm/",
+            "docId": "advanced-concepts/jpm/index"
+          },
+          {
+            "type": "link",
+            "label": "Aspect Lifecycle",
+            "href": "/develop/advanced-concepts/lifecycle/",
+            "docId": "advanced-concepts/lifecycle/index"
+          },
+          {
+            "type": "link",
+            "label": "Join Point",
+            "href": "/develop/advanced-concepts/join-point/",
+            "docId": "advanced-concepts/join-point/index"
+          },
+          {
+            "type": "link",
+            "label": "Communication between Aspects & Smart Contracts",
+            "href": "/develop/advanced-concepts/communication/",
+            "docId": "advanced-concepts/communication/index"
+          },
+          {
+            "type": "link",
+            "label": "Aspect Runtime APIs",
+            "href": "/develop/advanced-concepts/runtime-api/",
+            "docId": "advanced-concepts/runtime-api/index"
+          },
+          {
+            "type": "link",
+            "label": "System Call",
+            "href": "/develop/advanced-concepts/system-call/",
+            "docId": "advanced-concepts/system-call/index"
+          },
+          {
+            "type": "link",
+            "label": "JIT(Just In Time) Call",
+            "href": "/develop/advanced-concepts/jit-call/",
+            "docId": "advanced-concepts/jit-call/index"
+          },
+          {
+            "type": "link",
+            "label": "Account Abstraction",
+            "href": "/develop/advanced-concepts/account-abstraction/",
+            "docId": "advanced-concepts/account-abstraction/index"
           }
         ],
-        "href": "/develop/aspect-examples/"
+        "href": "/develop/advanced-concepts/"
       },
       {
         "type": "category",
-        "label": "Resources",
+        "label": "🤖 Client",
         "collapsible": true,
         "collapsed": true,
         "items": [
           {
             "type": "link",
-            "label": "Faucet",
-            "href": "/develop/resources/faucet/",
-            "docId": "resources/faucet/index"
+            "label": "JSON RPC APIs",
+            "href": "/develop/client/json-rpc/",
+            "docId": "client/json-rpc/index"
           },
           {
             "type": "link",
-            "label": "Writing Solidity Smart Contract on Artela",
-            "href": "/develop/resources/write-smart-contract/",
-            "docId": "resources/write-smart-contract/index"
+            "label": "Artela Web3 Javascript APIs",
+            "href": "/develop/client/javascript/",
+            "docId": "client/javascript/index"
           }
         ],
-        "href": "/develop/resources/"
+        "href": "/develop/client/"
+      },
+      {
+        "type": "category",
+        "label": "🛜 Node",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Setup Local Devnet",
+            "href": "/develop/node/local-dev-setup/",
+            "docId": "node/local-dev-setup/index"
+          },
+          {
+            "type": "link",
+            "label": "Setup a Testnet Node",
+            "href": "/develop/node/testnet-node-setup/",
+            "docId": "node/testnet-node-setup/index"
+          }
+        ],
+        "href": "/develop/node/"
+      },
+      {
+        "type": "category",
+        "label": "🧑‍🏫 Guides",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Aspect Reentrancy Guard",
+            "href": "/develop/guides/reentrancy-guard/",
+            "docId": "guides/reentrancy-guard/index"
+          }
+        ],
+        "href": "/develop/guides/"
+      },
+      {
+        "type": "link",
+        "label": "🛸 Aspect Lib",
+        "href": "/develop/aspect-lib/",
+        "docId": "aspect-lib/index"
+      },
+      {
+        "type": "category",
+        "label": "old",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "category",
+            "label": "Quick Start",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Access Testnet",
+                "href": "/develop/old/quick-start/access-testnet/",
+                "docId": "old/quick-start/access-testnet/index"
+              },
+              {
+                "type": "link",
+                "label": "Develop a Smart Contract",
+                "href": "/develop/old/quick-start/develop-a-smart-contract/",
+                "docId": "old/quick-start/develop-a-smart-contract/index"
+              },
+              {
+                "type": "link",
+                "label": "Develop an Aspect",
+                "href": "/develop/old/quick-start/develop-an-aspect/",
+                "docId": "old/quick-start/develop-an-aspect/index"
+              }
+            ],
+            "href": "/develop/old/quick-start/"
+          },
+          {
+            "type": "link",
+            "label": "Web3.js Guide",
+            "href": "/develop/old/web3js-guide/",
+            "docId": "old/web3js-guide/index"
+          },
+          {
+            "type": "link",
+            "label": "Start a Local Node",
+            "href": "/develop/old/start-a-local-node/",
+            "docId": "old/start-a-local-node/index"
+          },
+          {
+            "type": "category",
+            "label": "Aspect In Depth",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Aspect Tool",
+                "href": "/develop/old/aspect-in-depth/aspect-tools/",
+                "docId": "old/aspect-in-depth/aspect-tools/index"
+              },
+              {
+                "type": "link",
+                "label": "Aspect Deep Dive",
+                "href": "/develop/old/aspect-in-depth/aspect-dd/",
+                "docId": "old/aspect-in-depth/aspect-dd/index"
+              }
+            ],
+            "href": "/develop/old/aspect-in-depth/"
+          },
+          {
+            "type": "category",
+            "label": "Aspect Examples",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Security Aspect",
+                "href": "/develop/old/aspect-examples/security-aspect/",
+                "docId": "old/aspect-examples/security-aspect/index"
+              },
+              {
+                "type": "link",
+                "label": "On-Chain Automation Aspect",
+                "href": "/develop/old/aspect-examples/schedular-aspect/",
+                "docId": "old/aspect-examples/schedular-aspect/index"
+              }
+            ],
+            "href": "/develop/old/aspect-examples/"
+          },
+          {
+            "type": "category",
+            "label": "Resources",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Faucet",
+                "href": "/develop/old/resources/faucet/",
+                "docId": "old/resources/faucet/index"
+              },
+              {
+                "type": "link",
+                "label": "Writing Solidity Smart Contract on Artela",
+                "href": "/develop/old/resources/write-smart-contract/",
+                "docId": "old/resources/write-smart-contract/index"
+              }
+            ],
+            "href": "/develop/old/resources/"
+          },
+          {
+            "type": "link",
+            "label": "ASOLC Guide",
+            "href": "/develop/old/asolc-guide/",
+            "docId": "old/asolc-guide/index"
+          }
+        ]
       }
     ]
   },
   "docs": {
-    "asolc-guide/index": {
-      "id": "asolc-guide/index",
-      "title": "ASOLC Guide",
-      "description": "Similar to Ethereum, Artela supports EVM smart contracts. However, Artela runs a modified version of the EVM, which is fully compatible with legacy Solidity but includes additional features such as state and call stack tracing.",
+    "advanced-concepts/account-abstraction/index": {
+      "id": "advanced-concepts/account-abstraction/index",
+      "title": "Account Abstraction",
+      "description": "",
       "sidebar": "tutorialSidebar"
     },
-    "aspect-examples/index": {
-      "id": "aspect-examples/index",
-      "title": "Aspect Examples",
-      "description": "Explore step-by-step examples of Aspect programming in action. These examples demonstrate how you can use Aspects to enhance the functionality and security of your smart contracts.",
+    "advanced-concepts/asolc/index": {
+      "id": "advanced-concepts/asolc/index",
+      "title": "ASOLC",
+      "description": "",
       "sidebar": "tutorialSidebar"
     },
-    "aspect-examples/schedular-aspect/index": {
-      "id": "aspect-examples/schedular-aspect/index",
-      "title": "Scheduler Aspect",
-      "description": "The Scheduler Aspect is a practical example of building an on-chain scheduled transaction trigger. In this scenario, we'll create an ERC20 token called ArtToken and use a Broker contract to schedule fund transfers to a designated account at regular 5-block intervals.",
+    "advanced-concepts/communication/index": {
+      "id": "advanced-concepts/communication/index",
+      "title": "Communication between Aspects & Smart Contracts",
+      "description": "",
       "sidebar": "tutorialSidebar"
     },
-    "aspect-examples/security-aspect/index": {
-      "id": "aspect-examples/security-aspect/index",
-      "title": "Security Aspect",
-      "description": "The \"Security Aspect on Artela\" is a security implementation that safeguards transactions, particularly in scenarios where a bookkeeping contract may be vulnerable to reentrancy attacks due to unpredictable bugs. This Aspect verifies the balance in the contract and compares it to the actual balance, intercepting any transactions associated with such attacks.",
+    "advanced-concepts/index": {
+      "id": "advanced-concepts/index",
+      "title": "Advanced Concepts",
+      "description": "",
       "sidebar": "tutorialSidebar"
     },
-    "aspect-in-depth/aspect-dd/index": {
-      "id": "aspect-in-depth/aspect-dd/index",
-      "title": "Aspect Deep Dive",
-      "description": "Welcome to the deep dive of Aspect. This guide will introduce you some concepts and functionalities of Aspects in depth.",
+    "advanced-concepts/jit-call/index": {
+      "id": "advanced-concepts/jit-call/index",
+      "title": "JIT(Just In Time) Call",
+      "description": "",
       "sidebar": "tutorialSidebar"
     },
-    "aspect-in-depth/aspect-tools/index": {
-      "id": "aspect-in-depth/aspect-tools/index",
-      "title": "Aspect Tool",
-      "description": "Welcome to the Aspect Tool Guide. This guide will walk you through all functionalities of aspect-tool with an example. This example including the process of how to use aspect-tool to install, initialize, and generate code for your projects.",
+    "advanced-concepts/join-point/index": {
+      "id": "advanced-concepts/join-point/index",
+      "title": "Join Point",
+      "description": "",
       "sidebar": "tutorialSidebar"
     },
-    "aspect-in-depth/index": {
-      "id": "aspect-in-depth/index",
-      "title": "Aspect In Depth",
-      "description": "This is an in-depth guide of Aspect development, we will go through most of the functionalities in aspect-tool(a commandline tool we built to make the Aspect development easier) and the concepts of Aspect(how it works, how it communicates with base layer and etc).",
+    "advanced-concepts/jpm/index": {
+      "id": "advanced-concepts/jpm/index",
+      "title": "Join Point Model",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "advanced-concepts/lifecycle/index": {
+      "id": "advanced-concepts/lifecycle/index",
+      "title": "Aspect Lifecycle",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "advanced-concepts/runtime-api/index": {
+      "id": "advanced-concepts/runtime-api/index",
+      "title": "Aspect Runtime APIs",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "advanced-concepts/system-call/index": {
+      "id": "advanced-concepts/system-call/index",
+      "title": "System Call",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "aspect-lib/index": {
+      "id": "aspect-lib/index",
+      "title": "Aspect Lib",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "client/index": {
+      "id": "client/index",
+      "title": "Artela Client",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "client/javascript/index": {
+      "id": "client/javascript/index",
+      "title": "Artela Web3 Javascript APIs",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "client/json-rpc/index": {
+      "id": "client/json-rpc/index",
+      "title": "JSON RPC APIs",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "core-concepts/arch/index": {
+      "id": "core-concepts/arch/index",
+      "title": "Architecture",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "core-concepts/aspect-programming/index": {
+      "id": "core-concepts/aspect-programming/index",
+      "title": "Aspect Programming",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "core-concepts/aspect-runtime/index": {
+      "id": "core-concepts/aspect-runtime/index",
+      "title": "Aspect Runtime",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "core-concepts/aspect/index": {
+      "id": "core-concepts/aspect/index",
+      "title": "Aspect",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "core-concepts/evm-compatible/index": {
+      "id": "core-concepts/evm-compatible/index",
+      "title": "EVM Compatible",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "core-concepts/foundational/index": {
+      "id": "core-concepts/foundational/index",
+      "title": "Foundational Topics",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "core-concepts/index": {
+      "id": "core-concepts/index",
+      "title": "Core Concepts",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "core-concepts/wasm-assemblyscript/index": {
+      "id": "core-concepts/wasm-assemblyscript/index",
+      "title": "WASM & Assembly Script",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "get-started/art-dev-intro/index": {
+      "id": "get-started/art-dev-intro/index",
+      "title": "Introduction to Artela Development",
+      "description": "WIP",
+      "sidebar": "tutorialSidebar"
+    },
+    "get-started/aspect-hello-world/index": {
+      "id": "get-started/aspect-hello-world/index",
+      "title": "Build Your First Aspect",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "get-started/index": {
+      "id": "get-started/index",
+      "title": "Quick Start",
+      "description": "Welcome to the Artela Quick Start Guide! This section will walk you through step by step about how to build dApps on Artela with an example.",
+      "sidebar": "tutorialSidebar"
+    },
+    "get-started/sol-hello-world/index": {
+      "id": "get-started/sol-hello-world/index",
+      "title": "Build Your Smart Contract",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "guides/index": {
+      "id": "guides/index",
+      "title": "Guides",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "guides/reentrancy-guard/index": {
+      "id": "guides/reentrancy-guard/index",
+      "title": "Aspect Reentrancy Guard",
+      "description": "",
       "sidebar": "tutorialSidebar"
     },
     "index": {
@@ -174,56 +512,116 @@
       "description": "Artela is an EVM compatible blockchain network built with Cosmos SDK. You can seamlessly deploy your Ethereum dApps on Artela without hassle. And at the mean time, you can also leverage your dApp with Aspect programming to make it even more powerful.",
       "sidebar": "tutorialSidebar"
     },
-    "quick-start/access-testnet/index": {
-      "id": "quick-start/access-testnet/index",
+    "node/index": {
+      "id": "node/index",
+      "title": "Node",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "node/local-dev-setup/index": {
+      "id": "node/local-dev-setup/index",
+      "title": "Setup Local Devnet",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "node/testnet-node-setup/index": {
+      "id": "node/testnet-node-setup/index",
+      "title": "Setup a Testnet Node",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "old/asolc-guide/index": {
+      "id": "old/asolc-guide/index",
+      "title": "ASOLC Guide",
+      "description": "Similar to Ethereum, Artela supports EVM smart contracts. However, Artela runs a modified version of the EVM, which is fully compatible with legacy Solidity but includes additional features such as state and call stack tracing.",
+      "sidebar": "tutorialSidebar"
+    },
+    "old/aspect-examples/index": {
+      "id": "old/aspect-examples/index",
+      "title": "Aspect Examples",
+      "description": "Explore step-by-step examples of Aspect programming in action. These examples demonstrate how you can use Aspects to enhance the functionality and security of your smart contracts.",
+      "sidebar": "tutorialSidebar"
+    },
+    "old/aspect-examples/schedular-aspect/index": {
+      "id": "old/aspect-examples/schedular-aspect/index",
+      "title": "Scheduler Aspect",
+      "description": "The Scheduler Aspect is a practical example of building an on-chain scheduled transaction trigger. In this scenario, we'll create an ERC20 token called ArtToken and use a Broker contract to schedule fund transfers to a designated account at regular 5-block intervals.",
+      "sidebar": "tutorialSidebar"
+    },
+    "old/aspect-examples/security-aspect/index": {
+      "id": "old/aspect-examples/security-aspect/index",
+      "title": "Security Aspect",
+      "description": "The \"Security Aspect on Artela\" is a security implementation that safeguards transactions, particularly in scenarios where a bookkeeping contract may be vulnerable to reentrancy attacks due to unpredictable bugs. This Aspect verifies the balance in the contract and compares it to the actual balance, intercepting any transactions associated with such attacks.",
+      "sidebar": "tutorialSidebar"
+    },
+    "old/aspect-in-depth/aspect-dd/index": {
+      "id": "old/aspect-in-depth/aspect-dd/index",
+      "title": "Aspect Deep Dive",
+      "description": "Welcome to the deep dive of Aspect. This guide will introduce you some concepts and functionalities of Aspects in depth.",
+      "sidebar": "tutorialSidebar"
+    },
+    "old/aspect-in-depth/aspect-tools/index": {
+      "id": "old/aspect-in-depth/aspect-tools/index",
+      "title": "Aspect Tool",
+      "description": "Welcome to the Aspect Tool Guide. This guide will walk you through all functionalities of aspect-tool with an example. This example including the process of how to use aspect-tool to install, initialize, and generate code for your projects.",
+      "sidebar": "tutorialSidebar"
+    },
+    "old/aspect-in-depth/index": {
+      "id": "old/aspect-in-depth/index",
+      "title": "Aspect In Depth",
+      "description": "This is an in-depth guide of Aspect development, we will go through most of the functionalities in aspect-tool(a commandline tool we built to make the Aspect development easier) and the concepts of Aspect(how it works, how it communicates with base layer and etc).",
+      "sidebar": "tutorialSidebar"
+    },
+    "old/quick-start/access-testnet/index": {
+      "id": "old/quick-start/access-testnet/index",
       "title": "Accessing Testnet",
       "description": "The Artela Testnet is in its beta release phase. Kindly note:",
       "sidebar": "tutorialSidebar"
     },
-    "quick-start/develop-a-smart-contract/index": {
-      "id": "quick-start/develop-a-smart-contract/index",
+    "old/quick-start/develop-a-smart-contract/index": {
+      "id": "old/quick-start/develop-a-smart-contract/index",
       "title": "Developing Smart Contracts with Artela",
       "description": "Artela's EVM supports smart contracts much like Ethereum. However, it not only maintains full compatibility with original version of Solidity but also introduces some enhancements, including state and call stack tracing.",
       "sidebar": "tutorialSidebar"
     },
-    "quick-start/develop-an-aspect/index": {
-      "id": "quick-start/develop-an-aspect/index",
+    "old/quick-start/develop-an-aspect/index": {
+      "id": "old/quick-start/develop-an-aspect/index",
       "title": "Develop an Aspect",
       "description": "An Aspect is a dynamic, stateful extension that leverages Web Assembly (WASM) to introduce additional functionalities into the lifecycles of blocks or transactions specific to smart contracts. This guide will walk you through the process of building a basic Aspect using AssemblyScript (a subset of TypeScript).",
       "sidebar": "tutorialSidebar"
     },
-    "quick-start/index": {
-      "id": "quick-start/index",
+    "old/quick-start/index": {
+      "id": "old/quick-start/index",
       "title": "Quick Start",
       "description": "Welcome to the Artela Quick Start Guide!",
       "sidebar": "tutorialSidebar"
     },
-    "resources/faucet/index": {
-      "id": "resources/faucet/index",
+    "old/resources/faucet/index": {
+      "id": "old/resources/faucet/index",
       "title": "Faucet",
       "description": "When using the Artela testnet, you have the choice to either use public accounts provided for your convenience or create and utilize your own accounts. Here's a breakdown of both options:",
       "sidebar": "tutorialSidebar"
     },
-    "resources/index": {
-      "id": "resources/index",
+    "old/resources/index": {
+      "id": "old/resources/index",
       "title": "Resources",
       "description": "Here you'll find useful tools and guides to help you get started with Artela.",
       "sidebar": "tutorialSidebar"
     },
-    "resources/write-smart-contract/index": {
-      "id": "resources/write-smart-contract/index",
+    "old/resources/write-smart-contract/index": {
+      "id": "old/resources/write-smart-contract/index",
       "title": "Writing Solidity Smart Contract on Artela",
       "description": "If you're eager to get started with Solidity smart contracts on Artela, follow these concise steps to create and deploy your smart contract using Remix:",
       "sidebar": "tutorialSidebar"
     },
-    "start-a-local-node/index": {
-      "id": "start-a-local-node/index",
+    "old/start-a-local-node/index": {
+      "id": "old/start-a-local-node/index",
       "title": "Start a Local Node",
       "description": "1. Building the Source",
       "sidebar": "tutorialSidebar"
     },
-    "web3js-guide/index": {
-      "id": "web3js-guide/index",
+    "old/web3js-guide/index": {
+      "id": "old/web3js-guide/index",
       "title": "Web3.js Guide",
       "description": "@artela/web3 is a modified version of Ethereum's web3.js 1.x, supporting Aspect operations. This package retains full compatibility with the original web3.js, with minor adjustments. If your dApp utilizes the original web3.js, transitioning to Artela is as straightforward as replacing the package and import statements.",
       "sidebar": "tutorialSidebar"

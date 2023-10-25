@@ -19,5 +19,9 @@
   "previous": {
     "title": "Faucet",
     "permalink": "/develop/resources/faucet/"
+  },
+  "next": {
+    "title": "ASOLC Guide",
+    "permalink": "/develop/asolc-guide/"
   }
 }

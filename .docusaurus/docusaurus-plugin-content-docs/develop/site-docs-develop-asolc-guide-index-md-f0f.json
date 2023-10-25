@@ -14,11 +14,7 @@
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Develop an Aspect",
-    "permalink": "/develop/quick-start/develop-an-aspect/"
-  },
-  "next": {
-    "title": "Web3.js Guide",
-    "permalink": "/develop/web3js-guide/"
+    "title": "Writing Solidity Smart Contract on Artela",
+    "permalink": "/develop/resources/write-smart-contract/"
   }
 }
