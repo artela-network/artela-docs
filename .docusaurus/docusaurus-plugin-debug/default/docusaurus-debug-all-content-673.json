@@ -565,14 +565,14 @@
             {
               "unversionedId": "index",
               "id": "index",
-              "title": "Welcome to Artela Testnet",
-              "description": "Dive into the Artela Testnet playground – your entrypoint to build dApps on Artela Testnet. This guide offers insights on accessing the Artela Testnet, crafting an Aspect, and seamlessly deploying and binding it to a smart contract.",
-              "source": "@site/docs/develop/index.md",
+              "title": "🔍 Overview",
+              "description": "Artela is an EVM compatible blockchain network built with Cosmos SDK. You can seamlessly deploy your Ethereum dApps on Artela without hassle. And at the mean time, you can also leverage your dApp with Aspect programming to make it even more powerful.",
+              "source": "@site/docs/develop/index.mdx",
               "sourceDirName": ".",
               "slug": "/",
               "permalink": "/develop/",
               "draft": false,
-              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/index.md",
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/index.mdx",
               "tags": [],
               "version": "current",
               "sidebarPosition": 1,
@@ -682,7 +682,7 @@
               "frontMatter": {},
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Welcome to Artela Testnet",
+                "title": "🔍 Overview",
                 "permalink": "/develop/"
               },
               "next": {

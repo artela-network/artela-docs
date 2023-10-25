@@ -44,11 +44,11 @@ export default [
   },
   {
     path: '/develop',
-    component: ComponentCreator('/develop', 'ec6'),
+    component: ComponentCreator('/develop', '771'),
     routes: [
       {
         path: '/develop',
-        component: ComponentCreator('/develop', 'e83'),
+        component: ComponentCreator('/develop', '553'),
         exact: true,
         sidebar: "tutorialSidebar"
       },

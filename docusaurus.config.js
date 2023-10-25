@@ -112,7 +112,7 @@ const config = {
         },
         {
           position: 'left',
-          label: 'Develop',
+          label: 'Developer',
           to: '/develop',
         },
 
@@ -197,7 +197,7 @@ const config = {
       theme: lightCodeTheme,
       darkTheme: darkCodeTheme,
     },
-   
+
     algolia: {
       appId: "QLS2QSP47E",
       apiKey: "4d9feeb481e3cfef8f91bbc63e090042",

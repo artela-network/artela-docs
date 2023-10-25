@@ -90,7 +90,7 @@ export default {
         },
         {
           "position": "left",
-          "label": "Develop",
+          "label": "Developer",
           "to": "/develop"
         },
         {
