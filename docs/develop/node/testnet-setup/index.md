@@ -110,7 +110,7 @@ The configure of create a testnet
 
 - --chain-id
 
-  With a format of artela_<NUMBER>-1, NUMBER could be one of **`11820`**, **`11821`**.
+  With a format of artela_\<NUMBER\>-1, NUMBER could be one of **`11820`**, **`11821`**.
 
 - --v
 
