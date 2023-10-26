@@ -551,7 +551,7 @@
               "unversionedId": "advanced-concepts/jpm/index",
               "id": "advanced-concepts/jpm/index",
               "title": "Join Point Model",
-              "description": "",
+              "description": "In this section, we present high-level specifications of the join point model, the detailed components are presented in the following sections.",
               "source": "@site/docs/develop/advanced-concepts/jpm/index.md",
               "sourceDirName": "advanced-concepts/jpm",
               "slug": "/advanced-concepts/jpm/",
@@ -656,37 +656,118 @@
               }
             },
             {
-              "unversionedId": "aspect-lib/index",
-              "id": "aspect-lib/index",
-              "title": "Aspect Lib",
+              "unversionedId": "client/cosmos-grpc/index",
+              "id": "client/cosmos-grpc/index",
+              "title": "Cosmos gRPC",
               "description": "",
-              "source": "@site/docs/develop/aspect-lib/index.md",
-              "sourceDirName": "aspect-lib",
-              "slug": "/aspect-lib/",
-              "permalink": "/develop/aspect-lib/",
+              "source": "@site/docs/develop/client/cosmos-grpc/index.md",
+              "sourceDirName": "client/cosmos-grpc",
+              "slug": "/client/cosmos-grpc/",
+              "permalink": "/develop/client/cosmos-grpc/",
               "draft": false,
-              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/aspect-lib/index.md",
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/client/cosmos-grpc/index.md",
               "tags": [],
               "version": "current",
-              "sidebarPosition": 8,
+              "sidebarPosition": 1,
               "frontMatter": {
-                "sidebar_position": 8
+                "sidebar_position": 1
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Aspect Reentrancy Guard",
-                "permalink": "/develop/guides/reentrancy-guard/"
+                "title": "Artela Client",
+                "permalink": "/develop/client/"
               },
               "next": {
-                "title": "Quick Start",
-                "permalink": "/develop/old/quick-start/"
+                "title": "Ethereum JSON RPC APIs",
+                "permalink": "/develop/client/ethereum-json-rpc/"
+              }
+            },
+            {
+              "unversionedId": "client/ethereum-json-rpc/index",
+              "id": "client/ethereum-json-rpc/index",
+              "title": "Ethereum JSON RPC APIs",
+              "description": "The JSON-RPC Server provides an API that facilitates connection to the Artela blockchain and interaction with the EVM. JSON-RPC is a stateless, lightweight protocol for remote procedure calls (RPC). It defines various data structures and the rules governing their processing. JSON-RPC is compatible with multiple transport protocols. Artela, in particular, supports JSON-RPC over HTTP and WebSocket.",
+              "source": "@site/docs/develop/client/ethereum-json-rpc/index.md",
+              "sourceDirName": "client/ethereum-json-rpc",
+              "slug": "/client/ethereum-json-rpc/",
+              "permalink": "/develop/client/ethereum-json-rpc/",
+              "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/client/ethereum-json-rpc/index.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_position": 1
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Cosmos gRPC",
+                "permalink": "/develop/client/cosmos-grpc/"
+              },
+              "next": {
+                "title": "Tendermint RPC",
+                "permalink": "/develop/client/tendermint-rpc/"
+              }
+            },
+            {
+              "unversionedId": "client/examples/deploy-call-contract",
+              "id": "client/examples/deploy-call-contract",
+              "title": "Deploy & Call ERC20 Contract",
+              "description": "1. Contract",
+              "source": "@site/docs/develop/client/examples/deploy-call-contract.md",
+              "sourceDirName": "client/examples",
+              "slug": "/client/examples/deploy-call-contract",
+              "permalink": "/develop/client/examples/deploy-call-contract",
+              "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/client/examples/deploy-call-contract.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Sending Ethereum Transactions to Artela Testnet",
+                "permalink": "/develop/client/examples/ethereum-tx"
+              },
+              "next": {
+                "title": "Node",
+                "permalink": "/develop/node/"
+              }
+            },
+            {
+              "unversionedId": "client/examples/ethereum-tx",
+              "id": "client/examples/ethereum-tx",
+              "title": "Sending Ethereum Transactions to Artela Testnet",
+              "description": "1. Create and top up your account",
+              "source": "@site/docs/develop/client/examples/ethereum-tx.md",
+              "sourceDirName": "client/examples",
+              "slug": "/client/examples/ethereum-tx",
+              "permalink": "/develop/client/examples/ethereum-tx",
+              "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/client/examples/ethereum-tx.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_position": 1
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Tendermint RPC",
+                "permalink": "/develop/client/tendermint-rpc/"
+              },
+              "next": {
+                "title": "Deploy & Call ERC20 Contract",
+                "permalink": "/develop/client/examples/deploy-call-contract"
               }
             },
             {
               "unversionedId": "client/index",
               "id": "client/index",
               "title": "Artela Client",
-              "description": "",
+              "description": "The Artela Network supports different clients in order to support Cosmos and Ethereum transactions and queries.",
               "source": "@site/docs/develop/client/index.md",
               "sourceDirName": "client",
               "slug": "/client/",
@@ -705,62 +786,35 @@
                 "permalink": "/develop/advanced-concepts/account-abstraction/"
               },
               "next": {
-                "title": "JSON RPC APIs",
-                "permalink": "/develop/client/json-rpc/"
+                "title": "Cosmos gRPC",
+                "permalink": "/develop/client/cosmos-grpc/"
               }
             },
             {
-              "unversionedId": "client/javascript/index",
-              "id": "client/javascript/index",
-              "title": "Artela Web3 Javascript APIs",
-              "description": "",
-              "source": "@site/docs/develop/client/javascript/index.md",
-              "sourceDirName": "client/javascript",
-              "slug": "/client/javascript/",
-              "permalink": "/develop/client/javascript/",
+              "unversionedId": "client/tendermint-rpc/index",
+              "id": "client/tendermint-rpc/index",
+              "title": "Tendermint RPC",
+              "description": "Tendermint supports the following RPC protocols:",
+              "source": "@site/docs/develop/client/tendermint-rpc/index.md",
+              "sourceDirName": "client/tendermint-rpc",
+              "slug": "/client/tendermint-rpc/",
+              "permalink": "/develop/client/tendermint-rpc/",
               "draft": false,
-              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/client/javascript/index.md",
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/client/tendermint-rpc/index.md",
               "tags": [],
               "version": "current",
-              "sidebarPosition": 3,
+              "sidebarPosition": 1,
               "frontMatter": {
-                "sidebar_position": 3
+                "sidebar_position": 1
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "JSON RPC APIs",
-                "permalink": "/develop/client/json-rpc/"
+                "title": "Ethereum JSON RPC APIs",
+                "permalink": "/develop/client/ethereum-json-rpc/"
               },
               "next": {
-                "title": "Node",
-                "permalink": "/develop/node/"
-              }
-            },
-            {
-              "unversionedId": "client/json-rpc/index",
-              "id": "client/json-rpc/index",
-              "title": "JSON RPC APIs",
-              "description": "",
-              "source": "@site/docs/develop/client/json-rpc/index.md",
-              "sourceDirName": "client/json-rpc",
-              "slug": "/client/json-rpc/",
-              "permalink": "/develop/client/json-rpc/",
-              "draft": false,
-              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/client/json-rpc/index.md",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 2,
-              "frontMatter": {
-                "sidebar_position": 2
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Artela Client",
-                "permalink": "/develop/client/"
-              },
-              "next": {
-                "title": "Artela Web3 Javascript APIs",
-                "permalink": "/develop/client/javascript/"
+                "title": "Sending Ethereum Transactions to Artela Testnet",
+                "permalink": "/develop/client/examples/ethereum-tx"
               }
             },
             {
@@ -794,7 +848,7 @@
               "unversionedId": "core-concepts/aspect-programming/index",
               "id": "core-concepts/aspect-programming/index",
               "title": "Aspect Programming",
-              "description": "",
+              "description": "Aspect Programming introduces a powerful paradigm built around the Join Point Model (JPM). This model centers on three pivotal components:",
               "source": "@site/docs/develop/core-concepts/aspect-programming/index.md",
               "sourceDirName": "core-concepts/aspect-programming",
               "slug": "/core-concepts/aspect-programming/",
@@ -848,7 +902,7 @@
               "unversionedId": "core-concepts/aspect/index",
               "id": "core-concepts/aspect/index",
               "title": "Aspect",
-              "description": "",
+              "description": "Aspect introduces a dynamic mechanism to implement system-level features on a blockchain. Simply put, an Aspect is akin to a system extension, crafted in WASM, which can be tethered to any smart contract. It offers the flexibility to either augment the capabilities of the target contract or monitor its activities and initiate specific actions when predefined conditions align.",
               "source": "@site/docs/develop/core-concepts/aspect/index.md",
               "sourceDirName": "core-concepts/aspect",
               "slug": "/core-concepts/aspect/",
@@ -1106,8 +1160,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Setup a Testnet Node",
-                "permalink": "/develop/node/testnet-node-setup/"
+                "title": "Setup a TestNet",
+                "permalink": "/develop/node/testnet-setup/"
               },
               "next": {
                 "title": "Aspect Reentrancy Guard",
@@ -1137,8 +1191,8 @@
                 "permalink": "/develop/guides/"
               },
               "next": {
-                "title": "Aspect Lib",
-                "permalink": "/develop/aspect-lib/"
+                "title": "Writing Aspect",
+                "permalink": "/develop/writing-aspect/"
               }
             },
             {
@@ -1165,6 +1219,33 @@
               }
             },
             {
+              "unversionedId": "node/full-node-setup/index",
+              "id": "node/full-node-setup/index",
+              "title": "Setup a Full Node",
+              "description": "This document provides an introduction to joining the Artela testnet as a full node.",
+              "source": "@site/docs/develop/node/full-node-setup/index.md",
+              "sourceDirName": "node/full-node-setup",
+              "slug": "/node/full-node-setup/",
+              "permalink": "/develop/node/full-node-setup/",
+              "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/node/full-node-setup/index.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Node",
+                "permalink": "/develop/node/"
+              },
+              "next": {
+                "title": "Setup a TestNet",
+                "permalink": "/develop/node/testnet-setup/"
+              }
+            },
+            {
               "unversionedId": "node/index",
               "id": "node/index",
               "title": "Node",
@@ -1183,52 +1264,25 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Artela Web3 Javascript APIs",
-                "permalink": "/develop/client/javascript/"
+                "title": "Deploy & Call ERC20 Contract",
+                "permalink": "/develop/client/examples/deploy-call-contract"
               },
               "next": {
-                "title": "Setup Local Devnet",
-                "permalink": "/develop/node/local-dev-setup/"
+                "title": "Setup a Full Node",
+                "permalink": "/develop/node/full-node-setup/"
               }
             },
             {
-              "unversionedId": "node/local-dev-setup/index",
-              "id": "node/local-dev-setup/index",
-              "title": "Setup Local Devnet",
-              "description": "",
-              "source": "@site/docs/develop/node/local-dev-setup/index.md",
-              "sourceDirName": "node/local-dev-setup",
-              "slug": "/node/local-dev-setup/",
-              "permalink": "/develop/node/local-dev-setup/",
+              "unversionedId": "node/testnet-setup/index",
+              "id": "node/testnet-setup/index",
+              "title": "Setup a TestNet",
+              "description": "This document aims to guide you in compiling Artela code, configuring, and generating a testnet setup consisting of a minimum of four validators. Subsequently, we will outline how to deploy these configuration and data files to four individual machines.",
+              "source": "@site/docs/develop/node/testnet-setup/index.md",
+              "sourceDirName": "node/testnet-setup",
+              "slug": "/node/testnet-setup/",
+              "permalink": "/develop/node/testnet-setup/",
               "draft": false,
-              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/node/local-dev-setup/index.md",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 2,
-              "frontMatter": {
-                "sidebar_position": 2
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Node",
-                "permalink": "/develop/node/"
-              },
-              "next": {
-                "title": "Setup a Testnet Node",
-                "permalink": "/develop/node/testnet-node-setup/"
-              }
-            },
-            {
-              "unversionedId": "node/testnet-node-setup/index",
-              "id": "node/testnet-node-setup/index",
-              "title": "Setup a Testnet Node",
-              "description": "",
-              "source": "@site/docs/develop/node/testnet-node-setup/index.md",
-              "sourceDirName": "node/testnet-node-setup",
-              "slug": "/node/testnet-node-setup/",
-              "permalink": "/develop/node/testnet-node-setup/",
-              "draft": false,
-              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/node/testnet-node-setup/index.md",
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/node/testnet-setup/index.md",
               "tags": [],
               "version": "current",
               "sidebarPosition": 3,
@@ -1237,8 +1291,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Setup Local Devnet",
-                "permalink": "/develop/node/local-dev-setup/"
+                "title": "Setup a Full Node",
+                "permalink": "/develop/node/full-node-setup/"
               },
               "next": {
                 "title": "Guides",
@@ -1515,8 +1569,8 @@
               "frontMatter": {},
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Aspect Lib",
-                "permalink": "/develop/aspect-lib/"
+                "title": "Writing Aspect",
+                "permalink": "/develop/writing-aspect/"
               },
               "next": {
                 "title": "Accessing Testnet",
@@ -1650,6 +1704,33 @@
               "next": {
                 "title": "Start a Local Node",
                 "permalink": "/develop/old/start-a-local-node/"
+              }
+            },
+            {
+              "unversionedId": "writing-aspect/index",
+              "id": "writing-aspect/index",
+              "title": "Writing Aspect",
+              "description": "Welcome to the Writing Aspect Guide. This guide will walk you through all functionalities of aspect-tool with an example. This example including the process of how to use aspect-tool to install, initialize, and generate code for your projects.",
+              "source": "@site/docs/develop/writing-aspect/index.md",
+              "sourceDirName": "writing-aspect",
+              "slug": "/writing-aspect/",
+              "permalink": "/develop/writing-aspect/",
+              "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/writing-aspect/index.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 8,
+              "frontMatter": {
+                "sidebar_position": 8
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Aspect Reentrancy Guard",
+                "permalink": "/develop/guides/reentrancy-guard/"
+              },
+              "next": {
+                "title": "Quick Start",
+                "permalink": "/develop/old/quick-start/"
               }
             }
           ],
@@ -1799,13 +1880,34 @@
                 "items": [
                   {
                     "type": "doc",
-                    "label": "JSON RPC APIs",
-                    "id": "client/json-rpc/index"
+                    "label": "Cosmos gRPC",
+                    "id": "client/cosmos-grpc/index"
                   },
                   {
                     "type": "doc",
-                    "label": "Artela Web3 Javascript APIs",
-                    "id": "client/javascript/index"
+                    "label": "Ethereum JSON RPC APIs",
+                    "id": "client/ethereum-json-rpc/index"
+                  },
+                  {
+                    "type": "doc",
+                    "label": "Tendermint RPC",
+                    "id": "client/tendermint-rpc/index"
+                  },
+                  {
+                    "type": "category",
+                    "label": "examples",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "client/examples/ethereum-tx"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "client/examples/deploy-call-contract"
+                      }
+                    ]
                   }
                 ],
                 "link": {
@@ -1821,13 +1923,13 @@
                 "items": [
                   {
                     "type": "doc",
-                    "label": "Setup Local Devnet",
-                    "id": "node/local-dev-setup/index"
+                    "label": "Setup a Full Node",
+                    "id": "node/full-node-setup/index"
                   },
                   {
                     "type": "doc",
-                    "label": "Setup a Testnet Node",
-                    "id": "node/testnet-node-setup/index"
+                    "label": "Setup a TestNet",
+                    "id": "node/testnet-setup/index"
                   }
                 ],
                 "link": {
@@ -1855,7 +1957,7 @@
               {
                 "type": "doc",
                 "label": "🛸 Aspect Lib",
-                "id": "aspect-lib/index"
+                "id": "writing-aspect/index"
               },
               {
                 "type": "category",
