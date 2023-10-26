@@ -199,8 +199,8 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "core-concepts/evm-compatible/index",
-              "path": "/develop/core-concepts/evm-compatible/",
+              "id": "core-concepts/evm-compatibility/index",
+              "path": "/develop/core-concepts/evm-compatibility/",
               "sidebar": "tutorialSidebar"
             },
             {

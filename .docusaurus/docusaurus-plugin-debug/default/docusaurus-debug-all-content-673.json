@@ -786,8 +786,8 @@
                 "permalink": "/develop/core-concepts/foundational/"
               },
               "next": {
-                "title": "EVM Compatible",
-                "permalink": "/develop/core-concepts/evm-compatible/"
+                "title": "EVM Compatibility",
+                "permalink": "/develop/core-concepts/evm-compatibility/"
               }
             },
             {
@@ -809,8 +809,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "EVM Compatible",
-                "permalink": "/develop/core-concepts/evm-compatible/"
+                "title": "EVM Compatibility",
+                "permalink": "/develop/core-concepts/evm-compatibility/"
               },
               "next": {
                 "title": "Aspect",
@@ -872,16 +872,16 @@
               }
             },
             {
-              "unversionedId": "core-concepts/evm-compatible/index",
-              "id": "core-concepts/evm-compatible/index",
-              "title": "EVM Compatible",
-              "description": "",
-              "source": "@site/docs/develop/core-concepts/evm-compatible/index.md",
-              "sourceDirName": "core-concepts/evm-compatible",
-              "slug": "/core-concepts/evm-compatible/",
-              "permalink": "/develop/core-concepts/evm-compatible/",
+              "unversionedId": "core-concepts/evm-compatibility/index",
+              "id": "core-concepts/evm-compatibility/index",
+              "title": "EVM Compatibility",
+              "description": "Artela is fully EVM compatible. This means that you can use Artela to deploy and run smart contracts written in Solidity, Vyper, and other EVM compatible languages without any issue.",
+              "source": "@site/docs/develop/core-concepts/evm-compatibility/index.md",
+              "sourceDirName": "core-concepts/evm-compatibility",
+              "slug": "/core-concepts/evm-compatibility/",
+              "permalink": "/develop/core-concepts/evm-compatibility/",
               "draft": false,
-              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/core-concepts/evm-compatible/index.md",
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/core-concepts/evm-compatibility/index.md",
               "tags": [],
               "version": "current",
               "sidebarPosition": 3,
@@ -1705,8 +1705,8 @@
                   },
                   {
                     "type": "doc",
-                    "label": "EVM Compatible",
-                    "id": "core-concepts/evm-compatible/index"
+                    "label": "EVM Compatibility",
+                    "id": "core-concepts/evm-compatibility/index"
                   },
                   {
                     "type": "doc",
