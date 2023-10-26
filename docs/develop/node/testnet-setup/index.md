@@ -69,7 +69,7 @@ cd artela # in your artela root path
 make create-testnet
 ```
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/45baf4ea-5aba-4e9d-b5e7-ca59d97ab79a/9785bc4b-6ca0-4826-b04c-36367f514c41/Untitled.png)
+![output](./img/1.png)
 
 - More `make` options about testnet:
 

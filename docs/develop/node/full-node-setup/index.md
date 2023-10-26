@@ -53,7 +53,7 @@ Uninstall and copy the binaray `artelad` to `/usr/local/bin`.
 artelad init <custom_moniker> # e.g artelad init test111
 ```
 
-**2). Copy genesis from [1. Genesis](https://www.notion.so/1-Genesis-8d77f2914fbe4bafb5dcdd5df3bfcc6b?pvs=21) , copy the the home directory.**
+**2). Copy genesis from [1. Genesis]() , copy the the home directory.**
 
 ```bash
 mv genesis.json $HOME/.artelad/config/genesis.json
@@ -61,7 +61,7 @@ mv genesis.json $HOME/.artelad/config/genesis.json
 
 **3). Configure**
 
-Get presistent seeds from [2. Presistent nodes](https://www.notion.so/2-Presistent-nodes-796d48a68aec46048d0d4d91d388aaeb?pvs=21)
+Get presistent seeds from [2. Presistent nodes]()
 
 Add two of them to `seeds` in `app.toml`
 
@@ -84,9 +84,9 @@ sed -i 's/trust_hash = ""/trust_hash = "<BLOCK_HASH>"/' config.toml
 sed -i 's/rpc_servers = ""/rpc_servers = "node-1-ip:port,node-2-ip:port"/' config.toml
 ```
 
-Get `BLOCK_HEIGHT` and `BLOCK_HASH` from [3. Trust block and height](https://www.notion.so/3-Trust-block-and-height-95c39e3e8b7947a0abd2ed63716403ff?pvs=21)
+Get `BLOCK_HEIGHT` and `BLOCK_HASH` from [3. Trust block and height]()
 
-Get `rpc_servers` from [4. RPC servers](https://www.notion.so/4-RPC-servers-64df50baef4540688d15190fe6af4046?pvs=21)
+Get `rpc_servers` from [4. RPC servers]()
 
 ### 4. Run Artela node
 
@@ -136,8 +136,8 @@ journalctl -fu artelad
 
 ### 5. Output
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/45baf4ea-5aba-4e9d-b5e7-ca59d97ab79a/07287da5-a052-41c1-87e2-7880fdb51112/Untitled.png)
+![output1](./img/1.png)
 
 When it catches up with testnet, the output looks like:
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/45baf4ea-5aba-4e9d-b5e7-ca59d97ab79a/cd45b49c-0346-4cae-908b-2c071bbe5630/Untitled.png)
+![output2](./img/2.png)
