@@ -4,7 +4,7 @@ sidebar_position: 8
 
 # Writing Aspect
 
-Welcome to the Aspect Tool Guide. This guide will walk you through all functionalities of `aspect-tool` with an example. This example including the process of how to use `aspect-tool` to install, initialize, and generate code for your projects.
+Welcome to the Writing Aspect Guide. This guide will walk you through all functionalities of `aspect-tool` with an example. This example including the process of how to use `aspect-tool` to install, initialize, and generate code for your projects.
 
 ## Installation
 
@@ -100,7 +100,7 @@ Update the `project.config.json` in the root directory with the appropriate netw
 
 ```json
 {
-  "node": "https://artela-devnet-rpc1.artela.network"
+  "node": "https://testnet-rpc1.artela.network"
 }
 ```
 
