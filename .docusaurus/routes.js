@@ -44,7 +44,7 @@ export default [
   },
   {
     path: '/develop',
-    component: ComponentCreator('/develop', '687'),
+    component: ComponentCreator('/develop', '39a'),
     routes: [
       {
         path: '/develop',
@@ -167,8 +167,8 @@ export default [
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/develop/core-concepts/evm-compatible',
-        component: ComponentCreator('/develop/core-concepts/evm-compatible', '9a6'),
+        path: '/develop/core-concepts/evm-compatibility',
+        component: ComponentCreator('/develop/core-concepts/evm-compatibility', '6eb'),
         exact: true,
         sidebar: "tutorialSidebar"
       },

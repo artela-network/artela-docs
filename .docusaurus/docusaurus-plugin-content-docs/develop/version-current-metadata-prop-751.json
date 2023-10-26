@@ -62,9 +62,9 @@
           },
           {
             "type": "link",
-            "label": "EVM Compatible",
-            "href": "/develop/core-concepts/evm-compatible/",
-            "docId": "core-concepts/evm-compatible/index"
+            "label": "EVM Compatibility",
+            "href": "/develop/core-concepts/evm-compatibility/",
+            "docId": "core-concepts/evm-compatibility/index"
           },
           {
             "type": "link",
@@ -446,10 +446,10 @@
       "description": "",
       "sidebar": "tutorialSidebar"
     },
-    "core-concepts/evm-compatible/index": {
-      "id": "core-concepts/evm-compatible/index",
-      "title": "EVM Compatible",
-      "description": "",
+    "core-concepts/evm-compatibility/index": {
+      "id": "core-concepts/evm-compatibility/index",
+      "title": "EVM Compatibility",
+      "description": "Artela is fully EVM compatible. This means that you can use Artela to deploy and run smart contracts written in Solidity, Vyper, and other EVM compatible languages without any issue.",
       "sidebar": "tutorialSidebar"
     },
     "core-concepts/foundational/index": {
