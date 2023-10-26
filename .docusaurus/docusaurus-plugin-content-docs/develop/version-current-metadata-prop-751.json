@@ -373,7 +373,7 @@
     "advanced-concepts/asolc/index": {
       "id": "advanced-concepts/asolc/index",
       "title": "ASOLC",
-      "description": "",
+      "description": "Similar to Ethereum, Artela supports EVM smart contracts. However, Artela runs a modified version of the EVM, which is fully compatible with legacy Solidity but includes additional features such as state and callstack tracing.",
       "sidebar": "tutorialSidebar"
     },
     "advanced-concepts/communication/index": {
@@ -403,7 +403,7 @@
     "advanced-concepts/jpm/index": {
       "id": "advanced-concepts/jpm/index",
       "title": "Join Point Model",
-      "description": "In this section, we present high-level specifications of the join point model, the detailed components are presented in the following sections.",
+      "description": "In this section, we provide an overview of the join point model's specifications. Details on its components will be discussed in subsequent sections.",
       "sidebar": "tutorialSidebar"
     },
     "advanced-concepts/lifecycle/index": {
@@ -421,7 +421,7 @@
     "advanced-concepts/system-call/index": {
       "id": "advanced-concepts/system-call/index",
       "title": "System Call",
-      "description": "",
+      "description": "In Aspect, when a \"system call\" is activated, it initiates the execution of a specific system module, hereafter referred to as \"Module\". A Module can maintain its internal states, which we'll term as \"Module States\" (previously represented as ϖ M). The relationship can be understood as:",
       "sidebar": "tutorialSidebar"
     },
     "client/cosmos-grpc/index": {
