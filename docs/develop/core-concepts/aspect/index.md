@@ -38,3 +38,7 @@ You may wonder why use Aspects instead of using the traditional proxy pattern to
 4. **Enhanced On-chain Context Access**: EVM offers limited access to system-level blockchain data. While this might suffice for basic dApps, more intricate applications might require deeper insights, like the EVM call stack or state variable changes. Aspect grants these accesses effortlessly.
 5. **Beyond Transactions**: Unlike EVM, which is restricted to executing code upon transaction receipt, Aspect can also be invoked when a block is generated. This paves the way for purely on-chain dApps without off-chain network dependencies.
 6. **Easier Management**: Using proxy patterns with smart contracts can be cumbersome. If you want to change the order of your smart contracts chain or upgrade it, it could be a nightmare. Aspect offers a more streamlined approach. Aspect is upgradable, so upgrading Aspect code will be much easier than the proxy pattern. Also like the middleware in a web framework, Aspect can be easily added / removed / reordered to a smart contract.
+
+## More to know
+
+The first version of Artela Aspect is built with [Assembly Script](/)(a sub set of TypeScript, strictly typed). To support easier Aspect development, we have also built the [Aspect Lib](/) for developers to interact with our lower level WASM host APIs.  
