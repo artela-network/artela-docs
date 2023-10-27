@@ -367,7 +367,7 @@
     "advanced-concepts/account-abstraction/index": {
       "id": "advanced-concepts/account-abstraction/index",
       "title": "Account Abstraction",
-      "description": "",
+      "description": "Account abstraction offers a versatile solution to common issues by enabling users to embed enhanced security measures and superior user experiences directly into their accounts. For a comprehensive understanding of account abstraction, consider reading Ethereum's articles on the topic. It provides an insightful perspective on the subject.",
       "sidebar": "tutorialSidebar"
     },
     "advanced-concepts/asolc/index": {
