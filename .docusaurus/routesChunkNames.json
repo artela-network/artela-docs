@@ -1,57 +1,57 @@
 {
-  "/__docusaurus/debug-e12": {
+  "/__docusaurus/debug-6df": {
     "__comp": "__comp---theme-debug-config-23-a-2ff",
     "__context": {
-      "plugin": "plugin---docusaurus-debug-47-d-440"
+      "plugin": "plugin---docusaurus-debug-73-d-e8a"
     }
   },
-  "/__docusaurus/debug/config-0c1": {
+  "/__docusaurus/debug/config-e21": {
     "__comp": "__comp---theme-debug-config-23-a-2ff",
     "__context": {
-      "plugin": "plugin---docusaurus-debug-47-d-440"
+      "plugin": "plugin---docusaurus-debug-73-d-e8a"
     }
   },
-  "/__docusaurus/debug/content-116": {
+  "/__docusaurus/debug/content-7f9": {
     "__comp": "__comp---theme-debug-contentba-8-ce7",
     "__context": {
-      "plugin": "plugin---docusaurus-debug-47-d-440"
+      "plugin": "plugin---docusaurus-debug-73-d-e8a"
     },
     "allContent": "allContent---docusaurus-debug-content-246-9aa"
   },
-  "/__docusaurus/debug/globalData-d08": {
+  "/__docusaurus/debug/globalData-567": {
     "__comp": "__comp---theme-debug-global-dataede-0fa",
     "__context": {
-      "plugin": "plugin---docusaurus-debug-47-d-440"
+      "plugin": "plugin---docusaurus-debug-73-d-e8a"
     }
   },
-  "/__docusaurus/debug/metadata-3f7": {
+  "/__docusaurus/debug/metadata-538": {
     "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
     "__context": {
-      "plugin": "plugin---docusaurus-debug-47-d-440"
+      "plugin": "plugin---docusaurus-debug-73-d-e8a"
     }
   },
-  "/__docusaurus/debug/registry-995": {
+  "/__docusaurus/debug/registry-981": {
     "__comp": "__comp---theme-debug-registry-679-501",
     "__context": {
-      "plugin": "plugin---docusaurus-debug-47-d-440"
+      "plugin": "plugin---docusaurus-debug-73-d-e8a"
     }
   },
-  "/__docusaurus/debug/routes-700": {
+  "/__docusaurus/debug/routes-87f": {
     "__comp": "__comp---theme-debug-routes-946-699",
     "__context": {
-      "plugin": "plugin---docusaurus-debug-47-d-440"
+      "plugin": "plugin---docusaurus-debug-73-d-e8a"
     }
   },
-  "/search-181": {
+  "/search-e9d": {
     "__comp": "__comp---theme-search-page-1-a-4-d6f",
     "__context": {
-      "plugin": "plugin---search-2-eb-02c"
+      "plugin": "plugin---search-2-a-5-2ad"
     }
   },
-  "/develop-8f7": {
+  "/develop-68b": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
-      "plugin": "plugin---develop-113-f17"
+      "plugin": "plugin---develop-4-f-2-231"
     },
     "versionMetadata": "versionMetadata---develop-54-f-bbc"
   },
@@ -98,6 +98,22 @@
   "/develop/advanced-concepts/system-call-198": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---develop-advanced-concepts-system-call-7-d-4-e93"
+  },
+  "/develop/art-development-de5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-art-development-989-534"
+  },
+  "/develop/art-development/access-testnet-d2b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-art-development-access-testnet-255-a3a"
+  },
+  "/develop/art-development/get-started-6f1": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-art-development-get-startedb-98-8b4"
+  },
+  "/develop/art-development/start-a-local-node-11d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-art-development-start-a-local-node-4-d-6-e0b"
   },
   "/develop/client-464": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -154,22 +170,6 @@
   "/develop/core-concepts/wasm-assemblyscript-5a4": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---develop-core-concepts-wasm-assemblyscriptfac-989"
-  },
-  "/develop/get-started-198": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-get-started-216-354"
-  },
-  "/develop/get-started/art-dev-intro-dff": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-get-started-art-dev-introad-4-f81"
-  },
-  "/develop/get-started/aspect-hello-world-6ba": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-get-started-aspect-hello-world-236-551"
-  },
-  "/develop/get-started/sol-hello-world-d54": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-get-started-sol-hello-world-349-f01"
   },
   "/develop/guides-e14": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -259,10 +259,18 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---develop-writing-aspect-393-948"
   },
-  "/docs-3df": {
+  "/develop/writing-aspect/aspect-tools-3c1": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-writing-aspect-aspect-tools-82-e-2a6"
+  },
+  "/develop/writing-aspect/system-call-9f4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-writing-aspect-system-call-865-bd3"
+  },
+  "/docs-90b": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
-      "plugin": "plugin---docs-9-c-2-64e"
+      "plugin": "plugin---docsbdb-3d0"
     },
     "versionMetadata": "versionMetadata---docs-935-398"
   },
@@ -270,10 +278,10 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-92-d-b06"
   },
-  "/main-bf4": {
+  "/main-df5": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
-      "plugin": "plugin---main-230-923"
+      "plugin": "plugin---maina-26-7ec"
     },
     "versionMetadata": "versionMetadata---mainc-8-b-4e2"
   },
@@ -313,10 +321,10 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---main-resources-fa-qf-82-340"
   },
-  "/-6e7": {
+  "/-3f0": {
     "__comp": "__comp---site-src-pages-index-tsx-1-df-d3e",
     "__context": {
-      "plugin": "plugin---b-9-d-a32"
+      "plugin": "plugin---202-c4f"
     },
     "config": "config---5-e-9-4f3"
   }

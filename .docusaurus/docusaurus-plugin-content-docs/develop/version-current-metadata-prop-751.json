@@ -17,36 +17,30 @@
       },
       {
         "type": "category",
-        "label": "🏃 Get Started",
+        "label": "🏃 Artela Development",
         "collapsible": true,
         "collapsed": true,
         "items": [
           {
             "type": "link",
-            "label": "Artela Development Intro",
-            "href": "/develop/get-started/art-dev-intro/",
-            "docId": "get-started/art-dev-intro/index"
+            "label": "Quick Start",
+            "href": "/develop/art-development/get-started/",
+            "docId": "art-development/get-started/index"
           },
           {
             "type": "link",
             "label": "Access Testnet",
-            "href": "/develop/get-started/access-testnet/",
-            "docId": "get-started/access-testnet/index"
+            "href": "/develop/art-development/access-testnet/",
+            "docId": "art-development/access-testnet/index"
           },
           {
             "type": "link",
-            "label": "Develop an Aspect",
-            "href": "/develop/get-started/aspect-hello-world/",
-            "docId": "get-started/aspect-hello-world/index"
-          },
-          {
-            "type": "link",
-            "label": "Develop a Smart Contract",
-            "href": "/develop/get-started/sol-hello-world/",
-            "docId": "get-started/sol-hello-world/index"
+            "label": "Start a Local Node",
+            "href": "/develop/art-development/start-a-local-node/",
+            "docId": "art-development/start-a-local-node/index"
           }
         ],
-        "href": "/develop/get-started/"
+        "href": "/develop/art-development/"
       },
       {
         "type": "category",
@@ -232,24 +226,39 @@
       },
       {
         "type": "category",
+        "label": "🛸 Aspect Lib Document",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "aspect tools",
+            "href": "/develop/writing-aspect/aspect-tools/",
+            "docId": "writing-aspect/aspect-tools/index"
+          },
+          {
+            "type": "link",
+            "label": "system call",
+            "href": "/develop/writing-aspect/system-call/",
+            "docId": "writing-aspect/system-call/index"
+          }
+        ],
+        "href": "/develop/writing-aspect/"
+      },
+      {
+        "type": "category",
         "label": "🧑‍🏫 Guides",
         "collapsible": true,
         "collapsed": true,
         "items": [
           {
             "type": "link",
-            "label": "Aspect Reentrancy Guard",
+            "label": "renntrancy guard",
             "href": "/develop/guides/reentrancy-guard/",
             "docId": "guides/reentrancy-guard/index"
           }
         ],
         "href": "/develop/guides/"
-      },
-      {
-        "type": "link",
-        "label": "🛸 Aspect Lib",
-        "href": "/develop/writing-aspect/",
-        "docId": "writing-aspect/index"
       },
       {
         "type": "category",
@@ -430,6 +439,30 @@
       "description": "In Aspect, when a \"system call\" is activated, it initiates the execution of a specific system module, hereafter referred to as \"Module\". A Module can maintain its internal states, which we'll term as \"Module States\" (previously represented as ϖ M). The relationship can be understood as:",
       "sidebar": "tutorialSidebar"
     },
+    "art-development/access-testnet/index": {
+      "id": "art-development/access-testnet/index",
+      "title": "Accessing Testnet",
+      "description": "The Artela Testnet is in its beta release phase. Kindly note:",
+      "sidebar": "tutorialSidebar"
+    },
+    "art-development/get-started/index": {
+      "id": "art-development/get-started/index",
+      "title": "Quick Start",
+      "description": "Welcome to the Artela Quick Start Guide! This section guides you in creating dApps on Artela with aspect-oriented functionality. It intercepts and identifies specific transactions while enabling additional business logic injection. For instance, if a transaction tries to modify a state variable (e.g., 'Count') with certain conditions, like being an even number, the current transaction is rolled back.",
+      "sidebar": "tutorialSidebar"
+    },
+    "art-development/index": {
+      "id": "art-development/index",
+      "title": "Artela Development",
+      "description": "What Artela is Building?",
+      "sidebar": "tutorialSidebar"
+    },
+    "art-development/start-a-local-node/index": {
+      "id": "art-development/start-a-local-node/index",
+      "title": "Start a Local Node",
+      "description": "1. Building the Source",
+      "sidebar": "tutorialSidebar"
+    },
     "client/cosmos-grpc/index": {
       "id": "client/cosmos-grpc/index",
       "title": "Cosmos gRPC",
@@ -512,36 +545,6 @@
       "id": "core-concepts/wasm-assemblyscript/index",
       "title": "WASM & Assembly Script",
       "description": "WIP",
-      "sidebar": "tutorialSidebar"
-    },
-    "get-started/access-testnet/index": {
-      "id": "get-started/access-testnet/index",
-      "title": "Accessing Testnet",
-      "description": "The Artela Testnet is in its beta release phase. Kindly note:",
-      "sidebar": "tutorialSidebar"
-    },
-    "get-started/art-dev-intro/index": {
-      "id": "get-started/art-dev-intro/index",
-      "title": "Introduction to Artela Development",
-      "description": "WIP",
-      "sidebar": "tutorialSidebar"
-    },
-    "get-started/aspect-hello-world/index": {
-      "id": "get-started/aspect-hello-world/index",
-      "title": "Build Your First Aspect",
-      "description": "",
-      "sidebar": "tutorialSidebar"
-    },
-    "get-started/index": {
-      "id": "get-started/index",
-      "title": "Quick Start",
-      "description": "Welcome to the Artela Quick Start Guide! This section will walk you through step by step about how to build dApps on Artela with an example.",
-      "sidebar": "tutorialSidebar"
-    },
-    "get-started/sol-hello-world/index": {
-      "id": "get-started/sol-hello-world/index",
-      "title": "Build Your Smart Contract",
-      "description": "",
       "sidebar": "tutorialSidebar"
     },
     "guides/index": {
@@ -676,10 +679,22 @@
       "description": "@artela/web3 is a modified version of Ethereum's web3.js 1.x, supporting Aspect operations. This package retains full compatibility with the original web3.js, with minor adjustments. If your dApp utilizes the original web3.js, transitioning to Artela is as straightforward as replacing the package and import statements.",
       "sidebar": "tutorialSidebar"
     },
+    "writing-aspect/aspect-tools/index": {
+      "id": "writing-aspect/aspect-tools/index",
+      "title": "Aspect Reentrancy Guard",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
     "writing-aspect/index": {
       "id": "writing-aspect/index",
       "title": "Writing Aspect",
       "description": "Welcome to the Writing Aspect Guide. This guide will walk you through all functionalities of aspect-tool with an example. This example including the process of how to use aspect-tool to install, initialize, and generate code for your projects.",
+      "sidebar": "tutorialSidebar"
+    },
+    "writing-aspect/system-call/index": {
+      "id": "writing-aspect/system-call/index",
+      "title": "Aspect Reentrancy Guard",
+      "description": "",
       "sidebar": "tutorialSidebar"
     }
   }

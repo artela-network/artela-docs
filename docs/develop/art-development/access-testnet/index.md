@@ -1,6 +1,4 @@
----
-sidebar_position: 2
----
+
 
 # Accessing Testnet
 
@@ -23,7 +21,7 @@ You can access the JSON-RPC port service through these URLs:
 
 **Option 2: Establish Your Own Local Private Testnet**
 
-For detailed steps, see [Run a Local Node](../../../develop/start-a-local-node).
+For detailed steps, see [Run a Local Node](develop/art-development/start-a-local-node).
 
 Once you've initiated the node, connect to the JSON-RPC port service here:
 

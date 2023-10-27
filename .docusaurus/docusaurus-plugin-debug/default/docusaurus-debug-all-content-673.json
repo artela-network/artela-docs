@@ -656,6 +656,108 @@
               }
             },
             {
+              "unversionedId": "art-development/access-testnet/index",
+              "id": "art-development/access-testnet/index",
+              "title": "Accessing Testnet",
+              "description": "The Artela Testnet is in its beta release phase. Kindly note:",
+              "source": "@site/docs/develop/art-development/access-testnet/index.md",
+              "sourceDirName": "art-development/access-testnet",
+              "slug": "/art-development/access-testnet/",
+              "permalink": "/develop/art-development/access-testnet/",
+              "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/art-development/access-testnet/index.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Quick Start",
+                "permalink": "/develop/art-development/get-started/"
+              },
+              "next": {
+                "title": "Start a Local Node",
+                "permalink": "/develop/art-development/start-a-local-node/"
+              }
+            },
+            {
+              "unversionedId": "art-development/get-started/index",
+              "id": "art-development/get-started/index",
+              "title": "Quick Start",
+              "description": "Welcome to the Artela Quick Start Guide! This section guides you in creating dApps on Artela with aspect-oriented functionality. It intercepts and identifies specific transactions while enabling additional business logic injection. For instance, if a transaction tries to modify a state variable (e.g., 'Count') with certain conditions, like being an even number, the current transaction is rolled back.",
+              "source": "@site/docs/develop/art-development/get-started/index.md",
+              "sourceDirName": "art-development/get-started",
+              "slug": "/art-development/get-started/",
+              "permalink": "/develop/art-development/get-started/",
+              "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/art-development/get-started/index.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Artela Development",
+                "permalink": "/develop/art-development/"
+              },
+              "next": {
+                "title": "Accessing Testnet",
+                "permalink": "/develop/art-development/access-testnet/"
+              }
+            },
+            {
+              "unversionedId": "art-development/index",
+              "id": "art-development/index",
+              "title": "Artela Development",
+              "description": "What Artela is Building?",
+              "source": "@site/docs/develop/art-development/index.md",
+              "sourceDirName": "art-development",
+              "slug": "/art-development/",
+              "permalink": "/develop/art-development/",
+              "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/art-development/index.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "🔍 Overview",
+                "permalink": "/develop/"
+              },
+              "next": {
+                "title": "Quick Start",
+                "permalink": "/develop/art-development/get-started/"
+              }
+            },
+            {
+              "unversionedId": "art-development/start-a-local-node/index",
+              "id": "art-development/start-a-local-node/index",
+              "title": "Start a Local Node",
+              "description": "1. Building the Source",
+              "source": "@site/docs/develop/art-development/start-a-local-node/index.md",
+              "sourceDirName": "art-development/start-a-local-node",
+              "slug": "/art-development/start-a-local-node/",
+              "permalink": "/develop/art-development/start-a-local-node/",
+              "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/art-development/start-a-local-node/index.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Accessing Testnet",
+                "permalink": "/develop/art-development/access-testnet/"
+              },
+              "next": {
+                "title": "Core Concepts",
+                "permalink": "/develop/core-concepts/"
+              }
+            },
+            {
               "unversionedId": "client/cosmos-grpc/index",
               "id": "client/cosmos-grpc/index",
               "title": "Cosmos gRPC",
@@ -998,8 +1100,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Build Your Smart Contract",
-                "permalink": "/develop/get-started/sol-hello-world/"
+                "title": "Start a Local Node",
+                "permalink": "/develop/art-development/start-a-local-node/"
               },
               "next": {
                 "title": "Foundational Topics",
@@ -1034,141 +1136,6 @@
               }
             },
             {
-              "unversionedId": "get-started/access-testnet/index",
-              "id": "get-started/access-testnet/index",
-              "title": "Accessing Testnet",
-              "description": "The Artela Testnet is in its beta release phase. Kindly note:",
-              "source": "@site/docs/develop/get-started/access-testnet/index.md",
-              "sourceDirName": "get-started/access-testnet",
-              "slug": "/get-started/access-testnet/",
-              "permalink": "/develop/get-started/access-testnet/",
-              "draft": false,
-              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/get-started/access-testnet/index.md",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 2,
-              "frontMatter": {
-                "sidebar_position": 2
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Introduction to Artela Development",
-                "permalink": "/develop/get-started/art-dev-intro/"
-              },
-              "next": {
-                "title": "Build Your First Aspect",
-                "permalink": "/develop/get-started/aspect-hello-world/"
-              }
-            },
-            {
-              "unversionedId": "get-started/art-dev-intro/index",
-              "id": "get-started/art-dev-intro/index",
-              "title": "Introduction to Artela Development",
-              "description": "WIP",
-              "source": "@site/docs/develop/get-started/art-dev-intro/index.md",
-              "sourceDirName": "get-started/art-dev-intro",
-              "slug": "/get-started/art-dev-intro/",
-              "permalink": "/develop/get-started/art-dev-intro/",
-              "draft": false,
-              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/get-started/art-dev-intro/index.md",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 1,
-              "frontMatter": {
-                "sidebar_position": 1
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Quick Start",
-                "permalink": "/develop/get-started/"
-              },
-              "next": {
-                "title": "Accessing Testnet",
-                "permalink": "/develop/get-started/access-testnet/"
-              }
-            },
-            {
-              "unversionedId": "get-started/aspect-hello-world/index",
-              "id": "get-started/aspect-hello-world/index",
-              "title": "Build Your First Aspect",
-              "description": "",
-              "source": "@site/docs/develop/get-started/aspect-hello-world/index.md",
-              "sourceDirName": "get-started/aspect-hello-world",
-              "slug": "/get-started/aspect-hello-world/",
-              "permalink": "/develop/get-started/aspect-hello-world/",
-              "draft": false,
-              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/get-started/aspect-hello-world/index.md",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 3,
-              "frontMatter": {
-                "sidebar_position": 3
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Accessing Testnet",
-                "permalink": "/develop/get-started/access-testnet/"
-              },
-              "next": {
-                "title": "Build Your Smart Contract",
-                "permalink": "/develop/get-started/sol-hello-world/"
-              }
-            },
-            {
-              "unversionedId": "get-started/index",
-              "id": "get-started/index",
-              "title": "Quick Start",
-              "description": "Welcome to the Artela Quick Start Guide! This section will walk you through step by step about how to build dApps on Artela with an example.",
-              "source": "@site/docs/develop/get-started/index.md",
-              "sourceDirName": "get-started",
-              "slug": "/get-started/",
-              "permalink": "/develop/get-started/",
-              "draft": false,
-              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/get-started/index.md",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 2,
-              "frontMatter": {
-                "sidebar_position": 2
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "🔍 Overview",
-                "permalink": "/develop/"
-              },
-              "next": {
-                "title": "Introduction to Artela Development",
-                "permalink": "/develop/get-started/art-dev-intro/"
-              }
-            },
-            {
-              "unversionedId": "get-started/sol-hello-world/index",
-              "id": "get-started/sol-hello-world/index",
-              "title": "Build Your Smart Contract",
-              "description": "",
-              "source": "@site/docs/develop/get-started/sol-hello-world/index.md",
-              "sourceDirName": "get-started/sol-hello-world",
-              "slug": "/get-started/sol-hello-world/",
-              "permalink": "/develop/get-started/sol-hello-world/",
-              "draft": false,
-              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/get-started/sol-hello-world/index.md",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 2,
-              "frontMatter": {
-                "sidebar_position": 2
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Build Your First Aspect",
-                "permalink": "/develop/get-started/aspect-hello-world/"
-              },
-              "next": {
-                "title": "Core Concepts",
-                "permalink": "/develop/core-concepts/"
-              }
-            },
-            {
               "unversionedId": "guides/index",
               "id": "guides/index",
               "title": "Guides",
@@ -1187,8 +1154,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Setup a TestNet",
-                "permalink": "/develop/node/testnet-setup/"
+                "title": "Aspect Reentrancy Guard",
+                "permalink": "/develop/writing-aspect/system-call/"
               },
               "next": {
                 "title": "Aspect Reentrancy Guard",
@@ -1218,8 +1185,8 @@
                 "permalink": "/develop/guides/"
               },
               "next": {
-                "title": "Writing Aspect",
-                "permalink": "/develop/writing-aspect/"
+                "title": "Quick Start",
+                "permalink": "/develop/old/quick-start/"
               }
             },
             {
@@ -1241,8 +1208,8 @@
               },
               "sidebar": "tutorialSidebar",
               "next": {
-                "title": "Quick Start",
-                "permalink": "/develop/get-started/"
+                "title": "Artela Development",
+                "permalink": "/develop/art-development/"
               }
             },
             {
@@ -1322,8 +1289,8 @@
                 "permalink": "/develop/node/full-node-setup/"
               },
               "next": {
-                "title": "Guides",
-                "permalink": "/develop/guides/"
+                "title": "Writing Aspect",
+                "permalink": "/develop/writing-aspect/"
               }
             },
             {
@@ -1596,8 +1563,8 @@
               "frontMatter": {},
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Writing Aspect",
-                "permalink": "/develop/writing-aspect/"
+                "title": "Aspect Reentrancy Guard",
+                "permalink": "/develop/guides/reentrancy-guard/"
               },
               "next": {
                 "title": "Accessing Testnet",
@@ -1734,6 +1701,33 @@
               }
             },
             {
+              "unversionedId": "writing-aspect/aspect-tools/index",
+              "id": "writing-aspect/aspect-tools/index",
+              "title": "Aspect Reentrancy Guard",
+              "description": "",
+              "source": "@site/docs/develop/writing-aspect/aspect-tools/index.md",
+              "sourceDirName": "writing-aspect/aspect-tools",
+              "slug": "/writing-aspect/aspect-tools/",
+              "permalink": "/develop/writing-aspect/aspect-tools/",
+              "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/writing-aspect/aspect-tools/index.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Writing Aspect",
+                "permalink": "/develop/writing-aspect/"
+              },
+              "next": {
+                "title": "Aspect Reentrancy Guard",
+                "permalink": "/develop/writing-aspect/system-call/"
+              }
+            },
+            {
               "unversionedId": "writing-aspect/index",
               "id": "writing-aspect/index",
               "title": "Writing Aspect",
@@ -1752,12 +1746,39 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Aspect Reentrancy Guard",
-                "permalink": "/develop/guides/reentrancy-guard/"
+                "title": "Setup a TestNet",
+                "permalink": "/develop/node/testnet-setup/"
               },
               "next": {
-                "title": "Quick Start",
-                "permalink": "/develop/old/quick-start/"
+                "title": "Aspect Reentrancy Guard",
+                "permalink": "/develop/writing-aspect/aspect-tools/"
+              }
+            },
+            {
+              "unversionedId": "writing-aspect/system-call/index",
+              "id": "writing-aspect/system-call/index",
+              "title": "Aspect Reentrancy Guard",
+              "description": "",
+              "source": "@site/docs/develop/writing-aspect/system-call/index.md",
+              "sourceDirName": "writing-aspect/system-call",
+              "slug": "/writing-aspect/system-call/",
+              "permalink": "/develop/writing-aspect/system-call/",
+              "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/writing-aspect/system-call/index.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Aspect Reentrancy Guard",
+                "permalink": "/develop/writing-aspect/aspect-tools/"
+              },
+              "next": {
+                "title": "Guides",
+                "permalink": "/develop/guides/"
               }
             }
           ],
@@ -1770,34 +1791,29 @@
               },
               {
                 "type": "category",
-                "label": "🏃 Get Started",
+                "label": "🏃 Artela Development",
                 "collapsible": true,
                 "collapsed": true,
                 "items": [
                   {
                     "type": "doc",
-                    "label": "Artela Development Intro",
-                    "id": "get-started/art-dev-intro/index"
+                    "label": "Quick Start",
+                    "id": "art-development/get-started/index"
                   },
                   {
                     "type": "doc",
                     "label": "Access Testnet",
-                    "id": "get-started/access-testnet/index"
+                    "id": "art-development/access-testnet/index"
                   },
                   {
                     "type": "doc",
-                    "label": "Develop an Aspect",
-                    "id": "get-started/aspect-hello-world/index"
-                  },
-                  {
-                    "type": "doc",
-                    "label": "Develop a Smart Contract",
-                    "id": "get-started/sol-hello-world/index"
+                    "label": "Start a Local Node",
+                    "id": "art-development/start-a-local-node/index"
                   }
                 ],
                 "link": {
                   "type": "doc",
-                  "id": "get-started/index"
+                  "id": "art-development/index"
                 }
               },
               {
@@ -1971,13 +1987,35 @@
               },
               {
                 "type": "category",
+                "label": "🛸 Aspect Lib Document",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "doc",
+                    "label": "aspect tools",
+                    "id": "writing-aspect/aspect-tools/index"
+                  },
+                  {
+                    "type": "doc",
+                    "label": "system call",
+                    "id": "writing-aspect/system-call/index"
+                  }
+                ],
+                "link": {
+                  "type": "doc",
+                  "id": "writing-aspect/index"
+                }
+              },
+              {
+                "type": "category",
                 "label": "🧑‍🏫 Guides",
                 "collapsible": true,
                 "collapsed": true,
                 "items": [
                   {
                     "type": "doc",
-                    "label": "Aspect Reentrancy Guard",
+                    "label": "renntrancy guard",
                     "id": "guides/reentrancy-guard/index"
                   }
                 ],
@@ -1985,11 +2023,6 @@
                   "type": "doc",
                   "id": "guides/index"
                 }
-              },
-              {
-                "type": "doc",
-                "label": "🛸 Aspect Lib",
-                "id": "writing-aspect/index"
               },
               {
                 "type": "category",

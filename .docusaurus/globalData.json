@@ -1,5 +1,34 @@
 {
   "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/docs",
+          "mainDocId": "README",
+          "docs": [
+            {
+              "id": "README",
+              "path": "/docs/",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/docs/",
+                "label": "README"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    },
     "main": {
       "path": "/main",
       "versions": [
@@ -69,35 +98,6 @@
       ],
       "breadcrumbs": true
     },
-    "default": {
-      "path": "/docs",
-      "versions": [
-        {
-          "name": "current",
-          "label": "Next",
-          "isLast": true,
-          "path": "/docs",
-          "mainDocId": "README",
-          "docs": [
-            {
-              "id": "README",
-              "path": "/docs/",
-              "sidebar": "tutorialSidebar"
-            }
-          ],
-          "draftIds": [],
-          "sidebars": {
-            "tutorialSidebar": {
-              "link": {
-                "path": "/docs/",
-                "label": "README"
-              }
-            }
-          }
-        }
-      ],
-      "breadcrumbs": true
-    },
     "develop": {
       "path": "/develop",
       "versions": [
@@ -156,6 +156,26 @@
             {
               "id": "advanced-concepts/system-call/index",
               "path": "/develop/advanced-concepts/system-call/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "art-development/access-testnet/index",
+              "path": "/develop/art-development/access-testnet/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "art-development/get-started/index",
+              "path": "/develop/art-development/get-started/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "art-development/index",
+              "path": "/develop/art-development/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "art-development/start-a-local-node/index",
+              "path": "/develop/art-development/start-a-local-node/",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -226,31 +246,6 @@
             {
               "id": "core-concepts/wasm-assemblyscript/index",
               "path": "/develop/core-concepts/wasm-assemblyscript/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "get-started/access-testnet/index",
-              "path": "/develop/get-started/access-testnet/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "get-started/art-dev-intro/index",
-              "path": "/develop/get-started/art-dev-intro/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "get-started/aspect-hello-world/index",
-              "path": "/develop/get-started/aspect-hello-world/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "get-started/index",
-              "path": "/develop/get-started/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "get-started/sol-hello-world/index",
-              "path": "/develop/get-started/sol-hello-world/",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -364,8 +359,18 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "writing-aspect/aspect-tools/index",
+              "path": "/develop/writing-aspect/aspect-tools/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "writing-aspect/index",
               "path": "/develop/writing-aspect/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "writing-aspect/system-call/index",
+              "path": "/develop/writing-aspect/system-call/",
               "sidebar": "tutorialSidebar"
             }
           ],

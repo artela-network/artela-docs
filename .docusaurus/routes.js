@@ -4,47 +4,47 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 export default [
   {
     path: '/__docusaurus/debug',
-    component: ComponentCreator('/__docusaurus/debug', 'e12'),
+    component: ComponentCreator('/__docusaurus/debug', '6df'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/config',
-    component: ComponentCreator('/__docusaurus/debug/config', '0c1'),
+    component: ComponentCreator('/__docusaurus/debug/config', 'e21'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/content',
-    component: ComponentCreator('/__docusaurus/debug/content', '116'),
+    component: ComponentCreator('/__docusaurus/debug/content', '7f9'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/globalData',
-    component: ComponentCreator('/__docusaurus/debug/globalData', 'd08'),
+    component: ComponentCreator('/__docusaurus/debug/globalData', '567'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/metadata',
-    component: ComponentCreator('/__docusaurus/debug/metadata', '3f7'),
+    component: ComponentCreator('/__docusaurus/debug/metadata', '538'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/registry',
-    component: ComponentCreator('/__docusaurus/debug/registry', '995'),
+    component: ComponentCreator('/__docusaurus/debug/registry', '981'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/routes',
-    component: ComponentCreator('/__docusaurus/debug/routes', '700'),
+    component: ComponentCreator('/__docusaurus/debug/routes', '87f'),
     exact: true
   },
   {
     path: '/search',
-    component: ComponentCreator('/search', '181'),
+    component: ComponentCreator('/search', 'e9d'),
     exact: true
   },
   {
     path: '/develop',
-    component: ComponentCreator('/develop', '8f7'),
+    component: ComponentCreator('/develop', '68b'),
     routes: [
       {
         path: '/develop',
@@ -109,6 +109,30 @@ export default [
       {
         path: '/develop/advanced-concepts/system-call',
         component: ComponentCreator('/develop/advanced-concepts/system-call', '198'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/develop/art-development',
+        component: ComponentCreator('/develop/art-development', 'de5'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/develop/art-development/access-testnet',
+        component: ComponentCreator('/develop/art-development/access-testnet', 'd2b'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/develop/art-development/get-started',
+        component: ComponentCreator('/develop/art-development/get-started', '6f1'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/develop/art-development/start-a-local-node',
+        component: ComponentCreator('/develop/art-development/start-a-local-node', '11d'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
@@ -193,30 +217,6 @@ export default [
       {
         path: '/develop/core-concepts/wasm-assemblyscript',
         component: ComponentCreator('/develop/core-concepts/wasm-assemblyscript', '5a4'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/develop/get-started',
-        component: ComponentCreator('/develop/get-started', '198'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/develop/get-started/art-dev-intro',
-        component: ComponentCreator('/develop/get-started/art-dev-intro', 'dff'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/develop/get-started/aspect-hello-world',
-        component: ComponentCreator('/develop/get-started/aspect-hello-world', '6ba'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/develop/get-started/sol-hello-world',
-        component: ComponentCreator('/develop/get-started/sol-hello-world', 'd54'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
@@ -351,12 +351,24 @@ export default [
         component: ComponentCreator('/develop/writing-aspect', 'c8a'),
         exact: true,
         sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/develop/writing-aspect/aspect-tools',
+        component: ComponentCreator('/develop/writing-aspect/aspect-tools', '3c1'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/develop/writing-aspect/system-call',
+        component: ComponentCreator('/develop/writing-aspect/system-call', '9f4'),
+        exact: true,
+        sidebar: "tutorialSidebar"
       }
     ]
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs', '3df'),
+    component: ComponentCreator('/docs', '90b'),
     routes: [
       {
         path: '/docs',
@@ -368,7 +380,7 @@ export default [
   },
   {
     path: '/main',
-    component: ComponentCreator('/main', 'bf4'),
+    component: ComponentCreator('/main', 'df5'),
     routes: [
       {
         path: '/main',
@@ -428,7 +440,7 @@ export default [
   },
   {
     path: '/',
-    component: ComponentCreator('/', '6e7'),
+    component: ComponentCreator('/', '3f0'),
     exact: true
   },
   {
