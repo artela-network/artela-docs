@@ -38,6 +38,10 @@ JSONRPC requests can be POST'd to the root RPC endpoint via HTTP.
 
     curl --header "Content-Type: application/json" --request POST --data '{"method": "block", "params": ["5"], "id": 1}' localhost:26657
 
+Artela Testnet example:
+
+    curl --header "Content-Type: application/json" --request POST --data '{"method": "block", "params": ["5"], "id": 1}' 54.234.4.11:26657
+
 ## JSONRPC/websockets
 
 JSONRPC requests can be also made via websocket.
