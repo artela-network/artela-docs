@@ -1,57 +1,57 @@
 {
-  "/__docusaurus/debug-6df": {
+  "/__docusaurus/debug-e12": {
     "__comp": "__comp---theme-debug-config-23-a-2ff",
     "__context": {
-      "plugin": "plugin---docusaurus-debug-73-d-e8a"
+      "plugin": "plugin---docusaurus-debug-47-d-440"
     }
   },
-  "/__docusaurus/debug/config-e21": {
+  "/__docusaurus/debug/config-0c1": {
     "__comp": "__comp---theme-debug-config-23-a-2ff",
     "__context": {
-      "plugin": "plugin---docusaurus-debug-73-d-e8a"
+      "plugin": "plugin---docusaurus-debug-47-d-440"
     }
   },
-  "/__docusaurus/debug/content-7f9": {
+  "/__docusaurus/debug/content-116": {
     "__comp": "__comp---theme-debug-contentba-8-ce7",
     "__context": {
-      "plugin": "plugin---docusaurus-debug-73-d-e8a"
+      "plugin": "plugin---docusaurus-debug-47-d-440"
     },
     "allContent": "allContent---docusaurus-debug-content-246-9aa"
   },
-  "/__docusaurus/debug/globalData-567": {
+  "/__docusaurus/debug/globalData-d08": {
     "__comp": "__comp---theme-debug-global-dataede-0fa",
     "__context": {
-      "plugin": "plugin---docusaurus-debug-73-d-e8a"
+      "plugin": "plugin---docusaurus-debug-47-d-440"
     }
   },
-  "/__docusaurus/debug/metadata-538": {
+  "/__docusaurus/debug/metadata-3f7": {
     "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
     "__context": {
-      "plugin": "plugin---docusaurus-debug-73-d-e8a"
+      "plugin": "plugin---docusaurus-debug-47-d-440"
     }
   },
-  "/__docusaurus/debug/registry-981": {
+  "/__docusaurus/debug/registry-995": {
     "__comp": "__comp---theme-debug-registry-679-501",
     "__context": {
-      "plugin": "plugin---docusaurus-debug-73-d-e8a"
+      "plugin": "plugin---docusaurus-debug-47-d-440"
     }
   },
-  "/__docusaurus/debug/routes-87f": {
+  "/__docusaurus/debug/routes-700": {
     "__comp": "__comp---theme-debug-routes-946-699",
     "__context": {
-      "plugin": "plugin---docusaurus-debug-73-d-e8a"
+      "plugin": "plugin---docusaurus-debug-47-d-440"
     }
   },
-  "/search-e9d": {
+  "/search-181": {
     "__comp": "__comp---theme-search-page-1-a-4-d6f",
     "__context": {
-      "plugin": "plugin---search-2-a-5-2ad"
+      "plugin": "plugin---search-2-eb-02c"
     }
   },
-  "/develop-ab9": {
+  "/develop-8f7": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
-      "plugin": "plugin---develop-4-f-2-231"
+      "plugin": "plugin---develop-113-f17"
     },
     "versionMetadata": "versionMetadata---develop-54-f-bbc"
   },
@@ -99,21 +99,29 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---develop-advanced-concepts-system-call-7-d-4-e93"
   },
-  "/develop/aspect-lib-ac7": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-aspect-lib-534-2ee"
-  },
   "/develop/client-464": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---develop-client-5-e-1-46e"
   },
-  "/develop/client/javascript-313": {
+  "/develop/client/cosmos-grpc-37c": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-client-javascript-9-d-5-0ea"
+    "content": "content---develop-client-cosmos-grpc-11-b-786"
   },
-  "/develop/client/json-rpc-f95": {
+  "/develop/client/ethereum-json-rpc-972": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-client-json-rpc-635-bd5"
+    "content": "content---develop-client-ethereum-json-rpc-13-e-0ec"
+  },
+  "/develop/client/examples/deploy-call-contract-101": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-client-examples-deploy-call-contract-502-af4"
+  },
+  "/develop/client/examples/ethereum-tx-e9b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-client-examples-ethereum-tx-875-b0d"
+  },
+  "/develop/client/tendermint-rpc-ebf": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-client-tendermint-rpc-580-8d0"
   },
   "/develop/core-concepts-d53": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -135,9 +143,9 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---develop-core-concepts-aspect-runtimedf-1-718"
   },
-  "/develop/core-concepts/evm-compatible-9a6": {
+  "/develop/core-concepts/evm-compatibility-6eb": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-core-concepts-evm-compatibleaa-3-18f"
+    "content": "content---develop-core-concepts-evm-compatibility-7-f-7-044"
   },
   "/develop/core-concepts/foundational-f1e": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -150,10 +158,6 @@
   "/develop/get-started-198": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---develop-get-started-216-354"
-  },
-  "/develop/get-started/access-testnet-5fb": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-get-started-access-testnet-232-a76"
   },
   "/develop/get-started/art-dev-intro-dff": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -179,13 +183,13 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---develop-node-30-d-e49"
   },
-  "/develop/node/local-dev-setup-5fe": {
+  "/develop/node/full-node-setup-8b7": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-node-local-dev-setupf-4-d-c50"
+    "content": "content---develop-node-full-node-setup-167-274"
   },
-  "/develop/node/testnet-node-setup-b16": {
+  "/develop/node/testnet-setup-c7f": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-node-testnet-node-setup-688-695"
+    "content": "content---develop-node-testnet-setup-10-d-e72"
   },
   "/develop/old/asolc-guide-b87": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -251,10 +255,14 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---develop-old-web-3-js-guide-491-c42"
   },
-  "/docs-90b": {
+  "/develop/writing-aspect-c8a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-writing-aspect-393-948"
+  },
+  "/docs-3df": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
-      "plugin": "plugin---docsbdb-3d0"
+      "plugin": "plugin---docs-9-c-2-64e"
     },
     "versionMetadata": "versionMetadata---docs-935-398"
   },
@@ -262,10 +270,10 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-92-d-b06"
   },
-  "/main-df5": {
+  "/main-bf4": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
-      "plugin": "plugin---maina-26-7ec"
+      "plugin": "plugin---main-230-923"
     },
     "versionMetadata": "versionMetadata---mainc-8-b-4e2"
   },
@@ -305,10 +313,10 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---main-resources-fa-qf-82-340"
   },
-  "/-3f0": {
+  "/-6e7": {
     "__comp": "__comp---site-src-pages-index-tsx-1-df-d3e",
     "__context": {
-      "plugin": "plugin---202-c4f"
+      "plugin": "plugin---b-9-d-a32"
     },
     "config": "config---5-e-9-4f3"
   }

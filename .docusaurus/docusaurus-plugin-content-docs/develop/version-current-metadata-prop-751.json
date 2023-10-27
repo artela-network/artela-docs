@@ -68,9 +68,9 @@
           },
           {
             "type": "link",
-            "label": "EVM Compatible",
-            "href": "/develop/core-concepts/evm-compatible/",
-            "docId": "core-concepts/evm-compatible/index"
+            "label": "EVM Compatibility",
+            "href": "/develop/core-concepts/evm-compatibility/",
+            "docId": "core-concepts/evm-compatibility/index"
           },
           {
             "type": "link",
@@ -170,15 +170,41 @@
         "items": [
           {
             "type": "link",
-            "label": "JSON RPC APIs",
-            "href": "/develop/client/json-rpc/",
-            "docId": "client/json-rpc/index"
+            "label": "Cosmos gRPC",
+            "href": "/develop/client/cosmos-grpc/",
+            "docId": "client/cosmos-grpc/index"
           },
           {
             "type": "link",
-            "label": "Artela Web3 Javascript APIs",
-            "href": "/develop/client/javascript/",
-            "docId": "client/javascript/index"
+            "label": "Ethereum JSON RPC APIs",
+            "href": "/develop/client/ethereum-json-rpc/",
+            "docId": "client/ethereum-json-rpc/index"
+          },
+          {
+            "type": "link",
+            "label": "Tendermint RPC",
+            "href": "/develop/client/tendermint-rpc/",
+            "docId": "client/tendermint-rpc/index"
+          },
+          {
+            "type": "category",
+            "label": "examples",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Sending Ethereum Transactions to Artela Testnet",
+                "href": "/develop/client/examples/ethereum-tx",
+                "docId": "client/examples/ethereum-tx"
+              },
+              {
+                "type": "link",
+                "label": "Deploy & Call ERC20 Contract",
+                "href": "/develop/client/examples/deploy-call-contract",
+                "docId": "client/examples/deploy-call-contract"
+              }
+            ]
           }
         ],
         "href": "/develop/client/"
@@ -191,15 +217,15 @@
         "items": [
           {
             "type": "link",
-            "label": "Setup Local Devnet",
-            "href": "/develop/node/local-dev-setup/",
-            "docId": "node/local-dev-setup/index"
+            "label": "Setup a Full Node",
+            "href": "/develop/node/full-node-setup/",
+            "docId": "node/full-node-setup/index"
           },
           {
             "type": "link",
-            "label": "Setup a Testnet Node",
-            "href": "/develop/node/testnet-node-setup/",
-            "docId": "node/testnet-node-setup/index"
+            "label": "Setup a TestNet",
+            "href": "/develop/node/testnet-setup/",
+            "docId": "node/testnet-setup/index"
           }
         ],
         "href": "/develop/node/"
@@ -222,8 +248,8 @@
       {
         "type": "link",
         "label": "🛸 Aspect Lib",
-        "href": "/develop/aspect-lib/",
-        "docId": "aspect-lib/index"
+        "href": "/develop/writing-aspect/",
+        "docId": "writing-aspect/index"
       },
       {
         "type": "category",
@@ -353,7 +379,7 @@
     "advanced-concepts/asolc/index": {
       "id": "advanced-concepts/asolc/index",
       "title": "ASOLC",
-      "description": "",
+      "description": "Similar to Ethereum, Artela supports EVM smart contracts. However, Artela runs a modified version of the EVM, which is fully compatible with legacy Solidity but includes additional features such as state and callstack tracing.",
       "sidebar": "tutorialSidebar"
     },
     "advanced-concepts/communication/index": {
@@ -365,7 +391,7 @@
     "advanced-concepts/index": {
       "id": "advanced-concepts/index",
       "title": "Advanced Concepts",
-      "description": "",
+      "description": "This section covers advanced concepts of Artela, these concepts are not required to use Artela, but they are useful to understand how Artela works and how to built more powerful dApps on Artela.",
       "sidebar": "tutorialSidebar"
     },
     "advanced-concepts/jit-call/index": {
@@ -383,7 +409,7 @@
     "advanced-concepts/jpm/index": {
       "id": "advanced-concepts/jpm/index",
       "title": "Join Point Model",
-      "description": "",
+      "description": "In this section, we provide an overview of the join point model's specifications. Details on its components will be discussed in subsequent sections.",
       "sidebar": "tutorialSidebar"
     },
     "advanced-concepts/lifecycle/index": {
@@ -401,31 +427,43 @@
     "advanced-concepts/system-call/index": {
       "id": "advanced-concepts/system-call/index",
       "title": "System Call",
-      "description": "",
+      "description": "In Aspect, when a \"system call\" is activated, it initiates the execution of a specific system module, hereafter referred to as \"Module\". A Module can maintain its internal states, which we'll term as \"Module States\" (previously represented as ϖ M). The relationship can be understood as:",
       "sidebar": "tutorialSidebar"
     },
-    "aspect-lib/index": {
-      "id": "aspect-lib/index",
-      "title": "Aspect Lib",
-      "description": "",
+    "client/cosmos-grpc/index": {
+      "id": "client/cosmos-grpc/index",
+      "title": "Cosmos gRPC",
+      "description": "Artela provides gRPC endpoints for every integrated module within the Cosmos SDK. This simplifies the interaction process for wallets and blockchain explorers, enabling them to engage with Proof-of-Stake mechanisms, as well as native Cosmos transactions and queries, more conveniently.",
+      "sidebar": "tutorialSidebar"
+    },
+    "client/ethereum-json-rpc/index": {
+      "id": "client/ethereum-json-rpc/index",
+      "title": "Ethereum JSON RPC APIs",
+      "description": "The JSON-RPC Server provides an API that facilitates connection to the Artela blockchain and interaction with the EVM. JSON-RPC is a stateless, lightweight protocol for remote procedure calls (RPC). It defines various data structures and the rules governing their processing. JSON-RPC is compatible with multiple transport protocols. Artela, in particular, supports JSON-RPC over HTTP and WebSocket.",
+      "sidebar": "tutorialSidebar"
+    },
+    "client/examples/deploy-call-contract": {
+      "id": "client/examples/deploy-call-contract",
+      "title": "Deploy & Call ERC20 Contract",
+      "description": "1. Contract",
+      "sidebar": "tutorialSidebar"
+    },
+    "client/examples/ethereum-tx": {
+      "id": "client/examples/ethereum-tx",
+      "title": "Sending Ethereum Transactions to Artela Testnet",
+      "description": "1. Create and top up your account",
       "sidebar": "tutorialSidebar"
     },
     "client/index": {
       "id": "client/index",
       "title": "Artela Client",
-      "description": "",
+      "description": "The Artela Network supports different clients in order to support Cosmos and Ethereum transactions and queries.",
       "sidebar": "tutorialSidebar"
     },
-    "client/javascript/index": {
-      "id": "client/javascript/index",
-      "title": "Artela Web3 Javascript APIs",
-      "description": "",
-      "sidebar": "tutorialSidebar"
-    },
-    "client/json-rpc/index": {
-      "id": "client/json-rpc/index",
-      "title": "JSON RPC APIs",
-      "description": "",
+    "client/tendermint-rpc/index": {
+      "id": "client/tendermint-rpc/index",
+      "title": "Tendermint RPC",
+      "description": "Tendermint supports the following RPC protocols:",
       "sidebar": "tutorialSidebar"
     },
     "core-concepts/arch/index": {
@@ -437,43 +475,43 @@
     "core-concepts/aspect-programming/index": {
       "id": "core-concepts/aspect-programming/index",
       "title": "Aspect Programming",
-      "description": "",
+      "description": "Aspect Programming introduces a powerful paradigm built around the Join Point Model (JPM). This model centers on three pivotal components:",
       "sidebar": "tutorialSidebar"
     },
     "core-concepts/aspect-runtime/index": {
       "id": "core-concepts/aspect-runtime/index",
       "title": "Aspect Runtime",
-      "description": "",
+      "description": "The Aspect runtime serves as a specialized WASM virtual machine, tailor-made for executing Aspect. Its inaugural version harnesses the power of WASMTime, a robust and swift WebAssembly implementation crafted in Rust.",
       "sidebar": "tutorialSidebar"
     },
     "core-concepts/aspect/index": {
       "id": "core-concepts/aspect/index",
       "title": "Aspect",
-      "description": "",
+      "description": "Aspect introduces a dynamic mechanism to implement system-level features on a blockchain. Simply put, an Aspect is akin to a system extension, crafted in WASM, which can be tethered to any smart contract. It offers the flexibility to either augment the capabilities of the target contract or monitor its activities and initiate specific actions when predefined conditions align.",
       "sidebar": "tutorialSidebar"
     },
-    "core-concepts/evm-compatible/index": {
-      "id": "core-concepts/evm-compatible/index",
-      "title": "EVM Compatible",
-      "description": "",
+    "core-concepts/evm-compatibility/index": {
+      "id": "core-concepts/evm-compatibility/index",
+      "title": "EVM Compatibility",
+      "description": "Artela is fully EVM compatible. This means that you can use Artela to deploy and run smart contracts written in Solidity, Vyper, and other EVM compatible languages without any issue.",
       "sidebar": "tutorialSidebar"
     },
     "core-concepts/foundational/index": {
       "id": "core-concepts/foundational/index",
       "title": "Foundational Topics",
-      "description": "",
+      "description": "WIP",
       "sidebar": "tutorialSidebar"
     },
     "core-concepts/index": {
       "id": "core-concepts/index",
       "title": "Core Concepts",
-      "description": "",
+      "description": "This section will introduce you to the core concepts of Aspect. It is recommended that you read through these concepts before you start using Aspect.",
       "sidebar": "tutorialSidebar"
     },
     "core-concepts/wasm-assemblyscript/index": {
       "id": "core-concepts/wasm-assemblyscript/index",
       "title": "WASM & Assembly Script",
-      "description": "",
+      "description": "WIP",
       "sidebar": "tutorialSidebar"
     },
     "get-started/access-testnet/index": {
@@ -524,22 +562,22 @@
       "description": "Artela is an EVM compatible blockchain network built with Cosmos SDK. You can seamlessly deploy your Ethereum dApps on Artela without hassle. And at the mean time, you can also leverage your dApp with Aspect programming to make it even more powerful.",
       "sidebar": "tutorialSidebar"
     },
+    "node/full-node-setup/index": {
+      "id": "node/full-node-setup/index",
+      "title": "Setup a Full Node",
+      "description": "This document provides an introduction to joining the Artela testnet as a full node.",
+      "sidebar": "tutorialSidebar"
+    },
     "node/index": {
       "id": "node/index",
       "title": "Node",
       "description": "",
       "sidebar": "tutorialSidebar"
     },
-    "node/local-dev-setup/index": {
-      "id": "node/local-dev-setup/index",
-      "title": "Setup Local Devnet",
-      "description": "",
-      "sidebar": "tutorialSidebar"
-    },
-    "node/testnet-node-setup/index": {
-      "id": "node/testnet-node-setup/index",
-      "title": "Setup a Testnet Node",
-      "description": "",
+    "node/testnet-setup/index": {
+      "id": "node/testnet-setup/index",
+      "title": "Setup a TestNet",
+      "description": "This document aims to guide you in compiling Artela code, configuring, and generating a testnet setup consisting of a minimum of four validators. Subsequently, we will outline how to deploy these configuration and data files to four individual machines.",
       "sidebar": "tutorialSidebar"
     },
     "old/asolc-guide/index": {
@@ -636,6 +674,12 @@
       "id": "old/web3js-guide/index",
       "title": "Web3.js Guide",
       "description": "@artela/web3 is a modified version of Ethereum's web3.js 1.x, supporting Aspect operations. This package retains full compatibility with the original web3.js, with minor adjustments. If your dApp utilizes the original web3.js, transitioning to Artela is as straightforward as replacing the package and import statements.",
+      "sidebar": "tutorialSidebar"
+    },
+    "writing-aspect/index": {
+      "id": "writing-aspect/index",
+      "title": "Writing Aspect",
+      "description": "Welcome to the Writing Aspect Guide. This guide will walk you through all functionalities of aspect-tool with an example. This example including the process of how to use aspect-tool to install, initialize, and generate code for your projects.",
       "sidebar": "tutorialSidebar"
     }
   }

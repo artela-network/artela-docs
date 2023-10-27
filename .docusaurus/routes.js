@@ -4,47 +4,47 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 export default [
   {
     path: '/__docusaurus/debug',
-    component: ComponentCreator('/__docusaurus/debug', '6df'),
+    component: ComponentCreator('/__docusaurus/debug', 'e12'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/config',
-    component: ComponentCreator('/__docusaurus/debug/config', 'e21'),
+    component: ComponentCreator('/__docusaurus/debug/config', '0c1'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/content',
-    component: ComponentCreator('/__docusaurus/debug/content', '7f9'),
+    component: ComponentCreator('/__docusaurus/debug/content', '116'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/globalData',
-    component: ComponentCreator('/__docusaurus/debug/globalData', '567'),
+    component: ComponentCreator('/__docusaurus/debug/globalData', 'd08'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/metadata',
-    component: ComponentCreator('/__docusaurus/debug/metadata', '538'),
+    component: ComponentCreator('/__docusaurus/debug/metadata', '3f7'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/registry',
-    component: ComponentCreator('/__docusaurus/debug/registry', '981'),
+    component: ComponentCreator('/__docusaurus/debug/registry', '995'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/routes',
-    component: ComponentCreator('/__docusaurus/debug/routes', '87f'),
+    component: ComponentCreator('/__docusaurus/debug/routes', '700'),
     exact: true
   },
   {
     path: '/search',
-    component: ComponentCreator('/search', 'e9d'),
+    component: ComponentCreator('/search', '181'),
     exact: true
   },
   {
     path: '/develop',
-    component: ComponentCreator('/develop', 'ab9'),
+    component: ComponentCreator('/develop', '8f7'),
     routes: [
       {
         path: '/develop',
@@ -113,26 +113,38 @@ export default [
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/develop/aspect-lib',
-        component: ComponentCreator('/develop/aspect-lib', 'ac7'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
         path: '/develop/client',
         component: ComponentCreator('/develop/client', '464'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/develop/client/javascript',
-        component: ComponentCreator('/develop/client/javascript', '313'),
+        path: '/develop/client/cosmos-grpc',
+        component: ComponentCreator('/develop/client/cosmos-grpc', '37c'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/develop/client/json-rpc',
-        component: ComponentCreator('/develop/client/json-rpc', 'f95'),
+        path: '/develop/client/ethereum-json-rpc',
+        component: ComponentCreator('/develop/client/ethereum-json-rpc', '972'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/develop/client/examples/deploy-call-contract',
+        component: ComponentCreator('/develop/client/examples/deploy-call-contract', '101'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/develop/client/examples/ethereum-tx',
+        component: ComponentCreator('/develop/client/examples/ethereum-tx', 'e9b'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/develop/client/tendermint-rpc',
+        component: ComponentCreator('/develop/client/tendermint-rpc', 'ebf'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
@@ -167,8 +179,8 @@ export default [
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/develop/core-concepts/evm-compatible',
-        component: ComponentCreator('/develop/core-concepts/evm-compatible', '9a6'),
+        path: '/develop/core-concepts/evm-compatibility',
+        component: ComponentCreator('/develop/core-concepts/evm-compatibility', '6eb'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
@@ -187,12 +199,6 @@ export default [
       {
         path: '/develop/get-started',
         component: ComponentCreator('/develop/get-started', '198'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/develop/get-started/access-testnet',
-        component: ComponentCreator('/develop/get-started/access-testnet', '5fb'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
@@ -233,14 +239,14 @@ export default [
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/develop/node/local-dev-setup',
-        component: ComponentCreator('/develop/node/local-dev-setup', '5fe'),
+        path: '/develop/node/full-node-setup',
+        component: ComponentCreator('/develop/node/full-node-setup', '8b7'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/develop/node/testnet-node-setup',
-        component: ComponentCreator('/develop/node/testnet-node-setup', 'b16'),
+        path: '/develop/node/testnet-setup',
+        component: ComponentCreator('/develop/node/testnet-setup', 'c7f'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
@@ -339,12 +345,18 @@ export default [
         component: ComponentCreator('/develop/old/web3js-guide', 'b12'),
         exact: true,
         sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/develop/writing-aspect',
+        component: ComponentCreator('/develop/writing-aspect', 'c8a'),
+        exact: true,
+        sidebar: "tutorialSidebar"
       }
     ]
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs', '90b'),
+    component: ComponentCreator('/docs', '3df'),
     routes: [
       {
         path: '/docs',
@@ -356,7 +368,7 @@ export default [
   },
   {
     path: '/main',
-    component: ComponentCreator('/main', 'df5'),
+    component: ComponentCreator('/main', 'bf4'),
     routes: [
       {
         path: '/main',
@@ -416,7 +428,7 @@ export default [
   },
   {
     path: '/',
-    component: ComponentCreator('/', '3f0'),
+    component: ComponentCreator('/', '6e7'),
     exact: true
   },
   {

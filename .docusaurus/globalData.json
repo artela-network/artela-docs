@@ -1,34 +1,5 @@
 {
   "docusaurus-plugin-content-docs": {
-    "default": {
-      "path": "/docs",
-      "versions": [
-        {
-          "name": "current",
-          "label": "Next",
-          "isLast": true,
-          "path": "/docs",
-          "mainDocId": "README",
-          "docs": [
-            {
-              "id": "README",
-              "path": "/docs/",
-              "sidebar": "tutorialSidebar"
-            }
-          ],
-          "draftIds": [],
-          "sidebars": {
-            "tutorialSidebar": {
-              "link": {
-                "path": "/docs/",
-                "label": "README"
-              }
-            }
-          }
-        }
-      ],
-      "breadcrumbs": true
-    },
     "main": {
       "path": "/main",
       "versions": [
@@ -98,6 +69,35 @@
       ],
       "breadcrumbs": true
     },
+    "default": {
+      "path": "/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/docs",
+          "mainDocId": "README",
+          "docs": [
+            {
+              "id": "README",
+              "path": "/docs/",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/docs/",
+                "label": "README"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    },
     "develop": {
       "path": "/develop",
       "versions": [
@@ -159,8 +159,23 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "aspect-lib/index",
-              "path": "/develop/aspect-lib/",
+              "id": "client/cosmos-grpc/index",
+              "path": "/develop/client/cosmos-grpc/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "client/ethereum-json-rpc/index",
+              "path": "/develop/client/ethereum-json-rpc/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "client/examples/deploy-call-contract",
+              "path": "/develop/client/examples/deploy-call-contract",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "client/examples/ethereum-tx",
+              "path": "/develop/client/examples/ethereum-tx",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -169,13 +184,8 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "client/javascript/index",
-              "path": "/develop/client/javascript/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "client/json-rpc/index",
-              "path": "/develop/client/json-rpc/",
+              "id": "client/tendermint-rpc/index",
+              "path": "/develop/client/tendermint-rpc/",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -199,8 +209,8 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "core-concepts/evm-compatible/index",
-              "path": "/develop/core-concepts/evm-compatible/",
+              "id": "core-concepts/evm-compatibility/index",
+              "path": "/develop/core-concepts/evm-compatibility/",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -259,18 +269,18 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "node/full-node-setup/index",
+              "path": "/develop/node/full-node-setup/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "node/index",
               "path": "/develop/node/",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "node/local-dev-setup/index",
-              "path": "/develop/node/local-dev-setup/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "node/testnet-node-setup/index",
-              "path": "/develop/node/testnet-node-setup/",
+              "id": "node/testnet-setup/index",
+              "path": "/develop/node/testnet-setup/",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -351,6 +361,11 @@
             {
               "id": "old/web3js-guide/index",
               "path": "/develop/old/web3js-guide/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "writing-aspect/index",
+              "path": "/develop/writing-aspect/",
               "sidebar": "tutorialSidebar"
             }
           ],
