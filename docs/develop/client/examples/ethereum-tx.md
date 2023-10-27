@@ -8,7 +8,7 @@ sidebar_position: 1
 
 Skip this if you have already got an account of Artela Testnet.
 
-To create and top up your account, refers to [Create Account of Artela Testnet]()
+To create and top up your account, refers to [Create Account of Artela Testnet](/)
 
 ## 2. Deploy contract with your account
 

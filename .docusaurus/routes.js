@@ -44,7 +44,7 @@ export default [
   },
   {
     path: '/develop',
-    component: ComponentCreator('/develop', '39a'),
+    component: ComponentCreator('/develop', '8f7'),
     routes: [
       {
         path: '/develop',
@@ -113,26 +113,38 @@ export default [
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/develop/aspect-lib',
-        component: ComponentCreator('/develop/aspect-lib', 'ac7'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
         path: '/develop/client',
         component: ComponentCreator('/develop/client', '464'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/develop/client/javascript',
-        component: ComponentCreator('/develop/client/javascript', '313'),
+        path: '/develop/client/cosmos-grpc',
+        component: ComponentCreator('/develop/client/cosmos-grpc', '37c'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/develop/client/json-rpc',
-        component: ComponentCreator('/develop/client/json-rpc', 'f95'),
+        path: '/develop/client/ethereum-json-rpc',
+        component: ComponentCreator('/develop/client/ethereum-json-rpc', '972'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/develop/client/examples/deploy-call-contract',
+        component: ComponentCreator('/develop/client/examples/deploy-call-contract', '101'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/develop/client/examples/ethereum-tx',
+        component: ComponentCreator('/develop/client/examples/ethereum-tx', 'e9b'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/develop/client/tendermint-rpc',
+        component: ComponentCreator('/develop/client/tendermint-rpc', 'ebf'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
@@ -227,14 +239,14 @@ export default [
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/develop/node/local-dev-setup',
-        component: ComponentCreator('/develop/node/local-dev-setup', '5fe'),
+        path: '/develop/node/full-node-setup',
+        component: ComponentCreator('/develop/node/full-node-setup', '8b7'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/develop/node/testnet-node-setup',
-        component: ComponentCreator('/develop/node/testnet-node-setup', 'b16'),
+        path: '/develop/node/testnet-setup',
+        component: ComponentCreator('/develop/node/testnet-setup', 'c7f'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
@@ -331,6 +343,12 @@ export default [
       {
         path: '/develop/old/web3js-guide',
         component: ComponentCreator('/develop/old/web3js-guide', 'b12'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/develop/writing-aspect',
+        component: ComponentCreator('/develop/writing-aspect', 'c8a'),
         exact: true,
         sidebar: "tutorialSidebar"
       }
