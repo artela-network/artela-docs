@@ -173,7 +173,7 @@ scp ./testnet/node3/artelad/* user@your-device-3:~/.artelad/
 
 ### 5). Run node one by one
 
-Start the node in your DEVICES.
+Start the node in your devices.
 
 ```bash
 artelad start --pruning=nothing --log_level debug --minimum-gas-prices=0.0001aartela --api.enable --json-rpc.api eth,txpool,personal,net,debug,web3,miner --api.enable
