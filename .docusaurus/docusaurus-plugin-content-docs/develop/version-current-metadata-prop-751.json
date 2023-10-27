@@ -29,15 +29,21 @@
           },
           {
             "type": "link",
-            "label": "Develop a Smart Contract",
-            "href": "/develop/get-started/sol-hello-world/",
-            "docId": "get-started/sol-hello-world/index"
+            "label": "Access Testnet",
+            "href": "/develop/get-started/access-testnet/",
+            "docId": "get-started/access-testnet/index"
           },
           {
             "type": "link",
             "label": "Develop an Aspect",
             "href": "/develop/get-started/aspect-hello-world/",
             "docId": "get-started/aspect-hello-world/index"
+          },
+          {
+            "type": "link",
+            "label": "Develop a Smart Contract",
+            "href": "/develop/get-started/sol-hello-world/",
+            "docId": "get-started/sol-hello-world/index"
           }
         ],
         "href": "/develop/get-started/"
@@ -468,6 +474,12 @@
       "id": "core-concepts/wasm-assemblyscript/index",
       "title": "WASM & Assembly Script",
       "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "get-started/access-testnet/index": {
+      "id": "get-started/access-testnet/index",
+      "title": "Accessing Testnet",
+      "description": "The Artela Testnet is in its beta release phase. Kindly note:",
       "sidebar": "tutorialSidebar"
     },
     "get-started/art-dev-intro/index": {

@@ -13,9 +13,9 @@
           "tagsPath": "/docs/tags",
           "isLast": true,
           "routePriority": -1,
-          "sidebarFilePath": "/Users/jack/Projects/js/artela-docs/sidebars.js",
-          "contentPath": "/Users/jack/Projects/js/artela-docs/docs/home",
-          "contentPathLocalized": "/Users/jack/Projects/js/artela-docs/i18n/en/docusaurus-plugin-content-docs/current",
+          "sidebarFilePath": "/Users/admin/mytech/go-work/src/github.com/artela-network/artela-docs/sidebars.js",
+          "contentPath": "/Users/admin/mytech/go-work/src/github.com/artela-network/artela-docs/docs/home",
+          "contentPathLocalized": "/Users/admin/mytech/go-work/src/github.com/artela-network/artela-docs/i18n/en/docusaurus-plugin-content-docs/current",
           "docs": [
             {
               "unversionedId": "README",
@@ -60,9 +60,9 @@
           "editUrlLocalized": "https://github.com/artela-network/artela-docs/tree/main/i18n/en/docusaurus-plugin-content-docs-main/current",
           "isLast": true,
           "routePriority": -1,
-          "sidebarFilePath": "/Users/jack/Projects/js/artela-docs/sidebars.js",
-          "contentPath": "/Users/jack/Projects/js/artela-docs/docs/main",
-          "contentPathLocalized": "/Users/jack/Projects/js/artela-docs/i18n/en/docusaurus-plugin-content-docs-main/current",
+          "sidebarFilePath": "/Users/admin/mytech/go-work/src/github.com/artela-network/artela-docs/sidebars.js",
+          "contentPath": "/Users/admin/mytech/go-work/src/github.com/artela-network/artela-docs/docs/main",
+          "contentPathLocalized": "/Users/admin/mytech/go-work/src/github.com/artela-network/artela-docs/i18n/en/docusaurus-plugin-content-docs-main/current",
           "docs": [
             {
               "unversionedId": "Artela-Blockchain/artela-blockchain",
@@ -381,9 +381,9 @@
           "editUrlLocalized": "https://github.com/artela-network/artela-docs/tree/main/i18n/en/docusaurus-plugin-content-docs-develop/current",
           "isLast": true,
           "routePriority": -1,
-          "sidebarFilePath": "/Users/jack/Projects/js/artela-docs/sidebars.js",
-          "contentPath": "/Users/jack/Projects/js/artela-docs/docs/develop",
-          "contentPathLocalized": "/Users/jack/Projects/js/artela-docs/i18n/en/docusaurus-plugin-content-docs-develop/current",
+          "sidebarFilePath": "/Users/admin/mytech/go-work/src/github.com/artela-network/artela-docs/sidebars.js",
+          "contentPath": "/Users/admin/mytech/go-work/src/github.com/artela-network/artela-docs/docs/develop",
+          "contentPathLocalized": "/Users/admin/mytech/go-work/src/github.com/artela-network/artela-docs/i18n/en/docusaurus-plugin-content-docs-develop/current",
           "docs": [
             {
               "unversionedId": "advanced-concepts/account-abstraction/index",
@@ -944,8 +944,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Build Your First Aspect",
-                "permalink": "/develop/get-started/aspect-hello-world/"
+                "title": "Build Your Smart Contract",
+                "permalink": "/develop/get-started/sol-hello-world/"
               },
               "next": {
                 "title": "Foundational Topics",
@@ -980,6 +980,33 @@
               }
             },
             {
+              "unversionedId": "get-started/access-testnet/index",
+              "id": "get-started/access-testnet/index",
+              "title": "Accessing Testnet",
+              "description": "The Artela Testnet is in its beta release phase. Kindly note:",
+              "source": "@site/docs/develop/get-started/access-testnet/index.md",
+              "sourceDirName": "get-started/access-testnet",
+              "slug": "/get-started/access-testnet/",
+              "permalink": "/develop/get-started/access-testnet/",
+              "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/get-started/access-testnet/index.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Introduction to Artela Development",
+                "permalink": "/develop/get-started/art-dev-intro/"
+              },
+              "next": {
+                "title": "Build Your First Aspect",
+                "permalink": "/develop/get-started/aspect-hello-world/"
+              }
+            },
+            {
               "unversionedId": "get-started/art-dev-intro/index",
               "id": "get-started/art-dev-intro/index",
               "title": "Introduction to Artela Development",
@@ -1002,8 +1029,8 @@
                 "permalink": "/develop/get-started/"
               },
               "next": {
-                "title": "Build Your Smart Contract",
-                "permalink": "/develop/get-started/sol-hello-world/"
+                "title": "Accessing Testnet",
+                "permalink": "/develop/get-started/access-testnet/"
               }
             },
             {
@@ -1025,12 +1052,12 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Build Your Smart Contract",
-                "permalink": "/develop/get-started/sol-hello-world/"
+                "title": "Accessing Testnet",
+                "permalink": "/develop/get-started/access-testnet/"
               },
               "next": {
-                "title": "Core Concepts",
-                "permalink": "/develop/core-concepts/"
+                "title": "Build Your Smart Contract",
+                "permalink": "/develop/get-started/sol-hello-world/"
               }
             },
             {
@@ -1079,12 +1106,12 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Introduction to Artela Development",
-                "permalink": "/develop/get-started/art-dev-intro/"
-              },
-              "next": {
                 "title": "Build Your First Aspect",
                 "permalink": "/develop/get-started/aspect-hello-world/"
+              },
+              "next": {
+                "title": "Core Concepts",
+                "permalink": "/develop/core-concepts/"
               }
             },
             {
@@ -1673,13 +1700,18 @@
                   },
                   {
                     "type": "doc",
-                    "label": "Develop a Smart Contract",
-                    "id": "get-started/sol-hello-world/index"
+                    "label": "Access Testnet",
+                    "id": "get-started/access-testnet/index"
                   },
                   {
                     "type": "doc",
                     "label": "Develop an Aspect",
                     "id": "get-started/aspect-hello-world/index"
+                  },
+                  {
+                    "type": "doc",
+                    "label": "Develop a Smart Contract",
+                    "id": "get-started/sol-hello-world/index"
                   }
                 ],
                 "link": {

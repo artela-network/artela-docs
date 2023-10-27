@@ -219,6 +219,11 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "get-started/access-testnet/index",
+              "path": "/develop/get-started/access-testnet/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "get-started/art-dev-intro/index",
               "path": "/develop/get-started/art-dev-intro/",
               "sidebar": "tutorialSidebar"
