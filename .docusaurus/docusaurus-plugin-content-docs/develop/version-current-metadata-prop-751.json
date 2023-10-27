@@ -385,7 +385,7 @@
     "advanced-concepts/index": {
       "id": "advanced-concepts/index",
       "title": "Advanced Concepts",
-      "description": "",
+      "description": "This section covers advanced concepts of Artela, these concepts are not required to use Artela, but they are useful to understand how Artela works and how to built more powerful dApps on Artela.",
       "sidebar": "tutorialSidebar"
     },
     "advanced-concepts/jit-call/index": {
@@ -493,19 +493,19 @@
     "core-concepts/foundational/index": {
       "id": "core-concepts/foundational/index",
       "title": "Foundational Topics",
-      "description": "",
+      "description": "WIP",
       "sidebar": "tutorialSidebar"
     },
     "core-concepts/index": {
       "id": "core-concepts/index",
       "title": "Core Concepts",
-      "description": "",
+      "description": "This section will introduce you to the core concepts of Aspect. It is recommended that you read through these concepts before you start using Aspect.",
       "sidebar": "tutorialSidebar"
     },
     "core-concepts/wasm-assemblyscript/index": {
       "id": "core-concepts/wasm-assemblyscript/index",
       "title": "WASM & Assembly Script",
-      "description": "",
+      "description": "WIP",
       "sidebar": "tutorialSidebar"
     },
     "get-started/art-dev-intro/index": {
