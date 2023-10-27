@@ -382,7 +382,7 @@
     "advanced-concepts/account-abstraction/index": {
       "id": "advanced-concepts/account-abstraction/index",
       "title": "Account Abstraction",
-      "description": "",
+      "description": "Account abstraction offers a versatile solution to common issues by enabling users to embed enhanced security measures and superior user experiences directly into their accounts. For a comprehensive understanding of account abstraction, consider reading Ethereum's articles on the topic. It provides an insightful perspective on the subject.",
       "sidebar": "tutorialSidebar"
     },
     "advanced-concepts/asolc/index": {
@@ -412,7 +412,7 @@
     "advanced-concepts/join-point/index": {
       "id": "advanced-concepts/join-point/index",
       "title": "Join Point",
-      "description": "",
+      "description": "Each Join Point represents a specific state transition function at certain transaction lifecycle stage. Each Join Point is composed of a specific metadata (describes when to trigger it, what system module it can invoke and which runtime context it can access) and an entrypoint function(method in your Aspect class, e.g. PreTxExecute).",
       "sidebar": "tutorialSidebar"
     },
     "advanced-concepts/jpm/index": {
@@ -424,7 +424,7 @@
     "advanced-concepts/lifecycle/index": {
       "id": "advanced-concepts/lifecycle/index",
       "title": "Aspect Lifecycle",
-      "description": "",
+      "description": "The lifecycle of an Aspect encompasses several stages, including deployment, upgrade, configuration, binding, unbinding, execution, and destruction.",
       "sidebar": "tutorialSidebar"
     },
     "advanced-concepts/runtime-api/index": {
