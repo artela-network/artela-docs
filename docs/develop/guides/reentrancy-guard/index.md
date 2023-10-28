@@ -160,7 +160,7 @@ When deploying an AttackContract, replace '{curveAddress}' with the real Curve C
 npm run contract:build
 
 ## deploy contract
-npm run contract:deploy -- --abi ./build/contract/Attack.abi  --bytecode ./build/contract/Attack.bin --args [\"{curveAddress}\"]  --pkfile ./attack_accounts.txt
+npm run contract:deploy -- --abi ./build/contract/Attack.abi  --bytecode ./build/contract/Attack.bin --args '["{curveAddress}"]'  --pkfile ./attack_accounts.txt
 ```
 
 The result of the execution can be obtained from the contract address, for example
@@ -173,7 +173,7 @@ The result of the execution can be obtained from the contract address, for examp
 #### 3.5 Attack
 
 ```shell
-npm run contract:deploy -- --abi ./build/contract/Attack.abi  --bytecode ./build/contract/Attack.bin --args '[{curveAddress}]'  --pkfile ./attack_accounts.txt
+npm run contract:send -- --contract '["{attackAddress}"]'    --abi ./build/contract/Attack.abi   --pkfile ./attack_accounts.txt  --method attack  --gas 200000
 ```
 
 If the reentrant attack succeeded, you will see both `AddLiquidity` and `RemoveLiquidity` events logged.
@@ -252,6 +252,7 @@ Deploying the Aspect doesn't automatically activate it. To make it functional, b
    --aspectId {aspect-Id} \                          
    --gas 200000
 ```
+you will see `== aspect bind success == `
 
 ## 5. Re-entrant attack Test
 
@@ -259,7 +260,7 @@ Execute the re-entrant attack on the simplified Curve contract with Aspect prote
 protection succeeded, you will see the transaction gets reverted.
 
 ```shell
-npm run contract:deploy -- --abi ./build/contract/Attack.abi  --bytecode ./build/contract/Attack.bin --args '[{curveAddress}]'  --pkfile ./attack_accounts.txt
+ npm run contract:send -- --contract '[{attackAddress}]'    --abi ./build/contract/Attack.abi   --pkfile ./attack_accounts.txt  --method attack  --gas 200000
 ```
 
 
