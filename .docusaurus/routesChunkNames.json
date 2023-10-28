@@ -48,7 +48,7 @@
       "plugin": "plugin---search-2-a-5-2ad"
     }
   },
-  "/develop-68b": {
+  "/develop-141": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---develop-4-f-2-231"
@@ -114,6 +114,18 @@
   "/develop/art-development/start-a-local-node-11d": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---develop-art-development-start-a-local-node-4-d-6-e0b"
+  },
+  "/develop/aspect-doc-0d7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-aspect-doc-92-b-21a"
+  },
+  "/develop/aspect-doc/aspect-tools-c9b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-aspect-doc-aspect-toolsdb-8-dd2"
+  },
+  "/develop/aspect-doc/system-call-ec3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-aspect-doc-system-call-9-bd-fbe"
   },
   "/develop/client-464": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -254,18 +266,6 @@
   "/develop/old/web3js-guide-b12": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---develop-old-web-3-js-guide-491-c42"
-  },
-  "/develop/writing-aspect-c8a": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-writing-aspect-393-948"
-  },
-  "/develop/writing-aspect/aspect-tools-3c1": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-writing-aspect-aspect-tools-82-e-2a6"
-  },
-  "/develop/writing-aspect/system-call-9f4": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-writing-aspect-system-call-865-bd3"
   },
   "/docs-90b": {
     "__comp": "__comp---theme-doc-page-1-be-9be",

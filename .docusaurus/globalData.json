@@ -179,6 +179,21 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "aspect-doc/aspect-tools/index",
+              "path": "/develop/aspect-doc/aspect-tools/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "aspect-doc/index",
+              "path": "/develop/aspect-doc/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "aspect-doc/system-call/index",
+              "path": "/develop/aspect-doc/system-call/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "client/cosmos-grpc/index",
               "path": "/develop/client/cosmos-grpc/",
               "sidebar": "tutorialSidebar"
@@ -356,21 +371,6 @@
             {
               "id": "old/web3js-guide/index",
               "path": "/develop/old/web3js-guide/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "writing-aspect/aspect-tools/index",
-              "path": "/develop/writing-aspect/aspect-tools/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "writing-aspect/index",
-              "path": "/develop/writing-aspect/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "writing-aspect/system-call/index",
-              "path": "/develop/writing-aspect/system-call/",
               "sidebar": "tutorialSidebar"
             }
           ],

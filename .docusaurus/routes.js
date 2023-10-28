@@ -44,7 +44,7 @@ export default [
   },
   {
     path: '/develop',
-    component: ComponentCreator('/develop', '68b'),
+    component: ComponentCreator('/develop', '141'),
     routes: [
       {
         path: '/develop',
@@ -133,6 +133,24 @@ export default [
       {
         path: '/develop/art-development/start-a-local-node',
         component: ComponentCreator('/develop/art-development/start-a-local-node', '11d'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/develop/aspect-doc',
+        component: ComponentCreator('/develop/aspect-doc', '0d7'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/develop/aspect-doc/aspect-tools',
+        component: ComponentCreator('/develop/aspect-doc/aspect-tools', 'c9b'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/develop/aspect-doc/system-call',
+        component: ComponentCreator('/develop/aspect-doc/system-call', 'ec3'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
@@ -343,24 +361,6 @@ export default [
       {
         path: '/develop/old/web3js-guide',
         component: ComponentCreator('/develop/old/web3js-guide', 'b12'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/develop/writing-aspect',
-        component: ComponentCreator('/develop/writing-aspect', 'c8a'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/develop/writing-aspect/aspect-tools',
-        component: ComponentCreator('/develop/writing-aspect/aspect-tools', '3c1'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/develop/writing-aspect/system-call',
-        component: ComponentCreator('/develop/writing-aspect/system-call', '9f4'),
         exact: true,
         sidebar: "tutorialSidebar"
       }

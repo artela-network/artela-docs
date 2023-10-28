@@ -758,6 +758,87 @@
               }
             },
             {
+              "unversionedId": "aspect-doc/aspect-tools/index",
+              "id": "aspect-doc/aspect-tools/index",
+              "title": "Aspect Reentrancy Guard",
+              "description": "",
+              "source": "@site/docs/develop/aspect-doc/aspect-tools/index.md",
+              "sourceDirName": "aspect-doc/aspect-tools",
+              "slug": "/aspect-doc/aspect-tools/",
+              "permalink": "/develop/aspect-doc/aspect-tools/",
+              "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/aspect-doc/aspect-tools/index.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Aspect Reentrancy Guard",
+                "permalink": "/develop/aspect-doc/system-call/"
+              },
+              "next": {
+                "title": "Guides",
+                "permalink": "/develop/guides/"
+              }
+            },
+            {
+              "unversionedId": "aspect-doc/index",
+              "id": "aspect-doc/index",
+              "title": "Writing Aspect",
+              "description": "Welcome to the Writing Aspect Guide. This guide will walk you through all functionalities of aspect-tool with an example. This example including the process of how to use aspect-tool to install, initialize, and generate code for your projects.",
+              "source": "@site/docs/develop/aspect-doc/index.md",
+              "sourceDirName": "aspect-doc",
+              "slug": "/aspect-doc/",
+              "permalink": "/develop/aspect-doc/",
+              "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/aspect-doc/index.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 8,
+              "frontMatter": {
+                "sidebar_position": 8
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Setup a TestNet",
+                "permalink": "/develop/node/testnet-setup/"
+              },
+              "next": {
+                "title": "Aspect Reentrancy Guard",
+                "permalink": "/develop/aspect-doc/system-call/"
+              }
+            },
+            {
+              "unversionedId": "aspect-doc/system-call/index",
+              "id": "aspect-doc/system-call/index",
+              "title": "Aspect Reentrancy Guard",
+              "description": "",
+              "source": "@site/docs/develop/aspect-doc/system-call/index.md",
+              "sourceDirName": "aspect-doc/system-call",
+              "slug": "/aspect-doc/system-call/",
+              "permalink": "/develop/aspect-doc/system-call/",
+              "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/aspect-doc/system-call/index.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Writing Aspect",
+                "permalink": "/develop/aspect-doc/"
+              },
+              "next": {
+                "title": "Aspect Reentrancy Guard",
+                "permalink": "/develop/aspect-doc/aspect-tools/"
+              }
+            },
+            {
               "unversionedId": "client/cosmos-grpc/index",
               "id": "client/cosmos-grpc/index",
               "title": "Cosmos gRPC",
@@ -1155,7 +1236,7 @@
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Aspect Reentrancy Guard",
-                "permalink": "/develop/writing-aspect/system-call/"
+                "permalink": "/develop/aspect-doc/aspect-tools/"
               },
               "next": {
                 "title": "Aspect Reentrancy Guard",
@@ -1166,7 +1247,7 @@
               "unversionedId": "guides/reentrancy-guard/index",
               "id": "guides/reentrancy-guard/index",
               "title": "Aspect Reentrancy Guard",
-              "description": "",
+              "description": "Intro",
               "source": "@site/docs/develop/guides/reentrancy-guard/index.md",
               "sourceDirName": "guides/reentrancy-guard",
               "slug": "/guides/reentrancy-guard/",
@@ -1290,7 +1371,7 @@
               },
               "next": {
                 "title": "Writing Aspect",
-                "permalink": "/develop/writing-aspect/"
+                "permalink": "/develop/aspect-doc/"
               }
             },
             {
@@ -1699,87 +1780,6 @@
                 "title": "Start a Local Node",
                 "permalink": "/develop/old/start-a-local-node/"
               }
-            },
-            {
-              "unversionedId": "writing-aspect/aspect-tools/index",
-              "id": "writing-aspect/aspect-tools/index",
-              "title": "Aspect Reentrancy Guard",
-              "description": "",
-              "source": "@site/docs/develop/writing-aspect/aspect-tools/index.md",
-              "sourceDirName": "writing-aspect/aspect-tools",
-              "slug": "/writing-aspect/aspect-tools/",
-              "permalink": "/develop/writing-aspect/aspect-tools/",
-              "draft": false,
-              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/writing-aspect/aspect-tools/index.md",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 2,
-              "frontMatter": {
-                "sidebar_position": 2
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Writing Aspect",
-                "permalink": "/develop/writing-aspect/"
-              },
-              "next": {
-                "title": "Aspect Reentrancy Guard",
-                "permalink": "/develop/writing-aspect/system-call/"
-              }
-            },
-            {
-              "unversionedId": "writing-aspect/index",
-              "id": "writing-aspect/index",
-              "title": "Writing Aspect",
-              "description": "Welcome to the Writing Aspect Guide. This guide will walk you through all functionalities of aspect-tool with an example. This example including the process of how to use aspect-tool to install, initialize, and generate code for your projects.",
-              "source": "@site/docs/develop/writing-aspect/index.md",
-              "sourceDirName": "writing-aspect",
-              "slug": "/writing-aspect/",
-              "permalink": "/develop/writing-aspect/",
-              "draft": false,
-              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/writing-aspect/index.md",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 8,
-              "frontMatter": {
-                "sidebar_position": 8
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Setup a TestNet",
-                "permalink": "/develop/node/testnet-setup/"
-              },
-              "next": {
-                "title": "Aspect Reentrancy Guard",
-                "permalink": "/develop/writing-aspect/aspect-tools/"
-              }
-            },
-            {
-              "unversionedId": "writing-aspect/system-call/index",
-              "id": "writing-aspect/system-call/index",
-              "title": "Aspect Reentrancy Guard",
-              "description": "",
-              "source": "@site/docs/develop/writing-aspect/system-call/index.md",
-              "sourceDirName": "writing-aspect/system-call",
-              "slug": "/writing-aspect/system-call/",
-              "permalink": "/develop/writing-aspect/system-call/",
-              "draft": false,
-              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/writing-aspect/system-call/index.md",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 2,
-              "frontMatter": {
-                "sidebar_position": 2
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Aspect Reentrancy Guard",
-                "permalink": "/develop/writing-aspect/aspect-tools/"
-              },
-              "next": {
-                "title": "Guides",
-                "permalink": "/develop/guides/"
-              }
             }
           ],
           "drafts": [],
@@ -1987,24 +1987,24 @@
               },
               {
                 "type": "category",
-                "label": "🛸 Aspect Lib Document",
+                "label": "🛸 Aspect Document",
                 "collapsible": true,
                 "collapsed": true,
                 "items": [
                   {
                     "type": "doc",
-                    "label": "aspect tools",
-                    "id": "writing-aspect/aspect-tools/index"
+                    "label": "system call",
+                    "id": "aspect-doc/system-call/index"
                   },
                   {
                     "type": "doc",
-                    "label": "system call",
-                    "id": "writing-aspect/system-call/index"
+                    "label": "aspect tools",
+                    "id": "aspect-doc/aspect-tools/index"
                   }
                 ],
                 "link": {
                   "type": "doc",
-                  "id": "writing-aspect/index"
+                  "id": "aspect-doc/index"
                 }
               },
               {
