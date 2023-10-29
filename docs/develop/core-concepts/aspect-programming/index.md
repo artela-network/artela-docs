@@ -14,11 +14,11 @@ Aspect Programming introduces a powerful paradigm built around the Join Point Mo
 
 ![Aspect Programming Overview](aspect-programming-overview.png)
 
-To elucidate the workings of Aspect Programming, consider a smart contract that houses a vault with a substantial deposit. The aim is to safeguard the smart contract during runtime, shielding it from potential threats that might illicitly redirect deposits. An Aspect is architected to oversee and validate any alterations in the vault post the smart contract's execution. If an anomaly in fund movement is detected, this Aspect nullifies the questionable transaction. This Aspect's execution is initiated post the smart contract's execution when a transaction invokes the contract.
+To illustrate how aspect programming works, consider a smart contract that houses a vault with a substantial deposit. The aim is to safeguard the smart contract during runtime, shielding it from potential threats that might illicitly redirect deposits. An Aspect is architected to oversee and validate any alterations in the vault post the smart contract's execution. If an anomaly in fund movement is detected, this Aspect nullifies the questionable transaction. This Aspect's execution is initiated post the smart contract's execution when a transaction invokes the contract.
 
 ## Aspect and Join Points
 
-An Aspect is crafted as a class, an extension of the foundational Aspect interfaces. It houses methods indicative of join points, where added logic can be interwoven. Here’s a refined example:
+An Aspect is designed as a class, an extension of the foundational Aspect interfaces. It contains methods indicative of join points, where added logic can be interwoven. Here’s a refined example:
 
 ```typescript
 export class Aspect implements IAspectTransaction, IAspectBlock, IAspectOperation {
@@ -50,9 +50,9 @@ The illustrated Aspect checks for the invocation of the smart contract's `withdr
 
 To assimilate an Aspect into the blockchain, its bytecode is embedded in a deployment transaction. This transaction interacts with an Aspect system contract, lodging the Aspect’s bytecode within the blockchain's global state. This grants the validators access to the bytecode, permitting the execution of the Aspect's logic upon activation.
 
-However, an Aspect only springs into action when tethered to a particular smart contract. This tethering or binding requires the smart contract owner to sign a binding transaction using their externally owned account (EOA) - the one should bypass the examination of smart contract's `isOwner(address) returns (bool)` method. This transaction, housing both the smart contract address and the Aspect ID, engages the Aspect system contract upon execution, cementing the bond between the smart contract and the Aspect within the blockchain's global state. This ensures that only the smart contract's legitimate owner can tether Aspects, thwarting any unauthorized binding attempts.
+However, an Aspect only springs into action when bound to a particular smart contract. It requires the smart contract owner to sign a binding transaction using their externally owned account (EOA) - the one should bypass the examination of smart contract's `isOwner(address) returns (bool)` method. This transaction contains both the smart contract address and the Aspect ID, and involves the Aspect system contract upon execution, cementing the bond between the smart contract and the Aspect within the blockchain's global state. This ensures that only the smart contract's legitimate owner can bind Aspects, thwarting any unauthorized binding attempts.
 
-Post the successful execution of both deployment and binding transactions, the Aspect is integrated into the blockchain and tethered to the smart contract, amplifying the contract's functionalities and bolstering its security.
+Post the successful execution of both deployment and binding transactions, the Aspect is integrated into the blockchain and bound to the smart contract, amplifying the contract's functionalities and bolstering its security.
 
 ## Execution with Aspect
 
