@@ -1,74 +1,5 @@
 {
   "docusaurus-plugin-content-docs": {
-    "main": {
-      "path": "/main",
-      "versions": [
-        {
-          "name": "current",
-          "label": "Next",
-          "isLast": true,
-          "path": "/main",
-          "mainDocId": "index",
-          "docs": [
-            {
-              "id": "Artela-Blockchain/artela-blockchain",
-              "path": "/main/Artela-Blockchain",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Aspect-Programming/Aspect",
-              "path": "/main/Aspect-Programming/Aspect",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Aspect-Programming/aspect-programming",
-              "path": "/main/Aspect-Programming",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Aspect-Programming/Native-Extension",
-              "path": "/main/Aspect-Programming/Native-Extension",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Build-on-Artela/Lite-DApp",
-              "path": "/main/Build-on-Artela/Lite-DApp",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Build-on-Artela/Public-Service",
-              "path": "/main/Build-on-Artela/Public-Service",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Build-on-Artela/Rich-DApp",
-              "path": "/main/Build-on-Artela/Rich-DApp",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "index",
-              "path": "/main/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "Resources/FAQ",
-              "path": "/main/Resources/FAQ",
-              "sidebar": "tutorialSidebar"
-            }
-          ],
-          "draftIds": [],
-          "sidebars": {
-            "tutorialSidebar": {
-              "link": {
-                "path": "/main/",
-                "label": "index"
-              }
-            }
-          }
-        }
-      ],
-      "breadcrumbs": true
-    },
     "default": {
       "path": "/docs",
       "versions": [
@@ -379,6 +310,75 @@
             "tutorialSidebar": {
               "link": {
                 "path": "/develop/",
+                "label": "index"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    },
+    "main": {
+      "path": "/main",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/main",
+          "mainDocId": "index",
+          "docs": [
+            {
+              "id": "Artela-Blockchain/artela-blockchain",
+              "path": "/main/Artela-Blockchain",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Aspect-Programming/Aspect",
+              "path": "/main/Aspect-Programming/Aspect",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Aspect-Programming/aspect-programming",
+              "path": "/main/Aspect-Programming",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Aspect-Programming/Native-Extension",
+              "path": "/main/Aspect-Programming/Native-Extension",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Build-on-Artela/Lite-DApp",
+              "path": "/main/Build-on-Artela/Lite-DApp",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Build-on-Artela/Public-Service",
+              "path": "/main/Build-on-Artela/Public-Service",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Build-on-Artela/Rich-DApp",
+              "path": "/main/Build-on-Artela/Rich-DApp",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "index",
+              "path": "/main/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Resources/FAQ",
+              "path": "/main/Resources/FAQ",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/main/",
                 "label": "index"
               }
             }

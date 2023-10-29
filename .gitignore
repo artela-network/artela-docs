@@ -130,3 +130,7 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
+.docusaurus
+.idea
+build
+package-lock.json
