@@ -16,6 +16,8 @@ Aspects boast the capability to initiate just-in-time calls through an AA wallet
 // call 0x65 with the user operation hash
 (bool success, bytes memory returnData) = address(0x65).call(bytes32ToBytes(userOpHash));
 // validate the return aspect id in your whitelist
+// note: this is a very simple way to verify the JIT call, 
+//       you may need to implement your own customized validation logic according to you needs.
 validationData = success 
                 ? _validateAspectId(bytesToAddress(returnData)) 
                 : ASPECT_VALIDATION_FAILED;

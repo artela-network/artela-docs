@@ -28,12 +28,12 @@ export default {
       {
         "docs": {
           "path": "docs/home",
-          "sidebarPath": "/Users/admin/mytech/go-work/src/github.com/artela-network/artela-docs/sidebars.js",
+          "sidebarPath": "/Users/jack/Projects/js/artela-docs/sidebars.js",
           "breadcrumbs": true
         },
         "blog": false,
         "theme": {
-          "customCss": "/Users/admin/mytech/go-work/src/github.com/artela-network/artela-docs/src/css/custom.css"
+          "customCss": "/Users/jack/Projects/js/artela-docs/src/css/custom.css"
         }
       }
     ]
@@ -45,7 +45,7 @@ export default {
         "path": "docs/main",
         "routeBasePath": "main",
         "id": "main",
-        "sidebarPath": "/Users/admin/mytech/go-work/src/github.com/artela-network/artela-docs/sidebars.js",
+        "sidebarPath": "/Users/jack/Projects/js/artela-docs/sidebars.js",
         "breadcrumbs": true,
         "editUrl": "https://github.com/artela-network/artela-docs/tree/main/"
       }
@@ -56,7 +56,7 @@ export default {
         "path": "docs/develop",
         "routeBasePath": "develop",
         "id": "develop",
-        "sidebarPath": "/Users/admin/mytech/go-work/src/github.com/artela-network/artela-docs/sidebars.js",
+        "sidebarPath": "/Users/jack/Projects/js/artela-docs/sidebars.js",
         "breadcrumbs": true,
         "editUrl": "https://github.com/artela-network/artela-docs/tree/main/"
       }
@@ -362,7 +362,9 @@ export default {
           }
         ]
       },
-      "additionalLanguages": [],
+      "additionalLanguages": [
+        "solidity"
+      ],
       "magicComments": [
         {
           "className": "theme-code-block-highlighted-line",

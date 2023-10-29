@@ -388,13 +388,13 @@
     "advanced-concepts/asolc/index": {
       "id": "advanced-concepts/asolc/index",
       "title": "ASOLC",
-      "description": "Similar to Ethereum, Artela supports EVM smart contracts. However, Artela runs a modified version of the EVM, which is fully compatible with legacy Solidity but includes additional features such as state and callstack tracing.",
+      "description": "What is ASOLC?",
       "sidebar": "tutorialSidebar"
     },
     "advanced-concepts/communication/index": {
       "id": "advanced-concepts/communication/index",
       "title": "Communication between Aspects & Smart Contracts",
-      "description": "",
+      "description": "While Aspect and Smart Contract execution environments are distinct (WASM vs EVM), they aren't completely isolated. Just as smart contracts can interact via contract calls, there are several methods for Aspects and Smart Contracts to exchange information. This document elaborates on these methods.",
       "sidebar": "tutorialSidebar"
     },
     "advanced-concepts/index": {
@@ -406,7 +406,7 @@
     "advanced-concepts/jit-call/index": {
       "id": "advanced-concepts/jit-call/index",
       "title": "JIT(Just In Time) Call",
-      "description": "",
+      "description": "Aspect can insert additional contract calls into the current EVM callstack at Contract Call Level Join Points. This operation is known as Just-In-Time (JIT) Call. With this capability, dApps can make call-level real-time decisions. For instance, they can provide just-in-time liquidity to a DEX pool and etc. The sender of the JIT call must be an AA (Account Abstraction) wallet, and this wallet must have authorized the given Aspect to perform such an operation. For more details about AA wallets, please refer to the documentation on Account Abstraction.",
       "sidebar": "tutorialSidebar"
     },
     "advanced-concepts/join-point/index": {
@@ -418,7 +418,7 @@
     "advanced-concepts/jpm/index": {
       "id": "advanced-concepts/jpm/index",
       "title": "Join Point Model",
-      "description": "In this section, we provide an overview of the join point model's specifications. Details on its components will be discussed in subsequent sections.",
+      "description": "Understanding Aspects",
       "sidebar": "tutorialSidebar"
     },
     "advanced-concepts/lifecycle/index": {

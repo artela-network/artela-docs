@@ -4,13 +4,13 @@ sidebar_position: 1
 
 # ASOLC
 
-# What is ASOLC?
+## What is ASOLC?
 
 Similar to Ethereum, Artela supports EVM smart contracts. However, Artela runs a modified version of the EVM, which is fully compatible with legacy Solidity but includes additional features such as `state` and `callstack` tracing.
 
 To achieve this, Artela uses an enhanced version of **SOLC,** called **ASOLC**. ASOLC compiles smart contracts with instruction instrumenting to enable these features.
 
-# Download ASOLC
+## Download ASOLC
 
 You can find ASOLC releases [here](https://github.com/artela-network/solidity/releases/tag/v0.8.21-atl). Choose the version that matches your system (e.g., for macOS, `download macos.tar.gz`).
 
@@ -44,7 +44,7 @@ You can verify the installation by checking the version of `asolc` with this com
 asolc --version
 ```
 
-# 3. Compile Your Smart Contract with ASOLC
+## Compile Your Smart Contract with ASOLC
 
 To compile your smart contract using Artela SOLC, use the following command:
 
