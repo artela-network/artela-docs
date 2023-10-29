@@ -50,7 +50,7 @@ To reproduce the attack, you need to install solc and vyper (specific version wi
 
 ## 2. Create a blockchain account (optional).
 
-Execute the following command under project folder to create tow accounts, if you don't already have one.
+Execute the following command under project folder to create two accounts, if you don't already have one.
 
 ```bash
 npm run account:create -- --pkfile ./curve_accounts.txt
@@ -58,7 +58,7 @@ npm run account:create -- --pkfile ./attack_accounts.txt
 
 ```
 
-Also, if you don't have a test coin in your account, please join [our discard](https://discord.com/invite/artela)
+Also, if you don't have a test token in your account, please join [our discard](https://discord.com/invite/artela)
 ，require testnet faucet。.
 
 ## 3. Create Smart Contract
