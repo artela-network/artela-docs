@@ -3,7 +3,7 @@
 # Accessing Testnet
 
 :::note Artela Testnet Status
-The Artela Testnet is in its `beta` release phase. Kindly note:
+The Artela Testnet is in its `alpha` release phase. Kindly note:
 
 - The test environment remains under active development, and its features are subject to change.
 - We aim for stability, but it's not recommended for production use at this moment.
