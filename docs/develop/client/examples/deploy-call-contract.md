@@ -8,7 +8,7 @@ sidebar_position: 2
 
 **`ArtToken.sol`**
 
-Contract that defines the token.
+The contract defines the token.
 
 ```bash
 // SPDX-License-Identifier: GPL-3.0
@@ -74,11 +74,11 @@ contract Borker is Ownable {
 
 ## 2. Deploy Contract Script
 
-With your private key, sign the deploy transaction of `ArtToken.sol` and `Broker.sol` Contract.
+Using your private key, sign the deploy transactions for `ArtToken.sol` and `Broker.sol` contracts.
 
-`tokenBytes, tokenAbidata` compiling output of `ArtToken.sol`
+`tokenBytes`, `tokenAbidata`: compiling output of `ArtToken.sol`
 
-`brokerBytes, brokerAbidata` compiling output of `Broker.sol`
+`brokerBytes`, `brokerAbidata`: compiling output of `Broker.sol`
 
 ```bash
 const fs = require('fs');
