@@ -436,7 +436,7 @@
     "advanced-concepts/system-call/index": {
       "id": "advanced-concepts/system-call/index",
       "title": "System Call",
-      "description": "In Aspect, when a \"system call\" is activated, it initiates the execution of a specific system module, hereafter referred to as \"Module\". A Module can maintain its internal states, which we'll term as \"Module States\" (previously represented as ϖ M). The relationship can be understood as:",
+      "description": "In the world of Aspect, a \"system call\" is a mechanism that triggers the execution of a specific system module, which we'll refer to as \"Module\". Each Module can have its own internal states, known as \"Module States\". The way a Module changes over time can be understood as follows: The Module States at a future moment are determined by a system call applied to the Module States at a current moment along with the input to that system call.",
       "sidebar": "tutorialSidebar"
     },
     "art-development/access-testnet/index": {
