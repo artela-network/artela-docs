@@ -1,288 +1,331 @@
 {
-  "/search-e9d": {
-    "__comp": "1a4e3797",
+  "/__docusaurus/debug-6df": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
     "__context": {
-      "plugin": "2a59bf97"
+      "plugin": "plugin---docusaurus-debug-73-d-e8a"
     }
   },
-  "/develop-141": {
-    "__comp": "1be78505",
+  "/__docusaurus/debug/config-e21": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
     "__context": {
-      "plugin": "4f202341"
+      "plugin": "plugin---docusaurus-debug-73-d-e8a"
+    }
+  },
+  "/__docusaurus/debug/content-7f9": {
+    "__comp": "__comp---theme-debug-contentba-8-ce7",
+    "__context": {
+      "plugin": "plugin---docusaurus-debug-73-d-e8a"
     },
-    "versionMetadata": "54f6cdf9"
+    "allContent": "allContent---docusaurus-debug-content-246-9aa"
+  },
+  "/__docusaurus/debug/globalData-567": {
+    "__comp": "__comp---theme-debug-global-dataede-0fa",
+    "__context": {
+      "plugin": "plugin---docusaurus-debug-73-d-e8a"
+    }
+  },
+  "/__docusaurus/debug/metadata-538": {
+    "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
+    "__context": {
+      "plugin": "plugin---docusaurus-debug-73-d-e8a"
+    }
+  },
+  "/__docusaurus/debug/registry-981": {
+    "__comp": "__comp---theme-debug-registry-679-501",
+    "__context": {
+      "plugin": "plugin---docusaurus-debug-73-d-e8a"
+    }
+  },
+  "/__docusaurus/debug/routes-87f": {
+    "__comp": "__comp---theme-debug-routes-946-699",
+    "__context": {
+      "plugin": "plugin---docusaurus-debug-73-d-e8a"
+    }
+  },
+  "/search-e9d": {
+    "__comp": "__comp---theme-search-page-1-a-4-d6f",
+    "__context": {
+      "plugin": "plugin---search-2-a-5-2ad"
+    }
+  },
+  "/develop-3fd": {
+    "__comp": "__comp---theme-doc-page-1-be-9be",
+    "__context": {
+      "plugin": "plugin---develop-4-f-2-231"
+    },
+    "versionMetadata": "versionMetadata---develop-54-f-bbc"
   },
   "/develop-553": {
-    "__comp": "17896441",
-    "content": "6cc25ccb"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-6-cc-bf2"
   },
   "/develop/advanced-concepts-65d": {
-    "__comp": "17896441",
-    "content": "311e3189"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-advanced-concepts-311-737"
   },
   "/develop/advanced-concepts/account-abstraction-2ab": {
-    "__comp": "17896441",
-    "content": "e7cb0c46"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-advanced-concepts-account-abstractione-7-c-c98"
   },
   "/develop/advanced-concepts/asolc-d15": {
-    "__comp": "17896441",
-    "content": "45cdc83d"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-advanced-concepts-asolc-45-c-d7a"
   },
   "/develop/advanced-concepts/communication-f70": {
-    "__comp": "17896441",
-    "content": "a0114094"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-advanced-concepts-communicationa-01-50d"
   },
   "/develop/advanced-concepts/jit-call-d97": {
-    "__comp": "17896441",
-    "content": "aeed51d5"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-advanced-concepts-jit-callaee-ab1"
   },
   "/develop/advanced-concepts/join-point-7e3": {
-    "__comp": "17896441",
-    "content": "1c0d148f"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-advanced-concepts-join-point-1-c-0-00c"
   },
   "/develop/advanced-concepts/jpm-3c3": {
-    "__comp": "17896441",
-    "content": "7a99f3a8"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-advanced-concepts-jpm-7-a-9-e77"
   },
   "/develop/advanced-concepts/lifecycle-42f": {
-    "__comp": "17896441",
-    "content": "6f1d34a4"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-advanced-concepts-lifecycle-6-f-1-b17"
   },
   "/develop/advanced-concepts/runtime-api-5dc": {
-    "__comp": "17896441",
-    "content": "9e4d1a85"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-advanced-concepts-runtime-api-9-e-4-154"
   },
   "/develop/advanced-concepts/system-call-198": {
-    "__comp": "17896441",
-    "content": "7d43763f"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-advanced-concepts-system-call-7-d-4-e93"
   },
   "/develop/art-development-de5": {
-    "__comp": "17896441",
-    "content": "989dc1e9"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-art-development-989-534"
   },
   "/develop/art-development/access-testnet-d2b": {
-    "__comp": "17896441",
-    "content": "2557bb20"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-art-development-access-testnet-255-a3a"
   },
   "/develop/art-development/get-started-6f1": {
-    "__comp": "17896441",
-    "content": "b9841535"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-art-development-get-startedb-98-8b4"
   },
   "/develop/art-development/start-a-local-node-11d": {
-    "__comp": "17896441",
-    "content": "4d697d75"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-art-development-start-a-local-node-4-d-6-e0b"
   },
   "/develop/aspect-doc-0d7": {
-    "__comp": "17896441",
-    "content": "92b3352b"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-aspect-doc-92-b-21a"
+  },
+  "/develop/aspect-doc/aspect-libs-3cc": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-aspect-doc-aspect-libs-4-ce-4fe"
   },
   "/develop/aspect-doc/aspect-tools-c9b": {
-    "__comp": "17896441",
-    "content": "db806635"
-  },
-  "/develop/aspect-doc/system-call-ec3": {
-    "__comp": "17896441",
-    "content": "9bde1ad0"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-aspect-doc-aspect-toolsdb-8-dd2"
   },
   "/develop/client-464": {
-    "__comp": "17896441",
-    "content": "5e1f3be8"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-client-5-e-1-46e"
   },
   "/develop/client/cosmos-grpc-37c": {
-    "__comp": "17896441",
-    "content": "11b72869"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-client-cosmos-grpc-11-b-786"
   },
   "/develop/client/ethereum-json-rpc-972": {
-    "__comp": "17896441",
-    "content": "13e62088"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-client-ethereum-json-rpc-13-e-0ec"
   },
   "/develop/client/examples/deploy-call-contract-101": {
-    "__comp": "17896441",
-    "content": "50269701"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-client-examples-deploy-call-contract-502-af4"
   },
   "/develop/client/examples/ethereum-tx-e9b": {
-    "__comp": "17896441",
-    "content": "875856b9"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-client-examples-ethereum-tx-875-b0d"
   },
   "/develop/client/tendermint-rpc-ebf": {
-    "__comp": "17896441",
-    "content": "5802e8b9"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-client-tendermint-rpc-580-8d0"
   },
   "/develop/core-concepts-d53": {
-    "__comp": "17896441",
-    "content": "1b49a563"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-core-concepts-1-b-4-675"
   },
   "/develop/core-concepts/arch-251": {
-    "__comp": "17896441",
-    "content": "63d3487d"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-core-concepts-arch-63-d-280"
   },
   "/develop/core-concepts/aspect-41b": {
-    "__comp": "17896441",
-    "content": "d88e8d47"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-core-concepts-aspectd-88-4cf"
   },
   "/develop/core-concepts/aspect-programming-652": {
-    "__comp": "17896441",
-    "content": "59e474f8"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-core-concepts-aspect-programming-59-e-0d6"
   },
   "/develop/core-concepts/aspect-runtime-fa7": {
-    "__comp": "17896441",
-    "content": "df10dd1f"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-core-concepts-aspect-runtimedf-1-718"
   },
   "/develop/core-concepts/evm-compatibility-6eb": {
-    "__comp": "17896441",
-    "content": "7f7372a5"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-core-concepts-evm-compatibility-7-f-7-044"
   },
   "/develop/core-concepts/foundational-f1e": {
-    "__comp": "17896441",
-    "content": "fe06f141"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-core-concepts-foundationalfe-0-3ee"
   },
   "/develop/core-concepts/wasm-assemblyscript-5a4": {
-    "__comp": "17896441",
-    "content": "faca31a3"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-core-concepts-wasm-assemblyscriptfac-989"
   },
   "/develop/guides-e14": {
-    "__comp": "17896441",
-    "content": "94a28017"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-guides-94-a-311"
   },
   "/develop/guides/reentrancy-guard-545": {
-    "__comp": "17896441",
-    "content": "15844b86"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-guides-reentrancy-guard-158-cb9"
   },
   "/develop/node-b02": {
-    "__comp": "17896441",
-    "content": "30d83b56"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-node-30-d-e49"
   },
   "/develop/node/full-node-setup-8b7": {
-    "__comp": "17896441",
-    "content": "167fc380"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-node-full-node-setup-167-274"
   },
   "/develop/node/testnet-setup-c7f": {
-    "__comp": "17896441",
-    "content": "10d79eed"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-node-testnet-setup-10-d-e72"
   },
   "/develop/old/asolc-guide-b87": {
-    "__comp": "17896441",
-    "content": "b7835937"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-old-asolc-guideb-78-c99"
   },
   "/develop/old/aspect-examples-8fb": {
-    "__comp": "17896441",
-    "content": "1fa876d0"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-old-aspect-examples-1-fa-a06"
   },
   "/develop/old/aspect-examples/schedular-aspect-6e9": {
-    "__comp": "17896441",
-    "content": "43a20738"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-old-aspect-examples-schedular-aspect-43-a-6c2"
   },
   "/develop/old/aspect-examples/security-aspect-a26": {
-    "__comp": "17896441",
-    "content": "043ed344"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-old-aspect-examples-security-aspect-043-d05"
   },
   "/develop/old/aspect-in-depth-b89": {
-    "__comp": "17896441",
-    "content": "a2e43b6a"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-old-aspect-in-deptha-2-e-c04"
   },
   "/develop/old/aspect-in-depth/aspect-dd-a19": {
-    "__comp": "17896441",
-    "content": "ca4ee310"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-old-aspect-in-depth-aspect-ddca-4-c63"
   },
   "/develop/old/aspect-in-depth/aspect-tools-4e6": {
-    "__comp": "17896441",
-    "content": "fa4b7ded"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-old-aspect-in-depth-aspect-toolsfa-4-e3c"
   },
   "/develop/old/quick-start-62f": {
-    "__comp": "17896441",
-    "content": "37ee4c3f"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-old-quick-start-37-e-4d4"
   },
   "/develop/old/quick-start/access-testnet-961": {
-    "__comp": "17896441",
-    "content": "60053cf4"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-old-quick-start-access-testnet-600-12a"
   },
   "/develop/old/quick-start/develop-a-smart-contract-2b6": {
-    "__comp": "17896441",
-    "content": "37b1dd8b"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-old-quick-start-develop-a-smart-contract-37-b-1f7"
   },
   "/develop/old/quick-start/develop-an-aspect-008": {
-    "__comp": "17896441",
-    "content": "16d26d5c"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-old-quick-start-develop-an-aspect-16-d-f1f"
   },
   "/develop/old/resources-95d": {
-    "__comp": "17896441",
-    "content": "712888b0"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-old-resources-712-7a1"
   },
   "/develop/old/resources/faucet-c19": {
-    "__comp": "17896441",
-    "content": "7061cf76"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-old-resources-faucet-706-465"
   },
   "/develop/old/resources/write-smart-contract-627": {
-    "__comp": "17896441",
-    "content": "0d3d5dea"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-old-resources-write-smart-contract-0-d-3-698"
   },
   "/develop/old/start-a-local-node-533": {
-    "__comp": "17896441",
-    "content": "f40768d6"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-old-start-a-local-nodef-40-d2e"
   },
   "/develop/old/web3js-guide-b12": {
-    "__comp": "17896441",
-    "content": "491f00da"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-old-web-3-js-guide-491-c42"
   },
   "/docs-90b": {
-    "__comp": "1be78505",
+    "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
-      "plugin": "bdb3d6d7"
+      "plugin": "plugin---docsbdb-3d0"
     },
-    "versionMetadata": "935f2afb"
+    "versionMetadata": "versionMetadata---docs-935-398"
   },
   "/docs-bd3": {
-    "__comp": "17896441",
-    "content": "92df3968"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-92-d-b06"
   },
   "/main-df5": {
-    "__comp": "1be78505",
+    "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
-      "plugin": "a26d3616"
+      "plugin": "plugin---maina-26-7ec"
     },
-    "versionMetadata": "c8bb83e8"
+    "versionMetadata": "versionMetadata---mainc-8-b-4e2"
   },
   "/main-d02": {
-    "__comp": "17896441",
-    "content": "723526f4"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---main-723-9fa"
   },
   "/main/Artela-Blockchain-68e": {
-    "__comp": "17896441",
-    "content": "6546df94"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---main-artela-blockchain-654-508"
   },
   "/main/Aspect-Programming-a5a": {
-    "__comp": "17896441",
-    "content": "f1b31bde"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---main-aspect-programmingf-1-b-08b"
   },
   "/main/Aspect-Programming/Aspect-7c2": {
-    "__comp": "17896441",
-    "content": "c84a0b40"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---main-aspect-programming-aspectc-84-b99"
   },
   "/main/Aspect-Programming/Native-Extension-562": {
-    "__comp": "17896441",
-    "content": "40452b31"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---main-aspect-programming-native-extension-404-664"
   },
   "/main/Build-on-Artela/Lite-DApp-210": {
-    "__comp": "17896441",
-    "content": "a80937fe"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---main-build-on-artela-lite-d-appa-80-fe5"
   },
   "/main/Build-on-Artela/Public-Service-7f2": {
-    "__comp": "17896441",
-    "content": "3f931168"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---main-build-on-artela-public-service-3-f-9-517"
   },
   "/main/Build-on-Artela/Rich-DApp-669": {
-    "__comp": "17896441",
-    "content": "629aaac4"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---main-build-on-artela-rich-d-app-629-aa1"
   },
   "/main/Resources/FAQ-3a1": {
-    "__comp": "17896441",
-    "content": "f82a1cad"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---main-resources-fa-qf-82-340"
   },
   "/-3f0": {
-    "__comp": "1df93b7f",
+    "__comp": "__comp---site-src-pages-index-tsx-1-df-d3e",
     "__context": {
-      "plugin": "2023aec4"
+      "plugin": "plugin---202-c4f"
     },
-    "config": "5e9f5e1a"
+    "config": "config---5-e-9-4f3"
   }
 }

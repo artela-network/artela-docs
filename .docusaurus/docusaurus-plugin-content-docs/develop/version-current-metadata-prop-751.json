@@ -232,13 +232,13 @@
         "items": [
           {
             "type": "link",
-            "label": "system call",
-            "href": "/develop/aspect-doc/system-call/",
-            "docId": "aspect-doc/system-call/index"
+            "label": "Aspect Libs",
+            "href": "/develop/aspect-doc/aspect-libs/",
+            "docId": "aspect-doc/aspect-libs/index"
           },
           {
             "type": "link",
-            "label": "aspect tools",
+            "label": "Aspect Tools",
             "href": "/develop/aspect-doc/aspect-tools/",
             "docId": "aspect-doc/aspect-tools/index"
           }
@@ -463,22 +463,22 @@
       "description": "1. Building the Source",
       "sidebar": "tutorialSidebar"
     },
+    "aspect-doc/aspect-libs/index": {
+      "id": "aspect-doc/aspect-libs/index",
+      "title": "Aspect Libs",
+      "description": "---",
+      "sidebar": "tutorialSidebar"
+    },
     "aspect-doc/aspect-tools/index": {
       "id": "aspect-doc/aspect-tools/index",
-      "title": "Aspect Reentrancy Guard",
-      "description": "",
+      "title": "Aspect tools",
+      "description": "Init Project",
       "sidebar": "tutorialSidebar"
     },
     "aspect-doc/index": {
       "id": "aspect-doc/index",
       "title": "Writing Aspect",
       "description": "Welcome to the Writing Aspect Guide. This guide will walk you through all functionalities of aspect-tool with an example. This example including the process of how to use aspect-tool to install, initialize, and generate code for your projects.",
-      "sidebar": "tutorialSidebar"
-    },
-    "aspect-doc/system-call/index": {
-      "id": "aspect-doc/system-call/index",
-      "title": "Aspect Reentrancy Guard",
-      "description": "",
       "sidebar": "tutorialSidebar"
     },
     "client/cosmos-grpc/index": {

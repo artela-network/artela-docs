@@ -3,13 +3,48 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
+    path: '/__docusaurus/debug',
+    component: ComponentCreator('/__docusaurus/debug', '6df'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/config',
+    component: ComponentCreator('/__docusaurus/debug/config', 'e21'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/content',
+    component: ComponentCreator('/__docusaurus/debug/content', '7f9'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/globalData',
+    component: ComponentCreator('/__docusaurus/debug/globalData', '567'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/metadata',
+    component: ComponentCreator('/__docusaurus/debug/metadata', '538'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/registry',
+    component: ComponentCreator('/__docusaurus/debug/registry', '981'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/routes',
+    component: ComponentCreator('/__docusaurus/debug/routes', '87f'),
+    exact: true
+  },
+  {
     path: '/search',
     component: ComponentCreator('/search', 'e9d'),
     exact: true
   },
   {
     path: '/develop',
-    component: ComponentCreator('/develop', '141'),
+    component: ComponentCreator('/develop', '3fd'),
     routes: [
       {
         path: '/develop',
@@ -108,14 +143,14 @@ export default [
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/develop/aspect-doc/aspect-tools',
-        component: ComponentCreator('/develop/aspect-doc/aspect-tools', 'c9b'),
+        path: '/develop/aspect-doc/aspect-libs',
+        component: ComponentCreator('/develop/aspect-doc/aspect-libs', '3cc'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/develop/aspect-doc/system-call',
-        component: ComponentCreator('/develop/aspect-doc/system-call', 'ec3'),
+        path: '/develop/aspect-doc/aspect-tools',
+        component: ComponentCreator('/develop/aspect-doc/aspect-tools', 'c9b'),
         exact: true,
         sidebar: "tutorialSidebar"
       },

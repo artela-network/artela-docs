@@ -13,9 +13,9 @@
           "tagsPath": "/docs/tags",
           "isLast": true,
           "routePriority": -1,
-          "sidebarFilePath": "/Users/jack/Projects/js/artela-docs/sidebars.js",
-          "contentPath": "/Users/jack/Projects/js/artela-docs/docs/home",
-          "contentPathLocalized": "/Users/jack/Projects/js/artela-docs/i18n/en/docusaurus-plugin-content-docs/current",
+          "sidebarFilePath": "/Users/admin/mytech/go-work/src/github.com/artela-network/artela-docs/sidebars.js",
+          "contentPath": "/Users/admin/mytech/go-work/src/github.com/artela-network/artela-docs/docs/home",
+          "contentPathLocalized": "/Users/admin/mytech/go-work/src/github.com/artela-network/artela-docs/i18n/en/docusaurus-plugin-content-docs/current",
           "docs": [
             {
               "unversionedId": "README",
@@ -60,9 +60,9 @@
           "editUrlLocalized": "https://github.com/artela-network/artela-docs/tree/main/i18n/en/docusaurus-plugin-content-docs-main/current",
           "isLast": true,
           "routePriority": -1,
-          "sidebarFilePath": "/Users/jack/Projects/js/artela-docs/sidebars.js",
-          "contentPath": "/Users/jack/Projects/js/artela-docs/docs/main",
-          "contentPathLocalized": "/Users/jack/Projects/js/artela-docs/i18n/en/docusaurus-plugin-content-docs-main/current",
+          "sidebarFilePath": "/Users/admin/mytech/go-work/src/github.com/artela-network/artela-docs/sidebars.js",
+          "contentPath": "/Users/admin/mytech/go-work/src/github.com/artela-network/artela-docs/docs/main",
+          "contentPathLocalized": "/Users/admin/mytech/go-work/src/github.com/artela-network/artela-docs/i18n/en/docusaurus-plugin-content-docs-main/current",
           "docs": [
             {
               "unversionedId": "Artela-Blockchain/artela-blockchain",
@@ -381,9 +381,9 @@
           "editUrlLocalized": "https://github.com/artela-network/artela-docs/tree/main/i18n/en/docusaurus-plugin-content-docs-develop/current",
           "isLast": true,
           "routePriority": -1,
-          "sidebarFilePath": "/Users/jack/Projects/js/artela-docs/sidebars.js",
-          "contentPath": "/Users/jack/Projects/js/artela-docs/docs/develop",
-          "contentPathLocalized": "/Users/jack/Projects/js/artela-docs/i18n/en/docusaurus-plugin-content-docs-develop/current",
+          "sidebarFilePath": "/Users/admin/mytech/go-work/src/github.com/artela-network/artela-docs/sidebars.js",
+          "contentPath": "/Users/admin/mytech/go-work/src/github.com/artela-network/artela-docs/docs/develop",
+          "contentPathLocalized": "/Users/admin/mytech/go-work/src/github.com/artela-network/artela-docs/i18n/en/docusaurus-plugin-content-docs-develop/current",
           "docs": [
             {
               "unversionedId": "advanced-concepts/account-abstraction/index",
@@ -758,10 +758,37 @@
               }
             },
             {
+              "unversionedId": "aspect-doc/aspect-libs/index",
+              "id": "aspect-doc/aspect-libs/index",
+              "title": "Aspect Libs",
+              "description": "---",
+              "source": "@site/docs/develop/aspect-doc/aspect-libs/index.md",
+              "sourceDirName": "aspect-doc/aspect-libs",
+              "slug": "/aspect-doc/aspect-libs/",
+              "permalink": "/develop/aspect-doc/aspect-libs/",
+              "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/aspect-doc/aspect-libs/index.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Writing Aspect",
+                "permalink": "/develop/aspect-doc/"
+              },
+              "next": {
+                "title": "Aspect tools",
+                "permalink": "/develop/aspect-doc/aspect-tools/"
+              }
+            },
+            {
               "unversionedId": "aspect-doc/aspect-tools/index",
               "id": "aspect-doc/aspect-tools/index",
-              "title": "Aspect Reentrancy Guard",
-              "description": "",
+              "title": "Aspect tools",
+              "description": "Init Project",
               "source": "@site/docs/develop/aspect-doc/aspect-tools/index.md",
               "sourceDirName": "aspect-doc/aspect-tools",
               "slug": "/aspect-doc/aspect-tools/",
@@ -776,8 +803,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Aspect Reentrancy Guard",
-                "permalink": "/develop/aspect-doc/system-call/"
+                "title": "Aspect Libs",
+                "permalink": "/develop/aspect-doc/aspect-libs/"
               },
               "next": {
                 "title": "Guides",
@@ -807,35 +834,8 @@
                 "permalink": "/develop/node/testnet-setup/"
               },
               "next": {
-                "title": "Aspect Reentrancy Guard",
-                "permalink": "/develop/aspect-doc/system-call/"
-              }
-            },
-            {
-              "unversionedId": "aspect-doc/system-call/index",
-              "id": "aspect-doc/system-call/index",
-              "title": "Aspect Reentrancy Guard",
-              "description": "",
-              "source": "@site/docs/develop/aspect-doc/system-call/index.md",
-              "sourceDirName": "aspect-doc/system-call",
-              "slug": "/aspect-doc/system-call/",
-              "permalink": "/develop/aspect-doc/system-call/",
-              "draft": false,
-              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/aspect-doc/system-call/index.md",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 2,
-              "frontMatter": {
-                "sidebar_position": 2
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Writing Aspect",
-                "permalink": "/develop/aspect-doc/"
-              },
-              "next": {
-                "title": "Aspect Reentrancy Guard",
-                "permalink": "/develop/aspect-doc/aspect-tools/"
+                "title": "Aspect Libs",
+                "permalink": "/develop/aspect-doc/aspect-libs/"
               }
             },
             {
@@ -1235,7 +1235,7 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Aspect Reentrancy Guard",
+                "title": "Aspect tools",
                 "permalink": "/develop/aspect-doc/aspect-tools/"
               },
               "next": {
@@ -1993,12 +1993,12 @@
                 "items": [
                   {
                     "type": "doc",
-                    "label": "system call",
-                    "id": "aspect-doc/system-call/index"
+                    "label": "Aspect Libs",
+                    "id": "aspect-doc/aspect-libs/index"
                   },
                   {
                     "type": "doc",
-                    "label": "aspect tools",
+                    "label": "Aspect Tools",
                     "id": "aspect-doc/aspect-tools/index"
                   }
                 ],
