@@ -4,7 +4,7 @@ sidebar_position: 6
 
 # Aspect Runtime
 
-The Aspect runtime serves as a specialized WASM virtual machine, tailor-made for executing Aspect. Its inaugural version harnesses the power of [WASMTime](https://github.com/bytecodealliance/wasmtime), a robust and swift WebAssembly implementation crafted in Rust.
+The Aspect runtime serves as a specialized WASM virtual machine, tailor-made for executing Aspect. Its initial version uses [WASMTime](https://github.com/bytecodealliance/wasmtime), a robust and swift WebAssembly implementation crafted in Rust.
 
 A bridge between the core WASM VM and blockchain system modules, the Aspect runtime integrates a set of host APIs. These are meticulously curated to empower Aspect with interactive capabilities, ensuring seamless communication with the blockchain system modules. For a deeper dive into our host API specifics, please refer to our [Runtime Low-level API](/) section.
 
@@ -18,7 +18,7 @@ The conduit for data exchange between WASM and the host is a limited set of host
 
 ## Isolation
 
-The Aspect runtime is conceived as a sandbox environment. Each execution of an Aspect instantiates a fresh runtime, ensuring that every Aspect operation remains isolated. Consequently, any anomalies during Aspect execution impact only its state, leaving other modules, smart contracts, and Aspects unscathed.
+The Aspect runtime is conceived as a sandbox environment. Each execution of an Aspect instantiates a fresh runtime, ensuring that every Aspect operation remains isolated. Consequently, any anomalies during Aspect execution impact only its state, leaving other modules, smart contracts, and Aspects unaffected.
 
 ## Gas
 

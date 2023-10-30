@@ -106,7 +106,7 @@ Log of other nodes in
 ./build/artelad testnet init-files --chain-id artela_11820-1 --v 4 --output-dir ./testnet --starting-ip-address 172.16.10.2
 ```
 
-The configure of create a testnet
+Configuration:
 
 - --chain-id
 
@@ -181,7 +181,7 @@ artelad start --pruning=nothing --log_level debug --minimum-gas-prices=0.0001aar
 
 ## 4. The genesis account
 
-In the process of generating the testnet, each validator node has a corresponding EOA (Externally Owned Account) account with the encryption algorithm eth_secp256k1, which is written into the genesis.json file. Additionally, `5e21 aartela` have been deposited into each account. The key.info of each account is stored in
+In the process of generating the testnet, each validator node has a corresponding EOA (Externally Owned Account) account with the encryption algorithm `eth_secp256k1`, which is written into the `genesis.json` file. Additionally, `5e21 aartela` have been deposited into each account. The key.info of each account is stored in
 
 `~/.artelad/config/keyring-test/node<validator_number>.json`.
 

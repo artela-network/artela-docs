@@ -112,24 +112,24 @@ Successful compilation will generate `Counter.abi` and `Counter.bin` files in th
   "node": "https://testnet-rpc1.artela.network"
 }
 ```
-more development environment setup, please refer to [artela devnet](/develop/get-started/access-testnet)
+For more development environment setup, please refer to [artela devnet](/develop/get-started/access-testnet)
 
 #### 3.2 Create a blockchain account (optional). 
 
-Execute the following command under the `my-first-aspect` folder to create an account if you don't already have one.
+Execute the following command under the `my-first-aspect` folder to create an account if you haven't already done so:
 
 ```bash
 npm run account:create -- --pkfile {privateKey-path}
 ```
 
-> * --pkfile : privateKey path for sender. (optional,default value `./privateKey.txt`).
+> * --pkfile : privateKey path for sender. (optional, default value: `./privateKey.txt`).
 
-Also, if you don't have a test coin in your account, please join [our discard](https://discord.com/invite/artela)，require testnet faucet。.
+Also, if you don't have a test token in your account, please join [our discard](https://discord.com/invite/artela)，and request access to the testnet faucet.
 
 
 #### 3.3  Set up the contract compilation environment `asolc`.(optional).
 
-Execute the following command in shell. more details see [What is ASOLC](/develop/advanced-concepts/asolc)
+Execute the following command in shell. For more details, refer to [What is ASOLC](/develop/advanced-concepts/asolc)
 ```shell
 $ export PATH= {your asolc path}:$PATH
 ```
@@ -288,4 +288,4 @@ npm run contract:call -- --pkfile {privateKey-path}    \
 
 ## Summary
 
-You've now learnt the basics of Aspect development . For a deeper dive, refer to our comprehensive [Aspect Doc](https://docs.artela.network/develop/aspect-tools/aspect-docs).
+Congratulations! You've learned the basics of Aspect development. For a deeper dive, refer to our comprehensive [Aspect Doc](https://docs.artela.network/develop/aspect-tools/aspect-docs).

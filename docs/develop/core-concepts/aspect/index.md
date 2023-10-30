@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # Aspect
 
-Aspect introduces a dynamic mechanism to implement system-level features on a blockchain. Simply put, an Aspect is akin to a system extension, crafted in WASM, which can be tethered to any smart contract. It offers the flexibility to either augment the capabilities of the target contract or monitor its activities and initiate specific actions when predefined conditions align.
+Aspect introduces a dynamic mechanism to implement system-level features on a blockchain. Simply put, an Aspect is akin to a system extension, executed in WASM, which can be bound to any smart contract. It offers the flexibility to either augment the capabilities of the target contract or monitor its activities and initiate specific actions when predefined conditions align.
 
 ## How does Aspect work?
 
@@ -20,7 +20,7 @@ Middleware is essentially code that can be integrated into a web server, extendi
 
 Upon receipt of an HTTP request, the web server's middleware mechanism empowers developers to craft modules that can process this incoming request, either before or after its main handling. For instance, an authentication middleware can validate a user's credentials before the request delves into the core logic. Such a design pattern allows for the decentralization of functionalities like authentication and logging, ensuring a more modular approach.
 
-This middleware setup also champions a shared context, fostering communication between various middlewares or route handlers. For instance, after authenticating a user, the relevant middleware can store user data in the shared context. Subsequent middleware or route handlers can then access this data without reloading it.
+This middleware setup also supports a shared context, fostering communication between various middlewares or route handlers. For instance, after authenticating a user, the relevant middleware can store user data in the shared context. Subsequent middleware or route handlers can then access this data without reloading it.
 
 Drawing parallels, one can envision Aspect as a smart contract's middleware. Envision developing a decentralized exchange on Artela and integrating Aspects:
 
