@@ -442,7 +442,7 @@
     "art-development/access-testnet/index": {
       "id": "art-development/access-testnet/index",
       "title": "Accessing Testnet",
-      "description": "The Artela Testnet is in its beta release phase. Kindly note:",
+      "description": "The Artela Testnet is in its alpha release phase. Kindly note:",
       "sidebar": "tutorialSidebar"
     },
     "art-development/get-started/index": {
@@ -532,13 +532,13 @@
     "core-concepts/aspect-runtime/index": {
       "id": "core-concepts/aspect-runtime/index",
       "title": "Aspect Runtime",
-      "description": "The Aspect runtime serves as a specialized WASM virtual machine, tailor-made for executing Aspect. Its inaugural version harnesses the power of WASMTime, a robust and swift WebAssembly implementation crafted in Rust.",
+      "description": "The Aspect runtime serves as a specialized WASM virtual machine, tailor-made for executing Aspect. Its initial version uses WASMTime, a robust and swift WebAssembly implementation crafted in Rust.",
       "sidebar": "tutorialSidebar"
     },
     "core-concepts/aspect/index": {
       "id": "core-concepts/aspect/index",
       "title": "Aspect",
-      "description": "Aspect introduces a dynamic mechanism to implement system-level features on a blockchain. Simply put, an Aspect is akin to a system extension, crafted in WASM, which can be tethered to any smart contract. It offers the flexibility to either augment the capabilities of the target contract or monitor its activities and initiate specific actions when predefined conditions align.",
+      "description": "Aspect introduces a dynamic mechanism to implement system-level features on a blockchain. Simply put, an Aspect is akin to a system extension, executed in WASM, which can be bound to any smart contract. It offers the flexibility to either augment the capabilities of the target contract or monitor its activities and initiate specific actions when predefined conditions align.",
       "sidebar": "tutorialSidebar"
     },
     "core-concepts/evm-compatibility/index": {
@@ -550,7 +550,7 @@
     "core-concepts/foundational/index": {
       "id": "core-concepts/foundational/index",
       "title": "Foundational Topics",
-      "description": "WIP",
+      "description": "If you are new to Web3 world, you may want to learn some foundational topics first, we recommend that you read the following articles first before you go into the details:",
       "sidebar": "tutorialSidebar"
     },
     "core-concepts/index": {
@@ -580,7 +580,7 @@
     "index": {
       "id": "index",
       "title": "🔍 Overview",
-      "description": "Artela is an EVM compatible blockchain network built with Cosmos SDK. You can seamlessly deploy your Ethereum dApps on Artela without hassle. And at the mean time, you can also leverage your dApp with Aspect programming to make it even more powerful.",
+      "description": "Artela is an EVM compatible blockchain network built with Cosmos SDK. You can seamlessly deploy your Ethereum dApps on Artela without any issue. And at the mean time, you can also leverage your dApp with Aspect programming to make it even more powerful.",
       "sidebar": "tutorialSidebar"
     },
     "node/full-node-setup/index": {
