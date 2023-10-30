@@ -175,14 +175,8 @@
             "docId": "client/ethereum-json-rpc/index"
           },
           {
-            "type": "link",
-            "label": "Tendermint RPC",
-            "href": "/develop/client/tendermint-rpc/",
-            "docId": "client/tendermint-rpc/index"
-          },
-          {
             "type": "category",
-            "label": "examples",
+            "label": "Examples",
             "collapsible": true,
             "collapsed": true,
             "items": [
@@ -199,6 +193,12 @@
                 "docId": "client/examples/deploy-call-contract"
               }
             ]
+          },
+          {
+            "type": "link",
+            "label": "Tendermint RPC",
+            "href": "/develop/client/tendermint-rpc/",
+            "docId": "client/tendermint-rpc/index"
           }
         ],
         "href": "/develop/client/"
