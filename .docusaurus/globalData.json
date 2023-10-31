@@ -109,56 +109,6 @@
           "mainDocId": "index",
           "docs": [
             {
-              "id": "advanced-concepts/account-abstraction/index",
-              "path": "/develop/advanced-concepts/account-abstraction/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "advanced-concepts/asolc/index",
-              "path": "/develop/advanced-concepts/asolc/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "advanced-concepts/communication/index",
-              "path": "/develop/advanced-concepts/communication/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "advanced-concepts/index",
-              "path": "/develop/advanced-concepts/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "advanced-concepts/jit-call/index",
-              "path": "/develop/advanced-concepts/jit-call/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "advanced-concepts/join-point/index",
-              "path": "/develop/advanced-concepts/join-point/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "advanced-concepts/jpm/index",
-              "path": "/develop/advanced-concepts/jpm/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "advanced-concepts/lifecycle/index",
-              "path": "/develop/advanced-concepts/lifecycle/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "advanced-concepts/runtime-api/index",
-              "path": "/develop/advanced-concepts/runtime-api/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "advanced-concepts/system-call/index",
-              "path": "/develop/advanced-concepts/system-call/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
               "id": "art-development/access-testnet/index",
               "path": "/develop/art-development/access-testnet/",
               "sidebar": "tutorialSidebar"
@@ -229,6 +179,11 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "core-concepts/asolc/index",
+              "path": "/develop/core-concepts/asolc/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "core-concepts/aspect-programming/index",
               "path": "/develop/core-concepts/aspect-programming/",
               "sidebar": "tutorialSidebar"
@@ -244,6 +199,16 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "core-concepts/binding/index",
+              "path": "/develop/core-concepts/binding/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "core-concepts/communication/index",
+              "path": "/develop/core-concepts/communication/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "core-concepts/evm-compatibility/index",
               "path": "/develop/core-concepts/evm-compatibility/",
               "sidebar": "tutorialSidebar"
@@ -254,8 +219,28 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "core-concepts/index",
-              "path": "/develop/core-concepts/",
+              "id": "core-concepts/jit-call/index",
+              "path": "/develop/core-concepts/jit-call/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "core-concepts/join-point/index",
+              "path": "/develop/core-concepts/join-point/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "core-concepts/lifecycle/index",
+              "path": "/develop/core-concepts/lifecycle/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "core-concepts/runtime-api/index",
+              "path": "/develop/core-concepts/runtime-api/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "core-concepts/system-call/index",
+              "path": "/develop/core-concepts/system-call/",
               "sidebar": "tutorialSidebar"
             },
             {

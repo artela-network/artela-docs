@@ -48,7 +48,7 @@
       "plugin": "plugin---search-2-eb-02c"
     }
   },
-  "/develop-494": {
+  "/develop-e47": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---develop-113-f17"
@@ -58,46 +58,6 @@
   "/develop-553": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---develop-6-cc-bf2"
-  },
-  "/develop/advanced-concepts-65d": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-advanced-concepts-311-737"
-  },
-  "/develop/advanced-concepts/account-abstraction-2ab": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-advanced-concepts-account-abstractione-7-c-c98"
-  },
-  "/develop/advanced-concepts/asolc-d15": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-advanced-concepts-asolc-45-c-d7a"
-  },
-  "/develop/advanced-concepts/communication-f70": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-advanced-concepts-communicationa-01-50d"
-  },
-  "/develop/advanced-concepts/jit-call-d97": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-advanced-concepts-jit-callaee-ab1"
-  },
-  "/develop/advanced-concepts/join-point-7e3": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-advanced-concepts-join-point-1-c-0-00c"
-  },
-  "/develop/advanced-concepts/jpm-3c3": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-advanced-concepts-jpm-7-a-9-e77"
-  },
-  "/develop/advanced-concepts/lifecycle-42f": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-advanced-concepts-lifecycle-6-f-1-b17"
-  },
-  "/develop/advanced-concepts/runtime-api-5dc": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-advanced-concepts-runtime-api-9-e-4-154"
-  },
-  "/develop/advanced-concepts/system-call-198": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-advanced-concepts-system-call-7-d-4-e93"
   },
   "/develop/art-development-de5": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -151,13 +111,13 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---develop-client-tendermint-rpc-580-8d0"
   },
-  "/develop/core-concepts-d53": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-core-concepts-1-b-4-675"
-  },
   "/develop/core-concepts/arch-251": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---develop-core-concepts-arch-63-d-280"
+  },
+  "/develop/core-concepts/asolc-1bb": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-core-concepts-asolc-8-eb-029"
   },
   "/develop/core-concepts/aspect-41b": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -171,6 +131,14 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---develop-core-concepts-aspect-runtimedf-1-718"
   },
+  "/develop/core-concepts/binding-48c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-core-concepts-binding-661-6a1"
+  },
+  "/develop/core-concepts/communication-a79": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-core-concepts-communicationd-91-bea"
+  },
   "/develop/core-concepts/evm-compatibility-6eb": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---develop-core-concepts-evm-compatibility-7-f-7-044"
@@ -178,6 +146,26 @@
   "/develop/core-concepts/foundational-f1e": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---develop-core-concepts-foundationalfe-0-3ee"
+  },
+  "/develop/core-concepts/jit-call-dd8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-core-concepts-jit-call-49-b-a3e"
+  },
+  "/develop/core-concepts/join-point-bad": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-core-concepts-join-point-1-ab-4c8"
+  },
+  "/develop/core-concepts/lifecycle-82c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-core-concepts-lifecycledce-9ad"
+  },
+  "/develop/core-concepts/runtime-api-141": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-core-concepts-runtime-apia-98-5a7"
+  },
+  "/develop/core-concepts/system-call-bd7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-core-concepts-system-callfa-7-22e"
   },
   "/develop/core-concepts/wasm-assemblyscript-5a4": {
     "__comp": "__comp---theme-doc-item-178-a40",

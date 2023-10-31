@@ -386,276 +386,6 @@
           "contentPathLocalized": "/Users/jack/Projects/js/artela-docs/i18n/en/docusaurus-plugin-content-docs-develop/current",
           "docs": [
             {
-              "unversionedId": "advanced-concepts/account-abstraction/index",
-              "id": "advanced-concepts/account-abstraction/index",
-              "title": "Account Abstraction",
-              "description": "Account abstraction offers a versatile solution to common issues by enabling users to embed enhanced security measures and superior user experiences directly into their accounts. For a comprehensive understanding of account abstraction, consider reading Ethereum's articles on the topic. It provides an insightful perspective on the subject.",
-              "source": "@site/docs/develop/advanced-concepts/account-abstraction/index.md",
-              "sourceDirName": "advanced-concepts/account-abstraction",
-              "slug": "/advanced-concepts/account-abstraction/",
-              "permalink": "/develop/advanced-concepts/account-abstraction/",
-              "draft": false,
-              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/advanced-concepts/account-abstraction/index.md",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 9,
-              "frontMatter": {
-                "sidebar_position": 9
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "JIT(Just In Time) Call",
-                "permalink": "/develop/advanced-concepts/jit-call/"
-              },
-              "next": {
-                "title": "Artela Client",
-                "permalink": "/develop/client/"
-              }
-            },
-            {
-              "unversionedId": "advanced-concepts/asolc/index",
-              "id": "advanced-concepts/asolc/index",
-              "title": "ASOLC",
-              "description": "What is ASOLC?",
-              "source": "@site/docs/develop/advanced-concepts/asolc/index.md",
-              "sourceDirName": "advanced-concepts/asolc",
-              "slug": "/advanced-concepts/asolc/",
-              "permalink": "/develop/advanced-concepts/asolc/",
-              "draft": false,
-              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/advanced-concepts/asolc/index.md",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 1,
-              "frontMatter": {
-                "sidebar_position": 1
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Advanced Concepts",
-                "permalink": "/develop/advanced-concepts/"
-              },
-              "next": {
-                "title": "Join Point Model",
-                "permalink": "/develop/advanced-concepts/jpm/"
-              }
-            },
-            {
-              "unversionedId": "advanced-concepts/communication/index",
-              "id": "advanced-concepts/communication/index",
-              "title": "Communication between Aspects & Smart Contracts",
-              "description": "While Aspect and Smart Contract execution environments are distinct (WASM vs EVM), they aren't completely isolated. Just as smart contracts can interact via contract calls, there are several methods for Aspects and Smart Contracts to exchange information. This document elaborates on these methods.",
-              "source": "@site/docs/develop/advanced-concepts/communication/index.md",
-              "sourceDirName": "advanced-concepts/communication",
-              "slug": "/advanced-concepts/communication/",
-              "permalink": "/develop/advanced-concepts/communication/",
-              "draft": false,
-              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/advanced-concepts/communication/index.md",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 5,
-              "frontMatter": {
-                "sidebar_position": 5
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Join Point",
-                "permalink": "/develop/advanced-concepts/join-point/"
-              },
-              "next": {
-                "title": "Aspect Runtime APIs",
-                "permalink": "/develop/advanced-concepts/runtime-api/"
-              }
-            },
-            {
-              "unversionedId": "advanced-concepts/index",
-              "id": "advanced-concepts/index",
-              "title": "Advanced Concepts",
-              "description": "This section covers advanced concepts of Artela, these concepts are not required to use Artela, but they are useful to understand how Artela works and how to built more powerful dApps on Artela.",
-              "source": "@site/docs/develop/advanced-concepts/index.md",
-              "sourceDirName": "advanced-concepts",
-              "slug": "/advanced-concepts/",
-              "permalink": "/develop/advanced-concepts/",
-              "draft": false,
-              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/advanced-concepts/index.md",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 4,
-              "frontMatter": {
-                "sidebar_position": 4
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "WASM & Assembly Script",
-                "permalink": "/develop/core-concepts/wasm-assemblyscript/"
-              },
-              "next": {
-                "title": "ASOLC",
-                "permalink": "/develop/advanced-concepts/asolc/"
-              }
-            },
-            {
-              "unversionedId": "advanced-concepts/jit-call/index",
-              "id": "advanced-concepts/jit-call/index",
-              "title": "JIT(Just In Time) Call",
-              "description": "Aspect can insert additional contract calls into the current EVM callstack at Contract Call Level Join Points. This operation is known as Just-In-Time (JIT) Call. With this capability, dApps can make call-level real-time decisions. For instance, they can provide just-in-time liquidity to a DEX pool and etc. The sender of the JIT call must be an AA (Account Abstraction) wallet, and this wallet must have authorized the given Aspect to perform such an operation. For more details about AA wallets, please refer to the documentation on Account Abstraction.",
-              "source": "@site/docs/develop/advanced-concepts/jit-call/index.md",
-              "sourceDirName": "advanced-concepts/jit-call",
-              "slug": "/advanced-concepts/jit-call/",
-              "permalink": "/develop/advanced-concepts/jit-call/",
-              "draft": false,
-              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/advanced-concepts/jit-call/index.md",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 8,
-              "frontMatter": {
-                "sidebar_position": 8
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "System Call",
-                "permalink": "/develop/advanced-concepts/system-call/"
-              },
-              "next": {
-                "title": "Account Abstraction",
-                "permalink": "/develop/advanced-concepts/account-abstraction/"
-              }
-            },
-            {
-              "unversionedId": "advanced-concepts/join-point/index",
-              "id": "advanced-concepts/join-point/index",
-              "title": "Join Point",
-              "description": "Each Join Point represents a specific state transition function at certain transaction lifecycle stage. Each Join Point is composed of a specific metadata (describes when to trigger it, what system module it can invoke and which runtime context it can access) and an entrypoint function(method in your Aspect class, e.g. PreTxExecute).",
-              "source": "@site/docs/develop/advanced-concepts/join-point/index.md",
-              "sourceDirName": "advanced-concepts/join-point",
-              "slug": "/advanced-concepts/join-point/",
-              "permalink": "/develop/advanced-concepts/join-point/",
-              "draft": false,
-              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/advanced-concepts/join-point/index.md",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 4,
-              "frontMatter": {
-                "sidebar_position": 4
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Aspect Lifecycle",
-                "permalink": "/develop/advanced-concepts/lifecycle/"
-              },
-              "next": {
-                "title": "Communication between Aspects & Smart Contracts",
-                "permalink": "/develop/advanced-concepts/communication/"
-              }
-            },
-            {
-              "unversionedId": "advanced-concepts/jpm/index",
-              "id": "advanced-concepts/jpm/index",
-              "title": "Join Point Model",
-              "description": "Understanding Aspects",
-              "source": "@site/docs/develop/advanced-concepts/jpm/index.md",
-              "sourceDirName": "advanced-concepts/jpm",
-              "slug": "/advanced-concepts/jpm/",
-              "permalink": "/develop/advanced-concepts/jpm/",
-              "draft": false,
-              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/advanced-concepts/jpm/index.md",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 2,
-              "frontMatter": {
-                "sidebar_position": 2
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "ASOLC",
-                "permalink": "/develop/advanced-concepts/asolc/"
-              },
-              "next": {
-                "title": "Aspect Lifecycle",
-                "permalink": "/develop/advanced-concepts/lifecycle/"
-              }
-            },
-            {
-              "unversionedId": "advanced-concepts/lifecycle/index",
-              "id": "advanced-concepts/lifecycle/index",
-              "title": "Aspect Lifecycle",
-              "description": "The lifecycle of an Aspect encompasses several stages, including deployment, upgrade, configuration, binding, unbinding, execution, and destruction.",
-              "source": "@site/docs/develop/advanced-concepts/lifecycle/index.md",
-              "sourceDirName": "advanced-concepts/lifecycle",
-              "slug": "/advanced-concepts/lifecycle/",
-              "permalink": "/develop/advanced-concepts/lifecycle/",
-              "draft": false,
-              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/advanced-concepts/lifecycle/index.md",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 3,
-              "frontMatter": {
-                "sidebar_position": 3
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Join Point Model",
-                "permalink": "/develop/advanced-concepts/jpm/"
-              },
-              "next": {
-                "title": "Join Point",
-                "permalink": "/develop/advanced-concepts/join-point/"
-              }
-            },
-            {
-              "unversionedId": "advanced-concepts/runtime-api/index",
-              "id": "advanced-concepts/runtime-api/index",
-              "title": "Aspect Runtime APIs",
-              "description": "",
-              "source": "@site/docs/develop/advanced-concepts/runtime-api/index.md",
-              "sourceDirName": "advanced-concepts/runtime-api",
-              "slug": "/advanced-concepts/runtime-api/",
-              "permalink": "/develop/advanced-concepts/runtime-api/",
-              "draft": false,
-              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/advanced-concepts/runtime-api/index.md",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 6,
-              "frontMatter": {
-                "sidebar_position": 6
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Communication between Aspects & Smart Contracts",
-                "permalink": "/develop/advanced-concepts/communication/"
-              },
-              "next": {
-                "title": "System Call",
-                "permalink": "/develop/advanced-concepts/system-call/"
-              }
-            },
-            {
-              "unversionedId": "advanced-concepts/system-call/index",
-              "id": "advanced-concepts/system-call/index",
-              "title": "System Call",
-              "description": "In the world of Aspect, a \"system call\" is a mechanism that triggers the execution of a specific system module, which we'll refer to as \"Module\". Each Module can have its own internal states, known as \"Module States\". The way a Module changes over time can be understood as follows: The Module States at a future moment are determined by a system call applied to the Module States at a current moment along with the input to that system call.",
-              "source": "@site/docs/develop/advanced-concepts/system-call/index.md",
-              "sourceDirName": "advanced-concepts/system-call",
-              "slug": "/advanced-concepts/system-call/",
-              "permalink": "/develop/advanced-concepts/system-call/",
-              "draft": false,
-              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/advanced-concepts/system-call/index.md",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 7,
-              "frontMatter": {
-                "sidebar_position": 7
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Aspect Runtime APIs",
-                "permalink": "/develop/advanced-concepts/runtime-api/"
-              },
-              "next": {
-                "title": "JIT(Just In Time) Call",
-                "permalink": "/develop/advanced-concepts/jit-call/"
-              }
-            },
-            {
               "unversionedId": "art-development/access-testnet/index",
               "id": "art-development/access-testnet/index",
               "title": "Accessing Testnet",
@@ -753,8 +483,8 @@
                 "permalink": "/develop/art-development/access-testnet/"
               },
               "next": {
-                "title": "Core Concepts",
-                "permalink": "/develop/core-concepts/"
+                "title": "ASOLC",
+                "permalink": "/develop/core-concepts/asolc/"
               }
             },
             {
@@ -965,8 +695,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Account Abstraction",
-                "permalink": "/develop/advanced-concepts/account-abstraction/"
+                "title": "JIT(Just In Time) Call",
+                "permalink": "/develop/core-concepts/jit-call/"
               },
               "next": {
                 "title": "Cosmos gRPC",
@@ -1028,6 +758,33 @@
               }
             },
             {
+              "unversionedId": "core-concepts/asolc/index",
+              "id": "core-concepts/asolc/index",
+              "title": "ASOLC",
+              "description": "What is ASOLC?",
+              "source": "@site/docs/develop/core-concepts/asolc/index.md",
+              "sourceDirName": "core-concepts/asolc",
+              "slug": "/core-concepts/asolc/",
+              "permalink": "/develop/core-concepts/asolc/",
+              "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/core-concepts/asolc/index.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_position": 1
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Start a Local Node",
+                "permalink": "/develop/art-development/start-a-local-node/"
+              },
+              "next": {
+                "title": "Foundational Topics",
+                "permalink": "/develop/core-concepts/foundational/"
+              }
+            },
+            {
               "unversionedId": "core-concepts/aspect-programming/index",
               "id": "core-concepts/aspect-programming/index",
               "title": "Aspect Programming",
@@ -1046,12 +803,12 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "EVM Compatibility",
-                "permalink": "/develop/core-concepts/evm-compatibility/"
+                "title": "Aspect Lifecycle",
+                "permalink": "/develop/core-concepts/lifecycle/"
               },
               "next": {
-                "title": "Aspect",
-                "permalink": "/develop/core-concepts/aspect/"
+                "title": "Join Point",
+                "permalink": "/develop/core-concepts/join-point/"
               }
             },
             {
@@ -1073,12 +830,12 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Aspect",
-                "permalink": "/develop/core-concepts/aspect/"
+                "title": "Communication between Aspects & Smart Contracts",
+                "permalink": "/develop/core-concepts/communication/"
               },
               "next": {
-                "title": "WASM & Assembly Script",
-                "permalink": "/develop/core-concepts/wasm-assemblyscript/"
+                "title": "Binding",
+                "permalink": "/develop/core-concepts/binding/"
               }
             },
             {
@@ -1100,8 +857,62 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Aspect Programming",
-                "permalink": "/develop/core-concepts/aspect-programming/"
+                "title": "Join Point",
+                "permalink": "/develop/core-concepts/join-point/"
+              },
+              "next": {
+                "title": "Communication between Aspects & Smart Contracts",
+                "permalink": "/develop/core-concepts/communication/"
+              }
+            },
+            {
+              "unversionedId": "core-concepts/binding/index",
+              "id": "core-concepts/binding/index",
+              "title": "Binding",
+              "description": "Binding is a crucial process in Aspect-based development. An Aspect can only be triggered at certain join points when it is bound to a specific smart contract.",
+              "source": "@site/docs/develop/core-concepts/binding/index.md",
+              "sourceDirName": "core-concepts/binding",
+              "slug": "/core-concepts/binding/",
+              "permalink": "/develop/core-concepts/binding/",
+              "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/core-concepts/binding/index.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 6,
+              "frontMatter": {
+                "sidebar_position": 6
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Aspect Runtime",
+                "permalink": "/develop/core-concepts/aspect-runtime/"
+              },
+              "next": {
+                "title": "Aspect Runtime APIs",
+                "permalink": "/develop/core-concepts/runtime-api/"
+              }
+            },
+            {
+              "unversionedId": "core-concepts/communication/index",
+              "id": "core-concepts/communication/index",
+              "title": "Communication between Aspects & Smart Contracts",
+              "description": "While Aspect and Smart Contract execution environments are distinct (WASM vs EVM), they aren't completely isolated. Just as smart contracts can interact via contract calls, there are several methods for Aspects and Smart Contracts to exchange information. This document elaborates on these methods.",
+              "source": "@site/docs/develop/core-concepts/communication/index.md",
+              "sourceDirName": "core-concepts/communication",
+              "slug": "/core-concepts/communication/",
+              "permalink": "/develop/core-concepts/communication/",
+              "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/core-concepts/communication/index.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 5,
+              "frontMatter": {
+                "sidebar_position": 5
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Aspect",
+                "permalink": "/develop/core-concepts/aspect/"
               },
               "next": {
                 "title": "Aspect Runtime",
@@ -1131,15 +942,15 @@
                 "permalink": "/develop/core-concepts/arch/"
               },
               "next": {
-                "title": "Aspect Programming",
-                "permalink": "/develop/core-concepts/aspect-programming/"
+                "title": "Aspect Lifecycle",
+                "permalink": "/develop/core-concepts/lifecycle/"
               }
             },
             {
               "unversionedId": "core-concepts/foundational/index",
               "id": "core-concepts/foundational/index",
               "title": "Foundational Topics",
-              "description": "If you are new to Web3 world, you may want to learn some foundational topics first, we recommend that you read the following articles first before you go into the details:",
+              "description": "Since Artela is an EVM compatible blockchain, it shares some common concepts with Ethereum. You can check out the articles from Ethereum:",
               "source": "@site/docs/develop/core-concepts/foundational/index.md",
               "sourceDirName": "core-concepts/foundational",
               "slug": "/core-concepts/foundational/",
@@ -1154,8 +965,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Core Concepts",
-                "permalink": "/develop/core-concepts/"
+                "title": "ASOLC",
+                "permalink": "/develop/core-concepts/asolc/"
               },
               "next": {
                 "title": "Architecture",
@@ -1163,16 +974,70 @@
               }
             },
             {
-              "unversionedId": "core-concepts/index",
-              "id": "core-concepts/index",
-              "title": "Core Concepts",
-              "description": "This section will introduce you to the core concepts of Aspect. It is recommended that you read through these concepts before you start using Aspect.",
-              "source": "@site/docs/develop/core-concepts/index.md",
-              "sourceDirName": "core-concepts",
-              "slug": "/core-concepts/",
-              "permalink": "/develop/core-concepts/",
+              "unversionedId": "core-concepts/jit-call/index",
+              "id": "core-concepts/jit-call/index",
+              "title": "JIT(Just In Time) Call",
+              "description": "Aspect can insert additional contract calls into the current EVM callstack at Contract Call Level Join Points. This operation is known as Just-In-Time (JIT) Call. With this capability, dApps can make call-level real-time decisions. For instance, they can provide just-in-time liquidity to a DEX pool and etc. The sender of the JIT call must be an AA (Account Abstraction) wallet, and this wallet must have authorized the given Aspect to perform such an operation. For more details about AA wallets, please refer to the documentation on Account Abstraction.",
+              "source": "@site/docs/develop/core-concepts/jit-call/index.md",
+              "sourceDirName": "core-concepts/jit-call",
+              "slug": "/core-concepts/jit-call/",
+              "permalink": "/develop/core-concepts/jit-call/",
               "draft": false,
-              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/core-concepts/index.md",
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/core-concepts/jit-call/index.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 8,
+              "frontMatter": {
+                "sidebar_position": 8
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "WASM & Assembly Script",
+                "permalink": "/develop/core-concepts/wasm-assemblyscript/"
+              },
+              "next": {
+                "title": "Artela Client",
+                "permalink": "/develop/client/"
+              }
+            },
+            {
+              "unversionedId": "core-concepts/join-point/index",
+              "id": "core-concepts/join-point/index",
+              "title": "Join Point",
+              "description": "Each Join Point represents a specific state transition function at certain transaction lifecycle stage. Each Join Point is composed of a specific metadata (describes when to trigger it, what system module it can invoke and which runtime context it can access) and an entrypoint function(method in your Aspect class, e.g. PreTxExecute).",
+              "source": "@site/docs/develop/core-concepts/join-point/index.md",
+              "sourceDirName": "core-concepts/join-point",
+              "slug": "/core-concepts/join-point/",
+              "permalink": "/develop/core-concepts/join-point/",
+              "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/core-concepts/join-point/index.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 4,
+              "frontMatter": {
+                "sidebar_position": 4
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Aspect Programming",
+                "permalink": "/develop/core-concepts/aspect-programming/"
+              },
+              "next": {
+                "title": "Aspect",
+                "permalink": "/develop/core-concepts/aspect/"
+              }
+            },
+            {
+              "unversionedId": "core-concepts/lifecycle/index",
+              "id": "core-concepts/lifecycle/index",
+              "title": "Aspect Lifecycle",
+              "description": "The lifecycle of an Aspect encompasses several stages, including deployment, upgrade, configuration, binding, unbinding, execution, and destruction.",
+              "source": "@site/docs/develop/core-concepts/lifecycle/index.md",
+              "sourceDirName": "core-concepts/lifecycle",
+              "slug": "/core-concepts/lifecycle/",
+              "permalink": "/develop/core-concepts/lifecycle/",
+              "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/core-concepts/lifecycle/index.md",
               "tags": [],
               "version": "current",
               "sidebarPosition": 3,
@@ -1181,12 +1046,66 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Start a Local Node",
-                "permalink": "/develop/art-development/start-a-local-node/"
+                "title": "EVM Compatibility",
+                "permalink": "/develop/core-concepts/evm-compatibility/"
               },
               "next": {
-                "title": "Foundational Topics",
-                "permalink": "/develop/core-concepts/foundational/"
+                "title": "Aspect Programming",
+                "permalink": "/develop/core-concepts/aspect-programming/"
+              }
+            },
+            {
+              "unversionedId": "core-concepts/runtime-api/index",
+              "id": "core-concepts/runtime-api/index",
+              "title": "Aspect Runtime APIs",
+              "description": "",
+              "source": "@site/docs/develop/core-concepts/runtime-api/index.md",
+              "sourceDirName": "core-concepts/runtime-api",
+              "slug": "/core-concepts/runtime-api/",
+              "permalink": "/develop/core-concepts/runtime-api/",
+              "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/core-concepts/runtime-api/index.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 6,
+              "frontMatter": {
+                "sidebar_position": 6
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Binding",
+                "permalink": "/develop/core-concepts/binding/"
+              },
+              "next": {
+                "title": "System Call",
+                "permalink": "/develop/core-concepts/system-call/"
+              }
+            },
+            {
+              "unversionedId": "core-concepts/system-call/index",
+              "id": "core-concepts/system-call/index",
+              "title": "System Call",
+              "description": "In the world of Aspect, a \"system call\" is a mechanism that triggers the execution of a specific system module, which we'll refer to as \"Module\". Each Module can have its own internal states, known as \"Module States\". The way a Module changes over time can be understood as follows: The Module States at a future moment are determined by a system call applied to the Module States at a current moment along with the input to that system call.",
+              "source": "@site/docs/develop/core-concepts/system-call/index.md",
+              "sourceDirName": "core-concepts/system-call",
+              "slug": "/core-concepts/system-call/",
+              "permalink": "/develop/core-concepts/system-call/",
+              "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/core-concepts/system-call/index.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 7,
+              "frontMatter": {
+                "sidebar_position": 7
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Aspect Runtime APIs",
+                "permalink": "/develop/core-concepts/runtime-api/"
+              },
+              "next": {
+                "title": "WASM & Assembly Script",
+                "permalink": "/develop/core-concepts/wasm-assemblyscript/"
               }
             },
             {
@@ -1208,12 +1127,12 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Aspect Runtime",
-                "permalink": "/develop/core-concepts/aspect-runtime/"
+                "title": "System Call",
+                "permalink": "/develop/core-concepts/system-call/"
               },
               "next": {
-                "title": "Advanced Concepts",
-                "permalink": "/develop/advanced-concepts/"
+                "title": "JIT(Just In Time) Call",
+                "permalink": "/develop/core-concepts/jit-call/"
               }
             },
             {
@@ -1824,6 +1743,11 @@
                 "items": [
                   {
                     "type": "doc",
+                    "label": "ASOLC",
+                    "id": "core-concepts/asolc/index"
+                  },
+                  {
+                    "type": "doc",
                     "label": "Foundational Topics",
                     "id": "core-concepts/foundational/index"
                   },
@@ -1839,8 +1763,18 @@
                   },
                   {
                     "type": "doc",
+                    "label": "Aspect Lifecycle",
+                    "id": "core-concepts/lifecycle/index"
+                  },
+                  {
+                    "type": "doc",
                     "label": "Aspect Programming",
                     "id": "core-concepts/aspect-programming/index"
+                  },
+                  {
+                    "type": "doc",
+                    "label": "Join Point",
+                    "id": "core-concepts/join-point/index"
                   },
                   {
                     "type": "doc",
@@ -1849,76 +1783,40 @@
                   },
                   {
                     "type": "doc",
+                    "label": "Communication between Aspects & Smart Contracts",
+                    "id": "core-concepts/communication/index"
+                  },
+                  {
+                    "type": "doc",
                     "label": "Aspect Runtime",
                     "id": "core-concepts/aspect-runtime/index"
                   },
                   {
                     "type": "doc",
-                    "label": "WASM & Assembly Script",
-                    "id": "core-concepts/wasm-assemblyscript/index"
-                  }
-                ],
-                "link": {
-                  "type": "doc",
-                  "id": "core-concepts/index"
-                }
-              },
-              {
-                "type": "category",
-                "label": "🤿 Advanced Concepts",
-                "collapsible": true,
-                "collapsed": true,
-                "items": [
-                  {
-                    "type": "doc",
-                    "label": "ASOLC",
-                    "id": "advanced-concepts/asolc/index"
-                  },
-                  {
-                    "type": "doc",
-                    "label": "Join Point Model",
-                    "id": "advanced-concepts/jpm/index"
-                  },
-                  {
-                    "type": "doc",
-                    "label": "Aspect Lifecycle",
-                    "id": "advanced-concepts/lifecycle/index"
-                  },
-                  {
-                    "type": "doc",
-                    "label": "Join Point",
-                    "id": "advanced-concepts/join-point/index"
-                  },
-                  {
-                    "type": "doc",
-                    "label": "Communication between Aspects & Smart Contracts",
-                    "id": "advanced-concepts/communication/index"
+                    "label": "Binding",
+                    "id": "core-concepts/binding/index"
                   },
                   {
                     "type": "doc",
                     "label": "Aspect Runtime APIs",
-                    "id": "advanced-concepts/runtime-api/index"
+                    "id": "core-concepts/runtime-api/index"
                   },
                   {
                     "type": "doc",
                     "label": "System Call",
-                    "id": "advanced-concepts/system-call/index"
+                    "id": "core-concepts/system-call/index"
+                  },
+                  {
+                    "type": "doc",
+                    "label": "WASM & Assembly Script",
+                    "id": "core-concepts/wasm-assemblyscript/index"
                   },
                   {
                     "type": "doc",
                     "label": "JIT(Just In Time) Call",
-                    "id": "advanced-concepts/jit-call/index"
-                  },
-                  {
-                    "type": "doc",
-                    "label": "Account Abstraction",
-                    "id": "advanced-concepts/account-abstraction/index"
+                    "id": "core-concepts/jit-call/index"
                   }
-                ],
-                "link": {
-                  "type": "doc",
-                  "id": "advanced-concepts/index"
-                }
+                ]
               },
               {
                 "type": "category",

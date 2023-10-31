@@ -106,8 +106,6 @@ The Aspect Core contract records the binding relationship as:
 }
 ```
 
-For clarity on the execution order based on priority, refer to the ![Aspect Execution Order diagram](./aspect-execution-order.svg).
-
 ## Unbinding
 
 Aspects can be detached from smart contracts. Only the owner of the smart contract, whose address must pass the `isOwner(address): bool` verification, can initiate the unbinding.

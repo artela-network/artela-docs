@@ -44,71 +44,11 @@ export default [
   },
   {
     path: '/develop',
-    component: ComponentCreator('/develop', '494'),
+    component: ComponentCreator('/develop', 'e47'),
     routes: [
       {
         path: '/develop',
         component: ComponentCreator('/develop', '553'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/develop/advanced-concepts',
-        component: ComponentCreator('/develop/advanced-concepts', '65d'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/develop/advanced-concepts/account-abstraction',
-        component: ComponentCreator('/develop/advanced-concepts/account-abstraction', '2ab'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/develop/advanced-concepts/asolc',
-        component: ComponentCreator('/develop/advanced-concepts/asolc', 'd15'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/develop/advanced-concepts/communication',
-        component: ComponentCreator('/develop/advanced-concepts/communication', 'f70'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/develop/advanced-concepts/jit-call',
-        component: ComponentCreator('/develop/advanced-concepts/jit-call', 'd97'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/develop/advanced-concepts/join-point',
-        component: ComponentCreator('/develop/advanced-concepts/join-point', '7e3'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/develop/advanced-concepts/jpm',
-        component: ComponentCreator('/develop/advanced-concepts/jpm', '3c3'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/develop/advanced-concepts/lifecycle',
-        component: ComponentCreator('/develop/advanced-concepts/lifecycle', '42f'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/develop/advanced-concepts/runtime-api',
-        component: ComponentCreator('/develop/advanced-concepts/runtime-api', '5dc'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/develop/advanced-concepts/system-call',
-        component: ComponentCreator('/develop/advanced-concepts/system-call', '198'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
@@ -191,14 +131,14 @@ export default [
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/develop/core-concepts',
-        component: ComponentCreator('/develop/core-concepts', 'd53'),
+        path: '/develop/core-concepts/arch',
+        component: ComponentCreator('/develop/core-concepts/arch', '251'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/develop/core-concepts/arch',
-        component: ComponentCreator('/develop/core-concepts/arch', '251'),
+        path: '/develop/core-concepts/asolc',
+        component: ComponentCreator('/develop/core-concepts/asolc', '1bb'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
@@ -221,6 +161,18 @@ export default [
         sidebar: "tutorialSidebar"
       },
       {
+        path: '/develop/core-concepts/binding',
+        component: ComponentCreator('/develop/core-concepts/binding', '48c'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/develop/core-concepts/communication',
+        component: ComponentCreator('/develop/core-concepts/communication', 'a79'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
         path: '/develop/core-concepts/evm-compatibility',
         component: ComponentCreator('/develop/core-concepts/evm-compatibility', '6eb'),
         exact: true,
@@ -229,6 +181,36 @@ export default [
       {
         path: '/develop/core-concepts/foundational',
         component: ComponentCreator('/develop/core-concepts/foundational', 'f1e'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/develop/core-concepts/jit-call',
+        component: ComponentCreator('/develop/core-concepts/jit-call', 'dd8'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/develop/core-concepts/join-point',
+        component: ComponentCreator('/develop/core-concepts/join-point', 'bad'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/develop/core-concepts/lifecycle',
+        component: ComponentCreator('/develop/core-concepts/lifecycle', '82c'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/develop/core-concepts/runtime-api',
+        component: ComponentCreator('/develop/core-concepts/runtime-api', '141'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/develop/core-concepts/system-call',
+        component: ComponentCreator('/develop/core-concepts/system-call', 'bd7'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
