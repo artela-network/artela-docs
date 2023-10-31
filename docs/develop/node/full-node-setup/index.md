@@ -53,7 +53,7 @@ Uninstall and copy the binaray `artelad` to `/usr/local/bin`.
 artelad init <custom_moniker> # e.g artelad init test111
 ```
 
-**2). Copy genesis from [1. Genesis](/) , copy the the home directory.**
+**2). Copy genesis from [1. Genesis](./access-testnet#public-information-on-testnet) , copy the the home directory.**
 
 ```bash
 mv genesis.json $HOME/.artelad/config/genesis.json
@@ -61,7 +61,7 @@ mv genesis.json $HOME/.artelad/config/genesis.json
 
 **3). Configure**
 
-Get presistent seeds from [2. Presistent nodes](/)
+Get presistent seeds from [2. Presistent nodes](./access-testnet#public-information-on-testnet)
 
 Add two of them to `seeds` in `app.toml`
 
@@ -84,9 +84,9 @@ sed -i 's/trust_hash = ""/trust_hash = "<BLOCK_HASH>"/' config.toml
 sed -i 's/rpc_servers = ""/rpc_servers = "node-1-ip:port,node-2-ip:port"/' config.toml
 ```
 
-Get `BLOCK_HEIGHT` and `BLOCK_HASH` from [3. Trust block and height](/)
+Get `BLOCK_HEIGHT` and `BLOCK_HASH` from [3. Trust block and height](./access-testnet#public-information-on-testnet)
 
-Get `rpc_servers` from [4. RPC servers](/)
+Get `rpc_servers` from [4. RPC servers](./access-testnet#public-information-on-testnet)
 
 ### 4. Run Artela node
 
