@@ -49,5 +49,9 @@ And for interaction within a smart contract:
 // Invoke 0x64 with the ABI-encoded address and key to retrieve the raw byte value of the key
 (bool success, bytes memory returnData) = address(0x64).call(abi.encodePacked(addr, key));
 // Invoke 0x66 with the ABI-encoded key and value to store the values in the context
-(bool success, ) = address(0x64).call(abi.encode(key, value));
+(bool success, ) = address(0x66).call(abi.encode(key, value));
 ```
+
+The above code snippet can read & write the shared context between Aspects and Smart Contracts, if we use a diagram to show how it works, it will be like this:
+
+![Context](./context.svg)

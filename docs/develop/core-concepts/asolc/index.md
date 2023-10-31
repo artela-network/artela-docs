@@ -6,58 +6,39 @@ sidebar_position: 10
 
 ## What is ASOLC?
 
-Similar to Ethereum, Artela supports EVM smart contracts. However, Artela runs a modified version of the EVM, which is fully compatible with legacy Solidity but includes additional features such as `state` and `callstack` tracing.
+Like Ethereum, Artela also supports EVM smart contracts. However, Artela introduces a modified version of the EVM that is fully compatible with traditional Solidity, while offering additional features like `state` and `callstack` tracing.
 
-To achieve this, Artela uses an enhanced version of **SOLC,** called **ASOLC**. ASOLC compiles smart contracts with instruction instrumenting to enable these features.
+To accomplish this, Artela employs an advanced version of **SOLC**, referred to as **ASOLC**. ASOLC enhances the compilation process of smart contracts by including instruction instrumentation, enabling the aforementioned features.
 
-## Download ASOLC
+## How ASOLC Works
 
-You can find ASOLC releases [here](https://github.com/artela-network/solidity/releases/tag/v0.8.21-atl). Choose the version that matches your system (e.g., for macOS, `download macos.tar.gz`).
+Below is a diagram illustrating the workings of ASOLC:
 
-Once downloaded, extract the file and place the `asolc` executable in a directory that's easy for you to access (e.g., `/users/{your-account}/.bin/`).
+![ASOLC](asolc.svg)
 
-If you're using a Unix or Unix-like system, you can decompress the package with this command:
+In essence, the process involves these steps:
 
-```bash
-tar -zxvf ./macos.tar.gz
-```
+1. ASOLC processes the Solidity smart contract source file, identifying all expressions that access or modify storage.
+2. It then generates additional Yul IR methods. These methods establish the connection between state variables and storage slots, utilizing extra opcodes provided by the Artela EVM.
+3. The generated IR is subsequently compiled into EVM bytecode, ready for deployment on the Artela EVM.
 
-After decompression, you may need to grant execution permission to the downloaded executable with this command:
+This added layer of information allows the Artela EVM to understand the links between storage slots and state variables. Consequently, it can trace the contract's state changes, enabling Aspect to query information using state variable names instead of dealing with hashed storage slots.
 
-```bash
-chmod +x asolc
-```
-To make it more convenient to use `asolc` in the future, you can add it to your `PATH` variable:
+## SOLC or ASOLC?
 
-```bash
-mv asolc /users/{your-account}/.bin/
-export PATH=/users/{your-account}/.bin:$PATH
-```
+### TLDR;
+- **Use SOLC if:**
+    - Your dApp prioritizes extreme gas efficiency.
+    - Your dApp doesn't require state tracing, nor do you plan to use this feature in the future.
 
-:::info 
-You can add the above line to your profile so that it persists beyond the current session.
-:::
+- **Use ASOLC if:**
+    - Your dApp requires state tracing capabilities.
+    - You are prepared to trade some gas efficiency for enhanced security and functionality, particularly with state tracing in Aspect.
 
-You can verify the installation by checking the version of `asolc` with this command:
+It's important to note that ASOLC, due to its state tracing opcodes, produces slightly larger artifacts compared to legacy SOLC. This also results in marginally higher gas consumption.
 
-```shell
-asolc --version
-```
+Additionally, bear in mind that ASOLC artifacts are incompatible with legacy EVMs. Thus, if you plan to deploy your contract on Ethereum, it is necessary to compile it with the traditional SOLC.
 
-## Compile Your Smart Contract with ASOLC
+## ASOLC Releases
 
-To compile your smart contract using Artela SOLC, use the following command:
-
-```bash
-asolc --bin --abi --via-ir {your contract} -o {your output directory}
-```
-
-Note that the `--via-ir` flag is required to enable state tracing.
-
-:::info More to know
-
-Compiling smart contracts with Artela SOLC results in larger bytecode size due to the additional instructions for state tracing. This bytecode might not be compatible with the legacy EVM version, and you may encounter execution failures if you attempt to execute it directly in tools like Ganache or Ethereum Remix.
-
-These features are optional. If you don't need state tracing or any of the additional features, you can still use the legacy version of SOLC (or remove the --via-ir flag from the compilation command) to compile your smart contract. This will generate smaller bytecode that is compatible with Ethereum's EVM.
-
-:::
+You can find the latest releases of ASOLC [here](https://github.com/artela-network/solidity/releases/tag/v0.8.21-atl). Select the version that matches your system (e.g., for macOS, download `macos.tar.gz`).
