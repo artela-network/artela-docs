@@ -1,14 +1,6 @@
 
 # Accessing Testnet
 
-:::note Artela Testnet Status
-The Artela Testnet is in its `alpha` release phase. Kindly note:
-
-- The test environment remains under active development, and its features are subject to change.
-- We aim for stability, but it's not recommended for production use at this moment.
-- Continuous improvements are being made to the code, but it hasn't yet been formally audited.
-:::
-
 **Option 1: Connect to Artela Testnet via RPC**
 
 You can access the JSON-RPC port service through these URLs:

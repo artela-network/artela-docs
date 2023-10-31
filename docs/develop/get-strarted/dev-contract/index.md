@@ -24,6 +24,7 @@ ChainID (optional): 11820
 Symbol (optional) : ART
 Block Explorer URL (optional): https://testnet-scan.artela.network/
 ```
+For more information about the New RPC URL configuration, you can see [artela testnet](develop/node/access-testnet)
 
 Take a look in all fields:
 
@@ -66,7 +67,7 @@ With the `artela testnet` network selected at Metamask...
 
 At Remix, on the left side, locate the button Deploy and run transactions. After that, the metamask confirmation window will pop up。
 
-![img_4.png](img_4.png)
+![img_5.png](img_5.png)
 
 ## 5.Block Explorer
 
