@@ -656,108 +656,6 @@
               }
             },
             {
-              "unversionedId": "art-development/access-testnet/index",
-              "id": "art-development/access-testnet/index",
-              "title": "Accessing Testnet",
-              "description": "The Artela Testnet is in its alpha release phase. Kindly note:",
-              "source": "@site/docs/develop/art-development/access-testnet/index.md",
-              "sourceDirName": "art-development/access-testnet",
-              "slug": "/art-development/access-testnet/",
-              "permalink": "/develop/art-development/access-testnet/",
-              "draft": false,
-              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/art-development/access-testnet/index.md",
-              "tags": [],
-              "version": "current",
-              "frontMatter": {},
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Quick Start",
-                "permalink": "/develop/art-development/get-started/"
-              },
-              "next": {
-                "title": "Start a Local Node",
-                "permalink": "/develop/art-development/start-a-local-node/"
-              }
-            },
-            {
-              "unversionedId": "art-development/get-started/index",
-              "id": "art-development/get-started/index",
-              "title": "Quick Start",
-              "description": "Welcome to the Artela Quick Start Guide! This section guides you in creating dApps on Artela with aspect-oriented functionality. It intercepts and identifies specific transactions while enabling additional business logic injection. For instance, if a transaction tries to modify a state variable (e.g., 'Count') with certain conditions, like being an even number, the current transaction is rolled back.",
-              "source": "@site/docs/develop/art-development/get-started/index.md",
-              "sourceDirName": "art-development/get-started",
-              "slug": "/art-development/get-started/",
-              "permalink": "/develop/art-development/get-started/",
-              "draft": false,
-              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/art-development/get-started/index.md",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 2,
-              "frontMatter": {
-                "sidebar_position": 2
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Artela Development",
-                "permalink": "/develop/art-development/"
-              },
-              "next": {
-                "title": "Accessing Testnet",
-                "permalink": "/develop/art-development/access-testnet/"
-              }
-            },
-            {
-              "unversionedId": "art-development/index",
-              "id": "art-development/index",
-              "title": "Artela Development",
-              "description": "What Artela is Building?",
-              "source": "@site/docs/develop/art-development/index.md",
-              "sourceDirName": "art-development",
-              "slug": "/art-development/",
-              "permalink": "/develop/art-development/",
-              "draft": false,
-              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/art-development/index.md",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 2,
-              "frontMatter": {
-                "sidebar_position": 2
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "🔍 Overview",
-                "permalink": "/develop/"
-              },
-              "next": {
-                "title": "Quick Start",
-                "permalink": "/develop/art-development/get-started/"
-              }
-            },
-            {
-              "unversionedId": "art-development/start-a-local-node/index",
-              "id": "art-development/start-a-local-node/index",
-              "title": "Start a Local Node",
-              "description": "1. Building the Source",
-              "source": "@site/docs/develop/art-development/start-a-local-node/index.md",
-              "sourceDirName": "art-development/start-a-local-node",
-              "slug": "/art-development/start-a-local-node/",
-              "permalink": "/develop/art-development/start-a-local-node/",
-              "draft": false,
-              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/art-development/start-a-local-node/index.md",
-              "tags": [],
-              "version": "current",
-              "frontMatter": {},
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Accessing Testnet",
-                "permalink": "/develop/art-development/access-testnet/"
-              },
-              "next": {
-                "title": "Quick Start",
-                "permalink": "/develop/get-strarted/get-started/"
-              }
-            },
-            {
               "unversionedId": "aspect-doc/aspect-libs/index",
               "id": "aspect-doc/aspect-libs/index",
               "title": "Aspect Libs",
@@ -1181,8 +1079,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Start a Local Node",
-                "permalink": "/develop/get-strarted/start-a-local-node/"
+                "title": "Quick Start",
+                "permalink": "/develop/get-strarted/sol-hello-world/"
               },
               "next": {
                 "title": "Foundational Topics",
@@ -1217,16 +1115,40 @@
               }
             },
             {
-              "unversionedId": "get-strarted/access-testnet/index",
-              "id": "get-strarted/access-testnet/index",
+              "unversionedId": "get-strarted/art-dev-intro/index",
+              "id": "get-strarted/art-dev-intro/index",
+              "title": "Introduction to Artela Development",
+              "description": "Artela is an extensible blockchain network enabling developers to build feature-rich dApps.",
+              "source": "@site/docs/develop/get-strarted/art-dev-intro/index.md",
+              "sourceDirName": "get-strarted/art-dev-intro",
+              "slug": "/get-strarted/art-dev-intro/",
+              "permalink": "/develop/get-strarted/art-dev-intro/",
+              "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/get-strarted/art-dev-intro/index.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "🔍 Overview",
+                "permalink": "/develop/"
+              },
+              "next": {
+                "title": "Quick Start",
+                "permalink": "/develop/get-strarted/get-started/"
+              }
+            },
+            {
+              "unversionedId": "get-strarted/dev-contract/index",
+              "id": "get-strarted/dev-contract/index",
               "title": "Accessing Testnet",
               "description": "The Artela Testnet is in its alpha release phase. Kindly note:",
-              "source": "@site/docs/develop/get-strarted/access-testnet/index.md",
-              "sourceDirName": "get-strarted/access-testnet",
-              "slug": "/get-strarted/access-testnet/",
-              "permalink": "/develop/get-strarted/access-testnet/",
+              "source": "@site/docs/develop/get-strarted/dev-contract/index.md",
+              "sourceDirName": "get-strarted/dev-contract",
+              "slug": "/get-strarted/dev-contract/",
+              "permalink": "/develop/get-strarted/dev-contract/",
               "draft": false,
-              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/get-strarted/access-testnet/index.md",
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/get-strarted/dev-contract/index.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
@@ -1236,8 +1158,8 @@
                 "permalink": "/develop/get-strarted/get-started/"
               },
               "next": {
-                "title": "Start a Local Node",
-                "permalink": "/develop/get-strarted/start-a-local-node/"
+                "title": "Quick Start",
+                "permalink": "/develop/get-strarted/sol-hello-world/"
               }
             },
             {
@@ -1259,32 +1181,35 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Start a Local Node",
-                "permalink": "/develop/art-development/start-a-local-node/"
+                "title": "Introduction to Artela Development",
+                "permalink": "/develop/get-strarted/art-dev-intro/"
               },
               "next": {
                 "title": "Accessing Testnet",
-                "permalink": "/develop/get-strarted/access-testnet/"
+                "permalink": "/develop/get-strarted/dev-contract/"
               }
             },
             {
-              "unversionedId": "get-strarted/start-a-local-node/index",
-              "id": "get-strarted/start-a-local-node/index",
-              "title": "Start a Local Node",
-              "description": "1. Building the Source",
-              "source": "@site/docs/develop/get-strarted/start-a-local-node/index.md",
-              "sourceDirName": "get-strarted/start-a-local-node",
-              "slug": "/get-strarted/start-a-local-node/",
-              "permalink": "/develop/get-strarted/start-a-local-node/",
+              "unversionedId": "get-strarted/sol-hello-world/index",
+              "id": "get-strarted/sol-hello-world/index",
+              "title": "Quick Start",
+              "description": "Welcome to the Artela Quick Start Guide! This section guides you in creating dApps on Artela with aspect-oriented functionality. It intercepts and identifies specific transactions while enabling additional business logic injection. For instance, if a transaction tries to modify a state variable (e.g., 'Count') with certain conditions, like being an even number, the current transaction is rolled back.",
+              "source": "@site/docs/develop/get-strarted/sol-hello-world/index.md",
+              "sourceDirName": "get-strarted/sol-hello-world",
+              "slug": "/get-strarted/sol-hello-world/",
+              "permalink": "/develop/get-strarted/sol-hello-world/",
               "draft": false,
-              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/get-strarted/start-a-local-node/index.md",
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/get-strarted/sol-hello-world/index.md",
               "tags": [],
               "version": "current",
-              "frontMatter": {},
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2
+              },
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Accessing Testnet",
-                "permalink": "/develop/get-strarted/access-testnet/"
+                "permalink": "/develop/get-strarted/dev-contract/"
               },
               "next": {
                 "title": "Core Concepts",
@@ -1364,8 +1289,32 @@
               },
               "sidebar": "tutorialSidebar",
               "next": {
-                "title": "Artela Development",
-                "permalink": "/develop/art-development/"
+                "title": "Introduction to Artela Development",
+                "permalink": "/develop/get-strarted/art-dev-intro/"
+              }
+            },
+            {
+              "unversionedId": "node/access-testnet/index",
+              "id": "node/access-testnet/index",
+              "title": "Accessing Testnet",
+              "description": "The Artela Testnet is in its alpha release phase. Kindly note:",
+              "source": "@site/docs/develop/node/access-testnet/index.md",
+              "sourceDirName": "node/access-testnet",
+              "slug": "/node/access-testnet/",
+              "permalink": "/develop/node/access-testnet/",
+              "draft": false,
+              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/node/access-testnet/index.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Node",
+                "permalink": "/develop/node/"
+              },
+              "next": {
+                "title": "Setup a Full Node",
+                "permalink": "/develop/node/full-node-setup/"
               }
             },
             {
@@ -1387,8 +1336,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Node",
-                "permalink": "/develop/node/"
+                "title": "Accessing Testnet",
+                "permalink": "/develop/node/access-testnet/"
               },
               "next": {
                 "title": "Setup a TestNet",
@@ -1418,8 +1367,8 @@
                 "permalink": "/develop/client/tendermint-rpc/"
               },
               "next": {
-                "title": "Setup a Full Node",
-                "permalink": "/develop/node/full-node-setup/"
+                "title": "Accessing Testnet",
+                "permalink": "/develop/node/access-testnet/"
               }
             },
             {
@@ -1866,37 +1815,15 @@
               },
               {
                 "type": "category",
-                "label": "🏃 Artela Development",
+                "label": "🏃 Get Started",
                 "collapsible": true,
                 "collapsed": true,
                 "items": [
                   {
                     "type": "doc",
-                    "label": "Quick Start",
-                    "id": "art-development/get-started/index"
+                    "label": "Introduction to Artela Development",
+                    "id": "get-strarted/art-dev-intro/index"
                   },
-                  {
-                    "type": "doc",
-                    "label": "Access Testnet",
-                    "id": "art-development/access-testnet/index"
-                  },
-                  {
-                    "type": "doc",
-                    "label": "Start a Local Node",
-                    "id": "art-development/start-a-local-node/index"
-                  }
-                ],
-                "link": {
-                  "type": "doc",
-                  "id": "art-development/index"
-                }
-              },
-              {
-                "type": "category",
-                "label": "🏃 Get Started (How to use Artela)",
-                "collapsible": true,
-                "collapsed": true,
-                "items": [
                   {
                     "type": "doc",
                     "label": "Quick Start",
@@ -1904,13 +1831,13 @@
                   },
                   {
                     "type": "doc",
-                    "label": "Access Testnet",
-                    "id": "get-strarted/access-testnet/index"
+                    "label": "Develop a Smart Contract",
+                    "id": "get-strarted/dev-contract/index"
                   },
                   {
                     "type": "doc",
-                    "label": "Start a Local Node",
-                    "id": "get-strarted/start-a-local-node/index"
+                    "label": "Hello world with Aspect",
+                    "id": "get-strarted/sol-hello-world/index"
                   }
                 ]
               },
@@ -2067,6 +1994,11 @@
                 "collapsible": true,
                 "collapsed": true,
                 "items": [
+                  {
+                    "type": "doc",
+                    "label": "Access Testnet",
+                    "id": "node/access-testnet/index"
+                  },
                   {
                     "type": "doc",
                     "label": "Setup a Full Node",

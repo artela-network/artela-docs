@@ -159,26 +159,6 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "art-development/access-testnet/index",
-              "path": "/develop/art-development/access-testnet/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "art-development/get-started/index",
-              "path": "/develop/art-development/get-started/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "art-development/index",
-              "path": "/develop/art-development/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "art-development/start-a-local-node/index",
-              "path": "/develop/art-development/start-a-local-node/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
               "id": "aspect-doc/aspect-libs/index",
               "path": "/develop/aspect-doc/aspect-libs/",
               "sidebar": "tutorialSidebar"
@@ -264,8 +244,13 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "get-strarted/access-testnet/index",
-              "path": "/develop/get-strarted/access-testnet/",
+              "id": "get-strarted/art-dev-intro/index",
+              "path": "/develop/get-strarted/art-dev-intro/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "get-strarted/dev-contract/index",
+              "path": "/develop/get-strarted/dev-contract/",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -274,8 +259,8 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "get-strarted/start-a-local-node/index",
-              "path": "/develop/get-strarted/start-a-local-node/",
+              "id": "get-strarted/sol-hello-world/index",
+              "path": "/develop/get-strarted/sol-hello-world/",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -291,6 +276,11 @@
             {
               "id": "index",
               "path": "/develop/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "node/access-testnet/index",
+              "path": "/develop/node/access-testnet/",
               "sidebar": "tutorialSidebar"
             },
             {

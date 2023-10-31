@@ -44,7 +44,7 @@ export default [
   },
   {
     path: '/develop',
-    component: ComponentCreator('/develop', '8de'),
+    component: ComponentCreator('/develop', '508'),
     routes: [
       {
         path: '/develop',
@@ -109,30 +109,6 @@ export default [
       {
         path: '/develop/advanced-concepts/system-call',
         component: ComponentCreator('/develop/advanced-concepts/system-call', '198'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/develop/art-development',
-        component: ComponentCreator('/develop/art-development', 'de5'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/develop/art-development/access-testnet',
-        component: ComponentCreator('/develop/art-development/access-testnet', 'd2b'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/develop/art-development/get-started',
-        component: ComponentCreator('/develop/art-development/get-started', '6f1'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/develop/art-development/start-a-local-node',
-        component: ComponentCreator('/develop/art-development/start-a-local-node', '11d'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
@@ -239,8 +215,14 @@ export default [
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/develop/get-strarted/access-testnet',
-        component: ComponentCreator('/develop/get-strarted/access-testnet', 'a24'),
+        path: '/develop/get-strarted/art-dev-intro',
+        component: ComponentCreator('/develop/get-strarted/art-dev-intro', '504'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/develop/get-strarted/dev-contract',
+        component: ComponentCreator('/develop/get-strarted/dev-contract', 'fd6'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
@@ -251,8 +233,8 @@ export default [
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/develop/get-strarted/start-a-local-node',
-        component: ComponentCreator('/develop/get-strarted/start-a-local-node', '382'),
+        path: '/develop/get-strarted/sol-hello-world',
+        component: ComponentCreator('/develop/get-strarted/sol-hello-world', '995'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
@@ -271,6 +253,12 @@ export default [
       {
         path: '/develop/node',
         component: ComponentCreator('/develop/node', 'b02'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/develop/node/access-testnet',
+        component: ComponentCreator('/develop/node/access-testnet', '8d5'),
         exact: true,
         sidebar: "tutorialSidebar"
       },

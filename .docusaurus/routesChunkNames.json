@@ -48,7 +48,7 @@
       "plugin": "plugin---search-2-a-5-2ad"
     }
   },
-  "/develop-8de": {
+  "/develop-508": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---develop-4-f-2-231"
@@ -98,22 +98,6 @@
   "/develop/advanced-concepts/system-call-198": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---develop-advanced-concepts-system-call-7-d-4-e93"
-  },
-  "/develop/art-development-de5": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-art-development-989-534"
-  },
-  "/develop/art-development/access-testnet-d2b": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-art-development-access-testnet-255-a3a"
-  },
-  "/develop/art-development/get-started-6f1": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-art-development-get-startedb-98-8b4"
-  },
-  "/develop/art-development/start-a-local-node-11d": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-art-development-start-a-local-node-4-d-6-e0b"
   },
   "/develop/aspect-doc-0d7": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -183,17 +167,21 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---develop-core-concepts-wasm-assemblyscriptfac-989"
   },
-  "/develop/get-strarted/access-testnet-a24": {
+  "/develop/get-strarted/art-dev-intro-504": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-get-strarted-access-testnet-083-419"
+    "content": "content---develop-get-strarted-art-dev-introede-2ae"
+  },
+  "/develop/get-strarted/dev-contract-fd6": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-get-strarted-dev-contract-181-d8e"
   },
   "/develop/get-strarted/get-started-12a": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---develop-get-strarted-get-started-513-cb0"
   },
-  "/develop/get-strarted/start-a-local-node-382": {
+  "/develop/get-strarted/sol-hello-world-995": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-get-strarted-start-a-local-node-979-1cd"
+    "content": "content---develop-get-strarted-sol-hello-world-335-eca"
   },
   "/develop/guides-e14": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -206,6 +194,10 @@
   "/develop/node-b02": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---develop-node-30-d-e49"
+  },
+  "/develop/node/access-testnet-8d5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-node-access-testnet-210-4f8"
   },
   "/develop/node/full-node-setup-8b7": {
     "__comp": "__comp---theme-doc-item-178-a40",
