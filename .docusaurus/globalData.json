@@ -144,33 +144,28 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "client/cosmos-grpc/index",
-              "path": "/develop/client/cosmos-grpc/",
+              "id": "client/artela-web3.js/index",
+              "path": "/develop/client/artela-web3.js/",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "client/ethereum-json-rpc/index",
-              "path": "/develop/client/ethereum-json-rpc/",
+              "id": "client/cosmos-apis/index",
+              "path": "/develop/client/cosmos-apis/",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "client/examples/deploy-call-contract",
-              "path": "/develop/client/examples/deploy-call-contract",
+              "id": "client/Ethereum Clients Support/deploy-call-contract",
+              "path": "/develop/client/Ethereum Clients Support/deploy-call-contract",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "client/examples/ethereum-tx",
-              "path": "/develop/client/examples/ethereum-tx",
+              "id": "client/Ethereum Clients Support/ethereum-tx",
+              "path": "/develop/client/Ethereum Clients Support/ethereum-tx",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "client/index",
-              "path": "/develop/client/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "client/tendermint-rpc/index",
-              "path": "/develop/client/tendermint-rpc/",
+              "id": "client/evm-compatible-apis/index",
+              "path": "/develop/client/evm-compatible-apis/",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -266,11 +261,6 @@
             {
               "id": "node/full-node-setup/index",
               "path": "/develop/node/full-node-setup/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "node/index",
-              "path": "/develop/node/",
               "sidebar": "tutorialSidebar"
             },
             {

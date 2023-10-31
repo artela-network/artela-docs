@@ -44,7 +44,7 @@ export default [
   },
   {
     path: '/develop',
-    component: ComponentCreator('/develop', 'e47'),
+    component: ComponentCreator('/develop', 'f76'),
     routes: [
       {
         path: '/develop',
@@ -95,38 +95,32 @@ export default [
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/develop/client',
-        component: ComponentCreator('/develop/client', '464'),
+        path: '/develop/client/artela-web3.js',
+        component: ComponentCreator('/develop/client/artela-web3.js', '680'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/develop/client/cosmos-grpc',
-        component: ComponentCreator('/develop/client/cosmos-grpc', '37c'),
+        path: '/develop/client/cosmos-apis',
+        component: ComponentCreator('/develop/client/cosmos-apis', '2e9'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/develop/client/ethereum-json-rpc',
-        component: ComponentCreator('/develop/client/ethereum-json-rpc', '972'),
+        path: '/develop/client/Ethereum Clients Support/deploy-call-contract',
+        component: ComponentCreator('/develop/client/Ethereum Clients Support/deploy-call-contract', 'c56'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/develop/client/examples/deploy-call-contract',
-        component: ComponentCreator('/develop/client/examples/deploy-call-contract', '101'),
+        path: '/develop/client/Ethereum Clients Support/ethereum-tx',
+        component: ComponentCreator('/develop/client/Ethereum Clients Support/ethereum-tx', '719'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/develop/client/examples/ethereum-tx',
-        component: ComponentCreator('/develop/client/examples/ethereum-tx', 'e9b'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/develop/client/tendermint-rpc',
-        component: ComponentCreator('/develop/client/tendermint-rpc', 'ebf'),
+        path: '/develop/client/evm-compatible-apis',
+        component: ComponentCreator('/develop/client/evm-compatible-apis', 'cab'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
@@ -229,12 +223,6 @@ export default [
       {
         path: '/develop/guides/reentrancy-guard',
         component: ComponentCreator('/develop/guides/reentrancy-guard', '545'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/develop/node',
-        component: ComponentCreator('/develop/node', 'b02'),
         exact: true,
         sidebar: "tutorialSidebar"
       },

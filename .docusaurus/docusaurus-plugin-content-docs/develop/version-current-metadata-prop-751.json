@@ -142,54 +142,53 @@
       },
       {
         "type": "category",
-        "label": "🤖 Client",
+        "label": "🤖 Clients",
         "collapsible": true,
         "collapsed": true,
         "items": [
           {
             "type": "link",
-            "label": "Cosmos gRPC",
-            "href": "/develop/client/cosmos-grpc/",
-            "docId": "client/cosmos-grpc/index"
+            "label": "EVM-Compatible APIs",
+            "href": "/develop/client/evm-compatible-apis/",
+            "docId": "client/evm-compatible-apis/index"
           },
           {
             "type": "link",
-            "label": "Ethereum JSON RPC APIs",
-            "href": "/develop/client/ethereum-json-rpc/",
-            "docId": "client/ethereum-json-rpc/index"
+            "label": "Cosmos APIs",
+            "href": "/develop/client/cosmos-apis/",
+            "docId": "client/cosmos-apis/index"
+          },
+          {
+            "type": "link",
+            "label": "Artela Web3.js",
+            "href": "/develop/client/artela-web3.js/",
+            "docId": "client/artela-web3.js/index"
           },
           {
             "type": "category",
-            "label": "Examples",
+            "label": "Ethereum Clients Support",
             "collapsible": true,
             "collapsed": true,
             "items": [
               {
                 "type": "link",
                 "label": "Sending Ethereum Transactions to Artela Testnet",
-                "href": "/develop/client/examples/ethereum-tx",
-                "docId": "client/examples/ethereum-tx"
+                "href": "/develop/client/Ethereum Clients Support/ethereum-tx",
+                "docId": "client/Ethereum Clients Support/ethereum-tx"
               },
               {
                 "type": "link",
-                "label": "Deploy & Call ERC20 Contract",
-                "href": "/develop/client/examples/deploy-call-contract",
-                "docId": "client/examples/deploy-call-contract"
+                "label": "Deploy & Call ERC20 Contract to Artela Testnet",
+                "href": "/develop/client/Ethereum Clients Support/deploy-call-contract",
+                "docId": "client/Ethereum Clients Support/deploy-call-contract"
               }
             ]
-          },
-          {
-            "type": "link",
-            "label": "Tendermint RPC",
-            "href": "/develop/client/tendermint-rpc/",
-            "docId": "client/tendermint-rpc/index"
           }
-        ],
-        "href": "/develop/client/"
+        ]
       },
       {
         "type": "category",
-        "label": "🛜 Node",
+        "label": "🛜 Nodes",
         "collapsible": true,
         "collapsed": true,
         "items": [
@@ -201,12 +200,11 @@
           },
           {
             "type": "link",
-            "label": "Setup a TestNet",
+            "label": "Setup a Local TestNet",
             "href": "/develop/node/testnet-setup/",
             "docId": "node/testnet-setup/index"
           }
-        ],
-        "href": "/develop/node/"
+        ]
       },
       {
         "type": "category",
@@ -405,40 +403,34 @@
       "description": "",
       "sidebar": "tutorialSidebar"
     },
-    "client/cosmos-grpc/index": {
-      "id": "client/cosmos-grpc/index",
-      "title": "Cosmos gRPC",
-      "description": "Artela provides gRPC endpoints for every integrated module within the Cosmos SDK. This simplifies the interaction process for wallets and blockchain explorers, enabling them to engage with Proof-of-Stake mechanisms, as well as native Cosmos transactions and queries, more conveniently.",
+    "client/artela-web3.js/index": {
+      "id": "client/artela-web3.js/index",
+      "title": "Artela Web3.js",
+      "description": "@artela/web3 is a modified version of Ethereum's web3.js 1.x, supporting Aspect operations. This package retains full compatibility with the original web3.js, with minor adjustments. If your dApp utilizes the original web3.js, transitioning to Artela is as straightforward as replacing the package and import statements.",
       "sidebar": "tutorialSidebar"
     },
-    "client/ethereum-json-rpc/index": {
-      "id": "client/ethereum-json-rpc/index",
-      "title": "Ethereum JSON RPC APIs",
-      "description": "The JSON-RPC Server provides an API that facilitates connection to the Artela blockchain and interaction with the EVM. JSON-RPC is a stateless, lightweight protocol for remote procedure calls (RPC). It defines various data structures and the rules governing their processing. JSON-RPC is compatible with multiple transport protocols. Artela, in particular, supports JSON-RPC over HTTP and WebSocket.",
+    "client/cosmos-apis/index": {
+      "id": "client/cosmos-apis/index",
+      "title": "Cosmos APIs",
+      "description": "CometBFT RPC",
       "sidebar": "tutorialSidebar"
     },
-    "client/examples/deploy-call-contract": {
-      "id": "client/examples/deploy-call-contract",
-      "title": "Deploy & Call ERC20 Contract",
-      "description": "1. Contract",
+    "client/Ethereum Clients Support/deploy-call-contract": {
+      "id": "client/Ethereum Clients Support/deploy-call-contract",
+      "title": "Deploy & Call ERC20 Contract to Artela Testnet",
+      "description": "The web3.js library is a collection of modules that contain functionality for the ethereum ecosystem.",
       "sidebar": "tutorialSidebar"
     },
-    "client/examples/ethereum-tx": {
-      "id": "client/examples/ethereum-tx",
+    "client/Ethereum Clients Support/ethereum-tx": {
+      "id": "client/Ethereum Clients Support/ethereum-tx",
       "title": "Sending Ethereum Transactions to Artela Testnet",
-      "description": "1. Create and top up your account",
+      "description": "The web3.js library is a collection of modules that contain functionality for the ethereum ecosystem.",
       "sidebar": "tutorialSidebar"
     },
-    "client/index": {
-      "id": "client/index",
-      "title": "Artela Client",
-      "description": "The Artela Network supports different clients in order to support Cosmos and Ethereum transactions and queries.",
-      "sidebar": "tutorialSidebar"
-    },
-    "client/tendermint-rpc/index": {
-      "id": "client/tendermint-rpc/index",
-      "title": "Tendermint RPC",
-      "description": "Tendermint supports the following RPC protocols:",
+    "client/evm-compatible-apis/index": {
+      "id": "client/evm-compatible-apis/index",
+      "title": "EVM-Compatible APIs",
+      "description": "Artela JSON-RPC Server provides an API that facilitates connection to the Artela blockchain and interaction with the EVM. JSON-RPC is a stateless, lightweight protocol for remote procedure calls (RPC). It defines various data structures and the rules governing their processing. JSON-RPC is compatible with multiple transport protocols. Artela, in particular, supports JSON-RPC over HTTP and WebSocket.",
       "sidebar": "tutorialSidebar"
     },
     "core-concepts/arch/index": {
@@ -555,15 +547,9 @@
       "description": "This document provides an introduction to joining the Artela testnet as a full node.",
       "sidebar": "tutorialSidebar"
     },
-    "node/index": {
-      "id": "node/index",
-      "title": "Node",
-      "description": "",
-      "sidebar": "tutorialSidebar"
-    },
     "node/testnet-setup/index": {
       "id": "node/testnet-setup/index",
-      "title": "Setup a TestNet",
+      "title": "Setup a Local TestNet",
       "description": "This document aims to guide you in compiling Artela code, configuring, and generating a testnet setup consisting of a minimum of four validators. Subsequently, we will outline how to deploy these configuration and data files to four individual machines.",
       "sidebar": "tutorialSidebar"
     },

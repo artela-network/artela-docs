@@ -48,7 +48,7 @@
       "plugin": "plugin---search-2-eb-02c"
     }
   },
-  "/develop-e47": {
+  "/develop-f76": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---develop-113-f17"
@@ -87,29 +87,25 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---develop-aspect-doc-system-call-9-bd-fbe"
   },
-  "/develop/client-464": {
+  "/develop/client/artela-web3.js-680": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-client-5-e-1-46e"
+    "content": "content---develop-client-artela-web-3-js-943-a92"
   },
-  "/develop/client/cosmos-grpc-37c": {
+  "/develop/client/cosmos-apis-2e9": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-client-cosmos-grpc-11-b-786"
+    "content": "content---develop-client-cosmos-apis-2-f-3-930"
   },
-  "/develop/client/ethereum-json-rpc-972": {
+  "/develop/client/Ethereum Clients Support/deploy-call-contract-c56": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-client-ethereum-json-rpc-13-e-0ec"
+    "content": "content---develop-client-ethereum-clients-support-deploy-call-contract-338-43c"
   },
-  "/develop/client/examples/deploy-call-contract-101": {
+  "/develop/client/Ethereum Clients Support/ethereum-tx-719": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-client-examples-deploy-call-contract-502-af4"
+    "content": "content---develop-client-ethereum-clients-support-ethereum-txbec-612"
   },
-  "/develop/client/examples/ethereum-tx-e9b": {
+  "/develop/client/evm-compatible-apis-cab": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-client-examples-ethereum-tx-875-b0d"
-  },
-  "/develop/client/tendermint-rpc-ebf": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-client-tendermint-rpc-580-8d0"
+    "content": "content---develop-client-evm-compatible-apis-4-d-0-934"
   },
   "/develop/core-concepts/arch-251": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -178,10 +174,6 @@
   "/develop/guides/reentrancy-guard-545": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---develop-guides-reentrancy-guard-158-cb9"
-  },
-  "/develop/node-b02": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-node-30-d-e49"
   },
   "/develop/node/full-node-setup-8b7": {
     "__comp": "__comp---theme-doc-item-178-a40",
