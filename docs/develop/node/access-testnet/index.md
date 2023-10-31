@@ -1,5 +1,4 @@
 
-
 # Accessing Testnet
 
 :::note Artela Testnet Status
@@ -21,7 +20,7 @@ You can access the JSON-RPC port service through these URLs:
 
 **Option 2: Establish Your Own Local Private Testnet**
 
-For detailed steps, see [Run a Local Node](develop/art-development/start-a-local-node).
+For detailed steps, see [Run a Local Node](develop/node/testnet-setup).
 
 Once you've initiated the node, connect to the JSON-RPC port service here:
 

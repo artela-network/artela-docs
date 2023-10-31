@@ -2,23 +2,16 @@
 sidebar_position: 2
 ---
 
-# Quick Start
-Welcome to the Artela Quick Start Guide! This section guides you in creating dApps on Artela with aspect-oriented functionality. It intercepts and identifies specific transactions while enabling additional business logic injection. For instance, if a transaction tries to modify a state variable (e.g., 'Count') with certain conditions, like being an even number, the current transaction is rolled back.
+# Create smart contact with Aspect
 
-:::note
- This document is currently in public preview and may undergo significant changes as we gather feedback from readers like you. 
- 
- Your insights are invaluable in helping us improve Artela. If you encounter issues or have suggestions, reach out to us!
- 
- To provide feedback, please click the "Edit this page" button at the bottom of this document or join the Artela community to share your feedback.
-:::
+This section guides you in creating dApps on Artela with aspect-oriented functionality. It intercepts and identifies specific transactions while enabling additional business logic injection. For instance, if a transaction tries to modify a state variable (e.g., 'Count') with certain conditions, like being an even number, the current transaction is rolled back.
 
 The additional knowledge required for this guide includes:
 * [Node.js](https://nodejs.org/)
 * [asloc](https://docs.artela.network/develop/asolc-guide)
 
 
-# Setting up a new project
+# 1.Setting up a new project
 Make sure that a recent version of [Node.js](https://nodejs.org/) and its package manager npm (that comes with Node.js) are installed,
 Start by installing the `aspect-tool`:
 
@@ -26,8 +19,7 @@ Start by installing the `aspect-tool`:
 npm install -g @artela/aspect-tool
 ```
 
-
-## Project Initialization
+### Project Initialization
 
 To kick off your project with `aspect-tool`, follow these steps:
 
@@ -62,7 +54,7 @@ This will create a project directory with the following structure:
 ```
 
 
-## Add and compile your smart contract(s)
+## 2. Add and compile your smart contract(s)
 
 ### 1. Add a Smart Contract
 
@@ -155,7 +147,7 @@ npm run contract:deploy -- --pkfile {privateKey-path} \
 Upon successful deployment, the terminal will display the contract address.
 
 
-## Add and compile your Aspect
+## 3. Add and compile your Aspect
 
 ### 1. Implement an Aspect
 
