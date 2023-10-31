@@ -68,6 +68,9 @@ with the following command:
 
     echo '{ "jsonrpc": "2.0","method": "subscribe","id": 0,"params": {"query": "tm.event='"'NewBlock'"'"} }' | websocat -n -t ws://127.0.0.1:26657/websocket
 
+
+**All available List is here:** [Cometbft APIs](https://docs.cometbft.com/v0.38/rpc/#/Info)
+
 ## Cosmos gRPC
 
 Artela provides gRPC endpoints for every integrated module within the Cosmos SDK. This simplifies the interaction process for wallets and blockchain explorers, enabling them to engage with Proof-of-Stake mechanisms, as well as native Cosmos transactions and queries, more conveniently.
