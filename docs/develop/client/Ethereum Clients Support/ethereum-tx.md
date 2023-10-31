@@ -4,6 +4,10 @@ sidebar_position: 1
 
 # Sending Ethereum Transactions to Artela Testnet
 
+The [web3.js](https://web3js.readthedocs.io/en/v1.10.0/getting-started.html#adding-web3-js) library is a collection of modules that contain functionality for the ethereum ecosystem.
+
+You could use web3.js to interact with Artela Network as well.
+
 ## 1. Create and top up your account
 
 Skip this if you have already got an account of Artela Testnet.
@@ -14,10 +18,8 @@ To create and top up your account, refers to [Create Account of Artela Testnet](
 
 Write and compile your contract first, then run the script to deploy your contract to Artela Testnet.
 
-Requires: `"@artela/web3": "^1.9.15"`
-
 ```jsx
-const Web3 = require('@artela/web3');
+const Web3 = require('web3');
 const web3 = new Web3('http://172.16.10.2:8545');
 const bytecode = fs.readFileSync("/root/test/contract/1_Storage.bin", "utf-8") // change the bin file to your own
 const abidata = fs.readFileSync("/root/test/contract/1_Storage.abi.json", "utf-8") // change the abi json to your own
@@ -61,7 +63,7 @@ async function f() {
 f().then();
 ```
 
-![output](./img/1.png)
+![output](img/1.png)
 
 ## 3. Call contract
 
@@ -69,7 +71,7 @@ Call contract with your account.
 
 ```jsx
 const fs = require('fs');
-const Web3 = require('@artela/web3');
+const Web3 = require('web3');
 const web3 = new Web3('http://172.16.10.2:8545');
 
 const bytecode = fs.readFileSync("/root/test/contract/1_Storage.bin", "utf-8") // change the bin file to your own
@@ -118,4 +120,4 @@ f().then();
   `0x259d568dA162902Be9061377ea8DDD3d28b73585`replace with your account address.
 
 
-![output](./img/2.png)
+![output](img/2.png)
