@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 6
 ---
 
 # Aspect Lifecycle
@@ -105,8 +105,6 @@ The Aspect Core contract records the binding relationship as:
   ]
 }
 ```
-
-For clarity on the execution order based on priority, refer to the ![Aspect Execution Order diagram](./aspect-execution-order.svg).
 
 ## Unbinding
 

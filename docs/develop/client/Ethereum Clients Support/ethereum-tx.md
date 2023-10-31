@@ -4,19 +4,22 @@ sidebar_position: 1
 
 # Sending Ethereum Transactions to Artela Testnet
 
-The [web3.js](https://web3js.readthedocs.io/en/v1.10.0/getting-started.html#adding-web3-js) library is a collection of modules that contain functionality for the ethereum ecosystem.
+The [web3.js](https://web3js.readthedocs.io/en/v1.10.0/getting-started.html#adding-web3-js) library is a collection of modules originally designed for interacting with Ethereum.
 
-You could use web3.js to interact with Artela Network as well.
+You could use web3.js to interact with Artela blockchain as well.
 
-## 1. Create and top up your account
+Below is an example that use ethereum web3.js to send transaction to Artela Testnet.
 
-Skip this if you have already got an account of Artela Testnet.
 
-To create and top up your account, refers to [Create Account of Artela Testnet](/)
+### 1. Create and top up your account
 
-## 2. Deploy contract with your account
+Skip this step if you already have an Artela Testnet account.
 
-Write and compile your contract first, then run the script to deploy your contract to Artela Testnet.
+To create and fund your account, refers to [Create Account of Artela Testnet](/)
+
+### 2. Deploy contract with your account
+
+First, write and compile your contract. Then, using the script to deploy it to Artela Testnet.
 
 ```jsx
 const Web3 = require('web3');
@@ -65,9 +68,9 @@ f().then();
 
 ![output](img/1.png)
 
-## 3. Call contract
+### 3. Call contract
 
-Call contract with your account.
+Call deployed contract with your account.
 
 ```jsx
 const fs = require('fs');
@@ -115,9 +118,6 @@ async function f() {
 f().then();
 ```
 
-- contractAddress
-
-  `0x259d568dA162902Be9061377ea8DDD3d28b73585`replace with your account address.
-
+Remember to replace `privateKey.txt` with your actual private key and update the `contractAddress` variable with your deployed contract's address.
 
 ![output](img/2.png)

@@ -4,11 +4,13 @@ sidebar_position: 2
 
 # Deploy & Call ERC20 Contract to Artela Testnet
 
-The [web3.js](https://web3js.readthedocs.io/en/v1.10.0/getting-started.html#adding-web3-js) library is a collection of modules that contain functionality for the ethereum ecosystem.
+The [web3.js](https://web3js.readthedocs.io/en/v1.10.0/getting-started.html#adding-web3-js) library is a collection of modules originally designed for interacting with Ethereum.
 
-You could use web3.js to interact with Artela Network as well.
+You could use web3.js to interact with Artela blockchain as well.
 
-## 1. Contract
+Below is an example that use ethereum web3.js to deploy erc20 contract to Artela Testnet.
+
+### 1. Contract
 
 **`ArtToken.sol`**
 
@@ -76,7 +78,7 @@ contract Borker is Ownable {
 }
 ```
 
-## 2. Deploy Contract Script
+### 2. Deploy Contract Script
 
 Using your private key, sign the deploy transactions for `ArtToken.sol` and `Broker.sol` contracts.
 
@@ -160,11 +162,11 @@ async function f() {
 f().then();
 ```
 
-## 3. Call Contract Script
+### 3. Call Contract Script
 
 `tokenAddress`: contract address that defines the token.
 
-`brokerAddress`: contract address that hold the token.
+`brokerAddress`: contract address that holds the token.
 
 ```bash
 const fs = require('fs');

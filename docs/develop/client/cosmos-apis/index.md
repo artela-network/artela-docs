@@ -11,11 +11,11 @@ CometBFT supports the following RPC protocols:
 
 * URI over HTTP
 * JSONRPC over HTTP
-* JSONRPC over websockets
+* JSONRPC over WebSockets
 
 ### Configuration
 
-RPC can be configured by tuning parameters under `[rpc]` table in the
+RPC can be configured by tuning parameters under `[rpc]` section in the
 `$CMTHOME/config/config.toml` file or by using the `--rpc.X` command-line
 flags.
 
@@ -25,55 +25,55 @@ CORS (Cross-Origin Resource Sharing) can be enabled by setting
 `cors_allowed_origins`, `cors_allowed_methods`, `cors_allowed_headers`
 config parameters.
 
-If testing using a local RPC node, under the `[rpc]`
-section change the `cors_allowed_origins` property, please add the URL of
-the site where this OpenAPI document is running, for example:
+For local RPC node testing, update the `cors_allowed_origins` property under the `[rpc]` section. Add the URL where this OpenAPI document is hosted, for example:
 
   `cors_allowed_origins = ["http://localhost:8088"]`
 
-or if testing from the official documentation site:
+Or, if testing from the official documentation site:
 
   `cors_allowed_origins = ["https://docs.cometbft.com"]`
 
-### Arguments
+### Parameters
+
+For parameters expecting strings or byte arrays, you can use quoted strings like "abc" or 0x-prefixed strings such as 0x616263.
 
 Arguments which expect strings or byte arrays may be passed as quoted
 strings, like `"abc"` or as `0x`-prefixed strings, like `0x616263`.
 
 ### URI/HTTP
 
-A REST like interface.
-
-    curl localhost:26657/block?height=5
-
+A REST-like interface.
+```bash
+curl localhost:26657/block?height=5
+```
 ### JSONRPC/HTTP
 
 JSONRPC requests can be POST'd to the root RPC endpoint via HTTP.
-
-    curl --header "Content-Type: application/json" --request POST --data '{"method": "block", "params": ["5"], "id": 1}' localhost:26657
-
+```bash
+curl --header "Content-Type: application/json" --request POST --data '{"method": "block", "params": ["5"], "id": 1}' localhost:26657
+```
 Artela Testnet example:
+```bash
+curl --header "Content-Type: application/json" --request POST --data '{"method": "block", "params": ["5"], "id": 1}' 34.229.57.14:26657
+```
+### JSONRPC/WebSockets
 
-    curl --header "Content-Type: application/json" --request POST --data '{"method": "block", "params": ["5"], "id": 1}' 34.229.57.14:26657
-
-### JSONRPC/websockets
-
-JSONRPC requests can be also made via websocket.
-The websocket endpoint is at `/websocket`, e.g. `localhost:26657/websocket`.
+JSONRPC requests can also be made via WebSockets.
+The WebSocket endpoint is located at `/websocket`, e.g. `localhost:26657/websocket`.
 Asynchronous RPC functions like event `subscribe` and `unsubscribe` are
-only available via websockets.
+available only via websockets.
 
 For example using the [websocat](https://github.com/vi/websocat) tool, you can subscribe for 'NewBlock` events
-with the following command:
+with this command:
+```bash
+echo '{ "jsonrpc": "2.0","method": "subscribe","id": 0,"params": {"query": "tm.event='"'NewBlock'"'"} }' | websocat -n -t ws://127.0.0.1:26657/websocket
+```
 
-    echo '{ "jsonrpc": "2.0","method": "subscribe","id": 0,"params": {"query": "tm.event='"'NewBlock'"'"} }' | websocat -n -t ws://127.0.0.1:26657/websocket
-
-
-**All available List is here:** [Cometbft APIs](https://docs.cometbft.com/v0.38/rpc/#/Info)
+**List of Available APIs:** [Cometbft APIs](https://docs.cometbft.com/v0.38/rpc/#/Info)
 
 ## Cosmos gRPC
 
-Artela provides gRPC endpoints for every integrated module within the Cosmos SDK. This simplifies the interaction process for wallets and blockchain explorers, enabling them to engage with Proof-of-Stake mechanisms, as well as native Cosmos transactions and queries, more conveniently.
+Artela provides gRPC endpoints for all integrated modules within the Cosmos SDK. This streamlines the interaction process for wallets and blockchain explorers, enabling them to easily engage with Proof-of-Stake mechanisms and native Cosmos transactions and queries.
 
 ### EVM Module
 
