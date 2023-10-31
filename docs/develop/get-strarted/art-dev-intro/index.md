@@ -1,11 +1,39 @@
 
-# Introduction to Artela Development
-
-Artela is an extensible blockchain network enabling developers to build feature-rich dApps.
-
-Artela is dedicated to pushing the boundaries of dApp functionality beyond smart contracts, unlocking the full potential of Web3 innovations.
+# Build on Artela
 
 
+### EVM-compatibility
+Artela is a fully EVM-compatible blockchain, allowing you to seamlessly migrate your dApps from other EVM-compatible chains. You can also write smart contracts in Solidity, Vyper, and other EVM-enabled languages without any issues.
+
+Please note that the currently supported Solidity version is `<= 0.8.21`.
+
+For more details, refer to 
+* [EVM Compatibility](/develop/core-concepts/evm-compatibility)
+
+
+### Beyond EVM
+
+Artela blockchain defines a new programmable module to work as native extension, called Aspect. Aspect integrates customized functionality throughout the transaction lifecycle, working synergistically with smart contracts to enhance dApp functionality.
+
+
+![modular_dapp.png](modular_dapp.png)
+
+You can maintain the core logic within EVM smart contracts, and implement custom features in Aspects using the gas-efficient and computational powerful WASM runtime, all in a plug-and-play manner.
+
+The initial version of Artela Aspect is built with [Assembly Script](https://www.assemblyscript.org/)(a sub set of TypeScript, strictly typed).
+
+<!-- The name “Aspect” is inspired by Aspect-oriented Programming. Aspect can tap into the complete API set of the base layer, and inject extended logic into specific join points during a transaction's lifecycle. -->
+
+
+For more details, refer to:
+
+* [Aspect](/develop/core-concepts/aspect)
+* [Aspect programming](/develop/core-concepts/aspect-programming)
+* [Aspect Runtime](/develop/core-concepts/aspect-runtime) -->
+
+
+
+<!-- 
 ## EVM Compatible
 
 Artela is fully EVM compatible. This means that you can use Artela to deploy and run smart contracts written in Solidity, Vyper, and other EVM compatible languages without any issue.
@@ -20,10 +48,10 @@ Artela is fully EVM compatible. This means that you can use Artela to deploy and
 
  * **Interoperability and Ecosystem:** Artela can more easily integrate with Ethereum's DeFi (Decentralized Finance) applications, DApps (Decentralized Applications), and other projects, thereby expanding the entire Ethereum ecosystem.
 
-In summary, EVM Compatible represents compatibility with Ethereum, providing greater interoperability and flexibility to promote the development of decentralized applications and cross-chain operations. This compatibility is crucial for the growth and interconnectivity of the entire blockchain ecosystem.
+In summary, EVM Compatible represents compatibility with Ethereum, providing greater interoperability and flexibility to promote the development of decentralized applications and cross-chain operations. This compatibility is crucial for the growth and interconnectivity of the entire blockchain ecosystem. -->
 
-For more details, refer to [EVM Compatibility](/develop/core-concepts/evm-compatibility)
 
+<!-- 
 ## Smart Contract with Aspect
 
 In Artela, we define a new programmable module to work as Native Extension, called Aspect.
@@ -36,5 +64,5 @@ For more details, see:
 
 * [Aspect](/develop/core-concepts/aspect)
 * [Aspect programming](/develop/core-concepts/aspect-programming)
-* [Aspect Runtime](/develop/core-concepts/aspect-runtime)
+* [Aspect Runtime](/develop/core-concepts/aspect-runtime) -->
 
