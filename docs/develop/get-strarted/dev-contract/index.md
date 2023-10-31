@@ -38,14 +38,11 @@ Join Artela [Discord server](https://discord.com/invite/artela) to access the Te
 
 Launch Remix. Configure Remix for Solidity development by selecting `SOLIDITY` under `Featured Plugins` on the main page. Navigate to `File Explorers` to manage your files.
 
-1. open "contracts" folder.
-2. create new contract file.
-3. enter the file name as "mytoken.sol".
-4. copy the contract code.
-5. click "solidity compiler", Make sure the compilation is successful.
-
-Remix Configuration:
-
+1. Open "contracts" folder.
+2. Create new contract file.
+3. Enter the file name as "mytoken.sol".
+4. Copy the contract mytoken.sol code.
+5. Click "solidity compiler", and make sure the compilation is successful.
 
 ![img_6.png](img_6.png)
 
@@ -84,7 +81,6 @@ At Remix, on the left side
 
 Confirm the successful deployment on Artela Testnet [blockchain explorer](https://testnet-scan.artela.network/) using `transaction hash` in output.
 
-![img_10.png](img_10.png)
 
 ![img_3.png](img_3.png)
 
