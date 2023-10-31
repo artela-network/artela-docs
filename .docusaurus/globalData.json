@@ -264,6 +264,21 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "get-strarted/access-testnet/index",
+              "path": "/develop/get-strarted/access-testnet/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "get-strarted/get-started/index",
+              "path": "/develop/get-strarted/get-started/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "get-strarted/start-a-local-node/index",
+              "path": "/develop/get-strarted/start-a-local-node/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "guides/index",
               "path": "/develop/guides/",
               "sidebar": "tutorialSidebar"

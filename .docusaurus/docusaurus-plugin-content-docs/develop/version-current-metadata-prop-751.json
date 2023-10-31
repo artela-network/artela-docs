@@ -44,6 +44,32 @@
       },
       {
         "type": "category",
+        "label": "🏃 Get Started (How to use Artela)",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Quick Start",
+            "href": "/develop/get-strarted/get-started/",
+            "docId": "get-strarted/get-started/index"
+          },
+          {
+            "type": "link",
+            "label": "Access Testnet",
+            "href": "/develop/get-strarted/access-testnet/",
+            "docId": "get-strarted/access-testnet/index"
+          },
+          {
+            "type": "link",
+            "label": "Start a Local Node",
+            "href": "/develop/get-strarted/start-a-local-node/",
+            "docId": "get-strarted/start-a-local-node/index"
+          }
+        ]
+      },
+      {
+        "type": "category",
         "label": "⏰ Core Concepts",
         "collapsible": true,
         "collapsed": true,
@@ -563,6 +589,24 @@
       "id": "core-concepts/wasm-assemblyscript/index",
       "title": "WASM & Assembly Script",
       "description": "WIP",
+      "sidebar": "tutorialSidebar"
+    },
+    "get-strarted/access-testnet/index": {
+      "id": "get-strarted/access-testnet/index",
+      "title": "Accessing Testnet",
+      "description": "The Artela Testnet is in its alpha release phase. Kindly note:",
+      "sidebar": "tutorialSidebar"
+    },
+    "get-strarted/get-started/index": {
+      "id": "get-strarted/get-started/index",
+      "title": "Quick Start",
+      "description": "Welcome to the Artela Quick Start Guide! This section guides you in creating dApps on Artela with aspect-oriented functionality. It intercepts and identifies specific transactions while enabling additional business logic injection. For instance, if a transaction tries to modify a state variable (e.g., 'Count') with certain conditions, like being an even number, the current transaction is rolled back.",
+      "sidebar": "tutorialSidebar"
+    },
+    "get-strarted/start-a-local-node/index": {
+      "id": "get-strarted/start-a-local-node/index",
+      "title": "Start a Local Node",
+      "description": "1. Building the Source",
       "sidebar": "tutorialSidebar"
     },
     "guides/index": {

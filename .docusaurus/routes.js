@@ -44,7 +44,7 @@ export default [
   },
   {
     path: '/develop',
-    component: ComponentCreator('/develop', '3fd'),
+    component: ComponentCreator('/develop', '8de'),
     routes: [
       {
         path: '/develop',
@@ -235,6 +235,24 @@ export default [
       {
         path: '/develop/core-concepts/wasm-assemblyscript',
         component: ComponentCreator('/develop/core-concepts/wasm-assemblyscript', '5a4'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/develop/get-strarted/access-testnet',
+        component: ComponentCreator('/develop/get-strarted/access-testnet', 'a24'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/develop/get-strarted/get-started',
+        component: ComponentCreator('/develop/get-strarted/get-started', '12a'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/develop/get-strarted/start-a-local-node',
+        component: ComponentCreator('/develop/get-strarted/start-a-local-node', '382'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
