@@ -483,8 +483,8 @@
                 "permalink": "/develop/art-development/access-testnet/"
               },
               "next": {
-                "title": "ASOLC",
-                "permalink": "/develop/core-concepts/asolc/"
+                "title": "Foundational Topics",
+                "permalink": "/develop/core-concepts/foundational/"
               }
             },
             {
@@ -695,8 +695,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "JIT(Just In Time) Call",
-                "permalink": "/develop/core-concepts/jit-call/"
+                "title": "Architecture",
+                "permalink": "/develop/core-concepts/arch/"
               },
               "next": {
                 "title": "Cosmos APIs",
@@ -716,18 +716,18 @@
               "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/core-concepts/arch/index.md",
               "tags": [],
               "version": "current",
-              "sidebarPosition": 2,
+              "sidebarPosition": 12,
               "frontMatter": {
-                "sidebar_position": 2
+                "sidebar_position": 12
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Foundational Topics",
-                "permalink": "/develop/core-concepts/foundational/"
+                "title": "JIT(Just In Time) Call",
+                "permalink": "/develop/core-concepts/jit-call/"
               },
               "next": {
-                "title": "EVM Compatibility",
-                "permalink": "/develop/core-concepts/evm-compatibility/"
+                "title": "EVM-Compatible APIs",
+                "permalink": "/develop/client/evm-compatible-apis/"
               }
             },
             {
@@ -743,18 +743,18 @@
               "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/core-concepts/asolc/index.md",
               "tags": [],
               "version": "current",
-              "sidebarPosition": 1,
+              "sidebarPosition": 10,
               "frontMatter": {
-                "sidebar_position": 1
+                "sidebar_position": 10
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Start a Local Node",
-                "permalink": "/develop/art-development/start-a-local-node/"
+                "title": "Communication between Aspects & Smart Contracts",
+                "permalink": "/develop/core-concepts/communication/"
               },
               "next": {
-                "title": "Foundational Topics",
-                "permalink": "/develop/core-concepts/foundational/"
+                "title": "JIT(Just In Time) Call",
+                "permalink": "/develop/core-concepts/jit-call/"
               }
             },
             {
@@ -770,18 +770,18 @@
               "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/core-concepts/aspect-programming/index.md",
               "tags": [],
               "version": "current",
-              "sidebarPosition": 4,
+              "sidebarPosition": 3,
               "frontMatter": {
-                "sidebar_position": 4
+                "sidebar_position": 3
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Aspect Lifecycle",
-                "permalink": "/develop/core-concepts/lifecycle/"
+                "title": "EVM Compatibility",
+                "permalink": "/develop/core-concepts/evm-compatibility/"
               },
               "next": {
-                "title": "Join Point",
-                "permalink": "/develop/core-concepts/join-point/"
+                "title": "Aspect",
+                "permalink": "/develop/core-concepts/aspect/"
               }
             },
             {
@@ -797,18 +797,18 @@
               "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/core-concepts/aspect-runtime/index.md",
               "tags": [],
               "version": "current",
-              "sidebarPosition": 6,
+              "sidebarPosition": 5,
               "frontMatter": {
-                "sidebar_position": 6
+                "sidebar_position": 5
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Communication between Aspects & Smart Contracts",
-                "permalink": "/develop/core-concepts/communication/"
+                "title": "Aspect",
+                "permalink": "/develop/core-concepts/aspect/"
               },
               "next": {
-                "title": "Binding",
-                "permalink": "/develop/core-concepts/binding/"
+                "title": "Aspect Lifecycle",
+                "permalink": "/develop/core-concepts/lifecycle/"
               }
             },
             {
@@ -824,18 +824,18 @@
               "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/core-concepts/aspect/index.md",
               "tags": [],
               "version": "current",
-              "sidebarPosition": 5,
+              "sidebarPosition": 4,
               "frontMatter": {
-                "sidebar_position": 5
+                "sidebar_position": 4
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Join Point",
-                "permalink": "/develop/core-concepts/join-point/"
+                "title": "Aspect Programming",
+                "permalink": "/develop/core-concepts/aspect-programming/"
               },
               "next": {
-                "title": "Communication between Aspects & Smart Contracts",
-                "permalink": "/develop/core-concepts/communication/"
+                "title": "Aspect Runtime",
+                "permalink": "/develop/core-concepts/aspect-runtime/"
               }
             },
             {
@@ -851,18 +851,18 @@
               "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/core-concepts/binding/index.md",
               "tags": [],
               "version": "current",
-              "sidebarPosition": 6,
+              "sidebarPosition": 8,
               "frontMatter": {
-                "sidebar_position": 6
+                "sidebar_position": 8
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Aspect Runtime",
-                "permalink": "/develop/core-concepts/aspect-runtime/"
+                "title": "Join Point",
+                "permalink": "/develop/core-concepts/join-point/"
               },
               "next": {
-                "title": "Aspect Runtime APIs",
-                "permalink": "/develop/core-concepts/runtime-api/"
+                "title": "Communication between Aspects & Smart Contracts",
+                "permalink": "/develop/core-concepts/communication/"
               }
             },
             {
@@ -878,18 +878,18 @@
               "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/core-concepts/communication/index.md",
               "tags": [],
               "version": "current",
-              "sidebarPosition": 5,
+              "sidebarPosition": 9,
               "frontMatter": {
-                "sidebar_position": 5
+                "sidebar_position": 9
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Aspect",
-                "permalink": "/develop/core-concepts/aspect/"
+                "title": "Binding",
+                "permalink": "/develop/core-concepts/binding/"
               },
               "next": {
-                "title": "Aspect Runtime",
-                "permalink": "/develop/core-concepts/aspect-runtime/"
+                "title": "ASOLC",
+                "permalink": "/develop/core-concepts/asolc/"
               }
             },
             {
@@ -905,18 +905,18 @@
               "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/core-concepts/evm-compatibility/index.md",
               "tags": [],
               "version": "current",
-              "sidebarPosition": 3,
+              "sidebarPosition": 2,
               "frontMatter": {
-                "sidebar_position": 3
+                "sidebar_position": 2
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Architecture",
-                "permalink": "/develop/core-concepts/arch/"
+                "title": "Foundational Topics",
+                "permalink": "/develop/core-concepts/foundational/"
               },
               "next": {
-                "title": "Aspect Lifecycle",
-                "permalink": "/develop/core-concepts/lifecycle/"
+                "title": "Aspect Programming",
+                "permalink": "/develop/core-concepts/aspect-programming/"
               }
             },
             {
@@ -938,12 +938,12 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "ASOLC",
-                "permalink": "/develop/core-concepts/asolc/"
+                "title": "Start a Local Node",
+                "permalink": "/develop/art-development/start-a-local-node/"
               },
               "next": {
-                "title": "Architecture",
-                "permalink": "/develop/core-concepts/arch/"
+                "title": "EVM Compatibility",
+                "permalink": "/develop/core-concepts/evm-compatibility/"
               }
             },
             {
@@ -959,18 +959,18 @@
               "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/core-concepts/jit-call/index.md",
               "tags": [],
               "version": "current",
-              "sidebarPosition": 8,
+              "sidebarPosition": 11,
               "frontMatter": {
-                "sidebar_position": 8
+                "sidebar_position": 11
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "WASM & Assembly Script",
-                "permalink": "/develop/core-concepts/wasm-assemblyscript/"
+                "title": "ASOLC",
+                "permalink": "/develop/core-concepts/asolc/"
               },
               "next": {
-                "title": "EVM-Compatible APIs",
-                "permalink": "/develop/client/evm-compatible-apis/"
+                "title": "Architecture",
+                "permalink": "/develop/core-concepts/arch/"
               }
             },
             {
@@ -986,18 +986,18 @@
               "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/core-concepts/join-point/index.md",
               "tags": [],
               "version": "current",
-              "sidebarPosition": 4,
+              "sidebarPosition": 7,
               "frontMatter": {
-                "sidebar_position": 4
+                "sidebar_position": 7
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Aspect Programming",
-                "permalink": "/develop/core-concepts/aspect-programming/"
+                "title": "Aspect Lifecycle",
+                "permalink": "/develop/core-concepts/lifecycle/"
               },
               "next": {
-                "title": "Aspect",
-                "permalink": "/develop/core-concepts/aspect/"
+                "title": "Binding",
+                "permalink": "/develop/core-concepts/binding/"
               }
             },
             {
@@ -1013,99 +1013,18 @@
               "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/core-concepts/lifecycle/index.md",
               "tags": [],
               "version": "current",
-              "sidebarPosition": 3,
-              "frontMatter": {
-                "sidebar_position": 3
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "EVM Compatibility",
-                "permalink": "/develop/core-concepts/evm-compatibility/"
-              },
-              "next": {
-                "title": "Aspect Programming",
-                "permalink": "/develop/core-concepts/aspect-programming/"
-              }
-            },
-            {
-              "unversionedId": "core-concepts/runtime-api/index",
-              "id": "core-concepts/runtime-api/index",
-              "title": "Aspect Runtime APIs",
-              "description": "",
-              "source": "@site/docs/develop/core-concepts/runtime-api/index.md",
-              "sourceDirName": "core-concepts/runtime-api",
-              "slug": "/core-concepts/runtime-api/",
-              "permalink": "/develop/core-concepts/runtime-api/",
-              "draft": false,
-              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/core-concepts/runtime-api/index.md",
-              "tags": [],
-              "version": "current",
               "sidebarPosition": 6,
               "frontMatter": {
                 "sidebar_position": 6
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Binding",
-                "permalink": "/develop/core-concepts/binding/"
+                "title": "Aspect Runtime",
+                "permalink": "/develop/core-concepts/aspect-runtime/"
               },
               "next": {
-                "title": "System Call",
-                "permalink": "/develop/core-concepts/system-call/"
-              }
-            },
-            {
-              "unversionedId": "core-concepts/system-call/index",
-              "id": "core-concepts/system-call/index",
-              "title": "System Call",
-              "description": "In the world of Aspect, a \"system call\" is a mechanism that triggers the execution of a specific system module, which we'll refer to as \"Module\". Each Module can have its own internal states, known as \"Module States\". The way a Module changes over time can be understood as follows: The Module States at a future moment are determined by a system call applied to the Module States at a current moment along with the input to that system call.",
-              "source": "@site/docs/develop/core-concepts/system-call/index.md",
-              "sourceDirName": "core-concepts/system-call",
-              "slug": "/core-concepts/system-call/",
-              "permalink": "/develop/core-concepts/system-call/",
-              "draft": false,
-              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/core-concepts/system-call/index.md",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 7,
-              "frontMatter": {
-                "sidebar_position": 7
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Aspect Runtime APIs",
-                "permalink": "/develop/core-concepts/runtime-api/"
-              },
-              "next": {
-                "title": "WASM & Assembly Script",
-                "permalink": "/develop/core-concepts/wasm-assemblyscript/"
-              }
-            },
-            {
-              "unversionedId": "core-concepts/wasm-assemblyscript/index",
-              "id": "core-concepts/wasm-assemblyscript/index",
-              "title": "WASM & Assembly Script",
-              "description": "WIP",
-              "source": "@site/docs/develop/core-concepts/wasm-assemblyscript/index.md",
-              "sourceDirName": "core-concepts/wasm-assemblyscript",
-              "slug": "/core-concepts/wasm-assemblyscript/",
-              "permalink": "/develop/core-concepts/wasm-assemblyscript/",
-              "draft": false,
-              "editUrl": "https://github.com/artela-network/artela-docs/tree/main/docs/develop/core-concepts/wasm-assemblyscript/index.md",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 7,
-              "frontMatter": {
-                "sidebar_position": 7
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "System Call",
-                "permalink": "/develop/core-concepts/system-call/"
-              },
-              "next": {
-                "title": "JIT(Just In Time) Call",
-                "permalink": "/develop/core-concepts/jit-call/"
+                "title": "Join Point",
+                "permalink": "/develop/core-concepts/join-point/"
               }
             },
             {
@@ -1689,18 +1608,8 @@
                 "items": [
                   {
                     "type": "doc",
-                    "label": "ASOLC",
-                    "id": "core-concepts/asolc/index"
-                  },
-                  {
-                    "type": "doc",
                     "label": "Foundational Topics",
                     "id": "core-concepts/foundational/index"
-                  },
-                  {
-                    "type": "doc",
-                    "label": "Architecture",
-                    "id": "core-concepts/arch/index"
                   },
                   {
                     "type": "doc",
@@ -1709,18 +1618,8 @@
                   },
                   {
                     "type": "doc",
-                    "label": "Aspect Lifecycle",
-                    "id": "core-concepts/lifecycle/index"
-                  },
-                  {
-                    "type": "doc",
                     "label": "Aspect Programming",
                     "id": "core-concepts/aspect-programming/index"
-                  },
-                  {
-                    "type": "doc",
-                    "label": "Join Point",
-                    "id": "core-concepts/join-point/index"
                   },
                   {
                     "type": "doc",
@@ -1729,13 +1628,18 @@
                   },
                   {
                     "type": "doc",
-                    "label": "Communication between Aspects & Smart Contracts",
-                    "id": "core-concepts/communication/index"
+                    "label": "Aspect Runtime",
+                    "id": "core-concepts/aspect-runtime/index"
                   },
                   {
                     "type": "doc",
-                    "label": "Aspect Runtime",
-                    "id": "core-concepts/aspect-runtime/index"
+                    "label": "Aspect Lifecycle",
+                    "id": "core-concepts/lifecycle/index"
+                  },
+                  {
+                    "type": "doc",
+                    "label": "Join Point",
+                    "id": "core-concepts/join-point/index"
                   },
                   {
                     "type": "doc",
@@ -1744,23 +1648,23 @@
                   },
                   {
                     "type": "doc",
-                    "label": "Aspect Runtime APIs",
-                    "id": "core-concepts/runtime-api/index"
+                    "label": "Communication between Aspects & Smart Contracts",
+                    "id": "core-concepts/communication/index"
                   },
                   {
                     "type": "doc",
-                    "label": "System Call",
-                    "id": "core-concepts/system-call/index"
-                  },
-                  {
-                    "type": "doc",
-                    "label": "WASM & Assembly Script",
-                    "id": "core-concepts/wasm-assemblyscript/index"
+                    "label": "ASOLC",
+                    "id": "core-concepts/asolc/index"
                   },
                   {
                     "type": "doc",
                     "label": "JIT(Just In Time) Call",
                     "id": "core-concepts/jit-call/index"
+                  },
+                  {
+                    "type": "doc",
+                    "label": "Architecture",
+                    "id": "core-concepts/arch/index"
                   }
                 ]
               },

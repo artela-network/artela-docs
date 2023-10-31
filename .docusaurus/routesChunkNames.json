@@ -48,7 +48,7 @@
       "plugin": "plugin---search-2-eb-02c"
     }
   },
-  "/develop-f76": {
+  "/develop-e01": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---develop-113-f17"
@@ -154,18 +154,6 @@
   "/develop/core-concepts/lifecycle-82c": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---develop-core-concepts-lifecycledce-9ad"
-  },
-  "/develop/core-concepts/runtime-api-141": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-core-concepts-runtime-apia-98-5a7"
-  },
-  "/develop/core-concepts/system-call-bd7": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-core-concepts-system-callfa-7-22e"
-  },
-  "/develop/core-concepts/wasm-assemblyscript-5a4": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-core-concepts-wasm-assemblyscriptfac-989"
   },
   "/develop/guides-e14": {
     "__comp": "__comp---theme-doc-item-178-a40",
