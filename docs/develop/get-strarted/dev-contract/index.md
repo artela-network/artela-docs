@@ -42,7 +42,7 @@ Remix Configuration:
 
 ![img.png](img.png)
 
-Create a new Solidity file by clicking the `+` button below `File Explorers`. Name the file `MyToken.sol`.
+Create a new Solidity file by clicking the `+` button below `File Explorers`. Name the file `MyToken.sol`, and compile it.
 
 ![img_2.png](img_2.png)
 
@@ -62,7 +62,7 @@ contract MyCollectible is ERC721 {
 
 ## 4.Remix: Connect to Artela Testnet and Deploy
 
-Ensure the `artela testnet` network is selected on Metamask.
+Ensure the `artela testnet` network is selected on Metamask. Select `Injected Provider - MetaMask` as environment.
 
 In Remix, click the `Deploy` button on the left side. Metamask confirmation window will appear.
 
@@ -70,9 +70,7 @@ In Remix, click the `Deploy` button on the left side. Metamask confirmation wind
 
 ## 5.Block Explorer
 
-We can confirm whether the deployment is successful on our [blockchain explorer](https://testnet-scan.artela.network/) through the deployed txHash.
-
-Confirm the successful deployment on Artela Testnet [blockchain explorer](https://testnet-scan.artela.network/) using the deployed txHash.
+Confirm the successful deployment on Artela Testnet [blockchain explorer](https://testnet-scan.artela.network/) using `transaction hash` in output.
 
 ![img_3.png](img_3.png)
 
