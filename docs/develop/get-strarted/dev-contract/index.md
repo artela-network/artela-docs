@@ -2,19 +2,18 @@
 
 # Develop a Smart Contract
 
-In this tutorial will show you step by step how to create and deploy a smart contract use Remix and Metamask, which are tools that were originally built for Ethereum, to create and deploy a simple smart contract on Artela Testnet.
-
+In this tutorial, we'll walk you through the process of creating and deploying a smart contract on Artela Testnet using Remix and MetaMask.
 
 ## Requirements
 * [Metamask](https://metamask.io/)
 * [Remix](https://remix.ethereum.org/)
 
 
-## 1. Connect Metamask to Artela testnet
+## 1. Connect MetaMask to Artela Testnet
 
-If you haven't used Metamask, you can take a look at this guide, [How Add a Custom Network RPC](https://support.metamask.io/hc/en-us/articles/360043227612-How-to-add-a-custom-network-RPC)
+If you're new to MetaMask, follow this guide on [How Add a Custom Network RPC](https://support.metamask.io/hc/en-us/articles/360043227612-How-to-add-a-custom-network-RPC) for detailed instructions.
 
-1. Open Metamask 
+1. Open MetaMask 
 2. chick  `Networks` > `Add a network` > `Add a network manually`
 
 ```
@@ -24,26 +23,26 @@ ChainID (optional): 11820
 Symbol (optional) : ART
 Block Explorer URL (optional): https://testnet-scan.artela.network/
 ```
-For more information about the New RPC URL configuration, you can see [artela testnet](develop/node/access-testnet)
 
-Take a look in all fields:
+For more info about the new RPC URL configuration, refer to [artela testnet](develop/node/access-testnet).
+
+Ensure all fields are correctly filled:
 
 ![img_1.png ](img_1.png)
 
-## 2. TestNet Faucet
+## 2. Access TestNet Faucet
 
-You can join [our discard](https://discord.com/invite/artela) for get some Testnet ART in the faucet
- please and request access to the testnet faucet.
+Join Artela [Discord server](https://discord.com/invite/artela) to access the Testnet ART faucet. Request access and obtain Testnet ART with your wallet address. 
 
+## 3. Write a Smart Contract in Remix
 
-Copy your address from Metamask.
+Launch Remix. Configure Remix for Solidity development by selecting `SOLIDITY` under `Featured Plugins` on the main page. Navigate to `File Explorers` to manage your files.
 
-## 3. Write a smart contract in Remix
-launch the application. Under "Featured Plugins" on the main page, select "SOLIDITY" to configure Remix for Solidity development, then navigate to "File Explorers" to view your files.
+Remix Configuration:
 
 ![img.png](img.png)
 
-You'll need to create a new file to save your Solidity smart contract. Click the '+' button below "File Explorers" and, in the pop-up, enter the file name as "MyToken.sol."
+Create a new Solidity file by clicking the `+` button below `File Explorers`. Name the file `MyToken.sol`.
 
 ![img_2.png](img_2.png)
 
@@ -61,11 +60,11 @@ contract MyCollectible is ERC721 {
 }
 ```
 
-## 4.Remix connect Artela Testnet and Deploy
+## 4.Remix: Connect to Artela Testnet and Deploy
 
-With the `artela testnet` network selected at Metamask...
+Ensure the `artela testnet` network is selected on Metamask.
 
-At Remix, on the left side, locate the button Deploy and run transactions. After that, the metamask confirmation window will pop up。
+In Remix, click the `Deploy` button on the left side. Metamask confirmation window will appear.
 
 ![img_5.png](img_5.png)
 
@@ -73,4 +72,8 @@ At Remix, on the left side, locate the button Deploy and run transactions. After
 
 We can confirm whether the deployment is successful on our [blockchain explorer](https://testnet-scan.artela.network/) through the deployed txHash.
 
+Confirm the successful deployment on Artela Testnet [blockchain explorer](https://testnet-scan.artela.network/) using the deployed txHash.
+
 ![img_3.png](img_3.png)
+
+Congratulations! You've successfully created and deployed a smart contract on Artela Testnet. Happy coding!
