@@ -8,7 +8,9 @@ The [web3.js](https://web3js.readthedocs.io/en/v1.10.0/getting-started.html#addi
 
 You could use web3.js to interact with Artela Network as well.
 
-## 1. Contract
+Below is an example that use ethereum web3.js to deploy erc20 contract to Artela Testnet.
+
+### 1. Contract
 
 **`ArtToken.sol`**
 
@@ -76,7 +78,7 @@ contract Borker is Ownable {
 }
 ```
 
-## 2. Deploy Contract Script
+### 2. Deploy Contract Script
 
 Using your private key, sign the deploy transactions for `ArtToken.sol` and `Broker.sol` contracts.
 
@@ -160,7 +162,7 @@ async function f() {
 f().then();
 ```
 
-## 3. Call Contract Script
+### 3. Call Contract Script
 
 `tokenAddress`: contract address that defines the token.
 

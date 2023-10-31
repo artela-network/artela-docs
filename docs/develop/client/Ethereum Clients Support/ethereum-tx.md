@@ -8,13 +8,16 @@ The [web3.js](https://web3js.readthedocs.io/en/v1.10.0/getting-started.html#addi
 
 You could use web3.js to interact with Artela Network as well.
 
-## 1. Create and top up your account
+Below is an example that use ethereum web3.js to send transaction to Artela Testnet.
+
+
+### 1. Create and top up your account
 
 Skip this if you have already got an account of Artela Testnet.
 
 To create and top up your account, refers to [Create Account of Artela Testnet](/)
 
-## 2. Deploy contract with your account
+### 2. Deploy contract with your account
 
 Write and compile your contract first, then run the script to deploy your contract to Artela Testnet.
 
@@ -65,7 +68,7 @@ f().then();
 
 ![output](img/1.png)
 
-## 3. Call contract
+### 3. Call contract
 
 Call contract with your account.
 
