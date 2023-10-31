@@ -38,15 +38,22 @@ Join Artela [Discord server](https://discord.com/invite/artela) to access the Te
 
 Launch Remix. Configure Remix for Solidity development by selecting `SOLIDITY` under `Featured Plugins` on the main page. Navigate to `File Explorers` to manage your files.
 
+1. open "contracts" folder.
+2. create new contract file.
+3. enter the file name as "mytoken.sol".
+4. copy the contract code.
+5. click "solidity compiler", Make sure the compilation is successful.
+
 Remix Configuration:
 
-![img.png](img.png)
 
-Create a new Solidity file by clicking the `+` button below `File Explorers`. Name the file `MyToken.sol`, and compile it.
+![img_6.png](img_6.png)
 
-![img_2.png](img_2.png)
+**solidity compiler :**
+![img_7.png](img_7.png)
 
-MyToken.sol:
+
+**mytoken.sol :**
 
 ```solidity
 // SPDX-License-Identifier: GPL-3.0
@@ -64,13 +71,20 @@ contract MyCollectible is ERC721 {
 
 Ensure the `artela testnet` network is selected on Metamask. Select `Injected Provider - MetaMask` as environment.
 
-In Remix, click the `Deploy` button on the left side. Metamask confirmation window will appear.
+At Remix, on the left side
 
-![img_5.png](img_5.png)
+1. Click the button `Deploy and run transactions`
+2. Set up the ENVIRONMENT is `Injected Provider - MetaMask` 
+3. Click `Deploy`,After that the metamask confirmation window will pop up
+4. Click `Confirm` to start deploying the contract.
+
+![img_9.png](img_9.png)
 
 ## 5.Block Explorer
 
 Confirm the successful deployment on Artela Testnet [blockchain explorer](https://testnet-scan.artela.network/) using `transaction hash` in output.
+
+![img_10.png](img_10.png)
 
 ![img_3.png](img_3.png)
 
