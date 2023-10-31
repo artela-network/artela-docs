@@ -888,8 +888,8 @@
                 "permalink": "/develop/client/cosmos-grpc/"
               },
               "next": {
-                "title": "Tendermint RPC",
-                "permalink": "/develop/client/tendermint-rpc/"
+                "title": "Sending Ethereum Transactions to Artela Testnet",
+                "permalink": "/develop/client/examples/ethereum-tx"
               }
             },
             {
@@ -915,8 +915,8 @@
                 "permalink": "/develop/client/examples/ethereum-tx"
               },
               "next": {
-                "title": "Node",
-                "permalink": "/develop/node/"
+                "title": "Tendermint RPC",
+                "permalink": "/develop/client/tendermint-rpc/"
               }
             },
             {
@@ -938,8 +938,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Tendermint RPC",
-                "permalink": "/develop/client/tendermint-rpc/"
+                "title": "Ethereum JSON RPC APIs",
+                "permalink": "/develop/client/ethereum-json-rpc/"
               },
               "next": {
                 "title": "Deploy & Call ERC20 Contract",
@@ -992,12 +992,12 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Ethereum JSON RPC APIs",
-                "permalink": "/develop/client/ethereum-json-rpc/"
+                "title": "Deploy & Call ERC20 Contract",
+                "permalink": "/develop/client/examples/deploy-call-contract"
               },
               "next": {
-                "title": "Sending Ethereum Transactions to Artela Testnet",
-                "permalink": "/develop/client/examples/ethereum-tx"
+                "title": "Node",
+                "permalink": "/develop/node/"
               }
             },
             {
@@ -1414,8 +1414,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Deploy & Call ERC20 Contract",
-                "permalink": "/develop/client/examples/deploy-call-contract"
+                "title": "Tendermint RPC",
+                "permalink": "/develop/client/tendermint-rpc/"
               },
               "next": {
                 "title": "Setup a Full Node",
@@ -2035,13 +2035,8 @@
                     "id": "client/ethereum-json-rpc/index"
                   },
                   {
-                    "type": "doc",
-                    "label": "Tendermint RPC",
-                    "id": "client/tendermint-rpc/index"
-                  },
-                  {
                     "type": "category",
-                    "label": "examples",
+                    "label": "Examples",
                     "collapsible": true,
                     "collapsed": true,
                     "items": [
@@ -2054,6 +2049,11 @@
                         "id": "client/examples/deploy-call-contract"
                       }
                     ]
+                  },
+                  {
+                    "type": "doc",
+                    "label": "Tendermint RPC",
+                    "id": "client/tendermint-rpc/index"
                   }
                 ],
                 "link": {

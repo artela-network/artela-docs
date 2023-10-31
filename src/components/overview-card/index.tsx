@@ -41,7 +41,7 @@ const DiveDeeperCards = [
     {
         name: 'Setup your own nodes',
         url: {
-            page: '',
+            page: 'develop/node/full-node-setup',
         },
         description: (
             <Translate id="dev.overview.setup-your-own">
@@ -52,7 +52,7 @@ const DiveDeeperCards = [
     {
         name: 'Join our testnet',
         url: {
-            page: '',
+            page: 'develop/node/testnet-setup',
         },
         description: (
             <Translate id="dev.overview.join-test-net">
@@ -63,7 +63,7 @@ const DiveDeeperCards = [
     {
         name: 'Client APIs',
         url: {
-            page: '',
+            page: 'develop/client',
         },
         description: (
             <Translate id="dev.overview.client-api">
@@ -88,7 +88,7 @@ const LearnConceptsCards = [
     {
         name: 'Core Concepts',
         url: {
-            page: '',
+            page: 'develop/core-concepts',
         },
         description: (
             <Translate id="dev.overview.core-concepts">
@@ -99,7 +99,7 @@ const LearnConceptsCards = [
     {
         name: 'Advanced Concepts',
         url: {
-            page: '',
+            page: 'develop/advanced-concepts',
         },
         description: (
             <Translate id="dev.overview.adv-concepts">
