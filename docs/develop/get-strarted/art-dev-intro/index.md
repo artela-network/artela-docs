@@ -22,7 +22,7 @@ Artela is fully EVM compatible. This means that you can use Artela to deploy and
 
 In summary, EVM Compatible represents compatibility with Ethereum, providing greater interoperability and flexibility to promote the development of decentralized applications and cross-chain operations. This compatibility is crucial for the growth and interconnectivity of the entire blockchain ecosystem.
 
-For more details, refer to [EVM Compatibility](develop/core-concepts/evm-compatibility)
+For more details, refer to [EVM Compatibility](/develop/core-concepts/evm-compatibility)
 
 ## Smart Contract with Aspect
 
@@ -34,7 +34,7 @@ Aspect integrates customized functionality into the blockchain base layer, worki
 
 For more details, see:
 
-* [Aspect](develop/core-concepts/aspect)
-* [Aspect programming](develop/core-concepts/aspect-programming)
-* [Aspect Runtime](develop/core-concepts/aspect-runtime)
+* [Aspect](/develop/core-concepts/aspect)
+* [Aspect programming](/develop/core-concepts/aspect-programming)
+* [Aspect Runtime](/develop/core-concepts/aspect-runtime)
 
