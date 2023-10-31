@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
 ---
 
 # EVM Compatibility
@@ -49,4 +49,4 @@ Artela EVM has full support for the pre-compile contracts in Shanghai Fork. For 
 
 ## RPC APIs
 
-Artela has most of the Ethereum RPC methods implemented (some are still working in progress), so you can use Ethereum infrastructures (e.g. Metamask, The Graph) connect to Artela without any issue. For RPC methods compatibility, you can check out the details [here](client/ethereum-json-rpc).
+Artela has most of the Ethereum RPC methods implemented (some are still working in progress), so you can use Ethereum infrastructures (e.g. Metamask, The Graph) connect to Artela without any issue. For RPC methods compatibility, you can check out the details [here](../../../develop/client/evm-compatible-apis).

@@ -44,7 +44,7 @@ export default [
   },
   {
     path: '/develop',
-    component: ComponentCreator('/develop', 'f76'),
+    component: ComponentCreator('/develop', 'e01'),
     routes: [
       {
         path: '/develop',
@@ -193,24 +193,6 @@ export default [
       {
         path: '/develop/core-concepts/lifecycle',
         component: ComponentCreator('/develop/core-concepts/lifecycle', '82c'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/develop/core-concepts/runtime-api',
-        component: ComponentCreator('/develop/core-concepts/runtime-api', '141'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/develop/core-concepts/system-call',
-        component: ComponentCreator('/develop/core-concepts/system-call', 'bd7'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/develop/core-concepts/wasm-assemblyscript',
-        component: ComponentCreator('/develop/core-concepts/wasm-assemblyscript', '5a4'),
         exact: true,
         sidebar: "tutorialSidebar"
       },

@@ -229,21 +229,6 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "core-concepts/runtime-api/index",
-              "path": "/develop/core-concepts/runtime-api/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "core-concepts/system-call/index",
-              "path": "/develop/core-concepts/system-call/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "core-concepts/wasm-assemblyscript/index",
-              "path": "/develop/core-concepts/wasm-assemblyscript/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
               "id": "guides/index",
               "path": "/develop/guides/",
               "sidebar": "tutorialSidebar"

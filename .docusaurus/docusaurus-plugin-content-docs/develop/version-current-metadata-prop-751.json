@@ -50,21 +50,9 @@
         "items": [
           {
             "type": "link",
-            "label": "ASOLC",
-            "href": "/develop/core-concepts/asolc/",
-            "docId": "core-concepts/asolc/index"
-          },
-          {
-            "type": "link",
             "label": "Foundational Topics",
             "href": "/develop/core-concepts/foundational/",
             "docId": "core-concepts/foundational/index"
-          },
-          {
-            "type": "link",
-            "label": "Architecture",
-            "href": "/develop/core-concepts/arch/",
-            "docId": "core-concepts/arch/index"
           },
           {
             "type": "link",
@@ -74,21 +62,9 @@
           },
           {
             "type": "link",
-            "label": "Aspect Lifecycle",
-            "href": "/develop/core-concepts/lifecycle/",
-            "docId": "core-concepts/lifecycle/index"
-          },
-          {
-            "type": "link",
             "label": "Aspect Programming",
             "href": "/develop/core-concepts/aspect-programming/",
             "docId": "core-concepts/aspect-programming/index"
-          },
-          {
-            "type": "link",
-            "label": "Join Point",
-            "href": "/develop/core-concepts/join-point/",
-            "docId": "core-concepts/join-point/index"
           },
           {
             "type": "link",
@@ -98,15 +74,21 @@
           },
           {
             "type": "link",
-            "label": "Communication between Aspects & Smart Contracts",
-            "href": "/develop/core-concepts/communication/",
-            "docId": "core-concepts/communication/index"
-          },
-          {
-            "type": "link",
             "label": "Aspect Runtime",
             "href": "/develop/core-concepts/aspect-runtime/",
             "docId": "core-concepts/aspect-runtime/index"
+          },
+          {
+            "type": "link",
+            "label": "Aspect Lifecycle",
+            "href": "/develop/core-concepts/lifecycle/",
+            "docId": "core-concepts/lifecycle/index"
+          },
+          {
+            "type": "link",
+            "label": "Join Point",
+            "href": "/develop/core-concepts/join-point/",
+            "docId": "core-concepts/join-point/index"
           },
           {
             "type": "link",
@@ -116,27 +98,27 @@
           },
           {
             "type": "link",
-            "label": "Aspect Runtime APIs",
-            "href": "/develop/core-concepts/runtime-api/",
-            "docId": "core-concepts/runtime-api/index"
+            "label": "Communication between Aspects & Smart Contracts",
+            "href": "/develop/core-concepts/communication/",
+            "docId": "core-concepts/communication/index"
           },
           {
             "type": "link",
-            "label": "System Call",
-            "href": "/develop/core-concepts/system-call/",
-            "docId": "core-concepts/system-call/index"
-          },
-          {
-            "type": "link",
-            "label": "WASM & Assembly Script",
-            "href": "/develop/core-concepts/wasm-assemblyscript/",
-            "docId": "core-concepts/wasm-assemblyscript/index"
+            "label": "ASOLC",
+            "href": "/develop/core-concepts/asolc/",
+            "docId": "core-concepts/asolc/index"
           },
           {
             "type": "link",
             "label": "JIT(Just In Time) Call",
             "href": "/develop/core-concepts/jit-call/",
             "docId": "core-concepts/jit-call/index"
+          },
+          {
+            "type": "link",
+            "label": "Architecture",
+            "href": "/develop/core-concepts/arch/",
+            "docId": "core-concepts/arch/index"
           }
         ]
       },
@@ -503,24 +485,6 @@
       "id": "core-concepts/lifecycle/index",
       "title": "Aspect Lifecycle",
       "description": "The lifecycle of an Aspect encompasses several stages, including deployment, upgrade, configuration, binding, unbinding, execution, and destruction.",
-      "sidebar": "tutorialSidebar"
-    },
-    "core-concepts/runtime-api/index": {
-      "id": "core-concepts/runtime-api/index",
-      "title": "Aspect Runtime APIs",
-      "description": "",
-      "sidebar": "tutorialSidebar"
-    },
-    "core-concepts/system-call/index": {
-      "id": "core-concepts/system-call/index",
-      "title": "System Call",
-      "description": "In the world of Aspect, a \"system call\" is a mechanism that triggers the execution of a specific system module, which we'll refer to as \"Module\". Each Module can have its own internal states, known as \"Module States\". The way a Module changes over time can be understood as follows: The Module States at a future moment are determined by a system call applied to the Module States at a current moment along with the input to that system call.",
-      "sidebar": "tutorialSidebar"
-    },
-    "core-concepts/wasm-assemblyscript/index": {
-      "id": "core-concepts/wasm-assemblyscript/index",
-      "title": "WASM & Assembly Script",
-      "description": "WIP",
       "sidebar": "tutorialSidebar"
     },
     "guides/index": {
