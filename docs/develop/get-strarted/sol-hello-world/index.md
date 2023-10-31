@@ -2,17 +2,18 @@
 sidebar_position: 2
 ---
 
-# Create smart contact with Aspect
+# Develop an Aspect
 
-This section guides you in creating dApps on Artela with aspect-oriented functionality. It intercepts and identifies specific transactions while enabling additional business logic injection. For instance, if a transaction tries to modify a state variable (e.g., 'Count') with certain conditions, like being an even number, the current transaction is rolled back.
+This section guides you in building dApp on Artela with a sample Aspect. 
+This Aspect can identifie and intercept specific transactions. If a transaction tries to modify a state variable (e.g., 'Count') under certain conditions, such as being an even number, the current transaction is rolled back.
 
-The additional knowledge required for this guide includes:
+**Prerequisite knowledge:**
 * [Node.js](https://nodejs.org/)
 * [asloc](https://docs.artela.network/develop/asolc-guide)
 
 
 # 1.Setting up a new project
-Make sure that a recent version of [Node.js](https://nodejs.org/) and its package manager npm (that comes with Node.js) are installed,
+Make sure you have a recent version of [Node.js](https://nodejs.org/) and npm installed,
 Start by installing the `aspect-tool`:
 
 ```bash
@@ -54,13 +55,13 @@ This will create a project directory with the following structure:
 ```
 
 
-## 2. Add and compile your smart contract(s)
+## 2. Add and compile your smart contract
 
 ### 1. Add a Smart Contract
 
 Within the `contracts` directory of your project, create your smart contract source files with a `.sol` extension.
 
-For demonstration, we'll create a `Counter.sol` file and implement a simple `Counter` smart contract:
+For example, create a `Counter.sol` file:
 
 ```solidity
 // SPDX-License-Identifier: GPL-3.0
@@ -84,7 +85,7 @@ contract Counter {
 }
 ```
 
-This smart contract introduces a `add` function that increments an on-chain `counter` variable. We'll later integrate this smart contract with our Aspect.
+This smart contract introduces a `add` function that increments an on-chain `counter` variable. We'll later bind this smart contract with an Aspect.
 
 ### 2. Compile the Smart Contract
 
@@ -98,13 +99,16 @@ Successful compilation will generate `Counter.abi` and `Counter.bin` files in th
 
 ### 3. Deploy the Smart Contract
 
-#### 3.1 Update the `project.config.json` in the root directory with the appropriate network configuration:
+#### 3.1 Update project.config.json
+Update the `project.config.json` in the root directory with the appropriate network configuration:
 ```json
 {
   "node": "https://testnet-rpc1.artela.network"
 }
 ```
-For more development environment setup, please refer to [artela devnet](/develop/get-started/access-testnet)
+:::note
+For more details regarding development environment setup, please refer to [artela devnet](/develop/get-started/access-testnet)
+:::
 
 #### 3.2 Create a blockchain account (optional). 
 
@@ -116,10 +120,10 @@ npm run account:create -- --pkfile {privateKey-path}
 
 > * --pkfile : privateKey path for sender. (optional, default value: `./privateKey.txt`).
 
-Also, if you don't have a test token in your account, please join [our discard](https://discord.com/invite/artela)，and request access to the testnet faucet.
+If your account lacks test tokens, join [Discard](https://discord.com/invite/artela)，and request some in `testnet-faucet` channel.
 
 
-#### 3.3  Set up the contract compilation environment `asolc`.(optional).
+#### 3.3  Set up the contract compilation environment `asolc` (optional).
 
 Execute the following command in shell. For more details, refer to [What is ASOLC](/develop/advanced-concepts/asolc)
 ```shell
@@ -128,7 +132,7 @@ $ export PATH= {your asolc path}:$PATH
 
 #### 3.4  Deploy your contract 
 
-Execute the following command below the `my-first-aspect` folder, with the provided script:
+Execute the following command within the `my-first-aspect` folder, using the provided script:
 
 ```bash
 npm run contract:deploy -- --pkfile {privateKey-path} \                        
@@ -141,8 +145,8 @@ npm run contract:deploy -- --pkfile {privateKey-path} \
 > * --pkfile : privateKey path for sender. (optional,default value `./privateKey.txt`).
 > * --abi : contract abi path.
 > * --bytecode:  contract bytecode path.
-> * --args : If your contract's constructor requires input parameters, like `--args '[1, "a"]'` (optional).
-> * --gas : like `200000`,(optional,default value `7000000`).
+> * --args : If your contract's constructor requires input parameters, use `--args '[1, "a"]'` (optional).
+> * --gas : e.g., `200000` (optional,default value `7000000`).
 
 Upon successful deployment, the terminal will display the contract address.
 
@@ -151,7 +155,7 @@ Upon successful deployment, the terminal will display the contract address.
 
 ### 1. Implement an Aspect
 
-You'll find the Aspect source files in `assembly/aspect/aspect.ts`.
+The Aspect source files can be found in `assembly/aspect/aspect.ts`.
 
 For example, to add logic after a smart contract call execution, open `aspect.ts`, locate the `postContractCall` function, and insert your logic:
 
@@ -167,7 +171,7 @@ For example, to add logic after a smart contract call execution, open `aspect.ts
 
 ### 2. Access State Changes of Smart Contract in Aspect
 
-To integrate the state trace of `Counter` contract with our Aspect, ensuring only even numbers are processed, follow these steps:
+To integrate the state trace of `Counter` contract with your Aspect, follow these steps:
 
 1. Generate the required state tracing code:
 
@@ -274,10 +278,8 @@ npm run contract:call -- --pkfile {privateKey-path}    \
 > * --contract:  smart contract address.
 > * --abi : contract abi path.
 > * --method:  method name .
-> * --args : if your contract's constructor requires input parameters, like `--args '[1, "a"]'` (optional).
-> * --gas : like `200000`,(optional,default value `7000000`).
+> * --args : if your contract's constructor requires input parameters, use `--args '[1, "a"]'` (optional).
+> * --gas : e.g., `200000` (optional,default value `7000000`).
 
-
-## Summary
 
 Congratulations! You've learned the basics of Aspect development. For a deeper dive, refer to our comprehensive [Aspect Doc](https://docs.artela.network/develop/aspect-tools/aspect-docs).
