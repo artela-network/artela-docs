@@ -27,9 +27,10 @@ The initial version of Artela Aspect is built with [Assembly Script](https://www
 
 For more details, refer to:
 
-* [Aspect](/develop/core-concepts/aspect)
 * [Aspect programming](/develop/core-concepts/aspect-programming)
+* [Aspect](/develop/core-concepts/aspect)
 * [Aspect Runtime](/develop/core-concepts/aspect-runtime) 
+* [Aspect Lifecycle](/develop/core-concepts/lifecycle) 
 
 
 
@@ -62,7 +63,7 @@ Aspect integrates customized functionality into the blockchain base layer, worki
 
 For more details, see:
 
-* [Aspect](/develop/core-concepts/aspect)
 * [Aspect programming](/develop/core-concepts/aspect-programming)
+* [Aspect](/develop/core-concepts/aspect)
 * [Aspect Runtime](/develop/core-concepts/aspect-runtime) -->
 

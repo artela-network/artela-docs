@@ -4,7 +4,7 @@
 
 In this tutorial, we'll walk you through the process of creating and deploying a smart contract on Artela Testnet using Remix and MetaMask.
 
-## Requirements
+## Pre-requisites
 * [Metamask](https://metamask.io/)
 * [Remix](https://remix.ethereum.org/)
 
