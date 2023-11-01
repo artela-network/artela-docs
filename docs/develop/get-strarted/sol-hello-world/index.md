@@ -9,7 +9,7 @@ This Aspect can identify and intercept specific transactions. For example, If a 
 
 **Prerequisite knowledge:**
 * [Node.js](https://nodejs.org/)
-* [sloc](https://docs.soliditylang.org/en/v0.8.20/installing-solidity.html)
+* [solc](https://docs.soliditylang.org/en/v0.8.20/installing-solidity.html)
 
 
 # 1.Setting up a new project
@@ -91,7 +91,7 @@ contract HelloWorld {
 
 ### 2.2. Compile the Smart Contract
 
-This step relies on `solc`, first check if [sloc](https://docs.soliditylang.org/en/v0.8.20/installing-solidity.html) is installed correctly
+This step relies on `solc`, first check if [solc](https://docs.soliditylang.org/en/v0.8.20/installing-solidity.html) is installed correctly
 
 ```bash
  solc --version
@@ -274,7 +274,7 @@ npm run contract:bind -- --pkfile {privateKey-path} \
 > * --aspectId:  aspect id.
 > * --gas : like `200000`,(optional,default value `7000000`).
 
-### 6. Test the Smart Contract and Aspect Integration
+### 3.6. Test the Smart Contract and Aspect Integration
 
 Now that the `HelloWord` contract and Aspect are bound, call `world` to test, due to Aspect interception, the transaction is reverted.
 
@@ -287,7 +287,5 @@ npm run contract:call -- --pkfile {privateKey-path}    \
 ```
 
 ![img.png](img.png)
-
-
 
 Congratulations! You've learned the basics of Aspect development. For a deeper dive, refer to our comprehensive [Aspect Doc](https://docs.artela.network/develop/aspect-tools/aspect-docs).
