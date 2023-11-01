@@ -7,7 +7,7 @@ sidebar_position: 2
 This section guides you in building a dApp on Artela with a sample Aspect. 
 This Aspect can identify and intercept specific transactions. For example, If a `world` method transaction is used to call the HelloWorld contract, it will be reverted.
 
-**Prerequisite knowledge:**
+**Pre-requisites:**
 * [Node.js](https://nodejs.org/)
 * [solc](https://docs.soliditylang.org/en/v0.8.20/installing-solidity.html)
 
@@ -20,9 +20,7 @@ Start by installing the `aspect-tool`:
 npm install -g @artela/aspect-tool
 ```
 
-### Project Initialization
-
-To kick off your project with `aspect-tool`, follow these steps:
+**Project Initialization**, to kick off your project with `aspect-tool`, follow these steps:
 
 ```bash
 # Create a new directory and navigate into it
@@ -103,7 +101,7 @@ Compile your contract using:
 npm run contract:build
 ```
 
-Successful compilation will generate `HelloWorld.abi` and `HelloWorld.bin` files in the `build/contract` directory.
+> ✅ Successful compilation will generate `HelloWorld.abi` and `HelloWorld.bin` files in the `build/contract` directory.
 
 ### 2.3. Deploy the Smart Contract
 
@@ -114,7 +112,7 @@ Update the `project.config.json` in the root directory with the appropriate netw
   "node": "https://testnet-rpc1.artela.network"
 }
 ```
-:::note
+:::note 💡
 For more details regarding development environment setup, please refer to [artela devnet](/develop/node/access-testnet)
 :::
 
@@ -203,8 +201,8 @@ For example, to add logic after a smart contract call execution, open `aspect.ts
  }
 ```
 
-:::note
-💡 **Note**: For detailed instructions, refer to the [Aspect Doc](/develop/core-concepts/aspect-programming).
+:::note 💡
+ For detailed instructions, refer to the [Aspect Doc](/develop/core-concepts/aspect-programming).
 :::
 
 ### 3.2. Access State Changes of Smart Contract in Aspect
