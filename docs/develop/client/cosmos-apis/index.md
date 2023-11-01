@@ -4,6 +4,65 @@ sidebar_position: 2
 
 # Cosmos APIs
 
+Artela Network built on CosmosSDK and CometBft.
+
+Cosmos gRPC and CometBFT RPC also supported in our network.
+
+## Cosmos gRPC
+
+Artela provides gRPC endpoints for all integrated modules within the Cosmos SDK. This streamlines the interaction process for wallets and blockchain explorers, enabling them to easily engage with Proof-of-Stake mechanisms and native Cosmos transactions and queries.
+
+[Cosmos Tool](https://v1.cosmos.network/rpc/v0.45.1) is also applicable to Artela.
+
+### EVM Module
+
+#### Queries
+
+| Verb   | Method                                               | Description                                                               |
+| ------ | ---------------------------------------------------- | ------------------------------------------------------------------------- |
+| `gRPC` | `artela.evm.v1.Query/Account`                     | Get an Ethereum account                                                   |
+| `gRPC` | `artela.evm.v1.Query/CosmosAccount`               | Get an Ethereum account's Cosmos Address                                  |
+| `gRPC` | `artela.evm.v1.Query/ValidatorAccount`            | Get an Ethereum account's from a validator consensus Address              |
+| `gRPC` | `artela.evm.v1.Query/Balance`                     | Get the balance of a the EVM denomination for a single EthAccount.        |
+| `gRPC` | `artela.evm.v1.Query/Storage`                     | Get the balance of all coins for a single account                         |
+| `gRPC` | `artela.evm.v1.Query/Code`                        | Get the balance of all coins for a single account                         |
+| `gRPC` | `artela.evm.v1.Query/Params`                      | Get the parameters of x/evm module                                        |
+| `gRPC` | `artela.evm.v1.Query/EthCall`                     | Implements the eth_call rpc api                                           |
+| `gRPC` | `artela.evm.v1.Query/EstimateGas`                 | Implements the eth_estimateGas rpc api                                    |
+| `gRPC` | `artela.evm.v1.Query/TraceTx`                     | Implements the debug_traceTransaction rpc api                             |
+| `gRPC` | `artela.evm.v1.Query/TraceBlock`                  | Implements the debug_traceBlockByNumber and debug_traceBlockByHash rpc api |
+| `GET`  | `/artela/evm/v1/account/{address}`                | Get an Ethereum account                                                   |
+| `GET`  | `/artela/evm/v1/cosmos_account/{address}`         | Get an Ethereum account's Cosmos Address                                  |
+| `GET`  | `/artela/evm/v1/validator_account/{cons_address}` | Get an Ethereum account's from a validator consensus Address              |
+| `GET`  | `/artela/evm/v1/balances/{address}`               | Get the balance of a the EVM denomination for a single EthAccount.        |
+| `GET`  | `/artela/evm/v1/storage/{address}/{key}`          | Get the balance of all coins for a single account                         |
+| `GET`  | `/artela/evm/v1/codes/{address}`                  | Get the balance of all coins for a single account                         |
+| `GET`  | `/artela/evm/v1/params`                           | Get the parameters of x/evm module                                        |
+| `GET`  | `/artela/evm/v1/eth_call`                         | Implements the eth_call rpc api                                           |
+| `GET`  | `/artela/evm/v1/estimate_gas`                     | Implements the eth_estimateGas rpc api                                    |
+| `GET`  | `/artela/evm/v1/trace_tx`                         | Implements the debug_traceTransaction rpc api                             |
+| `GET`  | `/artela/evm/v1/trace_block`                      | Implements the debug_traceBlockByNumber and debug_traceBlockByHash rpc api |
+
+#### Transactions
+
+| Verb   | Method                            | Description                     |
+| ------ | --------------------------------- | ------------------------------- |
+| `gRPC` | `artela.evm.v1.Msg/EthereumTx` | Submit an Ethereum transactions |
+| `POST` | `/artela/evm/v1/ethereum_tx`   | Submit an Ethereum transactions |
+
+### FEE Module
+
+#### Queries
+
+| Verb   | Method                         | Description            |
+|--------|--------------------------------|------------------------|
+| `gRPC` | `artela.fee.v1.Query/Params`   | Get the module params  |
+| `gRPC` | `artela.fee.v1.Query/BaseFee`  | Get the block base fee |
+| `gRPC` | `artela.fee.v1.Query/BlockGas` | Get the block gas used |
+| `GET`  | `/artela/fee/v1/params`        | Get the module params  |
+| `GET`  | `/artela/fee/v1/base_fee`      | Get the block base fee |
+| `GET`  | `/artela/fee/v1/block_gas`     | Get the block gas used |
+
 ## CometBFT RPC
 
 
@@ -70,58 +129,3 @@ echo '{ "jsonrpc": "2.0","method": "subscribe","id": 0,"params": {"query": "tm.e
 ```
 
 **List of Available APIs:** [Cometbft APIs](https://docs.cometbft.com/v0.38/rpc/#/Info)
-
-## Cosmos gRPC
-
-Artela provides gRPC endpoints for all integrated modules within the Cosmos SDK. This streamlines the interaction process for wallets and blockchain explorers, enabling them to easily engage with Proof-of-Stake mechanisms and native Cosmos transactions and queries.
-
-### EVM Module
-
-#### Queries
-
-| Verb   | Method                                               | Description                                                               |
-| ------ | ---------------------------------------------------- | ------------------------------------------------------------------------- |
-| `gRPC` | `artela.evm.v1.Query/Account`                     | Get an Ethereum account                                                   |
-| `gRPC` | `artela.evm.v1.Query/CosmosAccount`               | Get an Ethereum account's Cosmos Address                                  |
-| `gRPC` | `artela.evm.v1.Query/ValidatorAccount`            | Get an Ethereum account's from a validator consensus Address              |
-| `gRPC` | `artela.evm.v1.Query/Balance`                     | Get the balance of a the EVM denomination for a single EthAccount.        |
-| `gRPC` | `artela.evm.v1.Query/Storage`                     | Get the balance of all coins for a single account                         |
-| `gRPC` | `artela.evm.v1.Query/Code`                        | Get the balance of all coins for a single account                         |
-| `gRPC` | `artela.evm.v1.Query/Params`                      | Get the parameters of x/evm module                                        |
-| `gRPC` | `artela.evm.v1.Query/EthCall`                     | Implements the eth_call rpc api                                           |
-| `gRPC` | `artela.evm.v1.Query/EstimateGas`                 | Implements the eth_estimateGas rpc api                                    |
-| `gRPC` | `artela.evm.v1.Query/TraceTx`                     | Implements the debug_traceTransaction rpc api                             |
-| `gRPC` | `artela.evm.v1.Query/TraceBlock`                  | Implements the debug_traceBlockByNumber and debug_traceBlockByHash rpc api |
-| `GET`  | `/artela/evm/v1/account/{address}`                | Get an Ethereum account                                                   |
-| `GET`  | `/artela/evm/v1/cosmos_account/{address}`         | Get an Ethereum account's Cosmos Address                                  |
-| `GET`  | `/artela/evm/v1/validator_account/{cons_address}` | Get an Ethereum account's from a validator consensus Address              |
-| `GET`  | `/artela/evm/v1/balances/{address}`               | Get the balance of a the EVM denomination for a single EthAccount.        |
-| `GET`  | `/artela/evm/v1/storage/{address}/{key}`          | Get the balance of all coins for a single account                         |
-| `GET`  | `/artela/evm/v1/codes/{address}`                  | Get the balance of all coins for a single account                         |
-| `GET`  | `/artela/evm/v1/params`                           | Get the parameters of x/evm module                                        |
-| `GET`  | `/artela/evm/v1/eth_call`                         | Implements the eth_call rpc api                                           |
-| `GET`  | `/artela/evm/v1/estimate_gas`                     | Implements the eth_estimateGas rpc api                                    |
-| `GET`  | `/artela/evm/v1/trace_tx`                         | Implements the debug_traceTransaction rpc api                             |
-| `GET`  | `/artela/evm/v1/trace_block`                      | Implements the debug_traceBlockByNumber and debug_traceBlockByHash rpc api |
-
-#### Transactions
-
-| Verb   | Method                            | Description                     |
-| ------ | --------------------------------- | ------------------------------- |
-| `gRPC` | `artela.evm.v1.Msg/EthereumTx` | Submit an Ethereum transactions |
-| `POST` | `/artela/evm/v1/ethereum_tx`   | Submit an Ethereum transactions |
-
-### FEE Module
-
-#### Queries
-
-| Verb   | Method                         | Description            |
-|--------|--------------------------------|------------------------|
-| `gRPC` | `artela.fee.v1.Query/Params`   | Get the module params  |
-| `gRPC` | `artela.fee.v1.Query/BaseFee`  | Get the block base fee |
-| `gRPC` | `artela.fee.v1.Query/BlockGas` | Get the block gas used |
-| `GET`  | `/artela/fee/v1/params`        | Get the module params  |
-| `GET`  | `/artela/fee/v1/base_fee`      | Get the block base fee |
-| `GET`  | `/artela/fee/v1/block_gas`     | Get the block gas used |
-
-[Cosmos Tool](https://v1.cosmos.network/rpc/v0.45.1) is also applicable to Artela.
