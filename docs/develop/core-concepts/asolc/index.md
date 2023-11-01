@@ -6,9 +6,11 @@ sidebar_position: 10
 
 ## What is ASOLC?
 
-Like Ethereum, Artela also supports EVM smart contracts. However, Artela introduces a modified version of the EVM that is fully compatible with traditional Solidity, while offering additional features like `state` and `callstack` tracing.
+ASOLC stands as a cornerstone in the Artela ecosystem, designed to bridge the gap between the Ethereum Virtual Machine (EVM) and Aspect's ability to interpret runtime events. We've crafted Artela EVM, an extended version of EVM, capable of capturing runtime stack traces and storage changes during transaction execution.
 
-To accomplish this, Artela employs an advanced version of **SOLC**, referred to as **ASOLC**. ASOLC enhances the compilation process of smart contracts by including instruction instrumentation, enabling the aforementioned features.
+You might question the necessity of Artela EVM, given that Ethereum's built-in tracer already tracks data like storage slot changes. While this is partially true, the challenge lies in the fact that key changes are hashed, rendering them unprocessable by the code. For instance, consider a variable `a` of type `mapping(string => string)`. When `a["key"]` is altered, the tracer only reveals a modified storage slot, say `0xabcedf12354566.....`, without any direct linkage to the state variable `a` and the specific key `key`.
+
+To resolve this, Artela EVM introduces additional opcodes, enabling the connection of hashed information to human-readable source code. In parallel, ASOLC was developed to generate corresponding state tracing Intermediate Representations (IRs) that synergize with Artela EVM. Thus, **ASOLC** can be viewed as an enhanced version of `SOLC`, maintaining full compatibility with SOLC while introducing groundbreaking features.
 
 ## How ASOLC Works
 
@@ -16,29 +18,30 @@ Below is a diagram illustrating the workings of ASOLC:
 
 ![ASOLC](asolc.svg)
 
-In essence, the process involves these steps:
+The process unfolds through these steps:
 
-1. ASOLC processes the Solidity smart contract source file, identifying all expressions that access or modify storage.
-2. It then generates additional Yul IR methods. These methods establish the connection between state variables and storage slots, utilizing extra opcodes provided by the Artela EVM.
-3. The generated IR is subsequently compiled into EVM bytecode, ready for deployment on the Artela EVM.
+1. ASOLC scrutinizes the Solidity smart contract source file, pinpointing expressions that access or alter storage.
+2. It generates supplementary Yul IR methods that forge links between state variables and storage slots, leveraging Artela EVM's extra opcodes.
+3. The resulting IR is then compiled into EVM bytecode, poised for deployment on the Artela EVM.
 
-This added layer of information allows the Artela EVM to understand the links between storage slots and state variables. Consequently, it can trace the contract's state changes, enabling Aspect to query information using state variable names instead of dealing with hashed storage slots.
+This augmented information layer empowers the Artela EVM to decipher connections between storage slots and state variables. As a result, it can trace the contract's state changes, enabling Aspect to access information using state variable names, bypassing the complexity of hashed storage slots.
 
 ## SOLC or ASOLC?
 
 ### TLDR;
-- **Use SOLC if:**
-    - Your dApp prioritizes extreme gas efficiency.
-    - Your dApp doesn't require state tracing, nor do you plan to use this feature in the future.
 
-- **Use ASOLC if:**
-    - Your dApp requires state tracing capabilities.
-    - You are prepared to trade some gas efficiency for enhanced security and functionality, particularly with state tracing in Aspect.
+- **Opt for SOLC if:**
+  - Maximum gas efficiency is your dApp's top priority.
+  - Your dApp doesn't necessitate state tracing and you have no plans to integrate this feature.
 
-It's important to note that ASOLC, due to its state tracing opcodes, produces slightly larger artifacts compared to legacy SOLC. This also results in marginally higher gas consumption.
+- **Choose ASOLC if:**
+  - State tracing capabilities are crucial for your dApp.
+  - You're willing to compromise a bit on gas efficiency for the sake of advanced security and functionalities, particularly state tracing in Aspect.
 
-Additionally, bear in mind that ASOLC artifacts are incompatible with legacy EVMs. Thus, if you plan to deploy your contract on Ethereum, it is necessary to compile it with the traditional SOLC.
+It's noteworthy that ASOLC, with its state tracing opcodes, tends to produce marginally bulkier artifacts than traditional SOLC, leading to slightly increased gas usage.
+
+Moreover, it's crucial to remember that ASOLC artifacts aren't compatible with standard EVMs. Therefore, if your deployment destination is Ethereum, compiling with the conventional SOLC is a must.
 
 ## ASOLC Releases
 
-You can find the latest releases of ASOLC [here](https://github.com/artela-network/solidity/releases/tag/v0.8.21-atl). Select the version that matches your system (e.g., for macOS, download `macos.tar.gz`).
+Check out the latest ASOLC releases [here](https://github.com/artela-network/solidity/releases/tag/v0.8.21-atl). Choose the version that aligns with your system (e.g., for macOS, opt for `macos.tar.gz`).

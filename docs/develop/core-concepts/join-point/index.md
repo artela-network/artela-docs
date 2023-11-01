@@ -26,15 +26,18 @@ Every join point has a dedicated entry point function interface that encompasses
 
 For an aspect to be active within a join point, it must contain a function aligning with the given entry function, initiating the aspect through the respective entry function.
 
+![Entry Point](entry-point.svg)
+
 ## Interoperability Interfaces
 
 Interoperability interfaces are instrumental in:
 
-- Merging runtime contexts
-- Providing execution semantics for read/write operations
-- Offering system or host API calls
+- Read & write runtime contexts
+- Access base layer modules
 
-With access to these interfaces, aspects can harness core blockchain capabilities. Some join points may provide multiple system calls. These interfaces enable aspects to tailor transaction or block processing flows. Subsequent sections will delve deeper into runtime contexts, system calls, and interoperability interface nuances.
+With access to these interfaces, aspects can harness core blockchain capabilities. Some join points may provide multiple system calls. These interfaces enable aspects to tailor transaction or block processing flows.
+
+![Interoperability Interfaces](inter-interfaces.svg)
 
 ## Layout
 
