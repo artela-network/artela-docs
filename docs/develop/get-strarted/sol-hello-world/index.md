@@ -4,8 +4,8 @@ sidebar_position: 2
 
 # Develop an Aspect
 
-This section guides you in building dApp on Artela with a sample Aspect. 
-This Aspect can identify and intercept specific transactions. For example, If a world method transaction is used to call the HelloWorld contract, it will be reverted.
+This section guides you in building a dApp on Artela with a sample Aspect. 
+This Aspect can identify and intercept specific transactions. For example, If a `world` method transaction is used to call the HelloWorld contract, it will be reverted.
 
 **Prerequisite knowledge:**
 * [Node.js](https://nodejs.org/)
@@ -154,7 +154,7 @@ Upon successful deployment, the terminal will display the contract address.
 ### 2.4 Call Contract
 Execute the following command within the `my-first-aspect` folder, call the Contract
 
-#### 2.4.1 call `hello`
+#### 2.4.1 call `hello` method
 
 ```bash
 npm run contract:call -- --pkfile {privateKey-path}    \     
@@ -169,9 +169,8 @@ npm run contract:call -- --pkfile {privateKey-path}    \
 > * --method:  method name .
 > * --gas : like `200000`,(optional,default value `7000000`).
 
-If the Aspect functions correctly, the transaction will revert for odd numbers and proceed for even ones.
 
-#### 2.4.2 call `world`
+#### 2.4.2 call `world` method
 
 ```bash
 npm run contract:call -- --pkfile {privateKey-path}    \     
@@ -187,7 +186,7 @@ npm run contract:call -- --pkfile {privateKey-path}    \
 > * --args : if your contract's constructor requires input parameters, use `--args '[1, "a"]'` (optional).
 > * --gas : e.g., `200000` (optional,default value `7000000`).
 
-If the correct string is returned, it means that we have successfully deployed the `HelloWorld` contract.
+If the `hello` string is returned, it means that we have successfully deployed the `HelloWorld` contract.
 
 
 ## 3. Add and compile your Aspect
@@ -212,7 +211,7 @@ For example, to add logic after a smart contract call execution, open `aspect.ts
 
 To integrate the state  of `HelloWord` contract with your Aspect, follow these steps:
 
-In `assembly/aspect`, add  your Aspect to check the tx , if  call `world` function then revert:
+In `assembly/aspect`, add your Aspect to check the transaction, if `world` function is called, then revert:
 
 ```typescript
     // Import the generated state tracer
