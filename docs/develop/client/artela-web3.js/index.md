@@ -1,24 +1,15 @@
 ---
-sidebar_position: 4
+sidebar_position: 3
 ---
 
 # Artela Web3.js
 
 # Introduction to @artela/web3.js
 
-`@artela/web3` is a modified version of Ethereum's web3.js 1.x, supporting Aspect operations. This package retains full compatibility with the original web3.js, with minor adjustments. If your dApp utilizes the original web3.js, transitioning to Artela is as straightforward as replacing the package and import statements.
+`@artela/web3` extend Ethereum's web3.js 1.x, supporting Aspect operations. This package retains full compatibility with the original web3.js, with minor adjustments.
 
-# Migrating from the original version of web3.js
+If your dApp utilizes the original web3.js, transitioning to Artela is as straightforward as replacing the package and import statements.
 
-Comparing with the original version of `web3.js`, Artela version made the following changes:
-
-1. The field `eth` under `web3` has been renamed to `atl`, if you were using methods in it or creating instances like `new web3.eth.Contract(...)`, you need to change it as `new web3.atl.Contract(...)`
-2. Add `@artela/` prefix if you are importing the following packages (for other `web3.js` packages, you can keep the imports as before):
-    - `web3`
-    - `web3-core`
-    - `web3-core-method`
-    - `web3-utils`
-    - `web3-eth-contract`
 
 # Installation
 
@@ -26,51 +17,6 @@ To integrate this package into your JavaScript or TypeScript project, run the fo
 
 ```bash
 npm install @artela/web3 --save
-```
-
-# Deploy Smart Contract
-
-You can deploy your smart contract with `@artela/web3` by the following steps:
-
-1. Preparing the connection to Artela Testnet node.
-
-```jsx
-const Web3 = require('web3');
-const web3 = new Web3('https://testnet-rpc1.artela.network'); // modify it according to your own requirements.
-```
-
-2. Retrieve test accounts from our node.
-
-:::note    
-💡You can also use your local account at your preference.
-:::
-
-```jsx
-// retrieve accounts
-let accounts = await web3.atl.getAccounts();
-
-// retrieve current nonce
-let nonce = await web3.atl.getTransactionCount(accounts[0]);
-```
-
-3. Initialize the contract instance and make the deployment.
-
-```jsx
-let sendOptions =  {
-    gasPrice: '1000000000', // <-- adjust accrodingly
-    gas: 4000000            // <-- adjust accrodingly
-}
-
-// instantiate an instance of contract
-let contract = new web3.atl.Contract(abi);
-// deploy contract
-contract = await contract.deploy({data: bytecode})
-    .send({ from: accounts[0], nonce, ...deployOptions})
-    .on('receipt', function (receipt) {
-        console.log("contract address: " + receipt.contractAddress);
-    }).on('transactionHash', (txHash) => {
-        console.log("tx hash: ", txHash);
-    });
 ```
 
 # Deploy Aspect
