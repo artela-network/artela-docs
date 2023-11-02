@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Setup a Local TestNet
+# Setup a Local Testnet
 
 This document aims to guide you in compiling Artela code, configuring, and generating a testnet setup consisting of a minimum of four validators. Subsequently, we will outline how to deploy these configuration and data files to four individual machines.
 

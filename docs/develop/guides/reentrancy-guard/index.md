@@ -6,34 +6,30 @@ sidebar_position: 3
 
 ## Intro
 
-This is a sample Aspect that can prevent hacks similar to
+This sample Aspect can prevent hacks similar to
 the [reentrant attack happened to Curve.fi on 2023.07](https://fortune.com/crypto/2023/07/31/curve-finance-52-million-hack-hacker-helps-return-funds/).
 
-> Aspect is a new way to build on-chain native extensions. If you are interested about what is Aspect and how Aspect
-> works, please check out our [website](https://www.artela.network/)
-> and [dev guide](https://fanatical-krypton-122.notion.site/Artela-Playground-03c4b7afe0344e7c866cc607e396c0cb) to learn
-> more details.
+### Attack Scenario:
 
-This is how the attack happens in short:
-
-1. The attacked Curve.fi pool is written in vyper (another smart contract lang can be compiled into EVM bytecode).
-2. The version of vyper they are using is 0.2.15, which is affected by a known reentrant lock issue in the compiler.
-3. The attacker bypassed the reentrancy lock by calling `add_liquidity` from `remove_liquidity` through fallback
-   function, which should be blocked by the reentrancy guard but in fact not.
+1. The attacked Curve.fi pool was written in Vyper (a smart contract language compiled into EVM bytecode).
+2. The Vyper version used (0.2.15) had a known reentrant lock issue in the compiler.
+3. The attacker bypassed the reentrancy lock by calling `add_liquidity` from `remove_liquidity` through the fallback function, exploiting the vulnerability.
 
 To delve into the attack details, you can check out the attack
 transaction [here](https://explorer.phalcon.xyz/tx/eth/0xa84aa065ce61dbb1eb50ab6ae67fc31a9da50dd2c74eefd561661bfce2f1620c).
 
->
-Learn [How does Aspect Programming prevent reentrancy attacks through on-chain runtime protection](https://github.com/artela-network/example/blob/main/curve_reentrance/README.md).
+
+Learn more from our blog: 
+
+[How does Aspect Programming prevent reentrancy attacks through on-chain runtime protection](https://github.com/artela-network/example/blob/main/curve_reentrance/README.md).
 
 ## Pre-requisites
 
-To reproduce the attack, you need to install solc and vyper (specific version with reentrant lock bug) first
+To reproduce the attack, install `solc` and a specific version of `vyper` with the reentrant lock bug:
 
-   ```bash
-   pip install vyper==0.2.16
-   ```
+```bash
+pip install vyper==0.2.16
+```
 
 ## 1. Init Aspect dApp
 
@@ -48,7 +44,7 @@ To reproduce the attack, you need to install solc and vyper (specific version wi
    
 ```
 
-## 2. Create a blockchain account (optional).
+## 2. Create blockchain accounts (optional).
 
 Execute the following command under project folder to create two accounts, if you don't already have one.
 
@@ -58,16 +54,18 @@ npm run account:create -- --pkfile ./attack_accounts.txt
 
 ```
 
-Also, if you don't have a test token in your account, please join [our discard](https://discord.com/invite/artela)
-，require testnet faucet。.
+If you don't have a test token in your account, please join [our discard](https://discord.com/invite/artela)
+，require testnet faucet.
 
-## 3. Create Smart Contract
+If you lack test tokens, request some in our [Discord]((https://discord.com/invite/artela)) testnet-faucet channel.
+
+## 3. Create Smart Contracts
 
 #### 3.1 contracts/curve.vy
 
 This is a simplified version of Curve smart contract implemented with vyper. Similar to the Curve pool, it has two
-methods: add_liquidity and remove_liquidity, which are both guarded by the same reentrant lock. AddLiquidity and
-RemoveLiquidity events will be emitted when corresponding method gets called.
+methods: `add_liquidity` and `remove_liquidity`. Both are guarded by the same reentrant lock. `AddLiquidity` and
+`RemoveLiquidity` events will be emitted when corresponding method are called.
 
 ``` python
 event AddLiquidity:
@@ -102,7 +100,7 @@ def remove_liquidity():
 #### 3.2 contracts/attack.sol
 
 This is a simplified version of attack contract implemented in solidity. It will try to start a reentrant attack through
-the remove_liquidity with its fallback function.
+the `remove_liquidity` with its fallback function.
 
 ```solidity
 // SPDX-License-Identifier: GPL-3.0
@@ -132,7 +130,7 @@ contract Attack {
 
 ```
 
-#### 3.3 Deploy CurveContract
+#### 3.3 Deploy Curve Contract
 
 ```shell
 
@@ -150,9 +148,9 @@ The result of the execution can be obtained from the contract address, for examp
 --contractAccount 0xaa19F4957C890518b577205c41C706F1c07fa0cc --contractAddress 0xFe4b65F17554B45eF7D146B86E030da7A4e250bb
 ```
 
-#### 3.4 Deploy AttackContract
+#### 3.4 Deploy Attack Contract
 
-When deploying an AttackContract, replace '{curveAddress}' with the real Curve Contract Address
+When deploying an attack contract, replace '{curveAddress}' with the real Curve contract address
 
 ```shell
 
@@ -163,7 +161,7 @@ npm run contract:build
 npm run contract:deploy -- --abi ./build/contract/Attack.abi  --bytecode ./build/contract/Attack.bin --args '["{curveAddress}"]'  --pkfile ./attack_accounts.txt
 ```
 
-The result of the execution can be obtained from the contract address, for example
+The result of the execution can be obtained from the contract address, for example:
 
 ```shell
 ...
@@ -229,7 +227,7 @@ Build your Aspect:
 npm run aspect:build
 ```
 
-The resulting release.wasm in the build folder contains the necessary WASM bytecode.
+The resulting `release.wasm` in the build folder contains the necessary WASM bytecode.
 
 #### 4.3 Deploy the Aspect
 
@@ -256,8 +254,8 @@ you will see `== aspect bind success == `
 
 ## 5. Re-entrant attack Test
 
-Execute the re-entrant attack on the simplified Curve contract with Aspect protection, and observe the receipt. If the
-protection succeeded, you will see the transaction gets reverted.
+Execute the re-entrant attack on the simplified Curve contract with Aspect protection, and watch the output. If the
+protection succeeded, you will see the transaction reverted.
 
 ```shell
  npm run contract:send -- --contract '[{attackAddress}]'    --abi ./build/contract/Attack.abi   --pkfile ./attack_accounts.txt  --method attack  --gas 200000

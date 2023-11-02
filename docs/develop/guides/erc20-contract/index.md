@@ -5,7 +5,7 @@ sidebar_position: 2
 # Create an ERC-20 Token in Artela
 
 ## Intro
-Below is an example that use `@artela/aspect-tool` to deploy erc20 contract to Artela Testnet.
+Below is an example that uses `@artela/aspect-tool` to deploy erc20 contract to Artela Testnet.
 
 **Pre-requisites:**
 * [Node.js](https://nodejs.org/)
@@ -59,13 +59,13 @@ This will create a project directory with the following structure:
 ### 2.1. Add a Smart Contract
 
 
-Our contract depends on `@openzeppelin/contracts`, install first
+Install the required dependency `@openzeppelin/contracts`:
 
 ```shell
 npm install @openzeppelin/contracts
 ```
 
-Within the `contracts` directory of your project, create your smart contract source files with a `.sol` extension.
+Within the `contracts` directory, create your smart contract source files with a `.sol` extension.
 
 #### 2.1.1. create a `ArtToken.sol` file
 
@@ -84,7 +84,7 @@ contract ArtToken is ERC20, Ownable {
 }
 ```
 
-#### 2.1.2. create a `Broker.sol` file，that hold the ArtToken.
+#### 2.1.2. create a `Broker.sol` file (Holding ArtToken).
 
 ```solidity
 // SPDX-License-Identifier: GPL-3.0
@@ -140,7 +140,7 @@ This step relies on `solcjs`, first check if [solc](https://docs.soliditylang.or
  solcjs --version
 ```
 
-Update `contract:build` command in `Package.json`, use `solcjs` to build contract.
+Update `contract:build` command in `Package.json`. Use `solcjs` to build contract.
 
 ```bash
 {
@@ -211,10 +211,10 @@ npm run contract:deploy -- --pkfile ./brokerPk.txt  \
 
 Upon successful deployment, the terminal will display the contract address.
 
-### 2.4 Call Contract
-Execute the following command within the `erc20-token` folder, call the Contract
+### 2.4 Call the Contract
 
 #### 2.4.1 transfer artToken to broker address
+Execute the following command within the `erc20-token` folder:
 
 ```bash
 

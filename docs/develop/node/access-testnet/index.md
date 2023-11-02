@@ -47,7 +47,7 @@ b8160265953ff82a9e7d6752cc5b95e3d3be6d7e@172.16.10.3:26656
 > ⚠️Note: remove prefix `0x` of block hash.
 >
 
-> **Admin**: Query block number by ****`curl 172.16.10.4:8545 -H "Content-Type:application/json" -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":83}'`
+> **Admin**: Query block number by `curl 172.16.10.4:8545 -H "Content-Type:application/json" -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":83}'`
 >
 >
 > And then Query block by number `curl 172.16.10.4:8545 -H "Content-Type:application/json" -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByNumber","params":["0x28e8", true],"id":1}'`

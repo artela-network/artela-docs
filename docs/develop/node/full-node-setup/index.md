@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Setup a Full Node
 
-This document provides an introduction to joining the Artela testnet as a full node.
+This document provides an introduction to joining the Artela Testnet as a full node.
 
 ## 1. Prepare Artelad
 
@@ -41,7 +41,7 @@ export PATH=$PATH:$HOME/go/bin
 
 ### Option 2: Download and Install Artelad
 
-Ask admin of Artela testnet for the download link.
+Ask admin of Artela Testnet for the download link.
 
 Uninstall and copy the binaray `artelad` to `/usr/local/bin`.
 
@@ -94,15 +94,15 @@ Get `rpc_servers` from [4. RPC servers](./access-testnet#public-information-on-t
 artelad start --pruning=nothing --log_level debug --minimum-gas-prices=0.0001aartela --api.enable --json-rpc.api eth,txpool,personal,net,debug,web3,miner --api.enable
 ```
 
-**Optional:  Run Artela node in background service**
+**Optional:  Run Artela node as a background service**
 
-- Create or open service file
+- Create or open service file using the following command:
 
 ```bash
 vim /etc/systemd/system/artelad.service
 ```
 
-- Fill with followings
+- Fill it with the following contents:
 
 ```bash
 [Unit]
@@ -138,6 +138,6 @@ journalctl -fu artelad
 
 ![output1](./img/1.png)
 
-When it catches up with testnet, the output looks like:
+When it syncs with all blocks, the output looks like:
 
 ![output2](./img/2.png)
