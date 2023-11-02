@@ -5,7 +5,7 @@ sidebar_position: 2
 # Develop an Aspect
 
 This section guides you in building a dApp on Artela with a sample Aspect. 
-This Aspect can identify and intercept specific transactions. For example, If a `world` method transaction is used to call the HelloWorld contract, it will be reverted.
+This Aspect functions as a native extension, coprocess with smart contract, and can be injected throughout the transaction lifecycle. In this example, we'll show how Aspect can identify and revert a specific transaction.
 
 **Pre-requisites:**
 * [Node.js](https://nodejs.org/)
