@@ -1,10 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
-import Link from '@docusaurus/Link';
-import { Redirect } from "react-router-dom";
+import {Redirect} from "react-router-dom";
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import styles from './index.module.css';
 
