@@ -24,7 +24,7 @@ Symbol (optional) : ART
 Block Explorer URL (optional): https://testnet-scan.artela.network/
 ```
 
-For more info about the new RPC URL configuration, refer to [artela testnet](develop/node/access-testnet).
+For more info about the new RPC URL configuration, refer to [artela testnet](../node/access-testnet).
 
 Ensure all fields are correctly filled:
 

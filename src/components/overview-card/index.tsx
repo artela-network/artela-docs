@@ -14,20 +14,20 @@ import Link from '@docusaurus/Link';
 
 const LearnThroughCodingCards = [
     {
-        name: 'Hello world from Artela',
+        name: 'Develop a Smart Contract',
         url: {
-            page: '',
+            page: 'develop/get-started/dev-contract',
         },
         description: (
             <Translate id="dev.overview.hello-world">
-                Learn how to build a hello world dApp with Aspect enabled!
+                Learn how to build a hello world smart contract!
             </Translate>
         ),
     },
     {
-        name: 'Reentrancy guard with Aspect',
+        name: 'Develop an Aspect',
         url: {
-            page: '',
+            page: 'develop/get-started/sol-hello-world',
         },
         description: (
             <Translate id="dev.overview.reentrancy">
@@ -39,13 +39,13 @@ const LearnThroughCodingCards = [
 
 const DiveDeeperCards = [
     {
-        name: 'Setup your own nodes',
+        name: 'Join Test Net',
         url: {
-            page: 'develop/node/full-node-setup',
+            page: 'develop/node/access-testnet',
         },
         description: (
             <Translate id="dev.overview.setup-your-own">
-                Setup your own node for a local development env!
+                Join our test net and start building your own dApp!
             </Translate>
         ),
     },
@@ -59,51 +59,29 @@ const DiveDeeperCards = [
                 Spin up your own node and join our test net!
             </Translate>
         ),
-    },
-    {
-        name: 'Client APIs',
-        url: {
-            page: 'develop/client',
-        },
-        description: (
-            <Translate id="dev.overview.client-api">
-                Learn more details about our node APIs.
-            </Translate>
-        ),
-    },
-    {
-        name: 'Aspect Lib',
-        url: {
-            page: '',
-        },
-        description: (
-            <Translate id="dev.overview.aspect-lib">
-                Learn more details about Aspect library.
-            </Translate>
-        ),
-    },
+    }
 ];
 
 const LearnConceptsCards = [
     {
-        name: 'Core Concepts',
+        name: 'Foundational Concepts',
         url: {
-            page: 'develop/core-concepts',
+            page: 'develop/core-concepts/foundational',
         },
         description: (
-            <Translate id="dev.overview.core-concepts">
+            <Translate id="dev.overview.foundational">
                 Basic concepts that developers need to know when built on Artela.
             </Translate>
         ),
     },
     {
-        name: 'Advanced Concepts',
+        name: 'Aspect',
         url: {
-            page: 'develop/advanced-concepts',
+            page: 'develop/core-concepts/aspect',
         },
         description: (
-            <Translate id="dev.overview.adv-concepts">
-                Advanced concepts that is need to know if you want to built more advanced dApps on Artela.
+            <Translate id="dev.overview.aspect">
+                Learn some new features that Artela brings to the table.
             </Translate>
         ),
     }

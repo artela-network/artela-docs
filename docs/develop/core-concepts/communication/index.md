@@ -26,7 +26,7 @@ Note: The static caller is currently restricted from being used at the contract 
 
 ## EVM JIT Caller
 
-The JIT Call allows Aspect to modify the state of a smart contract through the [Account Abstraction](advanced-concepts/account-abstraction) wallet. For an in-depth understanding of JIT Call, kindly refer to our [documentation](advanced-concepts/jit-call).
+The JIT Call allows Aspect to modify the state of a smart contract through the [Account Abstraction](jit-call#understanding-account-abstraction) wallet. For an in-depth understanding of JIT Call, kindly refer to our [documentation](jit-call).
 
 ## Aspect Context
 
