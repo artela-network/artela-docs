@@ -113,7 +113,7 @@ curl --header "Content-Type: application/json" --request POST --data '{"method":
 ```
 Artela Testnet example:
 ```bash
-curl --header "Content-Type: application/json" --request POST --data '{"method": "block", "params": ["5"], "id": 1}' 34.229.57.14:26657
+curl --header "Content-Type: application/json" --request POST --data '{"method": "block", "params": ["5"], "id": 1}' 47.251.14.47:26657
 ```
 ### JSONRPC/WebSockets
 

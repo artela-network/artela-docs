@@ -8,7 +8,7 @@ Artela JSON-RPC Server provides an API for connection to the Artela blockchain a
 
 Artela Testnet example:
 ```
-   curl https://testnet-rpc1.artela.network -H "Content-Type:application/json" -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":1}'
+   curl https://testnet-rpc2.artela.network -H "Content-Type:application/json" -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":1}'
 ```
 
 Artela has most of the Ethereum RPC methods implemented (while some are still working in progress), so you can use Ethereum infrastructures connect to Artela without any issue. The RPC methods below, marked with ticks, are the ones we have already implemented:
