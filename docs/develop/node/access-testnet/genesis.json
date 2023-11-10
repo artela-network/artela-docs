@@ -1,5 +1,5 @@
 {
-  "genesis_time": "2023-09-25T10:10:09.066264222Z",
+  "genesis_time": "2023-11-06T06:31:54.516732383Z",
   "chain_id": "artela_11820-1",
   "initial_height": "1",
   "consensus_params": {
@@ -37,7 +37,7 @@
         {
           "@type": "/artela.types.v1.EthAccount",
           "base_account": {
-            "address": "artela17v33qyyqzr4zy3ag46f7rs69ucadlyefdpql3g",
+            "address": "artl1uy8qlqzvc03prk0zddndc3ekh7au2wv2ng2c6g",
             "pub_key": null,
             "account_number": "0",
             "sequence": "0"
@@ -47,7 +47,7 @@
         {
           "@type": "/artela.types.v1.EthAccount",
           "base_account": {
-            "address": "artela17wth50srtzgxwhxqk3024sduaxy6ewn3wyzc3c",
+            "address": "artl10dnpzrgk0t5jz8a753xsj0dewr94q63e40xmu3",
             "pub_key": null,
             "account_number": "0",
             "sequence": "0"
@@ -57,7 +57,7 @@
         {
           "@type": "/artela.types.v1.EthAccount",
           "base_account": {
-            "address": "artela1kpzl8adrkq3cw0eltangxszqu2wcffd68ket07",
+            "address": "artl1l858pk0r3ecgacvxkxe29zsxyen67knlh78p7e",
             "pub_key": null,
             "account_number": "0",
             "sequence": "0"
@@ -67,7 +67,7 @@
         {
           "@type": "/artela.types.v1.EthAccount",
           "base_account": {
-            "address": "artela1dvhcpl9alcszcxlwf00uunmxtvkhn04de3tu43",
+            "address": "artl1lxn3rdyq5y6ycgwegnca2h08rdr6gf3f7k5wcm",
             "pub_key": null,
             "account_number": "0",
             "sequence": "0"
@@ -86,38 +86,38 @@
       },
       "balances": [
         {
-          "address": "artela17v33qyyqzr4zy3ag46f7rs69ucadlyefdpql3g",
+          "address": "artl1uy8qlqzvc03prk0zddndc3ekh7au2wv2ng2c6g",
           "coins": [
             {
               "denom": "aartela",
-              "amount": "5000000000000000000000"
+              "amount": "500000000000000000000000000"
             }
           ]
         },
         {
-          "address": "artela17wth50srtzgxwhxqk3024sduaxy6ewn3wyzc3c",
+          "address": "artl10dnpzrgk0t5jz8a753xsj0dewr94q63e40xmu3",
           "coins": [
             {
               "denom": "aartela",
-              "amount": "5000000000000000000000"
+              "amount": "500000000000000000000000000"
             }
           ]
         },
         {
-          "address": "artela1kpzl8adrkq3cw0eltangxszqu2wcffd68ket07",
+          "address": "artl1l858pk0r3ecgacvxkxe29zsxyen67knlh78p7e",
           "coins": [
             {
               "denom": "aartela",
-              "amount": "5000000000000000000000"
+              "amount": "500000000000000000000000000"
             }
           ]
         },
         {
-          "address": "artela1dvhcpl9alcszcxlwf00uunmxtvkhn04de3tu43",
+          "address": "artl1lxn3rdyq5y6ycgwegnca2h08rdr6gf3f7k5wcm",
           "coins": [
             {
               "denom": "aartela",
-              "amount": "5000000000000000000000"
+              "amount": "500000000000000000000000000"
             }
           ]
         }
@@ -165,7 +165,7 @@
         "evm_denom": "aartela",
         "enable_create": true,
         "enable_call": true,
-        "extra_eips": [],
+        "extra_eips": [3855],
         "chain_config": {
           "homestead_block": "0",
           "dao_fork_block": "0",
@@ -187,7 +187,7 @@
           "shanghai_block": "0",
           "cancun_block": "0"
         },
-        "allow_unprotected_txs": false
+        "allow_unprotected_txs": true
       }
     },
     "feeMeter": {
@@ -225,11 +225,11 @@
                   "max_change_rate": "1.000000000000000000"
                 },
                 "min_self_delegation": "1",
-                "delegator_address": "artela17v33qyyqzr4zy3ag46f7rs69ucadlyefdpql3g",
-                "validator_address": "artelavaloper17v33qyyqzr4zy3ag46f7rs69ucadlyefx2879v",
+                "delegator_address": "artl1uy8qlqzvc03prk0zddndc3ekh7au2wv2ng2c6g",
+                "validator_address": "artlvaloper1uy8qlqzvc03prk0zddndc3ekh7au2wv2vqf4aj",
                 "pubkey": {
                   "@type": "/cosmos.crypto.ed25519.PubKey",
-                  "key": "iQIPKHdOolvOGH1FYAKUrW6jCaLC/67pjHEK00xDZxY="
+                  "key": "qhJhHKcsf4QzFTY+2vQtChAJpYZ2aHm8wjw1ReADhNM="
                 },
                 "value": {
                   "denom": "aartela",
@@ -237,7 +237,7 @@
                 }
               }
             ],
-            "memo": "ef1777650f2a5f96cfbf2b1b21feb45ef09bbaa4@172.16.10.2:26656",
+            "memo": "211536ab1414b5b9a2a759694902ea619b29c8b1@172.16.10.2:26656",
             "timeout_height": "0",
             "extension_options": [],
             "non_critical_extension_options": []
@@ -247,7 +247,7 @@
               {
                 "public_key": {
                   "@type": "/artela.crypto.v1.ethsecp256k1.PubKey",
-                  "key": "A/gMjDqkDzBUxfXV0Oe7qNDTGF6LJdHSPo18Lt3dYJYq"
+                  "key": "AuubEYLFKigdbNxjh4QWnCra4mHyWIGVcmBek+c28GGW"
                 },
                 "mode_info": {
                   "single": {
@@ -266,7 +266,7 @@
             "tip": null
           },
           "signatures": [
-            "29AKq431n4zElupHfMqBDR7U9DVFZpBKSlRcnppOhD0d4LxVkleVUPvT2XgDwxFTdP5Xk8uv/Ip6sYWjIixuRwA="
+            "A8jo4cOXZi8bAVdDQ3exKU/9fB9qbM9RXDTmOwHwjXB2cxl0E+Ex/zbZ+Ln9fLPskQ+vVWoq3pDbgERI4Zv+lgE="
           ]
         },
         {
@@ -287,11 +287,11 @@
                   "max_change_rate": "1.000000000000000000"
                 },
                 "min_self_delegation": "1",
-                "delegator_address": "artela17wth50srtzgxwhxqk3024sduaxy6ewn3wyzc3c",
-                "validator_address": "artelavaloper17wth50srtzgxwhxqk3024sduaxy6ewn3909e9u",
+                "delegator_address": "artl10dnpzrgk0t5jz8a753xsj0dewr94q63e40xmu3",
+                "validator_address": "artlvaloper10dnpzrgk0t5jz8a753xsj0dewr94q63e289kmt",
                 "pubkey": {
                   "@type": "/cosmos.crypto.ed25519.PubKey",
-                  "key": "zR5hSHGn8OO+FH0QRCHE1bnSXr0mV6/9JiiYalFykUk="
+                  "key": "Ew+n49/1g+4zLNcrKLANwMq8xTVjSbdVkoNtUI83Wg0="
                 },
                 "value": {
                   "denom": "aartela",
@@ -299,7 +299,7 @@
                 }
               }
             ],
-            "memo": "b8160265953ff82a9e7d6752cc5b95e3d3be6d7e@172.16.10.3:26656",
+            "memo": "ff30114dc4ac73b25723e9f3d41bbe1bdd4242ee@172.16.10.3:26656",
             "timeout_height": "0",
             "extension_options": [],
             "non_critical_extension_options": []
@@ -309,7 +309,7 @@
               {
                 "public_key": {
                   "@type": "/artela.crypto.v1.ethsecp256k1.PubKey",
-                  "key": "AjJxsSZbIU/B0kzhBvtnNlsA+JPCHGJBovdnPF3jjm1a"
+                  "key": "AzpM3uGILaQtu7XpfTTZuSSq/VupM8wjgnCNBoxfzsvc"
                 },
                 "mode_info": {
                   "single": {
@@ -328,7 +328,7 @@
             "tip": null
           },
           "signatures": [
-            "bImG773GrZN4+kyd6zQYWNDq8gOKBNcois/MImoN4B1TacsCfcMIBQ8mnH1/SGGJsFX27jC2DrFD1fgCKebNBAE="
+            "SKVyIk1aqIUdeMImGX+NqvoxlZiQlvd34NgoVWG1RrwemNsSmbKMiAI/EAi2ZcYNmP3g1nuqEHXNxzdlvWOIPAA="
           ]
         },
         {
@@ -349,11 +349,11 @@
                   "max_change_rate": "1.000000000000000000"
                 },
                 "min_self_delegation": "1",
-                "delegator_address": "artela1kpzl8adrkq3cw0eltangxszqu2wcffd68ket07",
-                "validator_address": "artelavaloper1kpzl8adrkq3cw0eltangxszqu2wcffd6va72m6",
+                "delegator_address": "artl1l858pk0r3ecgacvxkxe29zsxyen67knlh78p7e",
+                "validator_address": "artlvaloper1l858pk0r3ecgacvxkxe29zsxyen67knlgkyver",
                 "pubkey": {
                   "@type": "/cosmos.crypto.ed25519.PubKey",
-                  "key": "igJ85ohIanlKIclh/y3EhhsZfh68IJKkCkPLbIhqapc="
+                  "key": "VlW24jHGTpbfGtoB3WuTsSsOZIXsRze7hICJSyZRdOo="
                 },
                 "value": {
                   "denom": "aartela",
@@ -361,7 +361,7 @@
                 }
               }
             ],
-            "memo": "96a8e722f93acacd21baec6db51acd6cc16bbee2@172.16.10.4:26656",
+            "memo": "d89e10d917f6f7472125aa4c060c05afa78a9d65@172.16.10.4:26656",
             "timeout_height": "0",
             "extension_options": [],
             "non_critical_extension_options": []
@@ -371,7 +371,7 @@
               {
                 "public_key": {
                   "@type": "/artela.crypto.v1.ethsecp256k1.PubKey",
-                  "key": "A+IR/ODcCwPDgx9NqRI2P5mAO9gllK8Le9UHpNrVfMBw"
+                  "key": "ApLnZXhUPmuaTds2zpADSjGS2+nEISLEIjCTxyBrsgKc"
                 },
                 "mode_info": {
                   "single": {
@@ -390,7 +390,7 @@
             "tip": null
           },
           "signatures": [
-            "/kpXyv4NWH7e0uXCJrry/dscbeYiiA/lssLCDsB/KZY/BuBuxeOWnz+nnlWHyD32XSypRnggHCHJMuNeyNjNvQE="
+            "DyJXN4bkaCPvGMk5e8+/qEQLWNFqkWWyyKNvEaaKAG9qmUnpKlXlf9v+RSbUAy4oEpvtuxGtX6QN1QFKu5pu5AE="
           ]
         },
         {
@@ -411,11 +411,11 @@
                   "max_change_rate": "1.000000000000000000"
                 },
                 "min_self_delegation": "1",
-                "delegator_address": "artela1dvhcpl9alcszcxlwf00uunmxtvkhn04de3tu43",
-                "validator_address": "artelavaloper1dvhcpl9alcszcxlwf00uunmxtvkhn04dj6vap4",
+                "delegator_address": "artl1lxn3rdyq5y6ycgwegnca2h08rdr6gf3f7k5wcm",
+                "validator_address": "artlvaloper1lxn3rdyq5y6ycgwegnca2h08rdr6gf3fp7hrlp",
                 "pubkey": {
                   "@type": "/cosmos.crypto.ed25519.PubKey",
-                  "key": "xAbzp0q6OEIbe/G8WPa36zIh4c0yERSCXYMjgxwnSCc="
+                  "key": "R7/74S8ho9zbXgdbdIqKBzCcpaYOovCfbt8DmKyxQBE="
                 },
                 "value": {
                   "denom": "aartela",
@@ -423,7 +423,7 @@
                 }
               }
             ],
-            "memo": "5bb71ca5886894d3f9fd85f9948c47e2cbab71fa@172.16.10.5:26656",
+            "memo": "f559f47a4199a06d53f274ae720042f3809a6ec0@172.16.10.5:26656",
             "timeout_height": "0",
             "extension_options": [],
             "non_critical_extension_options": []
@@ -433,7 +433,7 @@
               {
                 "public_key": {
                   "@type": "/artela.crypto.v1.ethsecp256k1.PubKey",
-                  "key": "A5H4nW/O2qTvU0Y71YHXaT/vwwXA/ZD2uLqQF9uW+uYh"
+                  "key": "Avm3wHGbiMRzkPpTdqj5y8rLMkFX7/zwNk6ZgxP+Dxdi"
                 },
                 "mode_info": {
                   "single": {
@@ -452,7 +452,7 @@
             "tip": null
           },
           "signatures": [
-            "QBsq6pmCRVPOiBcI9ikp77D47ydVhG5bzkyvvniaeLJTG+tymxYACtqexc9qbxgUc59n8HhRYsqvSJisqquWyAE="
+            "OF722U6bicmZeB4OxQEkcV3qyWx/AqRGiIhWs0R9iG44Lgq9OD9vaWkKG0+AmW4PuKTpYdO2A8Iq0r4JPzoxLgA="
           ]
         }
       ]
