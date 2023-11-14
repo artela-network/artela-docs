@@ -1,4 +1,4 @@
 {
-    "label": "OnBlockFinalize",
+    "label": "OnBlockFinalizeCtx",
     "position": 7
 }
