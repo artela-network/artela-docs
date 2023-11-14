@@ -2,18 +2,8 @@
 sidebar_position: 2
 ---
 
-# Aspect Library
+# Access authorization
 
-A library for writing aspect to be deployed to Artela，The `aspect-libs` provides Host APIs to interact with the Aspect
-runtime, with this set of APIs, you can access blockchain data, smart
-contracts, cryptographic functions, invoking system calls and more.
-
-## Installation
-
-```sh
-npm install --dev @artela/aspect-libs # NPM
-yarn add --dev @artela/aspect-libs    # Yarn
-```
 
 ## Component classes & Access authorization interface
 

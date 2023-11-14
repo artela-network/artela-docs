@@ -28,10 +28,21 @@ Once installed, You can use aspect-libs for the following features:
 * [Block Level Aspect](/develop/reference/aspect-lib/block-level-aspect/overview)
 * [Operation Aspect](/develop/reference/aspect-lib/operation-aspect)
 
-### Api Reference
+### Components
 
-* sys
+#### Core `sys` Namespace
+* [sys](/develop/reference/aspect-lib/components/sys/sys)
+* [sys.hostApi](/develop/reference/aspect-lib/components/sys/sys-hostapi)
 * sys.aspect
 * sys.evm
-* sys.hostApi
 * sys.context
+
+#### Authorized Access Relationship
+* [access authorization table between Components & Join Point](/develop/reference/aspect-lib/components/access)
+
+#### Utils
+* ethereum
+
+#### Simpler use of trace context
+* aspect tool generate
+* contract state

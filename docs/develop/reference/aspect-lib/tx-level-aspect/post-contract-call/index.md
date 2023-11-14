@@ -58,7 +58,6 @@ before evm call to create `PostContractCallCtx` ，and execute Join point `PostC
         * `txIndex` get transaction index in block.
 * return
     * sting
-* Default Key
 
 ```typescript
     let popVal = ctx.tx.extProperties.property.get("xx");
@@ -275,6 +274,8 @@ before evm call to create `PostContractCallCtx` ，and execute Join point `PostC
 
 > returns the code hash of account.
 
+* Parameter
+  * addr: address hash hex string
 * return
     * (i64): the current value of the refund counter
 

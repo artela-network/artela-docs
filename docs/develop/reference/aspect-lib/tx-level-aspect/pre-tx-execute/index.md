@@ -205,6 +205,8 @@ before evm call to create `PreTxExecuteCtx` ，and execute Join point `PreTxExec
 
 > returns the code hash of account.
 
+* Parameter
+  * addr: address hash hex string
 * return
   * (i64): the current value of the refund counter
 

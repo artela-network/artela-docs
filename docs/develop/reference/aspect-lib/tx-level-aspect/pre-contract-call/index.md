@@ -275,6 +275,8 @@ before evm call to create `PreContractCallCtx` ，and execute Join point `PreCon
 
 > returns the code hash of account.
 
+* Parameter
+  * addr: address hash hex string
 * return
     * (i64): the current value of the refund counter
 
