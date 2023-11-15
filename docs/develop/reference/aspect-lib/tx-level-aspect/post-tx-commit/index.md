@@ -82,7 +82,7 @@ before evm call to create `PostTxCommitCtx` ，and execute Join point `PostTxCom
   * [EthReceipt](/docs/classes/proto.EthReceipt.html)
 
 ```typescript
-    let receipt = ctx.receipt.unwrap()!
+    let receipt = ctx.receipt.content.unwrap()!
 ```
 
 

@@ -33,9 +33,9 @@ Once installed, You can use aspect-libs for the following features:
 #### Core `sys` Namespace
 * [sys](/develop/reference/aspect-lib/components/sys/sys)
 * [sys.hostApi](/develop/reference/aspect-lib/components/sys/sys-hostapi)
-* sys.aspect
-* sys.evm
-* sys.context
+* [sys.aspect](/develop/reference/aspect-lib/components/sys/sys-aspect)
+* [sys.evm](/develop/reference/aspect-lib/components/sys/call)
+* [sys.context](/develop/reference/aspect-lib/components/sys/context)
 
 #### Authorized Access Relationship
 * [access authorization table between Components & Join Point](/develop/reference/aspect-lib/components/access)
