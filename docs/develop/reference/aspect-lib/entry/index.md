@@ -42,4 +42,32 @@
     * Block level type: <a href="/docs/classes/proto.EthBlockAspect.html" target="_blank">EthBlockAspect</a>
 * Return
   * i32: bool value of is Block Level，Returns this value after the pointer address of the memory store.
+  
+### Wasm Export
 
+>important：You need to export the entry method as the entry point for Aspect.
+
+```typescript
+
+import {Entry} from "@artela/aspect-libs";
+import {Aspect} from "./aspect/aspect";
+
+const aspect = new Aspect();
+const entry = new Entry(aspect, aspect, aspect);
+
+export function execute(methodPtr: i32, argPtr: i32): i32 {
+    return entry.execute(methodPtr, argPtr);
+}
+
+export function isBlockLevel(): i32 {
+    return entry.isBlockLevel();
+}
+
+export function isTransactionLevel(): i32 {
+    return entry.isTransactionLevel();
+}
+
+export function allocate(size: i32): i32 {
+    return heap.alloc(size) as i32;
+}
+```
