@@ -169,18 +169,6 @@ let number = ethereum.Number.fromUint8Array([2,1]);
 ### 2.ethereum.Int
 <!-- @formatter:off -->
 ```typescript
-// signed number to ethereum.Int
-let number = ethereum.Int.fromI8(0);
-let number = ethereum.Int.fromI16(0);
-let number = ethereum.Int.fromI32(0);
-let number = ethereum.Int.fromI64(0);
-
-// unsigned number to ethereum.Int
-let number = ethereum.Int.fromU8(0);
-let number = ethereum.Int.fromU16(0);
-let number = ethereum.Int.fromU32(0);
-let number = ethereum.Int.fromU64(0);
-
 //hex to  ethereum.Int
 let number = ethereum.Int.fromHexString("0x1b");
 //Uint8Array to ethereum.Int
@@ -191,17 +179,6 @@ let number = ethereum.Int.fromUint8Array([2,1]);
 ### 3.ethereum.Uint
 <!-- @formatter:off -->
 ```typescript
-// signed number to ethereum.Uint
-let number = ethereum.Uint.fromI8(0);
-let number = ethereum.Uint.fromI16(0);
-let number = ethereum.Uint.fromI32(0);
-let number = ethereum.Uint.fromI64(0);
-
-// unsigned number to ethereum.Uint
-let number = ethereum.Uint.fromU8(0);
-let number = ethereum.Uint.fromU16(0);
-let number = ethereum.Uint.fromU32(0);
-let number = ethereum.Uint.fromU64(0);
 
 //hex to  ethereum.Uint
 let number = ethereum.Uint.fromHexString("0x1b");
@@ -219,12 +196,46 @@ let boolean = ethereum.Boolean.fromUint8Array([1]);
 ```
 <!-- @formatter:on -->
 
-### 4.ethereum.Boolean
+### 5.ethereum.Address
 <!-- @formatter:off -->
 ```typescript
 // hex string to ethereum.Address
 let addr = ethereum.Address.fromHexString("0x1b");
 //
-let addr = ethereum.Address.fromUint8Array([1]);
+let addr = ethereum.Address.fromUint8Array([]);
+```
+<!-- @formatter:on -->
+
+### 6.ethereum.Bytes
+<!-- @formatter:off -->
+```typescript
+// hex string to ethereum.Address
+let addr = ethereum.Bytes.fromHexString("0x1b");
+//
+let addr = ethereum.Bytes.fromUint8Array([]);
+```
+<!-- @formatter:on -->
+
+### 7.ethereum.BytesN
+<!-- @formatter:off -->
+```typescript
+// hex string to ethereum.Address
+let addr = ethereum.BytesN.fromHexString("0x1b");
+//
+let addr = ethereum.BytesN.fromUint8Array([]);
+```
+<!-- @formatter:on -->
+
+### 8.ethereum.ByteArray
+<!-- @formatter:off -->
+```typescript
+
+```
+<!-- @formatter:on -->
+
+### 9.ethereum.Tuple
+<!-- @formatter:off -->
+```typescript
+
 ```
 <!-- @formatter:on -->

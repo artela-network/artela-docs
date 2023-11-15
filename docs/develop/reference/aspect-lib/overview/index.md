@@ -40,9 +40,6 @@ Once installed, You can use aspect-libs for the following features:
 #### Authorized Access Relationship
 * [access authorization table between Components & Join Point](/develop/reference/aspect-lib/components/access)
 
-#### Utils
-* ethereum
-
-#### Simpler use of trace context
-* aspect tool generate
-* contract state
+#### Common
+* [ethereum namespace](/develop/reference/aspect-lib/components/common/ethereum)
+* [Trace Context Enhancements](/develop/reference/aspect-lib/components/common/trace-plus)
