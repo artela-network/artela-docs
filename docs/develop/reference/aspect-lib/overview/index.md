@@ -22,7 +22,7 @@ Once installed, You can use aspect-libs for the following features:
 
 * [Aspect Entry](/develop/reference/aspect-lib/entry)
 
-### Implement Aspect
+### Three types of Aspect
 
 * [Transaction Level Aspect](/develop/reference/aspect-lib/tx-level-aspect/overview)
 * [Block Level Aspect](/develop/reference/aspect-lib/block-level-aspect/overview)
@@ -30,16 +30,16 @@ Once installed, You can use aspect-libs for the following features:
 
 ### Components
 
-#### Core `sys` Namespace
+#### `sys` Namespace
 * [sys](/develop/reference/aspect-lib/components/sys/sys)
 * [sys.hostApi](/develop/reference/aspect-lib/components/sys/sys-hostapi)
 * [sys.aspect](/develop/reference/aspect-lib/components/sys/sys-aspect)
 * [sys.evm](/develop/reference/aspect-lib/components/sys/call)
 * [sys.context](/develop/reference/aspect-lib/components/sys/context)
 
+#### Common
+* [ethereum namespace](/develop/reference/aspect-lib/components/common/ethereum)
+
 #### Authorized Access Relationship
 * [access authorization table between Components & Join Point](/develop/reference/aspect-lib/components/access)
 
-#### Common
-* [ethereum namespace](/develop/reference/aspect-lib/components/common/ethereum)
-* [Trace Context Enhancements](/develop/reference/aspect-lib/components/common/trace-plus)
