@@ -57,7 +57,7 @@ npm run account:create -- --pkfile ./attack_accounts.txt
 If you don't have a test token in your account, please join [our discard](https://discord.com/invite/artela)
 ，require testnet faucet.
 
-If you lack test tokens, request some in our [Discord]((https://discord.com/invite/artela)) testnet-faucet channel.
+If you lack test tokens, request some in our [Discard]((https://discord.com/invite/artela)) testnet-faucet channel.
 
 ## 3. Create Smart Contracts
 
@@ -69,10 +69,10 @@ methods: `add_liquidity` and `remove_liquidity`. Both are guarded by the same re
 
 ``` python
 event AddLiquidity:
-    excuted: uint256
+    executed: uint256
 
 event RemoveLiquidity:
-    excuted: uint256
+    executed: uint256
 
 deployer: address
 
