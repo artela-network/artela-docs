@@ -43,7 +43,7 @@ export PATH=$PATH:$HOME/go/bin
 
 Ask admin of Artela Testnet for the download link.
 
-Uninstall and copy the binaray `artelad` to `/usr/local/bin`.
+Uninstall and copy the binary `artelad` to `/usr/local/bin`.
 
 ## 2. Init node
 
