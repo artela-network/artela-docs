@@ -44,7 +44,7 @@ This will create a project directory with the following structure:
 │   │   └── aspect.ts          <-- Entry functions for the aspect
 │   └── index.ts
 ├── contracts                  <-- Place your smart contracts here
-├── scripts                    <-- Utilitity scripts, including deploying, binding and etc.
+├── scripts                    <-- Utility scripts, including deploying, binding and etc.
 │   ├── aspect-deploy.cjs
 │   ├── bind.cjs
 │   ├── contract-call.cjs
@@ -93,7 +93,7 @@ pragma solidity ^0.8.9;
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract Borker is Ownable {
+contract Broker is Ownable {
     address private deployer;
     address immutable _tokenIn;
 
@@ -186,7 +186,7 @@ npm run account:create -- --pkfile ./brokerPk.txt
 
 > * --pkfile : privateKey path for sender. (optional, default value: `./privateKey.txt`).
 
-If your account lacks test tokens, join [Discard](https://discord.com/invite/artela)，and request some in `testnet-faucet` channel.
+If your account lacks test tokens, join [Discord](https://discord.com/invite/artela)，and request some in `testnet-faucet` channel.
 
 
 #### 2.3.4  Deploy your contract

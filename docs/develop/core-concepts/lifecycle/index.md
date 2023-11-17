@@ -31,7 +31,6 @@ The Aspect's state can be represented in JSON as:
   },
   "properties": {
     "property-name": "property-value",
-    ...
   },
   "settlementAccount": "0xABCDEF....",
   "currentVersion": 1

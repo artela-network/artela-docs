@@ -24,10 +24,10 @@ Once you've initiated the node, connect to the JSON-RPC port service here:
 
 [genesis.json](./genesis.json)
 
-> **Admin**: Getting the genesis from the home directory `$HOME/.aretlad/config/genesis.json`of any node.
+> **Admin**: Getting the genesis from the home directory `$HOME/.aretlad/config/genesis.json` of any node.
 >
 
-### 2. Presistent nodes
+### 2. Persistent nodes
 
 ```json
 ef1777650f2a5f96cfbf2b1b21feb45ef09bbaa4@172.16.10.2:26656

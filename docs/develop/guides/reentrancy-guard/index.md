@@ -21,7 +21,7 @@ transaction [here](https://explorer.phalcon.xyz/tx/eth/0xa84aa065ce61dbb1eb50ab6
 
 Learn more from our blog: 
 
-[How does Aspect Programming prevent reentrancy attacks through on-chain runtime protection](https://github.com/artela-network/example/blob/main/curve_reentrance/README.md).
+[How does Aspect Programming prevent reentrancy attacks through on-chain runtime protection?](https://github.com/artela-network/example/blob/main/curve_reentrance/README.md)
 
 ## Pre-requisites
 
@@ -57,7 +57,7 @@ npm run account:create -- --pkfile ./attack_accounts.txt
 If you don't have a test token in your account, please join [our discard](https://discord.com/invite/artela)
 ，require testnet faucet.
 
-If you lack test tokens, request some in our [Discord]((https://discord.com/invite/artela)) testnet-faucet channel.
+If you lack test tokens, request some in our [Discard]((https://discord.com/invite/artela)) testnet-faucet channel.
 
 ## 3. Create Smart Contracts
 
@@ -69,10 +69,10 @@ methods: `add_liquidity` and `remove_liquidity`. Both are guarded by the same re
 
 ``` python
 event AddLiquidity:
-    excuted: uint256
+    executed: uint256
 
 event RemoveLiquidity:
-    excuted: uint256
+    executed: uint256
 
 deployer: address
 

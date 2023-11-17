@@ -126,7 +126,7 @@ npm run account:create -- --pkfile {privateKey-path}
 
 > * --pkfile : privateKey path for sender. (optional, default value: `./privateKey.txt`).
 
-If your account lacks test tokens, join [Discard](https://discord.com/invite/artela)，and request some in `testnet-faucet` channel.
+If your account lacks test tokens, join [Discord](https://discord.com/invite/artela)，and request some in `testnet-faucet` channel.
 
 
 #### 2.3.4  Deploy your contract 
@@ -207,7 +207,7 @@ For example, to add logic after a smart contract call execution, open `aspect.ts
 
 ### 3.2. Access State Changes of Smart Contract in Aspect
 
-To integrate the state  of `HelloWord` contract with your Aspect, follow these steps:
+To integrate the state  of the `HelloWord` contract with your Aspect, follow these steps:
 
 In `assembly/aspect`, add your Aspect to check the transaction, if `world` function is called, then revert:
 
@@ -273,7 +273,7 @@ npm run contract:bind -- --pkfile {privateKey-path} \
 
 ### 3.6. Test the Smart Contract and Aspect Integration
 
-Now that the `HelloWord` contract and Aspect are bound, call `world` to test, due to Aspect interception, the transaction is reverted.
+Now that the `HelloWorld` contract and Aspect are bound, call `world` to test, due to Aspect interception, the transaction is reverted.
 
 ```bash
 npm run contract:call -- --pkfile {privateKey-path}    \     
