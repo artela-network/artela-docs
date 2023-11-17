@@ -21,7 +21,7 @@ transaction [here](https://explorer.phalcon.xyz/tx/eth/0xa84aa065ce61dbb1eb50ab6
 
 Learn more from our blog: 
 
-[How does Aspect Programming prevent reentrancy attacks through on-chain runtime protection](https://github.com/artela-network/example/blob/main/curve_reentrance/README.md).
+[How does Aspect Programming prevent reentrancy attacks through on-chain runtime protection?](https://github.com/artela-network/example/blob/main/curve_reentrance/README.md)
 
 ## Pre-requisites
 
