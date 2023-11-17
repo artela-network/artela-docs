@@ -61,7 +61,7 @@ let aspectBytecode = '0x' + fs.readFileSync('./build/release.wasm', {
 let aspect = new web3.atl.Aspect();
 aspect = await aspect.deploy({
     data: aspectBytecode,
-    properties: [ // <-- properity to initialize the aspect, key-value pairs
+    properties: [ // <-- property to initialize the aspect, key-value pairs
         { 'key': 'owner', 'value': accounts[0] }
     ]
 }).send({ from: accounts[0], nonce, ...sendOptions });
@@ -150,7 +150,7 @@ You can update an existing Aspect's code and properties using aspectId by follow
 // ...
 await new web3.atl.Aspect('0x{aspect-id}').upgrade({
     data: aspectBytecode,
-    properties: [ // <-- properity can also be updated during the upgrade
+    properties: [ // <-- property can also be updated during the upgrade
         { 'key': 'owner', 'value': accounts[0] }
     ]
 }).send({ from: accounts[0], nonce, ...sendOptions });
