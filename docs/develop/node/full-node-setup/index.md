@@ -61,7 +61,7 @@ mv genesis.json $HOME/.artelad/config/genesis.json
 
 **3). Configure**
 
-Get presistent seeds from [2. Presistent nodes](./access-testnet#public-information-on-testnet)
+Get persistent seeds from [2. Persistent nodes](./access-testnet#public-information-on-testnet)
 
 Add two of them to `seeds` in `app.toml`
 
