@@ -24,7 +24,7 @@ Once you've initiated the node, connect to the JSON-RPC port service here:
 
 [genesis.json](./genesis.json)
 
-### 2. Presistent nodes
+### 2. Persistent nodes
 
 ```json
 211536ab1414b5b9a2a759694902ea619b29c8b1@47.251.14.47:26656
@@ -35,7 +35,7 @@ ff30114dc4ac73b25723e9f3d41bbe1bdd4242ee@47.251.14.108:26656
 
 ### 3. Trusted block and height
 
-- **Block Number**: 250870
+- **Block Height**: 250870
 - **Block Hash**: 58e0dba02baf99c5b4219b41f584de420844fe3e0ecb82b6e46364199e09b8ed
 
 > ⚠️Note: Pick up the latest block and height from the <https://testnet-scan.artela.network/blocks> as your trusted block and height.

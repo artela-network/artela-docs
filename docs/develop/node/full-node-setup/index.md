@@ -6,6 +6,28 @@ sidebar_position: 1
 
 This document provides an introduction to joining the Artela Testnet as a full node.
 
+**Hardware Requirements**
+Minimum:
+
+CPU with 2+ cores
+
+4GB RAM
+
+1TB free storage space to sync the Tetnet
+
+8 MBit/sec download Internet service
+
+**Recommended:**
+
+Fast CPU with 4+ cores
+
+16GB+ RAM
+
+High-performance SSD with at least 1TB of free space
+
+25+ MBit/sec download Internet service
+
+
 ## 1. Prepare Artelad
 
 You can start with install artelad or build source code
@@ -24,13 +46,23 @@ sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.20.3.linux-amd64.ta
 export PATH=$PATH:/usr/local/go/bin
 ```
 
+You need to create a folder to store your source files, for example, `/home/user1/go/src`. Replace `user1` to your account, e.g. `ubuntu`.
+```bash
+mkdir -p /home/user1/go/sr
+```
+Then, set `/home/user1/go` as the GOPATH by using the following command: 
+```bash
+export GOPATH=/home/user1/go
+```
+This ensures that the necessary Go environment variables are configured correctly.
+
 ### 2). Clone and build the code
 
 ```bash
 cd $GOPATH/src
 git clone https://github.com/artela-network/artela
-git clone https://github.com/artela-network/artela-cosmos-sdk
-git clone https://github.com/artela-network/artela-cometbft
+# git clone https://github.com/artela-network/artela-cosmos-sdk
+# git clone https://github.com/artela-network/artela-cometbft
 cd artela
 
 git checkout main
@@ -53,9 +85,10 @@ Uninstall and copy the binaray `artelad` to `/usr/local/bin`.
 artelad init <custom_moniker> # e.g artelad init test111
 ```
 
-**2). Copy genesis from [1. Genesis](./access-testnet#public-information-on-testnet) , copy the the home directory.**
+**2). Copy genesis from [genesis.json](./genesis.json), and move to the home directory.**
 
 ```bash
+vim genesis.json
 mv genesis.json $HOME/.artelad/config/genesis.json
 ```
 
@@ -86,53 +119,36 @@ sed -i 's/rpc_servers = ""/rpc_servers = "node-1-ip:port,node-2-ip:port"/' confi
 
 Get `BLOCK_HEIGHT` and `BLOCK_HASH` from [3. Trust block and height](./access-testnet#public-information-on-testnet)
 
-Get `rpc_servers` from [4. RPC servers](./access-testnet#public-information-on-testnet)
+Get `rpc_servers` from [4. RPC servers](./access-testnet#public-information-on-testnet##RPC-servers)
 
 ### 4. Run Artela node
 
 ```bash
-artelad start --pruning=nothing --log_level debug --minimum-gas-prices=0.0001aartela --api.enable --json-rpc.api eth,txpool,personal,net,debug,web3,miner --api.enable
+export PATH=$PATH:$HOME/go/bin
+
+artelad start --pruning=nothing --log_level debug
 ```
 
 **Optional:  Run Artela node as a background service**
 
-- Create or open service file using the following command:
+Run the Artela node with nohup and redirect the output to a log file. You can use a command like this:
 
 ```bash
-vim /etc/systemd/system/artelad.service
+nohup artelad start --pruning=nothing --log_level debug > artela.log 2>&1 &
 ```
+* `nohup` is used to run a command in the background and detach it from the terminal.
+* `artela start` is the command to start the Artela node.
+* `> artela.log` redirects the standard output to a file named artela.log.
+* `2>&1` redirects standard error to the same file as standard output.
+* `&` at the end of the command runs it in the background.
 
-- Fill it with the following contents:
+After running the command, your Artela node should start as a background service, and its output will be logged to the `artela.log` file.
 
+You can check the log file to view the Artela node's output using a command like this:
 ```bash
-[Unit]
-Description=artela service
-After=network-online.target
-
-[Service]
-User=root
-ExecStart=<your_GOPATH_dir>/bin/artelad start --pruning=nothing --log_level debug --minimum-gas-prices=0.0001aartela --api.enable --json-rpc.api eth,txpool,personal,net,debug,web3,miner --api.enable
-Restart=no
-LimitNOFILE=4096
-
-[Install]
-WantedBy=multi-user.target
+tail -f artela.log
 ```
-
-- Enable and start the service
-
-```bash
-systemctl daemon-reload
-systemctl restart systemd-journald
-systemctl enable artelad.service
-systemctl start artelad.service
-```
-
-- Check the log of the service
-
-```bash
-journalctl -fu artelad
-```
+The `tail -f` command allows you to continuously monitor the log file and see new log entries as they are written.
 
 ### 5. Output
 
