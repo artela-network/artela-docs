@@ -6,26 +6,25 @@ sidebar_position: 1
 
 This document provides an introduction to joining the Artela Testnet as a full node.
 
-**Hardware Requirements**
-Minimum:
+**Hardware Minimum Requirements**
 
-CPU with 2+ cores
+- CPU with 2+ cores
 
-4GB RAM
+- 4GB RAM
 
-1TB free storage space to sync the Tetnet
+- 1TB free storage space to sync the Testnet
 
-8 MBit/sec download Internet service
+- 8 MBit/sec download Internet service
 
 **Recommended:**
 
-Fast CPU with 4+ cores
+- Fast CPU with 4+ cores
 
-16GB+ RAM
+- 16GB+ RAM
 
-High-performance SSD with at least 1TB of free space
+- High-performance SSD with at least 1TB of free space
 
-25+ MBit/sec download Internet service
+- 25+ MBit/sec download Internet service
 
 
 ## 1. Prepare Artelad
