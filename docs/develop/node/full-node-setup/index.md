@@ -126,7 +126,7 @@ Get `rpc_servers` from [4. RPC servers](./access-testnet#public-information-on-t
 ```bash
 export PATH=$PATH:$HOME/go/bin
 
-artelad start
+artelad start --pruning=nothing --log_level debug
 ```
 
 **Optional:  Run Artela node as a background service**
@@ -134,7 +134,7 @@ artelad start
 Run the Artela node with nohup and redirect the output to a log file. You can use a command like this:
 
 ```bash
-nohup artela start > artela.log 2>&1 &
+nohup artelad start --pruning=nothing --log_level debug > artela.log 2>&1 &
 ```
 * `nohup` is used to run a command in the background and detach it from the terminal.
 * `artela start` is the command to start the Artela node.
