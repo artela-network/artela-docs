@@ -18,16 +18,22 @@ sudo apt-get update
 sudo apt-get install -y make gcc
 wget https://go.dev/dl/go1.20.3.linux-amd64.tar.gz
 sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.20.3.linux-amd64.tar.gz
-export PATH=$PATH:/usr/local/go/bin
+# export PATH=$PATH:/usr/local/go/bin
 ```
+
+You need to create a folder to store your source files, for example, `/home/user1/go/src`. 
+
+Then, set `/home/user1/go` as the GOPATH by using the following command: `go env -w "GOPATH=/home/user1/go"`. 
+
+This ensures that the necessary Go environment variables are configured correctly.
 
 ## 2. Clone and build the code
 
 ```bash
 cd $GOPATH/src/github.com/artela-network
 git clone https://github.com/artela-network/artela-cometbft.git
-git clone https://github.com/artela-network/artela-cosmos-sdk.git
-git clone https://github.com/artela-network/artela.git
+# git clone https://github.com/artela-network/artela-cosmos-sdk.git
+# git clone https://github.com/artela-network/artela.git
 
 cd artela
 make clean && make
