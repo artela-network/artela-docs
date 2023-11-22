@@ -4,15 +4,15 @@ sidebar_position: 2
 
 # Block Level Aspect
 
-To implement a Block-level aspect, you can :
+## Introduction
 
-* implement the `IBlockTransaction` interface
+The block level Aspect is oriented to all blocks, and the logic of all block level Aspect is executed at the [BeginBlock](https://docs.cosmos.network/v0.47/learn/advanced/baseapp#beginblock) and [EndBlock](https://docs.cosmos.network/v0.47/learn/advanced/baseapp#endblock).  
+The block-level aspect is still in `beta` and may change in the future, please do not use it for production.
 
-:::note
-The block-level aspect is still in beta and may change in the future.
-:::
+## How to Create
 
-## Implement the `IBlockTransaction`
+To implement a Block-level aspect, you can implement the `IAspectBlock` interface
+
 
 ```typescript
 import {
@@ -51,7 +51,7 @@ export class Aspect implements IAspectBlock {
      *
      * @param ctx context of the given join-point
      * @return result of Aspect execution
-     */
+       */
     onBlockFinalize(ctx: OnBlockFinalizeCtx): void {
         // Implement me...
     }
@@ -72,7 +72,23 @@ export class Aspect implements IAspectBlock {
 ```
 
 
-## Methods
+## Description
+
+Next, we will provide a detailed description of each method in the `IAspectBlock` interface. You can click on the links associated with each method name to access more detailed information. It is recommended to have a prior understanding of the concept of [Join points](/develop/core-concepts/join-point).
+
+
+1. IsOwner
+>It is the governance account implemented by the Aspect, when any of the governance operation (
+>including [bind](/develop/core-concepts/lifecycle#binding), [unbinding](/develop/core-concepts/lifecycle#unbinding), ...)
+>is made, isOwner method will be invoked to check against the initiator's account to make sure it has the permission.
+
+2. OnBlockInitialize
+>The onBlockInitialize join-point is activated prior to the preparation of a new block proposal, creating a window for the execution of automated transactions and enabling the seamless insertion of such transactions at this stage.
+
+3. OnBlockFinalize
+>The onBlockFinalize join-point is triggered following the official completion of a block, providing an opportunity for the Aspect to initiate an asynchronous task. This, in turn, facilitates the execution of the task in a subsequent block.
+
+
 
 ### 1. isOwner
 

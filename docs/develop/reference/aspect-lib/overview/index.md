@@ -4,42 +4,50 @@ sidebar_position: 2
 
 # Aspect Library
 
-A library for writing aspect to be deployed to Artela，The `aspect-libs` provides Host APIs to interact with the Aspect
+## Introduction
+
+A [AssemblyScript](https://assemblyscript.bootcss.com/) library for writing aspect to be deployed to
+Artela，The `aspect-libs` provides Host APIs to interact with the Aspect
 runtime, with this set of APIs, you can access blockchain data, smart
 contracts, cryptographic functions, invoking system calls and more.
 
+
 ## Installation
 
+The aspect-libs library provides APIs to access the Artela Node store, blockchain data, smart contracts, cryptographic
+functions and more. To use it, all you have to do is add a dependency on it:
 ```sh
 npm install --dev @artela/aspect-libs # NPM
 yarn add --dev @artela/aspect-libs    # Yarn
 ```
 
 ## Usage
+---
 
-Once installed, You can use aspect-libs for the following features:
-### Entry
+### Structure
 
-* [Aspect Entry](/develop/reference/aspect-lib/entry)
+* [Aspect Structure](/develop/reference/aspect-lib/aspect-structure)
 
-### Three types of Aspect
+### Join-Points
+* [Transaction Level Join-Point](/develop/reference/aspect-lib/tx-level-aspect/overview)
+* [Block Level Join-Point](/develop/reference/aspect-lib/block-level-aspect/overview)
+* [Call Level Join-Point](/develop/reference/aspect-lib/operation-aspect)
 
-* [Transaction Level Aspect](/develop/reference/aspect-lib/tx-level-aspect/overview)
-* [Block Level Aspect](/develop/reference/aspect-lib/block-level-aspect/overview)
-* [Operation Aspect](/develop/reference/aspect-lib/operation-aspect)
-
-### Components
-
-#### `sys` Namespace
+### API references
 * [sys](/develop/reference/aspect-lib/components/sys/sys)
 * [sys.hostApi](/develop/reference/aspect-lib/components/sys/sys-hostapi)
 * [sys.aspect](/develop/reference/aspect-lib/components/sys/sys-aspect)
 * [sys.evm](/develop/reference/aspect-lib/components/sys/call)
 * [sys.context](/develop/reference/aspect-lib/components/sys/context)
+* [ethereum](/develop/reference/aspect-lib/components/common/ethereum)
 
-#### Common
-* [ethereum namespace](/develop/reference/aspect-lib/components/common/ethereum)
+## Versions
 
-#### Authorized Access Relationship
-* [access authorization table between Components & Join Point](/develop/reference/aspect-lib/components/access)
+The apiVersion in the subgraph manifest specifies the mapping API version which is run by Graph Node for a given
+subgraph.
+
+| Version | Artela Version | 	Release notes                                                                            |
+|:--------|:---------------|:------------------------------------------------------------------------------------------|
+| 0.0.24  | v0.4.1-beta    | The first beta is available, where the Transaction Level Aspect feature has been released |
+
 

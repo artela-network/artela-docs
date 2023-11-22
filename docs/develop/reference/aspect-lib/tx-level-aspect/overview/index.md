@@ -4,18 +4,21 @@ sidebar_position: 2
 
 # Transaction Level Aspect
 
-There are two ways to implement a Transaction-level aspect, you can : 
-1. implement the `IAspectTransaction` interface 
-2. extend the `AbsAspectTransaction` abstract class
+## Introduction
 
+The Transaction Level Aspect defines multiple Join Points, with each one representing a distinct state transition
+function at a specific stage in the [transaction lifecycle](/develop/core-concepts/lifecycle),
+it needs to be binding a smart contract and activated by EOA transactions.
 
-### 1.Implement the `IAspectTransaction`
+## How to Create
+
+Implement the `IAspectTransaction` interface
 
 ```typescript
 
 import {
-    FilterTxCtx,
     IAspectTransaction,
+    FilterTxCtx,
     PostContractCallCtx,
     PostTxCommitCtx,
     PostTxExecuteCtx,
@@ -115,259 +118,36 @@ export class Aspect implements IAspectTransaction {
 
 ```
 
-### 2.Extend the `AbsAspectTransaction`
+## Description
 
-```typescript
-import {
-    AbsAspectTransaction,
-    PreTxExecuteCtx
-} from "@artela/aspect-libs";
+Next, we will provide a detailed description of each method in the IAspectTransaction interface. You can click on the links associated with each method name to access more detailed information. It is recommended to have a prior understanding of [the concept of Joinpoints](/develop/core-concepts/join-point).
 
-/**
- * There are two types of Aspect: Transaction-Level Aspect and Block-Level Aspect.
- * Transaction-Level Aspect will be triggered whenever there is a transaction calling the bound smart contract.
- * Block-Level Aspect will be triggered whenever there is a new block generated.
- *
- * An Aspect can be Transaction-Level, Block-Level,IAspectOperation or both.
- * You can implement corresponding interfaces: IAspectTransaction, IAspectBlock,IAspectOperation or both to tell Artela which
- * type of Aspect you are implementing.
- */
-export class Aspect extends AbsAspectTransaction {
-    /**
-     * isOwner is the governance account implemented by the Aspect, when any of the governance operation
-     * (including upgrade, config, destroy) is made, isOwner method will be invoked to check
-     * against the initiator's account to make sure it has the permission.
-     *
-     * @param ctx context of Aspect state
-     * @param sender address of the operation initiator
-     * @return true if check success, false if check fail
-     */
-    isOwner(sender: string): bool {
-        // always return false on isOwner can make the Aspect immutable
-        return false;
-    }
-    /**
-     * onContractBinding is an Aspect lifecycle hook, it will be invoked by Aspect Core when
-     * a new smart contract is binding to this Aspect. Aspect can choose whether to allow the
-     * binding request or not. The binding request will succeed if onContractBinding returns true,
-     * otherwise it will fail.
-     *
-     * @param ctx context of Aspect state
-     * @param contractAddr address of the smart contract to binding with current Aspect
-     * @return true if binding succeed, otherwise false
-     */
-    onContractBinding(contractAddr: string): bool {
-        return true;
-    }
-    /**
-     * preTxExecute is a join-point which will be invoked before the transaction execution.
-     *
-     * @param ctx context of the given join-point
-     * @return result of Aspect execution
-     */
-    preTxExecute(ctx: PreTxExecuteCtx): void {
-        // Implement me...
-    }
-}
-```
+1. IsOwner
+>It is the governance account implemented by the Aspect, when any of the governance operation (
+>including [bind](/develop/core-concepts/lifecycle#binding), [unbinding](/develop/core-concepts/lifecycle#unbinding), ...)
+>is made, isOwner method will be invoked to check against the initiator's account to make sure it has the permission.
 
+2. OnContractBinding
+> It is an Aspect lifecycle hook, it will be invoked by Aspect Core when a new smart contract 
+> is [binding](/develop/core-concepts/lifecycle#binding) to this Aspect. Aspect can choose whether to allow the binding
+> request or not. The binding request will succeed if onContractBinding returns true, otherwise it will fail.
 
-## Description of the methods
+3. FilterTx
+> Triggered when the RPC server receives this transaction, please note this join-point is outside consensus, so Aspect state is not allowed to be modified here.  
+> This join point still **in beta** and may be changed in the future, so it is not recommended for production.
 
-### 1. isOwner
+4. [PreTxExecute](/develop/reference/aspect-lib/tx-level-aspect/pre-tx-execute)
+> Triggered prior to the transaction execution. At this stage, the account state remains pristine, allowing Aspect to preload information as necessary.
 
-```typescript
- isOwner(sender: string): bool
-```
-#### Description
-`isOwner` is the governance account implemented by the Aspect, when any of the governance operation (including [bind](/develop/core-concepts/lifecycle#binding), [unbinding](/develop/core-concepts/lifecycle#unbinding), ...) is made, isOwner method will be invoked to check against the initiator's account to make sure it has the permission.  
+5. [PreContractCall](/develop/reference/aspect-lib/tx-level-aspect/pre-contract-call)
+> Triggered before the execution of the cross-contract call. For example, during a TX execution, Uniswap contract calls into Maker contract, the Aspect will be executed.
 
-#### Parameter
-* sender ： account address,like '0x6265617665726275696c642e666666'
+6. [PostContractCall](/develop/reference/aspect-lib/tx-level-aspect/post-contract-call)
+> Triggered after the cross-contract call is executed. The Aspect can then inspect the post-call state of the contract and make subsequent execution decisions.
 
-#### Output
+7. [PostTxExecute](/develop/reference/aspect-lib/tx-level-aspect/post-tx-execute)
+> Activated once the transaction has been executed and the account states have been finalized. Subsequently, Aspect can conduct a comprehensive review of the final execution state.
 
-* (bool) ：if false is returned, the governance operation will be blocked.
+8. [PostTxCommit](/develop/reference/aspect-lib/tx-level-aspect/post-tx-commit)
+> Triggered after the transaction has been finalized, and the modified states induced by the transaction have already been flushed into the state database. At this stage, Aspect can conduct post-processing activities, such as initiating an asynchronous task that can be executed in a future block.
 
-#### Example
-```typescript
-isOwner(sender: string): bool {
-    let value = sys.aspect.property.get<string>("owner");
-    return value.includes(sender);
-}
-```
-
-### 2. onContractBinding
-
-```typescript
- onContractBinding(contractAddr: string): bool
-```
-#### Description
-
-`onContractBinding` is an Aspect lifecycle hook, it will be invoked by Aspect Core when a new smart contract is [binding](/develop/core-concepts/lifecycle#binding) to this Aspect. Aspect can choose whether to allow the binding request or not. The binding request will succeed if onContractBinding returns true, otherwise it will fail.
-
-#### Parameter
-* contractAddr ：contract address,like '0x6265617665726275696c642e888888'
-
-#### Output
-
-* (bool) ：if false is returned, the aspect binding will be blocked.
-
-#### Example
-```typescript
-onContractBinding(contractAddr: string): bool {
-    let value = sys.aspect.property.get<string>("binding")
-    return !!value.includes(contractAddr);
-}
-```
-
-### 3. preTxExecute
-
-```typescript
-  preTxExecute(ctx: PreTxExecuteCtx): void 
-```
-#### Description
-
-`preTxExecute` is a join-point which will be invoked before the transaction execution. 
-
-#### Parameter
-* ctx ：PreTxExecuteCtx see [detailed](/develop/reference/aspect-lib/tx-level-aspect/pre-tx-execute)
-
-#### Output
- 
-void 
-
-#### Example
-```typescript
-preTxExecute(ctx: PreTxExecuteCtx): void {
-    let value = "value"
-    ctx.aspect.transientStorage<string>("key").set<string>(value);
-    let get = ctx.aspect.transientStorage<string>("key").unwrap();
-    sys.require(get == value, "Not equal")
-}
-```
-
-### 4. preContractCall
-
-```typescript
-  preContractCall(ctx: PreContractCallCtx): void 
-```
-#### Description
-
-preContractCall is a join-point which will be invoked before the contract call is executed.
-
-#### Parameter
-
-* ctx ：PreContractCallCtx see [detailed](/develop/reference/aspect-lib/tx-level-aspect/pre-contract-call)
-
-#### Output
-
- void 
-
-#### Example
-
-```typescript
- preContractCall(ctx: PreContractCallCtx): void  {
-    let value = "value"
-    ctx.aspect.transientStorage<string>("key").set<string>(value);
-    let get = ctx.aspect.transientStorage<string>("key").unwrap();
-    sys.require(get == value, "Not equal")  // if false revert evm tx
-}
-```
-
-
-### 5. postContractCall
-
-```typescript
-   postContractCall(ctx: PostContractCallCtx): void
-```
-#### Description
-
-postContractCall is a join-point which will be invoked after a contract has finished.
-
-#### Parameter
-
-* ctx ：PostContractCallCtx see [detailed](/develop/reference/aspect-lib/tx-level-aspect/post-contract-call)
-
-#### Output
-
- void
-
-#### Example
-```typescript
- postContractCall(ctx: PostContractCallCtx): void  {
-    let value = "value"
-    ctx.aspect.transientStorage<string>("key").set<string>(value);
-    let get = ctx.aspect.transientStorage<string>("key").unwrap();
-    sys.require(get == value, "Not equal")
-}
-```
-
-### 6. postTxExecute
-
-```typescript
-   postTxExecute(ctx: PostTxExecuteCtx): void 
-```
-#### Description
-
-postTxExecute is a join-point which will be invoked when the transaction execution is finished but state is not committed.
-
-#### Parameter
-
-* ctx ：PostTxExecuteCtx see [detailed](/develop/reference/aspect-lib/tx-level-aspect/post-tx-execute)
-
-#### Output
-
-void, but may impact the regular execution flow of the EVM transaction when coupled with the following methods.
-* [sys.require](/develop/reference/aspect-lib/sys-namespace/sys)
-* [sys.revert](/develop/reference/aspect-lib/sys-namespace/sys)
-
-#### Example
-```typescript
-postTxExecute(ctx: PostTxExecuteCtx): void  {
-    let value = "value"
-    ctx.aspect.transientStorage<string>("key").set<string>(value);
-    let get = ctx.aspect.transientStorage<string>("key").unwrap();
-    sys.require(get == value, "Not equal")
-}
-```
-
-
-### 7. postTxCommit
-
-```typescript
-   postTxCommit(ctx: PostTxCommitCtx): void 
-
-```
-#### Description
-
-postTxCommit is a join-point which will be invoked after the state of the transaction is committed.
-
-#### Parameter
-
-* ctx ：PostTxCommitCtx see [detailed](/develop/reference/aspect-lib/tx-level-aspect/post-tx-commit)
-
-#### Output
-
-void, Since the switch is executed after the EVM is executed, the following method will print the exception log on the server.
-* [sys.require](/develop/reference/aspect-lib/sys-namespace/sys)
-* [sys.revert](/develop/reference/aspect-lib/sys-namespace/sys)
-
-#### Example 
-```typescript
- postTxCommit(ctx: PostTxCommitCtx): void  {
-    let value = "value"
-    ctx.aspect.transientStorage<string>("key").set<string>(value);
-    let get = ctx.aspect.transientStorage<string>("key").unwrap();
-    sys.require(get == value, "Not equal")
-}
-```
-
-
-
-
----
-For more information on Transaction-level Aspect Perceptions, see Transaction-level Aspect;
-
-* [aspect-programming](/develop/core-concepts/aspect-programming)
-* [aspect-lifecycle](/develop/core-concepts/lifecycle)

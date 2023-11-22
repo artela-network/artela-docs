@@ -1,288 +1,353 @@
----
-sidebar_position: 2
----
 
-# PostTxExecuteCtx
+# PostTxExecute
 
->
+## Introduction
 
-## Where was it created
+The PostTxExecute join point occurs during the `DeliverTx` phase of the [Transaction lifecycle](https://docs.cosmos.network/v0.47/learn/beginner/tx-lifecycle).  
+This join point was activated once the transaction has been executed and the account states have been finalized. Subsequently, in this join point can conduct a comprehensive review of the final execution state.
 
-At [evm.go](https://github.com/artela-network/artela/blob/cb7101509a52ffcd00e1c2726f7b0fbc7102c918/x/evm/keeper/evm.go#L391),
-before evm call to create `PostTxExecuteCtx` ，and execute Join point `PostTxExecute`.
+![img.png](../img/jp.png)
 
-<!-- @formatter:off -->
-```javascript
-    // evm  call
-  	ret, leftoverGas, vmErr = evm.Call(sender, *msg.To, msg.Data, leftoverGas, msg.Value)
-    // artela aspect PostTxExecute start
-    pointRequest.GasInfo.Gas = leftoverGas
-    txExecute := djpm.AspectInstance().PostTxExecute(pointRequest)
-    if hasPostErr, postExecErr := txExecute.HasErr(); hasPostErr {
-      vmErr = postExecErr
-    }
-    leftoverGas = txExecute.GasInfo.Gas
+## Example
+
+```typescript
+  postTxExecute(ctx:PostTxExecuteCtx):void {
+    let value = "value"
+    ctx.aspect.transientStorage<string>("key").set<string>(value);
+    let get = ctx.aspect.transientStorage<string>("key").unwrap();
+    sys.require(get == value, "Not equal")
+  }
 ```
-<!-- @formatter:on -->
+## Programming
 
-## Use Cases
+There are two programming modes that can be used in this method:
+1. Using the 'sys' namespace, it provides low-level API access to system data and contextual information generated during blockchain runtime, including details about the environment, blocks, transactions, and utility classes such as crypto and ABI encoding/decoding. see [more details](/develop/reference/aspect-lib/components/overview).
+2. By utilizing the 'ctx' input argument, it provides essential insights into transactions and block processing, encompassing smart contract state updates, logged events, and raw transaction data. see [how to use ctx](#how-to-use-ctx).
 
-### Transaction Context
+whatever,the two methods can be used interchangeably.
 
-#### Get the currently executed transaction
+**Important point**: Since the join point is in the EVM execution process, using [sys.revert()](/develop/reference/aspect-lib/components/sys#1-revert), [sys.require()](/develop/reference/aspect-lib/components/sys#3-require) in this join point will actually revert the transaction.
 
-* return
-  * [EthTransaction](/docs/classes/proto.EthTransaction.html)
+## How to use `ctx`
 
+### 1. get transaction
+> Get the currently executed transaction.
+>
+<!-- @formatter:off -->
 ```typescript
     let transaction = ctx.tx.content.unwrap()!
 ```
+<!-- @formatter:on -->
 
-#### Get Transaction Ext Properties
+* Return
+  * <a href="/api/docs/classes/proto.EthTransaction.html" target="_blank">EthTransaction</a>
 
-* Parameter
-  * key: Properties keys
-    * `txIndex` get transaction index in block.
-* return
-  * sting
-* Default Key
+### 2. get transaction properties
 
+> Get transaction extension properties
+
+<!-- @formatter:off -->
 ```typescript
     let popVal = ctx.tx.extProperties.property.get("xx");
 ```
+<!-- @formatter:on -->
 
-#### GasMeter
+* Parameter
+  * key: Properties keys, default key list:
+    * `txIndex` get transaction index in block.
+* Return
+  * string
 
-* return
-  * [GasMeter](/docs/classes/proto.GasMeter.html)
-
+### 3. get transaction gas meter
+> Get transaction gas meter
+>
+<!-- @formatter:off -->
 ```typescript
     let gasMeter = ctx.tx.gasMeter.unwrap()!
 ```
+<!-- @formatter:on -->
 
-### Block Context
+* Return
+  * <a href="/api/docs/classes/proto.GasMeter.html" target="_blank">GasMeter</a>
 
-#### Block GasMeter
+### 4. get block gas meter
 
-* return
-  * [GasMeter](/docs/classes/proto.GasMeter.html)
+>Get block gas meter
 
+<!-- @formatter:off -->
 ```typescript
     let meter = ctx.block.gasMeter.unwrap();
 ```
+<!-- @formatter:on -->
 
-#### Block Eth Block Header
+* Return
+  * <a href="/api/docs/classes/proto.GasMeter.html" target="_blank">GasMeter</a>
 
-* return
-  * [EthBlockHeader](/docs/classes/proto.GasMeter.html)
+### 5. get block header
 
+> Get the block header.
+
+<!-- @formatter:off -->
 ```typescript
     let header = ctx.block.header.unwrap();
 ```
+<!-- @formatter:on -->
 
-#### Block Min Gas Price
+* Return
+  * <a href="/api/docs/classes/proto.EthBlockHeader.html" target="_blank">EthBlockHeader</a>
 
-* return
-  * [MinGasPrice](/docs/classes/proto.MinGasPrice.html)
+### 6. get block min gas price
 
+> Get the block min gas price.
+
+<!-- @formatter:off -->
 ```typescript
     let minGasPrice = ctx.block.minGasPrice.unwrap();
 ```
+<!-- @formatter:on -->
 
-#### Last Commit Info
+* Returns
+  * <a href="/api/docs/classes/proto.MinGasPrice.html" target="_blank">MinGasPrice</a>
 
-* return
-  * [LastCommitInfo](/docs/classes/proto.LastCommitInfo.html)
+### 7. get block last commit
 
+> Get the block last commit info.
+
+<!-- @formatter:off -->
 ```typescript
     let lastCommit = ctx.block.lastCommit.unwrap();
 ```
+<!-- @formatter:on -->
 
-#### Get Partial Body that have same tx.To
+* Returns
+  * <a href="/api/docs/classes/proto.LastCommitInfo.html" target="_blank">LastCommitInfo</a>
 
-* return
-  * [EthTxArray](/docs/classes/proto.EthTxArray.html)
+### 8. get block partial tx
 
+> Get partial body that have same tx.To
+
+<!-- @formatter:off -->
 ```typescript
     let txs = ctx.block.partialBody.unwrap();
 ```
+<!-- @formatter:on -->
 
-### Environment Context
+* Returns
+  * <a href="/api/docs/classes/proto.EthTxArray.html" target="_blank">EthTxArray</a>
 
-#### Get Environment Content
+### 9. get environment
 
-* return
-  * [EnvContent](/docs/classes/proto.EnvContent.html)
+> Get environment content.
 
+<!-- @formatter:off -->
 ```typescript
-    let envContent = ctx.env.baseFee.unwrap();
+   let envContent = ctx.env.baseFee.unwrap();
 ```
+<!-- @formatter:on -->
 
-#### Get Chain Config
+* Returns
+  * <a href="/api/docs/classes/proto.EnvContent.html" target="_blank">EnvContent</a>
 
-* return
-  * [ChainConfig](/docs/classes/proto.ChainConfig.html)
+### 10. get chain config
 
+> Get chain config
+
+<!-- @formatter:off -->
 ```typescript
-    let chainConfig = ctx.env.chainConfig.unwrap();
+   let chainConfig = ctx.env.chainConfig.unwrap();
 ```
+<!-- @formatter:on -->
 
-#### Get Evm Params
+* Returns
+  * <a href="/api/docs/classes/proto.ChainConfig.html" target="_blank">ChainConfig</a>
 
-* return
-  * [EvmParams](/docs/classes/proto.EvmParams.html)
+### 11. get evm params
 
+> Get evm params
+
+<!-- @formatter:off -->
 ```typescript
     let evmParams = ctx.env.evmParams.unwrap();
 ```
+<!-- @formatter:on -->
 
-#### Get Consensus Params
+* Returns
+  * <a href="/api/docs/classes/proto.EvmParams.html" target="_blank">EvmParams</a>
 
-* return
-  * [ConsParams](/docs/classes/proto.ConsParams.html)
+### 12. get consensus params
 
+> Get consensus params
+
+<!-- @formatter:off -->
 ```typescript
     let ConsParams = ctx.env.consensusParams.unwrap();
 ```
+<!-- @formatter:on -->
 
-### StateDB
+* Returns
+  * <a href="/api/docs/classes/proto.ConsParams.html" target="_blank">ConsParams</a>
 
-#### Get Balance
+### 13. get balance
 
-> retrieves the balance from the given address or 0 if object not found
+> Retrieves the balance from the given address or 0 if object not found
 
-* Parameter
-  * address: account address
-* return
-  * (string): balance value, big int string
-
+<!-- @formatter:off -->
 ```typescript
-    let balance = ctx.stateDB.balance("0x111222333444555666");
+     let balance = ctx.stateDB.balance("0x111222333444555666");
 ```
+<!-- @formatter:on -->
 
-#### Get Nonce
+* Parameter
+  * string: account address hex string.
+* Return
+  * string: balance value,big int string.
 
-> returns the nonce of account, 0 if not exists.
+### 14. get nonce
+
+> Returns the nonce of account, 0 if not exists.
+
+<!-- @formatter:off -->
+```typescript
+    let nonce = ctx.stateDB.nonce("0x111222333444555666");
+```
+<!-- @formatter:on -->
 
 * Parameter
   * address: account address
-* return
+* Return
   * (i64): nonce value
 
+### 15. get state
+
+> Retrieves a value from the given account's storage trie.
+
+<!-- @formatter:off -->
 ```typescript
-     let nonce = ctx.stateDB.nonce("0x111222333444555666");
+    let state = ctx.stateDB.stateAt("0x111222333444555666", "0x9999988888xxx");
 ```
-
-#### Get State
-
-> retrieves a value from the given account's storage trie.
+<!-- @formatter:on -->
 
 * Parameter
   * address: account address
   * hash:  one key, hash hex string
-* return
+* Return
   * (string): state , hash hex string
 
-```typescript
-     let state = ctx.stateDB.stateAt("0x111222333444555666", "0x9999988888xxx");
-```
+### 16. get refund
 
-#### Get Refund
+> Returns the current value of the refund counter.
 
-> returns the current value of the refund counter.
-
-* return
-  * (i64): the current value of the refund counter
-
+<!-- @formatter:off -->
 ```typescript
     let refund = ctx.stateDB.refund();
 ```
+<!-- @formatter:on -->
 
-#### Get CodeHash
+* Return
+  * (i64): the current value of the refund counter
 
-> returns the code hash of account.
+### 17. get codeHash
+
+> Returns the code hash of account.
+
+<!-- @formatter:off -->
+```typescript
+   let codeHash = ctx.stateDB.codeHash("0x111222333444555666");
+```
+<!-- @formatter:on -->
 
 * Parameter
   * addr: address hash hex string
-* return
+* Return
   * (i64): the current value of the refund counter
 
+
+### 18. get transient storage
+
+> Get aspect transientStorage value
+
+<!-- @formatter:off -->
 ```typescript
-    let codeHash = ctx.stateDB.codeHash("0x111222333444555666");
+   let value = ctx.aspect.transientStorage<string>("key").unwrap();
 ```
+<!-- @formatter:on -->
 
-### TransientStorage
-
-#### Get Aspect transientStorage value
-
-* return
+* Return
   * T : generics type value
 
+### 19. set transient storage
+
+> Set aspect transientStorage value
+
+<!-- @formatter:off -->
 ```typescript
-    let value = ctx.aspect.transientStorage<string>("key").unwrap();
+   let isSuccess: bool = ctx.aspect.transientStorage<string>("key").set<string>("value");
 ```
+<!-- @formatter:on -->
 
-#### Set Aspect transientStorage value
-
-* return
+* Return
   * bool ：set success
 
+### 20. set Aspect state
+
+> Set value to Aspect state
+
+<!-- @formatter:off -->
 ```typescript
-    let isSuccess: bool = ctx.aspect.transientStorage<string>("key").set<string>("value");
+   ctx.mutableState.get<string>("key").set<string>("value")
 ```
-
-### MutableState
-
-#### Set Value
-
-> set value to aspect state
+<!-- @formatter:on -->
 
 * Parameter
   * key: generics type key
   * value: generics type value
 
+### 21. get Aspect state
+
+> Get value from Aspect state
+
+<!-- @formatter:off -->
 ```typescript
-    ctx.mutableState.get<string>("key").set<string>("value")
+   let value = ctx.mutableState.get<string>("key").unwrap();
 ```
-
-#### Get Value
-
-> Get value from aspect state
+<!-- @formatter:on -->
 
 * Parameter
   * key: generics type key
 * Return
   * T：generics type value
 
+
+### 22. get property
+
+> Get property value
+
+<!-- @formatter:off -->
 ```typescript
-    let value = ctx.mutableState.get<string>("key").unwrap();
+   let value = ctx.property.get<string>("key");
 ```
-
-### Property
-
-#### Get property
-
-> get property value
+<!-- @formatter:on -->
 
 * Parameter
   * key: generics type key
+* Return
+  * T：generics type value
 
+### 23. evm static call
+
+> Executes a new message call immediately, without creating a transaction on the blockchain.
+
+<!-- @formatter:off -->
 ```typescript
-    let value = ctx.property.get<string>("key");
+    let ethMessage = new EthMessage( );
+    let result = ctx.staticCall.submit(ethMessage)
 ```
-
-### Evm Call
-
-#### StaticCall
-
->Executes a new message call immediately, without creating a transaction on the block chain.
+<!-- @formatter:on -->
 
 * Parameter
-  *  [EthMessage](/docs/classes/proto.EthMessage.html)
+  * <a href="/api/docs/classes/proto.EthMessage.html" target="_blank">EthMessage</a>
 * Return
-  *  [EthMessageCallResult](/docs/classes/proto.EthMessageCallResult.html)
+  * <a href="/api/docs/classes/proto.EthMessageCallResult.html" target="_blank">EthMessageCallResult</a>
 
-```typescript
-  let ethMessage = new EthMessage( );
-  let result = ctx.staticCall.submit(ethMessage)
-```
+----
+

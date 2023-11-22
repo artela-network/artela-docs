@@ -1,154 +1,209 @@
----
-sidebar_position: 2
----
 
-# OnBlockFinalizeCtx
+# OnBlockFinalize
 
->before evm call to create `OnBlockFinalizeCtx` ，and execute Join point `OnBlockFinalize`.
+## Introduction
 
-:::note
-This Joinpoint is currently in `beta` and might undergo significant changes in the future. Therefore, it's advisable not to use it for production purposes.
-:::
+The OnBlockInitialize join-point occurs during the `EndBlock` phase of the [Transaction lifecycle](https://docs.cosmos.network/v0.47/learn/beginner/tx-lifecycle).  
+This join point activated prior to the preparation of the block proposal. automated transaction is allowed to be inserted at this point.
 
-## Use Cases
+![img.png](../img/jp.png)
 
-### Block Context
+## Example
+<!-- @formatter:off -->
+```typescript
+ onBlockFinalize(ctx: OnBlockFinalizeCtx): void {
+  let broker = ctx.property.get<string>("Broker");
+  sys.require(broker=="0xaabbbcc..","invalid broker.")
+}
+```
+<!-- @formatter:on -->
 
-#### Block GasMeter
+## Programming
 
-* return
-    * [GasMeter](/docs/classes/proto.GasMeter.html)
+There are two programming modes that can be used in this method:
+1. Using the 'sys' namespace, it provides low-level API access to system data and contextual information generated during blockchain runtime, including details about the environment, blocks, transactions, and utility classes such as crypto and ABI encoding/decoding. see [more details](/develop/reference/aspect-lib/components/overview).
+2. By utilizing the 'ctx' input argument, it provides essential insights into transactions and block processing, encompassing smart contract state updates, logged events, and raw transaction data. see [how to use ctx](#how-to-use-ctx).
 
+whatever,the two methods can be used interchangeably.
+
+## How to use `ctx`
+
+### 1. get block gas meter
+
+>Get block gas meter
+
+<!-- @formatter:off -->
 ```typescript
     let meter = ctx.block.gasMeter.unwrap();
 ```
+<!-- @formatter:on -->
 
-#### Block Eth Block Header
+* Return
+  * <a href="/api/docs/classes/proto.GasMeter.html" target="_blank">GasMeter</a>
 
-* return
-    * [EthBlockHeader](/docs/classes/proto.GasMeter.html)
+### 2. get block header
 
+> Get the block header.
+
+<!-- @formatter:off -->
 ```typescript
     let header = ctx.block.header.unwrap();
 ```
+<!-- @formatter:on -->
 
-#### Block Min Gas Price
+* Return
+  * <a href="/api/docs/classes/proto.EthBlockHeader.html" target="_blank">EthBlockHeader</a>
 
-* return
-    * [MinGasPrice](/docs/classes/proto.MinGasPrice.html)
+### 3. get block min gas price
 
+> Get the block min gas price.
+
+<!-- @formatter:off -->
 ```typescript
     let minGasPrice = ctx.block.minGasPrice.unwrap();
 ```
+<!-- @formatter:on -->
 
-#### Last Commit Info
+* Returns
+  * <a href="/api/docs/classes/proto.MinGasPrice.html" target="_blank">MinGasPrice</a>
 
-* return
-    * [LastCommitInfo](/docs/classes/proto.LastCommitInfo.html)
+### 4. get block last commit
 
+> Get the block last commit info.
+
+<!-- @formatter:off -->
 ```typescript
     let lastCommit = ctx.block.lastCommit.unwrap();
 ```
+<!-- @formatter:on -->
 
-#### Get Partial Body that have same tx.To
+* Returns
+  * <a href="/api/docs/classes/proto.LastCommitInfo.html" target="_blank">LastCommitInfo</a>
 
-* return
-    * [EthTxArray](/docs/classes/proto.EthTxArray.html)
+### 5. get block partial tx
 
+> Get partial body that have same tx.To
+
+<!-- @formatter:off -->
 ```typescript
     let txs = ctx.block.partialBody.unwrap();
 ```
+<!-- @formatter:on -->
 
-### Environment Context
+* Returns
+  * <a href="/api/docs/classes/proto.EthTxArray.html" target="_blank">EthTxArray</a>
 
-#### Get Environment Content
+### 6. get environment
 
-* return
-    * [EnvContent](/docs/classes/proto.EnvContent.html)
+> Get environment content.
 
+<!-- @formatter:off -->
 ```typescript
-    let envContent = ctx.env.baseFee.unwrap();
+   let envContent = ctx.env.baseFee.unwrap();
 ```
+<!-- @formatter:on -->
 
-#### Get Chain Config
+* Returns
+  * <a href="/api/docs/classes/proto.EnvContent.html" target="_blank">EnvContent</a>
 
-* return
-    * [ChainConfig](/docs/classes/proto.ChainConfig.html)
+### 7. get chain config
 
+> Get chain config
+
+<!-- @formatter:off -->
 ```typescript
-    let chainConfig = ctx.env.chainConfig.unwrap();
+   let chainConfig = ctx.env.chainConfig.unwrap();
 ```
+<!-- @formatter:on -->
 
-#### Get Evm Params
+* Returns
+  * <a href="/api/docs/classes/proto.ChainConfig.html" target="_blank">ChainConfig</a>
 
-* return
-    * [EvmParams](/docs/classes/proto.EvmParams.html)
+### 8. get evm params
 
+> Get evm params
+
+<!-- @formatter:off -->
 ```typescript
     let evmParams = ctx.env.evmParams.unwrap();
 ```
+<!-- @formatter:on -->
 
-#### Get Consensus Params
+* Returns
+  * <a href="/api/docs/classes/proto.EvmParams.html" target="_blank">EvmParams</a>
 
-* return
-    * [ConsParams](/docs/classes/proto.ConsParams.html)
+### 9. get consensus params
 
+> Get consensus params
+
+<!-- @formatter:off -->
 ```typescript
     let ConsParams = ctx.env.consensusParams.unwrap();
 ```
+<!-- @formatter:on -->
 
-### MutableState
+* Returns
+  * <a href="/api/docs/classes/proto.ConsParams.html" target="_blank">ConsParams</a>
 
-#### Set Value
+### 10. set Aspect state
 
-> set value to aspect state
+> Set value to aspect state
+
+<!-- @formatter:off -->
+```typescript
+   ctx.mutableState.get<string>("key").set<string>("value")
+```
+<!-- @formatter:on -->
 
 * Parameter
-    * key: generics type key
-    * value: generics type value
+  * key: generics type key
+  * value: generics type value
 
-```typescript
-    ctx.mutableState.get<string>("key").set<string>("value")
-```
-
-#### Get Value
+### 11. get Aspect state
 
 > Get value from aspect state
 
+<!-- @formatter:off -->
+```typescript
+   let value = ctx.mutableState.get<string>("key").unwrap();
+```
+<!-- @formatter:on -->
+
 * Parameter
-    * key: generics type key
+  * key: generics type key
 * Return
-    * T：generics type value
+  * T：generics type value
 
+
+### 12. get property
+
+> Get property value
+
+<!-- @formatter:off -->
 ```typescript
-    let value = ctx.mutableState.get<string>("key").unwrap();
+   let value = ctx.property.get<string>("key");
 ```
-
-### Property
-
-#### Get property
-
-> get property value
+<!-- @formatter:on -->
 
 * Parameter
-    * key: generics type key
-
-```typescript
-    let value = ctx.property.get<string>("key");
-```
-
-### Evm Call
-
-#### StaticCall
-
->Executes a new message call immediately, without creating a transaction on the block chain.
-
-* Parameter
-    *  [EthMessage](/docs/classes/proto.EthMessage.html)
+  * key: generics type key
 * Return
-    *  [EthMessageCallResult](/docs/classes/proto.EthMessageCallResult.html)
+  * T：generics type value
 
+### 13. evm static call
+
+> Executes a new message call immediately, without creating a transaction on the blockchain.
+
+<!-- @formatter:off -->
 ```typescript
-  let ethMessage = new EthMessage( );
-  let result = ctx.staticCall.submit(ethMessage)
+    let ethMessage = new EthMessage( );
+    let result = ctx.staticCall.submit(ethMessage)
 ```
+<!-- @formatter:on -->
+
+* Parameter
+  * <a href="/api/docs/classes/proto.EthMessage.html" target="_blank">EthMessage</a>
+* Return
+  * <a href="/api/docs/classes/proto.EthMessageCallResult.html" target="_blank">EthMessageCallResult</a>
+
+----
