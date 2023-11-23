@@ -1,15 +1,16 @@
-
-# Project Config
+# Configuration
 
 ## Introduce
-Users can customize the following configuration within the project:
-* 1. Contract compilation tool optional
-* 2. Artela Network Rpc
 
+In general, developers' deployment and debugging environments may differ from the default environment. This involves
+specific configurations and settings tailored to development, allowing users to customize modifications in the following
+project configurations.
+1. Contract compiler 
+2. Network Rpc
 
-## Configuration
+## Options
 
-### 1. Contract compilation tool optional
+### 1. Contract compiler
 
 Sometimes you need to change the compilation method to get different features, for example, to use artela-evm features,
 you need to use asolc to compile the contract, so you need to modify the compilation method of the smart contract.
@@ -60,7 +61,7 @@ Modify the 'contract:build' in the 'package.json' to support it:
     }
    ```
 
-### 2.Network Rpc Configuration
+### 2.Network Rpc
 
 modify the `project.config.json` in the project root folder to set the network configurations as the following (assuming
 we are using [artela devnet](/develop/node/access-testnet), if you are using your own node, please change the config
@@ -68,6 +69,6 @@ accordingly):
 
 ```json
 {
-  "node": "https://artela-devnet-rpc1.artela.network"
+   "node": "https://testnet-rpc1.artela.network"
 }
 ```

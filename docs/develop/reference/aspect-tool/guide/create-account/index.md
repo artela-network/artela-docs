@@ -21,3 +21,11 @@ node scripts/create-account.cjs
 The logic for the create-account command is written in the `scripts/create-account.cjs` file, primarily relying on the
 implementation provided by the [@artela/web3](/develop/client/artela-web3.js) API.   
 If needed, you can modify the logic within this file to achieve your specific functionalities.
+
+If the command is executed successfully, the following log will be printed and a privateKey file will be generated at '{file_path}'.
+```shell
+> account:create
+> node scripts/create-account.cjs
+
+address:  0x773B8Da8De01C9a35DCb74E4C204...
+```

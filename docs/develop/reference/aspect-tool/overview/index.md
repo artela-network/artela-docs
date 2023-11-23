@@ -34,8 +34,11 @@ npm install @artela/aspect-tool
 
 ## Commands
 
+This tool contains two commands:
+
 1. Init a aspect project in a directory.
-```shell
+
+```jsx
 USAGE
   $ aspect-tool init [-d <value>]
 FLAGS
@@ -43,7 +46,8 @@ FLAGS
 ```
 
 2. Generate state tracing code for Aspect.
-```shell
+
+```jsx
 USAGE
   $ aspect-tool generate [-i <value>] [-o <value>]
 FLAGS
@@ -53,17 +57,17 @@ FLAGS
 
 ## Tool Guide
 
-* Init project
-* Configuration
-* Create a account
-* Build contract
-* Deploy contract
-* Contract call
-* Send transaction
-* Build Aspect
-* Deploy Aspect
-* Aspect operation
+* [Init project](/develop/reference/aspect-tool/guide/init)
+* [Configuration](/develop/reference/aspect-tool/guide/config)
+* [Create a account](/develop/reference/aspect-tool/guide/create-account)
+* [Build contract](/develop/reference/aspect-tool/guide/build-contract)
+* [Deploy contract](/develop/reference/aspect-tool/guide/deploy-contract)
+* [Build Aspect](/develop/reference/aspect-tool/guide/build-aspect)
+* [Deploy Aspect](/develop/reference/aspect-tool/guide/deploy-aspect)
+* [Contract bind Aspect](/develop/reference/aspect-tool/guide/bind-aspect)
+* [Contract call](/develop/reference/aspect-tool/guide/contract-call)
+* [Send transaction](/develop/reference/aspect-tool/guide/send-tx)
 
 ## Advanced
 
-* Generate State tracing class
+* [Aspect Generate](/develop/reference/aspect-tool/advanced/generate)
