@@ -87,7 +87,6 @@ artelad init <custom_moniker> # e.g artelad init test111
 **2). Copy genesis from [genesis.json](./genesis.json), and move to the home directory.**
 
 ```bash
-vim genesis.json
 mv genesis.json $HOME/.artelad/config/genesis.json
 ```
 
@@ -99,7 +98,6 @@ Add two of them to `seeds` in `app.toml`
 
 ```bash
 cd $HOME/.artelad/config
-sed -i 's/minimum-gas-prices = ""/minimum-gas-prices = "0.0025stake"/' app.toml
 # e.g sed -i 's/seeds = ""/seeds = "ef1777650f2a5f96cfbf2b1b21feb45ef09bbaa4@172.16.10.2:26656,96a8e722f93acacd21baec6db51acd6cc16bbee2@172.16.10.4:26656"/' config.toml
 sed -i 's/seeds = ""/seeds = "<node-id-1@node-1-ip:port>,<node-id-2@node-2-ip:port>"/' config.toml
 ```
