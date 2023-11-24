@@ -3,10 +3,20 @@
 
 ## Introduction
 
-The PostTxExecute join point occurs during the `DeliverTx` phase of the [Transaction lifecycle](https://docs.cosmos.network/v0.47/learn/beginner/tx-lifecycle).  
-This join point was activated once the transaction has been executed and the account states have been finalized. Subsequently, in this join point can conduct a comprehensive review of the final execution state.
+The PostTxExecute join point occurs during the `DeliverTx` phase of the [Transaction lifecycle](https://docs.cosmos.network/v0.47/learn/beginner/tx-lifecycle). 
+This join point was activated once the transaction has been executed. Below is call graph:
 
-![img.png](../img/jp.png)
+* `ApplyTransaction`
+  * ⮕ `ApplyMessageWithConfig`
+    * ⮕ `evm.Call`
+      * ⮕ `loop opCodes`
+        * | `evm.Interpreter.Run 0`
+        * | `evm.Interpreter.Run 1`
+        * ....
+    * ⚙ [PostTxExecute join point](/develop/reference/aspect-lib/tx-level-aspect/post-tx-execute)   *
+  * ⮕ `RefundGas`
+
+At this stage, the account states have been finalized. Subsequently, in this join point can conduct a comprehensive review of the final execution state.
 
 ## Example
 

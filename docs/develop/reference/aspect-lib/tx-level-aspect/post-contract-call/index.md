@@ -3,10 +3,27 @@
 
 ## Introduction
 
-The PostContractCall join point occurs during the `DeliverTx` phase of the [Transaction lifecycle](https://docs.cosmos.network/v0.47/learn/beginner/tx-lifecycle).  
-This join point will be triggered after the cross-contract call is executed. The Aspect can then inspect the post-call state of the contract and make subsequent execution decisions.
+The PostContractCall join point occurs during the `DeliverTx` phase of
+the [Transaction lifecycle](https://docs.cosmos.network/v0.47/learn/beginner/tx-lifecycle).
+This join point will be triggered after the cross-contract call is executed. Below is `evm call` graph:
 
-![img.png](../img/jp.png)
+* `ApplyTransaction`
+  * ⮕ `ApplyMessageWithConfig`
+    * ⮕ `evm.Call`
+      * ⮕ `loop opCodes`
+        * | ⚙ [PreContractCall join point](/develop/reference/aspect-lib/tx-level-aspect/pre-contract-call)
+        * | `evm.Interpreter.Run`
+        * | ⚙ [PostContractCall join point](/develop/reference/aspect-lib/tx-level-aspect/post-contract-call)
+        *
+        * | ⚙ [PreContractCall join point](/develop/reference/aspect-lib/tx-level-aspect/pre-contract-call)
+        * | `evm.Interpreter.Run`
+        * | ⚙ [PostContractCall join point](/develop/reference/aspect-lib/tx-level-aspect/post-contract-call)
+        * ....
+        *
+  * ⮕ `RefundGas`
+
+At this stage, the join point has the capability to examine the post-call state of the contract, enabling it to make
+informed decisions for subsequent execution.
 
 ## Example
 

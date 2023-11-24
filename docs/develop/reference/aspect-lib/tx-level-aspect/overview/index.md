@@ -10,6 +10,31 @@ The Transaction Level Aspect defines multiple Join Points, with each one represe
 function at a specific stage in the [transaction lifecycle](/develop/core-concepts/lifecycle),
 it needs to be binding a smart contract and activated by EOA transactions.
 
+![img.png](../img/jp.png)
+
+The current transaction is delivered to the Evm module, and Transactions are applied according to Geth's execution
+logic `ApplyTransaction` ⮕ `ApplyMessage` ⮕ `evm. Call`, In this process, additional Join Points are executed, and the
+process is shown in the following call graph.
+
+* `ApplyTransaction`
+    * ⮕ `ApplyMessageWithConfig`
+        * ⚙ [PreTxExecute join point](/develop/reference/aspect-lib/tx-level-aspect/pre-tx-execute)
+        * ⮕ `evm.Call`
+            * ⮕ `loop opCodes`
+                * | ⚙ [PreContractCall join point](/develop/reference/aspect-lib/tx-level-aspect/pre-contract-call)
+                * | `evm.Interpreter.Run`
+                * | ⚙ [PostContractCall join point](/develop/reference/aspect-lib/tx-level-aspect/post-contract-call)
+                *
+                * | ⚙ [PreContractCall join point](/develop/reference/aspect-lib/tx-level-aspect/pre-contract-call)
+                * | `evm.Interpreter.Run`
+                * | ⚙ [PostContractCall join point](/develop/reference/aspect-lib/tx-level-aspect/post-contract-call)
+                * ....
+                *
+        * ⚙ [PostTxExecute join point](/develop/reference/aspect-lib/tx-level-aspect/post-tx-execute)
+    * ⚙ [PostTxCommit join point](/develop/reference/aspect-lib/tx-level-aspect/post-tx-commit)
+    * ⮕ `RefundGas`
+
+
 ## How to Create
 
 Implement the `IAspectTransaction` interface

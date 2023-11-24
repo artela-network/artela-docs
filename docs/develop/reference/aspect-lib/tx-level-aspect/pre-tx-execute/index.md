@@ -7,8 +7,20 @@ sidebar_position: 2
 
 ## Introduction
 
-The PreTxExecute join point occurs during the `DeliverTx` phase of the [Transaction lifecycle](https://docs.cosmos.network/v0.47/learn/beginner/tx-lifecycle).  
-This join point is invoked before the transaction execution. At this stage, the account state remains pristine, allowing Aspect to preload information as necessary.
+The PreTxExecute join point occurs during the `DeliverTx` phase of the [Transaction lifecycle](https://docs.cosmos.network/v0.47/learn/beginner/tx-lifecycle). 
+This join point is invoked before the transaction execution. Below is call graph:
+
+* `ApplyTransaction`
+  * ⮕ `ApplyMessageWithConfig`
+    * ⚙ [PreTxExecute join point](/develop/reference/aspect-lib/tx-level-aspect/pre-tx-execute)
+    * ⮕ `evm.Call`
+      * ⮕ `loop opCodes`
+        * | `evm.Interpreter.Run 0`
+        * | `evm.Interpreter.Run 1`
+        * ....
+  * ⮕ `RefundGas`
+
+At this stage, the account state remains pristine, allowing Aspect to preload information as necessary.
 
 ![img.png](../img/jp.png)
 

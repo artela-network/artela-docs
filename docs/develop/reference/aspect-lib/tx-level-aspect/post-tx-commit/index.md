@@ -6,10 +6,21 @@ sidebar_position: 2
 
 ## Introduction
 
-The PostTxCommit join point occurs during the `DeliverTx` phase of the [Transaction lifecycle](https://docs.cosmos.network/v0.47/learn/beginner/tx-lifecycle).  
-This join point triggered after the transaction has been finalized, and the modified states induced by the transaction have already been flushed into the state database. At this stage, can conduct post-processing activities, such as initiating an asynchronous task that can be executed in a future block.
+The PostTxCommit join point occurs during the `DeliverTx` phase of the [Transaction lifecycle](https://docs.cosmos.network/v0.47/learn/beginner/tx-lifecycle).
+This join point triggered after the transaction has been finalized. Below is `evm call` graph:
 
-![img.png](../img/jp.png)
+* `ApplyTransaction`
+  * ⮕ `ApplyMessageWithConfig`
+    * ⚙ [PreTxExecute join point](/develop/reference/aspect-lib/tx-level-aspect/pre-tx-execute)
+    * ⮕ `evm.Call`
+      * ⮕ `loop opCodes`
+        * | `evm.Interpreter.Run 0`
+        * | `evm.Interpreter.Run 1`
+        * ....
+  * ⮕ `RefundGas`
+
+At this point, the transaction-induced state changes have been successfully recorded in the state database.
+Subsequently, post-processing activities can be carried out, such as triggering an asynchronous task that will be executed in a future block.
 
 ## Example
 

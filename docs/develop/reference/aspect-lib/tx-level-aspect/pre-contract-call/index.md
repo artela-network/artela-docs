@@ -7,7 +7,24 @@ sidebar_position: 2
 ## Introduction
 
 The PreContractCall join point occurs during the `DeliverTx` phase of the [Transaction lifecycle](https://docs.cosmos.network/v0.47/learn/beginner/tx-lifecycle).  
-This join point will be invoked before the contract call is executed. At this stage, the account state remains pristine, allowing Aspect to preload information as necessary.
+This join point will be invoked before the contract call is executed. Below is  call graph:
+
+* `ApplyTransaction`
+  * ⮕ `ApplyMessageWithConfig`
+    * ⮕ `evm.Call`
+      * ⮕ `loop opCodes`
+        * | ⚙ [PreContractCall join point](/develop/reference/aspect-lib/tx-level-aspect/pre-contract-call)
+        * | `evm.Interpreter.Run`
+        * | ⚙ [PostContractCall join point](/develop/reference/aspect-lib/tx-level-aspect/post-contract-call)
+        *
+        * | ⚙ [PreContractCall join point](/develop/reference/aspect-lib/tx-level-aspect/pre-contract-call)
+        * | `evm.Interpreter.Run`
+        * | ⚙ [PostContractCall join point](/develop/reference/aspect-lib/tx-level-aspect/post-contract-call)
+        * ....
+        *
+  * ⮕ `RefundGas`
+
+At this stage, the account state remains pristine, allowing Aspect to preload information as necessary.
 
 ![img.png](../img/jp.png)
 
