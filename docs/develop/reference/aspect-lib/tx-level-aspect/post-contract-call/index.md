@@ -12,11 +12,11 @@ This join point will be triggered after the cross-contract call is executed. Bel
     * ⮕ `evm.Call`
       * ⮕ `loop opCodes`
         * | ⚙ [PreContractCall join point](/develop/reference/aspect-lib/tx-level-aspect/pre-contract-call)
-        * | `evm.Interpreter.Run`
+        * | `evm.Interpreter.Run 0`
         * | ⚙ [PostContractCall join point](/develop/reference/aspect-lib/tx-level-aspect/post-contract-call)
         *
         * | ⚙ [PreContractCall join point](/develop/reference/aspect-lib/tx-level-aspect/pre-contract-call)
-        * | `evm.Interpreter.Run`
+        * | `evm.Interpreter.Run 1`
         * | ⚙ [PostContractCall join point](/develop/reference/aspect-lib/tx-level-aspect/post-contract-call)
         * ....
         *

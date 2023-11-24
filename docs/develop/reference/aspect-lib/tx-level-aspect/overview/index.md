@@ -22,11 +22,11 @@ process is shown in the following call graph.
         * ⮕ `evm.Call`
             * ⮕ `loop opCodes`
                 * | ⚙ [PreContractCall join point](/develop/reference/aspect-lib/tx-level-aspect/pre-contract-call)
-                * | `evm.Interpreter.Run`
+                * | `evm.Interpreter.Run 0`
                 * | ⚙ [PostContractCall join point](/develop/reference/aspect-lib/tx-level-aspect/post-contract-call)
                 *
                 * | ⚙ [PreContractCall join point](/develop/reference/aspect-lib/tx-level-aspect/pre-contract-call)
-                * | `evm.Interpreter.Run`
+                * | `evm.Interpreter.Run 1`
                 * | ⚙ [PostContractCall join point](/develop/reference/aspect-lib/tx-level-aspect/post-contract-call)
                 * ....
                 *
