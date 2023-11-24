@@ -6,7 +6,7 @@ are a particularly complex data structure. We provide a trace state wrapper clas
 
 This guide instructs users on generating a wrapper class using `aspect-tool generate` and provides guidance on its utilization.
 
-## Command description:
+## Command
 
 ```shell
 USAGE
@@ -18,7 +18,7 @@ FLAGS
 
 ## Cases
 
-### 1.create a smart contract
+### 1. create a smart contract
 
 Add a smart contract to the 'contract' directory in the my-first-aspect project (
 see [Init Project](/develop/reference/aspect-tool/guide/init)), such as
