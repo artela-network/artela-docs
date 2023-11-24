@@ -2,9 +2,9 @@
 
 >Offers functionalities for accessing and interacting with smart contracts, including ABI (Application Binary Interface) handling, as well as encoding and decoding for various data types.
 
-## 1. function
+## 1. Function
 
-> ethereum namespace function list
+> Several methods commonly used for ABI operations are defined, ethereum namespace function list.
 
 ### 1. abiEncode
 
@@ -91,153 +91,18 @@ import {ethereum} from "@artela/aspect-libs";
 
 ---
 
-## 2. types
+## 2. Types
 
-Type Define :
+> Define the data type in the smart contract and the data type conversion, encoding, and decoding operations of AssemblyScript.
 
-```typescript
-export interface Type {
-    /**
-     * encode type to hex
-     */
-    encodeHex(): string;
-
-    /**
-     * encode type to Uint8Array
-     */
-    encodeUint8Array(): Uint8Array;
-
-    /**
-     * return name of the type, used to generate function signature
-     */
-    typeName(): string;
-
-    /**
-     * type kind
-     */
-    typeKind(): TypeId;
-
-    /**
-     * true if type is dynamic, otherwise false
-     */
-    isDynamicType(): boolean;
-
-    /**
-     * encode size of the type
-     */
-    typeSize(): u64;
-  }
-```
-
-Implement the `Type` class list
-
-```typescript
-enum TypeId {
-    Number,
-    BytesN,
-    Address,
-    Boolean,
-    Array,
-    Tuple,
-    Bytes,
-    String,
-  }
-```
-
-### 1.ethereum.Number
-
-<!-- @formatter:off -->
-```typescript
-// signed number to ethereum.Number
-let number = ethereum.Number.fromI8(0);
-let number = ethereum.Number.fromI16(0);
-let number = ethereum.Number.fromI32(0);
-let number = ethereum.Number.fromI64(0);
-
-// unsigned number to ethereum.Number
-let number = ethereum.Number.fromU8(0);
-let number = ethereum.Number.fromU16(0);
-let number = ethereum.Number.fromU32(0);
-let number = ethereum.Number.fromU64(0);
-
-//hex to  ethereum.Number
-let number = ethereum.Number.fromHexString("0x1b");
-//Uint8Array to ethereum.Number
-let number = ethereum.Number.fromUint8Array([2,1]);
-
-```
-<!-- @formatter:on -->
-
-### 2.ethereum.Int
-<!-- @formatter:off -->
-```typescript
-//hex to  ethereum.Int
-let number = ethereum.Int.fromHexString("0x1b");
-//Uint8Array to ethereum.Int
-let number = ethereum.Int.fromUint8Array([2,1]);
-```
-<!-- @formatter:on -->
-
-### 3.ethereum.Uint
-<!-- @formatter:off -->
-```typescript
-
-//hex to  ethereum.Uint
-let number = ethereum.Uint.fromHexString("0x1b");
-//Uint8Array to ethereum.Uint
-let number = ethereum.Uint.fromUint8Array([2,1]);
-```
-<!-- @formatter:on -->
-
-### 4.ethereum.Boolean
-<!-- @formatter:off -->
-```typescript
-// signed number to ethereum.Boolean
-let boolean = ethereum.Boolean.fromBoolean(true);
-let boolean = ethereum.Boolean.fromUint8Array([1]);
-```
-<!-- @formatter:on -->
-
-### 5.ethereum.Address
-<!-- @formatter:off -->
-```typescript
-// hex string to ethereum.Address
-let addr = ethereum.Address.fromHexString("0x1b");
-//
-let addr = ethereum.Address.fromUint8Array([]);
-```
-<!-- @formatter:on -->
-
-### 6.ethereum.Bytes
-<!-- @formatter:off -->
-```typescript
-// hex string to ethereum.Address
-let addr = ethereum.Bytes.fromHexString("0x1b");
-//
-let addr = ethereum.Bytes.fromUint8Array([]);
-```
-<!-- @formatter:on -->
-
-### 7.ethereum.BytesN
-<!-- @formatter:off -->
-```typescript
-// hex string to ethereum.Address
-let addr = ethereum.BytesN.fromHexString("0x1b");
-//
-let addr = ethereum.BytesN.fromUint8Array([]);
-```
-<!-- @formatter:on -->
-
-### 8.ethereum.ByteArray
-<!-- @formatter:off -->
-```typescript
-
-```
-<!-- @formatter:on -->
-
-### 9.ethereum.Tuple
-<!-- @formatter:off -->
-```typescript
-
-```
-<!-- @formatter:on -->
+1. <a href="/api/docs/classes/common.ethereum.Address.html" target="_blank">ethereum.Address</a>
+2. <a href="/api/docs/classes/common.ethereum.ArraySlice.html" target="_blank">ethereum.ArraySlice</a>
+3. <a href="/api/docs/classes/common.ethereum.Boolean.html" target="_blank">ethereum.Boolean</a> 
+4. <a href="/api/docs/classes/common.ethereum.ByteArray.html" target="_blank">ethereum.ByteArray</a> 
+5. <a href="/api/docs/classes/common.ethereum.Bytes.html" target="_blank">ethereum.Bytes</a> 
+6. <a href="/api/docs/classes/common.ethereum.BytesN.html" target="_blank">ethereum.BytesN</a> 
+7. <a href="/api/docs/classes/common.ethereum.Int.html" target="_blank">ethereum.Int</a> 
+8. <a href="/api/docs/classes/common.ethereum.Number.html" target="_blank">ethereum.Number</a> 
+9. <a href="/api/docs/classes/common.ethereum.String.html" target="_blank">ethereum.String</a> 
+10. <a href="/api/docs/classes/common.ethereum.Tuple.html" target="_blank">ethereum.Tuple</a> 
+11. <a href="/api/docs/classes/common.ethereum.Uint.html" target="_blank">ethereum.Uint</a> 

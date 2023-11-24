@@ -31,6 +31,20 @@ npx asinit .
 
 The asinit command automatically creates the recommended directory structure and configuration files.
 
+```shell
+.
+├── asconfig.json
+├── assembly                    // <-- your aspect here, directory holding the AssemblyScript sources being compiled to WebAssembly.
+│   ├── index.ts          // entry file being compiled to WebAssembly to get you started.
+│   └── tsconfig.json
+├── build
+├── index.html
+├── package-lock.json
+├── package.json
+└── tests
+    └── index.js
+```
+
 ### 2. Create a Aspect
 
 Add `@artela/aspect-libs` dependencies
@@ -39,8 +53,8 @@ Add `@artela/aspect-libs` dependencies
 npm install @artela/aspect-libs 
 ```
 
-Within the assembly directory of your project, create your aspect files with a .ts extension.
-For example, create a HelloWorld.ts file:
+Within the `./assembly` directory of your project, create your aspect files with a `.ts` extension.
+For example, create a `HelloWorld.ts` file:
 
 ```typescript
 import {
@@ -151,8 +165,22 @@ WebAssembly by executing the build command found in assembly/index.ts.
 ```shell
 npm run asbuild
 ```
-
 Doing so will emit the compiled binaries, bindings and definition files to the `build/` directory.
+
+```shell
+├── build
+│   ├── debug.d.ts  // debug TypeScript declaration file
+│   ├── debug.js    // debug JavaScript declaration file
+│   ├── debug.wasm   //debug WebAssembly bytecode file
+│   ├── debug.wasm.map  //debug WebAssembly output source map file
+│   ├── debug.wat      // debug WebAssembly text output file
+│   ├── release.d.ts    // release TypeScript declaration file
+│   ├── release.js      // release JavaScript declaration file
+│   ├── release.wasm    //release WebAssembly bytecode file
+│   ├── release.wasm.map //release WebAssembly output source map file
+│   └── release.wat    // release WebAssembly text output file
+
+```
 
 ## Summary
 
@@ -161,8 +189,12 @@ Doing so will emit the compiled binaries, bindings and definition files to the `
     * Block
     * Transaction
     * Operation
-* After developing the Aspect, you need to export the Entrypoint
-* Compile to check the Aspect for errors
-* You can use the `@artela/aspect-tool` to develop and deploy Aspect and smart contracts more conveniently
+* After developing the Aspect, you need to export the Entrypoint.
+* Compile to check the Aspect for errors, and get the WebAssembly bytecode file.
+* Since the [AssemblyScript](https://assemblyscript.bootcss.com/getting-started.html#setting-up-a-new-project) project
+  does not provide features such as Aspect deployment, binding, calls, etc., you need to use additional tools such
+  as [web3.js](/develop/client/artela-web3.js) to communicate with Artela Blockchain. We recommend that you
+  use [@artela/aspect-tool](/develop/reference/aspect-tool/overview). The tool offers functionality to create Aspect
+  development scaffolding and seamlessly integrates with the Artela Blockchain.
 
 
