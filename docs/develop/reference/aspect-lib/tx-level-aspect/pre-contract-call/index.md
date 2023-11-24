@@ -26,8 +26,6 @@ This join point will be invoked before the contract call is executed. Below is  
 
 At this stage, the account state remains pristine, allowing Aspect to preload information as necessary.
 
-![img.png](../img/jp.png)
-
 ## Example
 
 ```typescript

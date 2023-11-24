@@ -22,8 +22,6 @@ This join point is invoked before the transaction execution. Below is call graph
 
 At this stage, the account state remains pristine, allowing Aspect to preload information as necessary.
 
-![img.png](../img/jp.png)
-
 ## Example
 
 ```typescript
