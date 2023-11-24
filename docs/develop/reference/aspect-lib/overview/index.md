@@ -43,11 +43,11 @@ yarn add --dev @artela/aspect-libs    # Yarn
 
 ## Versions
 
-The apiVersion in the subgraph manifest specifies the mapping API version which is run by Graph Node for a given
-subgraph.
+The Version in the subgraph manifest specifies the mapping Aspect-lib version which is run by Artela Blockchain Node for a given
+Version.
 
 | Version | Artela Version | 	Release notes                                                                            |
 |:--------|:---------------|:------------------------------------------------------------------------------------------|
-| 0.0.24  | v0.4.1-beta    | The first beta is available, where the Transaction Level Aspect feature has been released |
+| 0.0.25  | v0.4.1-beta    | The first beta is available, where the Transaction Level Aspect feature has been released |
 
 
