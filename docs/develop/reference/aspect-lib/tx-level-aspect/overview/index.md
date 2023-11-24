@@ -34,7 +34,6 @@ process is shown in the following call graph.
     * ⚙ [PostTxCommit join point](/develop/reference/aspect-lib/tx-level-aspect/post-tx-commit)
     * ⮕ `RefundGas`
 
-
 ## How to Create
 
 Implement the `IAspectTransaction` interface
