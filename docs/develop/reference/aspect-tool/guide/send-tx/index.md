@@ -3,7 +3,9 @@
 Triggering the execution of a smart contract by sending a transaction on the blockchain. This may involve state changes,
 event triggering, or the execution of other contract logic.
 
-send transaction using the following command:
+## Command
+
+You can send transaction using the following command:
 
 ```shell
   npm run contract:send -- --pkfile {privateKey-path}    \     
@@ -34,6 +36,8 @@ If needed, you can modify the logic within this file to achieve your specific fu
 
 Furthermore，you can modify the `project.config.json` in the project root
 folder [to set the network configurations.](/develop/reference/aspect-tool/guide/config#2network-rpc).
+
+## Execution Status
 
 The current deployment is successful and the receipt for the transaction is printed.
 

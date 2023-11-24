@@ -2,6 +2,7 @@
 
 Binding associates an Aspect with a specific smart contract.See [details for concept](/develop/core-concepts/lifecycle#binding).
 
+## Command
 Contract Bind Aspect using the following command:
 ```bash
   npm run contract:bind -- --pkfile {privateKey-path} \                          
@@ -26,6 +27,8 @@ node scripts/bind.cjs
 The logic for the create-account command is written in the `scripts/bind.cjs` file, primarily relying on the
 implementation provided by the [@artela/web3](/develop/client/artela-web3.js) API.   
 If needed, you can modify the logic within this file to achieve your specific functionalities.
+
+## Execution Status
 
 The bind is successful and the receipt for the transaction is printed.
 ```shell

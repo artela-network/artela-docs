@@ -3,7 +3,11 @@
 The deployment of a smart contract involves publishing the contract's binary code, Application Binary Interface (ABI),
 and other necessary metadata to the `Artela` blockchain, thereby generating an associated address for the contract, making it
 available on the network.
-deploy contract using the following command:
+
+## Command
+
+You can deploy contract using the following command:
+
 ```bash
   npm run contract:deploy -- --pkfile {privateKey-path} \                        
                            --abi ./build/contract/xxx.abi \                          
@@ -29,6 +33,8 @@ implementation provided by the [@artela/web3](/develop/client/artela-web3.js) AP
 If needed, you can modify the logic within this file to achieve your specific functionalities.
 
 Furthermore，you can modify the `project.config.json` in the project root folder [to set the network configurations.](/develop/reference/aspect-tool/guide/config#2network-rpc).
+
+## Execution Status
 
 If the command is executed successfully, the following log will be printed, which can record the `contractAddress`, and some commands will rely on this value.
 

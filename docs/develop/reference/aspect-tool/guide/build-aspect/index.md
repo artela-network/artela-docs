@@ -2,7 +2,9 @@
 Upon completing Aspect development, it is necessary to use the contract compilation command to verify the correctness
 of the Aspect code and compiles to WebAssembly.
 
-you can build contract by using the following command:
+## Command
+
+You can build contract by using the following command:
 
 ```bash
 npm run aspect:build
@@ -12,6 +14,8 @@ Specifically, the command will be executed:
 npm run asbuild:debug && npm run asbuild:release
 ```
 For more information on compilation parameters, please refer [using the compiler](https://assemblyscript.bootcss.com/compiler.html#compiler-options).
+
+## Execution Status
 
 The compiled product is placed in the `build` directory.
 ```shell

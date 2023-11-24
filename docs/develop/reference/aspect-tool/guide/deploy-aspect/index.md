@@ -4,7 +4,10 @@ Deploying an Aspect is similar to deploying a smart contract, involving the publ
 essential metadata to the blockchain. This process results in the creation of an Aspect Address, making it accessible on
 the network.
 
-deploy Aspect using the following command:
+## Command
+
+You can deploy Aspect using the following command:
+
 ```bash
   npm run aspect:deploy -- --pkfile {privateKey-path} \                                                
                          --wasm ./build/release.wasm \
@@ -26,6 +29,8 @@ implementation provided by the [@artela/web3](/develop/client/artela-web3.js) AP
 If needed, you can modify the logic within this file to achieve your specific functionalities.
 
 Furthermore，you can modify the `project.config.json` in the project root folder [to set the network configurations.](/develop/reference/aspect-tool/guide/config#2network-rpc).
+
+## Execution Status
 
 The current deployment is successful and the receipt for the transaction is printed. which can record the `aspectID`, and some commands will rely on this value.
 

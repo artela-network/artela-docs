@@ -3,7 +3,10 @@
 `Contract call` refers to the operation of executing a smart contract on the blockchain. Through a contract call, users
 can interact with the target smart contract and execute the functions or methods defined within the contract.
 
-contract call using the following command:
+## Command
+
+You can contract call using the following command:
+
 ```shell
   npm run contract:call -- --pkfile {privateKey-path}    \     
                          --contract {smart-contract-address}  \                         
@@ -33,6 +36,8 @@ If needed, you can modify the logic within this file to achieve your specific fu
 
 Furthermore，you can modify the `project.config.json` in the project root
 folder [to set the network configurations.](/develop/reference/aspect-tool/guide/config#2network-rpc).
+
+## Execution Status
 
 The current deployment is successful and the receipt for the transaction is printed.
 
