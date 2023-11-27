@@ -24,40 +24,28 @@ Once you've initiated the node, connect to the JSON-RPC port service here:
 
 [genesis.json](./genesis.json)
 
-> **Admin**: Getting the genesis from the home directory `$HOME/.aretlad/config/genesis.json`of any node.
->
-
-### 2. Presistent nodes
+### 2. Persistent nodes
 
 ```json
-ef1777650f2a5f96cfbf2b1b21feb45ef09bbaa4@172.16.10.2:26656
-b8160265953ff82a9e7d6752cc5b95e3d3be6d7e@172.16.10.3:26656
-96a8e722f93acacd21baec6db51acd6cc16bbee2@172.16.10.4:26656
-5bb71ca5886894d3f9fd85f9948c47e2cbab71fa@172.16.10.5:26656
+211536ab1414b5b9a2a759694902ea619b29c8b1@47.251.14.47:26656
+d89e10d917f6f7472125aa4c060c05afa78a9d65@47.251.32.165:26656
+f559f47a4199a06d53f274ae720042f3809a6ec0@47.251.54.123:26656
+ff30114dc4ac73b25723e9f3d41bbe1bdd4242ee@47.251.14.108:26656
 ```
 
-> **Admin**: Query the `node id` by running `artelad tendermint show-node-id` in the node.
->
+### 3. Trusted block and height
 
-### 3. Trust block and height
+- **Block Height**: 250870
+- **Block Hash**: 58e0dba02baf99c5b4219b41f584de420844fe3e0ecb82b6e46364199e09b8ed
 
-- **Block Number**: 10472
-- **Block Hash**: 871D569AFBB2A83A7D1A1A02FB41F56F71B50F763D03345033BE10933FC37439
-
-> ⚠️Note: remove prefix `0x` of block hash.
->
-
-> **Admin**: Query block number by `curl 172.16.10.4:8545 -H "Content-Type:application/json" -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":83}'`
->
->
-> And then Query block by number `curl 172.16.10.4:8545 -H "Content-Type:application/json" -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByNumber","params":["0x28e8", true],"id":1}'`
+> ⚠️Note: Pick up the latest block and height from the <https://testnet-scan.artela.network/blocks> as your trusted block and height.
 >
 
 ### 4. RPC servers
 
 ```bash
-172.16.10.2:26657
-172.16.10.3:26657
-172.16.10.4:26657
-172.16.10.5:26657
+47.251.14.47:26657
+47.251.32.165:26657
+47.251.54.123:26657
+47.251.14.108:26657
 ```
