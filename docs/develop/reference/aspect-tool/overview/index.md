@@ -57,16 +57,16 @@ FLAGS
 
 ## Tool Guide
 
-* [Init project](/develop/reference/aspect-tool/guide/init)
-* [Configuration](/develop/reference/aspect-tool/guide/config)
-* [Create a account](/develop/reference/aspect-tool/guide/create-account)
-* [Build contract](/develop/reference/aspect-tool/guide/build-contract)
-* [Deploy contract](/develop/reference/aspect-tool/guide/deploy-contract)
-* [Build Aspect](/develop/reference/aspect-tool/guide/build-aspect)
-* [Deploy Aspect](/develop/reference/aspect-tool/guide/deploy-aspect)
-* [Contract bind Aspect](/develop/reference/aspect-tool/guide/bind-aspect)
-* [Contract call](/develop/reference/aspect-tool/guide/contract-call)
-* [Send transaction](/develop/reference/aspect-tool/guide/send-tx)
+* [Init project](/develop/reference/aspect-tool/init)
+* [Configuration](/develop/reference/aspect-tool/config)
+* [Create a account](/develop/reference/aspect-tool/create-account)
+* [Build contract](/develop/reference/aspect-tool/build-contract)
+* [Deploy contract](/develop/reference/aspect-tool/deploy-contract)
+* [Build Aspect](/develop/reference/aspect-tool/build-aspect)
+* [Deploy Aspect](/develop/reference/aspect-tool/deploy-aspect)
+* [Contract bind Aspect](/develop/reference/aspect-tool/bind-aspect)
+* [Contract call](/develop/reference/aspect-tool/contract-call)
+* [Send transaction](/develop/reference/aspect-tool/send-tx)
 
 ## Advanced
 
