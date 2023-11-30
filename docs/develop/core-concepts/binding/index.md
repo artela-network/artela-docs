@@ -4,14 +4,14 @@ sidebar_position: 8
 
 # Binding
 
-Binding is a crucial process in Aspect-based development. An Aspect can only be triggered at certain join points when it is bound to a specific smart contract.
+Binding is an important process in Aspect-based development. An Aspect can only be triggered at certain join points when it is bound to a specific smart contract. EoA can also bind with Aspect, Aspect can provide customized transaction verification process for EoA.
 
 ## Steps
 
 ![Binding](./binding.svg)
 
-1. **Initiating Binding**: The smart contract owner initiates the binding process by signing a binding transaction using their Externally Owned Account (EOA).
-2. **Contract Ownership Verification**: The Aspect Core system contract invokes the `isOwner(address) returns (bool)` method of the smart contract to verify the sender's address. If the validation fails (e.g., due to an unimplemented validation method or address verification failure), the binding transaction will be reverted.
+1. **Initiating Binding**: The account owner initiates the binding process by signing a binding transaction using their Externally Owned Account (EOA).
+2. **Contract Ownership Verification (Only required for contract accounts)**: The Aspect Core system contract invokes the `isOwner(address) returns (bool)` method of the smart contract to verify the sender's address. If the validation fails (e.g., due to an unimplemented validation method or address verification failure), the binding transaction will be reverted.
 3. **Aspect Allowance Check**: Upon successful contract ownership verification, the `onContractBinding(address) bool` method of the given Aspect is called. This checks if the current smart contract can bind with the given Aspect. If this validation fails, the transaction will be reverted.
 4. **Finalizing Binding**: If all checks pass, the Aspect Core system contract saves the relationship in the global state. Subsequently, the Aspect will be triggered at the designated join points when the smart contract is invoked.
 
@@ -32,3 +32,7 @@ Aspects have the ability to reject binding from certain contracts. The `onContra
 The priority in a binding request is an unsigned 8-bit integer. It determines the order of Aspect execution, with the Aspect having the lowest priority number being executed first. If multiple Aspects have the same priority, the one with the earliest binding time is executed first.
 
 ![Aspect Execution Order Diagram](../binding/aspect-execution-order.svg)
+
+## Aspect Number Limitations
+
+The maximum number of Aspects that an account can bind is 255, but this differs on the Aspect type. The special case here is the transaction verifier Aspect, if you are binding such Aspect for a Contract Account, you can only bind one Aspect per account.
