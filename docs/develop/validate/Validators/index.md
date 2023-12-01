@@ -4,9 +4,37 @@ sidebar_position: 2
 
 # Validator Guide
 
+:::warning
+We suggest you try out joining a public testnet first. Information on how to join the most recent testnet can be found [here](../node/join-testnet).
+:::
+
+## Hardware
+
+To run a validator node, you should run a full node firstly, the following hardware configuration is recommended:
+
+### Supported OS
+
+We officially support macOS and Linux only in the following architectures:
+
+* `darwin/arm64`
+* `darwin/x86_64`
+* `linux/arm64`
+* `linux/amd64`
+
+### Minimum Requirements
+
+To run mainnet or testnet validator nodes, you will need a machine with the following minimum hardware requirements:
+
+* 8 or more physical CPU cores
+* At least 16GB of memory (RAM)
+* At least 500GB of SSD disk storage
+* At least 100mbps network bandwidth
+
+`Storage size for validators will depend on level of pruning.`
+
 # Running a Validator
 
-Before setting up a validator node, make sure to have completed the [Joining Mainnet](../hub-tutorials/join-mainnet.md) guide.
+Before setting up a validator node, make sure to have completed the [Joining Mainnet](../node/full-node-setup) guide.
 
 If you plan to use a KMS (key management system), you should go through these steps first: [Using a KMS](kms/kms.md).
 
@@ -18,11 +46,19 @@ The following instructions assume you have already [set up a full-node](../hub-t
 
 ## Create Your Validator
 
+:::warning
+If you want to become a validator for the Artela's `testnet`, you should learn more about [security](./security).
+:::
+
 Your `cosmosvalconspub` can be used to create a new validator by staking tokens. You can find your validator pubkey by running:
 
 ```bash
 artelad tendermint show-validator
 ```
+
+:::warning
+Don't use more `uatom` than you have!
+:::
 
 To create your validator, just use the following command:
 
@@ -39,6 +75,9 @@ artelad tx staking create-validator \
   --gas-prices="0.0025uart" \
   --from=<key_name>
 ```
+:::info
+When specifying commission parameters, the `commission-max-change-rate` is used to measure % _point_ change over the `commission-rate`. E.g. 1% to 2% is a 100% rate increase, but only 1 percentage point.
+:::
 
 It's possible that you won't have enough Art to be part of the active set of validators in the beginning. Users are able to delegate to inactive validators (those outside of the active set) using the [Keplr web app](https://wallet.keplr.app/#/cosmoshub/stake?tab=inactive-validators). You can confirm that you are in the validator set by using a third party explorer like [Mintscan](https://www.mintscan.io/cosmos/validators).
 
@@ -62,6 +101,10 @@ artelad tx staking edit-validator
   --from=<key_name> \
   --commission-rate="0.10"
 ```
+
+:::warning
+Please note that some parameters such as `commission-max-rate` and `commission-max-change-rate` cannot be changed once your validator is up and running.
+:::
 
 **Note**: The `commission-rate` value must adhere to the following rules:
 

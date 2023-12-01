@@ -12,6 +12,10 @@ It also contains instructions on how to manage accounts, restore accounts from t
 
 `artelad`: This is the command-line interface to interact with a `artelad` full-node.
 
+:::warning
+**Please check that you download the latest stable release of `artelad` that is available**
+:::
+
 [**Download the binaries**]
 Not available yet.
 
@@ -29,6 +33,10 @@ At the core of every Cosmos account, there is a seed, which takes the form of a 
 
 The funds stored in an account are controlled by the private key. This private key is generated using a one-way function from the mnemonic. If you lose the private key, you can retrieve it using the mnemonic. However, if you lose the mnemonic, you will lose access to all the derived private keys. Likewise, if someone gains access to your mnemonic, they gain access to all the associated accounts.
 
+:::warning
+**Do not lose or share your 12 words with anyone. To prevent theft or loss of funds, it is best to ensure that you keep multiple copies of your mnemonic, and store it in a safe, secure place and that only you know how to access. If someone is able to gain access to your mnemonic, they will be able to gain access to your private keys and control the accounts associated with them.**
+:::
+
 The address is a public string with a human-readable prefix (e.g. `cosmos10snjt8dmpr5my0h76xj48ty80uzwhraqalu4eg`) that identifies your account. When someone wants to send you funds, they send it to your address. It is computationally infeasible to find the private key associated with a given address.
 
 ### Restoring an Account from the Fundraiser
@@ -36,6 +44,10 @@ The address is a public string with a human-readable prefix (e.g. `cosmos10snjt8
 If you participated in the fundraiser, you should be in possession of a 12-words mnemonic. Newly generated mnemonics use 24 words, but 12-word mnemonics are also compatible with all the Cosmos tools.
 
 #### On a Computer
+
+:::warning
+**NOTE: It is more secure to perform this action on an offline computer**
+:::
 
 To restore an account using a fundraiser mnemonic and store the associated encrypted private key on a computer, use the following command:
 
@@ -57,6 +69,10 @@ To create an account, you just need to have `artelad` installed. Before creating
 
 #### Using a Computer
 
+:::warning
+**NOTE: It is more secure to perform this action on an offline computer**
+:::
+
 To generate an account, just use the following command:
 
 ```bash
@@ -68,6 +84,10 @@ at the same time.
 Each time you want to send a transaction, you will need to unlock your system's credentials store.
 If you lose access to your credentials storage, you can always recover the private key with the
 mnemonic.
+
+:::warning
+**Do not lose or share your 12 words with anyone. To prevent theft or loss of funds, it is best to ensure that you keep multiple copies of your mnemonic, and store it in a safe, secure place and that only you know how to access. If someone is able to gain access to your mnemonic, they will be able to gain access to your private keys and control the accounts associated with them.**
+:::
 
 ```bash
 history -c
@@ -102,6 +122,14 @@ If you do not want or cannot run your own node, you can connect to someone else'
 In order to connect to the full-node, you will need an address of the following form: `https://77.87.106.33:26657` (*Note: This is a placeholder*). This address has to be communicated by the full-node operator you choose to trust. You will use this address in the [following section](#setting-up-artelad).
 
 ## Setting Up `artelad`
+
+:::info
+**Before setting up `artelad`, make sure you have set up a way to [access the Artela Network](../node/access-testnet)**
+:::
+
+:::warning
+**Please check that you are always using the latest stable release of `artelad`**
+:::
 
 `artelad` is the tool that enables you to interact with the node that runs on the Artela Network network, whether you run it yourself or not. Let us set it up properly.
 
@@ -171,6 +199,10 @@ artelad query
 For each command, you can use the `-h` or `--help` flag to get more information.
 
 ## Sending Transactions
+
+:::warning
+On Artela Network, the accepted denom is `uart`, where `1art = 1x10^uart`
+:::
 
 ### A Note on Gas and Fees
 

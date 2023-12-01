@@ -1,5 +1,5 @@
 
-# Accessing Testnet
+# TestNet Info
 
 **Option 1: Connect to Artela Testnet via RPC**
 
