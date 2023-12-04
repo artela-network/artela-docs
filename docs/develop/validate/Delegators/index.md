@@ -6,11 +6,11 @@ sidebar_position: 1
 
 This document contains all the necessary information for delegators to interact with the Artela Network through the Command-Line Interface (CLI).
 
-It also contains instructions on how to manage accounts, restore accounts from the fundraiser and use a ledger nano device.
+It also contains instructions on how to manage accounts, restore accounts from the fundraiser.
 
 ## Installing `artelad`
 
-`artelad`: This is the command-line interface to interact with a `artelad` full-node.
+`artelad`: This is the command-line interface to interact with a Artela Network full node.
 
 :::warning
 **Please check that you download the latest stable release of `artelad` that is available**
@@ -19,11 +19,10 @@ It also contains instructions on how to manage accounts, restore accounts from t
 [**Download the binaries**]
 Not available yet.
 
-[**Install from source**](../getting-started/installation.md)
+[**Install from source**](../node/join-testnet#1-prepare-artelad)
 
 `artelad` is used from a terminal. To open the terminal, follow these steps:
 
-- **Windows**: `Start` > `All Programs` > `Accessories` > `Command Prompt`
 - **MacOS**: `Finder` > `Applications` > `Utilities` > `Terminal`
 - **Linux**: `Ctrl` + `Alt` + `T`
 
@@ -37,11 +36,11 @@ The funds stored in an account are controlled by the private key. This private k
 **Do not lose or share your 12 words with anyone. To prevent theft or loss of funds, it is best to ensure that you keep multiple copies of your mnemonic, and store it in a safe, secure place and that only you know how to access. If someone is able to gain access to your mnemonic, they will be able to gain access to your private keys and control the accounts associated with them.**
 :::
 
-The address is a public string with a human-readable prefix (e.g. `cosmos10snjt8dmpr5my0h76xj48ty80uzwhraqalu4eg`) that identifies your account. When someone wants to send you funds, they send it to your address. It is computationally infeasible to find the private key associated with a given address.
+The address is a public string with a human-readable prefix (e.g. `artela10snjt8dmpr5my0h76xj48ty80uzwhraqalu4eg`) that identifies your account. When someone wants to send you funds, they send it to your address. It is computationally infeasible to find the private key associated with a given address.
 
-### Restoring an Account from the Fundraiser
+### Restoring an Account
 
-If you participated in the fundraiser, you should be in possession of a 12-words mnemonic. Newly generated mnemonics use 24 words, but 12-word mnemonics are also compatible with all the Cosmos tools.
+You should be in possession of a 12-words mnemonic. Newly generated mnemonics use 24 words, but 12-word mnemonics are also compatible with all the Artela tools.
 
 #### On a Computer
 
@@ -49,7 +48,7 @@ If you participated in the fundraiser, you should be in possession of a 12-words
 **NOTE: It is more secure to perform this action on an offline computer**
 :::
 
-To restore an account using a fundraiser mnemonic and store the associated encrypted private key on a computer, use the following command:
+To restore an account mnemonic and store the associated encrypted private key on a computer, use the following command:
 
 ```bash
 artelad keys add <yourKeyName> --recover
@@ -350,7 +349,7 @@ Copy `signedTx.json` and transfer it back to the online computer. Finally, use t
 artelad tx broadcast signedTx.json
 ```
 
-
+<!--
 ![](./img/d1.png)
 ![](./img/d2.png)
 ![](./img/d3.png)
@@ -367,3 +366,4 @@ artelad tx broadcast signedTx.json
 ![](./img/d14.png)
 ![](./img/d15.png)
 ![](./img/d16.png)
+-->

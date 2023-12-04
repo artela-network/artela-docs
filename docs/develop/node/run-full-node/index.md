@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Join TestNet
+# Run a full node
 
 This document provides an introduction to joining the Artela Testnet as a full node.
 
