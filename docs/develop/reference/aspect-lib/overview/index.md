@@ -32,6 +32,7 @@ yarn add --dev @artela/aspect-libs    # Yarn
 * [Transaction Level Join-Point](/develop/reference/aspect-lib/tx-level-aspect/overview)
 * [Block Level Join-Point](/develop/reference/aspect-lib/block-level-aspect/overview)
 * [Call Level Join-Point](/develop/reference/aspect-lib/operation-aspect)
+* [Transaction Verification Join-Point](/develop/reference/aspect-lib/verify-aspect)
 
 ### API references
 * [sys](/develop/reference/aspect-lib/components/sys/sys)
