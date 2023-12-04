@@ -121,10 +121,10 @@ For more details regarding development environment setup, please refer to [artel
 Execute the following command under the `my-first-aspect` folder to create an account if you haven't already done so:
 
 ```bash
-npm run account:create -- --pkfile {privateKey-path}
+npm run account:create -- --skfile {privateKey-path}
 ```
 
-> * --pkfile : privateKey path for sender. (optional, default value: `./privateKey.txt`).
+> * --skfile : privateKey path for sender. (optional, default value: `./privateKey.txt`).
 
 If your account lacks test tokens, join [Discard](https://discord.com/invite/artela)，and request some in `testnet-faucet` channel.
 
@@ -134,14 +134,14 @@ If your account lacks test tokens, join [Discard](https://discord.com/invite/art
 Execute the following command within the `my-first-aspect` folder, using the provided script:
 
 ```bash
-npm run contract:deploy -- --pkfile {privateKey-path} \                        
+npm run contract:deploy -- --skfile {privateKey-path} \                        
                            --abi ./build/contract/HelloWorld.abi \                          
                            --bytecode ./build/contract/HelloWorld.bin \     
                            --args [..] \                     
                            --gas 200000 
                            
 ```
-> * --pkfile : privateKey path for sender. (optional,default value `./privateKey.txt`).
+> * --skfile : privateKey path for sender. (optional,default value `./privateKey.txt`).
 > * --abi : contract abi path.
 > * --bytecode:  contract bytecode path.
 > * --args : If your contract's constructor requires input parameters, use `--args '[1, "a"]'` (optional).
@@ -155,13 +155,13 @@ Execute the following command within the `my-first-aspect` folder, call the Cont
 #### 2.4.1 call `hello` method
 
 ```bash
-npm run contract:call -- --pkfile {privateKey-path}    \     
+npm run contract:call -- --skfile {privateKey-path}    \     
                          --contract {smart-contract-address}  \                         
                          --abi ./build/contract/HelloWorld.abi   \                                    
                          --method hello  \                                               
                          --gas 200000 
 ```
-> * --pkfile : privateKey path for sender. (optional,default value `./privateKey.txt`).
+> * --skfile : privateKey path for sender. (optional,default value `./privateKey.txt`).
 > * --contract:  smart contract address.
 > * --abi : contract abi path.
 > * --method:  method name .
@@ -171,13 +171,13 @@ npm run contract:call -- --pkfile {privateKey-path}    \
 #### 2.4.2 call `world` method
 
 ```bash
-npm run contract:call -- --pkfile {privateKey-path}    \     
+npm run contract:call -- --skfile {privateKey-path}    \     
                          --contract {smart-contract-address}  \                         
                          --abi ./build/contract/HelloWorld.abi   \                                    
                          --method world  \   
                          --gas 200000 
 ```
-> * --pkfile : privateKey path for sender. (optional,default value `./privateKey.txt`).
+> * --skfile : privateKey path for sender. (optional,default value `./privateKey.txt`).
 > * --contract:  smart contract address.
 > * --abi : contract abi path.
 > * --method:  method name .
@@ -244,11 +244,11 @@ Deploy your compiled Aspect:
 
 ```bash
 
-npm run aspect:deploy -- --pkfile {privateKey-path} \                                                
+npm run aspect:deploy -- --skfile {privateKey-path} \                                                
                          --wasm ./build/release.wasm \
                          --gas 200000  
 ```
-> * --pkfile : privateKey path for sender. (optional,default value `./privateKey.txt`).
+> * --skfile : privateKey path for sender. (optional,default value `./privateKey.txt`).
 > * --wasm : wasm path.
 > * --gas : like `200000`,(optional,default value `7000000`).
 
@@ -259,13 +259,13 @@ npm run aspect:deploy -- --pkfile {privateKey-path} \
 Deploying the Aspect doesn't automatically activate it. To make it functional, bind it to a smart contract:
 
 ```bash
-npm run contract:bind -- --pkfile {privateKey-path} \                          
+npm run contract:bind -- --skfile {privateKey-path} \                          
                          --contract {smart-contract-address} \
                          --abi ./build/contract/HelloWorld.abi \                        
                          --aspectId {aspect-Id} \                          
                          --gas 200000 
 ```
-> * --pkfile : privateKey path for sender. (optional,default value `./privateKey.txt`).
+> * --skfile : privateKey path for sender. (optional,default value `./privateKey.txt`).
 > * --abi : contract abi path.
 > * --contract:  smart contract address.
 > * --aspectId:  aspect id.
@@ -276,7 +276,7 @@ npm run contract:bind -- --pkfile {privateKey-path} \
 Now that the `HelloWord` contract and Aspect are bound, call `world` to test, due to Aspect interception, the transaction is reverted.
 
 ```bash
-npm run contract:call -- --pkfile {privateKey-path}    \     
+npm run contract:call -- --skfile {privateKey-path}    \     
                          --contract {smart-contract-address}  \                         
                          --abi ./build/contract/HelloWorld.abi   \                                    
                          --method world  \   

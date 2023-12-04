@@ -31,11 +31,11 @@ export class Aspect implements ITransactionVerifier {
 }
 ```
 #### Parameter
-* ctx ： By utilizing the 'ctx' input argument, it provides essential insights into transactions and block processing, encompassing smart contract state updates, logged events, and raw transaction data. see [how to use ctx](#how-to-use-ctx).
-* validationData : Data used to derive the sender's address.
+* `ctx` ： By utilizing the 'ctx' input argument, it provides essential insights into transactions and block processing, encompassing smart contract state updates, logged events, and raw transaction data. see [how to use ctx](#how-to-use-ctx).
+* `validationData` : Data used to derive the sender's address.
 
 #### Returns
-* (Uint8Array) ： The result returned to the client.
+* (Uint8Array) ：return A 20-byte address.
 
 
 ## How to use `ctx`

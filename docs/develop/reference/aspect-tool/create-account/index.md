@@ -8,12 +8,12 @@ transactions and digital asset management within the blockchain network.
 When you do not have a blockchain account，you can create one by using the following command:
 
 ```shell
-npm run account:create  -- --pkfile {file_path}
+npm run account:create  -- --skfile {file_path}
 ```
 
 **options:**
 
-> * --pkfile : privateKey path for sender. (optional,default value `./privateKey.txt`).
+> * --skfile : privateKey path for sender. (optional,default value `./privateKey.txt`).
 ---
 
 Specifically, the command will be executed

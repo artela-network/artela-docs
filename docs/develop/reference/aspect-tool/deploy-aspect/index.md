@@ -9,13 +9,13 @@ the network.
 You can deploy Aspect using the following command:
 
 ```bash
-  npm run aspect:deploy -- --pkfile {privateKey-path} \                                                
+  npm run aspect:deploy -- --skfile {privateKey-path} \                                                
                          --wasm ./build/release.wasm \
                          --gas 200000  
 ```
 
 **options：**
-> * --pkfile : privateKey path for sender. (optional,default value `./privateKey.txt`).
+> * --skfile : privateKey path for sender. (optional,default value `./privateKey.txt`).
 > * --wasm : wasm path.
 > * --gas : like `200000`,(optional,default value `7000000`).
 ---
