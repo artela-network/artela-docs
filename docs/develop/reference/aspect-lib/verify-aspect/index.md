@@ -9,7 +9,7 @@ sidebar_position: 2
 The verifyTx method is invoked for transactions from an EoA. It allows customization of the transaction verification process.
 Triggered when transaction signature is being verified, Aspect can replace the built-in secp256k1 signature verification with customized verification logic.
 
-![verify.png](verify.png)
+![verify.svg](verify.svg)
 
 ## How to Create
 To function as a transaction verifier Aspect, an Aspect must implement the `ITransactionVerifier` interface. This interface comprises a single method, verifyTx, which is invoked for transactions sent from an EoA without a valid ECDSA signature.
@@ -35,7 +35,7 @@ export class Aspect implements ITransactionVerifier {
 * `validationData` : Data used to derive the sender's address.
 
 #### Returns
-* (Uint8Array) ：return A 20-byte address.
+* (Uint8Array) ：return a 20-byte address.
 
 
 ## How to use `ctx`
