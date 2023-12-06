@@ -6,8 +6,10 @@ sidebar_position: 2
 
 
 ## Introduction
-The verifyTx method is invoked for transactions from an EoA. It allows customization of the transaction verification process.
-Triggered when transaction signature is being verified, Aspect can replace the built-in secp256k1 signature verification with customized verification logic.
+
+Aspect can provide transaction verification service when bound to certain dApp and EoA. If an Aspect has been bound to
+certain dApp and EoA as a transaction verifier, instead of doing the legacy secp256k1 signature verification, Aspect
+will replace it with the customized verification logic implemented in the `verifyTx` method.
 
 ![verify.svg](verify.svg)
 
