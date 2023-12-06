@@ -177,14 +177,14 @@ Execute the following command under the `erc20-token` folder to create an accoun
 
 ```bash
 // create ArtToken deployer
-npm run account:create -- --pkfile ./tokenPk.txt
+npm run account:create -- --skfile ./tokenPk.txt
 
 // create Broker deployer
-npm run account:create -- --pkfile ./brokerPk.txt
+npm run account:create -- --skfile ./brokerPk.txt
 
 ```
 
-> * --pkfile : privateKey path for sender. (optional, default value: `./privateKey.txt`).
+> * --skfile : privateKey path for sender. (optional, default value: `./privateKey.txt`).
 
 If your account lacks test tokens, join [Discard](https://discord.com/invite/artela)，and request some in `testnet-faucet` channel.
 
@@ -195,13 +195,13 @@ Execute the following command within the `erc20-token` folder, using the provide
 
 ```bash
 
-npm run contract:deploy -- --pkfile ./tokenPk.txt  \
+npm run contract:deploy -- --skfile ./tokenPk.txt  \
                            --abi ./build/contract/contracts_ArtToken_sol_ArtToken.abi \
                            --bytecode ./build/contract/contracts_ArtToken_sol_ArtToken.bin \
                            --args '[10000000]'
                            
                            
-npm run contract:deploy -- --pkfile ./brokerPk.txt  \ 
+npm run contract:deploy -- --skfile ./brokerPk.txt  \ 
                            --abi ./build/contract/contracts_Broker_sol_Borker.abi \
                            --bytecode ./build/contract/contracts_Broker_sol_Borker.bin \
                            --args '[{ArtToken_Address}]'   
@@ -218,7 +218,7 @@ Execute the following command within the `erc20-token` folder:
 
 ```bash
 
-npm run contract:send   -- --pkfile ./tokenPk.txt
+npm run contract:send   -- --skfile ./tokenPk.txt
                         --contract {artToken-address} 
                         --abi ./build/contract/contracts_ArtToken_sol_ArtToken.abi 
                         --method transfer --args ["{broker-address}",100] 

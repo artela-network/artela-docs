@@ -142,7 +142,7 @@ npm run account:create
 
 ```
 
-> * --pkfile : privateKey path for sender. (optional, default value: `./privateKey.txt`).
+> * --skfile : privateKey path for sender. (optional, default value: `./privateKey.txt`).
 
 If your account lacks test tokens, join [Discard](https://discord.com/invite/artela)，and request some in `testnet-faucet` channel.
 

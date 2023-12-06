@@ -9,7 +9,7 @@ available on the network.
 You can deploy contract using the following command:
 
 ```bash
-  npm run contract:deploy -- --pkfile {privateKey-path} \                        
+  npm run contract:deploy -- --skfile {privateKey-path} \                        
                            --abi ./build/contract/xxx.abi \                          
                            --bytecode ./build/contract/xxx.bin \     
                            --args [..] \                     
@@ -17,7 +17,7 @@ You can deploy contract using the following command:
 ```
 
 **options:**
-> * --pkfile : privateKey path for sender. (optional,default value `./privateKey.txt`).
+> * --skfile : privateKey path for sender. (optional,default value `./privateKey.txt`).
 > * --abi : contract abi path.
 > * --bytecode:  contract bytecode path.
 > * --args : If your contract's constructor requires input parameters, use `--args '[1, "a"]'` (optional).

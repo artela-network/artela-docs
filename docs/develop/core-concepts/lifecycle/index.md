@@ -85,14 +85,14 @@ The binding procedure necessitates:
 |-----------------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `aspectId`      | Yes      | ID of the Aspect to bind.                                                                                                                                   |
 | `aspectVersion` | Yes      | Version of the Aspect for binding. Use 0 to bind to the latest version.                                                                                     |
-| `contractAddr`  | Yes      | Address of the smart contract to bind.                                                                                                                      |
+| `account`       | Yes      | Address of the account to bind with the Aspect.                                                                                                             |
 | `priority`      | Yes      | Execution priority of the Aspect. The smaller the number, the higher the priority. For Aspects with equal priorities, the one bound earlier executes first. |
 
 The Aspect Core contract records the binding relationship as:
 
 ```json
 {
-  "0x{SmartContractAddr}": [
+  "0x{AccountAddress}": [
     {
       "aspectId": "0x{AspectId1}",
       "aspectVersion": 1
@@ -112,12 +112,12 @@ Aspects can be detached from smart contracts. Only the owner of the smart contra
 
 To unbind, you need:
 
-| Param Name     | Required | Description                              |
-|----------------|----------|------------------------------------------|
-| `aspectId`     | Yes      | ID of the Aspect for unbinding.          |
-| `contractAddr` | Yes      | Address of the smart contract to detach. |
+| Param Name | Required | Description                       |
+|------------|----------|-----------------------------------|
+| `aspectId` | Yes      | ID of the Aspect for unbinding.   |
+| `account`  | Yes      | Address of the account to detach. |
 
-Once unbound, the Aspect won't execute when invoking the smart contract.
+Once unbound, the Aspect won't execute when transaction related to the given account is received.
 
 ## Execution
 

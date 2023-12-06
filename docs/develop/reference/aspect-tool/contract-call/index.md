@@ -8,7 +8,7 @@ can interact with the target smart contract and execute the functions or methods
 You can contract call using the following command:
 
 ```shell
-  npm run contract:call -- --pkfile {privateKey-path}    \     
+  npm run contract:call -- --skfile {privateKey-path}    \     
                          --contract {smart-contract-address}  \                         
                          --abi ./build/contract/xxx.abi   \                                    
                          --method {method-name}  \   
@@ -17,7 +17,7 @@ You can contract call using the following command:
 ```
 
 options：
-> * --pkfile : privateKey path for sender. (optional,default value `./privateKey.txt`).
+> * --skfile : privateKey path for sender. (optional,default value `./privateKey.txt`).
 > * --abi : contract abi path.
 > * --contract:  smart contract address.
 > * --method:  method name.
