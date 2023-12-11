@@ -200,7 +200,7 @@ For each command, you can use the `-h` or `--help` flag to get more information.
 ## Sending Transactions
 
 :::warning
-On Artela Network, the accepted denom is `uart`, where `1art = 1x10^uart`
+On Artela Network, the accepted denom is `uart`, where `1art = 1x18^uart`
 :::
 
 ### A Note on Gas and Fees
