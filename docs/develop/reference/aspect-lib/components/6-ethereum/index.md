@@ -106,3 +106,20 @@ import {ethereum} from "@artela/aspect-libs";
 9. <a href="/api/docs/classes/common.ethereum.String.html" target="_blank">ethereum.String</a> 
 10. <a href="/api/docs/classes/common.ethereum.Tuple.html" target="_blank">ethereum.Tuple</a> 
 11. <a href="/api/docs/classes/common.ethereum.Uint.html" target="_blank">ethereum.Uint</a> 
+
+
+## 3. UseCases
+
+generate the abi encode of the function `function execute(address account,uint64 num,bytes calldata data) public `
+
+```typescript
+
+let contractAddress="0x5B38Da6a701c568545dCfcB03FcB875f56beddC4"
+let txData="0x112233"
+
+const callData = ethereum.abiEncode('execute', [
+  ethereum.Address.fromHexString(contractAddress),
+  ethereum.Number.fromU64(0),
+  ethereum.Bytes.fromHexString(txData),
+]);
+```

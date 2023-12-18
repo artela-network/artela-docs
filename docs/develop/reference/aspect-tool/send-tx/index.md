@@ -8,7 +8,7 @@ event triggering, or the execution of other contract logic.
 You can send transaction using the following command:
 
 ```shell
-  npm run contract:send -- --pkfile {privateKey-path}    \     
+  npm run contract:send -- --skfile {privateKey-path}    \     
                          --contract {smart-contract-address}  \                         
                          --abi ./build/contract/xxx.abi   \                                    
                          --method {method-name}  \   
@@ -17,7 +17,7 @@ You can send transaction using the following command:
 ```
 
 **options:**
-> * --pkfile : privateKey path for sender. (optional,default value `./privateKey.txt`).
+> * --skfile : privateKey path for sender. (optional,default value `./privateKey.txt`).
 > * --abi : contract abi path.
 > * --contract:  smart contract address.
 > * --method:  method name.

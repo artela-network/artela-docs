@@ -5,7 +5,7 @@ Binding associates an Aspect with a specific smart contract.See [details for con
 ## Command
 Contract Bind Aspect using the following command:
 ```bash
-  npm run contract:bind -- --pkfile {privateKey-path} \                          
+  npm run contract:bind -- --skfile {privateKey-path} \                          
                          --contract {smart-contract-address} \
                          --abi ./build/contract/xxx.abi \                        
                          --aspectId {aspect-Id} \                          
@@ -13,7 +13,7 @@ Contract Bind Aspect using the following command:
 ```
 
 **options:**
-> * --pkfile : privateKey path for sender. (optional,default value `./privateKey.txt`).
+> * --skfile : privateKey path for sender. (optional,default value `./privateKey.txt`).
 > * --abi : contract abi path.
 > * --contract:  smart contract address.
 > * --aspectId:  aspect id.
