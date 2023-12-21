@@ -77,3 +77,72 @@ Your validator is active if the following command returns anything:
 artelad query tendermint-validator-set | grep "$(artelad tendermint show-address)"
 ```
 ![](./img/v16.png)
+
+---
+
+## Appendix
+
+### 1.Query all validators
+```bash
+artelad query staking validators
+```
+
+![](./img/v17.jpg)
+
+### 2.Query validator through operator address
+
+```bash
+artelad query staking validator <operator_address>
+```
+
+![](./img/v18.jpg)
+
+### 3.Convert bech32 address to hex format
+
+```bash
+artelad debug addr <address>
+```
+
+![](./img/v3.png)
+
+### 4.Query all local accounts
+
+```bash
+artelad keys list
+```
+
+![](./img/v4.png)
+
+### 5.Query account through address
+
+```bash
+artelad query account <account_name>
+```
+
+![](./img/v7.png)
+
+### 6.Query tx trough tx_hash
+
+```bash
+artelad query tx <tx_hash>
+```
+
+![](./img/v19.png)
+
+### 7.Unjail validator
+
+```bash
+artelad tx slashing unjail \
+--chain-id="artela_11820-1" \
+--gas="300000" \
+--from=<account_name>
+```
+
+![](./img/v15.png)
+
+
+
+
+
+
+
