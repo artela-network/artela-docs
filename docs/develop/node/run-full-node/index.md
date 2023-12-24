@@ -47,7 +47,7 @@ export PATH=$PATH:/usr/local/go/bin
 
 You need to create a folder to store your source files, for example, `/home/user1/go/src`. Replace `user1` to your account, e.g. `ubuntu`.
 ```bash
-mkdir -p /home/user1/go/sr
+mkdir -p /home/user1/go/src
 ```
 Then, set `/home/user1/go` as the GOPATH by using the following command: 
 ```bash
