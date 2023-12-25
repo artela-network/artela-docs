@@ -94,7 +94,7 @@ mv genesis.json $HOME/.artelad/config/genesis.json
 
 Get presistent seeds from [2. Presistent nodes](./access-testnet#public-information-on-testnet)
 
-Add two of them to `seeds` in `app.toml`
+Add two of them to `seeds` in `config.toml`
 
 ```bash
 cd $HOME/.artelad/config
