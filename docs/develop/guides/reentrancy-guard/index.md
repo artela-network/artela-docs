@@ -134,6 +134,8 @@ contract Attack {
 
 ```shell
 
+mkdir -p ./build/contract
+
 ## build curve contract
 vyper -f abi ./contracts/curve.vy > build/contract/CurveContract.abi && vyper ./contracts/curve.vy > build/contract/CurveContract.bin
  
@@ -234,10 +236,18 @@ The resulting `release.wasm` in the build folder contains the necessary WASM byt
 Deploy your compiled Aspect:
 
 ```shell
-   npm run aspect:deploy -- --skfile {privateKey-path} \                                                
-   --wasm ./build/release.wasm \
-   --gas 200000
+ npm run aspect:deploy -- --wasm ./build/release.wasm  \ 
+                          --joinPoints PreContractCall \ 
+                          --skfile ./curve_accounts.txt
 ```
+
+> ✅ Upon successful execution, the terminal will display the `Aspect address`. It is essential to make a note of this
+> address as it will be useful later on.
+
+:::note 💡
+For more detailed usage information about this command, please refer to
+the [deploy-aspect command](/develop/reference/aspect-tool/deploy-aspect) documentation.
+:::
 
 #### 4.4 Bind the Curve Contract and Aspect
 
@@ -254,14 +264,17 @@ you will see `== aspect bind success == `
 
 ## 5. Re-entrant attack Test
 
-Execute the re-entrant attack on the simplified Curve contract with Aspect protection, and watch the output. If the
-protection succeeded, you will see the transaction reverted.
+Execute the re-entrant attack on the simplified Curve contract with Aspect protection, and watch the output. 
 
 ```shell
- npm run contract:send -- --contract '[{attackAddress}]'    --abi ./build/contract/Attack.abi   --skfile ./attack_accounts.txt  --method attack  --gas 200000
+ npm run contract:send -- --contract {attackAddress} \   
+                          --abi ./build/contract/Attack.abi  \ 
+                          --skfile ./attack_accounts.txt  
+                          --method attack  \
+                          --gas 200000 
 ```
 
+If the protection succeeded, you will see the transaction reverted.
 
-
-
+![img.png](img.png)
  
