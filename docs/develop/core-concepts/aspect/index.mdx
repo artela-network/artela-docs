@@ -87,24 +87,27 @@ For more information on this topic, please refer to the ASOLC documentation [her
 Similar to a smart contract, Aspect is also stateful. Each Aspect maintain its own state that will be persisted in the world state. Currently the Aspect only provides a simple key-value storage, a better storage binding will provided in a later version.
 To persist data into the blockchain world state, you can use the following way:
 
+<!-- @formatter:off -->
 ```typescript
 // read & write state
-let state = sys.aspect.mutableState(ctx).get<string>('state-key');
+let state = sys.aspect.mutableState.get<string>('state-key');
 let unwrapped = state.unwrap();
 state.set('state-value');
 ```
-
+<!-- @formatter:on -->
 ### Processing Calls
 
 An Aspect can also operate independently. It can process external transactions or calls with its bytes-in-bytes-out `operation` method:
-
+<!-- @formatter:off -->
 ```typescript
-operation(ctx: OperationCtx, data: Uint8Array): Uint8Array {
+class AspectTest implements IAspectOperation {
+  operation(input: OperationInput): Uint8Array {
     // handle incoming request and echo it back
     return data;
+  }
 }
 ```
-
+<!-- @formatter:on -->
 :::note
 Please note the operation method is only a bytes-in-bytes-out entrypoint, if there is any sensitive data in the Aspect, make sure you are making the authentication correctly.
 :::
