@@ -35,12 +35,12 @@ yarn add --dev @artela/aspect-libs    # Yarn
 * [Transaction Verification Join-Point](/develop/reference/aspect-lib/verify-aspect)
 
 ### API references
-* [sys](/develop/reference/aspect-lib/components/sys/sys)
-* [sys.hostApi](/develop/reference/aspect-lib/components/sys/sys-hostapi)
-* [sys.aspect](/develop/reference/aspect-lib/components/sys/sys-aspect)
-* [sys.evm](/develop/reference/aspect-lib/components/sys/call)
-* [sys.context](/develop/reference/aspect-lib/components/sys/context)
-* [ethereum](/develop/reference/aspect-lib/components/common/ethereum)
+* [sys](/develop/reference/aspect-lib/components/sys)
+* [sys.hostApi](/develop/reference/aspect-lib/components/sys-hostapi)
+* [sys.aspect](/develop/reference/aspect-lib/components/sys-aspect)
+* [sys.evm](/develop/reference/aspect-lib/components/call)
+* [sys.context](/develop/reference/aspect-lib/components/context)
+* [ethereum](/develop/reference/aspect-lib/components/ethereum)
 
 ## Versions
 
