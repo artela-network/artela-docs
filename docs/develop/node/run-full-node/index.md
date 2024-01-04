@@ -7,15 +7,15 @@ sidebar_position: 1
 This document provides an introduction to joining the Artela Testnet as a full node.
 > It is recommended to use `ubuntu` operating system.
 
-**Hardware Minimum Requirements:**
+**Hardware Recommended Requirements:**
 
-- 4 or more CPU cores
+- 8 CPU Cores
 
-- At least 8GB of memory(RAM)
+- 16GB of Memory
 
-- At least 1TB SSD
+- 1TB SSD
 
-- At least 200mbps network bandwidth
+- 200mbps Network Bandwidth
 
 ## 1. Prepare artelad
 
