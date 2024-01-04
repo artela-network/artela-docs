@@ -186,7 +186,7 @@ export { execute, allocate }
 ```
 <!-- @formatter:on -->
 
-## Description
+## Join Point Description
 
 Next, we will provide a detailed description of each method in the IAspectTransaction interface. You can click on the links associated with each method name to access more detailed information. It is recommended to have a prior understanding of [the concept of Joinpoints](/develop/core-concepts/join-point).
 
