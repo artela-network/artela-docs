@@ -33,7 +33,7 @@ At this stage, the account state remains pristine, enabling Aspect to preload in
  * @return void
  */
 preTxExecute(input: PreTxExecuteInput): void {
-  // In this method, my intention is to constrain the execution of the aspect-bound contract to be invoked no more than 100 times.
+  // In this method, constrain the execution of the aspect-bound contract to be invoked no more than 100 times.
 
   // import {sys} from "@artela/aspect-libs";
   const val = sys.aspect.mutableState.get<i32>("counter");
@@ -69,10 +69,10 @@ Utilize the fields as indicated below:
 <!-- @formatter:off -->
 ```typescript
 
-let blockNumer = input.block?.number;
-let txFrom = input.tx?.from;
-let txTo = input.tx?.to;
-let txHash = input.tx?.hash;
+let blockNumer = input.block!.number;
+let txFrom = input.tx!.from;
+let txTo = input.tx!.to;
+let txHash = input.tx!.hash;
 
 // use blockNumber, txFrom, txTo, txHash
 
@@ -116,4 +116,3 @@ Each breakpoint has access to different host APIs, and the host APIs available w
 | sys.hostApi.evmCall.staticCall | ❌ | Creates a static call and executes it immediately. |
 | sys.hostApi.trace.queryCallTree | ❌ | Returns the call tree of EVM execution. |
 | sys.hostApi.trace.queryStateChange | ❌ | Returns the state change in EVM execution for the specified key. |
-
