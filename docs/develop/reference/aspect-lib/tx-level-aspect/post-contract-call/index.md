@@ -76,6 +76,17 @@ Explore the available information from the class diagram below.
 
 ![class.svg](class.svg)
 
+**Parameters:**
+- `input.block.number`: current block number.
+- `input.call.from`: caller of the contract call.
+- `input.call.to`: to address of the contract call.
+- `input.call.data`: input bytes of the contract call.
+- `input.call.gas`: gas limit of the contract call.
+- `input.call.index`: index of the contract call.
+- `input.call.value`: transfer value of the contract call.
+- `input.call.ret`: return value of the contract call.
+- `input.call.error`: error message of the contract call.
+
 Utilize the fields as indicated below:
 
 <!-- @formatter:off -->
@@ -91,7 +102,8 @@ let value = input.call!.value
 let ret = input.call!.ret
 let error = input.call?.error
 
-// use blockNumber, txFrom, txTo, txHash, status
+// use the variables
+...
 
 ```
 <!-- @formatter:on -->

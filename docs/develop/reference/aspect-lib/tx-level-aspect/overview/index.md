@@ -37,8 +37,42 @@ process is shown in the following call graph.
 
 ## How to Create a Transaction-Level Aspect
 
-Implement the `IAspectTransaction` interface
+A complete aspect should include several components. Firstly, create your class as an implementation of the aspect. Then, import and inherit based on the join point you want to implement into your aspect, and fill in your own logic to implement these functions. The IsOwner method, serving as the permission management part of your aspect, must be implemented. Next, register your aspect class with aspect-libs. Finally, your code should include the imports and exports used by aspect-runtime, as well as the components that your aspect must contain.
 
+For the given code snippet, where MyAspect is my aspect class:
+
+1. Mandatory implementations include:
+<!-- @formatter:off -->
+```typescript
+import { entryPoint, execute, allocate } from "@artela/aspect-libs";
+...
+class MyAspect {
+  isOwner(sender: Uint8Array): bool {
+    // your logic here
+  }
+  ...
+}
+...
+const aspect = new MyAspect();
+entryPoint.setAspect(aspect);
+export { execute, allocate }
+```
+<!-- @formatter:on -->
+
+2. Optional implementations may include, for example, if you want to implement join point `preTxExecute`
+<!-- @formatter:off -->
+```typescript
+import { PreTxExecuteInput, IPreTxExecuteJP } from "@artela/aspect-libs";
+...
+class MyAspect implements IPreTxExecuteJP {
+  preTxExecute(input: PreTxExecuteInput): void {
+    // you logic here
+  }
+}
+```
+<!-- @formatter:on -->
+
+A complete example is as follows.
 <!-- @formatter:off -->
 ```typescript
 
