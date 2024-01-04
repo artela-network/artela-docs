@@ -69,6 +69,13 @@ Explore the available information from the class diagram below.
 
 ![class.svg](class.svg)
 
+**Parameters:**
+- `input.block.number`: current block number.
+- `input.tx.from`: caller of the transaction.
+- `input.tx.to`: to address of the transaction.
+- `input.tx.hash`: hash of the transaction.
+- `input.receipt.status`: execution status of the transaction.
+
 Utilize the fields as indicated below:
 
 <!-- @formatter:off -->
@@ -81,6 +88,7 @@ let txHash = input.tx!.hash;
 let status = input.receipt!.status;
 
 // use blockNumber, txFrom, txTo, txHash, status
+...
 
 ```
 <!-- @formatter:on -->
