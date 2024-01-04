@@ -349,21 +349,77 @@ Copy `signedTx.json` and transfer it back to the online computer. Finally, use t
 artelad tx broadcast signedTx.json
 ```
 
-<!--
-![](./img/d1.png)
-![](./img/d2.png)
-![](./img/d3.png)
-![](./img/d4.png)
-![](./img/d5.png)
-![](./img/d6.png)
-![](./img/d7.png)
-![](./img/d8.png)
-![](./img/d9.png)
-![](./img/d10.png)
-![](./img/d11.png)
-![](./img/d12.png)
-![](./img/d13.png)
-![](./img/d14.png)
-![](./img/d15.png)
-![](./img/d16.png)
--->
+## Appendix
+
+### 1.Generate new delegator account
+```bash
+artelad keys add <account_name>
+```
+![](./img/d1.jpg)
+
+### 2.Delegate to a validator
+```bash
+artelad tx staking delegate <validator_operator> <amount> \
+--chain-id=<chain_id> \
+--from=<key_name>
+```
+![](./img/d2.jpg)
+
+### 3.Check the delegate tx status
+```bash
+artelad query tx <tx_hash>
+```
+![](./img/d3.jpg)
+
+### 4.Check validator staking balance
+```bash
+artelad query staking validator <validator_operator>
+```
+![](./img/d4.jpg)
+
+### 5.Query self current delegate status
+```bash
+artelad query staking delegations <delegator_addr>
+```
+![](./img/d5.jpg)
+
+### 6.Query self all rewards
+```bash
+artelad query distribution rewards <delegator_address> <validator_address>
+```
+![](./img/d6.jpg)
+
+### 7.Query target delegator rewards
+```bash
+artelad query distribution rewards <delegator_address>
+```
+![](./img/d7.jpg)
+
+### 8.Increase delegator amount
+```bash
+artelad tx staking delegate <validator_operator> <amount> \
+--chain-id=<chain_id> \
+--from=<key_name>
+```
+![](./img/d8.jpg)
+
+### 9.Claim rewards
+```bash
+artelad tx distribution withdraw-all-rewards \
+  --chain-id=<chain_id> \
+--from=<key_name>
+```
+![](./img/d9.jpg)
+
+### 10.Redelegate to other validator
+```bash
+artelad tx staking redelegate <srcValidatorAddress> <destValidatorAddress> <amountToRedelegate> 
+--from <delegatorKeyName>
+```
+![](./img/d10.jpg)
+
+### 11.Undelegate from validator
+```bash
+artelad tx staking unbond <validatorAddress> <amountToUnbond> --from <delegatorKeyName>
+```
+![](./img/d11.jpg)
