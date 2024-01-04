@@ -63,7 +63,8 @@ The command automatically creates the recommended directory structure and config
 * [as-proto](https://github.com/piotr-oles/as-proto): Encodes and decodes protobuf messages
 
 ```json
- "dependencies": {
+{
+  "dependencies": {
     "@artela/aspect-libs": "last Version",
     "@artela/web3": "last Version",
     "@artela/web3-atl": "last Version",
@@ -72,6 +73,7 @@ The command automatically creates the recommended directory structure and config
     "@assemblyscript/loader": "last Version",
     "as-proto": "last Version"
   }
+}
 ```
 
 #### Develop Dependencies
@@ -79,10 +81,12 @@ The command automatically creates the recommended directory structure and config
 * @artela/aspect-tool: an assist developers in seamlessly managing Aspect development tool.
 
 ```json
-"devDependencies": {
-    "@artela/aspect-tool":  "last Version",
+{
+  "devDependencies": {
+    "@artela/aspect-tool": "last Version",
     "assemblyscript": "last Version",
     "as-proto-gen": "last Version",
-    "yargs":  "last Version"
-  },
+    "yargs": "last Version"
+  }
+}
 ```

@@ -2,61 +2,146 @@
 
 > Provides an interface to access the Aspect State and Aspect Property.
 
-## 1. sys.aspect.xxxState
+## 1. sys.aspect.id
 
-> This API is used to get, update Aspect State.
-
-### 1. readonlyState
-
-> Readonly state, need implement `AspectStateReadonly`
+> get、set transientStorage.
 
 <!-- @formatter:off -->
 ```typescript
-    sys.aspect.readonlyState(ctx).get<String>("key").unwrap()
+ sys.aspect.id():string
+```
+<!-- @formatter:on -->
+
+* Returns
+    * aspect:string
+* Example
+
+<!-- @formatter:off -->
+```typescript
+const aspectId = sys.aspect.id()
+```
+<!-- @formatter:on -->
+
+## 2. sys.aspect.version
+
+> get、set transientStorage.
+
+<!-- @formatter:off -->
+```typescript
+ sys.aspect.version(): u64
+```
+<!-- @formatter:on -->
+
+* Returns
+    * aspect:string
+* Example
+
+<!-- @formatter:off -->
+```typescript
+const version = sys.aspect.version()
+```
+<!-- @formatter:on -->
+
+## 3. sys.aspect.readonlyState
+
+> Readonly state
+
+<!-- @formatter:off -->
+```typescript
+sys.aspect.readonlyState.get<T>(key: string):ImmutableStateValue<T>
 ```
 <!-- @formatter:on -->
 
 * Parameter
-    * string : keys
+    * key:string state key.
 * Returns
-    * string : value
-
-### 2. mutable State
-
-> mutable state get and set. need implement `AspectStateModifiable`
+    * value:T state value. The supported generics type
+      are: `u8` `i8` `u16` `i16` `u32` `i32` `u64` `i64` `string` `Uint8Array` `BigInt`
+* Example
 
 <!-- @formatter:off -->
 ```typescript
-//get and set
-sys.aspect.mutableState(ctx).get<string>("key").set<string>("value")
-//get 
-let value = sys.aspect.mutableState(ctx).get<string>("key").unwrap()
+const value = sys.aspect.readonlyState.get<string>("key").unwrap();
 
 ```
 <!-- @formatter:on -->
 
-* Parameter
-  * string : keys
-* Returns
-  * string : get value
+## 4. sys.aspect.mutableState
 
-
-## 2. sys.aspect.property
-
-### 1. get property
-
->  get property by key. 
+> get set on aspect state
 
 <!-- @formatter:off -->
 ```typescript
-//get 
-let value = sys.aspect.property.get<string>("key");
 
+sys.aspect.mutableState.get<T>(key: string): MutableStateValue<T>
 ```
 <!-- @formatter:on -->
 
 * Parameter
-  * string : keys
+    * key:string state key.
 * Returns
-  * string : get value
- 
+    * value:T state value. The supported generics type
+      are: `u8` `i8` `u16` `i16` `u32` `i32` `u64` `i64` `string` `Uint8Array` `BigInt`
+* Example
+
+<!-- @formatter:off -->
+```typescript
+// 1. get string value
+const value = sys.aspect.mutableState.get<string>("key").unwrap();
+
+// 2. set (key=>value)
+sys.aspect.mutableState.get<string>("key").set<string>("value");
+
+// 3. Function Call Mode
+const mutableState = sys.aspect.mutableState.get<string>("key");
+mutableState.set<string>("value2");  // set (key=>value2)
+mutableState.reload();  // reload state
+var data = mutableState.unwrap(); // data="value2"
+```
+<!-- @formatter:on -->
+
+## 5. sys.aspect.property
+
+> get property by key.
+
+<!-- @formatter:off -->
+```typescript
+sys.aspect.property.get<T>(key: string): T
+```
+<!-- @formatter:on -->
+
+* Parameter
+    * key:string property key.
+* Returns
+    * value:T property value. The supported generics type
+      are: `u8` `i8` `u16` `i16` `u32` `i32` `u64` `i64` `string` `Uint8Array` `BigInt`
+* Example
+
+<!-- @formatter:off -->
+```typescript
+const value = sys.aspect.rproperty.get<string>("key");
+```
+<!-- @formatter:on -->
+
+## 6. sys.aspect.transientStorage
+
+> get、set transientStorage.
+
+<!-- @formatter:off -->
+```typescript
+sys.aspect.transientStorage.get<T>(key: string, prefix: string = ''): TransientStorageValue<T>
+```
+<!-- @formatter:on -->
+
+* Parameter
+    * key:string property key.
+* Returns
+    * value:T property value. The supported generics type
+      are: `u8` `i8` `u16` `i16` `u32` `i32` `u64` `i64` `string` `Uint8Array` `BigInt`
+* Example
+
+<!-- @formatter:off -->
+```typescript
+const value = sys.aspect.rproperty.get<string>("key");
+```
+<!-- @formatter:on -->

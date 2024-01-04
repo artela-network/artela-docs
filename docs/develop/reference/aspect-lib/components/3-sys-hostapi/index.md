@@ -24,19 +24,15 @@
 
 <!-- @formatter:off -->
 ```typescript
-    public get(key: string): ContextQueryResponse
+public get(key: string): Uint8Array
 ```
 <!-- @formatter:on -->
 
 * Parameter
-    * string : keys，the existing supported keys are; see [key column](/develop/reference/aspect-lib/components/sys-hostapi#get-key-table)
+    * keys：string，the existing supported keys are; see [key column](/develop/reference/aspect-lib/components/sys-hostapi#get-key-table)
 
 * Returns
-    * <a href="/api/docs/classes/proto.ContextQueryResponse.html" target="_blank">ContextQueryResponse</a>
-
-        * result: RunResult | null ，Execute result，Please handle the `result.success==false` execution failure case in
-          your code.
-        * data: Any | null，The data type returned varies depending on the key of the query,see [response data column](/develop/reference/aspect-lib/components/sys-hostapi#get-key-table)
+    * data: Uint8Array，The data type returned varies depending on the key of the query,see [response data column](/develop/reference/aspect-lib/components/sys-hostapi#get-key-table)
 
 * Example
 
@@ -48,36 +44,26 @@
   } from "@artela/aspect-libs";
   import { Protobuf } from "as-proto/assembly/Protobuf";
   
-  {
-    const response = sys.hostApi.runtimeContext.get("tx^context");
-    if (response.result!.success) {
-        // decode data 
-     let ehtTx=Protobuf.decode<EthTransaction>(response.data!.value, EthTransaction.decode)
-    }
+  {    
+      // get key
+      const number = sys.hostApi.runtimeContext.get('block.header.number');
+      if (number){
+          // decode get result
+          const numberData = Protobuf.decode<UintData>(number, UintData.decode);
+      }
   }
 ```
 <!-- @formatter:on -->
 
-#### Get key Table
+#### Key Example, More details see 
+| key                           | type      |
+ |-------------------------------|-----------|
+| isCall                        | BoolData  |
+| block.header.parentHash       | BytesData |
+| block.header.miner            | BytesData |
+| block.header.transactionsRoot | BytesData |
+| ...                           | ....      |
 
-| keys                                                                        | response data                                                                                                                                                                                     |
-|:----------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| tx^content                                                                  | <a href="/api/docs/classes/proto.StringData.html" target="_blank">StringData</a>                                                                                                                      |
-| tx^context                                                                  | <a href="/api/docs/classes/proto.EthTransaction.html" target="_blank">EthTransaction</a>                                                                                                              |
-| tx^stateChanges^{account}^{stateVarName}^{indices0}^{indices1}^{indices...} | <a href="/api/docs/classes/proto.EthStateChange.html" target="_blank">EthStateChange</a> or <a href="/api/docs/classes/proto.EthStateChangeIndices.html" target="_blank">EthStateChangeIndices</a>        |
-| tx^extProperties^{key}                                                      | <a href="/api/docs/classes/proto.StringData.html" target="_blank">StringData</a>                                                                                                                      |
-| tx^callTree                                                                 | <a href="/api/docs/classes/proto.EthCallStacks.html" target="_blank">EthCallStacks</a>                                                                                                                |
-| tx^receipt                                                                  | <a href="/api/docs/classes/proto.EthReceipt.html" target="_blank">EthReceipt</a>                                                                                                                      |
-| tx^gasMeter                                                                 | <a href="/api/docs/classes/proto.GasMeter.html" target="_blank">GasMeter</a>                                                                                                                          |
-| env^consensusParams                                                         | <a href="/api/docs/classes/proto.ConsParams.html" target="_blank">ConsParams</a>                                                                                                                      |
-| env^chainConfig                                                             | <a href="/api/docs/classes/proto.ChainConfig.html" target="_blank">ChainConfig</a>                                                                                                  |
-| env^evmParams                                                               | <a href="/api/docs/classes/proto.EvmParams.html" target="_blank">EvmParams</a>                                                                                                  |
-| env^baseFee                                                                 | <a href="/api/docs/classes/proto.EnvContent.html" target="_blank">EnvContent</a>                                                                                                  |
-| block^header                                                                | <a href="/api/docs/classes/proto.EthBlockHeader.html" target="_blank">EthBlockHeader</a>                                                                                                  |
-| block^gasMeter                                                              | <a href="/api/docs/classes/proto.GasMeter.html" target="_blank">GasMeter</a>                                                                                                  |
-| block^minGasPrice                                                           | <a href="/api/docs/classes/proto.MinGasPrice.html" target="_blank">MinGasPrice</a>                                                                                                  |
-| block^lastCommit                                                            | <a href="/api/docs/classes/proto.LastCommitInfo.html" target="_blank">LastCommitInfo</a>                                                                                                  |
-| block^txs                                                                   | <a href="/api/docs/classes/proto.EthTxArray.html" target="_blank">EthTxArray</a>                                                                                                  |
 
 ### 2. query context
 
@@ -275,96 +261,7 @@
 ```
 <!-- @formatter:on -->
 
-### 3. base64Encode
-
-> returns the base64 encoding of the data.
-
-<!-- @formatter:off -->
-```typescript
-    public base64Encode(data: Uint8Array): string
-```
-<!-- @formatter:on -->
-
-* Parameter
-    * Uint8Array: data
-* Returns
-    * string: calculation result
-* Example
-
-<!-- @formatter:off -->
-```typescript
-    let data = sys.hostApi.crypto.base64Encode(sys.utils.stringToUint8Array("test"));
-
-```
-<!-- @formatter:on -->
-
-### 4. base64Decode
-
-> returns the base64 decoding of the data.
-
-<!-- @formatter:off -->
-```typescript
-   public base64Decode(data: string): Uint8Array
-```
-<!-- @formatter:on -->
-
-* Parameter
-    * string: data
-* Returns
-    * Uint8Array: calculation result
-* Example
-
-<!-- @formatter:off -->
-```typescript
-    let data = sys.hostApi.crypto.base64Decode("VGhpcyBpcyBhIHNhbXBsZS4=");
-```
-<!-- @formatter:on -->
-
-### 5. base58Encode
-
-> returns the base58 encoding of the data.
-
-<!-- @formatter:off -->
-```typescript
-    public base58Encode(data: Uint8Array): string 
-```
-<!-- @formatter:on -->
-
-* Parameter
-    * Uint8Array: data
-* Returns
-    * string: calculation result
-* Example
-
-<!-- @formatter:off -->
-```typescript
-    let data = sys.hostApi.crypto.base58Encode(sys.utils.stringToUint8Array("test"));
-```
-<!-- @formatter:on -->
-
-### 6. base58Decode
-
-> returns the base58 encoding of the data.
-
-<!-- @formatter:off -->
-```typescript
-    public base58Decode(data: string): Uint8Array
-```
-<!-- @formatter:on -->
-
-* Parameter
-    * string: data
-* Returns
-    * Uint8Array: calculation result
-* Example
-
-<!-- @formatter:off -->
-```typescript
-    let data = sys.hostApi.crypto.base58Decode("3yZe7d");
-```
-<!-- @formatter:on -->
-
-### 7. ripemd160
+### 3. ripemd160
 
 > returns the ripemd160 digest data.
 
@@ -386,13 +283,13 @@
 ```
 <!-- @formatter:on -->
 
-### 8. ecRecover
+### 4. ecRecover
 
 > returns the ecRecover encoding of the data.
 
 <!-- @formatter:off -->
 ```typescript
-    public ecRecover(data: Uint8Array): Uint8Array 
+    public ecRecover(hash: string, v: BigInt, r: BigInt, s: BigInt): string
 ```
 <!-- @formatter:on -->
 
@@ -404,7 +301,21 @@
 
 <!-- @formatter:off -->
 ```typescript
-    let data = sys.hostApi.crypto.ecRecover(sys.utils.stringToUint8Array("test"));
+
+let r="8ddbe43ca7d0b8df7a7a6e3c7843f110863542531262ee3958ae5739db5c8eff";
+let s="16b68cdef6ab525c8fa96164ff9a471d5b1d8b6d070810a90efd245583045e99";
+let v="1b";
+let msgHash="b893fcb3622cea25bc02a2491d3c8464df619d2ca0319203f14325208556fc5e";
+
+const recoverResult = sys.hostApi.crypto.ecRecover(
+    msgHash,
+    BigInt.fromString(v, 16),
+    BigInt.fromString(r, 16),
+    BigInt.fromString(s, 16),
+);
+
+return hexToUint8Array(recoverResult);
+
 ```
 <!-- @formatter:on -->
 
@@ -418,22 +329,25 @@
 
 <!-- @formatter:off -->
 ```typescript
-    public staticCall(request: EthMessage): EthMessageCallResult
+public staticCall(request: StaticCallRequest): StaticCallResult
 ```
 <!-- @formatter:on -->
 
 * Parameter
-    * <a href="/api/docs/classes/proto.EthMessage.html" target="_blank">EthMessage</a> : request
+    * <a href="/api/docs/classes/proto.StaticCallRequest.html" target="_blank">StaticCallRequest</a> : request
 * Returns
-    * <a href="/api/docs/classes/proto.EthMessageCallResult.html" target="_blank">EthMessageCallResult</a> : call result
+    * <a href="/api/docs/classes/proto.StaticCallResult.html" target="_blank">StaticCallResult</a> : call result
 * Example
 
 <!-- @formatter:off -->
 ```typescript
-{
-    let ethMessage = new EthMessage( );
-    let result = sys.hostApi.evmCall.staticCall(ethMessage)
-}
+const from = sys.aspect.property.get<Uint8Array>('from');
+const to = sys.aspect.property.get<Uint8Array>('to');
+const data = sys.aspect.property.get<Uint8Array>('data');
+
+const staticCallRequest = new StaticCallRequest(from, to, data, 1000000000);
+const staticCallResult = sys.hostApi.evmCall.staticCall(staticCallRequest);
+
 ```
 <!-- @formatter:on -->
 
@@ -443,7 +357,7 @@
 
 <!-- @formatter:off -->
 ```typescript
-    public jitCall(request: JitInherentRequest): JitInherentResponse
+public jitCall(request: JitInherentRequest): JitInherentResponse
 ```
 <!-- @formatter:on -->
 
@@ -455,21 +369,12 @@
 
 <!-- @formatter:off -->
 ```typescript
-{
-    let request = new JitInherentRequest(
-        sys.utils.hexToUint8Array(walletAddress),
-        new Uint8Array(0),
-        new Uint8Array(0),
-        sys.utils.hexToUint8Array(callData),
-        sys.utils.hexToUint8Array(ethereum.Number.fromU64(1000000).encodeHex()),
-        sys.utils.hexToUint8Array(ethereum.Number.fromU64(1000000).encodeHex()),
-        new Uint8Array(0),
-        new Uint8Array(0),
-        new Uint8Array(0),
-    );
-    
-    let response = sys.hostApi.evmCall.jitCall(request);
-}
+const sender = sys.aspect.property.get<Uint8Array>('from');
+const to = sys.aspect.property.get<Uint8Array>('to');
+const callData = sys.aspect.property.get<Uint8Array>('data');
+const request = JitCallBuilder.simple(sender, to, callData).build();
+// Submit the JIT call
+const response = sys.hostApi.evmCall.jitCall(request);
 ```
 <!-- @formatter:on -->
 
@@ -517,52 +422,6 @@
 ```
 <!-- @formatter:on -->
 
-### 3. hexToUint8Array
-
-> convert hex string to Uint8Array
-
-<!-- @formatter:off -->
-```typescript
-    public hexToUint8Array(s: string): Uint8Array
-```
-<!-- @formatter:on -->
-
-* Parameter
-    * string : hex string.
-* Return
-    * Uint8Array: byte result.
-* Example
-
-<!-- @formatter:off -->
-```typescript
-    let result = sys.hostApi.util.hexToUint8Array("0x74657374");
-```
-<!-- @formatter:on -->
-
-### 4. uint8ArrayToHex
-
-> convert Uint8Array to hex string
-
-<!-- @formatter:off -->
-```typescript
-    public uint8ArrayToHex(data: Uint8Array): string 
-```
-<!-- @formatter:on -->
-
-* Parameter
-    * Uint8Array : Data.
-* Return
-    * string: hex string.
-* Example
-
-<!-- @formatter:off -->
-```typescript
-    let result = sys.hostApi.util.uint8ArrayToHex([]);
-```
-<!-- @formatter:on -->
-
----
-
 ## sys.hostApi.stateDb
 
 ### 1. balance
@@ -571,19 +430,20 @@
 
 <!-- @formatter:off -->
 ```typescript
-    public balance(addr: string): string
+public balance(addr: Uint8Array): Uint8Array
 ```
 <!-- @formatter:on -->
 
 * Parameter
-    * string: account address hex string.
+    * addr: Uint8Array account address
 * Return
-    * string: balance value,big int string.
+    * result: Uint8Array balance value
 * Example
 
 <!-- @formatter:off -->
 ```typescript
-    let balance = sys.hostApi.stateDb.balance("0x111222333444555666");
+const contract = hexToUint8Array("0x5B38Da6a701c568545dCfcB03FcB875f56beddC4")
+const balance = sys.hostApi.stateDb.balance(contract);
 ```
 <!-- @formatter:on -->
 
@@ -593,40 +453,45 @@
 
 <!-- @formatter:off -->
 ```typescript
-    public stateAt(addr: string, hash: string): string
+public stateAt(addr: Uint8Array, hash: Uint8Array): Uint8Array
 ```
 <!-- @formatter:on -->
 
 * Parameter
-    * address: account address, hash hex string
-    * hash: one key, hash hex string
+    * address: Uint8Array account address
+    * hash: Uint8Array slot key hash
 * Return
-    * string: state, hash hex string
+    * Uint8Array: state value
 * Example
 
 <!-- @formatter:off -->
 ```typescript
-    let state = sys.hostApi.stateDb.stateAt("0x111222333444555666","0x9999988888xxx");
+const contract = hexToUint8Array("0x5B38Da6a701c568545dCfcB03FcB875f56beddC4")
+const hash = stringToUint8Array("aabbcc6a701c568545dCfcB03FcB875f56beaabb")
+let state = sys.hostApi.stateDb.stateAt(contract,hash);
 ```
 <!-- @formatter:on -->
 
-### 3. refund
+### 3. hasSuicided
 
-> returns the current value of the refund counter.
+> returns if the contract is suicided in current txs.
 
 <!-- @formatter:off -->
 ```typescript
-    public refund(): i64
+public hasSuicided(addr: Uint8Array): bool
 ```
 <!-- @formatter:on -->
 
+* Parameter
+    * address: Uint8Array account address
 * Return
-    * (i64): the current value of the refund counter
+    * bool: suicided 
 * Example
 
 <!-- @formatter:off -->
 ```typescript
-    let refund = sys.hostApi.stateDb.refund();
+const contract = hexToUint8Array("0x5B38Da6a701c568545dCfcB03FcB875f56beddC4")
+const hasSuicided = sys.hostApi.stateDb.hasSuicided(contract);
 ```
 <!-- @formatter:on -->
 
@@ -636,18 +501,19 @@
 
 <!-- @formatter:off -->
 ```typescript
-    public codeHash(addr: string): string
+public codeHash(addr: Uint8Array): Uint8Array
 ```
 <!-- @formatter:on -->
 * Parameter
-    * addr: address hash hex string
+    * address: Uint8Array account address
 * Return
-    * (i64): the current value of the refund counter
+    * Uint8Array: the current value of the refund counter
 * Example
 
 <!-- @formatter:off -->
 ```typescript
-    let refund = sys.hostApi.stateDb.codeHash("0x111222333444555666");
+const contract = hexToUint8Array("0x5B38Da6a701c568545dCfcB03FcB875f56beddC4")
+let hash = sys.hostApi.stateDb.codeHash(contract);
 ```
 <!-- @formatter:on -->
 
@@ -657,16 +523,39 @@
 
 <!-- @formatter:off -->
 ```typescript
-    public nonce(addr: string): i64 
+public nonce(addr: Uint8Array): u64 
 ```
 <!-- @formatter:on -->
 * Parameter
-    * addr: account address hash hex string
+    * address: Uint8Array account address
 * Return
     * (i64): nonce
 * Example
 <!-- @formatter:off -->
 ```typescript
-    let refund = sys.hostApi.stateDb.nonce("0x111222333444555666");
+const contract = hexToUint8Array("0x5B38Da6a701c568545dCfcB03FcB875f56beddC4")
+let nonce = sys.hostApi.stateDb.nonce(contract);
+```
+<!-- @formatter:on -->
+
+
+### 6. codeSize
+
+>  returns the code size of account.
+
+<!-- @formatter:off -->
+```typescript
+public codeSize(addr: Uint8Array): u64 
+```
+<!-- @formatter:on -->
+* Parameter
+    * address: Uint8Array account address
+* Return
+    * (i64): nonce
+* Example
+<!-- @formatter:off -->
+```typescript
+const contract = hexToUint8Array("0x5B38Da6a701c568545dCfcB03FcB875f56beddC4")
+let size = sys.hostApi.stateDb.codeSize(contract);
 ```
 <!-- @formatter:on -->
