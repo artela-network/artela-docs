@@ -11,13 +11,17 @@ You can deploy Aspect using the following command:
 ```bash
   npm run aspect:deploy -- --skfile {privateKey-path} \                                                
                          --wasm ./build/release.wasm \
+                         --properties [{\"key\":\"k\",\"value\":\"v\"},{\"key\":\"k1\",\"value\":\"v1\"}]
+                         --joinPoints {join point}
                          --gas 200000  
 ```
-
 **options：**
-> * --skfile : privateKey path for sender. (optional,default value `./privateKey.txt`).
-> * --wasm : wasm path.
-> * --gas : like `200000`,(optional,default value `7000000`).
+> * --skfile : privateKey path for sender. optional,default value `./privateKey.txt`.
+> * --wasm : *wasm path. like: `--wasm ./build/release.wasm `
+> * --properties: aspect properties. optional, like: `--properties [{\"key\":\"k\",\"value\":\"v\"},{\"key\":\"k1\",\"value\":\"v1\"}]`
+> * --joinPoints: specify which join points take effect，point list `PreContractCall PostContractCall PreTxExecute PostTxExecute VerifyTx`. required, like: `--joinPoints PreContractCall PostContractCall PreTxExecute PostTxExecute VerifyTx`
+> * --gas : like `200000`, optional,default value `7000000`.
+
 ---
 
 Specifically, the command will be executed

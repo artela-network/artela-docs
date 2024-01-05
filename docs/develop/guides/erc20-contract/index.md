@@ -39,17 +39,21 @@ This will create a project directory with the following structure:
 .
 ├── README.md
 ├── asconfig.json
-├── assembly
-│   ├── aspect                 <-- Your aspect code resides here
-│   │   └── aspect.ts          <-- Entry functions for the aspect
-│   └── index.ts
-├── contracts                  <-- Place your smart contracts here
-├── scripts                    <-- Utilitity scripts, including deploying, binding and etc.
-│   ├── aspect-deploy.cjs
-│   ├── bind.cjs
-│   ├── contract-call.cjs
-│   └── contract-deploy.cjs
-... [other directories and files]
+├── aspect                   <-- Your aspect code resides here
+│   └── index.ts       <-- Entry functions for the aspect
+├── contracts                <-- Place your smart contracts here
+├── package.json
+├── project.config.json
+├── scripts                  <-- Utilitity scripts, including deploying, binding and etc.
+│   ├── aspect-deploy.cjs
+│   ├── bind.cjs
+│   ├── contract-call.cjs
+│   ├── contract-deploy.cjs
+│   ├── contract-send.cjs
+│   └── create-account.cjs
+├── tests
+└── tsconfig.json
+
 ```
 
 
