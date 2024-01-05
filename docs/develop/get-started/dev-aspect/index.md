@@ -323,7 +323,7 @@ npm run contract:call -- --contract {smart-contract-address}  \
 
 > ✅ Due to Aspect interception, the transaction is reverted.
 
-![revertwrold.jpeg](revertwrold.jpeg)
+![img.svg](img.svg)
 
 Congratulations! You've learned the basics of Aspect development. For a deeper dive, refer to our
 comprehensive [Aspect Doc](https://docs.artela.network/develop/aspect-tools/aspect-docs).
