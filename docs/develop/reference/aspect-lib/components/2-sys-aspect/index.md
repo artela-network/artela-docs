@@ -113,8 +113,7 @@ sys.aspect.property.get<T>(key: string): T
 * Parameter
     * key:string property key.
 * Returns
-    * value:T property value. The supported generics type
-      are: `u8` `i8` `u16` `i16` `u32` `i32` `u64` `i64` `string` `Uint8Array` `BigInt`
+    * value:T property value. The supported generics type are: `u8` `i8` `u16` `i16` `u32` `i32` `u64` `i64` `string` `Uint8Array` `BigInt`
 * Example
 
 <!-- @formatter:off -->
@@ -134,14 +133,28 @@ sys.aspect.transientStorage.get<T>(key: string, prefix: string = ''): TransientS
 <!-- @formatter:on -->
 
 * Parameter
-    * key:string property key.
+    * key:string  aspect context key.
 * Returns
-    * value:T property value. The supported generics type
-      are: `u8` `i8` `u16` `i16` `u32` `i32` `u64` `i64` `string` `Uint8Array` `BigInt`
+    * result:TransientStorageValue  context value. The supported generics type are: `u8` `i8` `u16` `i16` `u32` `i32` `u64` `i64` `string` `Uint8Array` `BigInt`.
 * Example
-
 <!-- @formatter:off -->
 ```typescript
-const value = sys.aspect.rproperty.get<string>("key");
+import {
+  sys
+} from "@artela/aspect-libs";
+
+let key="test"
+// inline call
+sys.aspect.transientStorage.get<string>(key).set<u32>(10000);
+
+// function call
+let transientStorage = sys.aspect.transientStorage.get<string>(key);
+// set （test=>9999）
+transientStorage.set<u32>(9999);
+// reload storage, optional
+transientStorage.reload();
+// get value=9999
+var val = transientStorage.unwrap();
+
 ```
 <!-- @formatter:on -->

@@ -1,12 +1,13 @@
 # sys.hostApi
 
-> Provides host APIs that communicate with wasm runtimes, including crypto, utils, stateDb, and blockchain runtime context. 
+> Provides host APIs that communicate with wasm runtimes, including crypto, utils, stateDb, and blockchain runtime
+> context.
 > method entry and exit parameters are coded and decoded by protobuf, as described in each method.
 
 ## import
 
 <!-- @formatter:off -->
-```typescript
+```javascript
 {
     sys
 } from "@artela/aspect-libs";
@@ -29,10 +30,12 @@ public get(key: string): Uint8Array
 <!-- @formatter:on -->
 
 * Parameter
-    * keys：string，the existing supported keys are; see [key column](/develop/reference/aspect-lib/components/sys-hostapi#get-key-table)
+    * keys：string，the existing supported keys are;
+      see [key context keys](/develop/reference/aspect-lib/components/context-keys)
 
 * Returns
-    * data: Uint8Array，The data type returned varies depending on the key of the query,see [response data column](/develop/reference/aspect-lib/components/sys-hostapi#get-key-table)
+    * data: Uint8Array，The data type returned varies depending on the key of the
+      query,see [key context key Response Type](/develop/reference/aspect-lib/components/context-keys)
 
 * Example
 
@@ -55,165 +58,166 @@ public get(key: string): Uint8Array
 ```
 <!-- @formatter:on -->
 
-#### Key Example, More details see 
-| key                           | type      |
- |-------------------------------|-----------|
-| isCall                        | BoolData  |
-| block.header.parentHash       | BytesData |
-| block.header.miner            | BytesData |
-| block.header.transactionsRoot | BytesData |
-| ...                           | ....      |
+## sys.hostApi.aspectTransientStorage
 
+> Aspect Context is essentially a transient storage whose lifecycle is only current transaction. The Aspect Context can
+> be used to enables two-way communication between Aspect and Smart Contract.
 
-### 2. query context
+### 1. get
 
-> query context by name space.
+> Get Aspect context by key.
 
 <!-- @formatter:off -->
 ```typescript
-    public query(nameSpace: QueryNameSpace = 0, query: Any | null = null): ContextQueryResponse
+
+public get(key: string, aspectId: Uint8Array = new Uint8Array(0)): Uint8Array
+
 ```
 <!-- @formatter:on -->
 
 * Parameter
-    * nameSpace : <a href="/api/docs/classes/proto.QueryNameSpace.html" target="_blank">QueryNameSpace</a>
-    * query: Any Type，set different objects based on namespace.
-        * QueryNameSpace.QueryAspectState : <a href="/api/docs/classes/proto.StringData.html" target="_blank">StringData</a>
-        * QueryNameSpace.QueryAspectProperty : <a href="/api/docs/classes/proto.StringData.html" target="_blank">
-          StringData</a>
+    * key:string context key
+    * prefix:Uint8Array prefix of the key. optional. default aspectId
 * Returns
-    * <a href="/api/docs/classes/proto.ContextQueryResponse.html" target="_blank">ContextQueryResponse</a>, The data type
-      returned varies depending on the key of the query.
-
-        * QueryNameSpace.QueryAspectState : <a href="/api/docs/classes/proto.StringData.html" target="_blank">StringData</a>
-        * QueryNameSpace.QueryAspectProperty : <a href="/api/docs/classes/proto.StringData.html" target="_blank">
-          StringData</a>
-
+    * value:Uint8Array context value
 * Example
 
 <!-- @formatter:off -->
 ```typescript
-  import {QueryNameSpace,
-          StringData,
-          MessageUtil,
-          sys
-  } from "@artela/aspect-libs";
-  import { Protobuf } from "as-proto/assembly/Protobuf";
-  
-  const messageUtil=MessageUtil.instance()
-  {
-    const sateChangeQuery = new StringData(key);
-    const query = messageUtil.ToAny<StringData>(
-            messageUtil.StringData,
-            sateChangeQuery,
-            StringData.encode,
-    );
-    const outPtr =sys.hostApi.runtimeContext.query(QueryNameSpace.QueryAspectProperty, query);
-    if (!outPtr.result!.success) {
-      throw NewMessageError(outPtr.result!.message);
-    }
-    return convertUtil.fromString<T>(
-            outPtr.data == null
-                    ? ''
-                    : Protobuf.decode<StringData>(outPtr.data!.value, StringData.decode).data,
-    );
-  }
+import {
+  sys
+} from "@artela/aspect-libs";
+
+let key="test"
+// inline call
+let value = sys.hostApi.aspectTransientStorage.get(key);
 ```
 <!-- @formatter:on -->
 
-### 3. remove context
+### 2. set
 
-> remove context by removeNameSpace.
+> Get Aspect context by key.
 
 <!-- @formatter:off -->
 ```typescript
-    public remove(nameSpace: RemoveNameSpace = 0, query: Any | null = null): bool
+
+public set(key: string, value: Uint8Array): void
+
 ```
 <!-- @formatter:on -->
 
 * Parameter
-    * nameSpace: <a href="/api/docs/classes/proto.RemoveNameSpace.html" target="_blank">RemoveNameSpace</a>
-    * query: Any Type，set different objects based on namespace.
-        * RemoveAspectContext.RemoveAspectContext : <a href="/api/docs/classes/proto.StringData.html" target="_blank">
-          StringData</a>
-        * RemoveAspectContext.RemoveAspectState : <a href="/api/docs/classes/proto.StringData.html" target="_blank">
-          StringData</a>
+    * value:T set value. The supported generics type are: u8 i8 u16 i16 u32 i32 u64 i64 string Uint8Array BigInt
 * Returns
-    * bool: whether the deletion was successful.
-
+    * void
 * Example
 
 <!-- @formatter:off -->
 ```typescript
-  import {RemoveNameSpace,
-    Any,StringData,sys,MessageUtil
-  } from "@artela/aspect-libs";
-  import { Protobuf } from "as-proto/assembly/Protobuf";
-   
-  const messageUtil=MessageUtil.instance()
-  {
-    const data = new StringData(this.key);
-    const encode = Protobuf.encode(data, StringData.encode);
-    const any = new Any(messageUtil.StringData, encode);
-  
-    sys.hostApi.runtimeContext.remove(RemoveNameSpace.RemoveAspectState, any);
-  }
+import {
+  sys,stringToUint8Array
+} from "@artela/aspect-libs";
+{
+  let key="test";
+  let data= stringToUint8Array( "value");
+  let value = sys.hostApi.aspectTransientStorage.set(key,data);
+}
 ```
 <!-- @formatter:on -->
 
-### 4. set context
+## sys.hostApi.aspectProperty
 
-> set context by SetNameSpace.
+### 1. get
+
+> get aspect property.
 
 <!-- @formatter:off -->
 ```typescript
-    public set(dataSpace: SetNameSpace, key: string, value: string): bool
+public get(key: string): Uint8Array
 ```
 <!-- @formatter:on -->
 
 * Parameter
-    * dataSpace: <a href="/api/docs/classes/proto.SetNameSpace.html" target="_blank">SetNameSpace</a>
-    * key: set key
-    * value: set value
+    * key:string property key
 * Returns
-    * bool: whether the set was successful.
-
+    * value:Uint8Array property value.
 * Example
 
  <!-- @formatter:off -->
 ```typescript
-  import {
-          SetNameSpace,
-          sys
-  } from "@artela/aspect-libs";
-  {
-    sys.hostApi.runtimeContext.set(SetNameSpace.SetAspectState, "key", "data");
-  }
+import {sys} from "@artela/aspect-libs";
+
+{
+  let key="test";
+  let value = sys.hostApi.aspectProperty.get(key);
+}
 ```
 <!-- @formatter:on -->
 
-### 5. get aspectId
 
-> get current aspectId.
+## sys.hostApi.aspectState
+
+### 1. get
+
+> Get Aspect state by key.
 
 <!-- @formatter:off -->
 ```typescript
-    public aspectId(): string
+
+public get(key: string): Uint8Array
+
 ```
 <!-- @formatter:on -->
 
+* Parameter
+  * key:string state key
 * Returns
-    * string: current aspectId
-
+  * value:Uint8Array state value
 * Example
 
- <!-- @formatter:off -->
+<!-- @formatter:off -->
 ```typescript
- let aspId= sys.hostApi.runtimeContext.aspectId();
+import {
+  sys
+} from "@artela/aspect-libs";
+
+let key="test"
+// inline call
+let value = sys.hostApi.aspectState.get(key);
 ```
 <!-- @formatter:on -->
 
----
+### 2. set
+
+> Get Aspect state by key.
+
+<!-- @formatter:off -->
+```typescript
+
+public set(key: string, value: Uint8Array): void
+
+```
+<!-- @formatter:on -->
+
+* Parameter
+  * key:string state key
+  * value:Uint8Array state value
+* Returns
+  * void
+* Example
+<!-- @formatter:off -->
+```typescript
+import {
+  sys,stringToUint8Array
+} from "@artela/aspect-libs";
+{
+  let key="test"
+  let data= stringToUint8Array("value");
+  let value = sys.hostApi.aspectState.set(key,data);
+}
+```
+<!-- @formatter:on -->
+
 
 ## sys.hostApi.crypto
 
@@ -485,7 +489,7 @@ public hasSuicided(addr: Uint8Array): bool
 * Parameter
     * address: Uint8Array account address
 * Return
-    * bool: suicided 
+    * bool: suicided
 * Example
 
 <!-- @formatter:off -->
@@ -504,6 +508,7 @@ const hasSuicided = sys.hostApi.stateDb.hasSuicided(contract);
 public codeHash(addr: Uint8Array): Uint8Array
 ```
 <!-- @formatter:on -->
+
 * Parameter
     * address: Uint8Array account address
 * Return
@@ -526,11 +531,13 @@ let hash = sys.hostApi.stateDb.codeHash(contract);
 public nonce(addr: Uint8Array): u64 
 ```
 <!-- @formatter:on -->
+
 * Parameter
     * address: Uint8Array account address
 * Return
     * (i64): nonce
 * Example
+
 <!-- @formatter:off -->
 ```typescript
 const contract = hexToUint8Array("0x5B38Da6a701c568545dCfcB03FcB875f56beddC4")
@@ -538,24 +545,146 @@ let nonce = sys.hostApi.stateDb.nonce(contract);
 ```
 <!-- @formatter:on -->
 
-
 ### 6. codeSize
 
->  returns the code size of account.
+> returns the code size of account.
 
 <!-- @formatter:off -->
 ```typescript
 public codeSize(addr: Uint8Array): u64 
 ```
 <!-- @formatter:on -->
+
 * Parameter
     * address: Uint8Array account address
 * Return
     * (i64): nonce
 * Example
+
 <!-- @formatter:off -->
 ```typescript
 const contract = hexToUint8Array("0x5B38Da6a701c568545dCfcB03FcB875f56beddC4")
 let size = sys.hostApi.stateDb.codeSize(contract);
+```
+<!-- @formatter:on -->
+
+## sys.hostApi.trace
+
+> Aspects can trace the changes of a Smart Contract's state，however this tracing is facilitated by extra opcodes and IR methods generated by the ASOLC compiler。
+
+### 1. queryStateChange
+
+> Query state change.
+
+<!-- @formatter:off -->
+```typescript
+public queryStateChange(query: StateChangeQuery): Uint8Array 
+```
+<!-- @formatter:on -->
+
+* Parameter
+  * query: StateChangeQuery; 
+    * account: Uint8Array;  account hex string, like 0xxabcccxxxddeddd
+    * stateVarName: string; state variable name like 'HoneyPot.balances'
+    * indices: []Uint8Array; indices optional，
+* Return
+  * data: Uint8Array; EthStateChangeIndices or
+* Example
+
+<!-- @formatter:off -->
+```typescript
+const account = hexToUint8Array("0x5B38Da6a701c568545dCfcB03FcB875f56beddC4");
+const stateVar = 'HoneyPot.balances';
+
+const query= new StateChangeQuery(account,stateVar,[]);
+const response = sys.hostApi.trace.queryStateChange(query);
+const indicesResult = Protobuf.decode<EthStateChangeIndices>(response, EthStateChangeIndices.decode);
+//or set indices
+const changeQuery= new StateChangeQuery(account,stateVar,indicesResult.indices);
+const responseChange = sys.hostApi.trace.queryStateChange(changeQuery);
+const ethStateChange = Protobuf.decode<EthStateChange>(response, EthStateChange.decode);
+```
+<!-- @formatter:on -->
+
+### 2. queryCallTree
+
+> Query trace call tree by message index.
+
+<!-- @formatter:off -->
+```typescript
+public queryCallTree(query: CallTreeQuery): Uint8Array
+```
+<!-- @formatter:on -->
+
+* Parameter
+  * query: CallTreeQuery;
+    * account: Uint8Array;  account hex string, like 0xxabcccxxxddeddd
+    * stateVarName: string; state variable name like 'HoneyPot.balances'
+    * indices: []Uint8Array; indices optional，
+* Return
+  * data: Uint8Array; EthStateChangeIndices or
+* Example
+
+<!-- @formatter:off -->
+```typescript
+var callTreeQuery = new CallTreeQuery(-1);
+let response = sys.hostApi.trace.queryCallTree(callTreeQuery)
+//if query index ==-1 result EthCallTree
+const callTree = Protobuf.decode<EthCallTree>(response, EthCallTree.decode);
+
+//or get one call message
+
+var callTreeQuery = new CallTreeQuery(2);
+let response2 = sys.hostApi.trace.queryCallTree(callTreeQuery)
+//if query index == call message index, result EthCallMessage
+const callMessage = Protobuf.decode<EthCallMessage>(response2, EthCallMessage.decode);
+```
+<!-- @formatter:on -->
+
+##  sys.hostApi.util
+
+
+### 1. log
+
+> log information to the node.
+
+<!-- @formatter:off -->
+```typescript
+public log(data: string): void 
+```
+<!-- @formatter:on -->
+
+* Parameter
+  * data: string; log message.
+* Return
+  * void
+* Example
+<!-- @formatter:off -->
+```typescript
+sys.hostApi.util.log("this error")
+```
+<!-- @formatter:on -->
+
+### 2. revert
+
+> When executes revert, the program will be interrupted to continue execution, and a Message log will be printed on the server.
+> **Warning**
+> * If 'revert' is triggered within the Join-points of `PreContractCall, PostContractCall, PreTxExecute, PostTxExecute, and Operation`, it will revert transaction in blockchain.
+> * If 'revert' is executed within the `VerifyTx` pointcut, it will drop the transaction from the MemPool.
+
+<!-- @formatter:off -->
+```typescript
+public revert(message: string): void 
+```
+<!-- @formatter:on -->
+
+* Parameter
+  * message: string; error message.
+* Return
+  * void
+* Example
+<!-- @formatter:off -->
+```typescript
+sys.hostApi.util.revert("unknown error")
 ```
 <!-- @formatter:on -->
