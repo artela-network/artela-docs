@@ -37,7 +37,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Join-Point Access:**
     *  | Join-Point       | Can Assess | Description        |
               |------------------|------------|--------------------|
-       | VerifyTx         | ✅          | get is Call result |
+       | VerifyTx         | ❌          | get is Call result |
        | PreTxExecute     | ✅          | get is Call result |
        | PreContractCall  | ✅          | get is Call result |
        | PostContractCall | ✅          | get is Call result |
@@ -61,7 +61,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Join-Point Access:**
     *  | Join-Point       | Can Assess | Description        |
               |------------------|------------|--------------------|
-       | VerifyTx         | ✅          | get is Call result |
+       | VerifyTx         | ❌          | get is Call result |
        | PreTxExecute     | ✅          | get is Call result |
        | PreContractCall  | ✅          | get is Call result |
        | PostContractCall | ✅          | get is Call result |
@@ -85,7 +85,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Join-Point Access:**
     *  | Join-Point       | Can Assess | Description        |
               |------------------|------------|--------------------|
-       | VerifyTx         | ✅          | get is Call result |
+       | VerifyTx         | ❌          | get is Call result |
        | PreTxExecute     | ✅          | get is Call result |
        | PreContractCall  | ✅          | get is Call result |
        | PostContractCall | ✅          | get is Call result |
@@ -133,7 +133,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Join-Point Access:**
     *  | Join-Point       | Can Assess | Description        |
               |------------------|------------|--------------------|
-       | VerifyTx         | ✅          | get is Call result |
+       | VerifyTx         | ❌          | get is Call result |
        | PreTxExecute     | ✅          | get is Call result |
        | PreContractCall  | ✅          | get is Call result |
        | PostContractCall | ✅          | get is Call result |
@@ -361,7 +361,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.chain.eip155Block`
 * **Response Type:** `UintData`
 * **Description:**
-    * Retrieve the Ethereum chain configuration for the 'petersburg_block': Petersburg switch block (nil no fork, 0 = already activated)
+    * Retrieve the Ethereum chain configuration for the '**eip155_block**'.
 * **Example:**
     * ```javascript
     const key="env.chain.eip155Block";
@@ -385,7 +385,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.chain.eip158Block`
 * **Response Type:** `UintData`
 * **Description:**
-    *  Retrieve the Ethereum chain configuration for the 'petersburg_block': Petersburg switch block (nil no fork, 0 = already activated)
+    * Retrieve the Ethereum chain configuration for the '**eip158_block**'.
 * **Example:**
     * ```javascript
     const key="env.chain.eip158Block";
@@ -409,7 +409,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.chain.byzantiumBlock`
 * **Response Type:** `UintData`
 * **Description:**
-    *  Retrieve the Ethereum chain configuration for the 'petersburg_block': Petersburg switch block (nil no fork, 0 = already activated)
+    *  Retrieve the Ethereum chain configuration for the '**byzantium_block**': Byzantium switch block (nil no fork, 0 = already on byzantium)
 * **Example:**
     * ```javascript
     const key="env.chain.byzantiumBlock";
@@ -433,7 +433,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.chain.constantinopleBlock`
 * **Response Type:** `UintData`
 * **Description:**
-    *  Retrieve the Ethereum chain configuration for the 'petersburg_block': Petersburg switch block (nil no fork, 0 = already activated)
+    *  Retrieve the Ethereum chain configuration for the '**constantinople_block**': Constantinople switch block (nil no fork, 0 = already activated)
 * **Example:**
     * ```javascript
     const key="env.chain.constantinopleBlock";
@@ -457,7 +457,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.chain.petersburgBlock`
 * **Response Type:** `UintData`
 * **Description:**
-    * Retrieve the Ethereum chain configuration for the 'petersburg_block': Petersburg switch block (nil no fork, 0 = already activated)
+    * Retrieve the Ethereum chain configuration for the '**petersburg_block**': Petersburg switch block (nil no fork, 0 = already activated)
 * **Example:**
     * ```javascript
     const key="env.chain.petersburgBlock";
@@ -481,7 +481,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.chain.istanbulBlock`
 * **Response Type:** `UintData`
 * **Description:**
-    * Retrieve the Ethereum chain configuration for the 'istanbul_block': Istanbul switch block (nil no fork, 0 = already on istanbul)
+    * Retrieve the Ethereum chain configuration for the '**istanbul_block**': Istanbul switch block (nil no fork, 0 = already on istanbul)
 * **Example:**
     * ```javascript
     const key="env.chain.istanbulBlock";
@@ -505,7 +505,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.chain.muirGlacierBlock`
 * **Response Type:** `UintData`
 * **Description:**
-    * Get ethereum chain config `muir_glacier_block`: Eip-2384 (bomb delay) switch block (nil no fork, 0 = already activated).
+    * Retrieve the Ethereum chain configuration for the '**muir_glacier_block**': Eip-2384 (bomb delay) switch block (nil no fork, 0 = already activated).
 * **Example:**
     * ```javascript
     const key="env.chain.muirGlacierBlock";
@@ -529,7 +529,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.chain.berlinBlock`
 * **Response Type:** `UintData`
 * **Description:**
-    * Get ethereum chain config `berlin_block`: Berlin switch block (nil = no fork, 0 = already on berlin)
+    * Retrieve the Ethereum chain configuration for the '**berlin_block**': Berlin switch block (nil = no fork, 0 = already on berlin)
 * **Example:**
     * ```javascript
     const key="env.chain.berlinBlock";
@@ -553,7 +553,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.chain.londonBlock`
 * **Response Type:** `UintData`
 * **Description:**
-    *  Get ethereum chain config `london_block`: London switch block (nil = no fork, 0 = already on london)
+    * Retrieve the Ethereum chain configuration for the '**london_block**': London switch block (nil = no fork, 0 = already on london)
 * **Example:**
     * ```javascript
     const key="env.chain.londonBlock";
@@ -577,7 +577,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.chain.arrowGlacierBlock`
 * **Response Type:** `UintData`
 * **Description:**
-    * Get ethereum chain config `gray_glacier_block`: EIP-5133 (bomb delay) switch block (nil = no fork, 0 = already activated)
+    * Retrieve the Ethereum chain configuration for the '**arrow_glacier_block**': Eip-4345 (bomb delay) switch block (nil = no fork, 0 = already activated)
 * **Example:**
     * ```javascript
     const key="env.chain.arrowGlacierBlock";
@@ -601,7 +601,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.chain.grayGlacierBlock`
 * **Response Type:** `UintData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Retrieve the Ethereum chain configuration for the '**gray_glacier_block**': EIP-5133 (bomb delay) switch block (nil = no fork, 0 = already activated)
 * **Example:**
     * ```javascript
     const key="env.chain.grayGlacierBlock";
@@ -625,7 +625,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.chain.mergeNetSplitBlock`
 * **Response Type:** `UintData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Retrieve the Ethereum chain configuration for the '**merge_netsplit_block**': Virtual fork after The Merge to use as a network splitter.
 * **Example:**
     * ```javascript
     const key="env.chain.mergeNetSplitBlock";
@@ -649,7 +649,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.chain.shanghaiTime`
 * **Response Type:** `UintData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Retrieve the Ethereum chain configuration for the '**shanghaiTime**': Shanghai switch time (nil = no fork, 0 = already on shanghai).
 * **Example:**
     * ```javascript
     const key="env.chain.shanghaiTime";
@@ -673,7 +673,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.chain.cancunTime`
 * **Response Type:** `UintData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Retrieve the Ethereum chain configuration for the '**CancunTime**': Cancun switch time (nil = no fork, 0 = already on cancun).
 * **Example:**
     * ```javascript
     const key="env.chain.cancunTime";
@@ -697,7 +697,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.chain.pragueTime`
 * **Response Type:** `UintData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Retrieve the Ethereum chain configuration for the '**PragueTime**': Prague switch time (nil = no fork, 0 = already on prague).
 * **Example:**
     * ```javascript
     const key="env.chain.pragueTime";
@@ -721,7 +721,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.consensusParams.block.maxGas`
 * **Response Type:** `IntData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Retrieve the max gas per block.
 * **Example:**
     * ```javascript
     const key="env.consensusParams.block.maxGas";
@@ -745,7 +745,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.consensusParams.block.maxBytes`
 * **Response Type:** `IntData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Retrieve the max block size, in bytes.
 * **Example:**
     * ```javascript
     const key="env.consensusParams.block.maxBytes";
@@ -769,7 +769,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.consensusParams.evidence.maxAgeDuration`
 * **Response Type:** `IntData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Retrieve the max age duration.It should correspond with an app's "unbonding period" or other similar mechanism for handling.
 * **Example:**
     * ```javascript
     const key="env.consensusParams.evidence.maxAgeDuration";
@@ -793,7 +793,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.consensusParams.evidence.maxAgeNumBlocks`
 * **Response Type:** `IntData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * The basic formula for calculating this is: MaxAgeDuration / {average block time}.
 * **Example:**
     * ```javascript
     const key="env.consensusParams.evidence.maxAgeNumBlocks";
@@ -817,7 +817,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.consensusParams.evidence.maxBytes`
 * **Response Type:** `IntData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Retrieve the maximum size of total evidence in bytes that can be committed in a single block.
 * **Example:**
     * ```javascript
     const key="env.consensusParams.evidence.maxBytes";
@@ -841,7 +841,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.consensusParams.validator.pubKeyTypes`
 * **Response Type:** `StringArrayData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * restrict the public key types validators can use.
 * **Example:**
     * ```javascript
     const key="env.consensusParams.validator.pubKeyTypes";
@@ -865,7 +865,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.consensusParams.appVersion`
 * **Response Type:** `UintData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * The ABCI application version.
 * **Example:**
     * ```javascript
     const key="env.consensusParams.appVersion";
@@ -889,7 +889,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `tx.type`
 * **Response Type:** `UintData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * returns the transaction type id. LegacyTxType=0x00 AccessListTxType=0x01 DynamicFeeTxType=0x02 BlobTxType=0x03
 * **Example:**
     * ```javascript
     const key="tx.type";
@@ -913,7 +913,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `tx.chainId`
 * **Response Type:** `BytesData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * returns the EIP155 chain ID of the transaction. The return value will always be non-nil. For legacy transactions which are not replay-protected, the return value is zero.
 * **Example:**
     * ```javascript
     const key="tx.chainId";
@@ -937,7 +937,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `tx.accessList`
 * **Response Type:** `EthAccessList`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * AccessListTx is the data of EIP-2930 access list transactions.
 * **Example:**
     * ```javascript
     const key="tx.accessList";
@@ -962,7 +962,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `tx.nonce`
 * **Response Type:** `UintData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Returns the sender account nonce of the transaction.
 * **Example:**
     * ```javascript
     const key="tx.nonce";
@@ -986,7 +986,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `tx.gasPrice`
 * **Response Type:** `BytesData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Returns the gas price of the transaction.
 * **Example:**
     * ```javascript
     const key="tx.gasPrice";
@@ -1010,7 +1010,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `tx.gas`
 * **Response Type:** `UintData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Returns the gas limit of the transaction.
 * **Example:**
     * ```javascript
     const key="tx.gas";
@@ -1034,7 +1034,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `tx.gasTipCap`
 * **Response Type:** `BytesData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    *  Returns the gasTipCap per gas of the transaction.
 * **Example:**
     * ```javascript
     const key="tx.gasTipCap";
@@ -1058,7 +1058,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `tx.gasFeeCap`
 * **Response Type:** `BytesData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Returns the fee cap per gas of the transaction.
 * **Example:**
     * ```javascript
     const key="tx.gasFeeCap";
@@ -1082,7 +1082,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `tx.to`
 * **Response Type:** `BytesData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Returns the recipient address of the transaction. For contract-creation transactions, To returns nil.
 * **Example:**
     * ```javascript
     const key="tx.to";
@@ -1106,7 +1106,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `tx.value`
 * **Response Type:** `BytesData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Returns the ether amount of the transaction.
 * **Example:**
     * ```javascript
     const key="tx.value";
@@ -1130,7 +1130,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `tx.data`
 * **Response Type:** `BytesData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Returns the input data of the transaction.
 * **Example:**
     * ```javascript
     const key="tx.data";
@@ -1154,7 +1154,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `tx.bytes`
 * **Response Type:** `BytesData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Returns the transaction marshal binary.
 * **Example:**
     * ```javascript
     const key="tx.bytes";
@@ -1178,7 +1178,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `tx.hash`
 * **Response Type:** `BytesData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Returns the transaction hash.
 * **Example:**
     * ```javascript
     const key="tx.hash";
@@ -1202,7 +1202,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `tx.unsigned.bytes`
 * **Response Type:** `BytesData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Returns the unsigned transaction marshal binary.
 * **Example:**
     * ```javascript
     const key="tx.unsigned.bytes";
@@ -1226,7 +1226,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `tx.unsigned.hash`
 * **Response Type:** `BytesData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Returns the unsigned transaction hash.
 * **Example:**
     * ```javascript
     const key="tx.unsigned.hash";
@@ -1250,7 +1250,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `tx.sig.v`
 * **Response Type:** `BytesData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Returns the V signature values of the transaction.
 * **Example:**
     * ```javascript
     const key="tx.sig.v";
@@ -1262,7 +1262,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Join-Point Access:**
     *  | Join-Point       | Can Assess | Description        |
               |------------------|------------|--------------------|
-       | VerifyTx         | ✅          | get is Call result |
+       | VerifyTx         | ❌          | get is Call result |
        | PreTxExecute     | ✅          | get is Call result |
        | PreContractCall  | ✅          | get is Call result |
        | PostContractCall | ✅          | get is Call result |
@@ -1274,7 +1274,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `tx.sig.r`
 * **Response Type:** `BytesData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Returns the R signature values of the transaction.
 * **Example:**
     * ```javascript
     const key="tx.sig.r";
@@ -1286,7 +1286,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Join-Point Access:**
     *  | Join-Point       | Can Assess | Description        |
               |------------------|------------|--------------------|
-       | VerifyTx         | ✅          | get is Call result |
+       | VerifyTx         | ❌          | get is Call result |
        | PreTxExecute     | ✅          | get is Call result |
        | PreContractCall  | ✅          | get is Call result |
        | PostContractCall | ✅          | get is Call result |
@@ -1298,7 +1298,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `tx.sig.s`
 * **Response Type:** `BytesData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Returns the S signature values of the transaction.
 * **Example:**
     * ```javascript
     const key="tx.sig.s";
@@ -1310,7 +1310,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Join-Point Access:**
     *  | Join-Point       | Can Assess | Description        |
               |------------------|------------|--------------------|
-       | VerifyTx         | ✅          | get is Call result |
+       | VerifyTx         | ❌          | get is Call result |
        | PreTxExecute     | ✅          | get is Call result |
        | PreContractCall  | ✅          | get is Call result |
        | PostContractCall | ✅          | get is Call result |
@@ -1322,7 +1322,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `tx.from`
 * **Response Type:** `BytesData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Returns the from address of the transaction.
 * **Example:**
     * ```javascript
     const key="tx.from";
@@ -1334,7 +1334,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Join-Point Access:**
     *  | Join-Point       | Can Assess | Description        |
               |------------------|------------|--------------------|
-       | VerifyTx         | ✅          | get is Call result |
+       | VerifyTx         | ❌          | get is Call result |
        | PreTxExecute     | ✅          | get is Call result |
        | PreContractCall  | ✅          | get is Call result |
        | PostContractCall | ✅          | get is Call result |
@@ -1346,7 +1346,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `tx.index`
 * **Response Type:** `UintData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Returns the transaction index of current block.
 * **Example:**
     * ```javascript
     const key="tx.index";
@@ -1358,7 +1358,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Join-Point Access:**
     *  | Join-Point       | Can Assess | Description        |
               |------------------|------------|--------------------|
-       | VerifyTx         | ✅          | get is Call result |
+       | VerifyTx         | ❌          | get is Call result |
        | PreTxExecute     | ✅          | get is Call result |
        | PreContractCall  | ✅          | get is Call result |
        | PostContractCall | ✅          | get is Call result |
@@ -1370,7 +1370,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `aspect.id`
 * **Response Type:** `BytesData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Return current aspect id.
 * **Example:**
     * ```javascript
     const key="aspect.id";
@@ -1394,7 +1394,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `aspect.version`
 * **Response Type:** `UintData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Return current aspect version.
 * **Example:**
     * ```javascript
     const key="aspect.version";
@@ -1418,7 +1418,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `msg.from`
 * **Response Type:** `BytesData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Returns the sender address of the EVM call message.
 * **Example:**
     * ```javascript
     const key="msg.from";
@@ -1430,19 +1430,19 @@ import {Protobuf} from 'as-proto/assembly';
 * **Join-Point Access:**
     *  | Join-Point       | Can Assess | Description        |
               |------------------|------------|--------------------|
-       | VerifyTx         | ✅          | get is Call result |
-       | PreTxExecute     | ✅          | get is Call result |
+       | VerifyTx         | ❌          | get is Call result |
+       | PreTxExecute     | ❌          | get is Call result |
        | PreContractCall  | ✅          | get is Call result |
        | PostContractCall | ✅          | get is Call result |
        | PostTxExecute    | ✅          | get is Call result |
-       | Operation        | ✅          | get is Call result |
+       | Operation        | ❌          | get is Call result |
 
 ## 60. MsgTo
 
 * **Key**: `msg.to`
 * **Response Type:** `BytesData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Returns the recipient address of the EVM call message.
 * **Example:**
     * ```javascript
     const key="msg.to";
@@ -1454,19 +1454,19 @@ import {Protobuf} from 'as-proto/assembly';
 * **Join-Point Access:**
     *  | Join-Point       | Can Assess | Description        |
               |------------------|------------|--------------------|
-       | VerifyTx         | ✅          | get is Call result |
-       | PreTxExecute     | ✅          | get is Call result |
+       | VerifyTx         | ❌          | get is Call result |
+       | PreTxExecute     | ❌          | get is Call result |
        | PreContractCall  | ✅          | get is Call result |
        | PostContractCall | ✅          | get is Call result |
-       | PostTxExecute    | ✅          | get is Call result |
-       | Operation        | ✅          | get is Call result |
+       | PostTxExecute    | ❌          | get is Call result |
+       | Operation        | ❌          | get is Call result |
 
 ## 61. MsgValue
 
 * **Key**: `msg.value`
 * **Response Type:** `BytesData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Returns the ether amount of the EVM call message.
 * **Example:**
     * ```javascript
     const key="msg.value";
@@ -1478,19 +1478,19 @@ import {Protobuf} from 'as-proto/assembly';
 * **Join-Point Access:**
     *  | Join-Point       | Can Assess | Description        |
               |------------------|------------|--------------------|
-       | VerifyTx         | ✅          | get is Call result |
-       | PreTxExecute     | ✅          | get is Call result |
+       | VerifyTx         | ❌          | get is Call result |
+       | PreTxExecute     | ❌          | get is Call result |
        | PreContractCall  | ✅          | get is Call result |
        | PostContractCall | ✅          | get is Call result |
-       | PostTxExecute    | ✅          | get is Call result |
-       | Operation        | ✅          | get is Call result |
+       | PostTxExecute    | ❌          | get is Call result |
+       | Operation        | ❌          | get is Call result |
 
 ## 62. MsgGas
 
 * **Key**: `msg.gas`
 * **Response Type:** `UintData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Returns the gas limit of the EVM call message.
 * **Example:**
     * ```javascript
     const key="msg.gas";
@@ -1502,19 +1502,19 @@ import {Protobuf} from 'as-proto/assembly';
 * **Join-Point Access:**
     *  | Join-Point       | Can Assess | Description        |
               |------------------|------------|--------------------|
-       | VerifyTx         | ✅          | get is Call result |
-       | PreTxExecute     | ✅          | get is Call result |
+       | VerifyTx         | ❌          | get is Call result |
+       | PreTxExecute     | ❌          | get is Call result |
        | PreContractCall  | ✅          | get is Call result |
        | PostContractCall | ✅          | get is Call result |
-       | PostTxExecute    | ✅          | get is Call result |
-       | Operation        | ✅          | get is Call result |
+       | PostTxExecute    | ❌          | get is Call result |
+       | Operation        | ❌          | get is Call result |
 
 ## 63. MsgInput
 
 * **Key**: `msg.input`
 * **Response Type:** `BytesData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Returns the input data of the EVM call message.
 * **Example:**
     * ```javascript
     const key="isCall";
@@ -1526,19 +1526,19 @@ import {Protobuf} from 'as-proto/assembly';
 * **Join-Point Access:**
     *  | Join-Point       | Can Assess | Description        |
               |------------------|------------|--------------------|
-       | VerifyTx         | ✅          | get is Call result |
-       | PreTxExecute     | ✅          | get is Call result |
+       | VerifyTx         | ❌          | get is Call result |
+       | PreTxExecute     | ❌          | get is Call result |
        | PreContractCall  | ✅          | get is Call result |
        | PostContractCall | ✅          | get is Call result |
-       | PostTxExecute    | ✅          | get is Call result |
-       | Operation        | ✅          | get is Call result |
+       | PostTxExecute    | ❌          | get is Call result |
+       | Operation        | ❌          | get is Call result |
 
 ## 64. MsgIndex
 
 * **Key**: `msg.index`
 * **Response Type:** `UintData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Returns the index of the EVM call message.
 * **Example:**
     * ```javascript
     const key="msg.index";
@@ -1550,19 +1550,19 @@ import {Protobuf} from 'as-proto/assembly';
 * **Join-Point Access:**
     *  | Join-Point       | Can Assess | Description        |
               |------------------|------------|--------------------|
-       | VerifyTx         | ✅          | get is Call result |
-       | PreTxExecute     | ✅          | get is Call result |
+       | VerifyTx         | ❌          | get is Call result |
+       | PreTxExecute     | ❌          | get is Call result |
        | PreContractCall  | ✅          | get is Call result |
        | PostContractCall | ✅          | get is Call result |
-       | PostTxExecute    | ✅          | get is Call result |
-       | Operation        | ✅          | get is Call result |
+       | PostTxExecute    | ❌          | get is Call result |
+       | Operation        | ❌          | get is Call result |
 
 ## 65. MsgResultRet
 
 * **Key**: `msg.result.ret`
 * **Response Type:** `BytesData`
 * **Description:**
-    * Get the current message evm call result.
+    * Returns the result of the EVM call.
 * **Example:**
     * ```javascript
     const key="msg.result.ret";
@@ -1574,19 +1574,19 @@ import {Protobuf} from 'as-proto/assembly';
 * **Join-Point Access:**
     *  | Join-Point       | Can Assess | Description        |
               |------------------|------------|--------------------|
-       | VerifyTx         | ✅          | get is Call result |
-       | PreTxExecute     | ✅          | get is Call result |
-       | PreContractCall  | ✅          | get is Call result |
+       | VerifyTx         | ❌          | get is Call result |
+       | PreTxExecute     | ❌          | get is Call result |
+       | PreContractCall  | ❌          | get is Call result |
        | PostContractCall | ✅          | get is Call result |
-       | PostTxExecute    | ✅          | get is Call result |
-       | Operation        | ✅          | get is Call result |
+       | PostTxExecute    | ❌          | get is Call result |
+       | Operation        | ❌          | get is Call result |
 
 ## 66. MsgResultGasUsed
 
 * **Key**: `msg.result.gasUsed`
 * **Response Type:** `UintData`
 * **Description:**
-    * Get the current message evm call result gas used. 
+    * Returns the gas used of the EVM call.
 * **Example:**
     * ```javascript
     const key="msg.result.gasUsed";
@@ -1598,19 +1598,19 @@ import {Protobuf} from 'as-proto/assembly';
 * **Join-Point Access:**
     *  | Join-Point       | Can Assess | Description        |
               |------------------|------------|--------------------|
-       | VerifyTx         | ✅          | get is Call result |
-       | PreTxExecute     | ✅          | get is Call result |
-       | PreContractCall  | ✅          | get is Call result |
+       | VerifyTx         | ❌          | get is Call result |
+       | PreTxExecute     | ❌          | get is Call result |
+       | PreContractCall  | ❌          | get is Call result |
        | PostContractCall | ✅          | get is Call result |
-       | PostTxExecute    | ✅          | get is Call result |
-       | Operation        | ✅          | get is Call result |
+       | PostTxExecute    | ❌          | get is Call result |
+       | Operation        | ❌          | get is Call result |
 
 ## 67. MsgResultError
 
 * **Key**: `msg.result.error`
 * **Response Type:** `StringData`
 * **Description:**
-    * Get evm.call result error.
+    * Returns the result error message of the EVM call.
 * **Example:**
     * ```javascript
     const key="msg.result.error";
@@ -1622,19 +1622,19 @@ import {Protobuf} from 'as-proto/assembly';
 * **Join-Point Access:**
     *  | Join-Point       | Can Assess | Description        |
               |------------------|------------|--------------------|
-       | VerifyTx         | ✅          | get is Call result |
-       | PreTxExecute     | ✅          | get is Call result |
-       | PreContractCall  | ✅          | get is Call result |
+       | VerifyTx         | ❌          | get is Call result |
+       | PreTxExecute     | ❌          | get is Call result |
+       | PreContractCall  | ❌          | get is Call result |
        | PostContractCall | ✅          | get is Call result |
-       | PostTxExecute    | ✅          | get is Call result |
-       | Operation        | ✅          | get is Call result |
+       | PostTxExecute    | ❌          | get is Call result |
+       | Operation        | ❌          | get is Call result |
 
 ## 68. ReceiptStatus
 
 * **Key**: `receipt.status`
 * **Response Type:** `UintData`
 * **Description:**
-    * Get evm.call receipt status.
+    * Returns the receipt status of the EVM call.
 * **Example:**
     * ```javascript
     const key="receipt.status";
@@ -1646,12 +1646,12 @@ import {Protobuf} from 'as-proto/assembly';
 * **Join-Point Access:**
     *  | Join-Point       | Can Assess | Description        |
               |------------------|------------|--------------------|
-       | VerifyTx         | ✅          | get is Call result |
-       | PreTxExecute     | ✅          | get is Call result |
-       | PreContractCall  | ✅          | get is Call result |
-       | PostContractCall | ✅          | get is Call result |
+       | VerifyTx         | ❌          | get is Call result |
+       | PreTxExecute     | ❌          | get is Call result |
+       | PreContractCall  | ❌          | get is Call result |
+       | PostContractCall | ❌          | get is Call result |
        | PostTxExecute    | ✅          | get is Call result |
-       | Operation        | ✅          | get is Call result |
+       | Operation        | ❌          | get is Call result |
 
 ## 69. ReceiptLogs
 
@@ -1659,7 +1659,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Response Type:** `EthLogs`
 
 * **Description:**
-    * Get evm.call receipt logs.
+    * Returns the receipt logs of the EVM call.
 * **Example:**
     * ```javascript
     const key="receipt.logs";
@@ -1671,19 +1671,19 @@ import {Protobuf} from 'as-proto/assembly';
 * **Join-Point Access:**
     *  | Join-Point       | Can Assess | Description        |
               |------------------|------------|--------------------|
-       | VerifyTx         | ✅          | get is Call result |
-       | PreTxExecute     | ✅          | get is Call result |
-       | PreContractCall  | ✅          | get is Call result |
-       | PostContractCall | ✅          | get is Call result |
+       | VerifyTx         | ❌          | get is Call result |
+       | PreTxExecute     | ❌          | get is Call result |
+       | PreContractCall  | ❌          | get is Call result |
+       | PostContractCall | ❌          | get is Call result |
        | PostTxExecute    | ✅          | get is Call result |
-       | Operation        | ✅          | get is Call result |
+       | Operation        | ❌          | get is Call result |
 
 ## 70. ReceiptGasUsed
 
 * **Key**: `receipt.gasUsed`
 * **Response Type:** `UintData`
 * **Description:**
-    * Get evm.call receipt gas used.
+    * Returns the receipt gas used of the EVM call.
 * **Example:**
     * ```javascript
     const key="receipt.gasUsed";
@@ -1695,19 +1695,19 @@ import {Protobuf} from 'as-proto/assembly';
 * **Join-Point Access:**
     *  | Join-Point       | Can Assess | Description        |
               |------------------|------------|--------------------|
-       | VerifyTx         | ✅          | get is Call result |
-       | PreTxExecute     | ✅          | get is Call result |
-       | PreContractCall  | ✅          | get is Call result |
-       | PostContractCall | ✅          | get is Call result |
+       | VerifyTx         | ❌          | get is Call result |
+       | PreTxExecute     | ❌          | get is Call result |
+       | PreContractCall  | ❌          | get is Call result |
+       | PostContractCall | ❌          | get is Call result |
        | PostTxExecute    | ✅          | get is Call result |
-       | Operation        | ✅          | get is Call result |
+       | Operation        | ❌          | get is Call result |
 
 ## 71. ReceiptCumulativeGasUsed
 
 * **Key**: `receipt.cumulativeGasUsed`
 * **Response Type:** `UintData`
 * **Description:**
-    *  Get cumulative gas used in receipt.
+    * Returns the cumulative gas used of the receipt.
 * **Example:**
     * ```javascript
     const key="receipt.cumulativeGasUsed";
@@ -1719,19 +1719,19 @@ import {Protobuf} from 'as-proto/assembly';
 * **Join-Point Access:**
     *  | Join-Point       | Can Assess | Description        |
               |------------------|------------|--------------------|
-       | VerifyTx         | ✅          | get is Call result |
-       | PreTxExecute     | ✅          | get is Call result |
-       | PreContractCall  | ✅          | get is Call result |
-       | PostContractCall | ✅          | get is Call result |
+       | VerifyTx         | ❌          | get is Call result |
+       | PreTxExecute     | ❌          | get is Call result |
+       | PreContractCall  | ❌          | get is Call result |
+       | PostContractCall | ❌          | get is Call result |
        | PostTxExecute    | ✅          | get is Call result |
-       | Operation        | ✅          | get is Call result |
+       | Operation        | ❌          | get is Call result |
 
 ## 72. ReceiptBloom
 
 * **Key**: `receipt.bloom`
 * **Response Type:** `BytesData`
 * **Description:**
-    * Get receipt bloom.
+    * Returns the receipt bloom.
 * **Example:**
     * ```
     const key="receipt.bloom";
@@ -1743,12 +1743,12 @@ import {Protobuf} from 'as-proto/assembly';
 * **Join-Point Access:**
     * | Join-Point       | Can Assess | Description        |
           |------------------|------------|--------------------|       
-      | VerifyTx         | ✅          | get is Call result |
-      | PreTxExecute     | ✅          | get is Call result |
-      | PreContractCall  | ✅          | get is Call result |
-      | PostContractCall | ✅          | get is Call result |
+      | VerifyTx         | ❌          | get is Call result |
+      | PreTxExecute     | ❌          | get is Call result |
+      | PreContractCall  | ❌          | get is Call result |
+      | PostContractCall | ❌          | get is Call result |
       | PostTxExecute    | ✅          | get is Call result |
-      | Operation        | ✅          | get is Call result |
+      | Operation        | ❌          | get is Call result |
 
 ## 73. IsCall
 
