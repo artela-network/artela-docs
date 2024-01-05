@@ -21,76 +21,57 @@ The following represents the call graph:
 
 At this stage, the account state remains pristine, enabling Aspect to preload information as needed.
 
+## Interface
+
+```assembly
+preTxExecute(input: PreTxExecuteInput): void
+```
+
+* input: The base layer will deliver the PreTxExecuteInput object to Aspect in this join point.
+  * **Detail of PreTxExecuteInput **
+    - `input.block.number`: current block number.
+    - `input.tx.from`: caller of the transaction.
+    - `input.tx.to`: to address of the transaction.
+    - `input.tx.hash`: hash of the transaction.
+
+* return: void; If Aspect returns normally, the transaction will continue to execute. If Aspect calls `sys.revert` to revert the transaction, the base layer will revert the transaction.
+
+
+
 ## Example
 
 <!-- @formatter:off -->
+
+！！！以下例子改改，写个白名单的就好了！！！
+
 ```typescript
 
-/**
- * preTxExecute is a join-point that gets invoked before the execution of a transaction.
- *
- * @param input Input of the given join-point
- * @return void
- */
 preTxExecute(input: PreTxExecuteInput): void {
-  // In this method, constrain the execution of the aspect-bound contract to be invoked no more than 100 times.
-
-  // import {sys} from "@artela/aspect-libs";
-  const val = sys.aspect.mutableState.get<i32>("counter");
-  let count = val.unwrap();
-
-  // revert this transaction if it reaches the specified limit.
-  sys.require(count <= 100, "The contract is invoked more than 100 times.");
-
-  val.set<i32>(count + 1);
+  let blockNumer = input.block!.number;
+  let txFrom = input.tx!.from;
+  let txTo = input.tx!.to;
+  let txHash = input.tx!.hash;
+  
+  。。。
 }
 
 ```
 <!-- @formatter:on -->
 
-## Programming
+## Programming guide
 
-There are two programming modes that can be used in this method:
-
-1. By utilizing the 'input' input argument, it provides essential insights into transactions and block processing. see [how to use input](#how-to-use-input).
-
+1. By utilizing the 'input' input argument, it provides essential insights into transactions and block processing. 
 2. Using the 'sys' namespace, it provides both hight level API and low-level API access to system data and contextual information generated during blockchain runtime, including details about the environment, blocks, transactions, and utility classes such as crypto and ABI encoding/decoding. see [more details](#how-to-use-sys-apis).
 
 **Important point**: Since the join point is in the EVM execution process, using [sys.revert()](/develop/reference/aspect-lib/components/sys#1-revert), [sys.require()](/develop/reference/aspect-lib/components/sys#3-require) in this join point will actually revert the transaction.
 
-## How to use `input`
 
-Explore the available information from the class diagram below.
 
-![class.svg](class.svg)
-
-**Parameters:**
-- `input.block.number`: current block number.
-- `input.tx.from`: caller of the transaction.
-- `input.tx.to`: to address of the transaction.
-- `input.tx.hash`: hash of the transaction.
-
-Utilize the fields as indicated below:
-
-<!-- @formatter:off -->
-```typescript
-
-let blockNumer = input.block!.number;
-let txFrom = input.tx!.from;
-let txTo = input.tx!.to;
-let txHash = input.tx!.hash;
-
-// use blockNumber, txFrom, txTo, txHash
-...
-
-```
-<!-- @formatter:on -->
-
-## How to use APIs
+## Host API
 
 For a comprehensive overview of all APIs and their usage see [API References](/develop/reference/aspect-lib/components/overview).
 
-Each breakpoint has access to different host APIs, and the host APIs available within the current breakpoint can be found at the following table.
+Each join point can access different host APIs, and the host APIs available within the current join point can be found in the following table.
 
 | System APIs | Availability | Description |
 |-------------|--------------|-------------|
@@ -123,3 +104,43 @@ Each breakpoint has access to different host APIs, and the host APIs available w
 | sys.hostApi.evmCall.staticCall | ❌ | Creates a static call and executes it immediately. |
 | sys.hostApi.trace.queryCallTree | ❌ | Returns the call tree of EVM execution. |
 | sys.hostApi.trace.queryStateChange | ❌ | Returns the state change in EVM execution for the specified key. |
+
+
+
+## Runtime context
+
+In this join point, Aspect can access those runtime contexts.
+
+
+
+Usage
+
+```assembly
+const parentHashBytes = sys.hostApi.runtimeContext.get("block.header.parentHash");
+const parentHash = Protobuf.decode<BytesData>(parentHashBytes, BytesData.decode);
+```
+
+
+
+Key table
+
+| Context key             | Value  type | Description                               |
+| ----------------------- | ----------- | ----------------------------------------- |
+| block.header.parentHash | BytesData   | Get the current block header parent hash. |
+|                         |             |                                           |
+|                         |             |                                           |
+|                         |             |                                           |
+|                         |             | .                                         |
+
+
+
+
+
+
+
+
+
+
+
+
+

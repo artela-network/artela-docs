@@ -2,13 +2,17 @@
 sidebar_position: 2
 ---
 
-# Transaction Level Aspect
+# Transaction Join Point
 
 ## Introduction
 
-The Transaction Level Aspect defines multiple Join Points, with each one representing a distinct state transition
-function at a specific stage in the [transaction lifecycle](/develop/core-concepts/lifecycle),
-it needs to be binding a smart contract and activated by EOA transactions.
+Artela defines several join points during the transaction execution lifecycle. They are `PreTxExecute`, `PostTxExecute`, `PreContractCall` and `PostContractCall`. For dApps, they can add customized logic before and after transaction execution. 
+
+
+
+！！！图要更新啊！！！这是介绍transaction join point的
+
+
 
 ![img.png](../img/jp.png)
 
@@ -35,9 +39,13 @@ process is shown in the following call graph.
       * ⚙ [PostTxExecute join point](/develop/reference/aspect-lib/tx-level-aspect/post-tx-execute)
       * ⮕ `RefundGas`
 
-## How to Create a Transaction-Level Aspect
+## How to Implement transaction join point
+
+!!这段英文看着头疼，废话很多!!!
 
 A complete aspect should include several components. Firstly, create your class as an implementation of the aspect. Then, import and inherit based on the join point you want to implement into your aspect, and fill in your own logic to implement these functions. The IsOwner method, serving as the permission management part of your aspect, must be implemented. Next, register your aspect class with aspect-libs. Finally, your code should include the imports and exports used by aspect-runtime, as well as the components that your aspect must contain.
+
+
 
 For the given code snippet, where MyAspect is my aspect class:
 

@@ -2,13 +2,17 @@
 sidebar_position: 2
 ---
 
-# Operation Aspect
+# Operation interface
 
 
 ## Introduction
-The Operation Aspect, akin to a smart contract, exclusively responds to transactions initiated by externally owned accounts (EOAs). This includes transactions triggered by contract interactions. Notably, these Join Points are also activated in the case of cross-contract interactions.
+Operation is a special interface. Unlike other join points, which are triggered during transaction execution,  this interface can be called directly by an operation transaction signed by EoA. The operation transaction will trigger the execution of the Aspect. 
 
 ![op.png](op.png)
+
+In this interface execution, Aspect is only able to access the Aspect state. Runtime context accessing is unsupported due to it isn't triggered by the transaction lifecycle join point.
+
+You can use this interface to manage the Aspect state. For example, there is a whitelist Aspect that will be triggered pre-transaction execution; you can insert and update the whitelist by operation interface.
 
 ## How to Create
 

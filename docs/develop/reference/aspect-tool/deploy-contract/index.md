@@ -1,40 +1,47 @@
 # Deploy Contract
 
-The deployment of a smart contract involves publishing the contract's binary code, Application Binary Interface (ABI),
-and other necessary metadata to the `Artela` blockchain, thereby generating an associated address for the contract, making it
-available on the network.
+This command can quickly deploy your smart contract to the Artela blockchain.
 
 ## Command
 
-You can deploy contract using the following command:
-
 ```bash
-  npm run contract:deploy -- --skfile {privateKey-path} \                        
-                           --abi ./build/contract/xxx.abi \                          
-                           --bytecode ./build/contract/xxx.bin \     
-                           --args [..] \                     
-                           --gas 200000         
+  npm run contract:deploy -- --skfile {privateKey-path} \
+  												 --abi ./build/contract/xxx.abi \
+                           --bytecode ./build/contract/xxx.bin \
+                           --args [..] \
+                           --gas 200000
 ```
 
 **options:**
+
 > * --skfile : privateKey path for sender. (optional,default value `./privateKey.txt`).
 > * --abi : contract abi path.
 > * --bytecode:  contract bytecode path.
 > * --args : If your contract's constructor requires input parameters, use `--args '[1, "a"]'` (optional).
 > * --gas : e.g., `200000` (optional,default value `7000000`)
----
 
-Specifically, the command will be executed
+
+## Example
+
 ```shell
-node scripts/contract-deploy.cjs
+// usage 1: deploy a contract 'Counter.sol' using default private key './privateKey.txt'
+npm run contract:deploy --  --abi ./build/contract/Counter.abi \
+                            --bytecode ./build/contract/Counter.bin
+
+// usage 2: deploy a contract 'Counter.sol' using private key './privateKey2.txt'
+npm run contract:deploy --  --skfile './privateKey2.txt' \
+														--abi ./build/contract/Counter.abi \
+                            --bytecode ./build/contract/Counter.bin
+
+// usage 3: deploy a contract 'Counter.sol' with 'constructor(uint num, address owner, string name)' constructor.
+npm run contract:deploy -- --abi ./build/contract/Counter.abi \
+                                --bytecode ./build/contract/xxx.bin
+                                --args '[1, 0xAABB...CCDD, "a"]'
 ```
-The logic for the create-account command is written in the `scripts/contract-deploy.cjs` file, primarily relying on the
-implementation provided by the [@artela/web3](/develop/client/artela-web3.js) API.   
-If needed, you can modify the logic within this file to achieve your specific functionalities.
 
-Furthermore，you can modify the `project.config.json` in the project root folder [to set the network configurations.](/develop/reference/aspect-tool/guide/config#2network-rpc).
 
-## Execution Status
+
+## Command output
 
 If the command is executed successfully, the following log will be printed, which can record the `contractAddress`, and some commands will rely on this value.
 
@@ -59,3 +66,14 @@ contract address:  0x489036739ca7e4316ef683B55051a.....
 --contractAccount 0x773B8Da8De01C9a35DCb74E4C204c4b...... --contractAddress 0x489036739ca7e4316ef683B55051ade155...
 
 ```
+
+
+
+## Customize
+
+The logic for the create-account command is written in the `scripts/contract-deploy.cjs` file, primarily relying on the
+implementation provided by the [@artela/web3](/develop/client/artela-web3.js) API.   
+
+If needed, you can modify the logic within this file to achieve your specific functionalities.
+
+Furthermore, you can modify the `project.config.json` in the project root folder [to set the network configurations.](/develop/reference/aspect-tool/guide/config#2network-rpc)
