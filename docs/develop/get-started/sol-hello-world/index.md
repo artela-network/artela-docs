@@ -134,7 +134,7 @@ Execute the following command under the `my-first-aspect` folder to create an ac
 npm run account:create
 ```
 
-> ✅ Successful compilation a file named `privateKey.txt` will be generated in the current directory.
+> ✅ If an account gets created successfully, its private key will be dumped as `privateKey.txt` in the current directory.
 
 :::note 💡
 For more detailed usage information about this command, please
@@ -200,9 +200,9 @@ function, and insert your logic:
 
 <!-- @formatter:off -->
 ```typescript
-    postContractCall(input:PostContractCallInput):void {
-    // Implement me...
-    }
+postContractCall(input:PostContractCallInput):void {
+// Implement me...
+}
 ```
 <!-- @formatter:on -->
 
