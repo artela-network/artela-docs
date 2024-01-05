@@ -1,10 +1,14 @@
+---
+sidebar_position: 2
+---
 
 # PostTxExecute
 
 ## Introduction
 
-The PostTxExecute join point occurs during the `DeliverTx` phase of the [Transaction lifecycle](https://docs.cosmos.network/v0.47/learn/beginner/tx-lifecycle). 
-This join point was activated once the transaction has been executed. Below is call graph:
+
+The PostTxExecute join point is triggered during the DeliverTx phase of the [Transaction lifecycle](https://docs.cosmos.network/v0.47/learn/beginner/tx-lifecycle).
+The following represents the call graph:
 
 * `ApplyTransaction`
   * ⮕ `ApplyMessageWithConfig`
@@ -13,351 +17,116 @@ This join point was activated once the transaction has been executed. Below is c
         * | `evm.Interpreter.Run 0`
         * | `evm.Interpreter.Run 1`
         * ....
-    * ⚙ [PostTxExecute join point](/develop/reference/aspect-lib/tx-level-aspect/post-tx-execute)   *
+    * ⚙ [PostTxExecute join point](/develop/reference/aspect-lib/tx-level-aspect/post-tx-execute)
   * ⮕ `RefundGas`
 
-At this stage, the account states have been finalized. Subsequently, in this join point can conduct a comprehensive review of the final execution state.
+At this stage, the account state remains pristine, enabling Aspect to preload information as needed.
 
 ## Example
 
+<!-- @formatter:off -->
 ```typescript
-  postTxExecute(ctx:PostTxExecuteCtx):void {
-    let value = "value"
-    ctx.aspect.transientStorage<string>("key").set<string>(value);
-    let get = ctx.aspect.transientStorage<string>("key").unwrap();
-    sys.require(get == value, "Not equal")
+
+/**
+ * postTxExecute is a join-point that gets invoked after the execution of a transaction.
+ *
+ * @param input Input of the given join-point
+ * @return void
+ */
+postTxExecute(input: PostTxExecuteInput): void {
+  // In this method, check the balance of target account and force to fail
+  // the transaction if the blance is not as expect.
+  
+  // 'hexToUint8Array' is imported from "@artela/aspect-libs";
+  let addr = hexToUint8Array("0xE2AF7C239b4F2800a2F742d406628b4fc4b8a0d4");
+
+  // get balance for the account
+  // 'sys, BigInt' is imported from "@artela/aspect-libs";
+  let balance = BigInt.fromUint8Array(sys.hostApi.stateDb.balance(addr));
+
+  // check the balance base the rule.
+  if (balance.toUInt64() < 1000) {
+    sys.revert("abort transaction, balance is not enough");
   }
+}
+
 ```
+<!-- @formatter:on -->
+
 ## Programming
 
 There are two programming modes that can be used in this method:
-1. Using the 'sys' namespace, it provides low-level API access to system data and contextual information generated during blockchain runtime, including details about the environment, blocks, transactions, and utility classes such as crypto and ABI encoding/decoding. see [more details](/develop/reference/aspect-lib/components/overview).
-2. By utilizing the 'ctx' input argument, it provides essential insights into transactions and block processing, encompassing smart contract state updates, logged events, and raw transaction data. see [how to use ctx](#how-to-use-ctx).
 
-whatever,the two methods can be used interchangeably.
+1. By utilizing the 'input' input argument, it provides essential insights into transactions and block processing. see [how to use input](#how-to-use-input).
+
+2. Using the 'sys' namespace, it provides both hight level API and low-level API access to system data and contextual information generated during blockchain runtime, including details about the environment, blocks, transactions, and utility classes such as crypto and ABI encoding/decoding. see [more details](#how-to-use-sys-apis).
 
 **Important point**: Since the join point is in the EVM execution process, using [sys.revert()](/develop/reference/aspect-lib/components/sys#1-revert), [sys.require()](/develop/reference/aspect-lib/components/sys#3-require) in this join point will actually revert the transaction.
 
-## How to use `ctx`
+## How to use `input`
 
-### 1. get transaction
-> Get the currently executed transaction.
->
-<!-- @formatter:off -->
-```typescript
-    let transaction = ctx.tx.content.unwrap()!
-```
-<!-- @formatter:on -->
+Explore the available information from the class diagram below.
 
-* Return
-  * <a href="/api/docs/classes/proto.EthTransaction.html" target="_blank">EthTransaction</a>
+![class.svg](class.svg)
 
-### 2. get transaction properties
+**Parameters:**
+- `input.block.number`: current block number.
+- `input.tx.from`: caller of the transaction.
+- `input.tx.to`: to address of the transaction.
+- `input.tx.hash`: hash of the transaction.
+- `input.receipt.status`: execution status of the transaction.
 
-> Get transaction extension properties
+Utilize the fields as indicated below:
 
 <!-- @formatter:off -->
 ```typescript
-    let popVal = ctx.tx.extProperties.property.get("xx");
+
+let blockNumer = input.block!.number;
+let txFrom = input.tx!.from;
+let txTo = input.tx!.to;
+let txHash = input.tx!.hash;
+let status = input.receipt!.status;
+
+// use blockNumber, txFrom, txTo, txHash, status
+...
+
 ```
 <!-- @formatter:on -->
 
-* Parameter
-  * key: Properties keys, default key list:
-    * `txIndex` get transaction index in block.
-* Return
-  * string
-
-### 3. get transaction gas meter
-> Get transaction gas meter
->
-<!-- @formatter:off -->
-```typescript
-    let gasMeter = ctx.tx.gasMeter.unwrap()!
-```
-<!-- @formatter:on -->
-
-* Return
-  * <a href="/api/docs/classes/proto.GasMeter.html" target="_blank">GasMeter</a>
-
-### 4. get block gas meter
-
->Get block gas meter
-
-<!-- @formatter:off -->
-```typescript
-    let meter = ctx.block.gasMeter.unwrap();
-```
-<!-- @formatter:on -->
-
-* Return
-  * <a href="/api/docs/classes/proto.GasMeter.html" target="_blank">GasMeter</a>
-
-### 5. get block header
-
-> Get the block header.
-
-<!-- @formatter:off -->
-```typescript
-    let header = ctx.block.header.unwrap();
-```
-<!-- @formatter:on -->
-
-* Return
-  * <a href="/api/docs/classes/proto.EthBlockHeader.html" target="_blank">EthBlockHeader</a>
-
-### 6. get block min gas price
-
-> Get the block min gas price.
-
-<!-- @formatter:off -->
-```typescript
-    let minGasPrice = ctx.block.minGasPrice.unwrap();
-```
-<!-- @formatter:on -->
-
-* Returns
-  * <a href="/api/docs/classes/proto.MinGasPrice.html" target="_blank">MinGasPrice</a>
-
-### 7. get block last commit
-
-> Get the block last commit info.
-
-<!-- @formatter:off -->
-```typescript
-    let lastCommit = ctx.block.lastCommit.unwrap();
-```
-<!-- @formatter:on -->
-
-* Returns
-  * <a href="/api/docs/classes/proto.LastCommitInfo.html" target="_blank">LastCommitInfo</a>
-
-### 8. get block partial tx
-
-> Get partial body that have same tx.To
-
-<!-- @formatter:off -->
-```typescript
-    let txs = ctx.block.partialBody.unwrap();
-```
-<!-- @formatter:on -->
-
-* Returns
-  * <a href="/api/docs/classes/proto.EthTxArray.html" target="_blank">EthTxArray</a>
-
-### 9. get environment
-
-> Get environment content.
-
-<!-- @formatter:off -->
-```typescript
-   let envContent = ctx.env.baseFee.unwrap();
-```
-<!-- @formatter:on -->
-
-* Returns
-  * <a href="/api/docs/classes/proto.EnvContent.html" target="_blank">EnvContent</a>
-
-### 10. get chain config
-
-> Get chain config
-
-<!-- @formatter:off -->
-```typescript
-   let chainConfig = ctx.env.chainConfig.unwrap();
-```
-<!-- @formatter:on -->
-
-* Returns
-  * <a href="/api/docs/classes/proto.ChainConfig.html" target="_blank">ChainConfig</a>
-
-### 11. get evm params
-
-> Get evm params
-
-<!-- @formatter:off -->
-```typescript
-    let evmParams = ctx.env.evmParams.unwrap();
-```
-<!-- @formatter:on -->
-
-* Returns
-  * <a href="/api/docs/classes/proto.EvmParams.html" target="_blank">EvmParams</a>
-
-### 12. get consensus params
-
-> Get consensus params
-
-<!-- @formatter:off -->
-```typescript
-    let ConsParams = ctx.env.consensusParams.unwrap();
-```
-<!-- @formatter:on -->
-
-* Returns
-  * <a href="/api/docs/classes/proto.ConsParams.html" target="_blank">ConsParams</a>
-
-### 13. get balance
-
-> Retrieves the balance from the given address or 0 if object not found
-
-<!-- @formatter:off -->
-```typescript
-     let balance = ctx.stateDB.balance("0x111222333444555666");
-```
-<!-- @formatter:on -->
-
-* Parameter
-  * string: account address hex string.
-* Return
-  * string: balance value,big int string.
-
-### 14. get nonce
-
-> Returns the nonce of account, 0 if not exists.
-
-<!-- @formatter:off -->
-```typescript
-    let nonce = ctx.stateDB.nonce("0x111222333444555666");
-```
-<!-- @formatter:on -->
-
-* Parameter
-  * address: account address
-* Return
-  * (i64): nonce value
-
-### 15. get state
-
-> Retrieves a value from the given account's storage trie.
-
-<!-- @formatter:off -->
-```typescript
-    let state = ctx.stateDB.stateAt("0x111222333444555666", "0x9999988888xxx");
-```
-<!-- @formatter:on -->
-
-* Parameter
-  * address: account address
-  * hash:  one key, hash hex string
-* Return
-  * (string): state , hash hex string
-
-### 16. get refund
-
-> Returns the current value of the refund counter.
-
-<!-- @formatter:off -->
-```typescript
-    let refund = ctx.stateDB.refund();
-```
-<!-- @formatter:on -->
-
-* Return
-  * (i64): the current value of the refund counter
-
-### 17. get codeHash
-
-> Returns the code hash of account.
-
-<!-- @formatter:off -->
-```typescript
-   let codeHash = ctx.stateDB.codeHash("0x111222333444555666");
-```
-<!-- @formatter:on -->
-
-* Parameter
-  * addr: address hash hex string
-* Return
-  * (i64): the current value of the refund counter
-
-
-### 18. get transient storage
-
-> Get aspect transientStorage value
-
-<!-- @formatter:off -->
-```typescript
-   let value = ctx.aspect.transientStorage<string>("key").unwrap();
-```
-<!-- @formatter:on -->
-
-* Return
-  * T : generics type value
-
-### 19. set transient storage
-
-> Set aspect transientStorage value
-
-<!-- @formatter:off -->
-```typescript
-   let isSuccess: bool = ctx.aspect.transientStorage<string>("key").set<string>("value");
-```
-<!-- @formatter:on -->
-
-* Return
-  * bool ：set success
-
-### 20. set Aspect state
-
-> Set value to Aspect state
-
-<!-- @formatter:off -->
-```typescript
-   ctx.mutableState.get<string>("key").set<string>("value")
-```
-<!-- @formatter:on -->
-
-* Parameter
-  * key: generics type key
-  * value: generics type value
-
-### 21. get Aspect state
-
-> Get value from Aspect state
-
-<!-- @formatter:off -->
-```typescript
-   let value = ctx.mutableState.get<string>("key").unwrap();
-```
-<!-- @formatter:on -->
-
-* Parameter
-  * key: generics type key
-* Return
-  * T：generics type value
-
-
-### 22. get property
-
-> Get property value
-
-<!-- @formatter:off -->
-```typescript
-   let value = ctx.property.get<string>("key");
-```
-<!-- @formatter:on -->
-
-* Parameter
-  * key: generics type key
-* Return
-  * T：generics type value
-
-### 23. evm static call
-
-> Executes a new message call immediately, without creating a transaction on the blockchain.
-
-<!-- @formatter:off -->
-```typescript
-    let ethMessage = new EthMessage( );
-    let result = ctx.staticCall.submit(ethMessage)
-```
-<!-- @formatter:on -->
-
-* Parameter
-  * <a href="/api/docs/classes/proto.EthMessage.html" target="_blank">EthMessage</a>
-* Return
-  * <a href="/api/docs/classes/proto.EthMessageCallResult.html" target="_blank">EthMessageCallResult</a>
-
-----
-
+## How to use APIs
+
+For a comprehensive overview of all APIs and their usage see [API References](/develop/reference/aspect-lib/components/overview).
+
+Each breakpoint has access to different host APIs, and the host APIs available within the current breakpoint can be found at the following table.
+
+| System APIs | Availability | Description |
+|-------------|--------------|-------------|
+| sys.revert | ✅ | Forces the current transaction to fail. |
+| sys.require | ✅ | Checks if certain conditions are met; if not, forces the entire transaction to fail. |
+| sys.log | ✅ | A wrapper for `sys.hostApi.util.log`, prints log messages to Artela output for debugging on the localnet. |
+| sys.aspect.id | ✅ | Retrieves the ID of the aspect. |
+| sys.aspect.version | ✅ | Retrieves the version of the aspect. |
+| sys.aspect.mutableState | ✅ | A wrapper for `sys.hostApi.aspectState` that facilitates easier reading or writing of values of a specified type to aspect state. |
+| sys.aspect.property | ✅ | A wrapper for `sys.hostApi.aspectProperty` that facilitates easier reading of values of a specified type from aspect property. |
+| sys.aspect.readonlyState | ✅ | A wrapper for `sys.hostApi.aspectState` that facilitates easier reading of values of a specified type from aspect state. |
+| sys.aspect.transientStorage | ✅ | A wrapper for `sys.hostApi.aspectTransientStorage` that facilitates easier reading or writing of values of a specified type to aspect transient storage. |
+| sys.hostApi.aspectProperty | ✅ | Retrieves the property of the aspect as written in aspect deployment. |
+| sys.hostApi.aspectState | ✅ | Retrieves or writes the state of the aspect. |
+| sys.hostApi.aspectTransientStorage | ✅ | Retrieves or writes to the transient storage of the aspect. This storage is only valid within the current transaction lifecycle. |
+| sys.hostApi.crypto.ecRecover | ✅ | Calls crypto methods `ecRecover`. |
+| sys.hostApi.crypto.keccak | ✅ | Calls crypto methods `keccak`. |
+| sys.hostApi.crypto.ripemd160 | ✅ | Calls crypto methods `ripemd160`. |
+| sys.hostApi.crypto.sha256 | ✅ | Calls crypto methods `sha256`. |
+| sys.hostApi.runtimeContext | ✅ | Retrieves runtime context by the key. |
+| sys.hostApi.stateDb.balance | ✅ | Gets the balance of the specified address from the EVM state database. |
+| sys.hostApi.stateDb.codeHash | ✅ | Gets the hash of the code from the EVM state database. |
+| sys.hostApi.stateDb.codeSize | ✅ | Gets the size of the code from the EVM state database. |
+| sys.hostApi.stateDb.hasSuicided | ✅ | Gets the codehash from the EVM state database. |
+| sys.hostApi.stateDb.nonce | ✅ | Checks if the contract at the specified address is suicided in the current transactions. |
+| sys.hostApi.stateDb.stateAt | ✅ | Gets the state at a specific point. |
+| sys.hostApi.util.log | ✅ | Prints log messages to Artela output for debugging on the localnet. |
+| sys.hostApi.util.revert | ✅ | Forces the transaction to fail. |
+| sys.hostApi.evmCall.jitCall | ❌ | Creates a contract call and executes it immediately. |
+| sys.hostApi.evmCall.staticCall | ❌ | Creates a static call and executes it immediately. |
+| sys.hostApi.trace.queryCallTree | ✅ | Returns the call tree of EVM execution. |
+| sys.hostApi.trace.queryStateChange | ✅ | Returns the state change in EVM execution for the specified key. |
