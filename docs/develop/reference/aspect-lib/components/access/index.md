@@ -145,7 +145,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.extraEIPs`
 * **Response Type:** `IntArrayData`
 * **Description:**
-    * Get environment extra EIP list.
+    * Retrieve the EVM module parameters for the '**extra_eips**': defines the additional EIPs for the vm.Config.
 * **Example:**
     * ```javascript
     const key="env.extraEIPs";
@@ -169,7 +169,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.enableCreate`
 * **Response Type:** `BoolData`
 * **Description:**
-    * Get environment enable create config.
+    * Retrieve the EVM module parameters for the '**enable_create**': toggles states transitions that use the vm.Create function.
 * **Example:**
     * ```javascript
     const key="env.enableCreate";
@@ -193,7 +193,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.enableCall`
 * **Response Type:** `BoolData`
 * **Description:**
-    * Get environment enable call config.
+    * Retrieve the EVM module parameters for the '**enable_call**': toggles states transitions that use the vm.Call function
 * **Example:**
     * ```javascript
     const key="env.enableCall";
@@ -217,7 +217,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.allowUnprotectedTxs`
 * **Response Type:** `BoolData`
 * **Description:**
-    * Get environment allow unprotected transactions config.
+    * Retrieve the EVM module parameters for the '**allow_unprotected_txs**': defines if replay-protected (i.e non EIP155 // signed) transactions can be executed on the states machine.
 * **Example:**
     * ```javascript
     const key="env.allowUnprotectedTxs";
@@ -241,7 +241,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.chain.chainId`
 * **Response Type:** `UintData`
 * **Description:**
-    * Get environment chainId config.
+    * Retrieve the Ethereum chain config id.
 * **Example:**
     * ```javascript
     const key="env.chain.chainId";
@@ -265,7 +265,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.chain.homesteadBlock`
 * **Response Type:** `UintData`
 * **Description:**
-    * Get environment chain homestead block config.
+    * Retrieve the Ethereum chain configuration for the '**homestead_block**': switch (nil no fork, 0 = already homestead)
 * **Example:**
     * ```javascript
     const key="env.chain.homesteadBlock";
@@ -289,7 +289,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.chain.daoForkBlock`
 * **Response Type:** `UintData`
 * **Description:**
-    * Get environment chain dao fork block config.
+    * Retrieve the Ethereum chain configuration for the '**dao_fork_block**': corresponds to TheDAO hard-fork switch block (nil no fork)
 * **Example:**
     * ```javascript
     const key="env.chain.daoForkBlock";
@@ -313,7 +313,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.chain.daoForkSupport`
 * **Response Type:** `BoolData`
 * **Description:**
-    * Get environment chain dao fork support config.
+    * Retrieve the Ethereum chain configuration for the '**dao_fork_support**': defines whether the nodes supports or opposes the DAO hard-fork
 * **Example:**
     * ```javascript
     const key="env.chain.daoForkSupport";
@@ -337,7 +337,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.chain.eip150Block`
 * **Response Type:** `UintData`
 * **Description:**
-    * Get environment chain EIP150 Block number.
+    * Retrieve the Ethereum chain configuration for the '**eip150_block**': EIP150 implements the Gas price changes (https://github.com/ethereum/EIPs/issues/150) EIP150 HF block (nil no fork)
 * **Example:**
     * ```javascript
     const key="env.chain.eip150Block";
@@ -361,7 +361,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.chain.eip155Block`
 * **Response Type:** `UintData`
 * **Description:**
-    * Get environment chain EIP155 Block number.
+    * Retrieve the Ethereum chain configuration for the 'petersburg_block': Petersburg switch block (nil no fork, 0 = already activated)
 * **Example:**
     * ```javascript
     const key="env.chain.eip155Block";
@@ -385,7 +385,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.chain.eip158Block`
 * **Response Type:** `UintData`
 * **Description:**
-    * Get environment chain EIP158 Block number.
+    *  Retrieve the Ethereum chain configuration for the 'petersburg_block': Petersburg switch block (nil no fork, 0 = already activated)
 * **Example:**
     * ```javascript
     const key="env.chain.eip158Block";
@@ -409,7 +409,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.chain.byzantiumBlock`
 * **Response Type:** `UintData`
 * **Description:**
-    * Get environment byzantium block number.
+    *  Retrieve the Ethereum chain configuration for the 'petersburg_block': Petersburg switch block (nil no fork, 0 = already activated)
 * **Example:**
     * ```javascript
     const key="env.chain.byzantiumBlock";
@@ -433,7 +433,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.chain.constantinopleBlock`
 * **Response Type:** `UintData`
 * **Description:**
-    * Get environment constantinople block number.
+    *  Retrieve the Ethereum chain configuration for the 'petersburg_block': Petersburg switch block (nil no fork, 0 = already activated)
 * **Example:**
     * ```javascript
     const key="env.chain.constantinopleBlock";
@@ -457,7 +457,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.chain.petersburgBlock`
 * **Response Type:** `UintData`
 * **Description:**
-    * Get environment petersburg block number.
+    * Retrieve the Ethereum chain configuration for the 'petersburg_block': Petersburg switch block (nil no fork, 0 = already activated)
 * **Example:**
     * ```javascript
     const key="env.chain.petersburgBlock";
@@ -481,7 +481,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.chain.istanbulBlock`
 * **Response Type:** `UintData`
 * **Description:**
-    * Get environment istanbul block number.
+    * Retrieve the Ethereum chain configuration for the 'istanbul_block': Istanbul switch block (nil no fork, 0 = already on istanbul)
 * **Example:**
     * ```javascript
     const key="env.chain.istanbulBlock";
@@ -505,7 +505,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.chain.muirGlacierBlock`
 * **Response Type:** `UintData`
 * **Description:**
-    * Get environment muirGlacier block number.
+    * Get ethereum chain config `muir_glacier_block`: Eip-2384 (bomb delay) switch block (nil no fork, 0 = already activated).
 * **Example:**
     * ```javascript
     const key="env.chain.muirGlacierBlock";
@@ -529,7 +529,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.chain.berlinBlock`
 * **Response Type:** `UintData`
 * **Description:**
-    * Get environment berlin block number.
+    * Get ethereum chain config `berlin_block`: Berlin switch block (nil = no fork, 0 = already on berlin)
 * **Example:**
     * ```javascript
     const key="env.chain.berlinBlock";
@@ -553,13 +553,13 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.chain.londonBlock`
 * **Response Type:** `UintData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    *  Get ethereum chain config `london_block`: London switch block (nil = no fork, 0 = already on london)
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="env.chain.londonBlock";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<UintData> (bytesData, UintData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -577,13 +577,13 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.chain.arrowGlacierBlock`
 * **Response Type:** `UintData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Get ethereum chain config `gray_glacier_block`: EIP-5133 (bomb delay) switch block (nil = no fork, 0 = already activated)
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="env.chain.arrowGlacierBlock";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<UintData> (bytesData, UintData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -604,10 +604,10 @@ import {Protobuf} from 'as-proto/assembly';
     * The current transaction is **Call** or **Send**. If it is **Call**, return true.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="env.chain.grayGlacierBlock";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<UintData> (bytesData, UintData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -628,10 +628,10 @@ import {Protobuf} from 'as-proto/assembly';
     * The current transaction is **Call** or **Send**. If it is **Call**, return true.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="env.chain.mergeNetSplitBlock";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<UintData> (bytesData, UintData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -652,10 +652,10 @@ import {Protobuf} from 'as-proto/assembly';
     * The current transaction is **Call** or **Send**. If it is **Call**, return true.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="env.chain.shanghaiTime";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<UintData> (bytesData, UintData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -676,10 +676,10 @@ import {Protobuf} from 'as-proto/assembly';
     * The current transaction is **Call** or **Send**. If it is **Call**, return true.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="env.chain.cancunTime";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<UintData> (bytesData, UintData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -700,10 +700,10 @@ import {Protobuf} from 'as-proto/assembly';
     * The current transaction is **Call** or **Send**. If it is **Call**, return true.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="env.chain.pragueTime";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<UintData> (bytesData, UintData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -724,10 +724,10 @@ import {Protobuf} from 'as-proto/assembly';
     * The current transaction is **Call** or **Send**. If it is **Call**, return true.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="env.consensusParams.block.maxGas";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<IntData> (bytesData, IntData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -748,10 +748,10 @@ import {Protobuf} from 'as-proto/assembly';
     * The current transaction is **Call** or **Send**. If it is **Call**, return true.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="env.consensusParams.block.maxBytes";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<IntData> (bytesData, IntData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -772,10 +772,10 @@ import {Protobuf} from 'as-proto/assembly';
     * The current transaction is **Call** or **Send**. If it is **Call**, return true.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="env.consensusParams.evidence.maxAgeDuration";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<IntData> (bytesData, IntData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -796,10 +796,10 @@ import {Protobuf} from 'as-proto/assembly';
     * The current transaction is **Call** or **Send**. If it is **Call**, return true.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="env.consensusParams.evidence.maxAgeNumBlocks";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<IntData> (bytesData, IntData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -820,10 +820,10 @@ import {Protobuf} from 'as-proto/assembly';
     * The current transaction is **Call** or **Send**. If it is **Call**, return true.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="env.consensusParams.evidence.maxBytes";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<IntData> (bytesData, IntData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -840,15 +840,14 @@ import {Protobuf} from 'as-proto/assembly';
 
 * **Key**: `env.consensusParams.validator.pubKeyTypes`
 * **Response Type:** `StringArrayData`
-
 * **Description:**
     * The current transaction is **Call** or **Send**. If it is **Call**, return true.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="env.consensusParams.validator.pubKeyTypes";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<StringArrayData> (bytesData, StringArrayData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -865,15 +864,14 @@ import {Protobuf} from 'as-proto/assembly';
 
 * **Key**: `env.consensusParams.appVersion`
 * **Response Type:** `UintData`
-
 * **Description:**
     * The current transaction is **Call** or **Send**. If it is **Call**, return true.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="env.consensusParams.appVersion";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<UintData> (bytesData, UintData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -890,15 +888,14 @@ import {Protobuf} from 'as-proto/assembly';
 
 * **Key**: `tx.type`
 * **Response Type:** `UintData`
-
 * **Description:**
     * The current transaction is **Call** or **Send**. If it is **Call**, return true.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="tx.type";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<UintData> (bytesData, UintData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -915,15 +912,14 @@ import {Protobuf} from 'as-proto/assembly';
 
 * **Key**: `tx.chainId`
 * **Response Type:** `BytesData`
-
 * **Description:**
     * The current transaction is **Call** or **Send**. If it is **Call**, return true.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="tx.chainId";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<BytesData> (bytesData, BytesData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -940,15 +936,14 @@ import {Protobuf} from 'as-proto/assembly';
 
 * **Key**: `tx.accessList`
 * **Response Type:** `EthAccessList`
-
 * **Description:**
     * The current transaction is **Call** or **Send**. If it is **Call**, return true.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="tx.accessList";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<EthAccessList> (bytesData, EthAccessList.decode);
     }
     ```
 * **Join-Point Access:**
@@ -966,15 +961,14 @@ import {Protobuf} from 'as-proto/assembly';
 
 * **Key**: `tx.nonce`
 * **Response Type:** `UintData`
-
 * **Description:**
     * The current transaction is **Call** or **Send**. If it is **Call**, return true.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="tx.nonce";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<UintData> (bytesData, UintData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -991,15 +985,14 @@ import {Protobuf} from 'as-proto/assembly';
 
 * **Key**: `tx.gasPrice`
 * **Response Type:** `BytesData`
-
 * **Description:**
     * The current transaction is **Call** or **Send**. If it is **Call**, return true.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="tx.gasPrice";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<BytesData> (bytesData, BytesData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -1016,15 +1009,14 @@ import {Protobuf} from 'as-proto/assembly';
 
 * **Key**: `tx.gas`
 * **Response Type:** `UintData`
-
 * **Description:**
     * The current transaction is **Call** or **Send**. If it is **Call**, return true.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="tx.gas";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<UintData> (bytesData, UintData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -1041,15 +1033,14 @@ import {Protobuf} from 'as-proto/assembly';
 
 * **Key**: `tx.gasTipCap`
 * **Response Type:** `BytesData`
-
 * **Description:**
     * The current transaction is **Call** or **Send**. If it is **Call**, return true.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="tx.gasTipCap";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<BytesData> (bytesData, BytesData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -1066,15 +1057,14 @@ import {Protobuf} from 'as-proto/assembly';
 
 * **Key**: `tx.gasFeeCap`
 * **Response Type:** `BytesData`
-
 * **Description:**
     * The current transaction is **Call** or **Send**. If it is **Call**, return true.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="tx.gasFeeCap";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<BytesData> (bytesData, BytesData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -1091,15 +1081,14 @@ import {Protobuf} from 'as-proto/assembly';
 
 * **Key**: `tx.to`
 * **Response Type:** `BytesData`
-
 * **Description:**
     * The current transaction is **Call** or **Send**. If it is **Call**, return true.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="tx.to";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<BytesData> (bytesData, BytesData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -1116,15 +1105,14 @@ import {Protobuf} from 'as-proto/assembly';
 
 * **Key**: `tx.value`
 * **Response Type:** `BytesData`
-
 * **Description:**
     * The current transaction is **Call** or **Send**. If it is **Call**, return true.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="tx.value";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<BytesData> (bytesData, BytesData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -1141,15 +1129,14 @@ import {Protobuf} from 'as-proto/assembly';
 
 * **Key**: `tx.data`
 * **Response Type:** `BytesData`
-
 * **Description:**
     * The current transaction is **Call** or **Send**. If it is **Call**, return true.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="tx.data";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<BytesData> (bytesData, BytesData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -1166,15 +1153,14 @@ import {Protobuf} from 'as-proto/assembly';
 
 * **Key**: `tx.bytes`
 * **Response Type:** `BytesData`
-
 * **Description:**
     * The current transaction is **Call** or **Send**. If it is **Call**, return true.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="tx.bytes";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<BytesData> (bytesData, BytesData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -1191,15 +1177,14 @@ import {Protobuf} from 'as-proto/assembly';
 
 * **Key**: `tx.hash`
 * **Response Type:** `BytesData`
-
 * **Description:**
     * The current transaction is **Call** or **Send**. If it is **Call**, return true.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="tx.hash";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<BytesData> (bytesData, BytesData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -1216,15 +1201,14 @@ import {Protobuf} from 'as-proto/assembly';
 
 * **Key**: `tx.unsigned.bytes`
 * **Response Type:** `BytesData`
-
 * **Description:**
     * The current transaction is **Call** or **Send**. If it is **Call**, return true.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="tx.unsigned.bytes";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<BytesData> (bytesData, BytesData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -1241,15 +1225,14 @@ import {Protobuf} from 'as-proto/assembly';
 
 * **Key**: `tx.unsigned.hash`
 * **Response Type:** `BytesData`
-
 * **Description:**
     * The current transaction is **Call** or **Send**. If it is **Call**, return true.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="tx.unsigned.hash";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<BytesData> (bytesData, BytesData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -1266,15 +1249,14 @@ import {Protobuf} from 'as-proto/assembly';
 
 * **Key**: `tx.sig.v`
 * **Response Type:** `BytesData`
-
 * **Description:**
     * The current transaction is **Call** or **Send**. If it is **Call**, return true.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="tx.sig.v";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<BytesData> (bytesData, BytesData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -1291,15 +1273,14 @@ import {Protobuf} from 'as-proto/assembly';
 
 * **Key**: `tx.sig.r`
 * **Response Type:** `BytesData`
-
 * **Description:**
     * The current transaction is **Call** or **Send**. If it is **Call**, return true.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="tx.sig.r";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<BytesData> (bytesData, BytesData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -1316,15 +1297,14 @@ import {Protobuf} from 'as-proto/assembly';
 
 * **Key**: `tx.sig.s`
 * **Response Type:** `BytesData`
-
 * **Description:**
     * The current transaction is **Call** or **Send**. If it is **Call**, return true.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="tx.sig.s";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<BytesData> (bytesData, BytesData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -1341,15 +1321,14 @@ import {Protobuf} from 'as-proto/assembly';
 
 * **Key**: `tx.from`
 * **Response Type:** `BytesData`
-
 * **Description:**
     * The current transaction is **Call** or **Send**. If it is **Call**, return true.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="tx.from";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<BytesData> (bytesData, BytesData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -1366,15 +1345,14 @@ import {Protobuf} from 'as-proto/assembly';
 
 * **Key**: `tx.index`
 * **Response Type:** `UintData`
-
 * **Description:**
     * The current transaction is **Call** or **Send**. If it is **Call**, return true.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="tx.index";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<UintData> (bytesData, UintData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -1391,15 +1369,14 @@ import {Protobuf} from 'as-proto/assembly';
 
 * **Key**: `aspect.id`
 * **Response Type:** `BytesData`
-
 * **Description:**
     * The current transaction is **Call** or **Send**. If it is **Call**, return true.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="aspect.id";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<BytesData> (bytesData, BytesData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -1416,15 +1393,14 @@ import {Protobuf} from 'as-proto/assembly';
 
 * **Key**: `aspect.version`
 * **Response Type:** `UintData`
-
 * **Description:**
     * The current transaction is **Call** or **Send**. If it is **Call**, return true.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="aspect.version";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<UintData> (bytesData, UintData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -1441,15 +1417,14 @@ import {Protobuf} from 'as-proto/assembly';
 
 * **Key**: `msg.from`
 * **Response Type:** `BytesData`
-
 * **Description:**
     * The current transaction is **Call** or **Send**. If it is **Call**, return true.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="msg.from";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<BytesData> (bytesData, BytesData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -1466,15 +1441,14 @@ import {Protobuf} from 'as-proto/assembly';
 
 * **Key**: `msg.to`
 * **Response Type:** `BytesData`
-
 * **Description:**
     * The current transaction is **Call** or **Send**. If it is **Call**, return true.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="msg.to";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<BytesData> (bytesData, BytesData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -1491,15 +1465,14 @@ import {Protobuf} from 'as-proto/assembly';
 
 * **Key**: `msg.value`
 * **Response Type:** `BytesData`
-
 * **Description:**
     * The current transaction is **Call** or **Send**. If it is **Call**, return true.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="msg.value";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<BytesData> (bytesData, BytesData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -1516,15 +1489,14 @@ import {Protobuf} from 'as-proto/assembly';
 
 * **Key**: `msg.gas`
 * **Response Type:** `UintData`
-
 * **Description:**
     * The current transaction is **Call** or **Send**. If it is **Call**, return true.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="msg.gas";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<UintData> (bytesData, UintData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -1541,7 +1513,6 @@ import {Protobuf} from 'as-proto/assembly';
 
 * **Key**: `msg.input`
 * **Response Type:** `BytesData`
-
 * **Description:**
     * The current transaction is **Call** or **Send**. If it is **Call**, return true.
 * **Example:**
@@ -1566,15 +1537,14 @@ import {Protobuf} from 'as-proto/assembly';
 
 * **Key**: `msg.index`
 * **Response Type:** `UintData`
-
 * **Description:**
     * The current transaction is **Call** or **Send**. If it is **Call**, return true.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="msg.index";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<UintData> (bytesData, UintData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -1591,15 +1561,14 @@ import {Protobuf} from 'as-proto/assembly';
 
 * **Key**: `msg.result.ret`
 * **Response Type:** `BytesData`
-
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Get the current message evm call result.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="msg.result.ret";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<BytesData> (bytesData, BytesData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -1616,15 +1585,14 @@ import {Protobuf} from 'as-proto/assembly';
 
 * **Key**: `msg.result.gasUsed`
 * **Response Type:** `UintData`
-
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Get the current message evm call result gas used. 
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="msg.result.gasUsed";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<UintData> (bytesData, UintData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -1641,15 +1609,14 @@ import {Protobuf} from 'as-proto/assembly';
 
 * **Key**: `msg.result.error`
 * **Response Type:** `StringData`
-
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Get evm.call result error.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="msg.result.error";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<StringData>(bytesData, StringData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -1666,15 +1633,14 @@ import {Protobuf} from 'as-proto/assembly';
 
 * **Key**: `receipt.status`
 * **Response Type:** `UintData`
-
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Get evm.call receipt status.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="receipt.status";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<UintData> (bytesData, UintData.decode);
     }
     ```
 * **Join-Point Access:**
@@ -1693,13 +1659,13 @@ import {Protobuf} from 'as-proto/assembly';
 * **Response Type:** `EthLogs`
 
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Get evm.call receipt logs.
 * **Example:**
     * ```javascript
-    const key="isCall";
+    const key="receipt.logs";
     const bytesData = sys.hostApi.runtimeContext.get(key);
     if (bytesData) {
-        const  resultObject = Protobuf.decode<BoolData> (bytesData, BoolData.decode);
+        const  resultObject = Protobuf.decode<EthLogs> (bytesData, EthLogs.decode);
     }
     ```
 * **Join-Point Access:**
@@ -1716,9 +1682,8 @@ import {Protobuf} from 'as-proto/assembly';
 
 * **Key**: `receipt.gasUsed`
 * **Response Type:** `UintData`
-
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Get evm.call receipt gas used.
 * **Example:**
     * ```javascript
     const key="receipt.gasUsed";
@@ -1742,7 +1707,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `receipt.cumulativeGasUsed`
 * **Response Type:** `UintData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    *  Get cumulative gas used in receipt.
 * **Example:**
     * ```javascript
     const key="receipt.cumulativeGasUsed";
@@ -1766,7 +1731,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `receipt.bloom`
 * **Response Type:** `BytesData`
 * **Description:**
-    * The current transaction is **Call** or **Send**. If it is **Call**, return true.
+    * Get receipt bloom.
 * **Example:**
     * ```
     const key="receipt.bloom";
@@ -1808,83 +1773,3 @@ import {Protobuf} from 'as-proto/assembly';
        | PostContractCall | ✅          | get is Call result |
        | PostTxExecute    | ✅          | get is Call result |
        | Operation        | ✅          | get is Call result |
-
-BoolData,BytesData,UintData,IntArrayData,StringArrayData,EthAccessList,EthLogs
-
-| name                                      | key                                          | response type   | description |  |    |
-|-------------------------------------------|----------------------------------------------|-----------------|-------------|--|----|
-| IsCall                                    | isCall                                       | BoolData        |             |  |    |
-| BlockHeaderParentHash                     | block.header.parentHash                      | BytesData       |             |  |    |
-| BlockHeaderMiner                          | block.header.miner                           | BytesData       |             |  |    |
-| BlockHeaderTransactionsRoot               | block.header.transactionsRoot                | BytesData       |             |  |    |
-| BlockHeaderNumber                         | block.header.number                          | UintData        |             |  |    |
-| BlockHeaderTimestamp                      | block.header.timestamp                       | UintData        |             |  |    |
-| EnvExtraEIPs                              | env.extraEIPs                                | IntArrayData    |             |  |    |
-| EnvEnableCreate                           | env.enableCreate                             | BoolData        |             |  |    |
-| EnvEnableCall                             | env.enableCall                               | BoolData        |             |  |    |
-| EnvAllowUnprotectedTxs                    | env.allowUnprotectedTxs                      | BoolData        |             |  |    |
-| EnvChainChainId                           | env.chain.chainId                            | UintData        |             |  |    |
-| EnvChainHomesteadBlock                    | env.chain.homesteadBlock                     | UintData        |             |  |    |
-| EnvChainDaoForkBlock                      | env.chain.daoForkBlock                       | UintData        |             |  |    |
-| EnvChainDaoForkSupport                    | env.chain.daoForkSupport                     | BoolData        |             |  |    |
-| EnvChainEip150Block                       | env.chain.eip150Block                        | UintData        |             |  |    |
-| EnvChainEip155Block                       | env.chain.eip155Block                        | UintData        |             |  |    |
-| EnvChainEip158Block                       | env.chain.eip158Block                        | UintData        |             |  |    |
-| EnvChainByzantiumBlock                    | env.chain.byzantiumBlock                     | UintData        |             |  |    |
-| EnvChainConstantinopleBlock               | env.chain.constantinopleBlock                | UintData        |             |  |    |
-| EnvChainPetersburgBlock                   | env.chain.petersburgBlock                    | UintData        |             |  |    |
-| EnvChainIstanbulBlock                     | env.chain.istanbulBlock                      | UintData        |             |  |    |
-| EnvChainMuirGlacierBlock                  | env.chain.muirGlacierBlock                   | UintData        |             |  |    |
-| EnvChainBerlinBlock                       | env.chain.berlinBlock                        | UintData        |             |  |    |
-| EnvChainLondonBlock                       | env.chain.londonBlock                        | UintData        |             |  |    |
-| EnvChainArrowGlacierBlock                 | env.chain.arrowGlacierBlock                  | UintData        |             |  |    |
-| EnvChainGrayGlacierBlock                  | env.chain.grayGlacierBlock                   | UintData        |             |  |    |
-| EnvChainMergeNetSplitBlock                | env.chain.mergeNetSplitBlock                 | UintData        |             |  |    |
-| EnvChainShanghaiTime                      | env.chain.shanghaiTime                       | UintData        |             |  |    |
-| EnvChainCancunTime                        | env.chain.cancunTime                         | UintData        |             |  |    |
-| EnvChainPragueTime                        | env.chain.pragueTime                         | UintData        |             |  |    |
-| EnvConsensusParamsBlockMaxGas             | env.consensusParams.block.maxGas             | IntData         |             |  |    |
-| EnvConsensusParamsBlockMaxBytes           | env.consensusParams.block.maxBytes           | IntData         |             |  |    |
-| EnvConsensusParamsEvidenceMaxAgeDuration  | env.consensusParams.evidence.maxAgeDuration  | IntData         |             |  |    |
-| EnvConsensusParamsEvidenceMaxAgeNumBlocks | env.consensusParams.evidence.maxAgeNumBlocks | IntData         |             |  |    |
-| EnvConsensusParamsEvidenceMaxBytes        | env.consensusParams.evidence.maxBytes        | IntData         |             |  |    |
-| EnvConsensusParamsValidatorPubKeyTypes    | env.consensusParams.validator.pubKeyTypes    | StringArrayData |             |  |    |
-| EnvConsensusParamsAppVersion              | env.consensusParams.appVersion               | UintData        |             |  |    |
-| TxType                                    | tx.type                                      | UintData        |             |  |    |
-| TxChainId                                 | tx.chainId                                   | BytesData       |             |  |    |
-| TxAccessList                              | tx.accessList                                | EthAccessList   |             |  |    |
-| TxNonce                                   | tx.nonce                                     | UintData        |             |  |    |
-| TxGasPrice                                | tx.gasPrice                                  | BytesData       |             |  |    |
-| TxGas                                     | tx.gas                                       | UintData        |             |  |    |
-| TxGasTipCap                               | tx.gasTipCap                                 | BytesData       |             |  |    |
-| TxGasFeeCap                               | tx.gasFeeCap                                 | BytesData       |             |  |    |
-| TxTo                                      | tx.to                                        | BytesData       |             |  |    |
-| TxValue                                   | tx.value                                     | BytesData       |             |  |    |
-| TxData                                    | tx.data                                      | BytesData       |             |  |    |
-| TxBytes                                   | tx.bytes                                     | BytesData       |             |  |    |
-| TxHash                                    | tx.hash                                      | BytesData       |             |  |    |
-| TxUnsignedBytes                           | tx.unsigned.bytes                            | BytesData       |             |  |    |
-| TxUnsignedHash                            | tx.unsigned.hash                             | BytesData       |             |  |    |
-| TxSigV                                    | tx.sig.v                                     | BytesData       |             |  |    |
-| TxSigR                                    | tx.sig.r                                     | BytesData       |             |  |    |
-| TxSigS                                    | tx.sig.s                                     | BytesData       |             |  |    |
-| TxFrom                                    | tx.from                                      | BytesData       |             |  |    |
-| TxIndex                                   | tx.index                                     | UintData        |             |  |    |
-| AspectId                                  | aspect.id                                    | BytesData       |             |  |    |
-| AspectVersion                             | aspect.version                               | UintData        |             |  |    |
-| MsgFrom                                   | msg.from                                     | BytesData       |             |  |    |
-| MsgTo                                     | msg.to                                       | BytesData       |             |  |    |
-| MsgValue                                  | msg.value                                    | BytesData       |             |  |    |
-| MsgGas                                    | msg.gas                                      | UintData        |             |  |    |
-| MsgInput                                  | msg.input                                    | BytesData       |             |  |    |
-| MsgIndex                                  | msg.index                                    | UintData        |             |  |    |
-| MsgResultRet                              | msg.result.ret                               | BytesData       |             |  |    |
-| MsgResultGasUsed                          | msg.result.gasUsed                           | UintData        |             |  |    |
-| MsgResultError                            | msg.result.error                             | StringData      |             |  |    |
-| ReceiptStatus                             | receipt.status                               | UintData        |             |  |    |
-| ReceiptLogs                               | receipt.logs                                 | EthLogs         |             |  |    |
-| ReceiptGasUsed                            | receipt.gasUsed                              | UintData        |             |  |    |
-| ReceiptCumulativeGasUsed                  | receipt.cumulativeGasUsed                    | UintData        |             |  |    |
-| ReceiptBloom                              | receipt.bloom                                | BytesData       |             |  |    |
-
-
