@@ -4,30 +4,6 @@ sidebar_position: 2
 
 # Validator Guide
 
-## Hardware
-
-To run a validator node, you should run a full node firstly, the following hardware configuration is recommended:
-
-### Supported OS
-
-We officially support macOS and Linux only in the following architectures:
-
-* `darwin/arm64`
-* `darwin/x86_64`
-* `linux/arm64`
-* `linux/amd64`
-
-### Minimum Requirements
-
-To run testnet validator nodes, you will need a machine with the following minimum hardware requirements:
-
-* 8 or more physical CPU cores
-* At least 16GB of memory (RAM)
-* At least 500GB of SSD disk storage
-* At least 100mbps network bandwidth
-
-`Storage size for validators will depend on level of pruning.`
-
 :::warning
 Before setting up a validator node, make sure to have completed the [Run a Full Node](../node/run-full-node) guide.
 :::

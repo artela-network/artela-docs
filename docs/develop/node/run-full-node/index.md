@@ -5,29 +5,19 @@ sidebar_position: 1
 # Run a full node
 
 This document provides an introduction to joining the Artela Testnet as a full node.
+> It is recommended to use `ubuntu` operating system.
 
-**Hardware Minimum Requirements**
+**Hardware Recommended Requirements:**
 
-- CPU with 2+ cores
+- 8 CPU Cores
 
-- 4GB RAM
+- 16GB of Memory
 
-- 1TB free storage space to sync the Testnet
+- 1TB SSD
 
-- 8 MBit/sec download Internet service
+- 200mbps Network Bandwidth
 
-**Recommended:**
-
-- Fast CPU with 4+ cores
-
-- 16GB+ RAM
-
-- High-performance SSD with at least 1TB of free space
-
-- 25+ MBit/sec download Internet service
-
-
-## 1. Prepare Artelad
+## 1. Prepare artelad
 
 You can start with install artelad or build source code
 
@@ -118,38 +108,89 @@ Get `BLOCK_HEIGHT` and `BLOCK_HASH` from [3. Trust block and height](./access-te
 
 Get `rpc_servers` from [4. RPC servers](./access-testnet#public-information-on-testnet##RPC-servers)
 
-### 4. Run Artela node
+## 4. Recommended config
+### 4.1 app.toml
+
+:::warning
+It is recommended that you modify the app.toml configuration items to be consistent with the following
+:::
+```toml
+# app.toml
+minimum-gas-prices = "0.02uart"
+
+pruning = "custom"
+pruning-keep-recent = 362880
+pruning-interval = 100
+pruning-keep-every = 0
+
+[api]
+enable = true
+address = "tcp://0.0.0.0:1317"
+
+[grpc]
+address = "0.0.0.0:9090"
+
+[grpc-web]
+address = "0.0.0.0:9091"
+
+[state-sync]
+snapshot-interval = 1000
+snapshot-keep-recent = 10
+
+[json-rpc]
+address = "0.0.0.0:8545"
+```
+
+### 4.2 config.toml
+:::warning
+It is recommended that you modify the config.toml configuration items to be consistent with the following
+:::
+```toml
+# config.toml
+proxy_app = "tcp://0.0.0.0:26658"
+
+[rpc]
+laddr = "tcp://0.0.0.0:26657"
+
+[consensus]
+timeout_commit = "500ms"
+```
+
+## 5. Launch Artela node
 
 ```bash
 export PATH=$PATH:$HOME/go/bin
 
 artelad start --log_level debug
 ```
+**Optional:  Launch Artela node as a background service**
 
-**Optional:  Run Artela node as a background service**
-
-Run the Artela node with nohup and redirect the output to a log file. You can use a command like this:
-
+### 5.1 Install pm2 on ubuntu OS
 ```bash
-nohup artelad start --log_level debug > artela.log 2>&1 &
+sudo apt update
+sudo apt install npm -y
+sudo npm install -g n
+n latest
+hash -r
+
+npm install pm2@latest -g
 ```
-* `nohup` is used to run a command in the background and detach it from the terminal.
-* `artela start` is the command to start the Artela node.
-* `> artela.log` redirects the standard output to a file named artela.log.
-* `2>&1` redirects standard error to the same file as standard output.
-* `&` at the end of the command runs it in the background.
 
-After running the command, your Artela node should start as a background service, and its output will be logged to the `artela.log` file.
-
-You can check the log file to view the Artela node's output using a command like this:
+### 5.2 Launch Artela node
 ```bash
-tail -f artela.log
+pm2 start artelad -- start && pm2 save && pm2 startup
 ```
-The `tail -f` command allows you to continuously monitor the log file and see new log entries as they are written.
 
-### 5. Output
+### 5.3 Check status
+```bash
+pm2 status
+```
+![output2](./img/1.png)
 
-![output1](./img/1.png)
+### 5.4 Check logs
+```bash
+pm2 logs
+```
 
 When it syncs with all blocks, the output looks like:
 
