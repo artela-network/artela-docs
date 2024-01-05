@@ -276,5 +276,5 @@ Execute the re-entrant attack on the simplified Curve contract with Aspect prote
 
 If the protection succeeded, you will see the transaction reverted.
 
-![img.png](img.png)
+![img.svg](img.svg)
  
