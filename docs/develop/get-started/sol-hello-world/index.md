@@ -99,7 +99,7 @@ This step relies on `solc`, first check if [solc](https://docs.soliditylang.org/
 installed correctly
 
 ```bash
- solc --version
+solc --version
 ```
 
 Compile your contract using:
@@ -171,6 +171,8 @@ npm run contract:call -- --contract {smart-contract-address}  \
                          --abi ./build/contract/HelloWorld.abi   \                                    
                          --method hello                                             
 ```
+
+* replace the placeholder {smart-contract-address} with the information obtained from step `2 3 deploy the smart contract`.
 
 > ✅ Upon successful, the terminal will display call result.
 
@@ -297,8 +299,8 @@ npm run contract:bind -- --contract {smart-contract-address} \
                          --aspectId {aspect-Id} 
 ```
 
-* {smart-contract-address} obtained from step `2 3 deploy the smart contract`.
-* {aspect-Id} obtained from step `3.4. Deploy the Aspect`.
+* replace the placeholder {smart-contract-address} with the information obtained from step `2 3 deploy the smart contract`.
+* replace the placeholder {aspect-Id} with the information obtained from step `3.4. Deploy the Aspect`.
 
 > ✅ The binding process has been successful, and the transaction receipt has been printed.
 
@@ -316,6 +318,8 @@ npm run contract:call -- --contract {smart-contract-address}  \
                          --abi ./build/contract/HelloWorld.abi   \                                    
                          --method world 
 ```
+
+* replace the placeholder {smart-contract-address} with the information obtained from step `2 3 deploy the smart contract`.
 
 > ✅ Due to Aspect interception, the transaction is reverted.
 
