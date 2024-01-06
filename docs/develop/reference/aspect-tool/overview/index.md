@@ -78,5 +78,5 @@ The Version in the subgraph manifest specifies release notes.
 
 | Version | 	Release notes               |
 |:--------|:-----------------------------|
-| 0.0.46  | The first beta is available. |
+| 0.0.53  | The first beta is available. |
 

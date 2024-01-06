@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Transaction Level Aspect
+# Transaction Join Point
 
 ## Introduction
 

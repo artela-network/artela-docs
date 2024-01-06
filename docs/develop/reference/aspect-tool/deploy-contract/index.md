@@ -9,11 +9,11 @@ available on the network.
 You can deploy contract using the following command:
 
 ```bash
-  npm run contract:deploy -- --skfile {privateKey-path} \                        
-                           --abi ./build/contract/xxx.abi \                          
-                           --bytecode ./build/contract/xxx.bin \     
-                           --args [..] \                     
-                           --gas 200000         
+npm run contract:deploy -- --skfile {privateKey-path} \
+                           --abi ./build/contract/xxx.abi \
+                           --bytecode ./build/contract/xxx.bin \
+                           --args [..] \
+                           --gas 200000
 ```
 
 **options:**
@@ -34,7 +34,25 @@ If needed, you can modify the logic within this file to achieve your specific fu
 
 Furthermore，you can modify the `project.config.json` in the project root folder [to set the network configurations.](/develop/reference/aspect-tool/guide/config#2network-rpc).
 
-## Execution Status
+## Example
+
+```shell
+## usage 1: deploy a contract 'Counter.sol' using default private key './privateKey.txt'
+npm run contract:deploy --  --abi ./build/contract/Counter.abi \
+                            --bytecode ./build/contract/Counter.bin
+
+## usage 2: deploy a contract 'Counter.sol' using private key './privateKey2.txt'
+npm run contract:deploy --  --skfile './privateKey2.txt' \
+							--abi ./build/contract/Counter.abi \
+                            --bytecode ./build/contract/Counter.bin
+
+## usage 3: deploy a contract 'Counter.sol' with 'constructor(uint num, address owner, string name)' constructor.
+npm run contract:deploy -- --abi ./build/contract/Counter.abi \
+                                --bytecode ./build/contract/xxx.bin \
+                                --args '[1, 0xAABB...CCDD, "a"]'
+```
+
+### Command Output
 
 If the command is executed successfully, the following log will be printed, which can record the `contractAddress`, and some commands will rely on this value.
 

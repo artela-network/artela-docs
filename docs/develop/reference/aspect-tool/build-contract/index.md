@@ -16,7 +16,13 @@ This command relies on `solc`. Specifically, will be executed
 ```
 Regarding the contract compiler, you can customize the configuration based on your current environment. For detailed information, please refer to the [configuration documentation](/develop/reference/aspect-tool/guide/config#1-contract-compiler).
 
-## Execution Status
+## Example
+
+```shell
+npm run contract:build
+```
+
+### Command Output
 
 The compiled product is placed in the `build/contract` directory.it will generate xxx.bin,xxx.abi, xxx_storage.json files.
 ```shell
@@ -28,4 +34,3 @@ The compiled product is placed in the `build/contract` directory.it will generat
 │   │   └── xxx_storage.json
 
 ```
-

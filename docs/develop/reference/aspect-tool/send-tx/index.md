@@ -37,7 +37,30 @@ If needed, you can modify the logic within this file to achieve your specific fu
 Furthermore，you can modify the `project.config.json` in the project root
 folder [to set the network configurations.](/develop/reference/aspect-tool/guide/config#2network-rpc).
 
-## Execution Status
+
+## Example
+
+```shell
+## usage 1: send a contract 'xxxx.sol' with hello() method, using default private key './privateKey.txt'
+npm run contract:send --  --contract 0xa1ab92B67C4Bd8bb0fa1C08F29A90b375c260185 \
+                          --abi ./build/contract/HelloWorld.abi \
+                          --method hello
+                        
+## usage 3: call a contract 'xxxx.sol' with 'unbind(address aspectId, address account)' method, using private key './privateKey2.txt'.
+npm run contract:send --  --contract 0xa1ab92B67C4Bd8bb0fa1C08F29A90b375c260185 \
+                          --abi ./build/xxxx.abi \
+                          --method contractsOf \
+                          --args ["0xCE3ccD4a308f25B4c1B36cC883A9bEd76Bc24627"]
+                    
+## usage 3: call a contract 'xxxx.sol' with 'unbind(address aspectId, address account)' method, using private key './privateKey2.txt'.
+npm run contract:send --  --contract 0xa1ab92B67C4Bd8bb0fa1C08F29A90b375c260185 \
+                          --abi ./build/xxxx.abi \
+                          --method unbind \
+                          --args ["0xCE3ccD4a308f25B4c1B36cC883A9bEd76Bc24627","0xA90927a72F1A6c8EFAfa0cc1b432f75eCc2086d8"] \               
+                          --skfile ./privateKey2.txt
+```
+
+### Command Output
 
 The current deployment is successful and the receipt for the transaction is printed.
 

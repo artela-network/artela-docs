@@ -1,7 +1,7 @@
 # Create a Account
 
-A blockchain account is used to verify user identity, ensuring that only authorized users can engage in smart contract
-transactions and digital asset management within the blockchain network. 
+This command can quickly create a new account in the project, and you will use it in other commands which need to sign
+transactions, and you also can use it in your test scripts.
 
 ## Command
 
@@ -17,6 +17,7 @@ npm run account:create  -- --skfile {file_path}
 ---
 
 Specifically, the command will be executed
+
 ```shell
 node scripts/create-account.cjs
 ```
@@ -25,9 +26,22 @@ The logic for the create-account command is written in the `scripts/create-accou
 implementation provided by the [@artela/web3](/develop/client/artela-web3.js) API.   
 If needed, you can modify the logic within this file to achieve your specific functionalities.
 
-## Execution Status
 
-If the command is executed successfully, the following log will be printed and a privateKey file will be generated at '{file_path}'.
+## Example
+```shell
+## usage 1: this command will create a blockchain account and generate a private key file named 'privateKey.txt' in your project dir
+npm run account:create
+
+## usage 2: this command will create a blockchain account and generate a private key file named 'accounts.txt' in your project dir
+npm run account:create -- --skfile ./accounts.txt
+
+```
+
+### Command Output
+
+If the command is executed successfully, the following log will be printed and a privateKey file will be generated at '
+{file_path}'.
+
 ```shell
 > account:create
 > node scripts/create-account.cjs

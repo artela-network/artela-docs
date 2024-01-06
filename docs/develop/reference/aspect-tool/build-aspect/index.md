@@ -15,7 +15,14 @@ npm run asbuild:debug && npm run asbuild:release
 ```
 For more information on compilation parameters, please refer [using the compiler](https://assemblyscript.bootcss.com/compiler.html#compiler-options).
 
-## Execution Status
+
+## Example
+
+```shell
+npm run aspect:build
+```
+
+### Command Output
 
 The compiled product is placed in the `build` directory.
 ```shell
