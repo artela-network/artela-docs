@@ -2,6 +2,34 @@
 
 > This Helper contains utility functions for converting between different data types.
 
+## Import
+
+<!-- @formatter:off -->
+```javascript
+import {
+    uint8ArrayToHex,
+    hexToUint8Array,
+    stringToUint8Array,
+    stringToUint8Array,
+    uint8ArrayToString,
+    uint8ArrayToAddress,
+    uint8ArrayToBool,
+    boolToUint8Array,
+    arrayCopyPush,
+    concatUint8Arrays,
+    encodeStringUTF8,
+    decodeUTF8,
+    base64Encode,
+    base64Decode,
+    parseCallMethod,
+    fromString,
+    toString,
+    toUint8Array,
+    fromUint8Array
+} from '@artela/aspect-libs';
+```
+<!-- @formatter:on -->
+    
 ## 1. uint8ArrayToHex
 
 > Convert the Uint8Array to a hexadecimal string
