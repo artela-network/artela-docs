@@ -382,50 +382,6 @@ const response = sys.hostApi.evmCall.jitCall(request);
 ```
 <!-- @formatter:on -->
 
----
-
-## sys.hostApi.util
-
-### 1. revert
-
-> Roll back the current transaction and return the information to the node.
-
-<!-- @formatter:off -->
-```typescript
-    public revert(message: string): void
-```
-<!-- @formatter:on -->
-
-* Parameter
-    * string : error message
-* Example
-
-<!-- @formatter:off -->
-```typescript
-    let result = sys.hostApi.util.revert("error message");
-```
-<!-- @formatter:on -->
-
-### 2. log
-
-> log information to the node.
-
-<!-- @formatter:off -->
-```typescript
-    public log(data: string): void 
-```
-<!-- @formatter:on -->
-
-* Parameter
-    * string : log message
-* Example
-
-<!-- @formatter:off -->
-```typescript
-    let result = sys.hostApi.util.log("print xxx on node");
-```
-<!-- @formatter:on -->
-
 ## sys.hostApi.stateDb
 
 ### 1. balance
@@ -638,53 +594,5 @@ var callTreeQuery = new CallTreeQuery(2);
 let response2 = sys.hostApi.trace.queryCallTree(callTreeQuery)
 //if query index == call message index, result EthCallMessage
 const callMessage = Protobuf.decode<EthCallMessage>(response2, EthCallMessage.decode);
-```
-<!-- @formatter:on -->
-
-##  sys.hostApi.util
-
-
-### 1. log
-
-> log information to the node.
-
-<!-- @formatter:off -->
-```typescript
-public log(data: string): void 
-```
-<!-- @formatter:on -->
-
-* Parameter
-  * data: string; log message.
-* Return
-  * void
-* Example
-<!-- @formatter:off -->
-```typescript
-sys.hostApi.util.log("this error")
-```
-<!-- @formatter:on -->
-
-### 2. revert
-
-> When executes revert, the program will be interrupted to continue execution, and a Message log will be printed on the server.
-> **Warning**
-> * If 'revert' is triggered within the Join-points of `PreContractCall, PostContractCall, PreTxExecute, PostTxExecute, and Operation`, it will revert transaction in blockchain.
-> * If 'revert' is executed within the `VerifyTx` pointcut, it will drop the transaction from the MemPool.
-
-<!-- @formatter:off -->
-```typescript
-public revert(message: string): void 
-```
-<!-- @formatter:on -->
-
-* Parameter
-  * message: string; error message.
-* Return
-  * void
-* Example
-<!-- @formatter:off -->
-```typescript
-sys.hostApi.util.revert("unknown error")
 ```
 <!-- @formatter:on -->

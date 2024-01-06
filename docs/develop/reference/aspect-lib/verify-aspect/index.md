@@ -4,7 +4,6 @@ sidebar_position: 2
 
 # Transaction Verification Aspect
 
-
 ## Introduction
 
 Aspect can provide transaction verification service when bound to certain dApp and EoA. If an Aspect has been bound to
@@ -14,248 +13,119 @@ will replace it with the customized verification logic implemented in the `verif
 ![verify.svg](verify.svg)
 
 ## How to Create
-To function as a transaction verifier Aspect, an Aspect must implement the `ITransactionVerifier` interface. This interface comprises a single method, verifyTx, which is invoked for transactions sent from an EoA without a valid ECDSA signature.
+
+To function as a transaction verifier Aspect, an Aspect must implement the `ITransactionVerifier` interface. This
+interface comprises a single method, verifyTx, which is invoked for transactions sent from an EoA without a valid ECDSA
+signature.
 
 ```typescript
 import {
-  ITransactionVerifier,
-  VerifyTxCtx,
-  sys
+    ITransactionVerifier, allocate, entryPoint, execute, sys, TxVerifyInput
 } from "@artela/aspect-libs";
 
-export class Aspect implements ITransactionVerifier {
-    
-  verifyTx(ctx: VerifyTxCtx, validationData: Uint8Array): Uint8Array {
-    // Custom verification logic
-    // ...
-    return address; // A 20-byte address must be returned to the base layer.
-  }
+class Aspect implements ITransactionVerifier {
+    verifyTx(input: TxVerifyInput): Uint8Array {
+        return sys.aspect.property.get<Uint8Array>('verifyAccount');
+    }
+
+    /**
+     * isOwner is the governance account implemented by the Aspect, when any of the governance operation
+     * (including upgrade, config, destroy) is made, isOwner method will be invoked to check
+     * against the initiator's account to make sure it has the permission.
+     *
+     * @param ctx context of Aspect state
+     * @param sender address of the operation initiator
+     * @return true if check success, false if check fail
+     */
+    isOwner(sender: Uint8Array): bool {
+        // always return false on isOwner can make the Aspect immutable
+        return true;
+    }
 }
+
+// 2.register aspect Instance
+const aspect = new Aspect();
+entryPoint.setAspect(aspect);
+
+// 3.must export it
+export {execute, allocate};
 ```
-#### Parameter
-* `ctx` ： By utilizing the 'ctx' input argument, it provides essential insights into transactions and block processing, encompassing smart contract state updates, logged events, and raw transaction data. see [how to use ctx](#how-to-use-ctx).
-* `validationData` : Data used to derive the sender's address.
 
-#### Returns
-* (Uint8Array) ：return a 20-byte address.
+## Programming
 
+There are two programming modes that can be used in this method:
 
-## How to use `ctx`
+1. By utilizing the 'input' input argument, it provides essential insights into transactions and block processing.
+   see [how to use input](#how-to-use-input).
 
-### 1. get transaction
-> Get the currently executed transaction.
->
-<!-- @formatter:off -->
-```typescript
-    let transaction = ctx.tx.content.unwrap()!
-```
-<!-- @formatter:on -->
+2. Using the 'sys' namespace, it provides both hight level API and low-level API access to system data and contextual
+   information generated during blockchain runtime, including details about the environment, blocks, transactions, and
+   utility classes such as crypto and ABI encoding/decoding. see [more details](#how-to-use-apis).
 
-* Return
-  * <a href="/api/docs/classes/proto.EthTransaction.html" target="_blank">EthTransaction</a>
+## How to use input
 
-### 2. get transaction properties
+Explore the available information from the class diagram below.
 
-> Get transaction extension properties
+![class.svg](class.svg)
 
-<!-- @formatter:off -->
-```typescript
-    let popVal = ctx.tx.extProperties.property.get("xx");
-```
-<!-- @formatter:on -->
+**Parameters:**
 
-* Parameter
-  * key: Properties keys, default key list:
-    * `txIndex` get transaction index in block.
-* Return
-  * string
+- `input.block.number`: current block number.
+- `input.tx.from`: caller of the transaction.
+- `input.tx.to`: to address of the transaction.
+- `input.tx.hash`: hash of the transaction.
 
-### 3. get transaction gas meter
-> Get transaction gas meter
->
-<!-- @formatter:off -->
-```typescript
-    let gasMeter = ctx.tx.gasMeter.unwrap()!
-```
-<!-- @formatter:on -->
-
-* Return
-  * <a href="/api/docs/classes/proto.GasMeter.html" target="_blank">GasMeter</a>
-
-### 4. get block gas meter
-
->Get block gas meter
+Utilize the fields as indicated below:
 
 <!-- @formatter:off -->
 ```typescript
-    let meter = ctx.block.gasMeter.unwrap();
+
+let blockNumer = input.block!.number;
+let txFrom = input.tx!.from;
+let txTo = input.tx!.to;
+let txHash = input.tx!.hash;
+
+// use blockNumber, txFrom, txTo, txHash
+...
+
 ```
 <!-- @formatter:on -->
 
-* Return
-  * <a href="/api/docs/classes/proto.GasMeter.html" target="_blank">GasMeter</a>
+## How to use APIs
 
-### 5. get block header
+For a comprehensive overview of all APIs and their usage
+see [API References](/develop/reference/aspect-lib/components/overview).
 
-> Get the block header.
+Each breakpoint has access to different host APIs, and the host APIs available within the current breakpoint can be
+found at the following table.
 
-<!-- @formatter:off -->
-```typescript
-    let header = ctx.block.header.unwrap();
-```
-<!-- @formatter:on -->
+| System APIs                                                                                                                 | Availability | Description                                                                                                                                                                            |
+|-----------------------------------------------------------------------------------------------------------------------------|--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [sys.revert](/develop/reference/aspect-lib/components/sys#1-revert)                                                         | ✅            | Forces the current transaction to fail.                                                                                                                                                |
+| [sys.require](/develop/reference/aspect-lib/components/sys#2-require)                                                       | ✅            | Checks if certain conditions are met; if not, forces the entire transaction to fail.                                                                                                   |
+| [sys.log](/develop/reference/aspect-lib/components/sys#3-log)                                                               | ✅            | A wrapper for `sys.hostApi.util.log`, prints log messages to Artela output for debugging on the localnet.                                                                              |
+| [sys.aspect.id](/develop/reference/aspect-lib/components/sys-aspect#1-sysaspectid)                                          | ✅            | Retrieves the ID of the aspect.                                                                                                                                                        |
+| [sys.aspect.version ](/develop/reference/aspect-lib/components/sys-aspect#2-sysaspectversion)                               | ✅            | Retrieves the version of the aspect.                                                                                                                                                   |
+| [sys.aspect.mutableState](/develop/reference/aspect-lib/components/sys-aspect#4-sysaspectmutablestate)                      | ❌            | A wrapper for `sys.hostApi.aspectState` that facilitates easier reading or writing of values of a specified type to aspect state.                                                      |
+| [sys.aspect.property](/develop/reference/aspect-lib/components/sys-aspect#5-sysaspectproperty)                              | ✅            | A wrapper for `sys.hostApi.aspectProperty` that facilitates easier reading of values of a specified type from aspect property.                                                         |
+| [sys.aspect.readonlyState](/develop/reference/aspect-lib/components/sys-aspect#3-sysaspectreadonlystate)                    | ✅            | A wrapper for `sys.hostApi.aspectState` that facilitates easier reading of values of a specified type from aspect state.                                                               |
+| [sys.aspect.transientStorage](/develop/reference/aspect-lib/components/sys-aspect#6-sysaspecttransientstorage)              | ❌            | A wrapper for `sys.hostApi.aspectTransientStorage` that facilitates easier reading or writing of values of a specified type to aspect transient storage.                               |
+| [sys.hostApi.aspectProperty](/develop/reference/aspect-lib/components/sys-hostapi#syshostapiaspectproperty)                 | ✅            | Retrieves the property of the aspect as written in aspect deployment.                                                                                                                  |
+| [sys.hostApi.aspectState](/develop/reference/aspect-lib/components/sys-hostapi#syshostapiaspectstate)                       | ✅            | Retrieves or writes the state of the aspect.                                                                                                                                           |
+| [sys.hostApi.aspectTransientStorage](/develop/reference/aspect-lib/components/sys-hostapi#syshostapiaspecttransientstorage) | ❌            | Retrieves or writes to the transient storage of the aspect. This storage is only valid within the current transaction lifecycle.                                                       |
+| [sys.hostApi.crypto.ecRecover](/develop/reference/aspect-lib/components/sys-hostapi#4-ecrecover)                            | ✅            | Calls crypto methods `ecRecover`.                                                                                                                                                      |
+| [sys.hostApi.crypto.keccak](/develop/reference/aspect-lib/components/sys-hostapi#1-keccak)                                  | ✅            | Calls crypto methods `keccak`.                                                                                                                                                         |
+| [sys.hostApi.crypto.ripemd160](/develop/reference/aspect-lib/components/sys-hostapi#3-ripemd160)                            | ✅            | Calls crypto methods `ripemd160`.                                                                                                                                                      |
+| [sys.hostApi.crypto.sha256](/develop/reference/aspect-lib/components/sys-hostapi#2-sha256)                                  | ✅            | Calls crypto methods `sha256`.                                                                                                                                                         |
+| [sys.hostApi.runtimeContext](/develop/reference/aspect-lib/components/sys-hostapi#1-get-context)                            | ✅            | Retrieves runtime context by the key.  Refer to the [Context Keys](/develop/reference/aspect-lib/components/context-keys) to see which keys can be accessed by the current join point. |
+| [sys.hostApi.stateDb.balance](/develop/reference/aspect-lib/components/sys-hostapi#1-balance)                               | ❌            | Gets the balance of the specified address from the EVM state database.                                                                                                                 |
+| [sys.hostApi.stateDb.codeHash](/develop/reference/aspect-lib/components/sys-hostapi#4-codehash)                             | ❌            | Gets the hash of the code from the EVM state database.                                                                                                                                 |
+| [sys.hostApi.stateDb.codeSize](/develop/reference/aspect-lib/components/sys-hostapi#6-codesize)                             | ❌            | Gets the size of the code from the EVM state database.                                                                                                                                 |
+| [sys.hostApi.stateDb.hasSuicided](/develop/reference/aspect-lib/components/sys-hostapi#3-hassuicided)                       | ❌            | Gets the codehash from the EVM state database.                                                                                                                                         |
+| [sys.hostApi.stateDb.nonce](/develop/reference/aspect-lib/components/sys-hostapi#5-nonce)                                   | ❌            | Checks if the contract at the specified address is suicided in the current transactions.                                                                                               |
+| [sys.hostApi.stateDb.stateAt](/develop/reference/aspect-lib/components/sys-hostapi#2-stateat)                               | ❌            | Gets the state at a specific point.                                                                                                                                                    |
+| [sys.hostApi.evmCall.jitCall](/develop/reference/aspect-lib/components/sys-hostapi#2-jitcall)                               | ❌            | Creates a contract call and executes it immediately.                                                                                                                                   |
+| [sys.hostApi.evmCall.staticCall](/develop/reference/aspect-lib/components/sys-hostapi#1-staticcall)                         | ✅            | Creates a static call and executes it immediately.                                                                                                                                     |
+| [sys.hostApi.trace.queryCallTree](/develop/reference/aspect-lib/components/sys-hostapi#2-querycalltree )                    | ❌            | Returns the call tree of EVM execution.                                                                                                                                                |
+| [sys.hostApi.trace.queryStateChange](/develop/reference/aspect-lib/components/sys-hostapi#1-querystatechange)               | ❌            | Returns the state change in EVM execution for the specified key.                                                                                                                       |
 
-* Return
-  * <a href="/api/docs/classes/proto.EthBlockHeader.html" target="_blank">EthBlockHeader</a>
-
-### 6. get block min gas price
-
-> Get the block min gas price.
-
-<!-- @formatter:off -->
-```typescript
-    let minGasPrice = ctx.block.minGasPrice.unwrap();
-```
-<!-- @formatter:on -->
-
-* Returns
-  * <a href="/api/docs/classes/proto.MinGasPrice.html" target="_blank">MinGasPrice</a>
-
-### 7. get block last commit
-
-> Get the block last commit info.
-
-<!-- @formatter:off -->
-```typescript
-    let lastCommit = ctx.block.lastCommit.unwrap();
-```
-<!-- @formatter:on -->
-
-* Returns
-  * <a href="/api/docs/classes/proto.LastCommitInfo.html" target="_blank">LastCommitInfo</a>
-
-### 8. get block partial tx
-
-> Get partial body that have same tx.To
-
-<!-- @formatter:off -->
-```typescript
-    let txs = ctx.block.partialBody.unwrap();
-```
-<!-- @formatter:on -->
-
-* Returns
-  * <a href="/api/docs/classes/proto.EthTxArray.html" target="_blank">EthTxArray</a>
-
-### 9. get environment
-
-> Get environment content.
-
-<!-- @formatter:off -->
-```typescript
-   let envContent = ctx.env.baseFee.unwrap();
-```
-<!-- @formatter:on -->
-
-* Returns
-  * <a href="/api/docs/classes/proto.EnvContent.html" target="_blank">EnvContent</a>
-
-### 10. get chain config
-
-> Get chain config
-
-<!-- @formatter:off -->
-```typescript
-   let chainConfig = ctx.env.chainConfig.unwrap();
-```
-<!-- @formatter:on -->
-
-* Returns
-  * <a href="/api/docs/classes/proto.ChainConfig.html" target="_blank">ChainConfig</a>
-
-### 11. get evm params
-
-> Get evm params
-
-<!-- @formatter:off -->
-```typescript
-    let evmParams = ctx.env.evmParams.unwrap();
-```
-<!-- @formatter:on -->
-
-* Returns
-  * <a href="/api/docs/classes/proto.EvmParams.html" target="_blank">EvmParams</a>
-
-### 12. get consensus params
-
-> Get consensus params
-
-<!-- @formatter:off -->
-```typescript
-    let ConsParams = ctx.env.consensusParams.unwrap();
-```
-<!-- @formatter:on -->
-
-* Returns
-  * <a href="/api/docs/classes/proto.ConsParams.html" target="_blank">ConsParams</a>
-
-### 13. set Aspect state
-
-> Set value to Aspect state
-
-<!-- @formatter:off -->
-```typescript
-   ctx.mutableState.get<string>("key").set<string>("value")
-```
-<!-- @formatter:on -->
-
-* Parameter
-  * key: generics type key
-  * value: generics type value
-
-### 14. get Aspect state
-
-> Get value from Aspect state
-
-<!-- @formatter:off -->
-```typescript
-   let value = ctx.mutableState.get<string>("key").unwrap();
-```
-<!-- @formatter:on -->
-
-* Parameter
-  * key: generics type key
-* Return
-  * T：generics type value
-
-
-### 15. get property
-
-> Get property value
-
-<!-- @formatter:off -->
-```typescript
-   let value = ctx.property.get<string>("key");
-```
-<!-- @formatter:on -->
-
-* Parameter
-  * key: generics type key
-* Return
-  * T：generics type value
-
-### 16. evm static call
-
-> Executes a new message call immediately, without creating a transaction on the blockchain.
-
-<!-- @formatter:off -->
-```typescript
-    let ethMessage = new EthMessage( );
-    let result = ctx.staticCall.submit(ethMessage)
-```
-<!-- @formatter:on -->
-
-* Parameter
-  * <a href="/api/docs/classes/proto.EthMessage.html" target="_blank">EthMessage</a>
-* Return
-  * <a href="/api/docs/classes/proto.EthMessageCallResult.html" target="_blank">EthMessageCallResult</a>
