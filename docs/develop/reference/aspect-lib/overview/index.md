@@ -29,18 +29,22 @@ yarn add --dev @artela/aspect-libs    # Yarn
 * [Aspect Structure](/develop/reference/aspect-lib/aspect-structure)
 
 ### Join-Points
-* [Transaction Level Join-Point](/develop/reference/aspect-lib/tx-level-aspect/overview)
-* [Block Level Join-Point](/develop/reference/aspect-lib/block-level-aspect/overview)
-* [Call Level Join-Point](/develop/reference/aspect-lib/operation-aspect)
-* [Transaction Verification Join-Point](/develop/reference/aspect-lib/verify-aspect)
+* [VerifyTx](/develop/reference/aspect-lib/verify-aspect)
+* [PreTxExecute](/develop/reference/aspect-lib/tx-level-aspect/pre-tx-execute)
+* [PreContractCall](/develop/reference/aspect-lib/tx-level-aspect/pre-contract-call)
+* [PostContractCall](/develop/reference/aspect-lib/tx-level-aspect/post-contract-call)
+* [PostTxExecute](/develop/reference/aspect-lib/tx-level-aspect/post-tx-execute)
+
+### Aspect Operation
+* [Operation](/develop/reference/aspect-lib/operation-aspect)
 
 ### API references
 * [sys](/develop/reference/aspect-lib/components/sys)
 * [sys.hostApi](/develop/reference/aspect-lib/components/sys-hostapi)
 * [sys.aspect](/develop/reference/aspect-lib/components/sys-aspect)
-* [sys.evm](/develop/reference/aspect-lib/components/call)
-* [sys.context](/develop/reference/aspect-lib/components/context)
 * [ethereum](/develop/reference/aspect-lib/components/ethereum)
+* [helper](/develop/reference/aspect-lib/components/helper)
+* [context-keys](/develop/reference/aspect-lib/components/context-keys)
 
 ## Versions
 
@@ -49,6 +53,6 @@ Version.
 
 | Version | Artela Version | 	Release notes                                                                            |
 |:--------|:---------------|:------------------------------------------------------------------------------------------|
-| 0.0.25  | v0.4.1-beta    | The first beta is available, where the Transaction Level Aspect feature has been released |
+| 0.0.31  | v0.4.7-rc4     | The first beta is available, where the Transaction Level Aspect feature has been released |
 
 

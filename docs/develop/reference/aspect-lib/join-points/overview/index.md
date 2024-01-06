@@ -10,7 +10,7 @@ The Transaction Level Aspect defines multiple Join Points, with each one represe
 function at a specific stage in the [transaction lifecycle](/develop/core-concepts/lifecycle),
 it needs to be binding a smart contract and activated by EOA transactions.
 
-![img.png](../img/jp.png)
+![img.png](../img/jp2.svg)
 
 The current transaction is delivered to the Evm module, and Transactions are applied according to Geth's execution
 logic `ApplyTransaction` ⮕ `ApplyMessage` ⮕ `evm. Call`, In this process, additional Join Points are executed, and the

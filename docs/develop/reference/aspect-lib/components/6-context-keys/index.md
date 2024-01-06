@@ -861,7 +861,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.consensusParams.validator.pubKeyTypes`
 * **Response Type:** `StringArrayData`
 * **Description:**
-    * restrict the public key types validators can use.
+    * Restrict the public key types validators can use.
 * **Example:**
     * ```javascript
   const key="env.consensusParams.validator.pubKeyTypes";
@@ -885,7 +885,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `env.consensusParams.appVersion`
 * **Response Type:** `UintData`
 * **Description:**
-    * The ABCI application version.
+    * Get the ABCI application version.
 * **Example:**
     * ```javascript
   const key="env.consensusParams.appVersion";
@@ -909,7 +909,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `tx.type`
 * **Response Type:** `UintData`
 * **Description:**
-    * returns the transaction type id. LegacyTxType=0x00 AccessListTxType=0x01 DynamicFeeTxType=0x02 BlobTxType=0x03
+    * Returns the transaction type id. LegacyTxType=0x00 AccessListTxType=0x01 DynamicFeeTxType=0x02 BlobTxType=0x03
 * **Example:**
     * ```javascript
   const key="tx.type";
@@ -933,7 +933,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `tx.chainId`
 * **Response Type:** `BytesData`
 * **Description:**
-    * returns the EIP155 chain ID of the transaction. The return value will always be non-nil. For legacy transactions
+    * Returns the EIP155 chain ID of the transaction. The return value will always be non-nil. For legacy transactions
       which are not replay-protected, the return value is zero.
 * **Example:**
     * ```javascript
@@ -1391,7 +1391,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `aspect.id`
 * **Response Type:** `BytesData`
 * **Description:**
-    * Return current aspect id.
+    * Returns current aspect id.
 * **Example:**
     * ```javascript
   const key="aspect.id";
@@ -1415,7 +1415,7 @@ import {Protobuf} from 'as-proto/assembly';
 * **Key**: `aspect.version`
 * **Response Type:** `UintData`
 * **Description:**
-    * Return current aspect version.
+    * Returns current aspect version.
 * **Example:**
     * ```javascript
   const key="aspect.version";
