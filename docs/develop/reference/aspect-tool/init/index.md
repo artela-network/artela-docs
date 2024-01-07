@@ -19,7 +19,9 @@ This guide outlines the process of initiating an Aspect development project
 
 mkdir my-first-aspect && cd  my-first-aspect
 
-npx @artela/aspect-tool init
+npm install -g @artela/aspect-tool
+
+aspect-tool init
 ```
 
 ## Project 
