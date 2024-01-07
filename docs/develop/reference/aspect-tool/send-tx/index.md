@@ -33,11 +33,11 @@ npm run contract:send --  --contract 0xa1ab92B67C4Bd8bb0fa1C08F29A90b375c260185 
                           --abi ./build/contract/HelloWorld.abi \
                           --method hello
                         
-## usage 3: call a contract 'xxxx.sol' with 'unbind(address aspectId, address account)' method, using private key './privateKey2.txt'.
+## usage 3: call a contract 'xxxx.sol' with 'add(address aspectId, address account)' method, using private key './privateKey2.txt'.
 npm run contract:send --  --contract 0xa1ab92B67C4Bd8bb0fa1C08F29A90b375c260185 \
                           --abi ./build/xxxx.abi \
-                          --method contractsOf \
-                          --args ["0xCE3ccD4a308f25B4c1B36cC883A9bEd76Bc24627"]
+                          --method add \
+                          --args [100]
                     
 ## usage 3: call a contract 'xxxx.sol' with 'unbind(address aspectId, address account)' method, using private key './privateKey2.txt'.
 npm run contract:send --  --contract 0xa1ab92B67C4Bd8bb0fa1C08F29A90b375c260185 \

@@ -8,7 +8,7 @@ of the contract code and generate binary (Bin), Application Binary Interface (ab
 You can build contract by using the following command:
 
 ```shell
-  npm run contract:build
+npm run contract:build
 ```
 
 ## Example
@@ -34,6 +34,6 @@ The compiled product is placed in the `build/contract` directory.it will generat
 
 This command relies on `solc`. Specifically, will be executed
 ```shell
-  solc -o ./build/contract/ --via-ir --abi --storage-layout --bin ./contracts/*.sol  --overwrite
+solc -o ./build/contract/ --via-ir --abi --storage-layout --bin ./contracts/*.sol  --overwrite
 ```
-Regarding the contract compiler, you can customize the configuration based on your current environment. For detailed information, please refer to the [configuration documentation](/develop/reference/aspect-tool/guide/config#1-contract-compiler).
+Regarding the contract compiler, you can customize the configuration based on your current environment. For detailed information, please refer to the [configuration documentation](/develop/reference/aspect-tool/config#1-contract-compiler).

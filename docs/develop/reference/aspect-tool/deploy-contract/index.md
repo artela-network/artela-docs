@@ -27,17 +27,17 @@ npm run contract:deploy -- --skfile {privateKey-path} \
 ## Example
 
 ```shell
-## usage 1: deploy a contract 'Counter.sol' using default private key './privateKey.txt'
-npm run contract:deploy --  --abi ./build/contract/Counter.abi \
-                            --bytecode ./build/contract/Counter.bin
+## usage 1: deploy a contract 'xxx.sol' using default private key './privateKey.txt'
+npm run contract:deploy --  --abi ./build/contract/xxx.abi \
+                            --bytecode ./build/contract/xxx.bin
 
-## usage 2: deploy a contract 'Counter.sol' using private key './privateKey2.txt'
+## usage 2: deploy a contract 'xxx.sol' using private key './privateKey2.txt'
 npm run contract:deploy --  --skfile ./privateKey2.txt \
-							--abi ./build/contract/Counter.abi \
-                            --bytecode ./build/contract/Counter.bin
+							--abi ./build/contract/xxx.abi \
+                            --bytecode ./build/contract/xxx.bin
 
-## usage 3: deploy a contract 'Counter.sol' with 'constructor(uint num, address owner, string name)' constructor.
-npm run contract:deploy -- --abi ./build/contract/Counter.abi \
+## usage 3: deploy a contract 'xxx.sol' with 'constructor(uint num, address owner, string name)' constructor.
+npm run contract:deploy -- --abi ./build/contract/xxx.abi \
                                 --bytecode ./build/contract/xxx.bin \
                                 --args '[1, 0xAABB...CCDD, "a"]'
 ```
@@ -74,4 +74,4 @@ The logic for the create-account command is written in the `scripts/contract-dep
 implementation provided by the [@artela/web3](/develop/client/artela-web3.js) API.   
 If needed, you can modify the logic within this file to achieve your specific functionalities.
 
-Furthermore，you can modify the `project.config.json` in the project root folder [to set the network configurations.](/develop/reference/aspect-tool/guide/config#2network-rpc).
+Furthermore，you can modify the `project.config.json` in the project root folder [to set the network configurations.](/develop/reference/aspect-tool/config#2network-rpc).
