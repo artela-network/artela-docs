@@ -1,9 +1,8 @@
 # Helper
 
-> The provided Helper encapsulates a set of utility functions designed to facilitate the seamless conversion between
-> various data types. These functions serve as valuable tools for ensuring compatibility and managing data transformations
-> within a software application. Whether dealing with numeric, string, or other data representations, this Helper
-> simplifies the process of converting data, enhancing overall flexibility and interoperability in your codebase.
+> This Helper provides utility functions for smooth data type conversions, ensuring compatibility and simplifying the
+> management of data transformations in your software application. Whether handling numeric, string, or other data
+> representations, this Helper enhances overall flexibility and interoperability in your codebase.
 
 ## Import
 
