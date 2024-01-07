@@ -28,7 +28,7 @@ For more info about the new RPC URL configuration, refer to [artela betanet](../
 
 Ensure all fields are correctly filled:
 
-![img_1.png ](img_1.png)
+![img_1.png ](img_2.png)
 
 ## 2. Access TestNet Faucet
 
