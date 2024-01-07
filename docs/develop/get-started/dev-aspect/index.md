@@ -149,7 +149,7 @@ in `testnet-faucet` channel.
 Execute the following command within the `my-first-aspect` folder, using the provided script:
 
 ```bash
-npm run contract:deploy --  --abi ./build/contract/HelloWorld.abi \ 
+npm run contract:deploy --  --abi ./build/contract/HelloWorld.abi \
                            --bytecode ./build/contract/HelloWorld.bin
 ```
 

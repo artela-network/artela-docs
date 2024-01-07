@@ -8,10 +8,10 @@ event triggering, or the execution of other contract logic.
 You can send transaction using the following command:
 
 ```shell
-  npm run contract:send -- --skfile {privateKey-path}    \     
-                         --contract {smart-contract-address}  \                         
-                         --abi ./build/contract/xxx.abi   \                                    
-                         --method {method-name}  \   
+  npm run contract:send -- --skfile {privateKey-path}    \
+                         --contract {smart-contract-address} \
+                         --abi ./build/contract/xxx.abi \
+                         --method {method-name}  \
                          --args [..]
                          --gas 200000 
 ```
@@ -43,7 +43,7 @@ npm run contract:send --  --contract 0xa1ab92B67C4Bd8bb0fa1C08F29A90b375c260185 
 npm run contract:send --  --contract 0xa1ab92B67C4Bd8bb0fa1C08F29A90b375c260185 \
                           --abi ./build/xxxx.abi \
                           --method unbind \
-                          --args ["0xCE3ccD4a308f25B4c1B36cC883A9bEd76Bc24627","0xA90927a72F1A6c8EFAfa0cc1b432f75eCc2086d8"] \               
+                          --args ["0xCE3ccD4a308f25B4c1B36cC883A9bEd76Bc24627","0xA90927a72F1A6c8EFAfa0cc1b432f75eCc2086d8"] \
                           --skfile ./privateKey2.txt
 ```
 

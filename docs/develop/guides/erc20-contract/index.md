@@ -205,7 +205,7 @@ npm run contract:deploy -- --skfile ./tokenPk.txt  \
                            --args '[10000000]'
                            
                            
-npm run contract:deploy -- --skfile ./brokerPk.txt  \ 
+npm run contract:deploy -- --skfile ./brokerPk.txt  \
                            --abi ./build/contract/contracts_Broker_sol_Borker.abi \
                            --bytecode ./build/contract/contracts_Broker_sol_Borker.bin \
                            --args '[{ArtToken_Address}]'   
