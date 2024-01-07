@@ -13,7 +13,7 @@ components of Aspects.
 
 Paving the way to your first Aspect module.
 
-### 1. Init a new project
+### 1. Init a New Project
 
 Make sure that a recent version of [Node.js](https://nodejs.org/en) and its package manager npm are installed, then
 switch to a new directory and initialize a new Node.js module as usual:
@@ -124,9 +124,9 @@ Join points
 
 Operation interface
 
-* IAspectOperation
+* [IAspectOperation](/develop/reference/aspect-lib/operation)
 
-After implementing the Aspect class, it is necessary to register the Aspect instance into the entryPoint.
+After implementing the Aspect class, it is necessary to register the Aspect instance to entryPoint.
 
 ```typescript
 
@@ -138,9 +138,9 @@ entryPoint.setAspect(aspect);
 entryPoint.setOperationAspect(aspect);
 ```
 
-### 3. Export Entry Point
+### 3. Export EntryPoint
 
-When the message is sent to the Aspect-Runtime, a function called "entry point" is called. Aspect have a couple corresponding to different message types: `execute`, `allocate`.
+When the message is sent to the Aspect-Runtime, a function called "entryPoint" is called. Aspect have a couple corresponding to different message types: `execute`, `allocate`.
 
 ```shell
 export {execute, allocate};

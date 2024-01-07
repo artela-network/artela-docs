@@ -17,31 +17,39 @@ logic `ApplyTransaction` ⮕ `ApplyMessage` ⮕ `evm. Call`, In this process, ad
 process is shown in the following call graph.
 
 * `RunMsg`
-  * | ⚙ [VerifyTx join point](/develop/reference/aspect-lib/tx-level-aspect/verify-tx)
-  * `ApplyTransaction`
-    * ⮕ `ApplyMessageWithConfig`
-      * ⚙ [PreTxExecute join point](/develop/reference/aspect-lib/tx-level-aspect/pre-tx-execute)
-      * ⮕ `evm.Call`
-        * ⮕ `loop opCodes`
-          * | ⚙ [PreContractCall join point](/develop/reference/aspect-lib/tx-level-aspect/pre-contract-call)
-          * | `evm.Interpreter.Run 0`
-          * | ⚙ [PostContractCall join point](/develop/reference/aspect-lib/tx-level-aspect/post-contract-call)
-            * |
-            * | ⚙ [PreContractCall join point](/develop/reference/aspect-lib/tx-level-aspect/pre-contract-call)
-            * | `evm.Interpreter.Run 1`
-            * | ⚙ [PostContractCall join point](/develop/reference/aspect-lib/tx-level-aspect/post-contract-call)
-            * | ....
-            * |
-      * ⚙ [PostTxExecute join point](/develop/reference/aspect-lib/tx-level-aspect/post-tx-execute)
-      * ⮕ `RefundGas`
+    * | ⚙ [VerifyTx join point](/develop/reference/aspect-lib/tx-level-aspect/verify-tx)
+    * `ApplyTransaction`
+        * ⮕ `ApplyMessageWithConfig`
+            * ⚙ [PreTxExecute join point](/develop/reference/aspect-lib/tx-level-aspect/pre-tx-execute)
+            * ⮕ `evm.Call`
+                * ⮕ `loop opCodes`
+                    * | ⚙ [PreContractCall join point](/develop/reference/aspect-lib/tx-level-aspect/pre-contract-call)
+                    * | `evm.Interpreter.Run 0`
+                    * |
+                                            ⚙ [PostContractCall join point](/develop/reference/aspect-lib/tx-level-aspect/post-contract-call)
+                        * |
+                        * |
+                          ⚙ [PreContractCall join point](/develop/reference/aspect-lib/tx-level-aspect/pre-contract-call)
+                        * | `evm.Interpreter.Run 1`
+                        * |
+                                                    ⚙ [PostContractCall join point](/develop/reference/aspect-lib/tx-level-aspect/post-contract-call)
+                          * | ....
+                          * |
+            * ⚙ [PostTxExecute join point](/develop/reference/aspect-lib/tx-level-aspect/post-tx-execute)
+            * ⮕ `RefundGas`
 
 ## How to Create a Transaction-Level Aspect
 
-A complete aspect should include several components. Firstly, create your class as an implementation of the aspect. Then, import and inherit based on the join point you want to implement into your aspect, and fill in your own logic to implement these functions. The IsOwner method, serving as the permission management part of your aspect, must be implemented. Next, register your aspect class with aspect-libs. Finally, your code should include the imports and exports used by aspect-runtime, as well as the components that your aspect must contain.
+A complete aspect should include several components. Firstly, create your class as an implementation of the aspect.
+Then, import and inherit based on the join point you want to implement into your aspect, and fill in your own logic to
+implement these functions. The IsOwner method, serving as the permission management part of your aspect, must be
+implemented. Next, register your aspect class with aspect-libs. Finally, your code should include the imports and
+exports used by aspect-runtime, as well as the components that your aspect must contain.
 
 For the given code snippet, where MyAspect is my aspect class:
 
 1. Mandatory implementations include:
+
 <!-- @formatter:off -->
 ```typescript
 import { entryPoint, execute, allocate } from "@artela/aspect-libs";
@@ -60,6 +68,7 @@ export { execute, allocate }
 <!-- @formatter:on -->
 
 2. Optional implementations may include, for example, if you want to implement join point `preTxExecute`
+
 <!-- @formatter:off -->
 ```typescript
 import { PreTxExecuteInput, IPreTxExecuteJP } from "@artela/aspect-libs";
@@ -77,102 +86,114 @@ A complete example is as follows.
 ```typescript
 
 import {
-    entryPoint,
-    execute,
-    allocate,
+  entryPoint,
+  execute,
+  allocate,
 
-    TxVerifyInput,
-    PreTxExecuteInput,
-    PreContractCallInput,
-    PostContractCallInput,
-    PostTxExecuteInput,
+  TxVerifyInput,
+  PreTxExecuteInput,
+  PreContractCallInput,
+  PostContractCallInput,
+  PostTxExecuteInput,
+  OperationInput,
 
-    ITransactionVerifier,
-    IPreTxExecuteJP,
-    IPreContractCallJP,
-    IPostContractCallJP,
-    IPostTxExecuteJP,
+  ITransactionVerifier,
+  IPreTxExecuteJP,
+  IPreContractCallJP,
+  IPostContractCallJP,
+  IPostTxExecuteJP,
+  IAspectOperation,
 } from "@artela/aspect-libs";
 
-export class MyAspect implements
-    ITransactionVerifier,
-    IPreTxExecuteJP,
-    IPreContractCallJP,
-    IPostContractCallJP,
-    IPostTxExecuteJP {
+class MyAspect implements ITransactionVerifier,
+        IPreTxExecuteJP,
+        IPreContractCallJP,
+        IPostContractCallJP,
+        IPostTxExecuteJP,
+        IAspectOperation {
 
-    //****************************
-    // Optional Methods
-    //****************************
+  //****************************
+  // Optional Methods
+  //****************************
 
-    /**
-     * verifyTx is a join-point which will be invoked in both check mode and deliver mode.
-     * This method is optional; remove ITransactionVerifier if you do not want to include this functionality.
-     * This method is executed only for customized verification transactions.
-     *
-     * @param input Input of the given join-point
-     * @return a 20-byte address
-     */
-    verifyTx(input: TxVerifyInput): Uint8Array {
-        return new Uint8Array(20);
-    }
+  /**
+   * verifyTx is a join-point which will be invoked in both check mode and deliver mode.
+   * This method is optional; remove ITransactionVerifier if you do not want to include this functionality.
+   * This method is executed only for customized verification transactions.
+   *
+   * @param input Input of the given join-point
+   * @return a 20-byte address
+   */
+  verifyTx(input: TxVerifyInput): Uint8Array {
+    return new Uint8Array(20);
+  }
 
-    /**
-     * preTxExecute is a join-point that gets invoked before the execution of a transaction.
-     * This method is optional; remove IPreTxExecuteJP if you do not want to include this functionality.
-     *
-     * @param input Input of the given join-point
-     * @return void
-     */
-    preTxExecute(input: PreTxExecuteInput): void {
-    }
+  /**
+   * preTxExecute is a join-point that gets invoked before the execution of a transaction.
+   * This method is optional; remove IPreTxExecuteJP if you do not want to include this functionality.
+   *
+   * @param input Input of the given join-point
+   * @return void
+   */
+  preTxExecute(input: PreTxExecuteInput): void {
+  }
 
-    /**
-     * preContractCall is a join-point that is invoked before the execution of a contract call.
-     * This method is optional; remove IPreContractCallJP if you do not want to include this functionality.
-     *
-     * @param input Input of the given join-point
-     * @return void
-     */
-    preContractCall(input: PreContractCallInput): void {
-    }
+  /**
+   * preContractCall is a join-point that is invoked before the execution of a contract call.
+   * This method is optional; remove IPreContractCallJP if you do not want to include this functionality.
+   *
+   * @param input Input of the given join-point
+   * @return void
+   */
+  preContractCall(input: PreContractCallInput): void {
+  }
 
-    /**
-    * postContractCall is a join-point that gets invoked after the completion of a contract call.
-    * This method is optional; remove IPostContractCallJP if you do not want to include this functionality.
-    *
-    * @param input Input of the given join-point
-    * @return void
-    */
-    postContractCall(input: PostContractCallInput): void {
-    }
+  /**
+   * postContractCall is a join-point that gets invoked after the completion of a contract call.
+   * This method is optional; remove IPostContractCallJP if you do not want to include this functionality.
+   *
+   * @param input Input of the given join-point
+   * @return void
+   */
+  postContractCall(input: PostContractCallInput): void {
+  }
 
-    /**
-     * postTxExecute is a join-point that gets invoked when the transaction execution is completed, and the state is not yet committed.
-     * This method is optional; remove IPostTxExecuteJP if you do not want to include this functionality.
-     *
-     * @param input Input of the given join-point
-     * @return void
-     */
-    postTxExecute(input: PostTxExecuteInput): void {
-    }
+  /**
+   * postTxExecute is a join-point that gets invoked when the transaction execution is completed, and the state is not yet committed.
+   * This method is optional; remove IPostTxExecuteJP if you do not want to include this functionality.
+   *
+   * @param input Input of the given join-point
+   * @return void
+   */
+  postTxExecute(input: PostTxExecuteInput): void {
+  }
 
+  /**
+   * operation is used to execute the logics within the Aspect.
+   *
+   * @param input input data for the operation.
+   * @return the data of the operation output.
+   */
+  operation(input: OperationInput): Uint8Array {
 
-    //****************************
-    // Required Methods
-    //****************************
+    return new Uint8Array(10);
+  }
 
-    /**
-     * isOwner is the governance account implemented by the Aspect.
-     * When any governance operation, including upgrade, config, or destroy, is performed, the isOwner method is invoked to check against the initiator's account.
-     * This ensures that the initiator has the necessary permission.
-     *
-     * @param sender Address of the operation initiator
-     * @return True if the check is successful, false if the check fails
-     */
-    isOwner(sender: Uint8Array): bool {
-        return true;
-    }
+  //****************************
+  // Required Methods
+  //****************************
+
+  /**
+   * isOwner is the governance account implemented by the Aspect.
+   * When any governance operation, including upgrade, config, or destroy, is performed, the isOwner method is invoked to check against the initiator's account.
+   * This ensures that the initiator has the necessary permission.
+   *
+   * @param sender Address of the operation initiator
+   * @return True if the check is successful, false if the check fails
+   */
+  isOwner(sender: Uint8Array): bool {
+    return true;
+  }
 
 }
 
@@ -181,37 +202,52 @@ const aspect = new MyAspect()
 entryPoint.setAspect(aspect)
 
 // Export lib methods for aspect-runtime
-export { execute, allocate }
+export {execute, allocate}
 
 ```
 <!-- @formatter:on -->
 
 ## Join Point Description
 
-Next, we will provide a detailed description of each method in the IAspectTransaction interface. You can click on the links associated with each method name to access more detailed information. It is recommended to have a prior understanding of [the concept of Joinpoints](/develop/core-concepts/join-point).
+Next, we will provide a detailed description of each method in the IAspectTransaction interface. You can click on the
+links associated with each method name to access more detailed information. It is recommended to have a prior
+understanding of [the concept of Joinpoints](/develop/core-concepts/join-point).
 
 1. IsOwner
 
 > It is the governance account implemented by the Aspect, when any of the governance operation (
+>
 including [bind](/develop/core-concepts/lifecycle#binding), [unbinding](/develop/core-concepts/lifecycle#unbinding), ...)
-is made, isOwner method will be invoked to check against the initiator's account to make sure it has the permission.
+> is made, isOwner method will be invoked to check against the initiator's account to make sure it has the permission.
 
-2. [VerifyTx](/develop/reference/aspect-lib/verify-aspect)
+2. [VerifyTx](/develop/reference/aspect-lib/join-points/verify-aspect)
 
-> Aspect can provide transaction verification service when bound to certain dApp and EoA. If an Aspect has been bound to certain dApp and EoA as a transaction verifier, instead of doing the legacy secp256k1 signature verification, Aspect will replace it with the customized verification logic implemented in the verifyTx method.
+> Aspect can provide transaction verification service when bound to certain dApp and EoA. If an Aspect has been bound to
+> certain dApp and EoA as a transaction verifier, instead of doing the legacy secp256k1 signature verification, Aspect
+> will replace it with the customized verification logic implemented in the verifyTx method.
 
-3. [PreTxExecute](/develop/reference/aspect-lib/tx-level-aspect/pre-tx-execute)
+3. [PreTxExecute](/develop/reference/aspect-lib/join-points/pre-tx-execute)
 
-> Triggered prior to the transaction execution. At this stage, the account state remains pristine, allowing Aspect to preload information as necessary.
+> Triggered prior to the transaction execution. At this stage, the account state remains pristine, allowing Aspect to
+> preload information as necessary.
 
-4. [PreContractCall](/develop/reference/aspect-lib/tx-level-aspect/pre-contract-call)
+4. [PreContractCall](/develop/reference/aspect-lib/join-points/pre-contract-call)
 
-> Triggered before the execution of the cross-contract call. For example, during a TX execution, Uniswap contract calls into Maker contract, the Aspect will be executed.
+> Triggered before the execution of the cross-contract call. For example, during a TX execution, Uniswap contract calls
+> into Maker contract, the Aspect will be executed.
 
-5. [PostContractCall](/develop/reference/aspect-lib/tx-level-aspect/post-contract-call)
+5. [PostContractCall](/develop/reference/aspect-lib/join-points/post-contract-call)
 
-> Triggered after the cross-contract call is executed. The Aspect can then inspect the post-call state of the contract and make subsequent execution decisions.
+> Triggered after the cross-contract call is executed. The Aspect can then inspect the post-call state of the contract
+> and make subsequent execution decisions.
 
-6. [PostTxExecute](/develop/reference/aspect-lib/tx-level-aspect/post-tx-execute)
+6. [PostTxExecute](/develop/reference/aspect-lib/join-points/post-tx-execute)
 
-> Activated once the transaction has been executed and the account states have been finalized. Subsequently, Aspect can conduct a comprehensive review of the final execution state.
+> Activated once the transaction has been executed and the account states have been finalized. Subsequently, Aspect can
+> conduct a comprehensive review of the final execution state.
+
+7. [Operation](/develop/reference/aspect-lib/operation)
+
+> Operation is a special interface. Unlike other join points, which are triggered during transaction execution, this
+> interface can be called directly by an operation transaction signed by EoA. The operation transaction will trigger the
+> execution of the Aspect.

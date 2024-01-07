@@ -42,7 +42,7 @@ yarn add --dev @artela/aspect-libs    # Yarn
 * [PostContractCall](/develop/reference/aspect-lib/tx-level-aspect/post-contract-call)
 * [PostTxExecute](/develop/reference/aspect-lib/tx-level-aspect/post-tx-execute)
 
-### Aspect Operation
+### Operation Interface
 * [Operation](/develop/reference/aspect-lib/operation-aspect)
 
 ### API references
@@ -51,7 +51,6 @@ yarn add --dev @artela/aspect-libs    # Yarn
 * [sys.aspect](/develop/reference/aspect-lib/components/sys-aspect)
 * [ethereum](/develop/reference/aspect-lib/components/ethereum)
 * [helper](/develop/reference/aspect-lib/components/helper)
-* [context-keys](/develop/reference/aspect-lib/components/context-keys)
 
 ## Versions
 
