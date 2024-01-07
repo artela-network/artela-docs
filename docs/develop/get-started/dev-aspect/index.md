@@ -118,7 +118,7 @@ Update the `project.config.json` in the root directory with the appropriate netw
 
 ```json
 {
-  "node": "https://testnet-rpc1.artela.network"
+  "node": "https://betanet-rpc1.artela.network"
 }
 ```
 

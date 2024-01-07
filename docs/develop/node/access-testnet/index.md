@@ -1,16 +1,14 @@
 
-# TestNet Info
+# BetaNet Info
 
-**Option 1: Connect to Artela Testnet via RPC**
+**Option 1: Connect to Artela BetaNet via RPC**
 
 You can access the JSON-RPC port service through these URLs:
 
-    https://testnet-rpc1.artela.network
-    https://testnet-rpc2.artela.network
-    https://testnet-rpc3.artela.network
-    https://testnet-rpc4.artela.network
+    https://betanet-rpc1.artela.network
+    https://betanet-rpc2.artela.network
 
-**Option 2: Establish Your Own Local Private Testnet**
+**Option 2: Establish Your Own Local Private Network**
 
 For detailed steps, see [Run a Local Node](./full-node-setup).
 
@@ -18,7 +16,7 @@ Once you've initiated the node, connect to the JSON-RPC port service here:
 
     http://127.0.0.1:8545
 
-## Public Information on Testnet
+## Public Information on BetaNet
 
 ### 1. Genesis
 
@@ -38,7 +36,7 @@ ff30114dc4ac73b25723e9f3d41bbe1bdd4242ee@47.251.14.108:26656
 - **Block Height**: 250870
 - **Block Hash**: 58e0dba02baf99c5b4219b41f584de420844fe3e0ecb82b6e46364199e09b8ed
 
-> ⚠️Note: Pick up the latest block and height from the <https://testnet-scan.artela.network/blocks> as your trusted block and height.
+> ⚠️Note: Pick up the latest block and height from the <https://betanet-scan.artela.network> as your trusted block and height.
 >
 
 ### 4. RPC servers

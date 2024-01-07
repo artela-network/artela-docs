@@ -128,7 +128,7 @@ npm run contract:build
 Update the `project.config.json` in the root directory with the appropriate network configuration:
 ```json
 {
-  "node": "https://testnet-rpc1.artela.network"
+  "node": "https://betanet-rpc1.artela.network"
 }
 ```
 :::note 💡

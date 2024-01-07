@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Setup a Local Devnet
 
-This document aims to guide you in compiling Artela code, configuring, and generating a testnet setup consisting of a minimum of four validators. Subsequently, we will outline how to deploy these configuration and data files to four individual machines.
+This document aims to guide you in compiling Artela code, configuring, and generating a betanet setup consisting of a minimum of four validators. Subsequently, we will outline how to deploy these configuration and data files to four individual machines.
 
 > Note: open 26656 and 26657 out port for all machines.
 >
@@ -44,9 +44,9 @@ make clean && make
 make install
 ```
 
-## 3. You can either start the testnet in docker or in 4 devices
+## 3. You can either start the betanet in docker or in 4 devices
 
-### Option 1: Start 4-validator testnet in docker
+### Option 1: Start 4-validator betanet in docker
 
 ### 1). Prepare your docker and docker-compose (ubuntu/debian)
 
@@ -67,49 +67,49 @@ docker run hello-world
 sudo apt install docker-compose
 ```
 
-### 2). Start testnet
+### 2). Start betanet
 
 ```bash
 
 cd artela # in your artela root path
-make create-testnet
+make create-betanet
 ```
 
 ![output](./img/1.png)
 
-- More `make` options about testnet:
+- More `make` options about betanet:
 
 | Command | Description |
 | --- | --- |
-| build-testnet | Build Docker images for the testnet and create a configuration for 4-validator nodes. |
-| create-testnet | Remove a previously built testnet, build it again using build-testnet, and start Docker containers. |
-| stop-testnet | Stop the running Docker containers for the testnet. |
-| start-testnet | Start the previously stopped Docker containers for the testnet. |
-| remove-testnet | Stop the Docker containers and remove all components created by the build-testnet command. |
+| build-betanet | Build Docker images for the betanet and create a configuration for 4-validator nodes. |
+| create-betanet | Remove a previously built betanet, build it again using build-betanet, and start Docker containers. |
+| stop-betanet | Stop the running Docker containers for the betanet. |
+| start-betanet | Start the previously stopped Docker containers for the betanet. |
+| remove-betanet | Stop the Docker containers and remove all components created by the build-betanet command. |
 
 ### 3). View the log of Artela node
 
-The log is saved in the `./_testnet/node0/artelad/node.log`, to monitor the log by
+The log is saved in the `./_betanet/node0/artelad/node.log`, to monitor the log by
 
 ```bash
-tail -f ./_testnet/node0/artelad/node.log
+tail -f ./_betanet/node0/artelad/node.log
 ```
 
 Log of other nodes in
 
-`./_testnet/node1/artelad/node.log`
+`./_betanet/node1/artelad/node.log`
 
-`./_testnet/node2/artelad/node.log`
+`./_betanet/node2/artelad/node.log`
 
-`./_testnet/node3/artelad/node.log`
+`./_betanet/node3/artelad/node.log`
 
-### Option 2: start 4-validator testnet in your device
+### Option 2: start 4-validator betanet in your device
 
 ### 1). Generate 4-validator network configuration
 
 ```bash
 # in artela root
-./build/artelad testnet init-files --chain-id artela_11820-1 --v 4 --output-dir ./testnet --starting-ip-address 172.16.10.2
+./build/artelad betanet init-files --chain-id artela_11820-1 --v 4 --output-dir ./betanet --starting-ip-address 172.16.10.2
 ```
 
 Configuration:
@@ -136,7 +136,7 @@ Configuration:
 In each node's **`config.toml`**, update the IP addresses of the peers listed under **`persistent_peers`**. You can use the following command for this:
 
 ```bash
-cd testnet
+cd betanet
 sed -i 's/172.16.10.3/<your-device-1-ip>/g' node0/artelad/config/config.toml
 sed -i 's/172.16.10.4/<your-device-2-ip>/g' node0/artelad/config/config.toml
 sed -i 's/172.16.10.5/<your-device-3-ip>/g' node0/artelad/config/config.toml
@@ -157,7 +157,7 @@ sed -i 's/172.16.10.4/<your-device-2-ip>/g' node3/artelad/config/config.toml
 ### 3). Update EVM version config
 
 ```bash
-# in artela/testnet folder
+# in artela/betanet folder
 sed -i 's/"extra_eips": \[\]/"extra_eips": \[3855\]/g' node0/artelad/config/genesis.json
 sed -i 's/"extra_eips": \[\]/"extra_eips": \[3855\]/g' node1/artelad/config/genesis.json
 sed -i 's/"extra_eips": \[\]/"extra_eips": \[3855\]/g' node2/artelad/config/genesis.json
@@ -169,10 +169,10 @@ sed -i 's/"extra_eips": \[\]/"extra_eips": \[3855\]/g' node3/artelad/config/gene
 Copy each of the node configuretions in `artela/testenet/` to the device.
 
 ```bash
-scp ./testnet/node0/artelad/* user@your-device-0:~/.artelad/
-scp ./testnet/node1/artelad/* user@your-device-1:~/.artelad/
-scp ./testnet/node2/artelad/* user@your-device-2:~/.artelad/
-scp ./testnet/node3/artelad/* user@your-device-3:~/.artelad/
+scp ./betanet/node0/artelad/* user@your-device-0:~/.artelad/
+scp ./betanet/node1/artelad/* user@your-device-1:~/.artelad/
+scp ./betanet/node2/artelad/* user@your-device-2:~/.artelad/
+scp ./betanet/node3/artelad/* user@your-device-3:~/.artelad/
 ```
 
 ### 4). Download and install `artelad` in your device
@@ -187,7 +187,7 @@ artelad start --pruning=nothing --log_level debug --minimum-gas-prices=0.0001aar
 
 ## 4. The genesis account
 
-In the process of generating the testnet, each validator node has a corresponding EOA (Externally Owned Account) account with the encryption algorithm `eth_secp256k1`, which is written into the `genesis.json` file. Additionally, `5e21 aartela` have been deposited into each account. The key.info of each account is stored in
+In the process of generating the betanet, each validator node has a corresponding EOA (Externally Owned Account) account with the encryption algorithm `eth_secp256k1`, which is written into the `genesis.json` file. Additionally, `5e21 aartela` have been deposited into each account. The key.info of each account is stored in
 
 `~/.artelad/config/keyring-test/node<validator_number>.json`.
 

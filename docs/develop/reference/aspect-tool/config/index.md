@@ -69,6 +69,6 @@ accordingly):
 
 ```json
 {
-   "node": "https://testnet-rpc1.artela.network"
+   "node": "https://betanet-rpc1.artela.network"
 }
 ```

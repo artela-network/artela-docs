@@ -9,7 +9,7 @@ In this tutorial, we'll walk you through the process of creating and deploying a
 * [Remix](https://remix.ethereum.org/)
 
 
-## 1. Connect MetaMask to Artela Testnet
+## 1. Connect MetaMask to Artela BetaNet
 
 If you're new to MetaMask, follow this guide on [How Add a Custom Network RPC](https://support.metamask.io/hc/en-us/articles/360043227612-How-to-add-a-custom-network-RPC) for detailed instructions.
 
@@ -17,14 +17,14 @@ If you're new to MetaMask, follow this guide on [How Add a Custom Network RPC](h
 2. chick  `Networks` > `Add a network` > `Add a network manually`
 
 ```
-Network Name : artela testnet
-New RPC URL : https://testnet-rpc1.artela.network
-ChainID (optional): 11820
+Network Name : artela betanet
+New RPC URL : https://betanet-rpc1.artela.network
+ChainID (optional): 11822
 Symbol (optional) : ART
-Block Explorer URL (optional): https://testnet-scan.artela.network/
+Block Explorer URL (optional): https://betanet-scan.artela.network/
 ```
 
-For more info about the new RPC URL configuration, refer to [artela testnet](../node/access-testnet).
+For more info about the new RPC URL configuration, refer to [artela betanet](../node/access-betanet).
 
 Ensure all fields are correctly filled:
 
@@ -66,7 +66,7 @@ contract MyCollectible is ERC721 {
 
 ## 4.Remix: Connect to Artela Testnet and Deploy
 
-Ensure the `artela testnet` network is selected on Metamask. Select `Injected Provider - MetaMask` as environment.
+Ensure the `artela betanet` network is selected on Metamask. Select `Injected Provider - MetaMask` as environment.
 
 At Remix, on the left side
 
@@ -79,7 +79,7 @@ At Remix, on the left side
 
 ## 5.Block Explorer
 
-Confirm the successful deployment on Artela Testnet [blockchain explorer](https://testnet-scan.artela.network/) using `transaction hash` in output.
+Confirm the successful deployment on Artela Testnet [blockchain explorer](https://betanet-scan.artela.network/) using `transaction hash` in output.
 
 
 ![img_3.png](img_3.png)
