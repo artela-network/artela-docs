@@ -19,6 +19,5 @@ This library simplifies and enhances Aspect application development, offering to
 * [ethereum](/develop/reference/aspect-lib/components/ethereum)
 > Delivers Ethereum smart contract functionality, along with ABI (Application Binary Interface) handling, encoding/decoding, and utility classes.
 
-* [convert](/develop/reference/aspect-lib/components/convert)
-> Delivers Ethereum smart contract functionality, along with ABI (Application Binary Interface) handling, encoding/decoding, and utility classes.
-
+* [helper](/develop/reference/aspect-lib/components/helper)
+> This Helper provides utility functions for smooth data type conversions, ensuring compatibility and simplifying the management of data transformations in your software application. Whether handling numeric, string, or other data representations, this Helper enhances overall flexibility and interoperability in your codebase.
