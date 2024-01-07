@@ -70,7 +70,7 @@ FLAGS
 
 ## Advanced
 
-* [Aspect Generate](/develop/reference/aspect-tool/advanced/generate)
+* [State Access Wrapper](/develop/reference/aspect-tool/advanced/generate)
 
 ## Versions
 

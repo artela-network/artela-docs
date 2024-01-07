@@ -23,16 +23,6 @@ npm run contract:bind -- --skfile {privateKey-path} \
 > * --gas : like `200000`,(optional,default value `7000000`).
 ---
 
-Specifically, the command will be executed
-
-```shell
-node scripts/bind.cjs
-```
-
-The logic for the create-account command is written in the `scripts/bind.cjs` file, primarily relying on the
-implementation provided by the [@artela/web3](/develop/client/artela-web3.js) API.   
-If needed, you can modify the logic within this file to achieve your specific functionalities.
-
 ## Example
 
 ```shell
@@ -72,3 +62,13 @@ sending signed transaction...
 == aspect bind success ==
 
 ```
+
+## Customize
+
+The logic for the create-account command is written in the `scripts/contract-deploy.cjs` file, primarily relying on the
+implementation provided by the [@artela/web3](/develop/client/artela-web3.js) API.
+
+If needed, you can modify the logic within this file to achieve your specific functionalities.
+
+Furthermore, you can modify the `project.config.json` in the project root folder [to set the network configurations.](/develop/reference/aspect-tool/config)
+

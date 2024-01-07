@@ -24,17 +24,6 @@ You can deploy Aspect using the following command:
 
 ---
 
-Specifically, the command will be executed
-```shell
- npm run aspect:build && node scripts/aspect-deploy.cjs
-```
-The logic for the create-account command is written in the `scripts/aspect-deploy.cjs` file, primarily relying on the
-implementation provided by the [@artela/web3](/develop/client/artela-web3.js) API.   
-If needed, you can modify the logic within this file to achieve your specific functionalities.
-
-Furthermore，you can modify the `project.config.json` in the project root folder [to set the network configurations.](/develop/reference/aspect-tool/guide/config#2network-rpc).
-
-
 ## Example
 
 ```shell
@@ -77,5 +66,12 @@ The current deployment is successful and the receipt for the transaction is prin
   aspectAddress: '0xEf3A9A495A80eA681797A721FD4708dB0e....'
 }
 == deploy aspectID == 0xEf3A9A495A80eA681797A721FD4708dB0e...
-
 ```
+
+## Customize
+
+The logic for the create-account command is written in the `scripts/aspect-deploy.cjs` file, primarily relying on the
+implementation provided by the [@artela/web3](/develop/client/artela-web3.js) API.   
+If needed, you can modify the logic within this file to achieve your specific functionalities.
+
+Furthermore，you can modify the `project.config.json` in the project root folder [to set the network configurations.](/develop/reference/aspect-tool/guide/config#2network-rpc).

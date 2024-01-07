@@ -10,11 +10,6 @@ You can build contract by using the following command:
 ```shell
   npm run contract:build
 ```
-This command relies on `solc`. Specifically, will be executed
-```shell
-  solc -o ./build/contract/ --via-ir --abi --storage-layout --bin ./contracts/*.sol  --overwrite
-```
-Regarding the contract compiler, you can customize the configuration based on your current environment. For detailed information, please refer to the [configuration documentation](/develop/reference/aspect-tool/guide/config#1-contract-compiler).
 
 ## Example
 
@@ -34,3 +29,11 @@ The compiled product is placed in the `build/contract` directory.it will generat
 │   │   └── xxx_storage.json
 
 ```
+
+## Customize
+
+This command relies on `solc`. Specifically, will be executed
+```shell
+  solc -o ./build/contract/ --via-ir --abi --storage-layout --bin ./contracts/*.sol  --overwrite
+```
+Regarding the contract compiler, you can customize the configuration based on your current environment. For detailed information, please refer to the [configuration documentation](/develop/reference/aspect-tool/guide/config#1-contract-compiler).

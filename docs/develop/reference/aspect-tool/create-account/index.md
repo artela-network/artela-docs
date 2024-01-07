@@ -16,17 +16,6 @@ npm run account:create  -- --skfile {file_path}
 > * --skfile : privateKey path for sender. (optional,default value `./privateKey.txt`).
 ---
 
-Specifically, the command will be executed
-
-```shell
-node scripts/create-account.cjs
-```
-
-The logic for the create-account command is written in the `scripts/create-account.cjs` file, primarily relying on the
-implementation provided by the [@artela/web3](/develop/client/artela-web3.js) API.   
-If needed, you can modify the logic within this file to achieve your specific functionalities.
-
-
 ## Example
 ```shell
 ## usage 1: this command will create a blockchain account and generate a private key file named 'privateKey.txt' in your project dir
@@ -48,3 +37,9 @@ If the command is executed successfully, the following log will be printed and a
 
 address:  0x773B8Da8De01C9a35DCb74E4C204...
 ```
+
+## Customize
+
+The logic for the create-account command is written in the `scripts/create-account.cjs` file, primarily relying on the
+implementation provided by the [@artela/web3](/develop/client/artela-web3.js) API.   
+If needed, you can modify the logic within this file to achieve your specific functionalities.

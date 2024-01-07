@@ -25,19 +25,6 @@ options：
 > * --gas : like `200000`,(optional,default value `7000000`).
 ---
 
-Specifically, the command will be executed
-```shell
-node scripts/contract-call.cjs
-```
-
-The logic for the create-account command is written in the `scripts/contract-call.cjs` file, primarily relying on the
-implementation provided by the [@artela/web3](/develop/client/artela-web3.js) API.   
-If needed, you can modify the logic within this file to achieve your specific functionalities.
-
-Furthermore，you can modify the `project.config.json` in the project root
-folder [to set the network configurations.](/develop/reference/aspect-tool/guide/config#2network-rpc).
-
-
 ## Example
 
 ```shell
@@ -69,3 +56,11 @@ from address:  0x554EB2f94386fdCe289b8323a0F5d9d7...
 ==== reuslt=== 
 {reuslt data}
 ```
+
+## Customize
+
+The logic for the create-account command is written in the `scripts/contract-call.cjs` file, primarily relying on the
+implementation provided by the [@artela/web3](/develop/client/artela-web3.js) API.   
+If needed, you can modify the logic within this file to achieve your specific functionalities.
+
+Furthermore，you can modify the `project.config.json` in the project root folder [to set the network configurations.](/develop/reference/aspect-tool/guide/config#2network-rpc).
