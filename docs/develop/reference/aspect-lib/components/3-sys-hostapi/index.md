@@ -41,8 +41,7 @@ public get(key: string): Uint8Array
 
 <!-- @formatter:off -->
 ```typescript
-  import {EthTransaction,
-          EthMessage,
+  import {
           sys
   } from "@artela/aspect-libs";
   import { Protobuf } from "as-proto/assembly/Protobuf";

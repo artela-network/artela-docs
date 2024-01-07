@@ -16,10 +16,17 @@ contracts, cryptographic functions, invoking system calls and more.
 
 The aspect-libs library provides APIs to access the Artela Node store, blockchain data, smart contracts, cryptographic
 functions and more. To use it, all you have to do is add a dependency on it:
-```sh
+
+* If you're using npm install
+```shell
 npm install --dev @artela/aspect-libs # NPM
+
+```
+* If you're using yarn install
+```shell
 yarn add --dev @artela/aspect-libs    # Yarn
 ```
+
 
 ## Usage
 ---

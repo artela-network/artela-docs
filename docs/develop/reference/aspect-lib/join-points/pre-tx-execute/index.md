@@ -21,11 +21,26 @@ The following represents the call graph:
 
 At this stage, the account state remains pristine, enabling Aspect to preload information as needed.
 
+## Interface
+
+```
+interface IPreTxExecuteJP extends IAspectBase {
+  preTxExecute(input: PreTxExecuteInput): void;
+}
+```
+* **Parameter**
+  * input: PreTxExecuteInput; The base layer will deliver the PreTxExecuteInput object to Aspect in this join point.
+    - `input.block.number`: current block number.
+    - `input.tx.from`: caller of the transaction.
+    - `input.tx.to`: to address of the transaction.
+    - `input.tx.hash`: hash of the transaction.
+* **Returns**
+  * void; If Aspect returns normally, the transaction will continue to execute. If Aspect calls `sys.revert` to revert the transaction, the base layer will revert the transaction.
+
 ## Example
 
 <!-- @formatter:off -->
 ```typescript
-
 /**
  * preTxExecute is a join-point that gets invoked before the execution of a transaction.
  *
@@ -48,7 +63,7 @@ preTxExecute(input: PreTxExecuteInput): void {
 ```
 <!-- @formatter:on -->
 
-## Programming
+## Programming Guide
 
 There are two programming modes that can be used in this method:
 
@@ -58,39 +73,12 @@ There are two programming modes that can be used in this method:
 
 **Important point**: Since the join point is in the EVM execution process, using [sys.revert()](/develop/reference/aspect-lib/components/sys#1-revert), [sys.require()](/develop/reference/aspect-lib/components/sys#3-require) in this join point will actually revert the transaction.
 
-## How to use `input`
 
-Explore the available information from the class diagram below.
-
-![class.svg](class.svg)
-
-**Parameters:**
-- `input.block.number`: current block number.
-- `input.tx.from`: caller of the transaction.
-- `input.tx.to`: to address of the transaction.
-- `input.tx.hash`: hash of the transaction.
-
-Utilize the fields as indicated below:
-
-<!-- @formatter:off -->
-```typescript
-
-let blockNumer = input.block!.number;
-let txFrom = input.tx!.from;
-let txTo = input.tx!.to;
-let txHash = input.tx!.hash;
-
-// use blockNumber, txFrom, txTo, txHash
-...
-
-```
-<!-- @formatter:on -->
-
-## How to use APIs
+## How APIs
 
 For a comprehensive overview of all APIs and their usage see [API References](/develop/reference/aspect-lib/components/overview).
 
-Each breakpoint has access to different host APIs, and the host APIs available within the current breakpoint can be found at the following table.
+Each join-point has access to different host APIs, and the host APIs available within the current breakpoint can be found at the following table.
 
 | System APIs                                                                                                                 | Availability | Description                                                                                                                                              |
 |-----------------------------------------------------------------------------------------------------------------------------|--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|

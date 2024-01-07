@@ -26,6 +26,28 @@ This join point will be invoked before the contract call is executed. Below is  
 
 At this stage, the account state remains pristine, allowing Aspect to preload information as necessary.
 
+
+## Interface
+
+```
+interface IPreContractCallJP extends IAspectBase {
+  preContractCall(input: PreContractCallInput): void;
+}
+```
+* **Parameter**
+  * input: PostContractCallInput; The base layer will deliver the PostContractCallInput object to Aspect in this join point.
+    - `input.block.number`: current block number.
+    - `input.call.from`: caller of the contract call.
+    - `input.call.to`: to address of the contract call.
+    - `input.call.data`: input bytes of the contract call.
+    - `input.call.gas`: gas limit of the contract call.
+    - `input.call.index`: index of the contract call.
+    - `input.call.value`: transfer value of the contract call.
+
+* **Returns**
+  * void; If Aspect returns normally, the transaction will continue to execute. If Aspect calls `sys.revert` to revert the transaction, the base layer will revert the transaction.
+
+
 ## Example
 
 <!-- @formatter:off -->
@@ -37,7 +59,7 @@ At this stage, the account state remains pristine, allowing Aspect to preload in
  * @param input Input of the given join-point
  * @return void
  */
-preContractCall(input: preContractCallInput): void {
+preContractCall(input: PreContractCallInput): void {
   // call to a method 'save', with value of 100
   let callData = ethereum.abiEncode('save', [
     ethereum.Number.fromU32(100, 32)
@@ -60,7 +82,7 @@ preContractCall(input: preContractCallInput): void {
 ```
 <!-- @formatter:on -->
 
-## Programming
+## Programming Guide
 
 There are two programming modes that can be used in this method:
 
@@ -70,45 +92,11 @@ There are two programming modes that can be used in this method:
 
 **Important point**: Since the join point is in the EVM execution process, using [sys.revert()](/develop/reference/aspect-lib/components/sys#1-revert), [sys.require()](/develop/reference/aspect-lib/components/sys#3-require) in this join point will actually revert the transaction.
 
-## How to use `input`
-
-Explore the available information from the class diagram below.
-
-![class.svg](class.svg)
-
-**Parameters:**
-- `input.block.number`: current block number.
-- `input.call.from`: caller of the contract call.
-- `input.call.to`: to address of the contract call.
-- `input.call.data`: input bytes of the contract call.
-- `input.call.gas`: gas limit of the contract call.
-- `input.call.index`: index of the contract call.
-- `input.call.value`: transfer value of the contract call.
-
-Utilize the fields as indicated below:
-
-<!-- @formatter:off -->
-```typescript
-
-let blockNumer = input.block!.number
-let from = input.call!.from
-let to = input.call!.to
-let data = input.call!.data
-let gas = input.call!.gas  
-let index = input.call!.index
-let value = input.call!.value
-
-// use the variables
-...
-
-```
-<!-- @formatter:on -->
-
-## How to use APIs
+## Host APIs
 
 For a comprehensive overview of all APIs and their usage see [API References](/develop/reference/aspect-lib/components/overview).
 
-Each breakpoint has access to different host APIs, and the host APIs available within the current breakpoint can be found at the following table.
+Each join-point has access to different host APIs, and the host APIs available within the current breakpoint can be found at the following table.
 
 | System APIs                                                                                                                 | Availability | Description                                                                                                                                              |
 |-----------------------------------------------------------------------------------------------------------------------------|--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|

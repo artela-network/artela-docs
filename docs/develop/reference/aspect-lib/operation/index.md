@@ -2,17 +2,38 @@
 sidebar_position: 2
 ---
 
-# Operation Aspect
+# Operation Interface
 
 ## Introduction
 
-The Operation Aspect, akin to a smart contract, exclusively responds to transactions initiated by externally owned
-accounts (EOAs). This includes transactions triggered by contract interactions. Notably, these Join Points are also
-activated in the case of cross-contract interactions.
+Operation is a special interface. Unlike other join points, which are triggered during transaction execution, this
+interface can be called directly by an operation transaction signed by EoA. The operation transaction will trigger the
+execution of the Aspect.
 
 ![op.png](op.png)
 
-## How to Create
+In this interface execution, Aspect is only able to access the Aspect state. Runtime context accessing is unsupported due to it isn't triggered by the transaction lifecycle join point.
+
+You can use this interface to manage the Aspect state. For example, there is a whitelist Aspect that will be triggered pre-transaction execution; you can insert and update the whitelist by operation interface.
+
+## Interface
+
+```
+interface IAspectOperation {
+  operation(input: OperationInput): Uint8Array;
+}
+```
+
+* **Parameter**
+    * input: OperationInput; The base layer will deliver the OperationInput object to Aspect in this join point.
+        - `input.block.number`: current block number.
+        - `input.tx.from`: caller of the transaction.
+        - `input.tx.to`: to address of the transaction.
+        - `input.tx.hash`: hash of the transaction.
+* **Returns**
+    * Uint8Array; operation result.
+
+## Example
 
 To implement a Operation Aspect, you can implement the `IAspectOperation` interface
 
@@ -46,52 +67,25 @@ entryPoint.setOperationAspect(aspect);
 // 3.must export it
 export {execute, allocate};
 
-
 ```
 
-## Programming
+## Programming Guide
 
 There are two programming modes that can be used in this method:
 
-1. By utilizing the 'input' input argument, it provides essential insights into transactions and block processing. see [how to use input](#how-to-use-input).
+1. By utilizing the 'input' input argument, it provides essential insights into transactions and block processing.
+   see [how to use input](#how-to-use-input).
 
-2. Using the 'sys' namespace, it provides both hight level API and low-level API access to system data and contextual information generated during blockchain runtime, including details about the environment, blocks, transactions, and utility classes such as crypto and ABI encoding/decoding. see [more details](#how-to-use-apis).
+2. Using the 'sys' namespace, it provides both hight level API and low-level API access to system data and contextual
+   information generated during blockchain runtime, including details about the environment, blocks, transactions, and
+   utility classes such as crypto and ABI encoding/decoding. see [more details](#how-to-use-apis).
 
-## How to use input
-
-Explore the available information from the class diagram below.
-
-![class.svg](class.svg)
-
-**Parameters:**
-- `input.block.number`: current block number.
-- `input.tx.from`: caller of the transaction.
-- `input.tx.to`: to address of the transaction.
-- `input.tx.hash`: hash of the transaction.
-
-Utilize the fields as indicated below:
-
-<!-- @formatter:off -->
-```typescript
-
-let blockNumer = input.block!.number;
-let txFrom = input.tx!.from;
-let txTo = input.tx!.to;
-let txHash = input.tx!.hash;
-
-// use blockNumber, txFrom, txTo, txHash
-...
-
-```
-<!-- @formatter:on -->
-
-
-## How to use APIs
+## Host APIs
 
 For a comprehensive overview of all APIs and their usage
 see [API References](/develop/reference/aspect-lib/components/overview).
 
-Each breakpoint has access to different host APIs, and the host APIs available within the current breakpoint can be
+Each join-point has access to different host APIs, and the host APIs available within the current breakpoint can be
 found at the following table.
 
 | System APIs                                                                                                                 | Availability | Description                                                                                                                                              |
@@ -123,7 +117,6 @@ found at the following table.
 | [sys.hostApi.evmCall.staticCall](/develop/reference/aspect-lib/components/sys-hostapi#1-staticcall)                         | ✅            | Creates a static call and executes it immediately.                                                                                                       |
 | [sys.hostApi.trace.queryCallTree](/develop/reference/aspect-lib/components/sys-hostapi#2-querycalltree )                    | ❌            | Returns the call tree of EVM execution.                                                                                                                  |
 | [sys.hostApi.trace.queryStateChange](/develop/reference/aspect-lib/components/sys-hostapi#1-querystatechange)               | ❌            | Returns the state change in EVM execution for the specified key.                                                                                         |
-
 
 ## Runtime context
 

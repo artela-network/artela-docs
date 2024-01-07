@@ -24,6 +24,28 @@ This join point will be triggered after the cross-contract call is executed. Bel
 At this stage, the join point has the capability to examine the post-call state of the contract, enabling it to make
 informed decisions for subsequent execution.
 
+
+## Interface
+
+```
+interface IPostContractCallJP extends IAspectBase {
+  postContractCall(input: PostContractCallInput): void;
+}
+```
+* **Parameter**
+    * input: PostContractCallInput; The base layer will deliver the PostContractCallInput object to Aspect in this join point.
+      - `input.block.number`: current block number.
+      - `input.call.from`: caller of the contract call.
+      - `input.call.to`: to address of the contract call.
+      - `input.call.data`: input bytes of the contract call.
+      - `input.call.gas`: gas limit of the contract call.
+      - `input.call.index`: index of the contract call.
+      - `input.call.value`: transfer value of the contract call.
+      - `input.call.ret`: return value of the contract call.
+      - `input.call.error`: error message of the contract call.
+* **Returns**
+    * void; If Aspect returns normally, the transaction will continue to execute. If Aspect calls `sys.revert` to revert the transaction, the base layer will revert the transaction.
+
 ## Example
 
 <!-- @formatter:off -->
@@ -59,7 +81,7 @@ postContractCall(input: postContractCallInput): void {
 ```
 <!-- @formatter:on -->
 
-## Programming
+## Programming Guide
 
 There are two programming modes that can be used in this method:
 
@@ -74,51 +96,12 @@ There are two programming modes that can be used in this method:
 using [sys.revert()](/develop/reference/aspect-lib/components/sys#1-revert), [sys.require()](/develop/reference/aspect-lib/components/sys#3-require)
 in this join point will actually revert the transaction.
 
-## How to use `input`
-
-Explore the available information from the class diagram below.
-
-![class.svg](class.svg)
-
-**Parameters:**
-
-- `input.block.number`: current block number.
-- `input.call.from`: caller of the contract call.
-- `input.call.to`: to address of the contract call.
-- `input.call.data`: input bytes of the contract call.
-- `input.call.gas`: gas limit of the contract call.
-- `input.call.index`: index of the contract call.
-- `input.call.value`: transfer value of the contract call.
-- `input.call.ret`: return value of the contract call.
-- `input.call.error`: error message of the contract call.
-
-Utilize the fields as indicated below:
-
-<!-- @formatter:off -->
-```typescript
-
-let blockNumer = input.block!.number
-let from = input.call!.from
-let to = input.call!.to
-let data = input.call!.data
-let gas = input.call!.gas  
-let index = input.call!.index
-let value = input.call!.value
-let ret = input.call!.ret
-let error = input.call?.error
-
-// use the variables
-...
-
-```
-<!-- @formatter:on -->
-
-## How to use APIs
+## Host APIs
 
 For a comprehensive overview of all APIs and their usage
 see [API References](/develop/reference/aspect-lib/components/overview).
 
-Each breakpoint has access to different host APIs, and the host APIs available within the current breakpoint can be
+Each join-point has access to different host APIs, and the host APIs available within the current breakpoint can be
 found at the following table.
 
 | System APIs                                                                                                                 | Availability | Description                                                                                                                                              |

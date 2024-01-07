@@ -12,7 +12,23 @@ will replace it with the customized verification logic implemented in the `verif
 
 ![verify.svg](verify.svg)
 
-## How to Create
+## Interface
+
+```
+interface ITransactionVerifier extends IAspectBase {
+  verifyTx(input: TxVerifyInput): Uint8Array;
+}
+```
+* **Parameter**
+   * input: TxVerifyInput; The base layer will deliver the TxVerifyInput object to Aspect in this join point.
+     - `input.block.number`: current block number.
+     - `input.tx.from`: caller of the transaction.
+     - `input.tx.to`: to address of the transaction.
+     - `input.tx.hash`: hash of the transaction.
+* **Returns**
+   * Uint8Array; verified account address. 
+
+## Example
 
 To function as a transaction verifier Aspect, an Aspect must implement the `ITransactionVerifier` interface. This
 interface comprises a single method, verifyTx, which is invoked for transactions sent from an EoA without a valid ECDSA
@@ -51,7 +67,7 @@ entryPoint.setAspect(aspect);
 export {execute, allocate};
 ```
 
-## Programming
+## Programming Guide
 
 There are two programming modes that can be used in this method:
 
@@ -62,41 +78,12 @@ There are two programming modes that can be used in this method:
    information generated during blockchain runtime, including details about the environment, blocks, transactions, and
    utility classes such as crypto and ABI encoding/decoding. see [more details](#how-to-use-apis).
 
-## How to use input
-
-Explore the available information from the class diagram below.
-
-![class.svg](class.svg)
-
-**Parameters:**
-
-- `input.block.number`: current block number.
-- `input.tx.from`: caller of the transaction.
-- `input.tx.to`: to address of the transaction.
-- `input.tx.hash`: hash of the transaction.
-
-Utilize the fields as indicated below:
-
-<!-- @formatter:off -->
-```typescript
-
-let blockNumer = input.block!.number;
-let txFrom = input.tx!.from;
-let txTo = input.tx!.to;
-let txHash = input.tx!.hash;
-
-// use blockNumber, txFrom, txTo, txHash
-...
-
-```
-<!-- @formatter:on -->
-
-## How to use APIs
+## Host APIs
 
 For a comprehensive overview of all APIs and their usage
 see [API References](/develop/reference/aspect-lib/components/overview).
 
-Each breakpoint has access to different host APIs, and the host APIs available within the current breakpoint can be
+Each join-point has access to different host APIs, and the host APIs available within the current breakpoint can be
 found at the following table.
 
 | System APIs                                                                                                                 | Availability | Description                                                                                                                                              |
