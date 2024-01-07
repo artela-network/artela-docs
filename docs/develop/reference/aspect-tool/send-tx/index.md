@@ -78,4 +78,4 @@ implementation provided by the [@artela/web3](/develop/client/artela-web3.js) AP
 If needed, you can modify the logic within this file to achieve your specific functionalities.
 
 Furthermore，you can modify the `project.config.json` in the project root
-folder [to set the network configurations.](/develop/reference/aspect-tool/guide/config#2network-rpc).
+folder [to set the network configurations.](/develop/reference/aspect-tool/config#2network-rpc).
