@@ -191,9 +191,9 @@ npm run contract:call -- --contract {smart-contract-address}  \
 
 > ✅ If the `hello` string is returned, it means that we have successfully deployed the `HelloWorld` contract.
 
-## 3. Add and compile your Aspect
+## 3. Compile your Aspect
 
-### 3.1. Implement an Aspect
+### 3.1. Implements an Aspect
 
 The Aspect source files can be found in `aspect/index.ts`.
 

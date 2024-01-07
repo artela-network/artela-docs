@@ -74,7 +74,7 @@ There are two programming modes that can be used in this method:
 **Important point**: Since the join point is in the EVM execution process, using [sys.revert()](/develop/reference/aspect-lib/components/sys#1-revert), [sys.require()](/develop/reference/aspect-lib/components/sys#3-require) in this join point will actually revert the transaction.
 
 
-## How APIs
+## Host APIs
 
 For a comprehensive overview of all APIs and their usage see [API References](/develop/reference/aspect-lib/components/overview).
 
