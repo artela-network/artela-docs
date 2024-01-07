@@ -32,12 +32,12 @@ npm run aspect:deploy --  --wasm ./build/release.wasm \
                           --joinPoints PreContractCall PostContractCall
 
 ## usage 2: deploy a aspect './build/release.wasm' using private key './privateKey2.txt'
-npm run aspect:deploy --  --skfile './privateKey2.txt' \
+npm run aspect:deploy --  --skfile ./privateKey2.txt \
 						  --wasm ./build/release.wasm \
                           --joinPoints PreContractCall PostContractCall
 
 ## usage 3: deploy a aspect './build/release.wasm' with  properties
-npm run aspect:deploy --  --skfile './privateKey2.txt' \
+npm run aspect:deploy --  --skfile ./privateKey2.txt \
 						  --wasm ./build/release.wasm \
                           --joinPoints PreContractCall PostContractCall
                           --properties [{\"key\":\"k\",\"value\":\"v\"},{\"key\":\"k1\",\"value\":\"v1\"}]

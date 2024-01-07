@@ -32,7 +32,7 @@ npm run contract:deploy --  --abi ./build/contract/Counter.abi \
                             --bytecode ./build/contract/Counter.bin
 
 ## usage 2: deploy a contract 'Counter.sol' using private key './privateKey2.txt'
-npm run contract:deploy --  --skfile './privateKey2.txt' \
+npm run contract:deploy --  --skfile ./privateKey2.txt \
 							--abi ./build/contract/Counter.abi \
                             --bytecode ./build/contract/Counter.bin
 

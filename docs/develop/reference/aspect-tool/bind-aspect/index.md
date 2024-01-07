@@ -35,7 +35,7 @@ npm run contract:bind -- --contract 0x4f59c931fB8b1138348C950110D484B07007F1AF \
 npm run contract:bind -- --contract 0x4f59c931fB8b1138348C950110D484B07007F1AF \
                          --abi ./build/contract/xxx.abi \
                          --aspectId 0xA7d8497480b28B90f2327F6bD6E588A7e2733BBf \                         
-                         --skfile './privateKey2.txt' 
+                         --skfile ./privateKey2.txt
 ```
 
 ### Command Output
