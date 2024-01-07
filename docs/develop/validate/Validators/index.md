@@ -30,7 +30,7 @@ artelad tx staking create-validator \
 --amount="1000000art" \
 --pubkey=$(artelad tendermint show-validator) \
 --moniker="choose a moniker" \
---chain-id="artela_11820-1" \
+--chain-id="artela_11822-1" \
 --commission-rate="0.10" \
 --commission-max-rate="0.20" \
 --commission-max-change-rate="0.01" \
@@ -109,7 +109,7 @@ artelad query tx <tx_hash>
 
 ```bash
 artelad tx slashing unjail \
---chain-id="artela_11820-1" \
+--chain-id="artela_11822-1" \
 --gas="300000" \
 --from=<account_name>
 ```

@@ -109,14 +109,14 @@ Log of other nodes in
 
 ```bash
 # in artela root
-./build/artelad betanet init-files --chain-id artela_11820-1 --v 4 --output-dir ./betanet --starting-ip-address 172.16.10.2
+./build/artelad betanet init-files --chain-id artela_11822-1 --v 4 --output-dir ./betanet --starting-ip-address 172.16.10.2
 ```
 
 Configuration:
 
 - --chain-id
 
-  With a format of artela_\<NUMBER\>-1, NUMBER could be one of **`11820`**, **`11821`**.
+  With a format of artela_\<NUMBER\>-1, NUMBER could be one of **`11822`**, **`11821`**.
 
 - --v
 
