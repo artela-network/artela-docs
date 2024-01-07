@@ -1,6 +1,9 @@
 # Helper
 
-> This Helper contains utility functions for converting between different data types.
+> The provided Helper encapsulates a set of utility functions designed to facilitate the seamless conversion between
+> various data types. These functions serve as valuable tools for ensuring compatibility and managing data transformations
+> within a software application. Whether dealing with numeric, string, or other data representations, this Helper
+> simplifies the process of converting data, enhancing overall flexibility and interoperability in your codebase.
 
 ## Import
 
@@ -29,7 +32,7 @@ import {
 } from '@artela/aspect-libs';
 ```
 <!-- @formatter:on -->
-    
+
 ## 1. uint8ArrayToHex
 
 > Convert the Uint8Array to a hexadecimal string

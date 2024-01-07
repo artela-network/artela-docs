@@ -1,10 +1,10 @@
 # sys.aspect
 
-> Provides an interface to access the Aspect State and Aspect Property.
+> Provides APIs that communicate with Aspect, including id, version, transientStorage, property, state and context.
 
 ## 1. sys.aspect.id
 
-> get、set transientStorage.
+> Get aspect id.
 
 <!-- @formatter:off -->
 ```typescript
@@ -24,7 +24,7 @@ const aspectId = sys.aspect.id()
 
 ## 2. sys.aspect.version
 
-> get、set transientStorage.
+> Get Aspect version.
 
 <!-- @formatter:off -->
 ```typescript
@@ -68,7 +68,7 @@ const value = sys.aspect.readonlyState.get<string>("key").unwrap();
 
 ## 4. sys.aspect.mutableState
 
-> get set on aspect state
+> Get set on aspect state
 
 <!-- @formatter:off -->
 ```typescript
@@ -102,7 +102,7 @@ var data = mutableState.unwrap(); // data="value2"
 
 ## 5. sys.aspect.property
 
-> get property by key.
+> Get property by key.
 
 <!-- @formatter:off -->
 ```typescript
@@ -113,7 +113,8 @@ sys.aspect.property.get<T>(key: string): T
 * Parameter
     * key:string property key.
 * Returns
-    * value:T property value. The supported generics type are: `u8` `i8` `u16` `i16` `u32` `i32` `u64` `i64` `string` `Uint8Array` `BigInt`
+    * value:T property value. The supported generics type
+      are: `u8` `i8` `u16` `i16` `u32` `i32` `u64` `i64` `string` `Uint8Array` `BigInt`
 * Example
 
 <!-- @formatter:off -->
@@ -124,7 +125,7 @@ const value = sys.aspect.rproperty.get<string>("key");
 
 ## 6. sys.aspect.transientStorage
 
-> get、set transientStorage.
+> Get、set transientStorage.
 
 <!-- @formatter:off -->
 ```typescript
@@ -133,10 +134,12 @@ sys.aspect.transientStorage.get<T>(key: string, prefix: string = ''): TransientS
 <!-- @formatter:on -->
 
 * Parameter
-    * key:string  aspect context key.
+    * key:string aspect context key.
 * Returns
-    * result:TransientStorageValue  context value. The supported generics type are: `u8` `i8` `u16` `i16` `u32` `i32` `u64` `i64` `string` `Uint8Array` `BigInt`.
+    * result:TransientStorageValue context value. The supported generics type
+      are: `u8` `i8` `u16` `i16` `u32` `i32` `u64` `i64` `string` `Uint8Array` `BigInt`.
 * Example
+
 <!-- @formatter:off -->
 ```typescript
 import {
