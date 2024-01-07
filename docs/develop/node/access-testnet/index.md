@@ -25,16 +25,16 @@ Once you've initiated the node, connect to the JSON-RPC port service here:
 ### 2. Persistent nodes
 
 ```json
-211536ab1414b5b9a2a759694902ea619b29c8b1@47.251.14.47:26656
-d89e10d917f6f7472125aa4c060c05afa78a9d65@47.251.32.165:26656
-f559f47a4199a06d53f274ae720042f3809a6ec0@47.251.54.123:26656
-ff30114dc4ac73b25723e9f3d41bbe1bdd4242ee@47.251.14.108:26656
+30fb0055aced21472a01911353101bc4cd356bb3@47.89.230.117:26656
+978dee673bd447147f61aa5a1bdaabdfb8f8b853@47.88.57.107:26656
+aa416d3628dcce6e87d4b92d1867c8eca36a70a7@47.254.93.86:26656
+9e2fbfc4b32a1b013e53f3fc9b45638f4cddee36@47.254.66.177:26656
 ```
 
 ### 3. Trusted block and height
 
-- **Block Height**: 250870
-- **Block Hash**: 58e0dba02baf99c5b4219b41f584de420844fe3e0ecb82b6e46364199e09b8ed
+- **Block Height**: 114011
+- **Block Hash**: 94077D92B3DE77C3AE94BEBF496601E7CBA3EEF7CD7E17BD8513F16D9DDA8712
 
 > ⚠️Note: Pick up the latest block and height from the <https://betanet-scan.artela.network> as your trusted block and height.
 >
@@ -42,8 +42,8 @@ ff30114dc4ac73b25723e9f3d41bbe1bdd4242ee@47.251.14.108:26656
 ### 4. RPC servers
 
 ```bash
-47.251.14.47:26657
-47.251.32.165:26657
-47.251.54.123:26657
-47.251.14.108:26657
+47.88.57.107:26657
+47.254.66.177:26657
+47.254.93.86:26657
+47.89.230.117:26657
 ```
