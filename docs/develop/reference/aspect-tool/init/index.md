@@ -69,11 +69,8 @@ The command automatically creates the recommended directory structure and config
   "dependencies": {
     "@artela/aspect-libs": "last Version",
     "@artela/web3": "last Version",
-    "@artela/web3-atl": "last Version",
-    "@artela/web3-eth": "last Version",
-    "@artela/web3-utils": "last Version",
     "@assemblyscript/loader": "last Version",
-    "as-proto": "last Version"
+    "as-proto": "last Version",
   }
 }
 ```
