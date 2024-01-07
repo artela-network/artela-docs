@@ -138,8 +138,16 @@ type of data or information.
 ### Usage
 
 ```javascript
-const parentHashBytes = sys.hostApi.runtimeContext.get("block.header.parentHash");
-const parentHash = Protobuf.decode < BytesData > (parentHashBytes, BytesData.decode);
+const chainId = sys.hostApi.runtimeContext.get('env.chain.chainId');
+//decode UintData
+const chainIdData = Protobuf.decode<UintData>(chainId, UintData.decode);
+sys.log('env.chain.chainId' + ' ' + chainIdData.data.toString(10));
+
+const enableCall = sys.hostApi.runtimeContext.get('env.enableCall');
+//decode boolData
+const enableCallData = Protobuf.decode<BoolData>(enableCall, BoolData.decode);
+sys.log('env.enableCall' + ' ' + enableCallData.data.toString());
+
 ```
 
 ### Key table

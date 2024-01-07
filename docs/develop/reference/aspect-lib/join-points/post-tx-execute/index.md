@@ -126,8 +126,19 @@ type of data or information.
 ### Usage
 
 ```javascript
-const parentHashBytes = sys.hostApi.runtimeContext.get("block.header.parentHash");
-const parentHash = Protobuf.decode < BytesData > (parentHashBytes, BytesData.decode);
+const parentHash = sys.hostApi.runtimeContext.get("block.header.parentHash");
+// decode BytesData
+const parentHashData = Protobuf.decode < BytesData > (parentHashBytes, BytesData.decode);
+sys.log('block.header.parentHash' + ' ' + uint8ArrayToHex(parentHashData.data));
+
+
+const logs = sys.hostApi.runtimeContext.get('receipt.logs');
+// decode EthLogs
+const logsData = Protobuf.decode<EthLogs>(logs, EthLogs.decode);
+for (let i = 0; i < logsData.logs.length; i++) {
+  sys.log('receipt.logs ' + i.toString(10) + ' ' + uint8ArrayToHex(logsData.logs[i].address) + ' ' + uint8ArrayToHex(logsData.logs[i].data),
+  );
+}
 ```
 
 ### Key table

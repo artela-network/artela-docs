@@ -127,9 +127,18 @@ type of data or information.
 ### Usage
 
 ```javascript
-const parentHashBytes = sys.hostApi.runtimeContext.get("block.header.parentHash");
-const parentHash = Protobuf.decode < BytesData > (parentHashBytes, BytesData.decode);
-```
+
+const aspectId = sys.hostApi.runtimeContext.get('aspect.id');
+// decode BytesData
+const aspectIdData = Protobuf.decode<BytesData>(aspectId, BytesData.decode);
+sys.log( 'aspect.id' + ' ' + uint8ArrayToHex(aspectIdData.data));
+
+const aspectVer = sys.hostApi.runtimeContext.get('aspect.version');
+// decode UintData
+const aspectVerData = Protobuf.decode<UintData>(aspectVer, UintData.decode);
+sys.log( 'aspect.version' + ' ' + aspectVerData.data.toString(10));
+
+``` 
 
 ### Key table
 

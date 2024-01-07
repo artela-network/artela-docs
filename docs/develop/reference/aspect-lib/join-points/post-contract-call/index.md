@@ -145,8 +145,20 @@ type of data or information.
 ### Usage
 
 ```javascript
-const parentHashBytes = sys.hostApi.runtimeContext.get("block.header.parentHash");
-const parentHash = Protobuf.decode < BytesData > (parentHashBytes, BytesData.decode);
+
+const enableCreate = sys.hostApi.runtimeContext.get('env.enableCreate');
+//decode BoolData
+const enableCreateData = Protobuf.decode<BoolData>(enableCreate, BoolData.decode);
+sys.log('env.enableCreate' + ' ' + enableCreateData.data.toString());
+
+
+const msgErr = sys.hostApi.runtimeContext.get("msg.result.error");
+if (msgErr.length>0){
+    ///decode StringData
+    const msgErrData = Protobuf.decode <StringData> (msgErr, StringData.decode);
+    sys.log("msg.result.error" + " " + msgErrData.data)
+}
+
 ```
 
 ### Key table

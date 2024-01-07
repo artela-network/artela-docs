@@ -120,8 +120,23 @@ type of data or information.
 ### Usage
 
 ```javascript
-const parentHashBytes = sys.hostApi.runtimeContext.get("block.header.parentHash");
-const parentHash = Protobuf.decode < BytesData > (parentHashBytes, BytesData.decode);
+const txUnHash = sys.hostApi.runtimeContext.get('tx.unsigned.hash');
+const txUnHashData = Protobuf.decode<BytesData>(txUnHash, BytesData.decode);
+sys.log('tx.unsigned.hash' + ' ' + uint8ArrayToHex(txUnHashData.data));
+
+
+const extraEIPs = sys.hostApi.runtimeContext.get('env.extraEIPs');
+const extraEIPsData = Protobuf.decode<IntArrayData>(extraEIPs, IntArrayData.decode);
+for (let i = 0; i < extraEIPsData.data.length; i++) {
+  sys.log(
+          logPrefix +
+          ' ' +
+          'env.extraEIPs ' +
+          i.toString(10) +
+          ' ' +
+          extraEIPsData.data[i].toString(10),
+  );
+}
 ```
 
 ### Key table
