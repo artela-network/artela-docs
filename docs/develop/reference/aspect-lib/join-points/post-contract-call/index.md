@@ -24,7 +24,6 @@ This join point will be triggered after the cross-contract call is executed. Bel
 At this stage, the join point has the capability to examine the post-call state of the contract, enabling it to make
 informed decisions for subsequent execution.
 
-
 ## Interface
 
 ```
@@ -32,19 +31,22 @@ interface IPostContractCallJP extends IAspectBase {
   postContractCall(input: PostContractCallInput): void;
 }
 ```
+
 * **Parameter**
-    * input: PostContractCallInput; The base layer will deliver the PostContractCallInput object to Aspect in this join point.
-      - `input.block.number`: current block number.
-      - `input.call.from`: caller of the contract call.
-      - `input.call.to`: to address of the contract call.
-      - `input.call.data`: input bytes of the contract call.
-      - `input.call.gas`: gas limit of the contract call.
-      - `input.call.index`: index of the contract call.
-      - `input.call.value`: transfer value of the contract call.
-      - `input.call.ret`: return value of the contract call.
-      - `input.call.error`: error message of the contract call.
+    * input: PostContractCallInput; The base layer will deliver the PostContractCallInput object to Aspect in this join
+      point.
+        - `input.block.number`: current block number.
+        - `input.call.from`: caller of the contract call.
+        - `input.call.to`: to address of the contract call.
+        - `input.call.data`: input bytes of the contract call.
+        - `input.call.gas`: gas limit of the contract call.
+        - `input.call.index`: index of the contract call.
+        - `input.call.value`: transfer value of the contract call.
+        - `input.call.ret`: return value of the contract call.
+        - `input.call.error`: error message of the contract call.
 * **Returns**
-    * void; If Aspect returns normally, the transaction will continue to execute. If Aspect calls `sys.revert` to revert the transaction, the base layer will revert the transaction.
+    * void; If Aspect returns normally, the transaction will continue to execute. If Aspect calls `sys.revert` to revert
+      the transaction, the base layer will revert the transaction.
 
 ## Example
 
@@ -136,7 +138,9 @@ found at the following table.
 
 ## Runtime context
 
-In this join point, Aspect can access those runtime contexts.
+The Aspect Runtime Context encapsulates data generated through the consensus process. With the acquired Runtime Context
+object, retrieve specific data by specifying the relevant Context Key. Each Context Key is associated with a particular
+type of data or information.
 
 ### Usage
 

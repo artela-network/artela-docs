@@ -119,7 +119,9 @@ Each join-point has access to different host APIs, and the host APIs available w
 
 ## Runtime context
 
-In this join point, Aspect can access those runtime contexts.
+The Aspect Runtime Context encapsulates data generated through the consensus process. With the acquired Runtime Context
+object, retrieve specific data by specifying the relevant Context Key. Each Context Key is associated with a particular
+type of data or information.
 
 ### Usage
 
