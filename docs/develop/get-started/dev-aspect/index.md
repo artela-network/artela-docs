@@ -118,7 +118,7 @@ Update the `project.config.json` in the root directory with the appropriate netw
 
 ```json
 {
-  "node": "https://testnet-rpc1.artela.network"
+  "node": "https://betanet-rpc1.artela.network"
 }
 ```
 
@@ -149,7 +149,7 @@ in `testnet-faucet` channel.
 Execute the following command within the `my-first-aspect` folder, using the provided script:
 
 ```bash
-npm run contract:deploy --  --abi ./build/contract/HelloWorld.abi \ 
+npm run contract:deploy --  --abi ./build/contract/HelloWorld.abi \
                            --bytecode ./build/contract/HelloWorld.bin
 ```
 
@@ -167,8 +167,8 @@ Execute the following command within the `my-first-aspect` folder, call the Cont
 #### 2.4.1 call `hello` method
 
 ```bash
-npm run contract:call -- --contract {smart-contract-address}  \                         
-                         --abi ./build/contract/HelloWorld.abi   \                                    
+npm run contract:call -- --contract {smart-contract-address}  \
+                         --abi ./build/contract/HelloWorld.abi   \
                          --method hello                                             
 ```
 
@@ -184,16 +184,16 @@ the [contract-call command](/develop/reference/aspect-tool/contract-call) docume
 #### 2.4.2 call `world` method
 
 ```bash
-npm run contract:call -- --contract {smart-contract-address}  \                         
-                         --abi ./build/contract/HelloWorld.abi   \                                    
+npm run contract:call -- --contract {smart-contract-address}  \
+                         --abi ./build/contract/HelloWorld.abi   \
                          --method world
 ```
 
-> ✅ If the `hello` string is returned, it means that we have successfully deployed the `HelloWorld` contract.
+> ✅ If the `world` string is returned, it means that we have successfully deployed the `HelloWorld` contract.
 
-## 3. Add and compile your Aspect
+## 3. Compile your Aspect
 
-### 3.1. Implement an Aspect
+### 3.1. Implements an Aspect
 
 The Aspect source files can be found in `aspect/index.ts`.
 
@@ -295,7 +295,7 @@ Deploying the Aspect doesn't automatically activate it. To make it functional, b
 
 ```bash
 npm run contract:bind -- --contract {smart-contract-address} \
-                         --abi ./build/contract/HelloWorld.abi \                        
+                         --abi ./build/contract/HelloWorld.abi \
                          --aspectId {aspect-Id} 
 ```
 
@@ -314,8 +314,8 @@ the [bind-aspect command](/develop/reference/aspect-tool/bind-aspect) documentat
 Now that the `HelloWord` contract and Aspect are bound, call `world` to test.
 
 ```bash
-npm run contract:call -- --contract {smart-contract-address}  \                         
-                         --abi ./build/contract/HelloWorld.abi   \                                    
+npm run contract:call -- --contract {smart-contract-address}  \
+                         --abi ./build/contract/HelloWorld.abi   \
                          --method world 
 ```
 

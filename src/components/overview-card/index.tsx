@@ -50,7 +50,7 @@ const DiveDeeperCards = [
         ),
     },
     {
-        name: 'Join our testnet',
+        name: 'Join our BetaNet',
         url: {
             page: 'develop/node/testnet-setup',
         },

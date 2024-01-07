@@ -19,7 +19,9 @@ This guide outlines the process of initiating an Aspect development project
 
 mkdir my-first-aspect && cd  my-first-aspect
 
-npx @artela/aspect-tool init
+npm install -g @artela/aspect-tool
+
+aspect-tool init
 ```
 
 ## Project 
@@ -63,15 +65,14 @@ The command automatically creates the recommended directory structure and config
 * [as-proto](https://github.com/piotr-oles/as-proto): Encodes and decodes protobuf messages
 
 ```json
- "dependencies": {
+{
+  "dependencies": {
     "@artela/aspect-libs": "last Version",
     "@artela/web3": "last Version",
-    "@artela/web3-atl": "last Version",
-    "@artela/web3-eth": "last Version",
-    "@artela/web3-utils": "last Version",
     "@assemblyscript/loader": "last Version",
-    "as-proto": "last Version"
+    "as-proto": "last Version",
   }
+}
 ```
 
 #### Develop Dependencies
@@ -79,10 +80,12 @@ The command automatically creates the recommended directory structure and config
 * @artela/aspect-tool: an assist developers in seamlessly managing Aspect development tool.
 
 ```json
-"devDependencies": {
-    "@artela/aspect-tool":  "last Version",
+{
+  "devDependencies": {
+    "@artela/aspect-tool": "last Version",
     "assemblyscript": "last Version",
     "as-proto-gen": "last Version",
-    "yargs":  "last Version"
-  },
+    "yargs": "last Version"
+  }
+}
 ```

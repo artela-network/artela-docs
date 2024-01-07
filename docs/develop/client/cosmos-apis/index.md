@@ -111,7 +111,7 @@ JSONRPC requests can be POST'd to the root RPC endpoint via HTTP.
 ```bash
 curl --header "Content-Type: application/json" --request POST --data '{"method": "block", "params": ["5"], "id": 1}' localhost:26657
 ```
-Artela Testnet example:
+Artela Betanet example:
 ```bash
 curl --header "Content-Type: application/json" --request POST --data '{"method": "block", "params": ["5"], "id": 1}' 47.251.14.47:26657
 ```

@@ -5,7 +5,7 @@ sidebar_position: 2
 # Create an ERC-20 Token in Artela
 
 ## Intro
-Below is an example that uses `@artela/aspect-tool` to deploy erc20 contract to Artela Testnet.
+Below is an example that uses `@artela/aspect-tool` to deploy erc20 contract to Artela BetaNet.
 
 **Pre-requisites:**
 * [Node.js](https://nodejs.org/)
@@ -205,7 +205,7 @@ npm run contract:deploy -- --skfile ./tokenPk.txt  \
                            --args '[10000000]'
                            
                            
-npm run contract:deploy -- --skfile ./brokerPk.txt  \ 
+npm run contract:deploy -- --skfile ./brokerPk.txt  \
                            --abi ./build/contract/contracts_Broker_sol_Borker.abi \
                            --bytecode ./build/contract/contracts_Broker_sol_Borker.bin \
                            --args '[{ArtToken_Address}]'   

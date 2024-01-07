@@ -6,8 +6,8 @@ sidebar_position: 2
 
 ## Discord Faucet
 
-Join our `Discord` to access the Testnet ART faucet. Request access and
-obtain Testnet ART with your wallet address.
+Join our `Discord` to access the Betanet ART faucet. Request access and
+obtain Betanet ART with your wallet address.
 
 | 🚰 [Artela Discord ](https://discord.com/invite/artela) |
 |---------------------------------------------------------|

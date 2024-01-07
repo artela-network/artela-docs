@@ -153,7 +153,7 @@ If you run your own full-node, just use `tcp://localhost:26657` as the address.
 Finally, let us set the `chain-id` of the blockchain we want to interact with:
 
 ```bash
-artelad config chain-id artela_11820-1
+artelad config chain-id artela_11822-1
 ```
 
 ## Querying the State
@@ -325,10 +325,10 @@ artelad tx staking delegate <validatorAddress> <amountToBond> --from <delegatorA
 
 In order to sign, you will also need the `chain-id`, `account-number` and `sequence`. The `chain-id` is a unique identifier for the blockchain on which you are submitting the transaction. The `account-number` is an identifier generated when your account first receives funds. The `sequence` number is used to keep track of the number of transactions you have sent and prevent replay attacks.
 
-Get the chain-id from the genesis file (`artela_11820-1`), and the two other fields using the account query:
+Get the chain-id from the genesis file (`artela_11822-1`), and the two other fields using the account query:
 
 ```bash
-artelad query account <yourAddress> --chain-id artela_11820-1
+artelad query account <yourAddress> --chain-id artela_11822-1
 ```
 
 Then, copy `unsignedTx.json` and transfer it (e.g. via USB) to the offline computer. If it is not done already, [create an account on the offline computer](#using-a-computer). For additional security, you can double check the parameters of your transaction before signing it using the following command:
@@ -340,7 +340,7 @@ cat unsignedTx.json
 Now, sign the transaction using the following command. You will need the `chain-id`, `sequence` and `account-number` obtained earlier:
 
 ```bash
-artelad tx sign unsignedTx.json --from <delegatorKeyName> --offline --chain-id artela_11820-1 --sequence <sequence> --account-number <account-number> > signedTx.json
+artelad tx sign unsignedTx.json --from <delegatorKeyName> --offline --chain-id artela_11822-1 --sequence <sequence> --account-number <account-number> > signedTx.json
 ```
 
 Copy `signedTx.json` and transfer it back to the online computer. Finally, use the following command to broadcast the transaction:

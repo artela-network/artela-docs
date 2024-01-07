@@ -8,10 +8,10 @@ event triggering, or the execution of other contract logic.
 You can send transaction using the following command:
 
 ```shell
-  npm run contract:send -- --skfile {privateKey-path}    \     
-                         --contract {smart-contract-address}  \                         
-                         --abi ./build/contract/xxx.abi   \                                    
-                         --method {method-name}  \   
+  npm run contract:send -- --skfile {privateKey-path}    \
+                         --contract {smart-contract-address} \
+                         --abi ./build/contract/xxx.abi \
+                         --method {method-name}  \
                          --args [..]
                          --gas 200000 
 ```
@@ -25,19 +25,29 @@ You can send transaction using the following command:
 > * --gas : like `200000`,(optional,default value `7000000`).
 ---
 
-Specifically, the command will be executed
+## Example
+
 ```shell
-node scripts/contract-send.cjs
+## usage 1: send a contract 'xxxx.sol' with hello() method, using default private key './privateKey.txt'
+npm run contract:send --  --contract 0xa1ab92B67C4Bd8bb0fa1C08F29A90b375c260185 \
+                          --abi ./build/contract/HelloWorld.abi \
+                          --method hello
+                        
+## usage 3: call a contract 'xxxx.sol' with 'add(address aspectId, address account)' method, using private key './privateKey2.txt'.
+npm run contract:send --  --contract 0xa1ab92B67C4Bd8bb0fa1C08F29A90b375c260185 \
+                          --abi ./build/xxxx.abi \
+                          --method add \
+                          --args [100]
+                    
+## usage 3: call a contract 'xxxx.sol' with 'unbind(address aspectId, address account)' method, using private key './privateKey2.txt'.
+npm run contract:send --  --contract 0xa1ab92B67C4Bd8bb0fa1C08F29A90b375c260185 \
+                          --abi ./build/xxxx.abi \
+                          --method unbind \
+                          --args ["0xCE3ccD4a308f25B4c1B36cC883A9bEd76Bc24627","0xA90927a72F1A6c8EFAfa0cc1b432f75eCc2086d8"] \
+                          --skfile ./privateKey2.txt
 ```
 
-The logic for the create-account command is written in the `scripts/contract-send.cjs` file, primarily relying on the
-implementation provided by the [@artela/web3](/develop/client/artela-web3.js) API.   
-If needed, you can modify the logic within this file to achieve your specific functionalities.
-
-Furthermore，you can modify the `project.config.json` in the project root
-folder [to set the network configurations.](/develop/reference/aspect-tool/guide/config#2network-rpc).
-
-## Execution Status
+### Command Output
 
 The current deployment is successful and the receipt for the transaction is printed.
 
@@ -60,3 +70,12 @@ call contract tx hash: 0x739effa2f1817baa2171c271c7307180c12d73a04d99bd6...
 }
 
 ```
+
+## Customize
+
+The logic for the create-account command is written in the `scripts/contract-send.cjs` file, primarily relying on the
+implementation provided by the [@artela/web3](/develop/client/artela-web3.js) API.   
+If needed, you can modify the logic within this file to achieve your specific functionalities.
+
+Furthermore，you can modify the `project.config.json` in the project root
+folder [to set the network configurations.](/develop/reference/aspect-tool/config#2network-rpc).

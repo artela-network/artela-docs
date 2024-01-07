@@ -236,8 +236,8 @@ The resulting `release.wasm` in the build folder contains the necessary WASM byt
 Deploy your compiled Aspect:
 
 ```shell
- npm run aspect:deploy -- --wasm ./build/release.wasm  \ 
-                          --joinPoints PreContractCall \ 
+ npm run aspect:deploy -- --wasm ./build/release.wasm  \
+                          --joinPoints PreContractCall \
                           --skfile ./curve_accounts.txt
 ```
 
@@ -254,10 +254,10 @@ the [deploy-aspect command](/develop/reference/aspect-tool/deploy-aspect) docume
 Deploying the Aspect doesn't automatically activate it. To make it functional, bind it to a smart contract:
 
 ```shell
-   npm run contract:bind -- --skfile ./curve_accounts.txt \                          
+   npm run contract:bind -- --skfile ./curve_accounts.txt \
    --contract {curveAddress} \
-   --abi ./build/contract/CurveContract.abi \                        
-   --aspectId {aspect-Id} \                          
+   --abi ./build/contract/CurveContract.abi \
+   --aspectId {aspect-Id} \
    --gas 200000
 ```
 you will see `== aspect bind success == `
@@ -267,9 +267,9 @@ you will see `== aspect bind success == `
 Execute the re-entrant attack on the simplified Curve contract with Aspect protection, and watch the output. 
 
 ```shell
- npm run contract:send -- --contract {attackAddress} \   
-                          --abi ./build/contract/Attack.abi  \ 
-                          --skfile ./attack_accounts.txt  
+ npm run contract:send -- --contract {attackAddress} \
+                          --abi ./build/contract/Attack.abi  \
+                          --skfile ./attack_accounts.txt \
                           --method attack  \
                           --gas 200000 
 ```

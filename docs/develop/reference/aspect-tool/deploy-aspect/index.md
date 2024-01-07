@@ -9,37 +9,47 @@ the network.
 You can deploy Aspect using the following command:
 
 ```bash
-  npm run aspect:deploy -- --skfile {privateKey-path} \                                                
+  npm run aspect:deploy -- --skfile {privateKey-path} \
                          --wasm ./build/release.wasm \
-                         --properties [{\"key\":\"k\",\"value\":\"v\"},{\"key\":\"k1\",\"value\":\"v1\"}]
-                         --joinPoints {join point}
-                         --gas 200000  
+                         --properties [{\"key\":\"k\",\"value\":\"v\"},{\"key\":\"k1\",\"value\":\"v1\"}] \
+                         --joinPoints {join point} \
+                         --gas 200000
 ```
 **options：**
-> * --skfile : privateKey path for sender. optional,default value `./privateKey.txt`.
 > * --wasm : *wasm path. like: `--wasm ./build/release.wasm `
-> * --properties: aspect properties. optional, like: `--properties [{\"key\":\"k\",\"value\":\"v\"},{\"key\":\"k1\",\"value\":\"v1\"}]`
 > * --joinPoints: specify which join points take effect，point list `PreContractCall PostContractCall PreTxExecute PostTxExecute VerifyTx`. required, like: `--joinPoints PreContractCall PostContractCall PreTxExecute PostTxExecute VerifyTx`
-> * --gas : like `200000`, optional,default value `7000000`.
+> * --skfile : privateKey path for sender. **optional**,default value `./privateKey.txt`.
+> * --properties: aspect properties. **optional**, like: `--properties [{\"key\":\"k\",\"value\":\"v\"},{\"key\":\"k1\",\"value\":\"v1\"}]`
+> * --gas : like `200000`, **optional**,default value `7000000`.
 
 ---
 
-Specifically, the command will be executed
+## Example
+
 ```shell
- npm run aspect:build && node scripts/aspect-deploy.cjs
+## usage 1: deploy a aspect './build/release.wasm' using default private key './privateKey.txt'
+npm run aspect:deploy --  --wasm ./build/release.wasm \
+                          --joinPoints PreContractCall PostContractCall
+
+## usage 2: deploy a aspect './build/release.wasm' using private key './privateKey2.txt'
+npm run aspect:deploy --  --skfile ./privateKey2.txt \
+						  --wasm ./build/release.wasm \
+                          --joinPoints PreContractCall PostContractCall
+
+## usage 3: deploy a aspect './build/release.wasm' with  properties
+npm run aspect:deploy --  --skfile ./privateKey2.txt \
+						  --wasm ./build/release.wasm \
+                          --joinPoints PreContractCall PostContractCall
+                          --properties [{\"key\":\"k\",\"value\":\"v\"},{\"key\":\"k1\",\"value\":\"v1\"}]
+                          
 ```
-The logic for the create-account command is written in the `scripts/aspect-deploy.cjs` file, primarily relying on the
-implementation provided by the [@artela/web3](/develop/client/artela-web3.js) API.   
-If needed, you can modify the logic within this file to achieve your specific functionalities.
 
-Furthermore，you can modify the `project.config.json` in the project root folder [to set the network configurations.](/develop/reference/aspect-tool/guide/config#2network-rpc).
-
-## Execution Status
+### Command Output
 
 The current deployment is successful and the receipt for the transaction is printed. which can record the `aspectID`, and some commands will rely on this value.
 
 ```shell
-ret:  {
+{
   blockHash: '0x03d2a48d6f6281c0a32a20718b475f260d82068342f81ccf7ef8....',
   blockNumber: 377,
   contractAddress: null,
@@ -56,5 +66,12 @@ ret:  {
   aspectAddress: '0xEf3A9A495A80eA681797A721FD4708dB0e....'
 }
 == deploy aspectID == 0xEf3A9A495A80eA681797A721FD4708dB0e...
-
 ```
+
+## Customize
+
+The logic for the create-account command is written in the `scripts/aspect-deploy.cjs` file, primarily relying on the
+implementation provided by the [@artela/web3](/develop/client/artela-web3.js) API.   
+If needed, you can modify the logic within this file to achieve your specific functionalities.
+
+Furthermore，you can modify the `project.config.json` in the project root folder [to set the network configurations.](/develop/reference/aspect-tool/config#2network-rpc).
