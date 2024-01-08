@@ -27,7 +27,7 @@ Symbol (optional) : ART
 Block Explorer URL (optional): https://betanet-scan.artela.network/
 ```
 
-For more info about the new RPC URL configuration, refer to [artela betanet](../node/access-betanet).
+For more info about the new RPC URL configuration, refer to [Artela TestNet](develop/node/access-testnet).
 
 Ensure all fields are correctly filled:
 

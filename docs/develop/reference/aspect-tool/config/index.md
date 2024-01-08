@@ -64,7 +64,7 @@ Modify the 'contract:build' in the 'package.json' to support it:
 ### 2.Network Rpc
 
 Modify the `project.config.json` in the project root folder to set the network configurations as the following (assuming
-we are using [Artela BetaNet](/develop/node/access-testnet), if you are using your own node, please change the config
+we are using [Artela TestNet](/develop/node/access-testnet), if you are using your own node, please change the config
 accordingly):
 
 ```json

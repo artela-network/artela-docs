@@ -5,7 +5,7 @@ sidebar_position: 2
 # Create an ERC-20 Token in Artela
 
 ## Intro
-Below is an example that uses `@artela/aspect-tool` to deploy erc20 contract to Artela BetaNet.
+Below is an example that uses `@artela/aspect-tool` to deploy erc20 contract to Artela TestNet.
 
 **Pre-requisites:**
 * [Node.js](https://nodejs.org/)
@@ -163,7 +163,7 @@ npm run contract:build
 Update the `project.config.json` in the root directory with the appropriate network configuration:
 ```json
 {
-  "node": "https://testnet-rpc1.artela.network"
+  "node": "https://betanet-rpc1.artela.network"
 }
 ```
 :::note 💡

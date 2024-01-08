@@ -14,8 +14,8 @@ artelad keys add <account_name>
 ```
 ![](./img/v1.png)
 
-## Step2: Get BetaNet Token
-You could get ART BetaNet Native Token from Discord. 
+## Step2: Get TestNet Token
+You could get ART TestNet Native Token from Discord. 
 You could get your account address like this:
 
 ```bash

@@ -6,7 +6,7 @@ sidebar_position: 1
 
 Artela JSON-RPC Server provides an API for connection to the Artela blockchain and interaction with the EVM. JSON-RPC is a stateless, lightweight protocol for remote procedure calls (RPC). It defines various data structures and the rules governing their processing. JSON-RPC is compatible with multiple transport protocols. Artela, in particular, supports JSON-RPC over HTTP and WebSocket.
 
-Artela Betanet example:
+Artela TestNet example:
 
 ```
    curl https://betanet-rpc1.artela.network -H "Content-Type:application/json" -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":1}'

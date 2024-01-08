@@ -39,7 +39,7 @@ contract MyCollectible is ERC721 {
 
 ## 2.Remix: Connect to Artela Testnet and Deploy
 
-Connecting a [wallet](/develop/guides/wallet-configuration). To ensure the `artela betanet` network is selected on Metamask. Select `Injected Provider - MetaMask` as environment.
+Connecting a [wallet](/develop/guides/wallet-configuration). To ensure the `artela betaanet` network is selected on Metamask. Select `Injected Provider - MetaMask` as environment.
 
 At Remix, on the left side
 
