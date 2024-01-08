@@ -191,7 +191,7 @@ npm run contract:call -- --contract {smart-contract-address}  \
 
 > ✅ If the `world` string is returned, it means that we have successfully deployed the `HelloWorld` contract.
 
-## 3. Compile your Aspect
+## 3. Create your Aspect
 
 ### 3.1. Implements an Aspect
 
@@ -289,7 +289,7 @@ For more detailed usage information about this command, please refer to
 the [deploy-aspect command](/develop/reference/aspect-tool/deploy-aspect) documentation.
 :::
 
-### 3.5. Bind the Smart Contract and Aspect
+## 4. Bind the Smart Contract and Aspect
 
 Deploying the Aspect doesn't automatically activate it. To make it functional, bind it to a smart contract:
 
@@ -309,7 +309,7 @@ For more detailed usage information about this command, please refer to
 the [bind-aspect command](/develop/reference/aspect-tool/bind-aspect) documentation.
 :::
 
-### 3.6. Test the Smart Contract and Aspect Integration
+## 5. Test the Smart Contract and Aspect Integration
 
 Now that the `HelloWord` contract and Aspect are bound, call `world` to test.
 
