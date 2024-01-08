@@ -10,6 +10,7 @@ Other advantages include superior performance with multiple RPC endpoint configu
 - SubQuery Docs: [SubQuery Academy (Documentation)](https://academy.subquery.network/)
 - Intro Quick Start Guide: [1. Create a New Project](https://academy.subquery.network/quickstart/quickstart.html)
 - [Artela Testnet Starter Project](https://github.com/subquery/ethereum-subql-starter/tree/main/Artela/artela-testnet-starter)
+- For technical questions and support reach out to us start@subquery.network
 
 # Getting Started
 
