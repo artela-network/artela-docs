@@ -12,7 +12,7 @@ Below is an example that uses `@artela/aspect-tool` to deploy erc20 contract to 
 * [solc](https://docs.soliditylang.org/en/v0.8.20/installing-solidity.html)
 
 
-## 1.Setting up a new project
+## 1. Setting up a new project
 Make sure you have a recent version of [Node.js](https://nodejs.org/) and npm installed,
 Start by installing the `aspect-tool`:
 
@@ -212,7 +212,7 @@ Upon successful deployment, the terminal will display the contract address.
 
 ## 5. Call the Contract
 
-### 5.1 transfer artToken to broker address
+### 5.1 Transfer artToken to broker address
 Execute the following command within the `erc20-token` folder:
 
 ```bash
@@ -226,7 +226,7 @@ npm run contract:send   -- --skfile ./tokenPk.txt
 
 ```
 
-### 5.2 check transaction
+### 5.2 Check transaction
 
 Confirm the successful `transfer` on Artela Testnet [blockchain explorer](https://testnet-scan.artela.network/) using `transaction hash` in output. 
 
