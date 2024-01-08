@@ -11,7 +11,7 @@ the EVM. Here are the steps, using `MetaMask` as an example, to configure the ne
 
 Launch the MetaMask extension or application.
 
-## 2. Connect MetaMask to Artela BetaNet
+## 2. Connect MetaMask to Artela TestNet
 
 If you're new to MetaMask, follow this guide
 on [How Add a Custom Network RPC](https://support.metamask.io/hc/en-us/articles/360043227612-How-to-add-a-custom-network-RPC)
