@@ -2,10 +2,10 @@
 sidebar_position: 1
 ---
 
-# Create A simple storage contract in Artela
+# Develop a Smart Contract
 
 ## Intro
-Below is an example that use `@artela/aspect-tool` to deploy storage contract to Artela Testnet.
+Below is an example that use [@artela/aspect-tool](/develop/reference/aspect-tool/overview) to deploy storage contract to Artela Testnet.
 
 **Pre-requisites:**
 * [Node.js](https://nodejs.org/)
@@ -55,8 +55,6 @@ This will create a project directory with the following structure:
 └── tsconfig.json
 
 ```
-
-
 
 ## 2. Deploy a smart contract
 
@@ -186,6 +184,6 @@ npm run contract:call -- --contract {artToken-address}  \
 
 #### 2.4.2 check transaction
 
-Confirm the successful on Artela Testnet [blockchain explorer](https://testnet-scan.artela.network/) using `transaction hash` in output.
+Confirm the successful on Artela Testnet [blockchain explorer](https://betanet-scan.artela.network/) using `transaction hash` in output.
 
 ![img.png](img.png)
