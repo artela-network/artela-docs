@@ -44,7 +44,7 @@ pip install vyper==0.2.16
    
 ```
 
-## 2. Create blockchain accounts (optional).
+## 2. Create Blockchain Accounts (optional).
 
 Execute the following command under project folder to create two accounts, if you don't already have one.
 
@@ -262,7 +262,7 @@ Deploying the Aspect doesn't automatically activate it. To make it functional, b
 ```
 you will see `== aspect bind success == `
 
-## 5. Re-entrant attack Test
+## 5. Re-entrant Attack Test
 
 Execute the re-entrant attack on the simplified Curve contract with Aspect protection, and watch the output. 
 

@@ -12,7 +12,7 @@ Below is an example that use [@artela/aspect-tool](/develop/reference/aspect-too
 * [solc](https://docs.soliditylang.org/en/v0.8.20/installing-solidity.html)
 
 
-# 1.Setting up a new project
+## 1. Setting up a new project
 Make sure you have a recent version of [Node.js](https://nodejs.org/) and npm installed,
 Start by installing the `aspect-tool`:
 
@@ -56,9 +56,7 @@ This will create a project directory with the following structure:
 
 ```
 
-## 2. Deploy a smart contract
-
-### 2.1. Add a Smart Contract
+## 2. Create a Smart Contract
 
 Within the `contracts` directory of your project, create your smart contract source files with a `.sol` extension.
 
@@ -99,7 +97,7 @@ contract Storage {
 ```
 
 
-### 2.2. Compile the Smart Contract
+## 3. Compile the Smart Contract
 
 
 This step relies on `solc`, first check if [solc](https://docs.soliditylang.org/en/v0.8.20/installing-solidity.html) is installed correctly
@@ -119,9 +117,9 @@ npm run contract:build
 > ✅ Successful compilation will generate some `*.abi`  files in the `build/contract` directory.
 
 
-### 2.3. Deploy the Smart Contract
+## 4. Deploy the Smart Contract
 
-#### 2.3.1 Update project.config.json
+### 4.1 Update project.config.json
 
 Update the `project.config.json` in the root directory with the appropriate network configuration:
 ```json
@@ -133,7 +131,7 @@ Update the `project.config.json` in the root directory with the appropriate netw
 For more details regarding development environment setup, please refer to [artela devnet](/develop/node/access-testnet)
 :::
 
-#### 2.3.2 Create a blockchain account (optional).
+#### 4.2 Create a blockchain account (optional).
 
 Execute the following command under the `storage-demo` folder to create an account if you haven't already done so:
 
@@ -149,7 +147,7 @@ npm run account:create
 If your account lacks test tokens, join [Discard](https://discord.com/invite/artela)，and request some in `testnet-faucet` channel.
 
 
-#### 2.3.4  Deploy your contract
+### 4.3  Deploy your contract
 
 Execute the following command within the `storage-demo` folder, using the provided script:
 
@@ -162,10 +160,10 @@ npm run contract:deploy -- --abi ./build/contract/Storage.abi \
 
 Upon successful deployment, the terminal will display the contract address.
 
-### 2.4 Call Contract
+## 5. Call Contract
 Execute the following command within the `storage-demo` folder, call the Contract
 
-#### 2.4.1 send transaction for store
+### 5.1 Send transaction for store
 
 ```bash
 
@@ -182,7 +180,7 @@ npm run contract:call -- --contract {artToken-address}  \
 
 ```
 
-#### 2.4.2 check transaction
+### 5.2 Check transaction
 
 Confirm the successful on Artela Testnet [blockchain explorer](https://betanet-scan.artela.network/) using `transaction hash` in output.
 

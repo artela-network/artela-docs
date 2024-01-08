@@ -11,7 +11,7 @@ the EVM. Here are the steps, using `MetaMask` as an example, to configure the ne
 
 Launch the MetaMask extension or application.
 
-## 2. Connect MetaMask to Artela BetaNet
+## 2. Connect MetaMask to Artela TestNet
 
 If you're new to MetaMask, follow this guide
 on [How Add a Custom Network RPC](https://support.metamask.io/hc/en-us/articles/360043227612-How-to-add-a-custom-network-RPC)
@@ -27,7 +27,7 @@ Symbol (optional) : ART
 Block Explorer URL (optional): https://betanet-scan.artela.network/
 ```
 
-For more info about the new RPC URL configuration, refer to [artela betanet](../node/access-betanet).
+For more info about the new RPC URL configuration, refer to [Artela TestNet](/develop/node/access-testnet).
 
 Ensure all fields are correctly filled:
 
@@ -45,3 +45,7 @@ $request {address}
 ![img_4.png](img_4.png)
 
 Once you've completed these steps, your MetaMask is configured to interact with the Artela blockchain, and you have claimed test tokens on that network.
+
+## 4. Check Balance
+
+![img_1.png](img_1.png)
