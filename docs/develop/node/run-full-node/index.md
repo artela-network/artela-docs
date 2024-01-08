@@ -62,7 +62,7 @@ export PATH=$PATH:$HOME/go/bin
 
 ### Option 2: Download and Install Artelad
 
-Ask admin of Artela BetaNet for the download link.
+Ask admin of Artela TestNet for the download link.
 
 Uninstall and copy the binaray `artelad` to `/usr/local/bin`.
 
