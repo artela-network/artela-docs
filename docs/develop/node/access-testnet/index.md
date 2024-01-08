@@ -59,13 +59,3 @@ http://47.88.57.107:26657
 http://47.254.93.86:26657
 
 ```
-
-### 4. Net info
-
-```
-Network Name : artela betanet
-New RPC URL : https://betanet-rpc1.artela.network
-ChainID (optional): 11822
-Symbol (optional) : ART
-Block Explorer URL (optional): https://betanet-scan.artela.network/
-```
