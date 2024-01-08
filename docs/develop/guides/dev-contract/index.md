@@ -1,6 +1,5 @@
 
-
-# Develop a Smart Contract
+# Develop with Remix
 
 In this tutorial, we'll walk you through the process of creating and deploying a smart contract on Artela Testnet using Remix and MetaMask.
 
@@ -8,33 +7,7 @@ In this tutorial, we'll walk you through the process of creating and deploying a
 * [Metamask](https://metamask.io/)
 * [Remix](https://remix.ethereum.org/)
 
-
-## 1. Connect MetaMask to Artela BetaNet
-
-If you're new to MetaMask, follow this guide on [How Add a Custom Network RPC](https://support.metamask.io/hc/en-us/articles/360043227612-How-to-add-a-custom-network-RPC) for detailed instructions.
-
-1. Open MetaMask 
-2. chick  `Networks` > `Add a network` > `Add a network manually`
-
-```
-Network Name : artela betanet
-New RPC URL : https://betanet-rpc1.artela.network
-ChainID (optional): 11822
-Symbol (optional) : ART
-Block Explorer URL (optional): https://betanet-scan.artela.network/
-```
-
-For more info about the new RPC URL configuration, refer to [artela betanet](../node/access-betanet).
-
-Ensure all fields are correctly filled:
-
-![img_1.png ](img_2.png)
-
-## 2. Access TestNet Faucet
-
-Join Artela [Discord server](https://discord.com/invite/artela) to access the Testnet ART faucet. Request access and obtain Testnet ART with your wallet address. 
-
-## 3. Write a Smart Contract in Remix
+## 1. Write a Smart Contract in Remix
 
 Launch Remix. Configure Remix for Solidity development by selecting `SOLIDITY` under `Featured Plugins` on the main page. Navigate to `File Explorers` to manage your files.
 
@@ -64,9 +37,9 @@ contract MyCollectible is ERC721 {
 }
 ```
 
-## 4.Remix: Connect to Artela Testnet and Deploy
+## 2.Remix: Connect to Artela Testnet and Deploy
 
-Ensure the `artela betanet` network is selected on Metamask. Select `Injected Provider - MetaMask` as environment.
+Connecting a [wallet](/develop/guides/dev-contract). To ensure the `artela betanet` network is selected on Metamask. Select `Injected Provider - MetaMask` as environment.
 
 At Remix, on the left side
 
@@ -77,7 +50,7 @@ At Remix, on the left side
 
 ![img_9.png](img_9.png)
 
-## 5.Block Explorer
+## 3.Block Explorer
 
 Confirm the successful deployment on Artela Testnet [blockchain explorer](https://betanet-scan.artela.network/) using `transaction hash` in output.
 
