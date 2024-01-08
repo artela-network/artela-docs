@@ -149,7 +149,7 @@ in `testnet-faucet` channel.
 Execute the following command within the `my-first-aspect` folder, using the provided script:
 
 ```bash
-npm run contract:deploy --  --abi ./build/contract/HelloWorld.abi \
+npm run contract:deploy --  --abi ./build/contract/HelloWorld.abi \ 
                            --bytecode ./build/contract/HelloWorld.bin
 ```
 
@@ -212,7 +212,7 @@ postContractCall(input:PostContractCallInput):void {
 For detailed instructions, refer to the [Aspect Doc](/develop/core-concepts/aspect-programming).
 :::
 
-### 3.2. Access State Changes of Smart Contract in Aspect
+### 3.2. Access State Changes of Smart Contract
 
 To integrate the state of `HelloWord` contract with your Aspect, follow these steps:
 
