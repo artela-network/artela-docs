@@ -153,7 +153,7 @@ If you run your own full-node, just use `tcp://localhost:26657` as the address.
 Finally, let us set the `chain-id` of the blockchain we want to interact with:
 
 ```bash
-artelad config chain-id artela_11822-1
+artelad config chain-id <chain_id>
 ```
 
 ## Querying the State
