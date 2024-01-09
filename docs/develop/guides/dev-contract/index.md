@@ -39,14 +39,19 @@ contract MyCollectible is ERC721 {
 
 ## 2. Remix: Connect to Artela Testnet and Deploy
 
-Connecting a [wallet](/develop/guides/wallet-configuration). To ensure the `artela betaanet` network is selected on Metamask. Select `Injected Provider - MetaMask` as environment.
+Connecting Remix to MetaMask and deploying your smart contract involves a few straightforward steps:
 
-At Remix, on the left side
-
-1. Click the button `Deploy and run transactions`
-2. Set up the ENVIRONMENT is `Injected Provider - MetaMask` 
-3. Click `Deploy`,After that the metamask confirmation window will pop up
-4. Click `Confirm` to start deploying the contract.
+* Configure MetaMask for Artela Testnet:
+  * Open MetaMask and ensure that you are connected to the Artela Testnet. If Artela Testnet is not listed, you may need to add it manually. [Navigate to the network settings and input the Artela Testnet details.](/develop/guides/wallet-configuration)
+* Connect Remix to MetaMask 
+  * At Remix, on the left side, Click the button `Deploy and run transactions`. Set up the ENVIRONMENT is `Injected Provider - MetaMask[2]`
+* Deploy Your Smart Contract
+  * With MetaMask connected, you can now deploy your smart contract from Remix. 
+  * Compile your contract code and select the correct contract in Remix. 
+  * Click on the `Deploy[3]` button to initiate the deployment process.
+* Confirm Transaction in MetaMask
+  * MetaMask will prompt you to `Confirm[4]` the deployment transaction. 
+  * Review the details and confirm the transaction.
 
 ![img_9.png](img_9.png)
 
