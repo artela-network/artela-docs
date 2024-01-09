@@ -44,7 +44,7 @@ This will create a project directory with the following structure:
 ├── contracts                <-- Place your smart contracts here
 ├── package.json
 ├── project.config.json
-├── scripts                  <-- Utilitity scripts, including deploying, binding and etc.
+├── scripts                  <-- Utility scripts, including deploying, binding and etc.
 │   ├── aspect-deploy.cjs
 │   ├── bind.cjs
 │   ├── contract-call.cjs
@@ -144,7 +144,7 @@ npm run account:create
 
 > * --skfile : privateKey path for sender. (optional, default value: `./privateKey.txt`).
 
-If your account lacks test tokens, join [Discard](https://discord.com/invite/artela)，and request some in `testnet-faucet` channel.
+If your account lacks test tokens, join [Discord](https://discord.com/invite/artela)，and request some in `testnet-faucet` channel.
 
 
 ### 4.3  Deploy your contract
