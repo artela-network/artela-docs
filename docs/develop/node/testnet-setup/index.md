@@ -182,7 +182,7 @@ scp ./testnet/node3/artelad/* user@your-device-3:~/.artelad/
 Start the node in your devices.
 
 ```bash
-artelad start --pruning=nothing --log_level debug --minimum-gas-prices=0.0001uart --api.enable --json-rpc.api eth,txpool,personal,net,debug,web3,miner --api.enable
+artelad start --pruning=nothing --log_level debug --minimum-gas-prices=0.0001art --api.enable --json-rpc.api eth,txpool,personal,net,debug,web3,miner --api.enable
 ```
 
 ## 4. The genesis account
