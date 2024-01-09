@@ -31,7 +31,7 @@ For more info about the new RPC URL configuration, refer to [Artela TestNet](/de
 
 Ensure all fields are correctly filled:
 
-![img_1.png ](img_2.png)
+![img_1.png ](img_11.png)
 
 ## 3. Access TestNet Faucet
 

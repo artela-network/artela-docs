@@ -17,6 +17,6 @@ To acquire Test Tokens for your testing needs, follow these steps:
     ![img_1.png](img_1.png)
 
 * Step4: Config MetaMask to check balance
-  ![img.png](img_2.png)
+  ![img.png](img_4.png)
 
 * ![img.png](img.png)
