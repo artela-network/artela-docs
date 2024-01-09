@@ -40,7 +40,7 @@ make clean && make
 # find 'artelad' in ./build
 
 # you can copy the binary to $GOPATH/bin
-# this is unnecessary if your are going to run testenet in docker
+# this is unnecessary if your are going to run testnet in docker
 make install
 ```
 
@@ -166,7 +166,7 @@ sed -i 's/"extra_eips": \[\]/"extra_eips": \[3855\]/g' node3/artelad/config/gene
 
 ### 4). Copy the node configuration to your devices
 
-Copy each of the node configuretions in `artela/testenet/` to the device.
+Copy each of the node configurations in `artela/testnet/` to the device.
 
 ```bash
 scp ./testnet/node0/artelad/* user@your-device-0:~/.artelad/
@@ -182,12 +182,12 @@ scp ./testnet/node3/artelad/* user@your-device-3:~/.artelad/
 Start the node in your devices.
 
 ```bash
-artelad start --pruning=nothing --log_level debug --minimum-gas-prices=0.0001aartela --api.enable --json-rpc.api eth,txpool,personal,net,debug,web3,miner --api.enable
+artelad start --pruning=nothing --log_level debug --minimum-gas-prices=0.0001artela --api.enable --json-rpc.api eth,txpool,personal,net,debug,web3,miner --api.enable
 ```
 
 ## 4. The genesis account
 
-In the process of generating the testnet, each validator node has a corresponding EOA (Externally Owned Account) account with the encryption algorithm `eth_secp256k1`, which is written into the `genesis.json` file. Additionally, `5e21 aartela` have been deposited into each account. The key.info of each account is stored in
+In the process of generating the testnet, each validator node has a corresponding EOA (Externally Owned Account) account with the encryption algorithm `eth_secp256k1`, which is written into the `genesis.json` file. Additionally, `5e21 artela` have been deposited into each account. The key.info of each account is stored in
 
 `~/.artelad/config/keyring-test/node<validator_number>.json`.
 
