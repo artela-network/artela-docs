@@ -21,7 +21,7 @@ Once you've initiated the node, connect to the JSON-RPC port service here:
 ### 1. Basic Info
 
 ```
-Network Name : Artela Testnet
+Network Name : Artela TestNet
 New RPC URL : https://betanet-rpc1.artela.network
 ChainID (optional): 11822
 Symbol (optional) : ART

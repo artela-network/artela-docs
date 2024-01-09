@@ -1,7 +1,7 @@
 
 # Develop with Remix
 
-In this tutorial, we'll walk you through the process of creating and deploying a smart contract on Artela Testnet using Remix and MetaMask.
+In this tutorial, we'll walk you through the process of creating and deploying a smart contract on Artela TestNet using Remix and MetaMask.
 
 ## Pre-requisites
 * [Metamask](https://metamask.io/)
@@ -37,12 +37,12 @@ contract MyCollectible is ERC721 {
 }
 ```
 
-## 2. Remix: Connect to Artela Testnet and Deploy
+## 2. Remix: Connect to Artela TestNet and Deploy
 
 Connecting Remix to MetaMask and deploying your smart contract involves a few straightforward steps:
 
-* Configure MetaMask for Artela Testnet:
-  * Open MetaMask and ensure that you are connected to the Artela Testnet. If Artela Testnet is not listed, you may need to add it manually. [Navigate to the network settings and input the Artela Testnet details.](/develop/guides/wallet-configuration)
+* Configure MetaMask for Artela TestNet:
+  * Open MetaMask and ensure that you are connected to the Artela TestNet. If Artela TestNet is not listed, you may need to add it manually. [Navigate to the network settings and input the Artela TestNet details.](/develop/guides/wallet-configuration)
 * Connect Remix to MetaMask 
   * At Remix, on the left side, Click the button `Deploy and run transactions`. Set up the ENVIRONMENT is `Injected Provider - MetaMask[2]`
 * Deploy Your Smart Contract
@@ -57,9 +57,9 @@ Connecting Remix to MetaMask and deploying your smart contract involves a few st
 
 ## 3. Block Explorer
 
-Confirm the successful deployment on Artela Testnet [blockchain explorer](https://betanet-scan.artela.network/) using `transaction hash` in output.
+Confirm the successful deployment on Artela TestNet [blockchain explorer](https://betanet-scan.artela.network/) using `transaction hash` in output.
 
 
 ![img_3.png](img_3.png)
 
-Congratulations! You've successfully created and deployed a smart contract on Artela Testnet. Happy coding!
+Congratulations! You've successfully created and deployed a smart contract on Artela TestNet. Happy coding!

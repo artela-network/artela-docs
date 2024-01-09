@@ -20,7 +20,7 @@ for detailed instructions.
 chick  `Networks` > `Add a network` > `Add a network manually`
 
 ```
-Network Name : artela betanet
+Network Name : Artela TestNet
 New RPC URL : https://betanet-rpc1.artela.network
 ChainID (optional): 11822
 Symbol (optional) : ART
@@ -35,8 +35,8 @@ Ensure all fields are correctly filled:
 
 ## 3. Access TestNet Faucet
 
-Join Artela [Discord server](https://discord.com/invite/artela) to access the Testnet ART faucet.
-Request access and obtain Testnet ART with your wallet address.
+Join Artela [Discord server](https://discord.com/invite/artela) to access the TestNet ART faucet.
+Request access and obtain TestNet ART with your wallet address.
 
 ```shell
 $request {address}

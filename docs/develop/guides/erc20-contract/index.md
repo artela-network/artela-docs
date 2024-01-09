@@ -228,6 +228,6 @@ npm run contract:send   -- --skfile ./tokenPk.txt
 
 ### 5.2 Check transaction
 
-Confirm the successful `transfer` on Artela Testnet [blockchain explorer](https://testnet-scan.artela.network/) using `transaction hash` in output. 
+Confirm the successful `transfer` on Artela TestNet [blockchain explorer](https://testnet-scan.artela.network/) using `transaction hash` in output. 
 
 ![img.png](img.png)
