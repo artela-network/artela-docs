@@ -57,11 +57,7 @@ npm install web3
 ```
 
 Next, to create a `deploy.mjs` file, you can use the following code example to write a script that connects to an
-Ethereum
-node, compiles the smart contract, and deploys it.
-Replace [<Artela TestNet\>]((/develop/node/access-testnet)), <Your Private Key\>, <Your Contract ABI File\>, and <Your
-Contract Source Code File\> with your
-actual TestNet Rpc URL, private key, the path to your smart contract ABI file, and smart contract source code file.
+Ethereum node, compiles the smart contract, and deploys it.
 
 ```javascript
 "use strict";
@@ -130,6 +126,16 @@ deploy().then();
 
 ```
 
+Make sure to replace the placeholder values in the script with your actual value.
+
+* **Artela TestNet:** The node connection to Artela,You can fill in 'https://betanet-rpc1.artela.network'. For more
+  information about testnet, please refer to [TestNet Info](/develop/node/access-testnet).
+* **Your Private Key:** The private key is crucial for signing and executing transactions linked to its associated
+  account. Obtain it by creating a wallet or importing an existing account. Refer
+  to [Wallet Configuration](/develop/guides/wallet-configuration) for further details.
+* **Your Contract ABI File:** The path to your smart contract ABI file.
+* **Contract Source Code File:** The path to your smart contract source code file.
+
 Run the deployment script.
 
 ```shell
@@ -159,10 +165,8 @@ Make note of the `contractAddress` value after successful deployment, as it is r
 
 ## 4. Call the Smart Contract
 
-to create a `call.mjs` file, you can use the following code example to write a script that connects to an Ethereum
+To create a `call.mjs` file, you can use the following code example to write a script that connects to an Ethereum
 node,and call it.
-Replace [<Artela TestNet\>]((/develop/node/access-testnet)), <Your Private Key\>, <Your Contract ABI File\>, and
- \<Your Contract Address\>, with your actual TestNet Rpc URL, private key, the path to your smart contract ABI file, and smart contract address .
 
 ```javascript
 "use strict";
@@ -175,15 +179,16 @@ async function call() {
 
     // Replace with the node connection to Artela
     let node = '<Artela TestNet>';
-
+    
+    // Replace with your private key
+    let privateKey = '<Your Private Key>';
+    
     // Replace with the path to your smart contract abi file
     let abiPath = '<Your Contract ABI File>';
 
-    // Replace with the path to your smart contract source code file 
+    // Replace with the path to your smart contract address
     let contractAddr = '<Your Contract Address>';
 
-    // Replace with your private key
-    let privateKey = '<Your Private Key>';
 
     // init connection to Artela node
     const web3 = new Web3(node);
@@ -203,6 +208,16 @@ async function call() {
 call().then();
 
 ```
+
+Make sure to replace the placeholder values in the script with your actual value.
+
+* **Artela TestNet:** The node connection to Artela,You can fill in 'https://betanet-rpc1.artela.network'. For more
+  information about testnet, please refer to [TestNet Info](/develop/node/access-testnet).
+* **Your Private Key:** The private key is crucial for signing and executing transactions linked to its associated
+  account. Obtain it by creating a wallet or importing an existing account. Refer
+  to [Wallet Configuration](/develop/guides/wallet-configuration) for further details.
+* **Your Contract ABI File:** The path to your smart contract ABI file.
+* **Your Contract Address:** The contract address generated after deploy.
 
 Run the call script.
 
