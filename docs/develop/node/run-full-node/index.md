@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Run a full node
 
-This document provides an introduction to joining the Artela Testnet as a full node.
+This document provides an introduction to joining the Artela TestNet as a full node.
 > It is recommended to use `ubuntu` operating system.
 
 **Hardware Recommended Requirements:**
