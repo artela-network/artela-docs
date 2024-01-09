@@ -62,9 +62,9 @@ export PATH=$PATH:$HOME/go/bin
 
 ### Option 2: Download and Install Artelad
 
-Ask admin of Artela TestNet for the download link.
+Find the binaray `artelad` at Artela Network github repository, [releases link](https://github.com/artela-network/artela/releases).
 
-Uninstall and copy the binaray `artelad` to `/usr/local/bin`.
+Copy the binaray `artelad` to `/usr/local/bin`.
 
 ## 2. Init node
 
