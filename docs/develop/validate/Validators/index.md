@@ -73,15 +73,23 @@ artelad query staking validator <operator_address>
 
 ![](./img/v18.jpg)
 
-### 3.Convert bech32 address to hex format
+### 3.Convert bech32(cosmos format) address to hex(evm format) address
 
 ```bash
-artelad debug addr <address>
+artelad debug addr <betch32 address>
 ```
 
 ![](./img/v3.png)
 
-### 4.Query all local accounts
+### 4.Convert hex(evm format) address to bech32(cosmos format) address
+
+```bash
+artelad debug addr <hex address>
+```
+
+![](./img/v20.jpg)
+
+### 5.Query all local accounts
 
 ```bash
 artelad keys list
@@ -89,7 +97,7 @@ artelad keys list
 
 ![](./img/v4.png)
 
-### 5.Query account through address
+### 6.Query account through address
 
 ```bash
 artelad query account <account_name>
@@ -97,7 +105,7 @@ artelad query account <account_name>
 
 ![](./img/v7.png)
 
-### 6.Query tx trough tx_hash
+### 7.Query tx trough tx_hash
 
 ```bash
 artelad query tx <tx_hash>
@@ -105,7 +113,7 @@ artelad query tx <tx_hash>
 
 ![](./img/v19.png)
 
-### 7.Unjail validator
+### 8.Unjail validator
 
 ```bash
 artelad tx slashing unjail \
