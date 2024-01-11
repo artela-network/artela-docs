@@ -39,3 +39,21 @@ Block Explorer URL (optional): https://betanet-scan.artela.network/
 - **Block Hash**: 94077D92B3DE77C3AE94BEBF496601E7CBA3EEF7CD7E17BD8513F16D9DDA8712
 
 > ⚠️Note: Pick up the latest block and height from the <https://betanet-scan.artela.network> as your trusted block and height.
+
+### 4. Persistent nodes
+
+```
+
+bec6934fcddbac139bdecce19f81510cb5e02949@47.254.24.106:26656
+32d0e4aec8d8a8e33273337e1821f2fe2309539a@47.88.58.36:26656
+
+```
+
+### 5. RPC servers
+
+```
+
+http://47.254.24.106:26657
+http://47.88.58.36:26657
+
+```
