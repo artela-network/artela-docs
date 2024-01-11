@@ -16,7 +16,7 @@ const LearnThroughCodingCards = [
     {
         name: 'Develop a Smart Contract',
         url: {
-            page: 'develop/get-started/dev-contract',
+            page: 'develop/get-started/hello-world-contract',
         },
         description: (
             <Translate id="dev.overview.hello-world">
@@ -27,7 +27,7 @@ const LearnThroughCodingCards = [
     {
         name: 'Develop an Aspect',
         url: {
-            page: 'develop/get-started/sol-hello-world',
+            page: 'develop/get-started/dev-aspect',
         },
         description: (
             <Translate id="dev.overview.reentrancy">

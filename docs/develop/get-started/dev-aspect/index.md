@@ -46,7 +46,7 @@ This will create a project directory with the following structure:
 ├── contracts                <-- Place your smart contracts here
 ├── package.json
 ├── project.config.json
-├── scripts                  <-- Utilitity scripts, including deploying, binding and etc.
+├── scripts                  <-- Utility scripts, including deploying, binding and etc.
 │   ├── aspect-deploy.cjs
 │   ├── bind.cjs
 │   ├── contract-call.cjs
@@ -141,7 +141,7 @@ For more detailed usage information about this command, please
 refer to the [create-account command](/develop/reference/aspect-tool/create-account) documentation.
 :::
 
-If your account lacks test tokens, join [Discard](https://discord.com/invite/artela)，and request some
+If your account lacks test tokens, join [Discord](https://discord.com/invite/artela)，and request some
 in `testnet-faucet` channel.
 
 #### 2.3.4  Deploy your contract
@@ -214,7 +214,7 @@ For detailed instructions, refer to the [Aspect Doc](/develop/core-concepts/aspe
 
 ### 3.2. Access State Changes of Smart Contract
 
-To integrate the state of `HelloWord` contract with your Aspect, follow these steps:
+To integrate the state of the `HelloWorld` contract with your Aspect, follow these steps:
 
 In `aspect/index.ts`, add your Aspect to check the transaction, if `world` function is called, then revert:
 
@@ -311,7 +311,7 @@ the [bind-aspect command](/develop/reference/aspect-tool/bind-aspect) documentat
 
 ## 5. Test the Smart Contract and Aspect Integration
 
-Now that the `HelloWord` contract and Aspect are bound, call `world` to test.
+Now that the `HelloWorld` contract and Aspect are bound, call `world` to test.
 
 ```bash
 npm run contract:call -- --contract {smart-contract-address}  \

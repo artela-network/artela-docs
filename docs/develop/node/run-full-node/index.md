@@ -37,7 +37,7 @@ export PATH=$PATH:/usr/local/go/bin
 
 You need to create a folder to store your source files, for example, `/home/user1/go/src`. Replace `user1` to your account, e.g. `ubuntu`.
 ```bash
-mkdir -p /home/user1/go/sr
+mkdir -p /home/user1/go/src
 ```
 Then, set `/home/user1/go` as the GOPATH by using the following command: 
 ```bash
@@ -62,9 +62,9 @@ export PATH=$PATH:$HOME/go/bin
 
 ### Option 2: Download and Install Artelad
 
-Find the binaray `artelad` at Artela Network github repository, [releases link](https://github.com/artela-network/artela/releases).
+Find the binary `artelad` at Artela Network github repository, [releases link](https://github.com/artela-network/artela/releases).
 
-Copy the binaray `artelad` to `/usr/local/bin`.
+Copy the binary `artelad` to `/usr/local/bin`.
 
 ## 2. Init node
 
@@ -82,9 +82,9 @@ mv genesis.json $HOME/.artelad/config/genesis.json
 
 **3). Configure**
 
-Get presistent seeds from [2. Presistent nodes](./access-testnet#public-information-on-testnet)
+Get presistent seeds from [2. Persistent nodes](./access-testnet#public-information-on-testnet)
 
-Add two of them to `seeds` in `app.toml`
+Add two of them to `seeds` in `config.toml`
 
 ```bash
 cd $HOME/.artelad/config

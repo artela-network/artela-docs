@@ -37,7 +37,7 @@ aspect-tool init
 ├── contracts                <-- Place your smart contracts here
 ├── package.json
 ├── project.config.json
-├── scripts                  <-- Utilitity scripts, including deploying, binding and etc.
+├── scripts                  <-- Utility scripts, including deploying, binding and etc.
 │   ├── aspect-deploy.cjs
 │   ├── bind.cjs
 │   ├── contract-call.cjs
