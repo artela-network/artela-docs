@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Operation
+# Operation Call
 
 ## Intro
 
@@ -156,7 +156,7 @@ npm run contract:call -- --contract 0x0000000000000000000000000000000000a27e14 \
 
 If the protection succeeded, you will see
 
-`==== reuslt=== HelloWorld`
+`==== reuslt=== 0x48656c6c6f576f726c64`
 
 ## 8. Send Transaction
 
