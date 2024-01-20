@@ -39,7 +39,7 @@ npm run contract:deploy --  --skfile ./privateKey2.txt \
 ## usage 3: deploy a contract 'xxx.sol' with 'constructor(uint num, address owner, string name)' constructor.
 npm run contract:deploy -- --abi ./build/contract/xxx.abi \
                                 --bytecode ./build/contract/xxx.bin \
-                                --args '[1, 0xAABB...CCDD, "a"]'
+                                --args  1  0xAABB...CCDD "a"
 ```
 
 ### Command Output
