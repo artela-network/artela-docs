@@ -65,7 +65,7 @@ This will create a project directory with the following structure:
 
 Within the `contracts` directory of your project, create your smart contract source files with a `.sol` extension.
 
-For example, create a `HelloWorld.sol` file:
+For example, create a `Counter.sol` file:
 
 <!-- @formatter:off -->
 ```solidity
@@ -82,7 +82,12 @@ contract Counter {
   function isOwner(address user) external view returns (bool result) {
     return user == owner;
   }
-  function add(uint256 number) public {
+  modifier onlyOwner() {
+    require(msg.sender == owner);
+    _;
+  }
+  // only owner can do add
+  function add(uint256 number) public onlyOwner {
     counter = counter + number;
   }
   function get() external view returns (uint256 result)  {
@@ -91,6 +96,7 @@ contract Counter {
 }
 ```
 <!-- @formatter:on -->
+
 
 ### 2.2. Compile the Smart Contract
 
@@ -148,10 +154,12 @@ in `testnet-faucet` channel.
 
 Execute the following command within the `verify-aspect` folder, using the provided script:
 
+<!-- @formatter:off -->
 ```bash
 npm run contract:deploy --  --abi ./build/contract/Counter.abi \
                            --bytecode ./build/contract/Counter.bin
 ```
+<!-- @formatter:on -->
 
 > ✅ Upon successful deployment, the terminal will display the contract address.
 
@@ -187,12 +195,10 @@ class Aspect implements ITransactionVerifier {
 
     verifyTx(input: TxVerifyInput): Uint8Array {
         const Passwd: string = "123456";
-        // looks up session key -> account mapping
         const validation = uint8ArrayToHex(input.validationData);
-        const goldMan = sys.aspect.property.get<Uint8Array>("GoldMan");
-        // retrieve account and check if it matches
+        // Verify whether the password matches the expected value.
         sys.require(validation == Passwd, 'invalid data');
-        return sys.aspect.property.get<Uint8Array>("GoldMan");
+        return sys.aspect.property.get<Uint8Array>("Owner");
     }
 
 }
@@ -225,12 +231,12 @@ Deploy your compiled Aspect:
 ```shell
 npm run aspect:deploy -- --wasm ./build/release.wasm \
                          --joinPoints VerifyTx \
-                         --properties '[{"key":"GoldMan","value":"{gold-man-address}"}]' 
+                         --properties '[{"key":"Owner","value":"{owner-account}"}]' 
 
 ```
 <!-- @formatter:on -->
 
-replace the placeholder {gold-man-address} with the real payment accounts. like:
+replace the placeholder {owner-account} with the real payment accounts. like:
 0x08D721275c6DbB33bc688B62ef199bbd709154c9
 
 
@@ -266,14 +272,14 @@ the [bind-aspect command](/develop/reference/aspect-tool/bind-aspect) documentat
 ## 5. Bind the EOA Account to Aspect
 
 ```bash
-npm run contract:bind -- --contract {gold-man-address} \
+npm run contract:bind -- --contract {owner-account} \
                          --abi ./build/contract/Counter.abi \
                          --aspectId {aspect-Id} \
-                         --skfile {gold-man-private-key}
+                         --skfile {owner-private-key}
 ```
 
-* replace the placeholder {gold-man-address} with the golden man address.
-* replace the placeholder {gold-man-private-key} with the golden man private key file.
+* replace the placeholder {owner-account} with the owner account address.
+* replace the placeholder {owner-private-key} with the owner account private key file.
 * replace the placeholder {aspect-Id} with the information obtained from step `3.4. Deploy the Aspect`.
 
 > ✅ The binding process has been successful, and the transaction receipt has been printed.
@@ -286,7 +292,7 @@ the [bind-aspect command](/develop/reference/aspect-tool/bind-aspect) documentat
 ## 5. Test the Smart Contract and Aspect Integration
 
 Within the `scripts` directory of your project,Create a Verify tx call script that generates a transaction that is not
-signed by {gold-man} and uses the password provided by {gold-man} to make the transaction.
+signed by {owner} and uses the password provided by {owner} to make the transaction.
 For example, create a `verify.cjs` file:
 
 ```javascript
@@ -378,7 +384,7 @@ async function call() {
         [password, contractCallData]);
     // Append magic prefix and checksum to the encoded data
     encodedData = '0xCAFECAFE' + web3.utils.keccak256(encodedData).slice(2, 10) + encodedData.slice(2);
-    let nonce = await web3.eth.getTransactionCount("{gold-man-address}");
+    let nonce = await web3.eth.getTransactionCount("{owner-account}");
     let gasPrice = await web3.eth.getGasPrice();
     let chainId = await web3.eth.getChainId();
 
@@ -413,7 +419,7 @@ call().then();
 
 ```
 
-* replace the placeholder {gold-man-address} with the golden man address.
+* replace the placeholder {owner-account} with the owner account address.
 
 This script is used to create
 an [unsigned Ethereum transaction with validation data](/develop/reference/aspect-lib/join-points/verify-aspect#to-trigger).
@@ -462,6 +468,22 @@ transactionIndex: 0,
 type: '0x0'
 }
 
+```
+
+Now let's check if the counter value in the contract has changed;
+
+```shell
+npm run contract:call -- --contract {smart-contract-address} \
+                        --abi ./build/contract/Counter.abi \
+                        --method get \
+                        --skfile ./test_account.txt
+```
+* replace the placeholder {smart-contract-address} with the information obtained from
+  step `2.3.4  Deploy your contract`.
+  
+If the command is executed successfully, will see
+```shell
+ ==== reuslt===1000
 ```
 
 Congratulations! You've learned the basics of Aspect development. For a deeper dive, refer to our
