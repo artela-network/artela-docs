@@ -223,13 +223,13 @@ class Aspect implements IPreContractCallJP {
 
             for (let i = 0; i < size; i++) {
                 var key = arrayKeys[i];
-                var oneCall = ethCallTree.calls.get(key);
-                const parentCallMethod = ethereum.parseMethodSig(oneCall.data);
+                var parentCall = ethCallTree.calls.get(key);
+                const parentCallMethod = ethereum.parseMethodSig(parentCall.data);
                 if (noReentrantMethods.includes(parentCallMethod)) {
                     // If yes, revert the transaction.
                     sys.revert(`illegal transaction: method reentered from ${currentCallMethod} to ${parentCallMethod}`);
                 }
-            }
+            } 
         }
     }
 
