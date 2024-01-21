@@ -6,7 +6,11 @@ sidebar_position: 3
 
 ## Intro
 
-Here's the detailed process for data interchange between a smart contract and Aspect using `transientStorage`:
+Here's the detailed process for data interchange between a smart contract and Aspect using `transientStorage`.
+
+In this scenario, data is written at the `preTxExecute` join point, allowing the contract to read the data through the
+`getAspectContext` method. Furthermore, data is written in the contract's `setAspectContext` method, and the written data is
+subsequently retrieved during the `preTxExecute` join point.
 
 ## 1. Init Aspect dApp
 
@@ -50,31 +54,31 @@ pragma solidity >=0.8.0 <0.9.0;
  * @dev Store & retrieve value in a variable
  */
 contract Storage {
-  address private deployer;
+    address private deployer;
 
-  constructor() {
-    deployer = msg.sender;
-  }
-
-  function isOwner(address user) external view returns (bool result) {
-    if (user == deployer) {
-      return true;
-    } else {
-      return false;
+    constructor() {
+        deployer = msg.sender;
     }
-  }
 
-  function getAspectContext(address aspectId, string calldata key) public returns (string memory validationData) {
-    bytes memory contextKey = abi.encodePacked(aspectId, key);
-    (bool success, bytes memory returnData) = address(0x64).call(contextKey);
-    validationData = success ? string(returnData) : '';
-  }
+    function isOwner(address user) external view returns (bool result) {
+        if (user == deployer) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
-  function setAspectContext(string calldata key, string calldata value) public returns (bool) {
-    bytes memory contextKey = abi.encode(key, value);
-    (bool success,) = address(0x66).call(contextKey);
-    return success;
-  }
+    function getAspectContext(address aspectId, string calldata key) public returns (string memory validationData) {
+        bytes memory contextKey = abi.encodePacked(aspectId, key);
+        (bool success, bytes memory returnData) = address(0x64).call(contextKey);
+        validationData = success ? string(returnData) : '';
+    }
+
+    function setAspectContext(string calldata key, string calldata value) public returns (bool) {
+        bytes memory contextKey = abi.encode(key, value);
+        (bool success,) = address(0x66).call(contextKey);
+        return success;
+    }
 }
 ```
 
@@ -110,53 +114,55 @@ utilized in the upcoming commands.
 
 ## 5. Create Aspect
 
-The Aspect source files can be found in `aspect/index.ts`. We will add the following logic to exchange data with Smart Contract.
+The Aspect source files can be found in `aspect/index.ts`. We will add the following logic to exchange data with Smart
+Contract.
 
 * In the preTxExecute pointcut, the key-value pair `ToContract => HelloWorld` is written to transientStorage before the
-contract is executed. Subsequently,call the `getAspectContext({aspectId},'ToContract')` method in the contract can
-retrieve the value 'HelloWorld'.
+  contract is executed. Subsequently,call the `getAspectContext({aspectId},'ToContract')` method in the contract can
+  retrieve the value 'HelloWorld'.
 
-* After the entry point following the `postTxExecute` occurs and the contract is executed, you can obtain the value of the
-`setAspectContext()` contract method by calling  `transientStorage.get()` at this pointcut.
-
+* After the entry point following the `postTxExecute` occurs and the contract is executed, you can obtain the value of
+  the
+  `setAspectContext()` contract method by calling  `transientStorage.get()` at this pointcut.
 
 ```typescript
 import {
-  allocate,
-  entryPoint,
-  ethereum,
-  execute,
-  IPostTxExecuteJP,
-  IPreTxExecuteJP,
-  PostTxExecuteInput,
-  PreTxExecuteInput,
-  sys,BytesData,
-  uint8ArrayToHex,
+    allocate,
+    entryPoint,
+    ethereum,
+    execute,
+    IPostTxExecuteJP,
+    IPreTxExecuteJP,
+    PostTxExecuteInput,
+    PreTxExecuteInput,
+    sys, BytesData,
+    uint8ArrayToHex,
 } from '@artela/aspect-libs';
 import {Protobuf} from "as-proto/assembly";
+
 class StoreAspect
-        implements IPostTxExecuteJP, IPreTxExecuteJP {
-  isOwner(sender: Uint8Array): bool {
-    return true
-  }
-
-  preTxExecute(input: PreTxExecuteInput): void {
-    //for smart contract call
-    sys.aspect.transientStorage.get<string>('ToContract').set<string>('HelloWorld');
-  }
-
-  postTxExecute(input: PostTxExecuteInput): void {
-    const to = uint8ArrayToHex(input.tx!.to);
-    let txData = sys.hostApi.runtimeContext.get("tx.data");
-    const txDataPt = Protobuf.decode<BytesData>(txData, BytesData.decode);
-    const parentCallMethod = ethereum.parseMethodSig(txDataPt.data);
-    const value = sys.aspect.transientStorage.get<string>('ToAspect', to).unwrap();
-    // setAspectContext method signature value is `9cf3ef1e`
-    if(parentCallMethod=="9cf3ef1e") {
-      //'HelloAspect' here is set from smart contract
-      sys.require(value == "HelloAspect", "failed to get value by contract setting.");
+    implements IPostTxExecuteJP, IPreTxExecuteJP {
+    isOwner(sender: Uint8Array): bool {
+        return true
     }
-  }
+
+    preTxExecute(input: PreTxExecuteInput): void {
+        //for smart contract call
+        sys.aspect.transientStorage.get<string>('ToContract').set<string>('HelloWorld');
+    }
+
+    postTxExecute(input: PostTxExecuteInput): void {
+        const to = uint8ArrayToHex(input.tx!.to);
+        let txData = sys.hostApi.runtimeContext.get("tx.data");
+        const txDataPt = Protobuf.decode<BytesData>(txData, BytesData.decode);
+        const parentCallMethod = ethereum.parseMethodSig(txDataPt.data);
+        const value = sys.aspect.transientStorage.get<string>('ToAspect', to).unwrap();
+        // setAspectContext method signature value is `9cf3ef1e`
+        if (parentCallMethod == "9cf3ef1e") {
+            //'HelloAspect' here is set from smart contract
+            sys.require(value == "HelloAspect", "failed to get value by contract setting.");
+        }
+    }
 
 }
 
@@ -170,6 +176,7 @@ export {execute, allocate};
 ```
 
 ## 6. Deploy the Aspect
+
 Build your Aspect:
 
 ```shell
@@ -202,13 +209,17 @@ Deploying the Aspect doesn't automatically activate it. To make it functional, b
                             --abi ./build/contract/Storage.abi \
                             --aspectId {aspect-Id}
 ```
+
 * replace the placeholder {contractAddress} with the information obtained from step 4. deploy the smart contract.
 * replace the placeholder {aspect-Id} with the information obtained from step 6. Deploy the Aspect.
 
 If the command is executed successfully, will see `== aspect bind success == `.
 
 ## 8. Test GetAspectContext
-Now, let's check whether the `GetAspectContext` method in the contract is able to retrieve the values written at the `preTxExecute` join point.
+
+Now, let's check whether the `GetAspectContext` method in the contract is able to retrieve the values written at
+the `preTxExecute` join point.
+
 ```shell
  npm run contract:call -- --contract {contractAddress} \
                           --abi ./build/contract/Storage.abi  \
@@ -232,7 +243,9 @@ Now, let's verify whether the `SetAspectContext` method in the contract has been
                           --method setAspectContext \
                           --args ToAspect HelloAspect
 ```
+
 If the command is executed successfully, will see
+
 ```shell
 ==== reuslt=== true
 ```
