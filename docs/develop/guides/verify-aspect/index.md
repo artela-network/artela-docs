@@ -289,7 +289,7 @@ For more detailed usage information about this command, please refer to
 the [bind-aspect command](/develop/reference/aspect-tool/bind-aspect) documentation.
 :::
 
-## 5. Test the Smart Contract and Aspect Integration
+## 6. Test the Smart Contract and Aspect Integration
 
 Within the `scripts` directory of your project,Create a Verify tx call script that generates a transaction that is not
 signed by {owner} and uses the password provided by {owner} to make the transaction.

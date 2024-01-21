@@ -233,7 +233,7 @@ If the command is executed successfully, will see
 ==== reuslt=== HelloWorld
 ```
 
-## 8. Test SetAspectContext
+## 9. Test SetAspectContext
 
 Now, let's verify whether the `SetAspectContext` method in the contract has been successfully executed and written.
 
