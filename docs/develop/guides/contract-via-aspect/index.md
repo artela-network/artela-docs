@@ -208,9 +208,7 @@ Deploying the Aspect doesn't automatically activate it. To make it functional, b
 If the command is executed successfully, will see `== aspect bind success == `.
 
 ## 8. Test GetAspectContext
-
-Execute the re-entrant attack on the simplified Curve contract with Aspect protection, and watch the output.
-
+Now, let's check whether the `GetAspectContext` method in the contract is able to retrieve the values written at the `preTxExecute` join point.
 ```shell
  npm run contract:call -- --contract {contractAddress} \
                           --abi ./build/contract/Storage.abi  \
@@ -220,11 +218,13 @@ Execute the re-entrant attack on the simplified Curve contract with Aspect prote
 
 If the command is executed successfully, will see
 
-`==== reuslt=== HelloWorld`
+```shell
+==== reuslt=== HelloWorld
+```
 
 ## 8. Test SetAspectContext
 
-Execute the re-entrant attack on the simplified Curve contract with Aspect protection, and watch the output.
+Now, let's verify whether the `SetAspectContext` method in the contract has been successfully executed and written.
 
 ```shell
  npm run contract:call -- --contract {attackAddress} \
@@ -233,7 +233,7 @@ Execute the re-entrant attack on the simplified Curve contract with Aspect prote
                           --args ToAspect HelloAspect
 ```
 If the command is executed successfully, will see
-
-`==== reuslt=== true`
-
+```shell
+==== reuslt=== true
+```
  
