@@ -167,7 +167,7 @@ If the protection succeeded, you will see
                           --args {aspectId}  0x1167c2e50dFE34b9Ad593d2c6694731097147317
 ```
 
-If the protection succeeded, you will see a receipt like this:
+If the command succeeded, you will see a receipt like this:
 ```json
 {
   blockHash: '0x8779c15cca64b2c92d19b00c2b61124cea3c3f4b8fd11bc...',
