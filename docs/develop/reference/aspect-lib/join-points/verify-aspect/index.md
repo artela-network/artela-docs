@@ -19,14 +19,15 @@ interface ITransactionVerifier extends IAspectBase {
   verifyTx(input: TxVerifyInput): Uint8Array;
 }
 ```
+
 * **Parameter**
-   * input: TxVerifyInput; The base layer will deliver the TxVerifyInput object to Aspect in this join point.
-     - `input.block.number`: current block number.
-     - `input.tx.from`: caller of the transaction.
-     - `input.tx.to`: to address of the transaction.
-     - `input.tx.hash`: hash of the transaction.
+    * input: TxVerifyInput; The base layer will deliver the TxVerifyInput object to Aspect in this join point.
+        - `input.block.number`: current block number.
+        - `input.tx.from`: caller of the transaction.
+        - `input.tx.to`: to address of the transaction.
+        - `input.tx.hash`: hash of the transaction.
 * **Returns**
-   * Uint8Array; verified account address. 
+    * Uint8Array; verified account address.
 
 ## Example
 
@@ -116,7 +117,6 @@ found at the following table.
 | [sys.hostApi.trace.queryCallTree](/develop/reference/aspect-lib/components/sys-hostapi#2-querycalltree )                    | ❌            | Returns the call tree of EVM execution.                                                                                                                  |
 | [sys.hostApi.trace.queryStateChange](/develop/reference/aspect-lib/components/sys-hostapi#1-querystatechange)               | ❌            | Returns the state change in EVM execution for the specified key.                                                                                         |
 
-
 ## Runtime context
 
 The Aspect Runtime Context encapsulates data generated through the consensus process. With the acquired Runtime Context
@@ -129,12 +129,12 @@ type of data or information.
 
 const isCall = sys.hostApi.runtimeContext.get('isCall');
 // decode BoolData
-const isCallData = Protobuf.decode<BoolData>(isCall, BoolData.decode);
+const isCallData = Protobuf.decode < BoolData > (isCall, BoolData.decode);
 sys.log('is call' + ' ' + isCallData.data.toString());
 
 const number = sys.hostApi.runtimeContext.get('block.header.number');
 // decode UintData
-const numberData = Protobuf.decode<UintData>(number, UintData.decode);
+const numberData = Protobuf.decode < UintData > (number, UintData.decode);
 sys.log('block.header.number' + ' ' + numberData.data.toString(10));
 
 ```
@@ -193,3 +193,35 @@ sys.log('block.header.number' + ' ' + numberData.data.toString(10));
 | env.consensusParams.appVersion               | UintData        | Get the ABCI application version.                                                                                                                                                         |
 | aspect.id                                    | BytesData       | Returns current aspect id.                                                                                                                                                                |
 | aspect.version                               | UintData        | Returns current aspect version.                                                                                                                                                           |
+
+## To trigger
+
+To trigger the 'VerifyTx' join point, a customized verification transaction without a signature is necessary. The format
+of this transaction is as follows:
+
+```shell
+magic prefix + checksum(encodedData) + encodedData(validation data + raw calldata)
+```
+
+**Description：**
+> * 0xCAFECAFE serves as a fixed value with a magical prefix.
+> * checksum(encodedData) represents a 4-byte checksum of the encoded data.
+> * encodedData is the result of ABI encoding, combining validation data and raw call data using `ABI.encode(
+    ValidationData, CallData)."
+
+Example:
+
+```shell
+0xCAFECAFE75bac07d00000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000
+0000000000000000000000000c000000000000000000000000000000000000000000000000000000000000000557d7cfdeff97cbabdc4124c779d51
+bb2520cbdc769840c6fee4566e23c7c22ea2a3e071dc794283b70608de4566c9dc0fd5f1854d7032676996fd95284693ecad5b2eeca9864734af5131
+ed015c52cd1b5b3d9f841c000000000000000000000000000000000000000000000000000000000000000000000000000000000000241003e2d2000
+000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000
+```
+
+* 0xCAFECAFE is a magical prefix.
+* 75bac07d is 4-byte checksum of the encoded data. calculate the checksum like `keccak256(encodedData).slice(2, 10)`.
+* The remaining bytes represent the result of ABI encoding for ValidationData and CallData. like `abi.encodeParameters(['bytes', 'bytes'], [validationData, contractCallData])`.
+
+Here is a case demonstration on how to [create a customized verification transaction](/develop/guides/verify-aspect).
+Through this example, you can gain a clearer understanding of how to utilize Verify Tx.

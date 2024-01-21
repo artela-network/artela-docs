@@ -24,6 +24,8 @@ npm install -g @artela/aspect-tool
 mkdir -p apsect-demo && cd apsect-demo
 
 aspect-tool init 
+
+npm install
 ```
 
 The init command automatically creates the recommended directory structure and configuration files.
@@ -152,7 +154,7 @@ The assembly directory, which contains the AssemblyScript sources compiled into 
 WebAssembly by executing the build command found in assembly/index.ts.
 
 ```shell
-npm run asbuild
+npm run aspect:build
 ```
 Doing so will emit the compiled binaries, bindings and definition files to the `build/` directory.
 

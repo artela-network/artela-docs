@@ -30,12 +30,11 @@ public get(key: string): Uint8Array
 <!-- @formatter:on -->
 
 * Parameter
-    * keys：string，the existing supported keys are;
-      see [key context keys](/develop/reference/aspect-lib/components/context-keys)
+    * keys：string，the existing supported keys are; Each join point has permission control over access to the key, for example: [PreContractCall Key table's](/develop/reference/aspect-lib/join-points/pre-contract-call#key-table) Context key. 
 
 * Returns
     * data: Uint8Array，The data type returned varies depending on the key of the
-      query,see [key context key Response Type](/develop/reference/aspect-lib/components/context-keys)
+      query,Each key table for every join point has a column named "Value Type" to display the corresponding return type for that key. for example: [PreContractCall Key table's](/develop/reference/aspect-lib/join-points/pre-contract-call#key-table) Value type.
 
 * Example
 

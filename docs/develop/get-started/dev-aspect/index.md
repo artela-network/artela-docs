@@ -13,7 +13,7 @@ transaction lifecycle. In this example, we'll show how Aspect can identify and r
 * [Node.js](https://nodejs.org/)
 * [solc](https://docs.soliditylang.org/en/v0.8.20/installing-solidity.html)
 
-## 1.Setting up a new project
+## 1. Setting up a new project
 
 Make sure you have a recent version of [Node.js](https://nodejs.org/) and npm installed,
 Start by installing the `aspect-tool`:
@@ -278,7 +278,7 @@ npm run aspect:build
 Deploy your compiled Aspect:
 
 ```shell
-node scripts/aspect-deploy.cjs --wasm ./build/release.wasm --joinPoints PostContractCall
+npm run aspect:deploy  --wasm ./build/release.wasm --joinPoints VerifyTx
 ```
 
 > ✅ Upon successful execution, the terminal will display the `Aspect address`. It is essential to make a note of this

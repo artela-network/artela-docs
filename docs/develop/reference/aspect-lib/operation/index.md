@@ -203,3 +203,6 @@ sys.log( 'aspect.version' + ' ' + aspectVerData.data.toString(10));
 | env.consensusParams.appVersion               | UintData        | Get the ABCI application version.                                                                                                                                                         |
 | aspect.id                                    | BytesData       | Returns current aspect id.                                                                                                                                                                |
 | aspect.version                               | UintData        | Returns current aspect version.                                                                                                                                                           |
+
+Here is a case demonstration on how to [create a operation call](/develop/guides/operation-aspect).
+Through this example, you can gain a clearer understanding of how to utilize Operation Interface.
