@@ -23,7 +23,7 @@ Learn more from our blog:
 
 [How does Aspect Programming prevent reentrancy attacks through on-chain runtime protection ?](https://github.com/artela-network/example/blob/main/curve_reentrance/README.md).
 
-## Pre-requisites
+### Pre-requisites
 
 To reproduce the attack, install `solc` and a specific version of `vyper` with the reentrant lock bug:
 
@@ -297,7 +297,7 @@ Deploying the Aspect doesn't automatically activate it. To make it functional, b
 ```
 you will see `== aspect bind success == `
 
-## 5. Re-entrant Attack Test
+## 5. Attack Test
 
 Execute the re-entrant attack on the simplified Curve contract with Aspect protection, and watch the output. 
 

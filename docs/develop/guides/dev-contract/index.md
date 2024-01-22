@@ -37,7 +37,7 @@ contract MyCollectible is ERC721 {
 }
 ```
 
-## 2. Remix: Connect to Artela TestNet and Deploy
+## 2. Connect to Artela TestNet and Deploy
 
 Connecting Remix to MetaMask and deploying your smart contract involves a few straightforward steps:
 
