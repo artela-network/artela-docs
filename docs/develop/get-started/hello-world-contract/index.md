@@ -74,7 +74,7 @@ async function deploy() {
     let abiPath = '<Your Contract ABI File>';
 
     // Replace with the path to your smart contract byte code file 
-    let contractByteCodePath = '<Your Contract BIN File>';
+    let byteCodePath = '<Your Contract BIN File>';
 
     // Replace with your private key
     let privateKey = '<Your Private Key>';
@@ -86,7 +86,7 @@ async function deploy() {
         arguments: null,
     };
 
-    let byteTxt = readFileSync(contractByteCodePath, "utf-8").toString().trim();
+    let byteTxt = readFileSync(byteCodePath, "utf-8").toString().trim();
     if (byteTxt.startsWith("0x")) {
         byteTxt = byteTxt.slice(2);
     }
