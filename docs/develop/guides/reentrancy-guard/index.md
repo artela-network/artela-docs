@@ -160,7 +160,7 @@ When deploying an attack contract, replace '{curveAddress}' with the real Curve 
 npm run contract:build
 
 ## deploy contract
-npm run contract:deploy -- --abi ./build/contract/Attack.abi  --bytecode ./build/contract/Attack.bin --args '["{curveAddress}"]'  --skfile ./attack_accounts.txt
+npm run contract:deploy -- --abi ./build/contract/Attack.abi  --bytecode ./build/contract/Attack.bin --args {curveAddress}  --skfile ./attack_accounts.txt
 ```
 
 The result of the execution can be obtained from the contract address, for example:
