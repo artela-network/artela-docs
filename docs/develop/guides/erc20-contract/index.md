@@ -217,10 +217,11 @@ Execute the following command within the `erc20-token` folder:
 
 ```bash
 
-npm run contract:send   -- --skfile ./tokenPk.txt
-                        --contract {artToken-address} 
-                        --abi ./build/contract/contracts_ArtToken_sol_ArtToken.abi 
-                        --method transfer --args {broker-address} 100
+npm run contract:send   -- --skfile ./tokenPk.txt \
+                        --contract {artToken-address}  \
+                        --abi ./build/contract/contracts_ArtToken_sol_ArtToken.abi \
+                        --method transfer \
+                        --args {broker-address} 100 \
                         --gas 200000
 
 
