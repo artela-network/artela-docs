@@ -248,7 +248,7 @@ For more detailed usage information about this command, please refer to
 the [deploy-aspect command](/develop/reference/aspect-tool/deploy-aspect) documentation.
 :::
 
-## 4. Bind the Smart Contract and Aspect
+## 4. Bind the Contract with the Aspect
 
 Deploying the Aspect doesn't automatically activate it. To make it functional, bind it to a smart contract:
 
@@ -269,7 +269,7 @@ For more detailed usage information about this command, please refer to
 the [bind-aspect command](/develop/reference/aspect-tool/bind-aspect) documentation.
 :::
 
-## 5. Bind the EOA Account to Aspect
+## 5. Bind the EOA with the Aspect
 
 ```bash
 npm run contract:bind -- --contract {owner-account} \
@@ -289,7 +289,7 @@ For more detailed usage information about this command, please refer to
 the [bind-aspect command](/develop/reference/aspect-tool/bind-aspect) documentation.
 :::
 
-## 5. Test the Smart Contract and Aspect Integration
+## 6. Test the Smart Contract and Aspect Integration
 
 Within the `scripts` directory of your project,Create a Verify tx call script that generates a transaction that is not
 signed by {owner} and uses the password provided by {owner} to make the transaction.
