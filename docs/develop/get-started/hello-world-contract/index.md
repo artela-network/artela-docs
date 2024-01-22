@@ -73,8 +73,8 @@ async function deploy() {
     // Replace with the path to your smart contract abi file
     let abiPath = '<Your Contract ABI File>';
 
-    // Replace with the path to your smart contract source code file 
-    let contractSourceCodePath = '<Your Contract Source Code File>';
+    // Replace with the path to your smart contract byte code file 
+    let contractByteCodePath = '<Your Contract BIN File>';
 
     // Replace with your private key
     let privateKey = '<Your Private Key>';
@@ -86,7 +86,7 @@ async function deploy() {
         arguments: null,
     };
 
-    let byteTxt = readFileSync(contractSourceCodePath, "utf-8").toString().trim();
+    let byteTxt = readFileSync(contractByteCodePath, "utf-8").toString().trim();
     if (byteTxt.startsWith("0x")) {
         byteTxt = byteTxt.slice(2);
     }
@@ -133,8 +133,8 @@ Make sure to replace the placeholder values in the script with your actual value
 * **Your Private Key:** The private key is crucial for signing and executing transactions linked to its associated
   account. Obtain it by creating a wallet or importing an existing account. Refer
   to [Wallet Configuration](/develop/guides/wallet-configuration) for further details.
-* **Your Contract ABI File:** The path to your smart contract ABI file.
-* **Contract Source Code File:** The path to your smart contract source code file.
+* **Your Contract ABI File:** The path to your smart contract ABI file. like './Hello.abi'.
+* **Contract Byte Code File:** The path to your smart contract byte code file. like './Hello.bin'.
 
 Run the deployment script.
 
