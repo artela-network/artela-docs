@@ -160,7 +160,7 @@ When deploying an attack contract, replace '{curveAddress}' with the real Curve 
 npm run contract:build
 
 ## deploy contract
-npm run contract:deploy -- --abi ./build/contract/Attack.abi  --bytecode ./build/contract/Attack.bin --args '["{curveAddress}"]'  --skfile ./attack_accounts.txt
+npm run contract:deploy -- --abi ./build/contract/Attack.abi  --bytecode ./build/contract/Attack.bin --args {curveAddress}  --skfile ./attack_accounts.txt
 ```
 
 The result of the execution can be obtained from the contract address, for example:
@@ -173,8 +173,10 @@ The result of the execution can be obtained from the contract address, for examp
 #### 3.5 Attack
 
 ```shell
-npm run contract:send -- --contract '["{attackAddress}"]'    --abi ./build/contract/Attack.abi   --skfile ./attack_accounts.txt  --method attack  --gas 200000
+npm run contract:send -- --contract {attack-address}  --abi ./build/contract/Attack.abi   --skfile ./attack_accounts.txt  --method attack  --gas 200000
 ```
+
+> * Replace the placeholder {owner-account} with the real address. like: 0x08D721275c6DbB33bc688B62ef199bbd709154c9
 
 If the reentrant attack succeeded, you will see both `AddLiquidity` and `RemoveLiquidity` events logged.
 
@@ -182,9 +184,9 @@ If the reentrant attack succeeded, you will see both `AddLiquidity` and `RemoveL
 
 Next, we deploy an Aspect code to stop the attack happening.
 
-#### 4.1 add intercept logic in 'aspect/aspect.ts' method 'preContractCall':
+#### 4.1 add intercept logic in 'aspect/index.ts' method 'preContractCall':
 
-```shell
+```typescript
 
 import {
     allocate,

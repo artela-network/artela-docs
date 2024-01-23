@@ -197,13 +197,13 @@ Execute the following command within the `erc20-token` folder, using the provide
 npm run contract:deploy -- --skfile ./tokenPk.txt  \
                            --abi ./build/contract/contracts_ArtToken_sol_ArtToken.abi \
                            --bytecode ./build/contract/contracts_ArtToken_sol_ArtToken.bin \
-                           --args '[10000000]'
+                           --args 10000000
                            
                            
 npm run contract:deploy -- --skfile ./brokerPk.txt  \
                            --abi ./build/contract/contracts_Broker_sol_Broker.abi \
                            --bytecode ./build/contract/contracts_Broker_sol_Broker.bin \
-                           --args '[{ArtToken_Address}]'   
+                           --args {ArtToken_Address}   
 ```
 
 
@@ -217,10 +217,11 @@ Execute the following command within the `erc20-token` folder:
 
 ```bash
 
-npm run contract:send   -- --skfile ./tokenPk.txt
-                        --contract {artToken-address} 
-                        --abi ./build/contract/contracts_ArtToken_sol_ArtToken.abi 
-                        --method transfer --args ["{broker-address}",100] 
+npm run contract:send   -- --skfile ./tokenPk.txt \
+                        --contract {artToken-address}  \
+                        --abi ./build/contract/contracts_ArtToken_sol_ArtToken.abi \
+                        --method transfer \
+                        --args {broker-address} 100 \
                         --gas 200000
 
 

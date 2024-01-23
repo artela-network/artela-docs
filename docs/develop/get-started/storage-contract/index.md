@@ -165,11 +165,12 @@ Execute the following command within the `storage-demo` folder, call the Contrac
 
 ### 5.1 Send transaction for store
 
-```bash
+```shell
 
-npm run contract:send -- --contract {artToken-address} 
-                         --abi ./build/contract/Storage.abi 
-                         --method store --args [100] 
+npm run contract:send -- --contract {artToken-address} \
+                         --abi ./build/contract/Storage.abi \
+                         --method store \
+                         --args 100
 ```
 
 

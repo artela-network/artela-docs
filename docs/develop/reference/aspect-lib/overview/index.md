@@ -59,6 +59,6 @@ Version.
 
 | Version | Artela Version | 	Release notes                                                                            |
 |:--------|:---------------|:------------------------------------------------------------------------------------------|
-| 0.0.31  | v0.4.7-rc4     | The first beta is available, where the Transaction Level Aspect feature has been released |
+| 0.0.33  | v0.4.7-rc6     | The first beta is available, where the Transaction Level Aspect feature has been released |
 
 
