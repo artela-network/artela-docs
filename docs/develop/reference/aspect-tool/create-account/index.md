@@ -16,7 +16,7 @@ npm run account:create  -- --skfile {file_path}
 > * --skfile : privateKey path for sender. (optional,default value `./privateKey.txt`).
 ---
 
-## Example
+### Example
 ```shell
 ## usage 1: this command will create a blockchain account and generate a private key file named 'privateKey.txt' in your project dir
 npm run account:create

@@ -24,7 +24,7 @@ npm run contract:deploy -- --skfile {privateKey-path} \
 > * --gas : e.g., `200000` (optional,default value `7000000`)
 ---
 
-## Example
+### Example
 
 ```shell
 ## usage 1: deploy a contract 'xxx.sol' using default private key './privateKey.txt'

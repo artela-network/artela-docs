@@ -65,8 +65,12 @@ FLAGS
 * [Build Aspect](/develop/reference/aspect-tool/build-aspect)
 * [Deploy Aspect](/develop/reference/aspect-tool/deploy-aspect)
 * [Contract bind Aspect](/develop/reference/aspect-tool/bind-aspect)
+* [Contract unbind Aspect](/develop/reference/aspect-tool/unbind-aspect)
 * [Contract call](/develop/reference/aspect-tool/contract-call)
 * [Send transaction](/develop/reference/aspect-tool/send-tx)
+* [Operation Call/Send](/develop/reference/aspect-tool/operation)
+* [Get bound Accounts](/develop/reference/aspect-tool/bound-contract)
+* [Get bound Aspects](/develop/reference/aspect-tool/bound-aspect)
 
 ## Advanced
 

@@ -25,7 +25,7 @@ You can send transaction using the following command:
 > * --gas : like `200000`,(optional,default value `7000000`).
 ---
 
-## Example
+### Example
 
 ```shell
 ## usage 1: send a contract 'xxxx.sol' with hello() method, using default private key './privateKey.txt'
