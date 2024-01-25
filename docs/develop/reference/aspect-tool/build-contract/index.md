@@ -11,7 +11,7 @@ You can build contract by using the following command:
 npm run contract:build
 ```
 
-## Example
+### Example
 
 ```shell
 npm run contract:build

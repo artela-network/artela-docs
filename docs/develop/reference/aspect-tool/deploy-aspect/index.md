@@ -24,7 +24,7 @@ You can deploy Aspect using the following command:
 
 ---
 
-## Example
+### Example
 
 ```shell
 ## usage 1: deploy a aspect './build/release.wasm' using default private key './privateKey.txt'
@@ -44,7 +44,7 @@ npm run aspect:deploy --  --skfile ./privateKey2.txt \
                           
 ```
 
-## Command Output
+### Command Output
 
 The current deployment is successful and the receipt for the transaction is printed. which can record the `aspectID`, and some commands will rely on this value.
 

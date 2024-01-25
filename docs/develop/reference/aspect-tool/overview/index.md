@@ -17,6 +17,7 @@ This tool published in the [npm repository](https://www.npmjs.com/package/@artel
    When installing Node.js, you are recommended to check all checkboxes related to dependencies.
 
 * Confirm that Node.js has been installed correctly by running
+
 ```shell
 node --version
 ```
@@ -40,19 +41,24 @@ This tool contains two commands:
 
 ```jsx
 USAGE
-  $ aspect-tool init [-d <value>]
+$
+aspect - tool
+init [-d < value >]
 FLAGS
-  -d, --dir=<value>  [default: The current folder directory]
+- d, --dir = <value> [default: The current folder directory]
 ```
 
 2. Generate state tracing code for Aspect.
 
 ```jsx
 USAGE
-  $ aspect-tool generate [-i <value>] [-o <value>]
+$
+aspect - tool
+generate [-i < value >] [-o < value >]
 FLAGS
-  -i, --in=<value>
-  -o, --out=<value>
+- i, -- in = <value>
+    -o, --out=
+    <value>
 ```
 
 ## Tool Guide
@@ -65,8 +71,12 @@ FLAGS
 * [Build Aspect](/develop/reference/aspect-tool/build-aspect)
 * [Deploy Aspect](/develop/reference/aspect-tool/deploy-aspect)
 * [Contract bind Aspect](/develop/reference/aspect-tool/bind-aspect)
+* [Contract unbind Aspect](/develop/reference/aspect-tool/unbind-aspect)
 * [Contract call](/develop/reference/aspect-tool/contract-call)
 * [Send transaction](/develop/reference/aspect-tool/send-tx)
+* [Operation Call/Send](/develop/reference/aspect-tool/operation)
+* [Get bound Accounts](/develop/reference/aspect-tool/bound-contract)
+* [Get bound Aspects](/develop/reference/aspect-tool/bound-aspect)
 
 ## Advanced
 
@@ -76,7 +86,7 @@ FLAGS
 
 The Version in the subgraph manifest specifies release notes.
 
-| Version | 	Release notes               |
-|:--------|:-----------------------------|
-| 0.0.56  | The first beta is available. |
-
+| Version | 	Release notes                                                     |
+|:--------|:-------------------------------------------------------------------|
+| 0.0.57  | Add unbind、operation、get bound aspect、get bound accounts Commands. |
+| 0.0.56  | The first beta is available.                                       |

@@ -278,7 +278,7 @@ npm run aspect:build
 Deploy your compiled Aspect:
 
 ```shell
-npm run aspect:deploy  --wasm ./build/release.wasm --joinPoints VerifyTx
+npm run aspect:deploy -- --wasm ./build/release.wasm --joinPoints VerifyTx
 ```
 
 > ✅ Upon successful execution, the terminal will display the `Aspect address`. It is essential to make a note of this

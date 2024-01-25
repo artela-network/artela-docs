@@ -25,7 +25,7 @@ options：
 > * --gas : like `200000`,(optional,default value `7000000`).
 ---
 
-## Example
+### Example
 
 ```shell
 ## usage 1: call a contract 'xxxx.sol' with hello() method, using default private key './privateKey.txt'

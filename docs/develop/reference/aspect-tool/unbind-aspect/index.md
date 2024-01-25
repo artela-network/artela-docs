@@ -1,22 +1,19 @@
-# Contract Bind Aspect
+# Contract Unbind Aspect
 
-Binding associates an Aspect with a specific smart
-contract.See [details for concept](/develop/core-concepts/lifecycle#binding).
+Unbind the relationship between Aspect and Smart Contract; See [details for concept](/develop/core-concepts/lifecycle#binding).
 
 ## Command
 
 Contract Bind Aspect using the following command:
 
 ```bash
-npm run contract:bind -- --skfile {privateKey-path} \
+npm run contract:unbind -- --skfile {privateKey-path} \
                          --contract {smart-contract-address} \
-                         --abi ./build/contract/xxx.abi \
                          --aspectId {aspect-Id} \
                          --gas 200000
 ```
 
 **options:**
-> * --abi : contract abi path.
 > * --contract:  smart contract address.
 > * --aspectId:  aspect id.
 > * --skfile : privateKey path for sender. (optional,default value `./privateKey.txt`).
@@ -27,13 +24,11 @@ npm run contract:bind -- --skfile {privateKey-path} \
 
 ```shell
 ## usage 1: xxx contract bind aspect use using default private key './privateKey.txt'
-npm run contract:bind -- --contract 0x4f59c931fB8b1138348C950110D484B07007F1AF \
-                         --abi ./build/contract/xxx.abi \
+npm run contract:unbind -- --contract 0x4f59c931fB8b1138348C950110D484B07007F1AF \
                          --aspectId 0xA7d8497480b28B90f2327F6bD6E588A7e2733BBf
                          
-## usage 2: xxx contract bind aspect use using default private key './privateKey2.txt'
+## usage 2: xxx contract unbind aspect use using default private key './privateKey2.txt'
 npm run contract:bind -- --contract 0x4f59c931fB8b1138348C950110D484B07007F1AF \
-                         --abi ./build/contract/xxx.abi \
                          --aspectId 0xA7d8497480b28B90f2327F6bD6E588A7e2733BBf \
                          --skfile ./privateKey2.txt
 ```
@@ -59,13 +54,13 @@ sending signed transaction...
   transactionIndex: 0,
   type: '0x0'
 }
-== aspect bind success ==
+== aspect unbind success ==
 
 ```
 
 ## Customize
 
-The logic for the create-account command is written in the `scripts/bind.cjs` file, primarily relying on the
+The logic for the create-account command is written in the `scripts/unbind.cjs` file, primarily relying on the
 implementation provided by the [@artela/web3](/develop/client/artela-web3.js) API.
 
 If needed, you can modify the logic within this file to achieve your specific functionalities.
