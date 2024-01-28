@@ -36,18 +36,18 @@ Here's how to interact with the Aspect Context within an Aspect:
 
 ```typescript
 // Fetch the context value from the Aspect storage
-const ctxKey = ctx.aspect.transientStorage<string>('key');
+const ctxKey = ctx.aspect.transientStorage.get<string>('key');
 // Extract and utilize the context value
 const ctxValue = ctxKey.unwrap();
 // Replace the key with a new value
-ctxKey.set('new-value');
+ctxKey.set<string>('new-value');
 ```
 
 And for interaction within a smart contract:
 
 ```solidity
 // Invoke 0x64 with the ABI-encoded address and key to retrieve the raw byte value of the key
-(bool success, bytes memory returnData) = address(0x64).call(abi.encodePacked(addr, key));
+(bool success, bytes memory returnData) = address(0x64).call(abi.encodePacked(aspectId, key));
 // Invoke 0x66 with the ABI-encoded key and value to store the values in the context
 (bool success, ) = address(0x66).call(abi.encode(key, value));
 ```
