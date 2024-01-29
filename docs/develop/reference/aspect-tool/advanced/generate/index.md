@@ -42,7 +42,7 @@ FLAGS
 
 **options：**
 
-> * --i :Input your storage layout json file path or directory, like ` -i storage_layout.json`  `-i ./build/contractt`
+> * --i :Input your storage layout json file path or directory, like ` -i storage_layout.json`  `-i ./build/contract`
 > * --o: Target generated ts file output path or directory, like `-o xx.ts`  `-o ./aspect/contract`
 
 ## Example
