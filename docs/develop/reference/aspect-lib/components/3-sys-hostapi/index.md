@@ -542,7 +542,7 @@ public queryStateChange(query: StateChangeQuery): Uint8Array
     * stateVarName: string; state variable name like 'HoneyPot.balances'
     * indices: []Uint8Array; indices optional，
 * Return
-  * data: Uint8Array; EthStateChangeIndices or
+  * data: Uint8Array; <a href="/api/docs/classes/proto.EthCallTree.html" target="_blank">EthStateChangeIndices</a>   or <a href="/api/docs/classes/proto.EthStateChange.html" target="_blank">EthStateChange</a> 
 * Example
 
 <!-- @formatter:off -->
@@ -571,12 +571,10 @@ public queryCallTree(query: CallTreeQuery): Uint8Array
 <!-- @formatter:on -->
 
 * Parameter
-  * query: CallTreeQuery;
-    * account: Uint8Array;  account hex string, like 0xxabcccxxxddeddd
-    * stateVarName: string; state variable name like 'HoneyPot.balances'
-    * indices: []Uint8Array; indices optional，
+  * query: <a href="/api/docs/classes/proto.CallTreeQuery.html" target="_blank">CallTreeQuery</a>
+    * callIdx: i64; call index，If -1 is passed, it gets the entire call tree; otherwise, it returns the call message for the given index. like: 10
 * Return
-  * data: Uint8Array; EthStateChangeIndices or
+  * data: Uint8Array; <a href="/api/docs/classes/proto.EthCallTree.html" target="_blank">EthCallTree</a>  or <a href="/api/docs/classes/proto.EthCallMessage.html" target="_blank">EthCallMessage</a> 
 * Example
 
 <!-- @formatter:off -->
