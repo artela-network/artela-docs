@@ -36,11 +36,11 @@ Here's how to interact with the Aspect Context within an Aspect:
 
 ```typescript
 // Fetch the context value from the Aspect storage
-const ctxKey = ctx.aspect.transientStorage<string>('key');
+const ctxKey = ctx.aspect.transientStorage.get<string>('key');
 // Extract and utilize the context value
 const ctxValue = ctxKey.unwrap();
 // Replace the key with a new value
-ctxKey.set('new-value');
+ctxKey.set<string>('new-value');
 ```
 
 And for interaction within a smart contract:

@@ -154,7 +154,7 @@ npm run contract:call -- --contract 0x0000000000000000000000000000000000a27e14 \
                           --args {aspectId} 0x1167c2e50dFE34b9Ad593d2c6694731097147317
 ```
 
-If the protection succeeded, you will see
+If the command succeeded, you will see
 
 ```shell
 ==== reuslt=== 0x48656c6c6f576f726c64

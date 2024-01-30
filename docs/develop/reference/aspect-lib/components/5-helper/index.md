@@ -12,7 +12,6 @@ import {
     uint8ArrayToHex,
     hexToUint8Array,
     stringToUint8Array,
-    stringToUint8Array,
     uint8ArrayToString,
     uint8ArrayToAddress,
     uint8ArrayToBool,
@@ -120,36 +119,8 @@ import {
 ```
 <!-- @formatter:on -->
 
-## 4. stringToUint8Array
 
-> Encodes the specified string to UTF-8 bytes, optionally null terminated. ErrorMode defaults to WTF-8.
-
-<!-- @formatter:off -->
-```typescript
-export function stringToUint8Array(s: string): Uint8Array
-```
-<!-- @formatter:on -->
-
-* Parameter
-    * hex: string;
-* Returns
-    * result: string;
-
-* Example
-
-<!-- @formatter:off -->
-```typescript
-import {
-  stringToUint8Array
-} from "@artela/aspect-libs";
-{
-    let hex="test";
-    let data =stringToUint8Array(u8Array);
-}
-```
-<!-- @formatter:on -->
-
-## 5. uint8ArrayToString
+## 4. uint8ArrayToString
 
 > Decodes the specified buffer from UTF-8 bytes to a string, optionally null terminated.
 
@@ -180,7 +151,7 @@ import {
 ```
 <!-- @formatter:on -->
 
-## 6. uint8ArrayToAddress
+## 5. uint8ArrayToAddress
 
 > Convert the uint8Array data to ethereum address.
 
@@ -210,7 +181,7 @@ import {
 ```
 <!-- @formatter:on -->
 
-## 7. uint8ArrayToBool
+## 6. uint8ArrayToBool
 
 > Convert the uint8Array data to bool.
 
@@ -239,7 +210,7 @@ import {
 ```
 <!-- @formatter:on -->
 
-## 8. boolToUint8Array
+## 7. boolToUint8Array
 
 > Convert the bool data to Uint8Array.
 
@@ -268,7 +239,7 @@ import {
 ```
 <!-- @formatter:on -->
 
-## 9. arrayCopyPush
+## 8. arrayCopyPush
 
 > Copies the elements of the input array and appends a new element to the copied array.
 
@@ -302,7 +273,7 @@ import {
 ```
 <!-- @formatter:on -->
 
-## 10. concatUint8Arrays
+## 9. concatUint8Arrays
 
 > Concatenates two Uint8Arrays and returns a new Uint8Array containing the concatenated values.
 
@@ -333,7 +304,7 @@ import {
 ```
 <!-- @formatter:on -->
 
-## 11. encodeStringUTF8
+## 10. encodeStringUTF8
 
 > Encodes the specified string to UTF-8 bytes, optionally null terminated. ErrorMode defaults to WTF-8.
 
@@ -362,7 +333,7 @@ import {
 ```
 <!-- @formatter:on -->
 
-## 12. decodeUTF8
+## 11. decodeUTF8
 
 > Decodes the specified buffer from UTF-8 bytes to a string, optionally null terminated..
 
@@ -396,7 +367,7 @@ import {
 ```
 <!-- @formatter:on -->
 
-## 13. base64Encode
+## 12. base64Encode
 
 > Encodes the given Uint8Array into a base64 string.
 
@@ -429,7 +400,7 @@ import {
 ```
 <!-- @formatter:on -->
 
-## 14. base64Decode
+## 13. base64Decode
 
 > Decodes the given string into a Uint8Array.
 
@@ -458,7 +429,7 @@ import {
 ```
 <!-- @formatter:on -->
 
-## 15. parseCallMethod
+## 14. parseCallMethod
 
 > Parses the call method from the given Uint8Array data and returns a string representation.
 
@@ -491,7 +462,7 @@ import {
 ```
 <!-- @formatter:on -->
 
-## 16. fromString
+## 15. fromString
 
 > Converts the input string to a value of type T.
 
@@ -520,7 +491,7 @@ import {
 ```
 <!-- @formatter:on -->
 
-## 17. toString
+## 16. toString
 
 > Converts the input value to a string representation.
 
@@ -559,7 +530,7 @@ import {
 ```
 <!-- @formatter:on -->
 
-## 18. toUint8Array
+## 17. toUint8Array
 
 > Converts the input value to a Uint8Array representation.
 
@@ -589,7 +560,7 @@ import {
 ```
 <!-- @formatter:on -->
 
-## 19. fromUint8Array
+## 18. fromUint8Array
 
 > Converts the input Uint8Array to a value of type T.
 
