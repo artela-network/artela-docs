@@ -56,8 +56,9 @@ cd artela
 
 git checkout main
 make clean && make
-cp ./build/artelad $HOME/go/bin/.
-export PATH=$PATH:$HOME/go/bin
+mkdir $GOPATH/bin
+cp ./build/artelad $GOPATH/bin/.
+export PATH=$PATH:$GOPATH/bin
 ```
 
 ### Option 2: Download and Install Artelad
