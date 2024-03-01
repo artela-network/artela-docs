@@ -200,11 +200,33 @@ const config = {
     },
 
     algolia: {
-      appId: "QLS2QSP47E",
-      apiKey: "4d9feeb481e3cfef8f91bbc63e090042",
-      indexName: "artela_docs",
+      // The application ID provided by Algolia
+      appId: 'T94HPZBQ0X',
+
+      // Public API key: it is safe to commit it
+      apiKey: '246f1243d1997feb4487bbf15aca6930',
+
+      indexName: 'artela',
+
+      // Optional: see doc section below
       contextualSearch: true,
-      searchParameters: {},
+
+
+      // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+      replaceSearchResultPathname: {
+        from: '/docs/', // or as RegExp: /\/docs\//
+        to: '/',
+      },
+
+      // Optional: Algolia search parameters
+
+      searchParameters: {
+        facetFilters: ['language:en', ['filter1', 'filter2'], 'filter3'],
+      },
+      // Optional: path for search page that enabled by default (`false` to disable it)
+      searchPagePath: 'search',
+
+      //... other Algolia params
     },
   }),
 };

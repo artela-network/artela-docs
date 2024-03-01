@@ -1,0 +1,9 @@
+
+User-agent: *
+Allow: /
+
+# Host
+Host: https://docs.artela.network/
+
+# Sitemaps
+Sitemap: https://docs.artela.network/sitemap.xml
