@@ -1,4 +1,4 @@
-# Create a Account
+# Create an Account
 
 This command can quickly create a new account in the project, and you will use it in other commands which need to sign
 transactions, and you also can use it in your test scripts.

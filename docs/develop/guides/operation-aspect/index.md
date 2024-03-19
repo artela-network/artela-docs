@@ -37,8 +37,7 @@ npm run account:create
 If the command is executed successfully, the following log will be printed and a `privateKey.txt` file will be
 generated.
 
-If you don't have a test token in your account, please join [our discard](https://discord.com/invite/artela)
-，require testnet faucet.
+If you don't have a test token in your account, please join [our Discord](https://discord.com/invite/artela)，require testnet faucet.
 
 ## 3. Create Aspect
 
