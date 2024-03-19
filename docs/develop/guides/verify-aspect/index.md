@@ -291,7 +291,7 @@ the [bind-aspect command](/develop/reference/aspect-tool/bind-aspect) documentat
 
 ## 6. Test the Smart Contract and Aspect Integration
 
-Within the `scripts` directory of your project,Create a Verify tx call script that generates a transaction that is not
+Within the `scripts` directory of your project, create a verify tx call script that generates a transaction that is not
 signed by {owner} and uses the password provided by {owner} to make the transaction.
 For example, create a `verify.cjs` file:
 
