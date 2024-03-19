@@ -50,7 +50,7 @@ The init command automatically creates the recommended directory structure and c
 └── tsconfig.json
 ```
 
-### 2. Create a Aspect
+### 2. Create an Aspect
 
 Within the `./aspect` directory of your project, create your aspect files with a `.ts` extension.
 For example, create a `HelloWorld.ts` file:
