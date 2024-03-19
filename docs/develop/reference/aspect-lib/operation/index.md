@@ -204,5 +204,5 @@ sys.log( 'aspect.version' + ' ' + aspectVerData.data.toString(10));
 | aspect.id                                    | <a href="/api/docs/classes/proto.BytesData.html" target="_blank">BytesData</a>             | Returns current aspect id.                                                                                                                                                                |
 | aspect.version                               | <a href="/api/docs/classes/proto.UintData.html" target="_blank">UintData</a>               | Returns current aspect version.                                                                                                                                                           |
 
-Here is a case demonstration on how to [create a operation call](/develop/guides/operation-aspect).
+Here is a case demonstration on how to [create an operation call](/develop/guides/operation-aspect).
 Through this example, you can gain a clearer understanding of how to utilize Operation Interface.
