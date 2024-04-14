@@ -40,12 +40,8 @@ Within the Artela network, dynamic scalability will be guaranteed through elasti
 - **Elastic Computing:** Validator nodes support horizontal scaling, where the network automatically adjusts the computation node of validators based on the current network load or subscription. The scaling process is coordinated by an elastic protocol, ensuring sufficient elastic computation nodes in the consensus network.
 - **Elastic Block Space:** Based on elastic computing, in addition to expanding the public block space, large-scale dApps with independent block space requirements can apply for dedicated elastic block space in the network.
 
-## Elastic Block Space
-
-Elastic block space refers to dynamically scalable block space, providing independent block space with protocol guarantees for dApps with high transaction throughput requirements.
-
-By default, blocks have a limited capacity for public block space. When a dApp applies for independent block space, extra space will be added to the block, and this space will only accommodate transactions related to the dApp's smart contract. When block space expands, validators need to add elastic execution nodes to expand the corresponding processing capacity.
-
-Elastic block space is a scaling mechanism for blockchains, enabling limitless scalability while maintaining interoperability. Scalable networks such as sharded blockchain, appchain networks, layer2, etc., can also provide independent block space, but isolated and block generations are not synchronized. Elastic block space allows dApps with independent block space to interact synchronously through atomic transactions in the same block, avoiding the need for asynchronous cross-chain communication.
-
-When dApp in the Artela network has the need for high scalability, it can subscribe to elastic block space to handle the throughput increase. Elastic block space and native extensions empower dApps in Artela with the extensibility for both scalability and customized functionality.
+## Learn more
+* [EVM++](/main/Artela-Blockchain/EVM++)
+* [Aspect programming](/main/Aspect-Programming/Aspect)
+* [Parallel execution](/main/Artela-Blockchain/Parallel%20execution)
+* [Elastic block space](/main/Artela-Blockchain/Elastic%20Block%20Space)

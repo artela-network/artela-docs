@@ -10,10 +10,10 @@ Elastic block space is a scaling mechanism for blockchains, enabling limitless s
 
 When dApp in the Artela network has the need for high scalability, it can subscribe to elastic block space to handle the throughput increase. Elastic block space and native extensions empower dApps in Artela with the extensibility for both scalability and customized functionality.
 
-## Independent block space as AppChain/RollApp
+## Independent block space
 Under EVM++, Artela's elastic block space can reach the level of an AppChain: apps have both fixed block space and the ability to customize the chain.
 
 The advantage of Artela is the implementation of a subscription-based model similar to SaaS, where app developers do not need to manage a network but can simply subscribe to independent block space on Artela through transactions. Additionally, through Aspect programming, custom extensions can be dynamically added to the network to achieve chain customization.
 
-## Predictable performance for dApps
+## Predictable performance
 Unless it is an AppChain or RollApp, applications on any L1/L2 may face the possibility of competing for block space. Especially for scenarios such as DeFi and gaming, stable performance support is required to ensure applications run smoothly. This guarantees that transactions are executed on-chain in a timely manner, ensuring faster transaction processing for critical operations and services, such as liquidation transactions.
