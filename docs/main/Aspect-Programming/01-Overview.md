@@ -8,11 +8,7 @@ Aspect Programming is a universal programming framework that supports the dynami
 
 Aspect Programming provides a universal stack for all chains, including Layer 2 solutions, to develop native extensions at the base layers, enabling modular dApp building and customized functionality.
 
-## Solution of Aspect Programming:
-
-**Smart Contract + Native Extension = Rich dApp**
-
-### Native Extension
+## Native Extension
 
 Native Extension serves as a programmable on-chain module for customized functionality. It extends from the base layer and works synergistically with blockchain smart contracts, allowing dApp to be built in a plug-and-play modular manner.
 
@@ -20,7 +16,7 @@ Native Extension is the solution for blockchain customized functionality.
 
 **[Learn More](https://docs.artela.network/main/Aspect-Programming/Native-Extension)**
 
-### Aspect
+## Aspect
 
 :::tip
 [Whitepaper Available](https://github.com/artela-network/aspect-whitepaper/blob/main/latex/build/whitepaper.pdf)

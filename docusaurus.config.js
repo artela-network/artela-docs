@@ -112,7 +112,7 @@ const config = {
         },
         {
           position: 'left',
-          label: 'Developer',
+          label: 'Develop',
           to: '/develop',
         },
 
