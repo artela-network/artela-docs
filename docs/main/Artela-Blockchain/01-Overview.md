@@ -2,23 +2,24 @@
 id: artela-blockchain
 slug: /Artela-Blockchain
 ---
+
 # Overview
 
-Artela Blockchain is a layer 1 network that empowers developers to add user-defined native extensions and build feature-rich dApps. It offers extensibility that goes beyond EVM-equivalence, inter-domain interoperability, and boundless scalability with its Elastic Block Space design.
+Artela Blockchain is a Layer 1 network that empowers developers to incorporate user-defined native extensions and develop feature-rich decentralized applications (dApps). It provides advanced extensibility beyond EVM-equivalence, inter-domain interoperability, and boundless scalability through its innovative Elastic Block Space design.
 
-As the first layer 1 network equipped with Aspects, Artela network aims to **maximize the value of Aspect and enable developers to build feature-rich dApps.**
+As the first Layer 1 network to integrate Aspects, Artela aims to **maximize the value of this technology, enabling developers to create feature-rich dApps.**
 
 ---
 
 ## Architecture Overview
 
- ![fifty_p](./img/2.png)
+![fifty_p](./img/2.png)
 
-- **Base Layer:** Provide basic functions, including consensus engine, networking, EVM environments for the smart contract execution, and WASM environments for the Aspects execution. This layer is launched by Artela.
+- **Base Layer:** Launched by Artela, this layer offers fundamental functionalities including a consensus engine, networking, EVM environments for executing smart contracts, and WASM environments for executing Aspects. It forms the core infrastructure of the network.
 
-- **Extension Layer:** Provide the Aspect SDK. Developers are able to build Aspects. Aspects have access to all APIs within the base layer and can be freely combined with smart contracts and other Aspects. Aspect is securely isolated from Base Layer, ensuring that it has no impact on the security or availability of the core network.
+- **Extension Layer:** Equipped with the Aspect SDK, this layer allows developers to create Aspects, which can access all APIs within the base layer and integrate seamlessly with smart contracts and other Aspects. Aspects are securely isolated from the Base Layer to prevent any impact on the core network’s security or availability.
 
-- **Application Layer:** Developers can build smart contracts as usual. Initially, EVM will be provided for the seamless landing of most dApps in crypto.
+- **Application Layer:** In this layer, developers can craft smart contracts using familiar tools. Initially, an EVM is provided to ensure easy adoption and integration for the majority of existing dApps in the crypto ecosystem.
 
 ## Core Characteristics
 
@@ -32,16 +33,17 @@ Artela aspires to be a truly boundless blockchain network:
 
 ## Scale-out Design
 
-Artela's scale-out architecture will be designed around the characteristics of the Artela network. It brings dApps extensible functionality and expandable block space, while maintaining native composability with other dApps in the network.
+Artela's scale-out architecture is tailored to the specific needs of the Artela network, offering dApps enhanced extensibility and expandable block space while ensuring native composability with other network dApps.
 
-Within the Artela network, dynamic scalability will be guaranteed through elastic computing, with the following technical features:
+Dynamic scalability within the Artela network is supported by elastic computing, highlighted by several key technical features:
 
-- **Parallel Execution:** Transactions on Artela can be executed in parallel. Artela network groups transactions for parallel execution based on transaction dependency conflict analysis.
-- **Elastic Computing:** Validator nodes support horizontal scaling, where the network automatically adjusts the computation node of validators based on the current network load or subscription. The scaling process is coordinated by an elastic protocol, ensuring sufficient elastic computation nodes in the consensus network.
-- **Elastic Block Space:** Based on elastic computing, in addition to expanding the public block space, large-scale dApps with independent block space requirements can apply for dedicated elastic block space in the network.
+- **Parallel Execution:** Transactions on Artela can be processed concurrently. The network groups transactions for parallel processing based on the analysis of transaction dependency conflicts.
+- **Elastic Computing:** Validator nodes are capable of horizontal scaling. The network dynamically adjusts validator computation nodes based on current network load or demand. This scaling is managed by an elastic protocol that maintains an adequate number of elastic computation nodes within the consensus network.
+- **Elastic Block Space:** Leveraging elastic computing, the network not only expands the public block space but also allows large-scale dApps to request dedicated elastic block spaces, ensuring tailored scalability solutions.
 
 ## Learn more
-* [EVM++](/main/Artela-Blockchain/EVM++)
-* [Aspect programming](/main/Aspect-Programming/Aspect)
-* [Parallel execution](/main/Artela-Blockchain/Parallel%20execution)
-* [Elastic block space](/main/Artela-Blockchain/Elastic%20Block%20Space)
+
+- [EVM++](/main/Artela-Blockchain/EVM++)
+- [Aspect programming](/main/Aspect-Programming/Aspect)
+- [Parallel execution](/main/Artela-Blockchain/Parallel%20execution)
+- [Elastic block space](/main/Artela-Blockchain/Elastic%20Block%20Space)

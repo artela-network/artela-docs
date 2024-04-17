@@ -1,19 +1,19 @@
 ## Introduction
 
-Elastic block space refers to dynamically scalable block space, providing independent block space with protocol guarantees for dApps with high transaction throughput requirements.
+Elastic Block Space refers to a dynamically scalable block space that provides independent and protocol-guaranteed block space for dApps with high transaction throughput needs.
 
 ![seventy_p](./img/parallel3.png)
 
-By default, blocks have a limited capacity for public block space. When a dApp applies for independent block space, extra space will be added to the block, and this space will only accommodate transactions related to the dApp's smart contract. When block space expands, validators need to add elastic execution nodes to expand the corresponding processing capacity.
+Typically, blocks are constrained by a fixed public block space capacity. When a dApp requires more room due to high activity, it can apply for dedicated block space. This additional space is integrated into the block and is exclusively used for the dApp’s transactions. As block space increases, validators must scale "up" by adding elastic execution nodes to handle the enhanced processing load.
 
-Elastic block space is a scaling mechanism for blockchains, enabling limitless scalability while maintaining interoperability. Scalable networks such as sharded blockchain, appchain networks, layer2, etc., can also provide independent block space, but isolated and block generations are not synchronized. Elastic block space allows dApps with independent block space to interact synchronously through atomic transactions in the same block, avoiding the need for asynchronous cross-chain communication.
+Elastic block space is a pivotal blockchain scaling mechanism, facilitating limitless scalability while ensuring interoperability. Unlike other scalable networks such as sharded blockchains, appchain networks, and Layer 2 solutions—which provide independent block spaces but suffer from isolation and unsynchronized block generation—elastic block space enables dApps with dedicated block spaces to conduct synchronous interactions through atomic transactions within the same block, circumventing the complexities of asynchronous cross-chain communications.
 
-When dApp in the Artela network has the need for high scalability, it can subscribe to elastic block space to handle the throughput increase. Elastic block space and native extensions empower dApps in Artela with the extensibility for both scalability and customized functionality.
+When a dApp in the Artela network demands high scalability, it can subscribe to elastic block space to manage the increase in transaction volume. This functionality, combined with native extensions, grants dApps on Artela enhanced scalability and customization potential.
 
 ## Independent block space
-Under EVM++, Artela's elastic block space can reach the level of an AppChain: apps have both fixed block space and the ability to customize the chain.
 
-The advantage of Artela is the implementation of a subscription-based model similar to SaaS, where app developers do not need to manage a network but can simply subscribe to independent block space on Artela through transactions. Additionally, through Aspect programming, custom extensions can be dynamically added to the network to achieve chain customization.
+With EVM++, Artela's elastic block space extends to the level of an AppChain, allowing applications to enjoy both a fixed block space and chain customization capabilities. Artela adopts a subscription-based model akin to SaaS - app developers can easily subscribe to independent block space through transactions without the need to manage a network infrastructure. Furthermore, through Aspect programming, developers can dynamically introduce custom extensions, enabling tailored chain functionalities.
 
 ## Predictable performance
-Unless it is an AppChain or RollApp, applications on any L1/L2 may face the possibility of competing for block space. Especially for scenarios such as DeFi and gaming, stable performance support is required to ensure applications run smoothly. This guarantees that transactions are executed on-chain in a timely manner, ensuring faster transaction processing for critical operations and services, such as liquidation transactions.
+
+In typical L1/L2 environments, applications may compete for block space, potentially impacting performance - particularly in critical areas like DeFi and gaming that require stable operational support. Artela’s approach ensures that applications have guaranteed timely on-chain execution, facilitating faster transaction processing for essential operations such as liquidations.
