@@ -24,7 +24,7 @@ The Artela Blockchain is an advanced Layer 1 (L1) network that enables developer
 
 EVM++ is the next-generation EVM execution layer technology that unlocks blockchain extensibility and scalability.
 
-It aims to extend the capabilities of EVM to meet the demands of the evolving crypto world. As web2 productivity and innovation integrate, and as technologies such as AI, decentralized personal information networks (DePIN), and DeFi security rapidly become integral to crypto applications, EVM++ facilitates their seamless incorporation.
+It aims to extend the capabilities of EVM to meet the demands of the evolving crypto world. As web2 productivity and innovation integrate, and as technologies such as AI, DePIN, and DeFi security rapidly become integral to crypto applications, EVM++ facilitates their seamless incorporation.
 
 **[Learn More](/main/Artela-Blockchain/EVM++)**
 

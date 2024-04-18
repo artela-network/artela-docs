@@ -2,7 +2,7 @@
 
 EVM++ is the next-generation Ethereum Virtual Machine (EVM) execution layer. It enhances blockchain extensibility through native on-chain extensions utilizing EVM+WASM, and supports parallel execution to ensure scalable blockchain performance.
 
-EVM++ is designed to push the boundaries of traditional EVM capabilities to adapt to the evolving crypto world. As web2 productivity and innovation integrate, and as technologies like AI, decentralized personal information networks (DePIN), and DeFi Security are increasingly incorporated, EVM++ serves as a seamless connector of EVM assets, protocols, and infrastructures. This integration facilitates broader adoption of crypto applications and bridges the gap with mainstream applications.
+EVM++ is designed to push the boundaries of traditional EVM capabilities to adapt to the evolving crypto world. As web2 productivity and innovation integrate, and as technologies like AI, DePIN, and DeFi Security are increasingly incorporated, EVM++ serves as a seamless connector of EVM assets, protocols, and infrastructures. This integration facilitates broader adoption of crypto applications and bridges the gap with mainstream applications.
 
 ![fifty_p](./img/evm++_1.png)
 
