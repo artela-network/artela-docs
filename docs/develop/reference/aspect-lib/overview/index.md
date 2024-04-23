@@ -6,8 +6,8 @@ sidebar_position: 2
 
 ## Introduction
 
-A [AssemblyScript](https://assemblyscript.bootcss.com/) library for writing aspect to be deployed to
-Artela，The `aspect-libs` provides Host APIs to interact with the Aspect
+An [AssemblyScript](https://assemblyscript.bootcss.com/) library for writing aspect to be deployed to
+Artela. The `aspect-libs` provides Host APIs to interact with the Aspect
 runtime, with this set of APIs, you can access blockchain data, smart
 contracts, cryptographic functions, invoking system calls and more.
 
