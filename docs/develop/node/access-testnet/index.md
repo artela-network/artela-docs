@@ -7,6 +7,7 @@ You can access the JSON-RPC port service through these URLs:
 
     https://betanet-rpc1.artela.network
     https://betanet-rpc2.artela.network
+    https://api.zan.top/node/v1/artela/testnet/82ec5dae795f4d22a5f8238de7c886fc
 
 **Option 2: Establish Your Own Local Private Network**
 
