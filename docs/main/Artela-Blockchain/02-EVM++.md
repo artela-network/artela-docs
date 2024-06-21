@@ -35,5 +35,7 @@ Artela's horizontally scalable architecture is designed to support parallel exec
 ## Learn more
 
 - [Aspect programming](/main/Aspect-Programming/Aspect)
-- [Parallel execution](/main/Artela-Blockchain/Parallel%20execution)
+- [Predictive optimistic execution](/main/Artela-Blockchain/Predictive%20optimistic%20execution)
+- [Async preloading](/main/Artela-Blockchain/Async%20preloading)
+- [Parallel storage](/main/Artela-Blockchain/Parallel%20storage)
 - [Elastic block space](/main/Artela-Blockchain/Elastic%20Block%20Space)
