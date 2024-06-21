@@ -1,4 +1,4 @@
-## Elastic Block Space
+## Introduction
 
 This proposal delineates a comprehensive strategy for implementing an **Elastic Block Space** (EBS) system within the Artela blockchain ecosystem. EBS refers to a dynamically scalable block space that provides independent and protocol-guaranteed block space for dApps with high transaction throughput needs, ensuring predictable performance. By introducing EBS, Artela endeavors to overcome the constraints of fixed block space capacity, enabling seamless scalability while maintaining predictable performance and efficient resource utilization.
 

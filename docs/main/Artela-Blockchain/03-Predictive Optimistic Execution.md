@@ -1,6 +1,6 @@
-# Predictive Optimistic Execution
+## Introduction
 
-We propose **Predictive Optimistic Execution**, an approach designed to enhance optimistic execution algorithms by predicting transaction dependencies with high accuracy. This method reduces conflict rates and boosts the efficiency of parallel executions.
+**Predictive Optimistic Execution**, an approach designed to enhance optimistic execution algorithms by predicting transaction dependencies with high accuracy. This method reduces conflict rates and boosts the efficiency of parallel executions.
 
 Traditional optimistic execution algorithms face difficulties with high-conflict blocks, which will lead to a large amount of redundant execution of related transactions and a significant decline in the efficiency of parallel EVMs.
 
