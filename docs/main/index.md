@@ -4,7 +4,7 @@ sidebar_position: 0
 
 # Intro to Artela
 
-Artela is an extensible Layer 1 (L1) blockchain designed to support parallel execution and interoperable virtual machines (VMs).
+Artela is an extensible L1 blockchain with parallel execution and modular VMs. With key innovation of EVM++, Artela enables modular, customizable, and scalable dApps.
 
 At the core of Artela's technological advancements is EVM++ - the next-generation Ethereum Virtual Machine (EVM) execution layer. EVM++ enhances blockchain extensibility by facilitating on-chain native extensions through the innovative EVM + Aspect approach. Additionally, it supports parallel execution, which significantly contributes to blockchain scalability. This dual capability ensures that Artela not only extends functionality but also optimizes performance for diverse blockchain applications.
 
