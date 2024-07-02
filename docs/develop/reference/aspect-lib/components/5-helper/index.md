@@ -335,7 +335,7 @@ import {
 
 ## 11. decodeUTF8
 
-> Decodes the specified buffer from UTF-8 bytes to a string, optionally null terminated..
+> Decodes the specified buffer from UTF-8 bytes to a string, optionally null terminated.
 
 <!-- @formatter:off -->
 ```typescript
@@ -411,7 +411,7 @@ function base64Decode(str: string): Uint8Array
 <!-- @formatter:on -->
 
 * Parameter
-    * str: string; The input sting to be decoded.
+    * str: string; The input string to be decoded.
 * Returns
     * result: Uint8Array; The base64 decoded Uint8Array.
 * Example

@@ -34,7 +34,7 @@ public get(key: string): Uint8Array
 
 * Returns
     * data: Uint8Array，The data type returned varies depending on the key of the
-      query,Each key table for every join point has a column named "Value Type" to display the corresponding return type for that key. for example: [PreContractCall Key table's](/develop/reference/aspect-lib/join-points/pre-contract-call#key-table) Value type.
+      query, each key table for every join point has a column named "Value Type" to display the corresponding return type for that key. for example: [PreContractCall Key table's](/develop/reference/aspect-lib/join-points/pre-contract-call#key-table) Value type.
 
 * Example
 

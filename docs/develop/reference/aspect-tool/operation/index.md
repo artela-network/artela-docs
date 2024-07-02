@@ -9,7 +9,7 @@ on concepts related to Operation, please refer to:
 
 ### 1. Operation call
 
-This Command allows you to query the state of a Aspect Operation Interface or perform read-only operations without creating a new transaction on the blockchain.
+This Command allows you to query the state of an Aspect Operation Interface or perform read-only operations without creating a new transaction on the blockchain.
 
 ```bash
 npm run operation:call -- --skfile {privateKey-path} \
@@ -48,7 +48,7 @@ operation call result: test
 
 ### 2. Operation Send
 
-This Command sending a Operation transaction refers to the process of initiating and broadcasting a transaction on the Ethereum blockchain.
+This Command sending an Operation transaction refers to the process of initiating and broadcasting a transaction on the Ethereum blockchain.
 
 ```bash
 npm run operation:send -- --skfile {privateKey-path} \
