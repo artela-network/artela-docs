@@ -124,17 +124,17 @@ const config = {
         {
           position: 'right',
           label: 'Community',
-          to: 'https://t.me/artela_official',
+          to: 'https://discord.com/invite/artela',
         },
         {
           position: 'right',
           label: 'Network',
-          to: 'https://developers.artela.network/',
+          to: 'https://artela.network/build/developer-portal',
         },
         {
           position: 'right',
           label: 'Blog',
-          to: 'https://medium.com/@artela_network',
+          to: 'https://artela.network/blog',
         },
         {
           href: 'https://github.com/artela-network',
@@ -151,7 +151,7 @@ const config = {
           items: [
             {
               label: 'Build on Artela',
-              to: '/develop/quick-start',
+              to: '/develop/get-started/art-dev-intro',
             },
             {
               label: 'Intro to Artela',
@@ -172,8 +172,8 @@ const config = {
               href: "https://twitter.com/Artela_Network",
             },
             {
-              label: "Telegram",
-              href: "https://t.me/artela_official",
+              label: "Discord",
+              href: "https://discord.com/invite/artela",
             },
           ],
         },
@@ -182,7 +182,7 @@ const config = {
           items: [
             {
               label: 'Blog',
-              to: 'https://medium.com/@artela_network',
+              to: 'https://artela.network/blog',
             },
             {
               label: 'Artela GitHub',
@@ -211,11 +211,14 @@ const config = {
       // Optional: see doc section below
       contextualSearch: true,
 
+      // externalUrlRegex: 'external\\.com|domain\\.com',
+
       // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
       replaceSearchResultPathname: {
         from: '/docs/', // or as RegExp: /\/docs\//
         to: '/',
       },
+      // searchParameters: {},
 
       searchParameters: {
         facetFilters: ['language:en', ['filter1', 'filter2'], 'filter3'],
@@ -223,6 +226,8 @@ const config = {
 
       // Optional: path for search page that enabled by default (`false` to disable it)
       searchPagePath: 'search',
+
+      // insights: false,
 
     },
   }),
