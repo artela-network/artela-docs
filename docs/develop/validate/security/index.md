@@ -126,9 +126,9 @@ For example, the environment variable `AA_CHAIN_ID` will map to the command line
 ## Checklist
 
 Find below a security checklist survey to go through the security measures of a validator.
-Conduct survey on the hosting data centre and Node Setup, and compare your result with the best practice suggested below.
+Conduct survey on the hosting data center and Node Setup, and compare your result with the best practice suggested below.
 
-### General Controls of Hosting Data Centre
+### General Controls of Hosting Data Center
 
 | Controls Category | Description of Best Practice    |
 |-------------------|---------------------------------|

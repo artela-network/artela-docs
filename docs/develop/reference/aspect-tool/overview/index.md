@@ -65,7 +65,7 @@ FLAGS
 
 * [Init project](/develop/reference/aspect-tool/init)
 * [Configuration](/develop/reference/aspect-tool/config)
-* [Create a account](/develop/reference/aspect-tool/create-account)
+* [Create an account](/develop/reference/aspect-tool/create-account)
 * [Build contract](/develop/reference/aspect-tool/build-contract)
 * [Deploy contract](/develop/reference/aspect-tool/deploy-contract)
 * [Build Aspect](/develop/reference/aspect-tool/build-aspect)

@@ -51,7 +51,7 @@ aspect-tool init
 
 The command automatically creates the recommended directory structure and configuration files:
 
-* `./aspect`  Directory used to store the aspect you wrote. this sources being compiled to WebAssembly, more details to learn [how to write an aspect](/develop/reference/aspect-lib/aspect-structure).
+* `./aspect`  Directory used to store the aspect you wrote. This sources being compiled to WebAssembly, more details to learn [how to write an aspect](/develop/reference/aspect-lib/aspect-structure).
 
 * `./aspect/index.ts` Default entry file being compiled to WebAssembly to get you started.
 

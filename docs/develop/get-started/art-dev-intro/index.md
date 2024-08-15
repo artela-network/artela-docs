@@ -20,7 +20,7 @@ Artela blockchain defines a new programmable module to work as native extension,
 
 You can maintain the core logic within EVM smart contracts, and implement custom features in Aspects using the gas-efficient and computational powerful WASM runtime, all in a plug-and-play manner.
 
-The initial version of Artela Aspect is built with [Assembly Script](https://www.assemblyscript.org/)(a sub set of TypeScript, strictly typed).
+The initial version of Artela Aspect is built with [Assembly Script](https://www.assemblyscript.org/) (a sub set of TypeScript, strictly typed).
 
 <!-- The name “Aspect” is inspired by Aspect-oriented Programming. Aspect can tap into the complete API set of the base layer, and inject extended logic into specific join points during a transaction's lifecycle. -->
 

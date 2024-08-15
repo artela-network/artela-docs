@@ -36,8 +36,7 @@ npm run account:create
 
 ✅ If an account gets created successfully, its private key will be dumped as `privateKey.txt` in the current directory.
 
-If you don't have a test token in your account, please join [our discard](https://discord.com/invite/artela)
-，require testnet faucet.
+If you don't have a test token in your account, please join [our Discord](https://discord.com/invite/artela)，require testnet faucet.
 
 ## 3. Create Smart Contract
 
