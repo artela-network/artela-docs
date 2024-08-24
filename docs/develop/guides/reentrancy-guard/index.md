@@ -54,10 +54,10 @@ npm run account:create -- --skfile ./attack_accounts.txt
 
 ```
 
-If you don't have a test token in your account, please join [our discard](https://discord.com/invite/artela)
+If you don't have a test token in your account, please join [our discard](https://discord.com/invite/artelanetwork)
 ，require testnet faucet.
 
-If you lack test tokens, request some in our [Discord]((https://discord.com/invite/artela)) testnet-faucet channel.
+If you lack test tokens, request some in our [Discord]((https://discord.com/invite/artelanetwork)) testnet-faucet channel.
 
 ## 3. Create Smart Contracts
 

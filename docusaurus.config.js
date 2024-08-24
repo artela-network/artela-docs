@@ -136,7 +136,7 @@ const config = {
         {
           position: 'right',
           label: 'Community',
-          to: 'https://discord.com/invite/artela',
+          to: 'https://discord.com/invite/artelanetwork',
         },
         {
           position: 'right',
@@ -185,7 +185,7 @@ const config = {
             },
             {
               label: "Discord",
-              href: "https://discord.com/invite/artela",
+              href: "https://discord.com/invite/artelanetwork",
             },
           ],
         },

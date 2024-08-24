@@ -185,7 +185,7 @@ npm run account:create -- --skfile ./brokerPk.txt
 
 > * --skfile : privateKey path for sender. (optional, default value: `./privateKey.txt`).
 
-If your account lacks test tokens, join [Discord](https://discord.com/invite/artela)，and request some in `testnet-faucet` channel.
+If your account lacks test tokens, join [Discord](https://discord.com/invite/artelanetwork)，and request some in `testnet-faucet` channel.
 
 
 ### 4.3  Deploy your contract

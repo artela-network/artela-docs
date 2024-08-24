@@ -6,7 +6,7 @@ sidebar_position: 2
 
 To acquire Test Tokens for your testing needs, follow these steps:
 
-* Step1: Join 🚰 [Artela Discord ](https://discord.com/invite/artela)
+* Step1: Join 🚰 [Artela Discord ](https://discord.com/invite/artelanetwork)
 
 * Step2: Find TestNet-Faucet Channel
 

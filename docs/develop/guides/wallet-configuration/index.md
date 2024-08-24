@@ -35,7 +35,7 @@ Ensure all fields are correctly filled:
 
 ## 3. Access TestNet Faucet
 
-Join Artela [Discord server](https://discord.com/invite/artela) to access the TestNet ART faucet.
+Join Artela [Discord server](https://discord.com/invite/artelanetwork) to access the TestNet ART faucet.
 Request access and obtain TestNet ART with your wallet address.
 
 ```shell
