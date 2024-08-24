@@ -141,7 +141,7 @@ For more detailed usage information about this command, please
 refer to the [create-account command](/develop/reference/aspect-tool/create-account) documentation.
 :::
 
-If your account lacks test tokens, join [Discord](https://discord.com/invite/artela)，and request some
+If your account lacks test tokens, join [Discord](https://discord.com/invite/artelanetwork)，and request some
 in `testnet-faucet` channel.
 
 #### 2.3.4  Deploy your contract
