@@ -82,12 +82,7 @@ contract HelloWorld {
 
     // print hello message
     function hello() public pure returns (string memory) {
-        return "hello";
-    }
-
-    // print world message
-    function world() public pure returns (string memory) {
-        return "world";
+        return "hello world";
     }
 }
 ```
@@ -123,10 +118,15 @@ Update the `project.config.json` in the root directory with the appropriate netw
 ```
 
 :::note 💡
-For more details regarding development environment setup, please refer to [artela devnet](/develop/node/access-testnet)
+For more details regarding testnet environment setup, please refer to [artela testnet](/develop/node/access-testnet).
+If you are using a local node, please use `http://localhost:8545` instead.
 :::
 
 #### 2.3.2 Create a blockchain account (optional).
+
+:::info 💡
+If you already have an account, you can skip this step. You can just create a file named `privateKey.txt` in the root directory and paste the hex format (with 0x prefix) private key to the file.
+:::
 
 Execute the following command under the `my-first-aspect` folder to create an account if you haven't already done so:
 
@@ -164,15 +164,17 @@ the [deploy-contract command](/develop/reference/aspect-tool/deploy-contract) do
 
 Execute the following command within the `my-first-aspect` folder, call the Contract
 
-#### 2.4.1 call `hello` method
+#### 2.4.1 call `world` method
+
+Replace `{smart-contract-address}` with the contract address you obtained from the previous step.
 
 ```bash
 npm run contract:call -- --contract {smart-contract-address}  \
                          --abi ./build/contract/HelloWorld.abi   \
-                         --method hello                                             
+                         --method hello
 ```
 
-* replace the placeholder {smart-contract-address} with the information obtained from step `2 3 deploy the smart contract`.
+> ✅ If the `hello` string is returned, it means that we have successfully deployed the `HelloWorld` contract.
 
 > ✅ Upon successful, the terminal will display call result.
 
@@ -181,29 +183,18 @@ For more detailed usage information about this command, please refer to
 the [contract-call command](/develop/reference/aspect-tool/contract-call) documentation.
 :::
 
-#### 2.4.2 call `world` method
-
-```bash
-npm run contract:call -- --contract {smart-contract-address}  \
-                         --abi ./build/contract/HelloWorld.abi   \
-                         --method world
-```
-
-> ✅ If the `world` string is returned, it means that we have successfully deployed the `HelloWorld` contract.
-
 ## 3. Create your Aspect
 
 ### 3.1. Implements an Aspect
 
 The Aspect source files can be found in `aspect/index.ts`.
-
 For example, to add logic after a smart contract call execution, open `index.ts`, locate the `postContractCall`
 function, and insert your logic:
 
 <!-- @formatter:off -->
 ```typescript
-postContractCall(input:PostContractCallInput):void {
-// Implement me...
+postContractCall(input: PostContractCallInput): void {
+  // Implement me...
 }
 ```
 <!-- @formatter:on -->
@@ -214,52 +205,33 @@ For detailed instructions, refer to the [Aspect Doc](/develop/core-concepts/aspe
 
 ### 3.2. Access State Changes of Smart Contract
 
-To integrate the state of the `HelloWorld` contract with your Aspect, follow these steps:
+To integrate the state of the `HelloWorld` contract with your Aspect, please follow the following steps:
 
-In `aspect/index.ts`, add your Aspect to check the transaction, if `world` function is called, then revert:
+- In `aspect/index.ts`, copy over the code in the `postContractCall` method. If `hello` function is called, the Aspect revert the call
 
 <!-- @formatter:off -->
-```typescript
-import {
-    allocate,
-        entryPoint,
-        execute,
-        IPostContractCallJP,
-        PostContractCallInput,
-        sys,
-        uint8ArrayToHex,
-} from "@artela/aspect-libs";
-
+```typescript {12-17} showLineNumbers
 // 1. implement IPostContractCallJP
 class Aspect implements IPostContractCallJP {
 
-    isOwner(sender: Uint8Array): bool {
-        // implement me
-        // if return false，bind、unbind、upgrade Aspect will be block
-        return true;
-    }
+    ...
+  
     /**
      * postContractCall is a join-point which will be invoked after a contract call has finished.
      *
      * @param input input to the current join point
      */
     postContractCall(input: PostContractCallInput): void {
-
         let txData = uint8ArrayToHex(input.call!.data);
 
-        // if call `world` function then revert, 30b67baa is method signature of `world`
-        if (txData.startsWith("30b67baa")) {
-            sys.revert("the function `world` not available");
+        // if call `hello` function then revert, 19ff1d21 is method signature of `hello`
+        if (txData.startsWith("19ff1d21")) {
+            sys.revert("the function `hello` not available");
         }
     }
+    
+    ...
 }
-
-// 2.register aspect Instance
-const aspect = new Aspect();
-entryPoint.setAspect(aspect);
-
-// 3.must export it
-export {execute, allocate};
 ```
 <!-- @formatter:on -->
 
@@ -311,12 +283,12 @@ the [bind-aspect command](/develop/reference/aspect-tool/bind-aspect) documentat
 
 ## 5. Test the Smart Contract and Aspect Integration
 
-Now that the `HelloWorld` contract and Aspect are bound, call `world` to test.
+Now that the `HelloWorld` contract and Aspect are bound, call `hello` to test.
 
 ```bash
 npm run contract:call -- --contract {smart-contract-address}  \
                          --abi ./build/contract/HelloWorld.abi   \
-                         --method world 
+                         --method hello 
 ```
 
 * replace the placeholder {smart-contract-address} with the information obtained from step `2 3 deploy the smart contract`.
