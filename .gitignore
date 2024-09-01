@@ -134,5 +134,3 @@ dist
 .idea
 build
 package-lock.json
-
-**/.DS_Store
