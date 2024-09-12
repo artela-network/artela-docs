@@ -34,9 +34,11 @@ Block Explorer URL (optional): https://betanet-scan.artela.network/
 [genesis.json](./genesis.json)
 
 
-### 3. Persistent nodes
+### 3. Persistent peers
 
 ```json
+df1b3ddbea499fc02ef6b3fb58377c36a42a758a@47.251.104.131:26656
+0d8824baf4350f35e1042014b5d18d2b77839db0@47.251.163.255:26656
 f809f4fd17a9cf434b059af3e86262bbac3cb809@47.251.32.165:26656
 8889b28795e8be109a532464e5cc074e113de780@47.251.54.123:26656
 5c4ea81ac7b8a7f5202fcbe5fe790a6d6f61fb22@47.251.14.108:26656
