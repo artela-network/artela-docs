@@ -4,6 +4,10 @@ sidebar_position: 2
 
 # Faucet
 
+:::info
+You can randomly [claim 1-10 Test ARTs](./notice) during September 30 - October 8
+:::
+
 To acquire Test Tokens for your testing needs, follow these steps:
 
 * Step1: Join 🚰 [Artela Discord ](https://discord.com/invite/artelanetwork)
