@@ -4,8 +4,8 @@ sidebar_position: 2
 
 # Faucet
 
-:::info
-You can randomly [claim 1-10 Test ARTs](./notice) during September 30 - October 8
+:::tip Faucet Event Notice 
+You can randomly **[claim 1-10 Test ARTs](./notice)** during September 30 - October 8
 :::
 
 To acquire Test Tokens for your testing needs, follow these steps:
