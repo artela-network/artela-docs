@@ -1,6 +1,6 @@
 ---
 id: index
-title: Introduce to Artela
+title: Intro to Artela
 ---
 
 ## Overview
@@ -19,7 +19,7 @@ Developing applications on the Artela platform is unrestricted with regard to pe
 
 The Artela Blockchain is an advanced Layer 1 (L1) network that enables developers to implement user-defined native extensions and develop high-performance decentralized applications (dApps). It surpasses EVM-equivalence with superior extensibility and inter-domain interoperability. Featuring an innovative elastic block space design, Artela ensures boundless scalability, allowing applications to scale seamlessly with demand, optimizing performance and development flexibility.
 
-**[Learn More](/main/Artela-Blockchain)**
+**[Learn More](intro-to-artela/artela-blockchain)**
 
 ### EVM++
 
@@ -27,7 +27,7 @@ EVM++ is the next-generation EVM execution layer technology that unlocks blockch
 
 It aims to extend the capabilities of EVM to meet the demands of the evolving crypto world. As web2 productivity and innovation integrate, and as technologies such as AI, DePIN, and DeFi security rapidly become integral to crypto applications, EVM++ facilitates their seamless incorporation.
 
-**[Learn More](/main/Artela-Blockchain/EVM++)**
+**[Learn More](intro-to-artela/EVM++)**
 
 ### Aspect Programming
 
@@ -37,4 +37,4 @@ It aims to extend the capabilities of EVM to meet the demands of the evolving cr
 
 Aspect Programming is a universal programming framework that enables the dynamic creation of native extension modules for blockchains at runtime. It provides a universal stack that all chains can use to build extension modules, enhancing dApp functionality. This framework offers a versatile solution for expanding capabilities across various blockchain platforms.
 
-**[Learn More](/main/Aspect-Programming)**
+**[Learn More](intro-to-artela/EVM++/Aspect-Programming)**

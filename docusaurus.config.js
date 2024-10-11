@@ -163,7 +163,7 @@ const config = {
               {
                 label: 'Intro to Artela',
                 // to: '/use',
-                to: 'main/introduce-to-artela',
+                to: '/main/intro-to-artela',
               },
             ],
           },
