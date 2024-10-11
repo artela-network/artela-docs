@@ -59,3 +59,12 @@ img[alt=ninety_p] {
   display: block;
   margin: 0 auto;
 }
+
+.hidden-label-item {
+  visibility: hidden;
+}
+
+.hidden-label-item::after {
+  content: "";
+  visibility: visible;
+}

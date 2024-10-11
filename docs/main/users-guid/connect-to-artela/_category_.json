@@ -1,0 +1,8 @@
+{
+  "label": "Connect to Artela Network",
+  "position": 0,
+  "link": {
+    "type": "doc",
+    "id": "index"
+  }
+}

@@ -25,8 +25,7 @@ function defineSection(section, options = {}) {
 }
 
 const SECTIONS = [
-  defineSection('main'),
-  defineSection('develop'),
+  defineSection('main')
 ];
 
 /** @type {import('@docusaurus/types').Config} */
@@ -106,143 +105,139 @@ const config = {
   ],
 
   themeConfig:
-  /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-  ({
-    image: 'img/artela.png',
-    navbar: {
-      logo: {
-        href: 'https://artela.network/',
-        alt: 'Artela Network',
-        src: 'img/artela.png',
-        srcDark: 'img/artelaD.png',
+    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+    ({
+      image: 'img/artela.png',
+      navbar: {
+        logo: {
+          href: 'https://artela.network/',
+          alt: 'Artela Network',
+          src: 'img/artela.png',
+          srcDark: 'img/artelaD.png',
+        },
+        items: [
+          {
+            position: 'left',
+            label: 'Introduction',
+            to: '/main',
+            className: 'hidden-label-item',
+          },
+
+          {
+            position: 'right',
+            label: 'Website',
+            to: 'https://artela.network/',
+          },
+          {
+            position: 'right',
+            label: 'Community',
+            to: 'https://discord.com/invite/artelanetwork',
+          },
+          {
+            position: 'right',
+            label: 'Network',
+            to: 'https://artela.network/build/developer-portal',
+          },
+          {
+            position: 'right',
+            label: 'Blog',
+            to: 'https://artela.network/blog',
+          },
+          {
+            href: 'https://github.com/artela-network',
+            className: 'pseudo-icon github-icon',
+            position: 'right',
+          },
+        ],
       },
-      items: [
-        {
-          position: 'left',
-          label: 'Introduction',
-          to: '/main',
-        },
-        {
-          position: 'left',
-          label: 'Develop',
-          to: '/develop',
-        },
-
-        {
-          position: 'right',
-          label: 'Website',
-          to: 'https://artela.network/',
-        },
-        {
-          position: 'right',
-          label: 'Community',
-          to: 'https://discord.com/invite/artelanetwork',
-        },
-        {
-          position: 'right',
-          label: 'Network',
-          to: 'https://artela.network/build/developer-portal',
-        },
-        {
-          position: 'right',
-          label: 'Blog',
-          to: 'https://artela.network/blog',
-        },
-        {
-          href: 'https://github.com/artela-network',
-          className: 'pseudo-icon github-icon',
-          position: 'right',
-        },
-      ],
-    },
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Build on Artela',
-              to: '/develop/get-started/art-dev-intro',
-            },
-            {
-              label: 'Intro to Artela',
-              // to: '/use',
-              to: 'main',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: "Website",
-              href: "https://www.artela.network",
-            },
-            {
-              label: "Twitter",
-              href: "https://twitter.com/Artela_Network",
-            },
-            {
-              label: "Discord",
-              href: "https://discord.com/invite/artelanetwork",
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: 'https://artela.network/blog',
-            },
-            {
-              label: 'Artela GitHub',
-              href: 'https://github.com/artela-network',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()}, Built with ❤️ by Artela.`,
-    },
-    prism: {
-      theme: lightCodeTheme,
-      darkTheme: darkCodeTheme,
-      additionalLanguages: ['solidity'],
-    },
-
-    algolia: {
-      // The application ID provided by Algolia
-      appId: 'T94HPZBQ0X',
-
-      // Public API key: it is safe to commit it
-      apiKey: '246f1243d1997feb4487bbf15aca6930',
-
-      indexName: 'artela',
-
-      // Optional: see doc section below
-      contextualSearch: true,
-
-      // externalUrlRegex: 'external\\.com|domain\\.com',
-
-      // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
-      replaceSearchResultPathname: {
-        from: '/docs/', // or as RegExp: /\/docs\//
-        to: '/',
+      footer: {
+        style: 'dark',
+        links: [
+          {
+            title: 'Docs',
+            items: [
+              {
+                label: 'Build on Artela',
+                to: '/main/developers-guid/get-started/art-dev-intro',
+              },
+              {
+                label: 'Intro to Artela',
+                // to: '/use',
+                to: 'main/introduce-to-artela',
+              },
+            ],
+          },
+          {
+            title: 'Community',
+            items: [
+              {
+                label: "Website",
+                href: "https://www.artela.network",
+              },
+              {
+                label: "Twitter",
+                href: "https://twitter.com/Artela_Network",
+              },
+              {
+                label: "Discord",
+                href: "https://discord.com/invite/artelanetwork",
+              },
+            ],
+          },
+          {
+            title: 'More',
+            items: [
+              {
+                label: 'Blog',
+                to: 'https://artela.network/blog',
+              },
+              {
+                label: 'Artela GitHub',
+                href: 'https://github.com/artela-network',
+              },
+            ],
+          },
+        ],
+        copyright: `Copyright © ${new Date().getFullYear()}, Built with ❤️ by Artela.`,
       },
-      // searchParameters: {},
-
-      searchParameters: {
-        facetFilters: ['language:en', ['filter1', 'filter2'], 'filter3'],
+      prism: {
+        theme: lightCodeTheme,
+        darkTheme: darkCodeTheme,
+        additionalLanguages: ['solidity'],
       },
 
-      // Optional: path for search page that enabled by default (`false` to disable it)
-      searchPagePath: 'search',
+      algolia: {
+        // The application ID provided by Algolia
+        appId: 'T94HPZBQ0X',
 
-      // insights: false,
+        // Public API key: it is safe to commit it
+        apiKey: '246f1243d1997feb4487bbf15aca6930',
 
-    },
-  }),
+        indexName: 'artela',
+
+        // Optional: see doc section below
+        contextualSearch: true,
+
+        // externalUrlRegex: 'external\\.com|domain\\.com',
+
+        // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+        replaceSearchResultPathname: {
+          from: '/docs/', // or as RegExp: /\/docs\//
+          to: '/',
+        },
+        // searchParameters: {},
+
+        searchParameters: {
+          facetFilters: ['language:en', ['filter1', 'filter2'], 'filter3'],
+        },
+
+        // Optional: path for search page that enabled by default (`false` to disable it)
+        searchPagePath: 'search',
+
+        // insights: false,
+
+      },
+    }),
 };
 
 module.exports = config;

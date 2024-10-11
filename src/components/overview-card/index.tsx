@@ -16,7 +16,7 @@ const LearnThroughCodingCards = [
     {
         name: 'Develop a Smart Contract',
         url: {
-            page: 'develop/get-started/hello-world-contract',
+            page: 'developers-guid/get-started/hello-world-contract',
         },
         description: (
             <Translate id="dev.overview.hello-world">
@@ -27,7 +27,7 @@ const LearnThroughCodingCards = [
     {
         name: 'Develop an Aspect',
         url: {
-            page: 'develop/get-started/dev-aspect',
+            page: 'developers-guid/get-started/dev-aspect',
         },
         description: (
             <Translate id="dev.overview.reentrancy">
@@ -41,7 +41,7 @@ const DiveDeeperCards = [
     {
         name: 'Join Test Net',
         url: {
-            page: 'develop/node/access-testnet',
+            page: 'developers-guid/node/access-testnet',
         },
         description: (
             <Translate id="dev.overview.setup-your-own">
@@ -50,9 +50,9 @@ const DiveDeeperCards = [
         ),
     },
     {
-        name: 'Join our TestNet',
+        name: 'Setup your LocalNet',
         url: {
-            page: 'develop/node/testnet-setup',
+            page: 'developers-guid/node/testnet-setup',
         },
         description: (
             <Translate id="dev.overview.join-test-net">
@@ -66,7 +66,7 @@ const LearnConceptsCards = [
     {
         name: 'Foundational Concepts',
         url: {
-            page: 'develop/core-concepts/foundational',
+            page: 'developers-guid/core-concepts/foundational',
         },
         description: (
             <Translate id="dev.overview.foundational">
@@ -77,7 +77,7 @@ const LearnConceptsCards = [
     {
         name: 'Aspect',
         url: {
-            page: 'develop/core-concepts/aspect',
+            page: 'developers-guid/core-concepts/aspect',
         },
         description: (
             <Translate id="dev.overview.aspect">
