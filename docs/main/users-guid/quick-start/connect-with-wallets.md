@@ -2,7 +2,7 @@
 sidebar_position: 0
 ---
 
-# Connect Artela Blockchain with Wallets
+# Connect with Wallets
 
 This section will guide you through connecting to the Artela blockchain using popular wallets such as MetaMask and other EVM-compatible wallets. By following these steps, you’ll be able to add the Artela network, manage your assets, and interact with decentralized applications (DApps) on the network.
 

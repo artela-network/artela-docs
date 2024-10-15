@@ -1,9 +1,8 @@
 {
-  "label": "💁‍♂️ Users Guid",
+  "label": "Goverance",
   "position": 2,
   "link": {
     "type": "doc",
     "id": "index"
-  },
-  "collapsed": false
+  }
 }

@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Connect to Artela With Client
+# Connect With Client
 
 In addition to wallets, advanced users can connect to the Artela network directly using RPC clients. This approach provides more flexibility and control, enabling developers and power users to interact with the network programmatically. With the right setup, you can use clients to send transactions, query blockchain data, and manage accounts.
 
