@@ -118,7 +118,7 @@ const config = {
         items: [
           {
             position: 'left',
-            label: 'Introduction',
+            label: 'main',
             to: '/main',
             className: 'hidden-label-item',
           },
