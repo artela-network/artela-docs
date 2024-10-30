@@ -2655,7 +2655,7 @@ at-least-node@^1.0.0:
   resolved "https://registry.npmjs.org/at-least-node/-/at-least-node-1.0.0.tgz"
   integrity sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==
 
-autoprefixer@^10.4.12, autoprefixer@^10.4.20, autoprefixer@^10.4.7:
+autoprefixer@^10.4.12, autoprefixer@^10.4.14, autoprefixer@^10.4.7:
   version "10.4.20"
   resolved "https://registry.npmmirror.com/autoprefixer/-/autoprefixer-10.4.20.tgz"
   integrity sha512-XY25y5xSv/wEoqzDyXXME4AFfkZI0P23z6Fs3YgymDnKJkCGOnkL0iTxCa85UTqaSgfcqyf3UA6+c7wUvx/16g==
@@ -6285,7 +6285,7 @@ postcss-zindex@^5.1.0:
   resolved "https://registry.npmjs.org/postcss-zindex/-/postcss-zindex-5.1.0.tgz"
   integrity sha512-fgFMf0OtVSBR1va1JNHYgMxYk73yhn/qb4uQDq1DLGYolz8gHCyr/sesEuGUaYs58E3ZJRcpoGuPVoB7Meiq9A==
 
-"postcss@^7.0.0 || ^8.0.1", postcss@^8.0.0, postcss@^8.0.9, postcss@^8.1.0, postcss@^8.2.14, postcss@^8.2.15, postcss@^8.2.2, postcss@^8.3.11, postcss@^8.4.14, postcss@^8.4.16, postcss@^8.4.17, postcss@^8.4.21, postcss@^8.4.23, postcss@^8.4.47, postcss@>=8.0.9:
+"postcss@^7.0.0 || ^8.0.1", postcss@^8.0.0, postcss@^8.0.9, postcss@^8.1.0, postcss@^8.2.14, postcss@^8.2.15, postcss@^8.2.2, postcss@^8.3.11, postcss@^8.4.14, postcss@^8.4.16, postcss@^8.4.17, postcss@^8.4.21, postcss@^8.4.23, postcss@>=8.0.9:
   version "8.4.47"
   resolved "https://registry.npmmirror.com/postcss/-/postcss-8.4.47.tgz"
   integrity sha512-56rxCq7G/XfB4EkXq9Egn5GCqugWvDFjafDOThIdMBsI15iqPqR5r15TfSr1YPYeEI19YeaXMCbY6u88Y76GLQ==
@@ -7551,7 +7551,7 @@ svgo@^2.7.0, svgo@^2.8.0:
     picocolors "^1.0.0"
     stable "^0.1.8"
 
-tailwindcss@^3.4.13:
+tailwindcss@^3.3.1:
   version "3.4.13"
   resolved "https://registry.npmmirror.com/tailwindcss/-/tailwindcss-3.4.13.tgz"
   integrity sha512-KqjHOJKogOUt5Bs752ykCeiwvi0fKVkr5oqsFNt/8px/tA8scFPIlkygsf6jXrfCqGHz7VflA6+yytWuM+XhFw==

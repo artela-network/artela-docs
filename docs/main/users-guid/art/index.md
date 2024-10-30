@@ -4,9 +4,11 @@ title: Native Token (ART)
 ---
 
 ## Overview
+
 ART is the native token of the Artela blockchain, a foundational asset essential to the network's operations and growth. Like many other native tokens, ART provides more than just a means of transaction—it acts as a utility, governance, and staking asset, fostering decentralized control and incentivizing active participation in the ecosystem.
 
-# Key Functions of ART
+## Key Functions of ART
+
 1) Transaction Fees (Gas Payment)
 All on-chain activities, such as transferring tokens or executing smart contracts, require ART to pay gas fees. This mechanism ensures that users contribute resources to maintain network operations and avoid spam or malicious activity.
 
@@ -23,5 +25,6 @@ In addition to staking rewards, ART is used to incentivize behaviors that promot
 Through IBC (Inter-Blockchain Communication) support, ART extends its functionality beyond the Artela blockchain. This interoperability makes ART a powerful asset that can interact with other blockchains, enhancing its utility in a multi-chain ecosystem.
 
 ## Learn More
+
 - [Supply](/supply)
 - [Governance](/goverance)
