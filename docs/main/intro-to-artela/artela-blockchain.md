@@ -42,7 +42,7 @@ Dynamic scalability within the Artela network is supported by elastic computing,
 
 ## Learn more
 
-- [EVM++](/main/Artela-Blockchain/EVM++)
-- [Aspect programming](/main/Aspect-Programming/Aspect)
-- [Parallel execution](/main/Artela-Blockchain/Parallel%20execution)
-- [Elastic block space](/main/Artela-Blockchain/Elastic%20Block%20Space)
+- [EVM++](/main/intro-to-artela/EVM++)
+- [Aspect programming](/main/intro-to-artela/EVM++/aspect-programming/aspect)
+- [Parallel execution](/main/intro-to-artela/EVM++/parallel-EVM)
+- [Elastic block space](/main/intro-to-artela/EVM++/parallel-EVM/elastic-block-space)

@@ -4,13 +4,13 @@ sidebar_position: 0
 
 import AddArtelaNetwork from '@site/src/js/button';
 
-# Connect with Wallets
+# Connect with Wallet
 
 This section will guide you through connecting to the Artela blockchain using popular wallets such as MetaMask and other EVM-compatible wallets. By following these steps, you’ll be able to add the Artela network, manage your assets, and interact with decentralized applications (DApps) on the network.
 
 ---
 
-## 1. Connect to Artela with MetaMask
+## 1. Connect with MetaMask
 
 MetaMask is a widely-used browser extension wallet that supports EVM-compatible networks like Artela. Follow these steps to get started:
 
@@ -19,18 +19,18 @@ MetaMask is a widely-used browser extension wallet that supports EVM-compatible 
 - Download the MetaMask extension for [Chrome](https://chrome.google.com/webstore) or [Firefox](https://addons.mozilla.org/).  
 - Create a new wallet or import an existing one.  
 
-### Step 2: Add the Artela Network to MetaMask
+### Step 2: Add the Artela Network
 
 - Open MetaMask and click the network dropdown at the top.  
 - Select **"Add Network"** and fill in the following details:
 
-    ```bash
-    Network Name: Artela
-    RPC URL: [https://api.artela.network]
-    Chain ID: [artela_11820-1]
-    Currency Symbol: [ART]
-    Block Explorer URL: [https://art-scan.artela.network/]
-    ```
+    | Network Name        | Artela                           |
+    |---------------------|----------------------------------|
+    | RPC URL             | https://api.artela.network       |
+    | Chain ID            | `artela_11820-1`                 |
+    | Currency Symbol     | `ART`                            |
+    | Block Explorer URL  | https://art-scan.artela.network/ |
+
 
 - Click **"Save"** to add the Artela network.
 
@@ -40,9 +40,9 @@ Click the button below to automatically add the Artela network:
 :::
 Discover more available networks in [Resources](/main/resources)
 
-### Step 3: Connect MetaMask to Artela DApps
+### Step 3: Connect MetaMask to DApps
 
-- Once connected, you can now access Artela DApps directly through your browser. MetaMask will prompt you to approve any transaction you initiate.
+Once connected, you can now access Artela DApps directly through your browser. MetaMask will prompt you to approve any transaction you initiate.
 
 ---
 
@@ -50,9 +50,9 @@ Discover more available networks in [Resources](/main/resources)
 
 In addition to MetaMask, Artela supports other EVM-compatible wallets like:
 
-- **OKX Wallet**
-- **Trust Wallet**  
-- **Rabby Wallet**
+- OKX Wallet
+- Trust Wallet
+- Rabby Wallet
 
 The process for these wallets is similar:
 

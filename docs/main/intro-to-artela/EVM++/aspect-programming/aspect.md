@@ -26,6 +26,7 @@ Aspect integrates customized functionality into the blockchain base layer, worki
 <!-- Developers can utilize Aspect SDK to access base layer API for building Aspects.  -->
 
 ### Building Process
+
 1. Aspect source code is compiled into WASM bytecode.  
 2. Aspect bytecode is deployed to the Artela network through a deployment transaction. 
 3. After the consensus process, Aspect bytecode will be written to the blockchain's world state and synchronized to all nodes on the network. 

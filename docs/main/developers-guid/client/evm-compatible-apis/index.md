@@ -16,32 +16,32 @@ Artela has most of the Ethereum RPC methods implemented (while some are still wo
 
 | APIs                                    | Status |
 |-----------------------------------------|--------|
-| web3_clientVersion                      |        |
-| web3_sha3                               |        |
+| web3_clientVersion                      |  ✅      |
+| web3_sha3                               |  ✅      |
 | net_version                             | ✅     |
-| net_listening                           |        |
-| net_peerCount                           |        |
-| debug_traceTransaction                  |        |
-| debug_traceBlock                        |        |
-| eth_protocolVersion                     |        |
-| eth_syncing                             |        |
-| eth_coinbase                            |        |
+| net_listening                           |  ✅      |
+| net_peerCount                           | ✅       |
+| debug_traceTransaction                  |  ✅      |
+| debug_traceBlock                        |  ✅      |
+| eth_protocolVersion                     |  ✅      |
+| eth_syncing                             |  ✅      |
+| eth_coinbase                            |   ✅     |
 | eth_chainId                             | ✅     |
-| eth_mining                              |        |
-| eth_hashrate                            |        |
+| eth_mining                              | N/A       |
+| eth_hashrate                            |  N/A      |
 | eth_gasPrice                            | ✅     |
 | eth_accounts                            | ✅     |
 | eth_blockNumber                         | ✅     |
 | eth_getBalance                          | ✅     |
 | eth_getStorageAt                        | ✅     |
 | eth_getTransactionCount                 | ✅     |
-| eth_getBlockTransactionCountByHash      |        |
-| eth_getBlockTransactionCountByNumber    |        |
-| eth_getUncleCountByBlockHash            |        |
-| eth_getUncleCountByBlockNumber          |        |
+| eth_getBlockTransactionCountByHash      | ✅       |
+| eth_getBlockTransactionCountByNumber    |  ✅      |
+| eth_getUncleCountByBlockHash            |  ✅      |
+| eth_getUncleCountByBlockNumber          |  ✅      |
 | eth_getCode                             | ✅     |
 | eth_getLogs                             | ✅     |
-| eth_sign                                |        |
+| eth_sign                                |   ✅     |
 | eth_signTransaction                     | ✅     |
 | eth_sendTransaction                     | ✅     |
 | eth_sendRawTransaction                  | ✅     |
@@ -50,11 +50,11 @@ Artela has most of the Ethereum RPC methods implemented (while some are still wo
 | eth_getBlockByHash                      | ✅     |
 | eth_getBlockByNumber                    | ✅     |
 | eth_getTransactionByHash                | ✅     |
-| eth_getTransactionByBlockHashAndIndex   |        |
-| eth_getTransactionByBlockNumberAndIndex |        |
+| eth_getTransactionByBlockHashAndIndex   |  ✅      |
+| eth_getTransactionByBlockNumberAndIndex |   ✅     |
 | eth_getTransactionReceipt               | ✅     |
-| eth_getUncleByBlockHashAndIndex         |        |
-| eth_getUncleByBlockNumberAndIndex       |        |
+| eth_getUncleByBlockHashAndIndex         |  N/A      |
+| eth_getUncleByBlockNumberAndIndex       |  N/A      |
 | eth_newFilter                           |        |
 | eth_newBlockFilter                      |        |
 | eth_newPendingTransactionFilter         |        |
@@ -62,3 +62,10 @@ Artela has most of the Ethereum RPC methods implemented (while some are still wo
 | eth_getFilterChanges                    |        |
 | eth_getFilterLogs                       |        |
 | eth_feeHistory                          | ✅     |
+
+Artela-specific API:
+
+| APIs                                    | Status |
+|-----------------------------------------|--------|
+| eth_getDenomByAddress                   | ✅     |
+| eth_getAddressByDenom                   | ✅     |

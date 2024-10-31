@@ -10,3 +10,10 @@ Welcome to the Artela blockchain network! Artela offers an innovative platform t
 The network architecture of Artela includes governance mechanisms, staking and slashing rules, and a well-defined supply model to ensure decentralization and stability. Additionally, with cross-chain bridging capabilities, you can bring assets from other blockchains to Artela, expanding the scope of use cases within the ecosystem.
 
 This guide will also cover how to engage with service providers within the Artela ecosystem, helping you efficiently manage your assets and interact with the network. Our goal is to provide you with all the support you need to get started quickly and unlock the full potential of Artela.
+
+## Learn more
+
+- [Quick Start](/main/users-guid/quick-start)
+- [Ecosystem Providers](/main/users-guid/ecosystem-providers)
+- [Goverrance/Staking](/main/users-guid/art/goverance/staking)
+- [Goverrance/Voting](/main/users-guid/art/goverance/voting)

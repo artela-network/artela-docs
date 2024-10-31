@@ -13,7 +13,7 @@ Native Extension serves as a programmable on-chain module for customized functio
 
 Native Extension is the solution for blockchain customized functionality. 
 
-**[Learn More](https://docs.artela.network/main/Aspect-Programming/Native-Extension)**
+**[Learn More](/main/intro-to-artela/EVM++/aspect-programming/native-extension)**
 
 ## Aspect
 
@@ -23,4 +23,4 @@ Native Extension is the solution for blockchain customized functionality.
 
 In Artela, we define a new programmable module to work as the native extension of the base layer as Aspect. Aspect integrates customized functionality into the blockchain base layer, working synergistically with smart contracts to enhance dApp modularity and functionality. 
 
-**[Learn More](https://docs.artela.network/main/Aspect-Programming/Aspect)**
+**[Learn More](/main/intro-to-artela/EVM++/aspect-programming/aspect)**
