@@ -26,7 +26,8 @@ Network Name : Artela TestNet
 New RPC URL : https://betanet-rpc1.artela.network
 ChainID (optional): 11822
 Symbol (optional) : ART
-Block Explorer URL (optional): https://betanet-scan.artela.network/
+Block Explorer URL (optional): https://betanet-scan.artela.network/   
+Block Explorer URL (optional): https://www.okx.com/web3/explorer/artela-testnet
 ```
 
 ### 2. Genesis
