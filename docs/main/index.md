@@ -28,6 +28,14 @@ It aims to extend the capabilities of EVM to meet the demands of the evolving cr
 
 **[Learn More](/main/Artela-Blockchain/EVM++)**
 
+### Artela for AI Agents
+
+Artela is the first blockchain to enable the development of **fully on-chain, autonomous, self-sovereign AI agents.** 
+
+With two unique innovations — Aspect Programming and Elastic Block Space, it has made truly autonomous on-chain AI Agents a reality: efficient on-chain intelligence by runtime extension, verifiable confidential privacy by TEE and predictable performance by elastic computing.
+
+**[Learn More](/main/Artela-AI-Agents)**
+
 ### Aspect Programming
 
 :::tip
