@@ -2,7 +2,7 @@
 sidebar_position: 5
 ---
 
-# Launching a Wallet on EVM++
+# Configure Wallets
 
 This guide explains how to set up and connect your MetaMask wallet to the Artela EVM++ chain. Follow these steps to access and manage your assets on the chain.
 

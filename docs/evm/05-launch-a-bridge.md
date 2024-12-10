@@ -2,7 +2,7 @@
 sidebar_position: 6
 ---
 
-# Launching a Bridge on EVM++
+# Integrating Bridges
 
 This guide explains how to use Hyperlane to set up a bridge on Artela EVM++ Rollkit. We will start with environment preparation and gradually complete the bridge setup and testing.
 Refer to the documentation: [Hyperlane Documentation](https://docs.hyperlane.xyz/docs/intro)

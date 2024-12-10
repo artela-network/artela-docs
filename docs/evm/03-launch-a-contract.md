@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# Deploying a Contract on EVM++
+# Deploy Contracts
 
 This guide explains how to deploy a smart contract to the Artela EVM++ chain using Remix. Follow these steps to ensure a smooth deployment.
 

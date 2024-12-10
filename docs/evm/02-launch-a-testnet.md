@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
 ---
-# Launching an EVM++ Rollup
+# Advanced Configuration for Rollup
 
 This guide explains how to set up and launch the Artela-Rollkit testnet in both local development and stnet environments. Follow the steps to ensure successful deployment and testing.
 

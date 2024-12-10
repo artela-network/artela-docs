@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 ---
-# EVM++ Quick Start
+# Quick Start to Launch Rollup
 
 This guide will assist you to quickly set up an EVM++ rollup chain with [Artela EVM++](https://docs.artela.network/main/Artela-Blockchain/EVM++) execution layer using Rollkit and local-DA.
 
