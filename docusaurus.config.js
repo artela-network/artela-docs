@@ -27,6 +27,7 @@ function defineSection(section, options = {}) {
 const SECTIONS = [
   defineSection('main'),
   defineSection('develop'),
+  defineSection('evm'),
 ];
 
 /** @type {import('@docusaurus/types').Config} */
@@ -127,7 +128,11 @@ const config = {
           label: 'Develop',
           to: '/develop',
         },
-
+        {
+          position: 'left',
+          label: 'EVM++ Rollkit',
+          to: '/evm',
+        },
         {
           position: 'right',
           label: 'Website',
@@ -169,6 +174,11 @@ const config = {
               label: 'Intro to Artela',
               // to: '/use',
               to: 'main',
+            },
+            {
+              label: 'EVM++ Rollkit',
+              // to: '/use',
+              to: 'evm',
             },
           ],
         },
