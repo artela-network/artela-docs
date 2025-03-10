@@ -7,7 +7,7 @@ sidebar_position: 2
 Artela is fully EVM compatible. This means that you can use Artela to deploy and run smart contracts written in Solidity, Vyper, and other EVM compatible languages without any issue.
 
 :::info 
-Since we are maintaining our own forked version of EVM (we named it `Artela EVM`). So the EVM runs on Artela may not has the latest features, integration with the latest EVM will take some time. For compatibility reference, please check out the following sections.
+Since we are maintaining our own forked version of EVM (we named it `Artela EVM`). So the EVM runs on Artela may not have the latest features, integration with the latest EVM will take some time. For compatibility reference, please check out the following sections.
 :::
 
 ## Solidity Compatibility
@@ -49,4 +49,4 @@ Artela EVM has full support for the pre-compile contracts in Shanghai Fork. For 
 
 ## RPC APIs
 
-Artela has most of the Ethereum RPC methods implemented (some are still working in progress), so you can use Ethereum infrastructures (e.g. Metamask, The Graph) connect to Artela without any issue. For RPC methods compatibility, you can check out the details [here](../../../develop/client/evm-compatible-apis).
+Artela has most of the Ethereum RPC methods implemented (some are still working in progress), so you can use Ethereum infrastructures (e.g. Metamask, The Graph) when connecting to Artela without any issue. For RPC methods compatibility, you can check out the details [here](../../../develop/client/evm-compatible-apis).
